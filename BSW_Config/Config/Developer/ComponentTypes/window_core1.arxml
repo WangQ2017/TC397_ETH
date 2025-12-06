@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="F079C6CB-4661-40D9-899F-DD405F22B640">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="FF2081A7-B697-4016-87D1-B389ABBDF88A">
+          <SHORT-NAME>window_core1</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="2D671C92-ACBB-49A0-8AC0-E57C4A483F70">
+              <SHORT-NAME>window_core1_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <INIT-EVENT UUID="E3E5F313-BFC9-44AD-90FF-C995753372E7">
+                  <SHORT-NAME>window_core1_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/window_core1/window_core1_InternalBehavior/window_core1_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+                <TIMING-EVENT UUID="BC968EC0-E09B-45DB-8EC3-8E3E8CAEF578">
+                  <SHORT-NAME>TMT_Runnable_windows_2ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/window_core1/window_core1_InternalBehavior/Runnable_windows_2ms</START-ON-EVENT-REF>
+                  <PERIOD>0.002</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="8D74B9BA-B74A-4917-AB9A-10C15D171DF8">
+                  <SHORT-NAME>window_core1_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="466FBB02-98DF-45D7-A5F9-EB286B1B6E1F">
+                  <SHORT-NAME>Runnable_windows_2ms</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="512E14E7-8A9E-4FDE-998C-B2B15F2E7DE4">
+          <SHORT-NAME>window_core1_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/window_core1/window_core1_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-1-1.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="db790fa6-584a-46f3-828a-052720935dfa">
+          <SHORT-NAME>EthIf_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="b3b9f999-2251-4022-b1d8-8e3e941e005c">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="f5cb4a1c-79c2-48bb-9129-66906d823872">
+                  <SHORT-NAME>EthIf</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthIf_ib_bswmd/BswModuleDescriptions/EthIf_MainFunctionRx</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthIf_ib_bswmd/BswModuleDescriptions/EthIf_MainFunctionTx</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthIf_ib_bswmd/BswModuleDescriptions/EthIf_MainFunctionState</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="52c12939-4b78-4965-b7a1-fa1be42d62c1">
+                      <SHORT-NAME>EthIfBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="5b20c3a2-a3e5-462b-b451-badf988d178b">
+                          <SHORT-NAME>ETHIF_EXCLUSIVE_AREA_CTRL_INIT</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="5fe84569-e4f7-4d75-a958-77803142c341">
+                          <SHORT-NAME>ETHIF_EXCLUSIVE_AREA_SET_CTRL_MODE</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="cd707743-cab2-4efa-bc45-2c1fd925c5fc">
+                          <SHORT-NAME>ETHIF_EXCLUSIVE_AREA_TX_MIRROR_ELEMENT</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="a47881e5-d38b-4d0c-b4ab-d4d7e0975ffb">
+                          <SHORT-NAME>ETHIF_EXCLUSIVE_AREA_RXTX_STATS</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="b772fa6d-2ff1-49ae-981e-f158295aae53">
+                          <SHORT-NAME>ETHIF_EXCLUSIVE_AREA_SIGNAL_QUALITY</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="45944ecf-dbdf-47a1-b987-a1ae91c75af0">
+                          <SHORT-NAME>EthIf_MainFunctionRx</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthIf_ib_bswmd/BswModuleDescriptions/EthIf_MainFunctionRx</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="c99b7ad3-24d2-4db5-9b2e-a272f179e437">
+                          <SHORT-NAME>EthIf_MainFunctionTx</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthIf_ib_bswmd/BswModuleDescriptions/EthIf_MainFunctionTx</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="7c0b7c9b-5d84-4b2e-b1e4-395f9f1a9fc8">
+                          <SHORT-NAME>EthIf_MainFunctionState</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthIf_ib_bswmd/BswModuleDescriptions/EthIf_MainFunctionState</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="5082fd7a-fe15-44d7-bbe9-612aa4c8c3f2">
+                          <SHORT-NAME>EthIf_MainFunctionRxTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EthIf_ib_bswmd/BswModuleDescriptions/EthIf/EthIfBehavior/EthIf_MainFunctionRx</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.005</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="05e04945-fe78-4e8c-8e2b-0b7c1a75e985">
+                          <SHORT-NAME>EthIf_MainFunctionTxTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EthIf_ib_bswmd/BswModuleDescriptions/EthIf/EthIfBehavior/EthIf_MainFunctionTx</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.005</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="6a59bad5-7285-4446-acaa-bfc44d28abce">
+                          <SHORT-NAME>EthIf_MainFunctionStateTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EthIf_ib_bswmd/BswModuleDescriptions/EthIf/EthIfBehavior/EthIf_MainFunctionState</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.025</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="6167c0ce-2e02-48db-9cb9-ec976db182f0">
+                  <SHORT-NAME>EthIf_MainFunctionRx</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="0df8d586-12b6-41d3-b4ce-0a6a08820d7d">
+                  <SHORT-NAME>EthIf_MainFunctionTx</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="0973f828-879b-4625-93c0-2ef1a31c9738">
+                  <SHORT-NAME>EthIf_MainFunctionState</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="dbed4a96-4a84-457f-894b-e5acd6961abc">
+      <SHORT-NAME>COM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="9705e80c-08c8-4e70-b381-439b28f4b8fe">
+          <SHORT-NAME>VECTOR</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="435207d7-1bf0-4451-9c5f-fc406b979675">
+              <SHORT-NAME>CFG</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="8d1b2e9a-9a2c-4d55-b5ef-93a37d2a6171">
+                  <SHORT-NAME>WORKFLOW</SHORT-NAME>
+                  <AR-PACKAGES>
+                    <AR-PACKAGE UUID="4c9fdcbb-735c-421e-bd37-533c6f0382b5">
+                      <SHORT-NAME>SYSDESC</SHORT-NAME>
+                      <AR-PACKAGES>
+                        <AR-PACKAGE UUID="0f5acd5e-17b1-437a-ba5e-c1efc9eb649c">
+                          <SHORT-NAME>SYNC</SHORT-NAME>
+                          <ELEMENTS>
+                            <FLAT-MAP UUID="f68fa826-e80c-4311-85af-952757d224fc">
+                              <SHORT-NAME>FLATMAP</SHORT-NAME>
+                              <ADMIN-DATA>
+                                <SDGS>
+                                  <SDG GID="DV:CfgNamedRefs">
+                                    <SDG GID="DV:CfgFlattener">
+                                      <SD GID="DV:CfgFlattenerVersion">1</SD>
+                                    </SDG>
+                                  </SDG>
+                                </SDGS>
+                              </ADMIN-DATA>
+                              <INSTANCES>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="93c31f83-1597-469a-8723-7a52591526d3">
+                                  <SHORT-NAME>Cdd_Core0</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Systems/TC397_BSW/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Cdd_Core0</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_Core0</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="18fed70b-481c-430e-962f-562e5d992b65">
+                                  <SHORT-NAME>Cdd_Core1</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Systems/TC397_BSW/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Cdd_Core1</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_Core1</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="2690fa76-03fd-4bda-a9d3-50faf1f655b0">
+                                  <SHORT-NAME>Cdd_Core2</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Systems/TC397_BSW/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Cdd_Core2</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_Core2</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="ad146f21-2380-4168-a2f7-542b94fffe1b">
+                                  <SHORT-NAME>Cdd_Core3</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Systems/TC397_BSW/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Cdd_Core3</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_Core3</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="ffe57a82-00c9-4e21-8700-24393bd9a2d3">
+                                  <SHORT-NAME>Cdd_Core4</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Systems/TC397_BSW/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Cdd_Core4</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_Core4</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="b8fc0756-c569-4b04-b3c6-42cf8347180e">
+                                  <SHORT-NAME>Cdd_Core5</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Systems/TC397_BSW/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Cdd_Core5</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_Core5</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="4ce475f7-dca2-4e77-9107-bc5f0cbe69ed">
+                                  <SHORT-NAME>swc_lock</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Systems/TC397_BSW/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/swc_lock</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/swc_lock</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="62dcaf0a-7189-4a8e-a98c-0fe1f69678a2">
+                                  <SHORT-NAME>Cdd_nm</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Systems/TC397_BSW/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/Cdd_nm</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_nm</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                                <FLAT-INSTANCE-DESCRIPTOR UUID="f9c6a680-9703-4a61-b9f9-86fae058c12b">
+                                  <SHORT-NAME>window_core1</SHORT-NAME>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <UPSTREAM-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/Systems/TC397_BSW/EcuSwComposition</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/ECUCompositionTypes/ECU_Composition/window_core1</TARGET-REF>
+                                  </UPSTREAM-REFERENCE-IREF>
+                                  <ECU-EXTRACT-REFERENCE-IREF>
+                                    <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/SYSTEM/COMPOSITIONTYPE</CONTEXT-ELEMENT-REF>
+                                    <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/window_core1</TARGET-REF>
+                                  </ECU-EXTRACT-REFERENCE-IREF>
+                                </FLAT-INSTANCE-DESCRIPTOR>
+                              </INSTANCES>
+                            </FLAT-MAP>
+                          </ELEMENTS>
+                        </AR-PACKAGE>
+                      </AR-PACKAGES>
+                    </AR-PACKAGE>
+                  </AR-PACKAGES>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

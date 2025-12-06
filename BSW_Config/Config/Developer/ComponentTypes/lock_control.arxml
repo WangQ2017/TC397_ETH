@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="F079C6CB-4661-40D9-899F-DD405F22B640">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="CA3F9F87-0F04-4395-811F-14673D2B6756">
+          <SHORT-NAME>lock_control</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="65EB2251-B71F-4D37-ABBB-98E6BD2EC12B">
+              <SHORT-NAME>lock_control_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="2DE58D0E-3917-40CB-A6A9-E05C0B641BFE">
+                  <SHORT-NAME>TMT_Runnable_2ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/lock_control/lock_control_InternalBehavior/Runnable_2ms</START-ON-EVENT-REF>
+                  <PERIOD>0.002</PERIOD>
+                </TIMING-EVENT>
+                <INIT-EVENT UUID="9C561753-F285-4924-9D9C-BA63E0B6C89D">
+                  <SHORT-NAME>lock_control_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/lock_control/lock_control_InternalBehavior/lock_control_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="5DEEE4DD-89A1-4919-902A-634CAA1C0EBF">
+                  <SHORT-NAME>Runnable_2ms</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.002</MINIMUM-START-INTERVAL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="91508EC8-59C3-404C-A421-1CD5084CD0A6">
+                  <SHORT-NAME>lock_control_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="9450D615-69CD-47FC-A22B-B4DFE383206F">
+          <SHORT-NAME>lock_control_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/lock_control/lock_control_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

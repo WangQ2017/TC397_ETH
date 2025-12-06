@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="F079C6CB-4661-40D9-899F-DD405F22B640">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="2E97FEAD-44E3-4BCC-B717-3D1D6D03718A">
+          <SHORT-NAME>Cdd_Core0</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="6DDBDB48-4358-41C0-9DD1-C06502466677">
+              <SHORT-NAME>Cdd_Core0_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <INIT-EVENT UUID="B2479696-7126-4866-8C96-D9DF74041519">
+                  <SHORT-NAME>Cdd_Core0_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Cdd_Core0_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+                <TIMING-EVENT UUID="BF8EDC66-5307-47F8-A269-6F2801EE03E0">
+                  <SHORT-NAME>TMT_Runnable_5ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Runnable_5ms</START-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="D03D0D56-7827-409A-B725-21A5ADDA7211">
+                  <SHORT-NAME>TMT_Runnable_20</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Runnable_20</START-ON-EVENT-REF>
+                  <PERIOD>0.02</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="CBE22E0D-F8EA-4C98-ADA7-C8B6E627C066">
+                  <SHORT-NAME>Cdd_Core0_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="B41D32D8-DF94-4606-A9A6-BE40E0F591F2">
+                  <SHORT-NAME>Runnable_5ms</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.005</MINIMUM-START-INTERVAL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="123F6095-26FE-4BB0-B6E7-0B6A5E1DB550">
+                  <SHORT-NAME>Runnable_20</SHORT-NAME>
+                  <MINIMUM-START-INTERVAL>0.02</MINIMUM-START-INTERVAL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="1326A14A-37B0-4AB9-BBCC-DDB47EDE67ED">
+          <SHORT-NAME>Cdd_Core0_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

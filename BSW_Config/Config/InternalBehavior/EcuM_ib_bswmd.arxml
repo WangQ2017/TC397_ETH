@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="487e2e0d-92c2-4469-a75f-21e4b5b270a5">
+          <SHORT-NAME>EcuM_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>10.00.02</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+        </BSW-IMPLEMENTATION>
+      </ELEMENTS>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="7c5ccddb-ff32-49cc-9a84-861c4533bf85">
+          <SHORT-NAME>EcuM_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="3e83800b-8ecb-47f6-84d4-c7db4c8f6fbb">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="a1fb70a9-7607-44e2-b0c3-42027d10fad9">
+                  <SHORT-NAME>EcuM</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM_MainFunction</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="b5a60ace-124b-47a0-9ebc-33530b727768">
+                      <SHORT-NAME>EcuMBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="14cc9e84-c421-4194-a9de-ec154a661b31">
+                          <SHORT-NAME>ECUM_EXCLUSIVE_AREA_0</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This exclusive area shall disable all wake up interrupts to prevent overwriting of some global variables.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="35fcbdca-dd14-4d7f-b8d1-cd532274fa93">
+                          <SHORT-NAME>ECUM_EXCLUSIVE_AREA_1</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This exclusive area is only used in case of multi core and if the the EcuM is configured to handle also the slave cores. It must be configured as a spinlock to allow access to some variables simultaneously from multiple cores.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="c11dcbd4-8775-4aeb-89dd-6f6f094be5cd">
+                          <SHORT-NAME>ECUM_EXCLUSIVE_AREA_2</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This exclusive area is used for accessing the clock variable. It shall disable GPT interrupts and task changes. Only necessary if 32 Bit access is not atomic and Alarm Clock is present.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="4ff1eff4-a132-4dfd-81a0-23ec4061de02">
+                          <SHORT-NAME>ECUM_EXCLUSIVE_AREA_3</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">This This exclusive area must be configured as a spin lock to protect access on global shutdown target variables.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="e0bf7394-59a5-4b7e-b201-0c76eecaa899">
+                          <SHORT-NAME>EcuM_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="0efd5155-224f-4b70-8865-e5a318e8e387">
+                          <SHORT-NAME>EcuM_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="c90d2d25-176a-4bd9-94c3-a76c2be2b56d">
+                          <SHORT-NAME>EcuM_MainFunctionTimingEvent1</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="444c859d-1f4c-4f99-965d-181349463063">
+                          <SHORT-NAME>EcuM_MainFunctionTimingEvent2</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="c6679d76-c7ad-4db4-8d81-b7f4bb6deca0">
+                          <SHORT-NAME>EcuM_MainFunctionTimingEvent3</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="f996952a-c23a-458e-8763-94934dcf8378">
+                          <SHORT-NAME>EcuM_MainFunctionTimingEvent4</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="7fe3f99c-7c40-4d28-86bd-34f44b5cfd07">
+                          <SHORT-NAME>EcuM_MainFunctionTimingEvent5</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EcuM_ib_bswmd/BswModuleDescriptions/EcuM/EcuMBehavior/EcuM_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="96be0f63-ee0a-4dc7-9381-b4df12864362">
+                  <SHORT-NAME>EcuM_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="b8739c58-ab83-4286-b700-f491d277931b">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ActiveEcuC</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="0c9c19a1-462a-4dfd-962f-a9617dc248f2">
+          <SHORT-NAME>EthTrcv</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="DV:CfgPostBuild">
+                <SD GID="DV:postBuildVariantSupport">false</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/MICROSAR/EthTrcv_Tja1100/EthTrcv_Impl</MODULE-DESCRIPTION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="f5913e77-4186-4823-a49f-a1c197e4e59a">
+              <SHORT-NAME>EthTrcvGeneral</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvDevErrorDetect</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvGetBaudRateApi</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvGetDuplexModeApi</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvGetLinkStateApi</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvGetTransceiverModeApi</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvMaxTrcvsSupported</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvSetTransceiverModeApi</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvStartAutoNegotiationApi</DEFINITION-REF>
+                  <VALUE>true</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvVersionInfoApi</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvIndex</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvRuntimeMeasurementSupport</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvWakeUpSupport</DEFINITION-REF>
+                  <VALUE>ETHTRCV_WAKEUP_NOT_SUPPORTED</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvHwAccessLoopCount</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvSafeBswChecks</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvCableDiagLoopCount</DEFINITION-REF>
+                  <VALUE>10000</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvMainFunctionPeriod</DEFINITION-REF>
+                  <VALUE>0.001</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvPreTrcvInitUserCallout</DEFINITION-REF>
+                  <VALUE>NULL_PTR</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvPostTrcvInitUserCallout</DEFINITION-REF>
+                  <VALUE>NULL_PTR</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvHwAccessMonitorPeriod</DEFINITION-REF>
+                  <VALUE>0.001</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvHwAccessMonitorFailureUserCallout</DEFINITION-REF>
+                  <VALUE>NULL_PTR</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvHwAccessMonitorFailureDebounceValue</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvHwAccessMonitorRecoveryDebounceValue</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="d11c725c-b51f-47b8-bb02-f02743386df7">
+              <SHORT-NAME>EthTrcvConfigSet</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="85e24d71-a5f1-4e86-ab0d-0ab07ac525c8">
+                  <SHORT-NAME>EthTrcvConfig</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvIdx</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvSpeed</DEFINITION-REF>
+                      <VALUE>TRCV_SPEED_100</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvLinkFailCounterValueForReset</DEFINITION-REF>
+                      <VALUE>1000</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvDerivative</DEFINITION-REF>
+                      <VALUE>ETHTRCV_TJA1100</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvMiiDriverReducedOutputStrengthEnabled</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvConnNeg</DEFINITION-REF>
+                      <VALUE>ETHTRCV_CONN_NEG_MASTER</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvPhySignalQualityMeanValueLength</DEFINITION-REF>
+                      <VALUE>100</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvLinkStartupDelay</DEFINITION-REF>
+                      <VALUE>0.002</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvExtendedLinkStateCheckEnabled</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvSoftResetOnInit</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvAutoNegotiationEnabled</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="d2f747f4-7d8d-43cd-a961-b62db5ecd666">
+                      <SHORT-NAME>EthTrcvMgmtInterface</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvMgmtInterface</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="6f178479-7033-4685-8b47-2b2d560c6460">
+                          <SHORT-NAME>EthTrcvMiiInterface</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvMgmtInterface/EthTrcvMiiInterface</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvMgmtInterface/EthTrcvMiiInterface/EthTrcvMiiIdx</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvMgmtInterface/EthTrcvMiiInterface/EthTrcvMiiSelection</DEFINITION-REF>
+                              <VALUE>ETHTRCV_MII_MODE</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvConfigSet/EthTrcvConfig/EthTrcvMgmtInterface/EthTrcvMiiInterface/EthTrcvCtrlRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,1301 @@
+{
+   "description" : "RTE Analyzer configuration file",
+   "version" : "1.6.0",
+   "BswOsApplication" : "OsApplication_OsCore0",
+   "COMDirectory" : "E:/software/Tricore_TC397_SIP/Components/Com/Implementation",
+   "DataConsistencyAPIGroupList" : [
+      {
+         "CanBeNested" : "0",
+         "HandleIndex" : "-1",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "DisableAllInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^Suspend(All|OS)Interrupts",
+            "^GetResource",
+            "^osDisable.",
+            "^Schedule"
+         ],
+         "Type" : "INTERRUPT",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "EnableAllInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "0",
+         "HandleIndex" : "-1",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableGlobalAM",
+               "RequiresTrustedContext" : "0"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableGlobalKM",
+               "RequiresTrustedContext" : "1"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableGlobalUM",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^DisableAllInterrupts",
+            "^GetResource",
+            "^osDisable.",
+            "^Schedule"
+         ],
+         "Type" : "INTERRUPT",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableGlobalAM",
+               "RequiresTrustedContext" : "0"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableGlobalKM",
+               "RequiresTrustedContext" : "1"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableGlobalUM",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "0",
+         "HandleIndex" : "-1",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableLevelAM",
+               "RequiresTrustedContext" : "0"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableLevelKM",
+               "RequiresTrustedContext" : "1"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osDisableLevelUM",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^DisableAllInterrupts",
+            "^GetResource",
+            "^osDisable.",
+            "^Schedule"
+         ],
+         "Type" : "INTERRUPT",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableLevelAM",
+               "RequiresTrustedContext" : "0"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableLevelKM",
+               "RequiresTrustedContext" : "1"
+            },
+            {
+               "CanBeUsedInISRContext" : "0",
+               "Name" : "osEnableLevelUM",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "1",
+         "HandleIndex" : "-1",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "SuspendAllInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^DisableAllInterrupts",
+            "^GetResource",
+            "^osDisable.",
+            "^Schedule"
+         ],
+         "Type" : "INTERRUPT",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "ResumeAllInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "1",
+         "HandleIndex" : "-1",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "SuspendOSInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^DisableAllInterrupts",
+            "^GetResource",
+            "^osDisable.",
+            "^Schedule"
+         ],
+         "Type" : "INTERRUPT",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "ResumeOSInterrupts",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "0",
+         "HandleIndex" : "0",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "GetResource",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "0",
+         "LocksSameCore" : "1",
+         "ProhibitedAPIFunctions" : [
+            "^WaitEvent",
+            "^(Chain|Terminate)Task",
+            "^Schedule"
+         ],
+         "Type" : "RESOURCE",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "ReleaseResource",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      },
+      {
+         "CanBeNested" : "0",
+         "HandleIndex" : "0",
+         "LockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "GetSpinlock",
+               "RequiresTrustedContext" : "0"
+            }
+         ],
+         "LocksOtherCores" : "1",
+         "LocksSameCore" : "0",
+         "ProhibitedAPIFunctions" : [
+            "^(Wait|Set)Event",
+            "^(Activate|Chain|Terminate)Task",
+            "^Schedule"
+         ],
+         "Type" : "SPINLOCK",
+         "UnlockAPIList" : [
+            {
+               "CanBeUsedInISRContext" : "1",
+               "Name" : "ReleaseSpinlock",
+               "RequiresTrustedContext" : "0"
+            }
+         ]
+      }
+   ],
+   "ISRList" : [
+      {
+         "ExecutedOnTaskLevel" : "0",
+         "NamePattern" : "Rte_LdComCbk.*",
+         "OsApplication" : "OsApplication_OsCore0"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_GetMirror.*",
+         "OsApplication" : "OsApplication_OsCore0"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_SetMirror.*",
+         "OsApplication" : "OsApplication_OsCore0"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_NvMNotifyJobFinished.*",
+         "OsApplication" : "OsApplication_OsCore0"
+      },
+      {
+         "ExecutedOnTaskLevel" : "1",
+         "NamePattern" : "Rte_NvMNotifyInitBlock.*",
+         "OsApplication" : "OsApplication_OsCore0"
+      }
+   ],
+   "InitFunctionNamePatternList" : [
+      "Rte_InitMemory",
+      "SchM_Init",
+      "Rte_Start",
+      "Rte_StartTiming",
+      "E2EXf_Init",
+      "Rte_SetMirror_",
+      "SomeIpXf_InitMemory"
+   ],
+   "InlineFunctionNamePatternList" : [
+      "Rte_QAddElement.*",
+      "Rte_QUnqueueElement.*",
+      "Rte_MemCmp.*",
+      "Rte_DecDisableFlags.*",
+      "Rte_IncDisableFlags.*",
+      "^E2EXf_.*",
+      "Rte_TrustedWrite.*",
+      "TSC_Inline.*",
+      "Rte_IocReceive_Rte_M.*",
+      "Rte_IocPeek_Rte_M.*",
+      "Rte_IocSend_Rte_M.*",
+      "^Rte_IWrite_.*$",
+      "^Rte_IRead_.*$",
+      "^ComXf_Copy.*$",
+      "^DiagXf_Copy.*$",
+      "^SomeIpXf_Copy.*$",
+      "^SomeIpXf_GetIndex.*$",
+      "^SomeIpXf_ReadLength.*$"
+   ],
+   "MemCpyFunctionNamePatternList" : [
+      "^llvm.memcpy",
+      "^memcpy",
+      "^Rte_MemCpy.*",
+      "^Rte_PartialMemCpy",
+      "^SomeIpXf_MemCpy.*",
+      "^VStdMemCpy_Func",
+      "^CanTSyn_MemCpy",
+      "^CanTp_Util_MemCpy",
+      "^IpBase_Copy"
+   ],
+   "MemSetFunctionNamePatternList" : [
+      "^.*memset",
+      "^.*MemSet",
+      "^Rte_MemClr"
+   ],
+   "MemmapSectionNamePatternList" : [
+      "(RTE)_(START|STOP)_SEC_(.*)",
+      "(E2EXF|COMXF|DIAGXF|SOMEIPXF)_(START|STOP)_SEC_(.*)"
+   ],
+   "NonReentrantFunctionList" : [
+      {
+         "HandleIndex" : "0",
+         "NamePatternList" : [
+            "Com_SendSignal",
+            "Com_InvalidateSignal",
+            "Com_UpdateShadowSignal",
+            "Com_InvalidateSignalGroup"
+         ],
+         "NoConcurrentCallsOnDifferentCores" : "0",
+         "NoConcurrentCallsOnSameCore" : "1"
+      },
+      {
+         "HandleIndex" : "0",
+         "NamePatternList" : [
+            "Com_ReceiveShadowSignal",
+            "Com_ReceiveSignalGroup"
+         ],
+         "NoConcurrentCallsOnDifferentCores" : "0",
+         "NoConcurrentCallsOnSameCore" : "1"
+      },
+      {
+         "HandleIndex" : "0",
+         "NamePatternList" : [
+            "LdCom_TriggerTransmit"
+         ],
+         "NoConcurrentCallsOnDifferentCores" : "0",
+         "NoConcurrentCallsOnSameCore" : "1"
+      },
+      {
+         "HandleIndex" : "-1",
+         "NamePatternList" : [
+            "^IocSend_(.+)(_[:digit:]+)?",
+            "^IocWrite_(.+)(_[:digit:]+)?",
+            "^IocReceive_(.+)",
+            "^IocRead_(.+)"
+         ],
+         "NoConcurrentCallsOnDifferentCores" : "1",
+         "NoConcurrentCallsOnSameCore" : "1"
+      }
+   ],
+   "NotReportedConcurrentAccessList" : [
+      {
+         "Justification" : "Accesses to the server queue are synchronized with SetEvent and WaitEvent",
+         "NamePattern" : "Rte_CS_ServerQueue_.*",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Accesses to the client queue are synchronized with SetEvent and WaitEvent",
+         "NamePattern" : "Rte_CS_ClientQueue_.*",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Accesses to the client queue are synchronized with SetEvent and WaitEvent",
+         "NamePattern" : "Rte_CS_ClientQueue2_.*",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Only error in runnable stubs. Will be fixed with ESCAN00085617",
+         "NamePattern" : ".*_FctPtr",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "LDCOM TP API Buffers are protected with a separate busy flag",
+         "NamePattern" : "^Rte_LdComTp_.*",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Indices are only modified in the TP Callbacks",
+         "NamePattern" : "^Rte_LdComTpIndices.*",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Accesses to the waiting task list are synchronized with SetEvent and WaitEvent",
+         "NamePattern" : "Rte_CS_WaitingTaskList_.*",
+         "Type" : "VARIABLE"
+      },
+      {
+         "Justification" : "Concurrent access is prevented by idle flags and sequence",
+         "NamePattern" : "^Ioc(Read|Write)_Rte_CS_OutParams_",
+         "Type" : "FUNCTION"
+      }
+   ],
+   "NvMBswOsApplication" : "OsApplication_OsCore0",
+   "OsAPIFunctions" : [
+      "^os.",
+      "^Com_.",
+      "^LdCom_.",
+      "^(Get|Wait|Clear|Set)Event$",
+      "^(Disable|Enable|Suspend|Resume)AllInterrupts$",
+      "^(Suspend|Resume)OSInterrupts$",
+      "^(Activate|Terminate|Chain)Task$",
+      "^(SetRel|Cancel)Alarm$",
+      "^Get(Core|Task)ID$",
+      "^(Get|Release)(Resource|Spinlock)$",
+      "^Schedule$"
+   ],
+   "OsApplicationList" : [
+      {
+         "CoreId" : "0",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "OsApplication_OsCore0",
+         "SafetyLevel" : "1"
+      },
+      {
+         "CoreId" : "1",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "OsApplication_OsCore1",
+         "SafetyLevel" : "1"
+      },
+      {
+         "CoreId" : "2",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "OsApplication_OsCore2",
+         "SafetyLevel" : "1"
+      },
+      {
+         "CoreId" : "3",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "OsApplication_OsCore3",
+         "SafetyLevel" : "1"
+      },
+      {
+         "CoreId" : "4",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "OsApplication_OsCore4",
+         "SafetyLevel" : "1"
+      },
+      {
+         "CoreId" : "5",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "OsApplication_OsCore5",
+         "SafetyLevel" : "1"
+      },
+      {
+         "CoreId" : "0",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "SystemApplication_OsCore0",
+         "SafetyLevel" : "0"
+      },
+      {
+         "CoreId" : "1",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "SystemApplication_OsCore1",
+         "SafetyLevel" : "0"
+      },
+      {
+         "CoreId" : "2",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "SystemApplication_OsCore2",
+         "SafetyLevel" : "0"
+      },
+      {
+         "CoreId" : "3",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "SystemApplication_OsCore3",
+         "SafetyLevel" : "0"
+      },
+      {
+         "CoreId" : "4",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "SystemApplication_OsCore4",
+         "SafetyLevel" : "0"
+      },
+      {
+         "CoreId" : "5",
+         "IsTrusted" : "1",
+         "OsApplicationName" : "SystemApplication_OsCore5",
+         "SafetyLevel" : "0"
+      }
+   ],
+   "PlatformSettings" : {
+      "MaxAtomicMemoryAccess" : "4"
+   },
+   "SIPDirectories" : [
+      "E:\\software\\Tricore_TC397_SIP\\"
+   ],
+   "SourceFileList" : [
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TestControl"
+         ],
+         "SourceFile" : "Source/TestControl.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Rte"
+         ],
+         "SourceFile" : "../Rte.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Rte_OsApplication_OsCore0"
+         ],
+         "SourceFile" : "../Rte_OsApplication_OsCore0.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Rte_OsApplication_OsCore1"
+         ],
+         "SourceFile" : "../Rte_OsApplication_OsCore1.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Rte_OsApplication_OsCore2"
+         ],
+         "SourceFile" : "../Rte_OsApplication_OsCore2.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Rte_OsApplication_OsCore3"
+         ],
+         "SourceFile" : "../Rte_OsApplication_OsCore3.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Rte_OsApplication_OsCore4"
+         ],
+         "SourceFile" : "../Rte_OsApplication_OsCore4.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Rte_OsApplication_OsCore5"
+         ],
+         "SourceFile" : "../Rte_OsApplication_OsCore5.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/BswM"
+         ],
+         "SourceFile" : "Source/BswM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_BswM"
+         ],
+         "SourceFile" : "Source/TSC_SchM_BswM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Det"
+         ],
+         "SourceFile" : "Source/Det.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Det"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Det.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Dio"
+         ],
+         "SourceFile" : "Source/Dio.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Dio"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Dio.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/EcuM"
+         ],
+         "SourceFile" : "Source/EcuM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_EcuM"
+         ],
+         "SourceFile" : "Source/TSC_SchM_EcuM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Irq"
+         ],
+         "SourceFile" : "Source/Irq.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Irq"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Irq.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/McalLib"
+         ],
+         "SourceFile" : "Source/McalLib.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_McalLib"
+         ],
+         "SourceFile" : "Source/TSC_SchM_McalLib.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Mcu"
+         ],
+         "SourceFile" : "Source/Mcu.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Mcu"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Mcu.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Port"
+         ],
+         "SourceFile" : "Source/Port.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_SchM_Port"
+         ],
+         "SourceFile" : "Source/TSC_SchM_Port.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_BswM"
+         ],
+         "SourceFile" : "Source/TSC_BswM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Cdd_Core0"
+         ],
+         "SourceFile" : "Source/Cdd_Core0.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Cdd_Core0"
+         ],
+         "SourceFile" : "Source/TSC_Cdd_Core0.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Cdd_Core1"
+         ],
+         "SourceFile" : "Source/Cdd_Core1.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Cdd_Core1"
+         ],
+         "SourceFile" : "Source/TSC_Cdd_Core1.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Cdd_Core2"
+         ],
+         "SourceFile" : "Source/Cdd_Core2.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Cdd_Core2"
+         ],
+         "SourceFile" : "Source/TSC_Cdd_Core2.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Cdd_Core3"
+         ],
+         "SourceFile" : "Source/Cdd_Core3.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Cdd_Core3"
+         ],
+         "SourceFile" : "Source/TSC_Cdd_Core3.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Cdd_Core4"
+         ],
+         "SourceFile" : "Source/Cdd_Core4.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Cdd_Core4"
+         ],
+         "SourceFile" : "Source/TSC_Cdd_Core4.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Cdd_Core5"
+         ],
+         "SourceFile" : "Source/Cdd_Core5.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Cdd_Core5"
+         ],
+         "SourceFile" : "Source/TSC_Cdd_Core5.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Cdd_Nm"
+         ],
+         "SourceFile" : "Source/Cdd_Nm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Cdd_Nm"
+         ],
+         "SourceFile" : "Source/TSC_Cdd_Nm.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Det"
+         ],
+         "SourceFile" : "Source/TSC_Det.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_EcuM"
+         ],
+         "SourceFile" : "Source/TSC_EcuM.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Os_OsCore0_swc"
+         ],
+         "SourceFile" : "Source/Os_OsCore0_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Os_OsCore0_swc"
+         ],
+         "SourceFile" : "Source/TSC_Os_OsCore0_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Os_OsCore1_swc"
+         ],
+         "SourceFile" : "Source/Os_OsCore1_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Os_OsCore1_swc"
+         ],
+         "SourceFile" : "Source/TSC_Os_OsCore1_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Os_OsCore2_swc"
+         ],
+         "SourceFile" : "Source/Os_OsCore2_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Os_OsCore2_swc"
+         ],
+         "SourceFile" : "Source/TSC_Os_OsCore2_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Os_OsCore3_swc"
+         ],
+         "SourceFile" : "Source/Os_OsCore3_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Os_OsCore3_swc"
+         ],
+         "SourceFile" : "Source/TSC_Os_OsCore3_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Os_OsCore4_swc"
+         ],
+         "SourceFile" : "Source/Os_OsCore4_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Os_OsCore4_swc"
+         ],
+         "SourceFile" : "Source/TSC_Os_OsCore4_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/Os_OsCore5_swc"
+         ],
+         "SourceFile" : "Source/Os_OsCore5_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_Os_OsCore5_swc"
+         ],
+         "SourceFile" : "Source/TSC_Os_OsCore5_swc.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/lock_control"
+         ],
+         "SourceFile" : "Source/lock_control.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_lock_control"
+         ],
+         "SourceFile" : "Source/TSC_lock_control.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/window_core1"
+         ],
+         "SourceFile" : "Source/window_core1.c"
+      },
+      {
+         "IncludeDirectoryList" : [
+            "E:/software/Tricore_TC397_SIP/Components/RteAnalyzer/Generator/include",
+            "Source",
+            "..",
+            "../Components",
+            "../Components/TSC_window_core1"
+         ],
+         "SourceFile" : "Source/TSC_window_core1.c"
+      }
+   ],
+   "TaskList" : [
+      {
+         "OsApplication" : "OsApplication_OsCore0",
+         "Preemptive" : "1",
+         "Priority" : "55",
+         "TaskName" : "Default_Init_Task"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore1",
+         "Preemptive" : "1",
+         "Priority" : "54",
+         "TaskName" : "Default_Init_Task_Core1"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore1",
+         "Preemptive" : "1",
+         "Priority" : "49",
+         "TaskName" : "Default_Init_Task_Core1_Trusted"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore2",
+         "Preemptive" : "1",
+         "Priority" : "53",
+         "TaskName" : "Default_Init_Task_Core2"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore2",
+         "Preemptive" : "1",
+         "Priority" : "49",
+         "TaskName" : "Default_Init_Task_Core2_Trusted"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore3",
+         "Preemptive" : "1",
+         "Priority" : "52",
+         "TaskName" : "Default_Init_Task_Core3"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore3",
+         "Preemptive" : "1",
+         "Priority" : "49",
+         "TaskName" : "Default_Init_Task_Core3_Trusted"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore4",
+         "Preemptive" : "1",
+         "Priority" : "51",
+         "TaskName" : "Default_Init_Task_Core4"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore4",
+         "Preemptive" : "1",
+         "Priority" : "49",
+         "TaskName" : "Default_Init_Task_Core4_Trusted"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore5",
+         "Preemptive" : "1",
+         "Priority" : "50",
+         "TaskName" : "Default_Init_Task_Core6"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore5",
+         "Preemptive" : "1",
+         "Priority" : "49",
+         "TaskName" : "Default_Init_Task_Core6_Trusted"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore0",
+         "Preemptive" : "1",
+         "Priority" : "50",
+         "TaskName" : "Default_Init_Task_Trusted"
+      },
+      {
+         "OsApplication" : "SystemApplication_OsCore0",
+         "Preemptive" : "1",
+         "Priority" : "4294967295",
+         "TaskName" : "IdleTask_OsCore0"
+      },
+      {
+         "OsApplication" : "SystemApplication_OsCore1",
+         "Preemptive" : "1",
+         "Priority" : "4294967295",
+         "TaskName" : "IdleTask_OsCore1"
+      },
+      {
+         "OsApplication" : "SystemApplication_OsCore2",
+         "Preemptive" : "1",
+         "Priority" : "4294967295",
+         "TaskName" : "IdleTask_OsCore2"
+      },
+      {
+         "OsApplication" : "SystemApplication_OsCore3",
+         "Preemptive" : "1",
+         "Priority" : "4294967295",
+         "TaskName" : "IdleTask_OsCore3"
+      },
+      {
+         "OsApplication" : "SystemApplication_OsCore4",
+         "Preemptive" : "1",
+         "Priority" : "4294967295",
+         "TaskName" : "IdleTask_OsCore4"
+      },
+      {
+         "OsApplication" : "SystemApplication_OsCore5",
+         "Preemptive" : "1",
+         "Priority" : "4294967295",
+         "TaskName" : "IdleTask_OsCore5"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore0",
+         "Preemptive" : "1",
+         "Priority" : "15",
+         "TaskName" : "OsTask_Asw_OsCore0"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore1",
+         "Preemptive" : "1",
+         "Priority" : "14",
+         "TaskName" : "OsTask_Asw_OsCore1"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore2",
+         "Preemptive" : "1",
+         "Priority" : "13",
+         "TaskName" : "OsTask_Asw_OsCore2"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore3",
+         "Preemptive" : "1",
+         "Priority" : "12",
+         "TaskName" : "OsTask_Asw_OsCore3"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore4",
+         "Preemptive" : "1",
+         "Priority" : "11",
+         "TaskName" : "OsTask_Asw_OsCore4"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore5",
+         "Preemptive" : "1",
+         "Priority" : "10",
+         "TaskName" : "OsTask_Asw_OsCore5"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore0",
+         "Preemptive" : "1",
+         "Priority" : "30",
+         "TaskName" : "OsTask_Bsw_OsCore0"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore1",
+         "Preemptive" : "1",
+         "Priority" : "34",
+         "TaskName" : "OsTask_Bsw_OsCore1"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore2",
+         "Preemptive" : "1",
+         "Priority" : "33",
+         "TaskName" : "OsTask_Bsw_OsCore2"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore3",
+         "Preemptive" : "1",
+         "Priority" : "32",
+         "TaskName" : "OsTask_Bsw_OsCore3"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore4",
+         "Preemptive" : "1",
+         "Priority" : "31",
+         "TaskName" : "OsTask_Bsw_OsCore4"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore5",
+         "Preemptive" : "1",
+         "Priority" : "30",
+         "TaskName" : "OsTask_Bsw_OsCore5"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore0",
+         "Preemptive" : "1",
+         "Priority" : "48",
+         "TaskName" : "OsTask_Init_OsCore0"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore1",
+         "Preemptive" : "1",
+         "Priority" : "48",
+         "TaskName" : "OsTask_Init_OsCore1"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore2",
+         "Preemptive" : "1",
+         "Priority" : "48",
+         "TaskName" : "OsTask_Init_OsCore2"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore3",
+         "Preemptive" : "1",
+         "Priority" : "48",
+         "TaskName" : "OsTask_Init_OsCore3"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore4",
+         "Preemptive" : "1",
+         "Priority" : "48",
+         "TaskName" : "OsTask_Init_OsCore4"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore5",
+         "Preemptive" : "1",
+         "Priority" : "48",
+         "TaskName" : "OsTask_Init_OsCore5"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore0",
+         "Preemptive" : "1",
+         "Priority" : "40",
+         "TaskName" : "OsTask_lock_2ms"
+      },
+      {
+         "OsApplication" : "OsApplication_OsCore1",
+         "Preemptive" : "1",
+         "Priority" : "41",
+         "TaskName" : "OsTask_window_2ms"
+      }
+   ],
+   "TemplateDataBaseDirectory" : "E:\\software\\Tricore_TC397_SIP\\Components\\Rte\\Generator"
+}

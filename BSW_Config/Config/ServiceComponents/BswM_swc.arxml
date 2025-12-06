@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
+      <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="2598f478-7ab7-4e2e-afbd-7e06de8eda9e">
+          <SHORT-NAME>BswM_swc</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-DECLARATION-GROUP UUID="f3db8a1b-7732-44ad-9bca-8fc905e42b37">
+              <SHORT-NAME>ESH_Mode</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/ESH_Mode/STARTUP</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="18783647-02df-40fc-807d-677f0c681798">
+                  <SHORT-NAME>STARTUP</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="4486cbaa-682d-470c-8300-5af3f8c5d005">
+                  <SHORT-NAME>RUN</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="b6a0aebf-5096-4cd7-9f04-460b31d696f7">
+                  <SHORT-NAME>POSTRUN</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="2f4ba591-d85d-4eb9-a46b-61271c07639c">
+                  <SHORT-NAME>WAKEUP</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="40ffd39f-842a-4505-b313-a04e936f743d">
+                  <SHORT-NAME>SHUTDOWN</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>5</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <MODE-DECLARATION-GROUP UUID="de1142da-1be2-4cc5-8fd1-c3ab99c66235">
+              <SHORT-NAME>ESH_RunRequest</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/ESH_RunRequest/RELEASED</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION UUID="b44d339d-844d-4a89-8ff6-973543cc31c0">
+                  <SHORT-NAME>RELEASED</SHORT-NAME>
+                  <VALUE>0</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION UUID="15963428-33e8-4351-b327-5fc3dd369318">
+                  <SHORT-NAME>REQUESTED</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+              <ON-TRANSITION-VALUE>2</ON-TRANSITION-VALUE>
+            </MODE-DECLARATION-GROUP>
+            <DATA-TYPE-MAPPING-SET UUID="59be4b14-09d2-42cd-953c-a3a537c1dcfe">
+              <SHORT-NAME>BswMMappingSet</SHORT-NAME>
+              <DESC>
+                <L-2 L="FOR-ALL">Contains Mapping for ModeDeclarations Groups which are provided by BswM.</L-2>
+              </DESC>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/BswM_swc/DataTypes/BswM_ESH_Mode</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MICROSAR/BswM_swc/ESH_Mode</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/BswM_swc/DataTypes/BswM_ESH_RunRequest</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/MICROSAR/BswM_swc/ESH_RunRequest</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="6cb34e24-a778-43ca-9ab7-0d0832a57986">
+              <SHORT-NAME>DataTypes</SHORT-NAME>
+              <ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE UUID="eeab0af1-1bfc-4e1d-a1de-9039a0a887bb">
+                  <SHORT-NAME>BswM_ESH_Mode</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="FOR-ALL">Unique value for each user</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/BswM_swc/DataTypes/CompuMethods/BswM_ESH_Mode</COMPU-METHOD-REF>
+                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/BswM_swc/DataTypes/DataConstrs/BswM_ESH_Mode_Constr</DATA-CONSTR-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="72c25911-c8dd-4aff-8dd7-400159296df6">
+                  <SHORT-NAME>BswM_ESH_RunRequest</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="FOR-ALL">Unique value for each user</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <COMPU-METHOD-REF DEST="COMPU-METHOD">/MICROSAR/BswM_swc/DataTypes/CompuMethods/BswM_ESH_RunRequest</COMPU-METHOD-REF>
+                        <DATA-CONSTR-REF DEST="DATA-CONSTR">/MICROSAR/BswM_swc/DataTypes/DataConstrs/BswM_ESH_RunRequest_Constr</DATA-CONSTR-REF>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE>
+              </ELEMENTS>
+              <AR-PACKAGES>
+                <AR-PACKAGE UUID="03a96699-e7d4-4ebf-80b4-6431d64bcc4b">
+                  <SHORT-NAME>DataConstrs</SHORT-NAME>
+                  <ELEMENTS>
+                    <DATA-CONSTR UUID="ed9a8081-d8cd-401c-b06d-7502b2a7b692">
+                      <SHORT-NAME>BswM_ESH_Mode_Constr</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                    <DATA-CONSTR UUID="220a2621-039b-469d-85ef-1748166b87be">
+                      <SHORT-NAME>BswM_ESH_RunRequest_Constr</SHORT-NAME>
+                      <DATA-CONSTR-RULES>
+                        <DATA-CONSTR-RULE>
+                          <INTERNAL-CONSTRS>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                          </INTERNAL-CONSTRS>
+                        </DATA-CONSTR-RULE>
+                      </DATA-CONSTR-RULES>
+                    </DATA-CONSTR>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+                <AR-PACKAGE UUID="3975e747-38cd-4069-8faf-e3252b5b2c04">
+                  <SHORT-NAME>CompuMethods</SHORT-NAME>
+                  <ELEMENTS>
+                    <COMPU-METHOD UUID="1896898c-fae0-4c72-9835-d837f553abe3">
+                      <SHORT-NAME>BswM_ESH_Mode</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>STARTUP</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>STARTUP</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>RUN</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>RUN</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>POSTRUN</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>POSTRUN</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>WAKEUP</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>WAKEUP</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>SHUTDOWN</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>SHUTDOWN</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                    <COMPU-METHOD UUID="164c9fb2-fee7-49d9-87e9-80f401ed6c3a">
+                      <SHORT-NAME>BswM_ESH_RunRequest</SHORT-NAME>
+                      <CATEGORY>TEXTTABLE</CATEGORY>
+                      <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>RELEASED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>RELEASED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                          <COMPU-SCALE>
+                            <SHORT-LABEL>REQUESTED</SHORT-LABEL>
+                            <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                            <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                            <COMPU-CONST>
+                              <VT>REQUESTED</VT>
+                            </COMPU-CONST>
+                          </COMPU-SCALE>
+                        </COMPU-SCALES>
+                      </COMPU-INTERNAL-TO-PHYS>
+                    </COMPU-METHOD>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="b962aaa6-52bb-4872-a34e-3d3c7571debf">
+              <SHORT-NAME>Interfaces</SHORT-NAME>
+              <ELEMENTS>
+                <MODE-SWITCH-INTERFACE UUID="34ed8009-2c0f-47f2-94cd-6c686586fbf9">
+                  <SHORT-NAME>BswM_MSI_ESH_Mode</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+                  <MODE-GROUP UUID="ea17ae80-78e1-4f2b-8394-96149cb8693a">
+                    <SHORT-NAME>BswM_MDGP_ESH_Mode</SHORT-NAME>
+                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MICROSAR/BswM_swc/ESH_Mode</TYPE-TREF>
+                  </MODE-GROUP>
+                </MODE-SWITCH-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="d4a215a1-6ce2-4a16-8c61-d3acdcdeb097">
+                  <SHORT-NAME>BswM_SRI_BswM_MSI_ESH_Mode_BswM_MDGP_ESH_Mode</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+                  <DATA-ELEMENTS>
+                    <VARIABLE-DATA-PROTOTYPE UUID="7d2c7376-dd0f-4942-8a2d-dcc688eaa913">
+                      <SHORT-NAME>requestedMode</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/BswM_swc/DataTypes/BswM_ESH_Mode</TYPE-TREF>
+                    </VARIABLE-DATA-PROTOTYPE>
+                  </DATA-ELEMENTS>
+                </SENDER-RECEIVER-INTERFACE>
+                <MODE-SWITCH-INTERFACE UUID="4f9622cd-d58f-402c-89e2-c3daa3f26473">
+                  <SHORT-NAME>BswM_MSI_ESH_RunRequest</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+                  <MODE-GROUP UUID="ce566b1e-7c5e-4907-b973-8ce2500f201f">
+                    <SHORT-NAME>BswM_MDGP_ESH_RunRequest</SHORT-NAME>
+                    <TYPE-TREF DEST="MODE-DECLARATION-GROUP">/MICROSAR/BswM_swc/ESH_RunRequest</TYPE-TREF>
+                  </MODE-GROUP>
+                </MODE-SWITCH-INTERFACE>
+                <SENDER-RECEIVER-INTERFACE UUID="1e9a920c-066b-4086-8f30-2e290b30a90c">
+                  <SHORT-NAME>BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>BASIC-SOFTWARE-MODE-MANAGER</SERVICE-KIND>
+                  <DATA-ELEMENTS>
+                    <VARIABLE-DATA-PROTOTYPE UUID="a6832bff-7cba-4f69-9ccf-53aa1ef451bf">
+                      <SHORT-NAME>requestedMode</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/BswM_swc/DataTypes/BswM_ESH_RunRequest</TYPE-TREF>
+                    </VARIABLE-DATA-PROTOTYPE>
+                  </DATA-ELEMENTS>
+                </SENDER-RECEIVER-INTERFACE>
+              </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="5e3706c9-e75d-4991-9aa8-c34825e6c54a">
+              <SHORT-NAME>ComponentTypes</SHORT-NAME>
+              <ELEMENTS>
+                <SERVICE-SW-COMPONENT-TYPE UUID="f5401308-1953-47b0-bfb6-4df6c9cb94e8">
+                  <SHORT-NAME>BswM</SHORT-NAME>
+                  <CATEGORY>SERVICE_COMPONENT</CATEGORY>
+                  <PORTS>
+                    <P-PORT-PROTOTYPE UUID="0711c33b-8171-4c36-8877-e88aa73bc19f">
+                      <SHORT-NAME>Switch_ESH_ModeSwitch</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/ESH_ModeSwitch</SDX-REF>
+                              <SD GID="DV:DerivedFromReferrablesUUID">47df09b9-bd10-45f4-a602-9e20b4b7926f</SD>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_ESH_Mode</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="d6d5ba29-9ada-4ca5-8635-da895b0123a9">
+                      <SHORT-NAME>Notification_ESH_ModeNotification</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/ESH_ModeNotification</SDX-REF>
+                              <SD GID="DV:DerivedFromReferrablesUUID">0dbb3791-df27-414b-a83f-98752e686d8b</SD>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <REQUIRED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_ESH_Mode</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="b78ad6d5-4713-4697-bcaf-18ddf33d0fde">
+                      <SHORT-NAME>Request_ESH_RunRequest_0</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/ESH_RunRequest_0</SDX-REF>
+                              <SD GID="DV:DerivedFromReferrablesUUID">fac5b290-44be-43b5-9231-91307c224458</SD>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <REQUIRED-COM-SPECS>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
+                          <INIT-VALUE>
+                            <TEXT-VALUE-SPECIFICATION>
+                              <VALUE>RELEASED</VALUE>
+                            </TEXT-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="9c7630f9-0727-44d9-becc-2dc34106832d">
+                      <SHORT-NAME>Request_ESH_RunRequest_1</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/ESH_RunRequest_1</SDX-REF>
+                              <SD GID="DV:DerivedFromReferrablesUUID">13317837-ea36-4acc-a5f8-f3c15259f4e0</SD>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <REQUIRED-COM-SPECS>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
+                          <INIT-VALUE>
+                            <TEXT-VALUE-SPECIFICATION>
+                              <VALUE>RELEASED</VALUE>
+                            </TEXT-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="fb7af541-3fe4-45d5-87f1-2750b4c38261">
+                      <SHORT-NAME>Request_ESH_PostRunRequest_0</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/ESH_PostRunRequest_0</SDX-REF>
+                              <SD GID="DV:DerivedFromReferrablesUUID">09d6639b-72f7-48bf-ae68-7f400251cf02</SD>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <REQUIRED-COM-SPECS>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
+                          <INIT-VALUE>
+                            <TEXT-VALUE-SPECIFICATION>
+                              <VALUE>RELEASED</VALUE>
+                            </TEXT-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="a79cb94c-ab08-4278-8675-30eddb1585a4">
+                      <SHORT-NAME>Request_ESH_PostRunRequest_1</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/ESH_PostRunRequest_1</SDX-REF>
+                              <SD GID="DV:DerivedFromReferrablesUUID">5e28a120-944b-4818-b5b5-8c09e3582428</SD>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <REQUIRED-COM-SPECS>
+                        <NONQUEUED-RECEIVER-COM-SPEC>
+                          <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</DATA-ELEMENT-REF>
+                          <HANDLE-OUT-OF-RANGE>NONE</HANDLE-OUT-OF-RANGE>
+                          <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
+                          <INIT-VALUE>
+                            <TEXT-VALUE-SPECIFICATION>
+                              <VALUE>RELEASED</VALUE>
+                            </TEXT-VALUE-SPECIFICATION>
+                          </INIT-VALUE>
+                        </NONQUEUED-RECEIVER-COM-SPEC>
+                      </REQUIRED-COM-SPECS>
+                      <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                  </PORTS>
+                  <INTERNAL-BEHAVIORS>
+                    <SWC-INTERNAL-BEHAVIOR UUID="585aea1a-f9ed-43b7-9957-706774ea416f">
+                      <SHORT-NAME>BswMInternalBehavior</SHORT-NAME>
+                      <DATA-TYPE-MAPPING-REFS>
+                        <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/MICROSAR/BswM_swc/BswMMappingSet</DATA-TYPE-MAPPING-REF>
+                      </DATA-TYPE-MAPPING-REFS>
+                      <EVENTS>
+                        <TIMING-EVENT UUID="ab340fd6-1215-4b61-ac00-a13adc4ac862">
+                          <SHORT-NAME>Timer_BswM_MainFunction</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/BswM_swc/ComponentTypes/BswM/BswMInternalBehavior/BswM_MainFunction</START-ON-EVENT-REF>
+                          <PERIOD>0.01</PERIOD>
+                        </TIMING-EVENT>
+                      </EVENTS>
+                      <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
+                      <INCLUDED-DATA-TYPE-SETS>
+                        <INCLUDED-DATA-TYPE-SET>
+                          <DATA-TYPE-REFS>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/BswM_swc/DataTypes/BswM_ESH_Mode</DATA-TYPE-REF>
+                            <DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/BswM_swc/DataTypes/BswM_ESH_RunRequest</DATA-TYPE-REF>
+                          </DATA-TYPE-REFS>
+                        </INCLUDED-DATA-TYPE-SET>
+                      </INCLUDED-DATA-TYPE-SETS>
+                      <PORT-API-OPTIONS>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Switch_ESH_ModeSwitch</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Notification_ESH_ModeNotification</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Request_ESH_RunRequest_0</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Request_ESH_RunRequest_1</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Request_ESH_PostRunRequest_0</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Request_ESH_PostRunRequest_1</PORT-REF>
+                        </PORT-API-OPTION>
+                      </PORT-API-OPTIONS>
+                      <RUNNABLES>
+                        <RUNNABLE-ENTITY UUID="3dad8198-aaaf-4273-acac-451c21adc990">
+                          <SHORT-NAME>BswM_MainFunction</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                          <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                            <VARIABLE-ACCESS UUID="67ff74c5-3df5-4f59-9085-b156786deacb">
+                              <SHORT-NAME>DataReceivePointBswM_MainFunction_Request_ESH_RunRequest_0_requestedMode</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Request_ESH_RunRequest_0</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="dbc07f57-c508-4040-9771-1f986fdd5e98">
+                              <SHORT-NAME>DataReceivePointBswM_MainFunction_Request_ESH_RunRequest_1_requestedMode</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Request_ESH_RunRequest_1</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="f6db07a8-a766-4fe6-a9a2-1e05dca18765">
+                              <SHORT-NAME>DataReceivePointBswM_MainFunction_Request_ESH_PostRunRequest_0_requestedMode</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Request_ESH_PostRunRequest_0</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                            <VARIABLE-ACCESS UUID="ec63ecb1-ba56-4bd6-8974-08efbddd30ca">
+                              <SHORT-NAME>DataReceivePointBswM_MainFunction_Request_ESH_PostRunRequest_1_requestedMode</SHORT-NAME>
+                              <ACCESSED-VARIABLE>
+                                <AUTOSAR-VARIABLE-IREF>
+                                  <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Request_ESH_PostRunRequest_1</PORT-PROTOTYPE-REF>
+                                  <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</TARGET-DATA-PROTOTYPE-REF>
+                                </AUTOSAR-VARIABLE-IREF>
+                              </ACCESSED-VARIABLE>
+                            </VARIABLE-ACCESS>
+                          </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                          <MODE-ACCESS-POINTS>
+                            <MODE-ACCESS-POINT>
+                              <MODE-GROUP-IREF>
+                                <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                                  <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Notification_ESH_ModeNotification</CONTEXT-R-PORT-REF>
+                                  <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_ESH_Mode/BswM_MDGP_ESH_Mode</TARGET-MODE-GROUP-REF>
+                                </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-ACCESS-POINT>
+                          </MODE-ACCESS-POINTS>
+                          <MODE-SWITCH-POINTS>
+                            <MODE-SWITCH-POINT UUID="e9ab7aac-9510-49c4-9f32-f648791198a4">
+                              <SHORT-NAME>ModeSwitchPointBswM_MainFunction_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode</SHORT-NAME>
+                              <MODE-GROUP-IREF>
+                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Switch_ESH_ModeSwitch</CONTEXT-P-PORT-REF>
+                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_ESH_Mode/BswM_MDGP_ESH_Mode</TARGET-MODE-GROUP-REF>
+                              </MODE-GROUP-IREF>
+                            </MODE-SWITCH-POINT>
+                          </MODE-SWITCH-POINTS>
+                          <SYMBOL>BswM_MainFunction</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                      </RUNNABLES>
+                      <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                    </SWC-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </SERVICE-SW-COMPONENT-TYPE>
+                <SWC-IMPLEMENTATION UUID="8f5cfc68-22aa-4afa-98f0-5a05ff291cb7">
+                  <SHORT-NAME>BswMImplementation</SHORT-NAME>
+                  <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                  <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/MICROSAR/BswM_swc/ComponentTypes/BswM/BswMInternalBehavior</BEHAVIOR-REF>
+                </SWC-IMPLEMENTATION>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

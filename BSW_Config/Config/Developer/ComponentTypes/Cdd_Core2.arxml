@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="F079C6CB-4661-40D9-899F-DD405F22B640">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="823BA118-5C01-4CB2-B619-25AE3AEB9330">
+          <SHORT-NAME>Cdd_Core2</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="F490E664-51C8-48AE-846F-9AD809292F12">
+              <SHORT-NAME>Cdd_Core2_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <INIT-EVENT UUID="4972FA0A-3C5E-4E6D-B0DA-D3E3FD39942F">
+                  <SHORT-NAME>Cdd_Core2_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core2/Cdd_Core2_InternalBehavior/Cdd_Core2_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+                <TIMING-EVENT UUID="39E0501A-24A5-44FB-B8C4-5148C6C76F9E">
+                  <SHORT-NAME>TMT_Cdd_Core2_Runnable10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core2/Cdd_Core2_InternalBehavior/Cdd_Core2_Runnable10ms</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="E5BCF65C-65F3-4235-AC22-3BB287973A4F">
+                  <SHORT-NAME>Cdd_Core2_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="75C88690-1F4A-47E7-80E1-6D6113D1EA5C">
+                  <SHORT-NAME>Cdd_Core2_Runnable10ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="99BAB6B7-C3C4-4F2F-9FE3-7366668C2AE9">
+          <SHORT-NAME>Cdd_Core2_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/Cdd_Core2/Cdd_Core2_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

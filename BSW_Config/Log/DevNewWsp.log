@@ -1,0 +1,15 @@
+﻿19 May 2025 22:04:38 - Saving file AdminDataTemplates.xml (F:\Vector_CP\CBD2000642_TC397\Applications\TC397_BSW\Config\Developer\AdminDataTemplates.xml)
+19 May 2025 22:04:38 - Saving file TC397_BSW.dcf (F:\Vector_CP\CBD2000642_TC397\Applications\TC397_BSW\Config\Developer\TC397_BSW.dcf)
+19 May 2025 22:04:38 - Start import
+19 May 2025 22:04:38 - Importing file (C:\Program Files\Vector DaVinci Developer Classic 4.11 (SP3)\Bin\Predefines\StandardPackages_AR4.arxml).
+19 May 2025 22:04:39 - Importing file (C:\Program Files\Vector DaVinci Developer Classic 4.11 (SP3)\Bin\Predefines\ServicePortInterfaces_4.5.0.arxml).
+19 May 2025 22:04:39 - Importing file (C:\Program Files\Vector DaVinci Developer Classic 4.11 (SP3)\Bin\Predefines\ApplicationPortInterfaces_4.5.0.arxml).
+19 May 2025 22:04:39 - Importing file (F:\Vector_CP\CBD2000642_TC397\Applications\TC397_BSW\Config\AUTOSAR\PlatformTypes_AR4.arxml).
+19 May 2025 22:04:39 - Merging imported data
+19 May 2025 22:04:41 - Finished import
+19 May 2025 22:04:41 - Saving file ProfileSettings.xml (F:\Vector_CP\CBD2000642_TC397\Applications\TC397_BSW\Config\Developer\ProfileSettings.xml)
+19 May 2025 22:04:41 - Saving file Packages.arxml (F:\Vector_CP\CBD2000642_TC397\Applications\TC397_BSW\Config\Developer\Packages.arxml)
+19 May 2025 22:04:41 - Saving file DataTypes.arxml (F:\Vector_CP\CBD2000642_TC397\Applications\TC397_BSW\Config\Developer\DataTypes.arxml)
+19 May 2025 22:04:41 - Saving file PortInterfaces.arxml (F:\Vector_CP\CBD2000642_TC397\Applications\TC397_BSW\Config\Developer\PortInterfaces.arxml)
+19 May 2025 22:04:41 - Saving file TC397_BSW.arxml (F:\Vector_CP\CBD2000642_TC397\Applications\TC397_BSW\Config\Developer\ECUProjects\TC397_BSW.arxml)
+19 May 2025 22:04:41 - Saving file TC397_BSW.dcf (F:\Vector_CP\CBD2000642_TC397\Applications\TC397_BSW\Config\Developer\TC397_BSW.dcf)

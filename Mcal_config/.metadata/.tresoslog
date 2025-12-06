@@ -1,0 +1,56 @@
+# Tresos Studio Logfile, created on 25-09-04,11:13:44
+
+[ENTRY]
+TYPE Exception
+VERSION 1.0
+CODE 
+SEVERITY ERROR
+ORIGIN Java
+TIMESTAMP 25-09-04,11:13:44
+ADDITIONALINFO 
+SHORTMESSAGELOCALIZED Exception occured: java.lang.IllegalStateException.
+SHORTMESSAGENONLOCALIZED Exception occured: java.lang.IllegalStateException.
+LONGMESSAGELOCALIZED java.lang.IllegalStateException: error reading error log entries, marker STACKTRACE  expected. Current line is: <br> (node )
+LONGMESSAGENONLOCALIZED java.lang.IllegalStateException: error reading error log entries, marker STACKTRACE  expected. Current line is: <br> (node )
+SHORTMESSAGEENRICHEDLOCALIZED 
+SHORTMESSAGEENRICHEDNONLOCALIZED 
+LONGMESSAGEENRICHEDLOCALIZED 
+LONGMESSAGEENRICHEDNONLOCALIZED 
+STACKTRACE java.lang.IllegalStateException: error reading error log entries, marker STACKTRACE  expected. Current line is: <br> (node )
+  	at dreisoft.tresos.lib2.errorlog.entry.internal.ErrorLogReader.a(Unknown Source)
+  	at dreisoft.tresos.lib2.errorlog.entry.internal.ErrorLogReader.getAttributeContent(Unknown Source)
+  	at dreisoft.tresos.lib2.errorlog.entry.ErrorLogEntry.c(Unknown Source)
+  	at dreisoft.tresos.lib2.errorlog.entry.ErrorLogEntry.b(Unknown Source)
+  	at dreisoft.tresos.lib2.errorlog.entry.ErrorLogEntry.a(Unknown Source)
+  	at dreisoft.tresos.lib2.errorlog.entry.ErrorLogEntry.createErrorLogEntries(Unknown Source)
+  	at dreisoft.tresos.lib2.errorlog.internal.ErrorLogFileHandler.b(Unknown Source)
+  	at dreisoft.tresos.lib2.errorlog.internal.ErrorLogFileHandler.loadLogEntries(Unknown Source)
+  	at dreisoft.tresos.lib2.errorlog.internal.ErrorLogFileHandler.a(Unknown Source)
+  	at dreisoft.tresos.lib2.errorlog.internal.ErrorLogFileHandler.loadLogEntries(Unknown Source)
+  	at dreisoft.tresos.lib2.errorlog.ErrorLog.loadLogEntries(Unknown Source)
+  	at dreisoft.tresos.launcher2.errorlog.ErrorLogViewData.a(Unknown Source)
+  	at dreisoft.tresos.launcher2.errorlog.ErrorLogViewData.initializeLogData(Unknown Source)
+  	at dreisoft.tresos.launcher2.errorlog.ErrorLogView$1.run(Unknown Source)
+  	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+  
+
+[ENDENTRY]
+
+[ENTRY]
+TYPE IStatus
+VERSION 1.0
+CODE 0
+SEVERITY INFO
+ORIGIN dreisoft.tresos.launcher2.plugin
+TIMESTAMP 25-09-04,11:13:44
+ADDITIONALINFO 
+SHORTMESSAGELOCALIZED A new logfile has been created because the parsing of the old logfile failed. The old log has been backed up. Information about what went wrong might be at the beginning of the current logfile.
+SHORTMESSAGENONLOCALIZED 
+LONGMESSAGELOCALIZED A new logfile has been created because the parsing of the old logfile failed. The old log has been backed up. Information about what went wrong might be at the beginning of the current logfile.
+LONGMESSAGENONLOCALIZED 
+SHORTMESSAGEENRICHEDLOCALIZED 
+SHORTMESSAGEENRICHEDNONLOCALIZED 
+LONGMESSAGEENRICHEDLOCALIZED 
+LONGMESSAGEENRICHEDNONLOCALIZED 
+STACKTRACE 
+[ENDENTRY]

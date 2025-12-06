@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="F079C6CB-4661-40D9-899F-DD405F22B640">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="5B860049-C51B-4285-A4D8-026CA0BBBD52">
+          <SHORT-NAME>Cdd_Nm</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="9240DCA1-63AB-4EA4-BD5E-805829E2512F">
+              <SHORT-NAME>BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</DATA-ELEMENT-REF>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="289C7D42-DB35-4FE1-9AEF-5922919A7AA8">
+              <SHORT-NAME>BswM_SRI_BswM_MSI_ESH_Mode_BswM_MDGP_ESH_Mode</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <NONQUEUED-SENDER-COM-SPEC>
+                  <DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_Mode_BswM_MDGP_ESH_Mode/requestedMode</DATA-ELEMENT-REF>
+                </NONQUEUED-SENDER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_Mode_BswM_MDGP_ESH_Mode</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="9D4F65F1-C053-4C34-8268-23D0FB3FAB37">
+              <SHORT-NAME>Cdd_Nm_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="85D18BF6-9301-4B84-B8A2-FB0C177C8A04">
+                  <SHORT-NAME>TMT_Cdd_Nm_Runnable10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Nm/Cdd_Nm_InternalBehavior/Cdd_Nm_Runnable10ms</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+                <INIT-EVENT UUID="35FCCDE2-E40B-4CDF-B0CF-DC10C7B8597C">
+                  <SHORT-NAME>Cdd_Nm_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Nm/Cdd_Nm_InternalBehavior/Cdd_Nm_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="42F1F10E-A36E-4DAD-A2D6-78156371FBBA">
+                  <SHORT-NAME>Cdd_Nm_Runnable10ms</SHORT-NAME>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="95580C63-F960-4ECE-ADA6-2D1D1C8111C9">
+                      <SHORT-NAME>SEND_BswM_SRI_BswM_MSI_ESH_Mode_BswM_MDGP_ESH_Mode_requestedMode</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_Nm/BswM_SRI_BswM_MSI_ESH_Mode_BswM_MDGP_ESH_Mode</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_Mode_BswM_MDGP_ESH_Mode/requestedMode</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="92FC741D-CC47-4500-A176-6598BAFD7A67">
+                      <SHORT-NAME>SEND_BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest_requestedMode</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_Nm/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest/requestedMode</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="93E93E42-1940-4041-9EAB-6D6015C7BFE3">
+                  <SHORT-NAME>Cdd_Nm_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="C15044A7-7E81-4A04-A2F8-6F0F7B469C9B">
+          <SHORT-NAME>Cdd_Nm_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/Cdd_Nm/Cdd_Nm_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
