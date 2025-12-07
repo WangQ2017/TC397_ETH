@@ -1,0 +1,111 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 25,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "release",
+            "hidden": true,
+            "description":"Template for building release version"
+        },
+        {
+            "name": "factory",
+            "hidden": true,
+            "description":"Template for building factory version",
+            "cacheVariables":{
+                "PRESET_DEFINITIONS":"BUILD_FACTORY_VERSION"
+            }
+        },
+        {
+            "name": "ads",
+            "hidden": true,
+            "description":"Template for building with ADS",
+            "generator": "Ninja",
+            "binaryDir":"${sourceDir}/build",
+            "cacheVariables":{
+                "TOOLCHAIN":"ADS"
+            }
+        },
+        {
+            "name": "tasking",
+            "hidden": true,
+            "description":"Template for building with tasking",
+            "generator": "Ninja",
+            "binaryDir":"${sourceDir}/build",
+            "cacheVariables":{
+                "TOOLCHAIN":"Tasking"
+            }
+        },
+        {
+            "name": "customer_none",
+            "hidden": true,
+            "description":"Template for building customer none version",
+            "cacheVariables":{
+                "TARGET":"none",
+                "CUSTOMER":"00",
+                "CUSTOMER_DIRNAME":"NONE"
+            }
+        },
+        {
+            "name": "none-rel-ads",
+            "displayName":"Customer None, Release, ADS",
+            "binaryDir":"${sourceDir}/build/none-rel-ads",
+            "inherits":[
+                "release",
+                "ads",
+                "customer_none"
+            ]
+        },
+        {
+            "name": "none-fac-ads",
+            "displayName":"Customer None, Factory, ADS",
+            "binaryDir":"${sourceDir}/build/none-fac-ads",
+            "inherits":[
+                "factory",
+                "ads",
+                "customer_none"
+            ]
+        },
+        {
+            "name": "none-rel-tasking",
+            "displayName":"Customer None, Release, tasking",
+            "binaryDir":"${sourceDir}/build/none-rel-tasking",
+            "inherits":[
+                "release",
+                "tasking",
+                "customer_none"
+            ]
+        },
+        {
+            "name": "none-fac-tasking",
+            "displayName":"Customer None, Factory, tasking",
+            "binaryDir":"${sourceDir}/build/none-fac-tasking",
+            "inherits":[
+                "factory",
+                "tasking",
+                "customer_none"
+            ]
+        }
+    ],
+    "buildPresets": [
+        {
+            "name":"none-fac-ads",
+            "configurePreset": "none-fac-ads"
+        },
+        {
+            "name":"none-fac-tasking",
+            "configurePreset": "none-fac-tasking"
+        },
+        {
+            "name":"none-rel-ads",
+            "configurePreset": "none-rel-ads"
+        },
+        {
+            "name":"none-rel-tasking",
+            "configurePreset": "none-rel-tasking"
+        }
+    ]
+}

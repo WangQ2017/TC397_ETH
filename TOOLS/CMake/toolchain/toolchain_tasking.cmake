@@ -1,0 +1,98 @@
+# Initial CMake configuration
+set(CMAKE_SYSTEM_NAME Generic-ELF)
+set(CMAKE_SYSTEM_PROCESSOR tricore)
+set(CMAKE_TASKING_TOOLSET TriCore)
+
+# Find Tasking for Tricore.
+find_program(TRICORE_COMPILER_C cctc PATHS ENV TASKING_TRICORE_TOOLCHAIN_PATH PATH_SUFFIXES bin REQUIRED)
+find_program(TRICORE_COMPILER_ASM astc PATHS ENV TASKING_TRICORE_TOOLCHAIN_PATH PATH_SUFFIXES bin REQUIRED)
+find_program(TRICORE_COMPILER_CXX cptc PATHS ENV TASKING_TRICORE_TOOLCHAIN_PATH PATH_SUFFIXES bin REQUIRED)
+find_program(TRICORE_LINKER ltc PATHS ENV TASKING_TRICORE_TOOLCHAIN_PATH PATH_SUFFIXES bin REQUIRED)
+find_program(TRICORE_OBJDUMP elfdump PATHS ENV TASKING_TRICORE_TOOLCHAIN_PATH PATH_SUFFIXES bin)
+find_program(TRICORE_SIZE elfsize PATHS ENV TASKING_TRICORE_TOOLCHAIN_PATH PATH_SUFFIXES bin)
+
+# Specify the cross compiler
+set(CMAKE_C_COMPILER ${TRICORE_COMPILER_C})
+set(CMAKE_ASM_COMPILER ${TRICORE_COMPILER_ASM})
+set(CMAKE_CXX_COMPILER ${TRICORE_COMPILER_CXX})
+set(CMAKE_LINKER ${TRICORE_LINKER})
+set(CMAKE_OBJDUMP ${TRICORE_OBJDUMP})
+set(CMAKE_SIZE ${TRICORE_SIZE})
+
+set(CMAKE_C_COMPILER_WORKS 1)
+set(CMAKE_ASM_COMPILER_WORKS 1)
+set(CMAKE_CXX_COMPILER_WORKS 1)
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+
+# Additinal ouput functions
+function(add_srec_output TARGET)
+    target_link_options(${TARGET} PRIVATE
+        LINKER:-o$<TARGET_FILE_DIR:${TARGET}>/$<TARGET_FILE_BASE_NAME:${TARGET}>.sre:SREC:4
+    )
+endfunction()
+
+function(add_hex_output TARGET)
+    target_link_options(${TARGET} PRIVATE
+        LINKER:-o$<TARGET_FILE_DIR:${TARGET}>/$<TARGET_FILE_BASE_NAME:${TARGET}>.hex:IHEX:4
+    )
+endfunction()
+
+function(add_bin_output TARGET)
+    target_link_options(${TARGET} PRIVATE
+        LINKER:-c$<TARGET_FILE_DIR:${TARGET}>/$<TARGET_FILE_BASE_NAME:${TARGET}>:BIN
+    )
+endfunction()
+
+function(add_size_output TARGET)
+    if(TRICORE_SIZE)
+        add_custom_command(
+            TARGET ${TARGET}
+            POST_BUILD COMMAND ${CMAKE_SIZE}
+            $<TARGET_FILE:${TARGET}>
+        )
+    endif()
+endfunction()
+
+function(add_map_output TARGET)
+    target_link_options(${TARGET} PRIVATE
+        LINKER:--map-file=$<TARGET_FILE_DIR:${TARGET}>/$<TARGET_FILE_BASE_NAME:${TARGET}>.map)
+endfunction()
+
+function(add_dis_output TARGET)
+    if(TRICORE_OBJDUMP)
+        add_custom_command(
+            TARGET ${TARGET}
+            POST_BUILD COMMAND ${CMAKE_OBJDUMP}
+            -d $<TARGET_FILE:${TARGET}> >
+            $<TARGET_FILE_DIR:${TARGET}>/$<TARGET_FILE_BASE_NAME:${TARGET}>.dis)
+    endif()
+endfunction()
+
+function(add_extra_outputs TARGET)
+    add_hex_output(${TARGET})
+    add_srec_output(${TARGET})
+    add_size_output(${TARGET})
+    add_map_output(${TARGET})
+    add_dis_output(${TARGET})
+    # add_bin_output(${TARGET})
+endfunction()
+
+function(setup_toolchain)
+    set(CMAKE_NINJA_FORCE_RESPONSE_FILE 1 PARENT_SCOPE)
+    set(CMAKE_C_USE_RESPONSE_FILE_FOR_INCLUDES 1 PARENT_SCOPE)
+    set(CMAKE_C_USE_RESPONSE_FILE_FOR_LIBRARIES 1 PARENT_SCOPE)
+    set(CMAKE_C_USE_RESPONSE_FILE_FOR_OBJECTS 1 PARENT_SCOPE)
+    set(CMAKE_C_RESPONSE_FILE_FLAG "-f" PARENT_SCOPE)
+    set(CMAKE_C_RESPONSE_FILE_LINK_FLAG "-f" PARENT_SCOPE)
+    set(CMAKE_ASM_RESPONSE_FILE_FLAG "-f" PARENT_SCOPE)
+    set(CMAKE_ASM_RESPONSE_FILE_LINK_FLAG "-f" PARENT_SCOPE)
+
+    set(CMAKE_C_LINK_EXECUTABLE
+        "<CMAKE_LINKER> <FLAGS> <CMAKE_C_LINK_FLAGS> <LINK_FLAGS> <OBJECTS> -o <TARGET> <LINK_LIBRARIES>" PARENT_SCOPE)
+    set(CMAKE_C_LINKER_WRAPPER_FLAG "" PARENT_SCOPE)
+    set(CMAKE_ASM_LINKER_WRAPPER_FLAG "" PARENT_SCOPE)
+endfunction()

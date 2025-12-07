@@ -1,2 +1,3 @@
 #hidden files
 /TC39XX/DEBUG/*
+/TOOLS/CMake/build*
