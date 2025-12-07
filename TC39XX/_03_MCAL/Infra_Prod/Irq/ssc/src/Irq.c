@@ -43,7 +43,7 @@
 #include "Irq.h"
 
 #include "Mcal_Compiler.h"
-//#include "IFX_Os.h"
+#include "IFX_Os.h"
 
 /*******************************************************************************
 **                      Private Type Definitions                              **
