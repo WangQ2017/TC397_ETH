@@ -24,7 +24,7 @@ echo * CMAKE Root :    %CMAKE_ROOT%
 echo ***** Set ADS time stamp to green it *****
 rem Get time stamp and sub 8 hours, and sub most significant bit due to cmd's data length limit, latter we will xoR it mannually.
 for /f %%x in ('powershell -command "(Get-Date -UFormat %%s) - 1610641536"') do set timestamp=%%x
-for /f "tokens=1 delims=." %%a in ("%timestamp%") do set "integer_part==%%a"
+for /f "tokens=1 delims=." %%a in ("%timestamp%") do set "integer_part=%%a"
 set /a "number=integer_part"
 
 rem Remove XOR parameter's most significant bit.

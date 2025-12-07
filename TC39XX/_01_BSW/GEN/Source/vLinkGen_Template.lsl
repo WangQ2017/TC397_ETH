@@ -3663,6 +3663,118 @@ section_layout mpe:vtc:linear
     "_OS_USER_CONST_ALL_LIMIT" = "_OS_USER_CONST_LIMIT";
   }
 
+  group Reg_Data_DO_NOT_DELETE_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_0_DSPR_Core0)
+  {
+    group Reg_A0Data_DO_NOT_DELETE (ordered, contiguous, fill, align = 4)
+    {
+      section "Reg_A0Data_DO_NOT_DELETE_SEC" (blocksize = 2, attributes = rw)
+      {
+        select ".data_a0.sdata|.data_a0.sdata.*|.bss_a0.sbss|.bss_a0.sbss.*";
+      }
+    }
+    "_Reg_A0Data_DO_NOT_DELETE_START" = "_lc_gb_Reg_A0Data_DO_NOT_DELETE";
+    "_Reg_A0Data_DO_NOT_DELETE_END" = ("_lc_ge_Reg_A0Data_DO_NOT_DELETE" == 0) ? 0 : "_lc_ge_Reg_A0Data_DO_NOT_DELETE" - 1;
+    "_Reg_A0Data_DO_NOT_DELETE_LIMIT" = "_lc_ge_Reg_A0Data_DO_NOT_DELETE";
+
+    group Reg_A1Data_DO_NOT_DELETE (ordered, contiguous, fill, align = 4)
+    {
+      section "Reg_A1Data_DO_NOT_DELETE_SEC" (blocksize = 2, attributes = rw)
+      {
+        select ".rodata_a1.srodata|.rodata_a1.srodata.*|.ldata|.ldata.*";
+      }
+    }
+    "_Reg_A1Data_DO_NOT_DELETE_START" = "_lc_gb_Reg_A1Data_DO_NOT_DELETE";
+    "_Reg_A1Data_DO_NOT_DELETE_END" = ("_lc_ge_Reg_A1Data_DO_NOT_DELETE" == 0) ? 0 : "_lc_ge_Reg_A1Data_DO_NOT_DELETE" - 1;
+    "_Reg_A1Data_DO_NOT_DELETE_LIMIT" = "_lc_ge_Reg_A1Data_DO_NOT_DELETE";
+
+    group Reg_A8Data_DO_NOT_DELETE (ordered, contiguous, fill, align = 4)
+    {
+      section "Reg_A8Data_DO_NOT_DELETE_SEC" (blocksize = 2, attributes = rw)
+      {
+        select ".rodata_a8.a8srodata|.rodata_a8.a8srodata.*";
+      }
+    }
+    "_Reg_A8Data_DO_NOT_DELETE_START" = "_lc_gb_Reg_A8Data_DO_NOT_DELETE";
+    "_Reg_A8Data_DO_NOT_DELETE_END" = ("_lc_ge_Reg_A8Data_DO_NOT_DELETE" == 0) ? 0 : "_lc_ge_Reg_A8Data_DO_NOT_DELETE" - 1;
+    "_Reg_A8Data_DO_NOT_DELETE_LIMIT" = "_lc_ge_Reg_A8Data_DO_NOT_DELETE";
+
+    group Reg_A9Data_DO_NOT_DELETE (ordered, contiguous, fill, align = 4)
+    {
+      section "Reg_A9Data_DO_NOT_DELETE_SEC" (blocksize = 2, attributes = rw)
+      {
+        select ".data_a9.a9sdata|.data_a9.a9sdata.*|.bss_a9.a9sbss|.bss_a9.a9sbss.*";
+      }
+    }
+    "_Reg_A9Data_DO_NOT_DELETE_START" = "_lc_gb_Reg_A9Data_DO_NOT_DELETE";
+    "_Reg_A9Data_DO_NOT_DELETE_END" = ("_lc_ge_Reg_A9Data_DO_NOT_DELETE" == 0) ? 0 : "_lc_ge_Reg_A9Data_DO_NOT_DELETE" - 1;
+    "_Reg_A9Data_DO_NOT_DELETE_LIMIT" = "_lc_ge_Reg_A9Data_DO_NOT_DELETE";
+
+    "_Reg_Data_DO_NOT_DELETE_ALL_START" = "_Reg_A0Data_DO_NOT_DELETE_START";
+    "_Reg_Data_DO_NOT_DELETE_ALL_END" = "_Reg_A9Data_DO_NOT_DELETE_END";
+    "_Reg_Data_DO_NOT_DELETE_ALL_LIMIT" = "_Reg_A9Data_DO_NOT_DELETE_LIMIT";
+  }
+
+  "_SMALL_DATA_TC1" = "_Reg_A0Data_DO_NOT_DELETE_LIMIT"-"_Reg_A0Data_DO_NOT_DELETE_START";
+  "_SMALL_DATA_TC2" = "_SMALL_DATA_TC1";
+  "_SMALL_DATA_TC3" = "_SMALL_DATA_TC1";
+  "_SMALL_DATA_TC4" = "_SMALL_DATA_TC1";
+  "_SMALL_DATA_TC5" = "_SMALL_DATA_TC1";
+  "_LITERAL_DATA_TC1" = "_Reg_A1Data_DO_NOT_DELETE_LIMIT"-"_Reg_A1Data_DO_NOT_DELETE_START";
+  "_LITERAL_DATA_TC2" = "_LITERAL_DATA_TC1";
+  "_LITERAL_DATA_TC3" = "_LITERAL_DATA_TC1";
+  "_LITERAL_DATA_TC4" = "_LITERAL_DATA_TC1";
+  "_LITERAL_DATA_TC5" = "_LITERAL_DATA_TC1";
+  "_A8_DATA_TC1" = "_Reg_A8Data_DO_NOT_DELETE_LIMIT"-"_Reg_A8Data_DO_NOT_DELETE_START";
+  "_A8_DATA_TC2" = "_A8_DATA_TC1";
+  "_A8_DATA_TC3" = "_A8_DATA_TC1";
+  "_A8_DATA_TC4" = "_A8_DATA_TC1";
+  "_A8_DATA_TC5" = "_A8_DATA_TC1";
+  "_A9_DATA_TC1" = "_Reg_A9Data_DO_NOT_DELETE_LIMIT"-"_Reg_A9Data_DO_NOT_DELETE_START";
+  "_A9_DATA_TC2" = "_A9_DATA_TC1";
+  "_A9_DATA_TC3" = "_A9_DATA_TC1";
+  "_A9_DATA_TC4" = "_A9_DATA_TC1";
+  "_A9_DATA_TC5" = "_A9_DATA_TC1";
+  "_lc_u_int_tab_tc1" = 0;
+  "_lc_u_int_tab_tc2" = 0;
+  "_lc_u_int_tab_tc3" = 0;
+  "_lc_u_int_tab_tc4" = 0;
+  "_lc_u_int_tab_tc5" = 0;
+  "_lc_u_trap_tab_tc1" = 0;
+  "_lc_u_trap_tab_tc2" = 0;
+  "_lc_u_trap_tab_tc3" = 0;
+  "_lc_u_trap_tab_tc4" = 0;
+  "_lc_u_trap_tab_tc5" = 0;
+  "_lc_ub_csa_tc1" = 0;
+  "_lc_ub_csa_tc2" = 0;
+  "_lc_ub_csa_tc3" = 0;
+  "_lc_ub_csa_tc4" = 0;
+  "_lc_ub_csa_tc5" = 0;
+  "_lc_ub_table_tc1" = 0;
+  "_lc_ub_table_tc2" = 0;
+  "_lc_ub_table_tc3" = 0;
+  "_lc_ub_table_tc4" = 0;
+  "_lc_ub_table_tc5" = 0;
+  "_lc_ub_ustack_tc1" = 0;
+  "_lc_ub_ustack_tc2" = 0;
+  "_lc_ub_ustack_tc3" = 0;
+  "_lc_ub_ustack_tc4" = 0;
+  "_lc_ub_ustack_tc5" = 0;
+  "_lc_ue_csa_tc1" = 0;
+  "_lc_ue_csa_tc2" = 0;
+  "_lc_ue_csa_tc3" = 0;
+  "_lc_ue_csa_tc4" = 0;
+  "_lc_ue_csa_tc5" = 0;
+  "_lc_ue_istack_tc1" = 0;
+  "_lc_ue_istack_tc2" = 0;
+  "_lc_ue_istack_tc3" = 0;
+  "_lc_ue_istack_tc4" = 0;
+  "_lc_ue_istack_tc5" = 0;
+  "_lc_ue_ustack_tc1" = 0;
+  "_lc_ue_ustack_tc2" = 0;
+  "_lc_ue_ustack_tc3" = 0;
+  "_lc_ue_ustack_tc4" = 0;
+  "_lc_ue_ustack_tc5" = 0;
+
   group STACK_C0_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_0_DSPR_Core0)
   {
     group STACK_C0 (ordered, contiguous, fill, align = 4)

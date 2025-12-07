@@ -11,7 +11,7 @@ function(check_target)
 
     if(NOT DEFINED TARGET)
         message(CHECK_FAIL "not defined.\n"
-            "    Use `cmake -B build -S Toolsl\cmake -GNinja -DTARGET='<target>' to specify a build target.\n"
+            "    Use `cmake -B build -S Tools\\CMake -GNinja -DTARGET='<target>' to specify a build target.\n"
             "    Supported:${TARGET_LIST}")
         set(APPEND check_failures "TARGET")
         set_property(GLOBAL APPEND PROPERTY CHECK_FAILURES "TARGET")
@@ -20,6 +20,7 @@ function(check_target)
         message(CHECK_FAIL "not supported.\n"
             "    '${TARGET}' not found in ${TARGET_DIR}\n"
             "    Supported:${TARGET_LIST}")
+        set_property(GLOBAL APPEND PROPERTY CHECK_FAILURES "TARGET")
     else()
         message(CHECK_PASS "'${TARGET}' is supported")
         set_property(GLOBAL PROPERTY BUILD_TARGET ${TARGET})

@@ -5,7 +5,7 @@ set(PROJECT_NAME "app")
 set(APP_MARK "WQ")
 set(PLATFORM_CODE "00")
 set(PROJECT_ROOT_DIR "${CMAKE_CURRENT_LIST_DIR}/../..")
-set(CMAKE_ROOT_DIR  "${CMAKE_CURRENT_LIST_DIR}")
+set(CMAKE_ROOT_DIR "${CMAKE_CURRENT_LIST_DIR}")
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -42,7 +42,7 @@ set(C_CXX_COMPILER_OPTIONS
     -Ctc39xb
     --core=tc1.6.2
     --lsl-core=vtc
-    --fp-mode=1
+    --fp-model=1
     -O2
     --tradeoff=3  # optimize trade-off between speed and size
     -Wa-Ogs # Allow generic instructions, Optimize instruccron orze
@@ -72,7 +72,7 @@ set(ASSEMBLER_OPTIONS
     -gAHLs
     -t
     --emit-locals=-equs,-symbols
-    --error-limit
+    --error-limit=0
 )
 
 add_compile_options(
@@ -87,7 +87,7 @@ set(LINKER_OPTIONS
     -lc_fpu
     --lsl-file=${PROJECT_ROOT_DIR}/TC39XX/_01_BSW/GEN/Source/vLinkGen_Template.lsl
     -Cmpe:vtc #Tricore multi-core
-    #--user-provided-initialization-code 
+    --user-provided-initialization-code 
     -OcLtXY
     -mcrfiklSmNOduq #map file format
     --error-limit=0 #emit all errors
@@ -128,7 +128,7 @@ if(DEFINED BUILD_PREBURN_VERSION_V2)
     set(BUILD_PREBURN_VERSION_V2 "BUILD_PREBURN_VERSION_V2")
 endif()
 
-string(REGEX MATCH ".*BUILD_FUNCTEST_VERSION.*" ENABLE_FACTORY_AND_PREBURN_MACRO "$PRESET_DEFINITIONS}")
+string(REGEX MATCH ".*BUILD_FUNCTEST_VERSION.*" ENABLE_FACTORY_AND_PREBURN_MACRO "${PRESET_DEFINITIONS}")
 if(ENABLE_FACTORY_AND_PREBURN_MACRO)
     set(BUILD_FACTORY_VERSION "BUILD_FACTORY_VERSION")
     set(BUILD_PREBURN_VERSION_V2 "BUILD_PREBURN_VERSION_V2")
@@ -143,7 +143,7 @@ add_dependencies(${TARGET_NAME} TASKING_RUN_STAMP copy-compile-commands)
 target_include_directories(${TARGET_NAME} PUBLIC ${TARGET_INCLUDES})
 target_compile_definitions(${TARGET_NAME} PUBLIC ${TARGET_DEFINITIONS} ${PRESET_DEFINITIONS}
     ${BUILD_FORMAL_VERSION}
-    ${BUILD_FORMAL_VERSION}
+    ${BUILD_PREBURN_VERSION_V2}
     ${BUILD_FACTORY_VERSION}
     ${ETHTRCV_ENABLE_AUTO_POLARITY}
 )

@@ -40,72 +40,72 @@
             }
         },
         {
-            "name": "customer_none",
+            "name": "tc39x",
             "hidden": true,
-            "description":"Template for building customer none version",
+            "description":"Template for building customer tc39x version",
             "cacheVariables":{
-                "TARGET":"none",
+                "TARGET":"tc39x",
                 "CUSTOMER":"00",
-                "CUSTOMER_DIRNAME":"NONE"
+                "CUSTOMER_DIRNAME":"tc39x"
             }
         },
         {
-            "name": "none-rel-ads",
-            "displayName":"Customer None, Release, ADS",
-            "binaryDir":"${sourceDir}/build/none-rel-ads",
+            "name": "tc39x-rel-ads",
+            "displayName":"tc39x, Release, ADS",
+            "binaryDir":"${sourceDir}/build/tc39x-rel-ads",
             "inherits":[
                 "release",
                 "ads",
-                "customer_none"
+                "tc39x"
             ]
         },
         {
-            "name": "none-fac-ads",
-            "displayName":"Customer None, Factory, ADS",
-            "binaryDir":"${sourceDir}/build/none-fac-ads",
+            "name": "tc39x-fac-ads",
+            "displayName":"tc39x, Factory, ADS",
+            "binaryDir":"${sourceDir}/build/tc39x-fac-ads",
             "inherits":[
                 "factory",
                 "ads",
-                "customer_none"
+                "tc39x"
             ]
         },
         {
-            "name": "none-rel-tasking",
-            "displayName":"Customer None, Release, tasking",
-            "binaryDir":"${sourceDir}/build/none-rel-tasking",
+            "name": "tc39x-rel-tasking",
+            "displayName":"tc39x, Release, tasking",
+            "binaryDir":"${sourceDir}/build/tc39x-rel-tasking",
             "inherits":[
                 "release",
                 "tasking",
-                "customer_none"
+                "tc39x"
             ]
         },
         {
-            "name": "none-fac-tasking",
-            "displayName":"Customer None, Factory, tasking",
-            "binaryDir":"${sourceDir}/build/none-fac-tasking",
+            "name": "tc39x-fac-tasking",
+            "displayName":"tc39x, Factory, tasking",
+            "binaryDir":"${sourceDir}/build/tc39x-fac-tasking",
             "inherits":[
                 "factory",
                 "tasking",
-                "customer_none"
+                "tc39x"
             ]
         }
     ],
     "buildPresets": [
         {
-            "name":"none-fac-ads",
-            "configurePreset": "none-fac-ads"
+            "name":"tc39x-fac-ads",
+            "configurePreset": "tc39x-fac-ads"
         },
         {
-            "name":"none-fac-tasking",
-            "configurePreset": "none-fac-tasking"
+            "name":"tc39x-fac-tasking",
+            "configurePreset": "tc39x-fac-tasking"
         },
         {
-            "name":"none-rel-ads",
-            "configurePreset": "none-rel-ads"
+            "name":"tc39x-rel-ads",
+            "configurePreset": "tc39x-rel-ads"
         },
         {
-            "name":"none-rel-tasking",
-            "configurePreset": "none-rel-tasking"
+            "name":"tc39x-rel-tasking",
+            "configurePreset": "tc39x-rel-tasking"
         }
     ]
 }
