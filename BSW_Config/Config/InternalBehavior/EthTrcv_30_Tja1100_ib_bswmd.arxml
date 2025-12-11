@@ -16,6 +16,9 @@
                     <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                       <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv_30_Tja1100_MainFunction</BSW-MODULE-ENTRY-REF>
                     </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv_30_Tja1100_MainFunctionLinkHandling</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
                   </PROVIDED-ENTRYS>
                   <INTERNAL-BEHAVIORS>
                     <BSW-INTERNAL-BEHAVIOR UUID="dc0d36f2-37d4-4a19-9d0b-ed8b4df061b2">
@@ -30,11 +33,20 @@
                           <SHORT-NAME>EthTrcv_30_Tja1100_MainFunction</SHORT-NAME>
                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv_30_Tja1100_MainFunction</IMPLEMENTED-ENTRY-REF>
                         </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="8435ec3d-bceb-403a-a202-6469891a1e9c">
+                          <SHORT-NAME>EthTrcv_30_Tja1100_MainFunctionLinkHandling</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv_30_Tja1100_MainFunctionLinkHandling</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
                       </ENTITYS>
                       <EVENTS>
                         <BSW-TIMING-EVENT UUID="09b62135-0f81-4b22-b3d0-15db963e6ef0">
                           <SHORT-NAME>EthTrcv_30_Tja1100_MainFunctionTimingEvent0</SHORT-NAME>
                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv/EthTrcv_30_Tja1100Behavior/EthTrcv_30_Tja1100_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.001</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="bb603b9a-8b3f-4c1a-b8d1-2b1799d920ad">
+                          <SHORT-NAME>EthTrcv_30_Tja1100_MainFunctionLinkHandlingTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv/EthTrcv_30_Tja1100Behavior/EthTrcv_30_Tja1100_MainFunctionLinkHandling</STARTS-ON-EVENT-REF>
                           <PERIOD>0.001</PERIOD>
                         </BSW-TIMING-EVENT>
                       </EVENTS>
@@ -43,6 +55,11 @@
                 </BSW-MODULE-DESCRIPTION>
                 <BSW-MODULE-ENTRY UUID="e5886ca2-9d88-4cd8-896e-ccc384060866">
                   <SHORT-NAME>EthTrcv_30_Tja1100_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="9ea77404-8e41-4d6e-bcd1-c4f032ae8205">
+                  <SHORT-NAME>EthTrcv_30_Tja1100_MainFunctionLinkHandling</SHORT-NAME>
                   <CALL-TYPE>SCHEDULED</CALL-TYPE>
                   <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
                 </BSW-MODULE-ENTRY>

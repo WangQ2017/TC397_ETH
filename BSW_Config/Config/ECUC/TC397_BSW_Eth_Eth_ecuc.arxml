@@ -108,7 +108,7 @@
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet</DEFINITION-REF>
               <SUB-CONTAINERS>
                 <ECUC-CONTAINER-VALUE UUID="f4814d76-1194-4f12-b664-6d4bc1846864">
-                  <SHORT-NAME>EthCtrlConfig</SHORT-NAME>
+                  <SHORT-NAME>EthCtrlConfig0</SHORT-NAME>
                   <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig</DEFINITION-REF>
                   <PARAMETER-VALUES>
                     <ECUC-NUMERICAL-PARAM-VALUE>
@@ -165,7 +165,7 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlMiiInterface</DEFINITION-REF>
-                      <VALUE>ETH_MII_MODE</VALUE>
+                      <VALUE>ETH_RMII_MODE</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlResetLoopMaxCycles</DEFINITION-REF>
@@ -197,7 +197,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlSkewTx</DEFINITION-REF>
-                      <VALUE>2</VALUE>
+                      <VALUE>0</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlSkewRx</DEFINITION-REF>
@@ -209,8 +209,12 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlPhysAddr</DEFINITION-REF>
-                      <VALUE>00:00:00:00:00:01</VALUE>
+                      <VALUE>3C:CE:15:02:02:17</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlEnablePpsEventOnTimeApi</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <SUB-CONTAINERS>
                     <ECUC-CONTAINER-VALUE UUID="01e626fe-a1be-49df-ac1a-29b862865cb0">
@@ -330,6 +334,70 @@
                               <VALUE>Ethernet Tx interrupt queue 0</VALUE>
                             </ECUC-TEXTUAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="4b9d0e65-3297-4f47-8d75-2c782d6f696b">
+                          <SHORT-NAME>EthInterruptServiceRoutine</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthPreIsrUserFunction</DEFINITION-REF>
+                              <VALUE>NULL_PTR</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthPostIsrUserFunction</DEFINITION-REF>
+                              <VALUE>NULL_PTR</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="0c014302-c31d-4685-9f3c-babc9f66d26c">
+                              <SHORT-NAME>EthIrqEventList</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthIrqEventList</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthIrqEventList/EthIrqHandlerPos</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthIrqEventList/EthIrqHandlerRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig0/EthInterruptMapping/IrqHdlrQ0Tx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="83df412c-ea25-402e-9c3c-919edadcefd0">
+                          <SHORT-NAME>EthInterruptServiceRoutine_001</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthPreIsrUserFunction</DEFINITION-REF>
+                              <VALUE>NULL_PTR</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthPostIsrUserFunction</DEFINITION-REF>
+                              <VALUE>NULL_PTR</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="9499575b-27d0-4471-9beb-a87bdd87c794">
+                              <SHORT-NAME>EthIrqEventList</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthIrqEventList</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthIrqEventList/EthIrqHandlerPos</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthInterruptMapping/EthInterruptServiceRoutine/EthIrqEventList/EthIrqHandlerRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig0/EthInterruptMapping/IrqHdlrQ0Rx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>
                       </SUB-CONTAINERS>
                     </ECUC-CONTAINER-VALUE>
