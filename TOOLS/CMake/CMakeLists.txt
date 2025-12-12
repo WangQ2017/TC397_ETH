@@ -40,39 +40,39 @@ include_directories(
 #project common compiler options
 set(C_CXX_COMPILER_OPTIONS
     -Ctc39xb
-    --core=tc1.6.2
     --lsl-core=vtc
-    --fp-model=1
-    -O2
-    --tradeoff=3  # optimize trade-off between speed and size
-    -Wa-Ogs # Allow generic instructions, Optimize instruccron orze
-    -Wa-gAHLs # debug information
-    --iso=99
-    --switch=linear # Algorithm for switch statements
-    --emit-locals=-equs,-symbols #emits local EOU/non-EOU symbols
-    --error-limit=0#emit all errors
-    --language=-comments,-gcc,+volatile,-strings # for gcc option 
-    -t # keep intermediate files
-    -g # include DWARF debug information
-    --source # The c source lines are included as comments in the output file
-    -N0
-    -Z0
-    -Y0
-    -Wa--error-limit=42 
+    -t
+    -Wa-Hsfr/regtc39xb.def
+    -Wa-gAHLs
+    --emit-locals=-equs,-symbols
+    -Wa-Ogs
+    -Wa--error-limit=42
     -DBRS_COMP_TASKING
+    --iso=11
+    --language=-gcc,-volatile,+strings,-kanji
+    --fp-model=clfznrST
+    --switch=auto
+    --align=0
+    --default-near-size=0
+    --default-a0-size=0
+    --default-a1-size=0
+    -O0
+    --tradeoff=4
+    -g
+    --error-limit=42
+    --source
 )
 
 #project common ssembler options
 set(ASSEMBLER_OPTIONS
     -Ctc39xb
     --lsl-core=vtc 
-    -D__PROC_tc39X__
-    -Ogs
-    -Hsfr/regtc39x.def
-    -gAHLs
+    -Wa-Ogs
+    -Wa-Hsfr/regtc39xb.def
+    -Wa-gAHLs
     -t
     --emit-locals=-equs,-symbols
-    --error-limit=0
+    --error-limit=42
 )
 
 add_compile_options(
@@ -81,17 +81,10 @@ add_compile_options(
 )
 
 set(LINKER_OPTIONS
-    -t 
-    -lrt
-    -lfp_fpu
-    -lc_fpu
+    -t
+    --hex-format=s
     --lsl-file=${PROJECT_ROOT_DIR}/TC39XX/_01_BSW/GEN/Source/vLinkGen_Template.lsl
-    -Cmpe:vtc #Tricore multi-core
-    --user-provided-initialization-code 
-    -OcLtXY
-    -mcrfiklSmNOduq #map file format
-    --error-limit=0 #emit all errors
-    --warnings-as-errors # Treat warnings as errors
+    --user-provided-initialization-code
 )
 
 add_link_options(${LINKER_OPTIONS})

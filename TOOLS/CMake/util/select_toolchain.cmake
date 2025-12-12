@@ -5,8 +5,8 @@ set(TOOLCHAIN_LIST
     Tasking
 )
 
-set(ADS_TOOLCHAIN_PATH "d:/Infineon/AURIX-Studio-1.10.24/tools/Compilers/Tasking_1.1r8/ctc")
-set(TASKING_TOOLCHAIN_PATH "c:/Program Files/TASKING/TriCore v6.3r1/ctc")# or "c: /Program Files/TASKING/Tricore v6.3r1/ctc"
+set(ADS_TOOLCHAIN_PATH "F:/Infineon/AURIX-Studio-1.8.0/plugins/com.infineon.aurix.tools_1.8.0/build_system/tools/Compilers/Tasking_1.1r8/ctc")
+set(TASKING_TOOLCHAIN_PATH "C:/Program Files/TASKING/TriCore v6.3r1/ctc")# or "c: /Program Files/TASKING/Tricore v6.3r1/ctc"
 
 function(check_toolchain)
     message(CHECK_START "Check TOOLCHAIN")
