@@ -545,14 +545,10 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="McuAscLinFastFrequency" type="FLOAT" 
-                               value="0.0">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="2.0E8"/>
                         <d:var name="McuAscLinSlowClockSourceSelection" 
                                type="ENUMERATION" 
-                               value="ASCLINS_CLOCK_SOURCE_DISABLED_SEL0">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="ASCLINS_CLOCK_SOURCE_ASCLINSI_SEL1"/>
                         <d:var name="McuAscLinSlowFrequency" type="FLOAT" 
                                value="2.0E7"/>
                         <d:var name="McuQspiClockSourceSelection" 
@@ -697,6 +693,13 @@
                             <a:v>@DEF</a:v>
                           </a:a>
                         </d:var>
+                      </d:ctr>
+                      <d:ctr name="McuClockReferencePoint_GETH" 
+                             type="IDENTIFIABLE">
+                        <d:var name="McuClockRefSelection" type="ENUMERATION" 
+                               value="MCU_GETH_FREQUENCY"/>
+                        <d:var name="McuClockReferencePointFrequency" 
+                               type="FLOAT" value="1.0E8"/>
                       </d:ctr>
                     </d:lst>
                   </d:ctr>
@@ -8971,9 +8974,8 @@
                       <d:ctr name="McuAscLinChannelAllocationConf" 
                              type="IDENTIFIABLE">
                         <d:var name="McuAscLinChannelAllocationConf" 
-                               type="ENUMERATION" value="ASCLIN_CH_NOT_USED">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" 
+                               value="ASCLIN_CH_USED_BY_UART_DRIVER"/>
                         <d:var name="McuAscLinKernelId" type="ENUMERATION" 
                                value="ASCLIN0">
                           <a:a name="IMPORTER_INFO">
@@ -9051,16 +9053,10 @@
                       <d:ctr name="McuAscLinChannelAllocationConf" 
                              type="IDENTIFIABLE">
                         <d:var name="McuAscLinChannelAllocationConf" 
-                               type="ENUMERATION" value="ASCLIN_CH_NOT_USED">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" 
+                               value="ASCLIN_CH_USED_BY_UART_DRIVER"/>
                         <d:var name="McuAscLinKernelId" type="ENUMERATION" 
-                               value="ASCLIN0">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
-                            <a:v>@CALC</a:v>
-                          </a:a>
-                        </d:var>
+                               value="ASCLIN3"/>
                       </d:ctr>
                     </d:ctr>
                     <d:ctr name="McuAscLinAllocationConf_6" type="IDENTIFIABLE">

@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 11.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2025-05-30, 23:32:48             !!!IGNORE-LINE!!!            **
+**  DATE, TIME: 2025-12-13, 12:54:12             !!!IGNORE-LINE!!!            **
 **                                                                            **
 **  GENERATOR : Build b191017-0938               !!!IGNORE-LINE!!!            **
 **                                                                            **
@@ -98,7 +98,7 @@ Compile switch to enable/disable the Safety Enable API
 - ON if McalLibSafetyEnable   is true
 - OFF if McalLibSafetyEnable   is false
 */
-#define MCALLIB_SAFETY_ENABLE         (STD_OFF)
+#define  MCALLIB_SAFETY_ENABLE        (STD_OFF)
 
 /*For retriving the Master Core ID */
 #define MCAL_MASTER_COREID            (0U)

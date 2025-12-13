@@ -293,6 +293,15 @@
                                     <SD GID="7647bd1a-1d53-41a7-8983-181e87849cfc">/AURIX2G/EcucDefs/Mcu_ib_bswmd/BswModuleDescriptions/Mcu/McuBehavior/AtomAgcReg</SD>
                                     <SD GID="d9cddff1-fc1e-4236-becb-f34d40439c59">/AURIX2G/EcucDefs/Mcu_ib_bswmd/BswModuleDescriptions/Mcu/McuBehavior/TomTgcReg</SD>
                                     <SD GID="c855bc93-fba3-4c11-983d-ea2974075e29">/AURIX2G/EcucDefs/Port_ib_bswmd/BswModuleDescriptions/Port/PortBehavior</SD>
+                                    <SD GID="1d035a56-a537-4156-adb6-aec345b35a6c">/AURIX2G/EcucDefs/Uart_ib_bswmd</SD>
+                                    <SD GID="508661fb-8a2b-4baf-9bc3-7d677562194c">/AURIX2G/EcucDefs/Uart_ib_bswmd/BswModuleDescriptions</SD>
+                                    <SD GID="d68ce473-b477-46d1-b996-ea956ddb165f">/AURIX2G/EcucDefs/Uart_ib_bswmd/BswModuleDescriptions/Uart/UartBehavior</SD>
+                                    <SD GID="963966ac-c9ab-44b4-9fca-cee77ebd55ee">/AURIX2G/EcucDefs/Uart_ib_bswmd/BswModuleDescriptions/Uart/UartBehavior/Uart_MainFunction_Read</SD>
+                                    <SD GID="3bbc0c44-9627-40dd-8b85-1e64753238de">/AURIX2G/EcucDefs/Uart_ib_bswmd/BswModuleDescriptions/Uart/UartBehavior/Uart_MainFunction_ReadTimingEvent0</SD>
+                                    <SD GID="baf00e57-1344-4fcd-9667-dd32c41cc5a1">/AURIX2G/EcucDefs/Uart_ib_bswmd/BswModuleDescriptions/Uart/UartBehavior/Uart_MainFunction_Write</SD>
+                                    <SD GID="8f26a4fb-bb53-4ceb-a12a-8c3823cc174b">/AURIX2G/EcucDefs/Uart_ib_bswmd/BswModuleDescriptions/Uart/UartBehavior/Uart_MainFunction_WriteTimingEvent0</SD>
+                                    <SD GID="e240680e-a1b6-4193-bce4-a302fb0be1ec">/AURIX2G/EcucDefs/Uart_ib_bswmd/BswModuleDescriptions/Uart_MainFunction_Read</SD>
+                                    <SD GID="d20cd4bb-3bd5-4d52-a1a2-2260b003d8fa">/AURIX2G/EcucDefs/Uart_ib_bswmd/BswModuleDescriptions/Uart_MainFunction_Write</SD>
                                     <SD GID="6dea8db1-e8a9-49d9-acfc-bdb9909abbbf">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE</SD>
                                     <SD GID="49c9b0fd-24db-404d-9cb4-aa293bee7059">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/BswM</SD>
                                     <SD GID="a58c7a8b-55c3-4332-bd72-bfe6cc503f3a">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_Core0</SD>

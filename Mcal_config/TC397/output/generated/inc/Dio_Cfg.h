@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 8.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2025-05-30, 23:32:48         !!!IGNORE-LINE!!!                **
+**  DATE, TIME: 2025-12-13, 12:54:12         !!!IGNORE-LINE!!!                **
 **                                                                            **
 **  GENERATOR : Build b191017-0938             !!!IGNORE-LINE!!!              **
 **                                                                            **
@@ -86,7 +86,7 @@ Pre-Compiler switch to include the API Dio_FlipChannel()
 - if defined ON, Dio_FlipChannel API available
 - if defined OFF, Dio_FlipChannel API not available
 */
-#define DIO_FLIP_CHANNEL_API                (STD_OFF)
+#define DIO_FLIP_CHANNEL_API                (STD_ON)
 
 #define DIO_MASKED_WRITE_PORT_API           (STD_OFF)
 /*
@@ -97,73 +97,6 @@ Pre-Compiler switch to include the Safety Check
 
 /* The following macros are available only if development error detection
 is enabled */
-/* Definition to specify the ports available on the microcontroller
-Bit value = 0 implies the port is not available
-Bit value = 1 implies the port is available
-Bit 0 is for Port 0, Bit 1 is for Port 1, ... , Bit 31 is for Port 31 */
-#define DIO_PORTS_AVAILABLE_00_31           (0x00f0fc07U)
-
-/* Definition to specify the ports available on the microcontroller
-Bit value = 0 implies the port is not available
-Bit value = 1 implies the port is available
-Bit 0 is for Port 32, Bit 1 is for Port 33, ... , Bit 31 is for Port 63 */
-#define DIO_PORTS_AVAILABLE_32_63           (0x00000107U)
-
-/* Definition to specify the ports that are read only ports on the microcontroller
-Bit value = 0 implies the port readable/writable
-Bit value = 1 implies the port is read only port
-Bit 0 is for Port 0, Bit 1 is for Port 1, ... , Bit 31 is for Port 31 */
-#define DIO_PORTS_READONLY_00_31             (0x00000000U)
-
-/* Definition to specify the ports that are read only ports on the microcontroller
-Bit value = 0 implies the port readable/writable
-Bit value = 1 implies the port is read only port
-Bit 0 is for Port 32, Bit 1 is for Port 33, ... , Bit 31 is for Port 63 */
-#define DIO_PORTS_READONLY_32_63             (0x00000100U)
-
-/* Value of the most significant pin on the port
-Note: In case of no pins on a port, the value is kept 0 */
-#define DIO_PORT_0_MSPIN                     (12U)
-#define DIO_PORT_1_MSPIN                     (7U)
-#define DIO_PORT_2_MSPIN                     (11U)
-#define DIO_PORT_3_MSPIN                     (0U)
-#define DIO_PORT_4_MSPIN                     (0U)
-#define DIO_PORT_5_MSPIN                     (0U)
-#define DIO_PORT_6_MSPIN                     (0U)
-#define DIO_PORT_7_MSPIN                     (0U)
-#define DIO_PORT_8_MSPIN                     (0U)
-#define DIO_PORT_9_MSPIN                     (0U)
-#define DIO_PORT_10_MSPIN                     (8U)
-#define DIO_PORT_11_MSPIN                     (15U)
-#define DIO_PORT_12_MSPIN                     (1U)
-#define DIO_PORT_13_MSPIN                     (3U)
-#define DIO_PORT_14_MSPIN                     (10U)
-#define DIO_PORT_15_MSPIN                     (8U)
-#define DIO_PORT_16_MSPIN                     (0U)
-#define DIO_PORT_17_MSPIN                     (0U)
-#define DIO_PORT_18_MSPIN                     (0U)
-#define DIO_PORT_19_MSPIN                     (0U)
-#define DIO_PORT_20_MSPIN                     (14U)
-#define DIO_PORT_21_MSPIN                     (7U)
-#define DIO_PORT_22_MSPIN                     (11U)
-#define DIO_PORT_23_MSPIN                     (7U)
-#define DIO_PORT_24_MSPIN                     (0U)
-#define DIO_PORT_25_MSPIN                     (0U)
-#define DIO_PORT_26_MSPIN                     (0U)
-#define DIO_PORT_27_MSPIN                     (0U)
-#define DIO_PORT_28_MSPIN                     (0U)
-#define DIO_PORT_29_MSPIN                     (0U)
-#define DIO_PORT_30_MSPIN                     (0U)
-#define DIO_PORT_31_MSPIN                     (0U)
-#define DIO_PORT_32_MSPIN                     (7U)
-#define DIO_PORT_33_MSPIN                     (15U)
-#define DIO_PORT_34_MSPIN                     (5U)
-#define DIO_PORT_35_MSPIN                     (0U)
-#define DIO_PORT_36_MSPIN                     (0U)
-#define DIO_PORT_37_MSPIN                     (0U)
-#define DIO_PORT_38_MSPIN                     (0U)
-#define DIO_PORT_39_MSPIN                     (0U)
-#define DIO_PORT_40_MSPIN                     (14U)
 /* Macro to define the maximum port available */
 #define MAX_AVAILABLE_PORT                  (40U)
 
@@ -419,56 +352,10 @@ Symbolic names for DIO ports
 User Defined Symbolic Names for the DIO Ports, Channels & Channel Groups
 */
 /*
-DIO PORT : (DioPort_20)
+DIO PORT : (DioPort_0)
 */
-#ifndef DioConf_DioPort_DioPort_20
-#define DioConf_DioPort_DioPort_20 (DIO_PORT_20)
-#endif
-/* DIO Channel : (DioChannel_LED4) */
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-#ifndef DioConf_DioChannel_DioChannel_LED4
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-#define DioConf_DioChannel_DioChannel_LED4 (DIO_CHANNEL_20_11)
-#endif
-/* DIO Channel : (DioChannel_LED5) */
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-#ifndef DioConf_DioChannel_DioChannel_LED5
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-#define DioConf_DioChannel_DioChannel_LED5 (DIO_CHANNEL_20_12)
-#endif
-/*
-DIO PORT : (DioPort_33)
-*/
-#ifndef DioConf_DioPort_DioPort_33
-#define DioConf_DioPort_DioPort_33 (DIO_PORT_33)
+#ifndef DioConf_DioPort_DioPort_0
+#define DioConf_DioPort_DioPort_0 (DIO_PORT_33)
 #endif
 /* DIO Channel : (DioChannel_LED0) */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
