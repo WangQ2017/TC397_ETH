@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Stack_Lcfg.c
- *   Generation Time: 2025-09-02 11:14:44
+ *   Generation Time: 2025-12-14 17:03:55
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -96,7 +96,7 @@ OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Init_Dyn, OS_CFG_SIZE_OSCORE0_INIT_STACK);
 #include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /* ISR core global stack: OsCore0_Isr_Core */
-/* User: [CounterIsr_SystemTimer_OsCore0, XSignalIsr_OsCore0] */
+/* User: [CounterIsr_SystemTimer_OsCore0, EthIsr_EthCtrlConfig_EthInterruptServiceRoutine, XSignalIsr_OsCore0] */
 OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Isr_Core_Dyn, OS_CFG_SIZE_OSCORE0_ISR_CORE_STACK);
 
 #define OS_STOP_SEC_STACK_OSCORE0_ISR_CORE_VAR_NOINIT_UNSPECIFIED
@@ -136,14 +136,14 @@ OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Startup_Dyn, OS_CFG_SIZE_OSCORE0_STARTUP_ST
 #include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
-#define OS_START_SEC_STACK_OSCORE0_TASK_PRIO30_VAR_NOINIT_UNSPECIFIED
+#define OS_START_SEC_STACK_OSCORE0_TASK_PRIO20_VAR_NOINIT_UNSPECIFIED
 #include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-/* Shared Task stack: OsCore0_Task_Prio30 */
-/* User: [OsTask_Bsw_OsCore0] */
-OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio30_Dyn, OS_CFG_SIZE_OSCORE0_TASK_PRIO30_STACK);
+/* Shared Task stack: OsCore0_Task_Prio20 */
+/* User: [OsTask_Bsw_20ms_Core0] */
+OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio20_Dyn, OS_CFG_SIZE_OSCORE0_TASK_PRIO20_STACK);
 
-#define OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO30_VAR_NOINIT_UNSPECIFIED
+#define OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO20_VAR_NOINIT_UNSPECIFIED
 #include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -151,7 +151,7 @@ OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio30_Dyn, OS_CFG_SIZE_OSCORE0_TASK_P
 #include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /* Shared Task stack: OsCore0_Task_Prio40 */
-/* User: [OsTask_lock_2ms] */
+/* User: [OsTask_Bsw_5ms_Core0, OsTask_lock_2ms] */
 OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio40_Dyn, OS_CFG_SIZE_OSCORE0_TASK_PRIO40_STACK);
 
 #define OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO40_VAR_NOINIT_UNSPECIFIED
@@ -184,7 +184,7 @@ OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio48_Dyn, OS_CFG_SIZE_OSCORE0_TASK_P
 #include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /* Shared Task stack: OsCore0_Task_Prio50 */
-/* User: [Default_Init_Task_Trusted] */
+/* User: [Default_Init_Task_Trusted, OsTask_Bsw_1ms_Core0] */
 OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio50_Dyn, OS_CFG_SIZE_OSCORE0_TASK_PRIO50_STACK);
 
 #define OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED
@@ -884,6 +884,17 @@ OS_STACK_DECLARE(OsCfg_Stack_OsTask_Asw_OsCore0_Dyn, OS_CFG_SIZE_OSTASK_ASW_OSCO
 #include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
+#define OS_START_SEC_STACK_OSTASK_BSW_10MS_CORE0_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/* Task stack: OsTask_Bsw_10ms_Core0 */
+/* User: [OsTask_Bsw_10ms_Core0] */
+OS_STACK_DECLARE(OsCfg_Stack_OsTask_Bsw_10ms_Core0_Dyn, OS_CFG_SIZE_OSTASK_BSW_10MS_CORE0_STACK);
+
+#define OS_STOP_SEC_STACK_OSTASK_BSW_10MS_CORE0_VAR_NOINIT_UNSPECIFIED
+#include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
 /**********************************************************************************************************************
  *  GLOBAL CONSTANT DATA
  *********************************************************************************************************************/
@@ -933,11 +944,11 @@ CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Startup =
   /* .HighAddress = */ OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsCore0_Startup_Dyn)
 };
 
-/*! Stack configuration data: OsCore0_Task_Prio30 */
-CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Task_Prio30 =
+/*! Stack configuration data: OsCore0_Task_Prio20 */
+CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Task_Prio20 =
 {
-  /* .LowAddress  = */ OS_STACK_GETLOWADDRESS(OsCfg_Stack_OsCore0_Task_Prio30_Dyn),
-  /* .HighAddress = */ OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsCore0_Task_Prio30_Dyn)
+  /* .LowAddress  = */ OS_STACK_GETLOWADDRESS(OsCfg_Stack_OsCore0_Task_Prio20_Dyn),
+  /* .HighAddress = */ OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsCore0_Task_Prio20_Dyn)
 };
 
 /*! Stack configuration data: OsCore0_Task_Prio40 */
@@ -980,6 +991,13 @@ CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsTask_Asw_OsCore0 =
 {
   /* .LowAddress  = */ OS_STACK_GETLOWADDRESS(OsCfg_Stack_OsTask_Asw_OsCore0_Dyn),
   /* .HighAddress = */ OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsTask_Asw_OsCore0_Dyn)
+};
+
+/*! Stack configuration data: OsTask_Bsw_10ms_Core0 */
+CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsTask_Bsw_10ms_Core0 =
+{
+  /* .LowAddress  = */ OS_STACK_GETLOWADDRESS(OsCfg_Stack_OsTask_Bsw_10ms_Core0_Dyn),
+  /* .HighAddress = */ OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsTask_Bsw_10ms_Core0_Dyn)
 };
 
 

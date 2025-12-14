@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Link_Core0.lsl
- *   Generation Time: 2025-08-30 14:20:35
+ *   Generation Time: 2025-12-14 17:03:55
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -104,6 +104,22 @@ else
   "_OS_Default_Init_Task_Trusted_CODE_END" = 0;
   "_OS_Default_Init_Task_Trusted_CODE_LIMIT" = 0;
 }
+if (exists(".text.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE_GROUP(align=8)
+  {
+    select "[.]text.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE";
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE_END" = "_lc_ge_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE_GROUP" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE_LIMIT" = "_lc_ge_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE_GROUP";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE_LIMIT" = 0;
+}
 if (exists(".text.OS_OsTask_Asw_OsCore0_CODE"))
 {
   group OS_OsTask_Asw_OsCore0_CODE_GROUP(align=8)
@@ -120,21 +136,69 @@ else
   "_OS_OsTask_Asw_OsCore0_CODE_END" = 0;
   "_OS_OsTask_Asw_OsCore0_CODE_LIMIT" = 0;
 }
-if (exists(".text.OS_OsTask_Bsw_OsCore0_CODE"))
+if (exists(".text.OS_OsTask_Bsw_10ms_Core0_CODE"))
 {
-  group OS_OsTask_Bsw_OsCore0_CODE_GROUP(align=8)
+  group OS_OsTask_Bsw_10ms_Core0_CODE_GROUP(align=8)
   {
-    select "[.]text.OS_OsTask_Bsw_OsCore0_CODE";
+    select "[.]text.OS_OsTask_Bsw_10ms_Core0_CODE";
   }
-  "_OS_OsTask_Bsw_OsCore0_CODE_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_CODE_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_CODE_END" = "_lc_ge_OS_OsTask_Bsw_OsCore0_CODE_GROUP" - 1;
-  "_OS_OsTask_Bsw_OsCore0_CODE_LIMIT" = "_lc_ge_OS_OsTask_Bsw_OsCore0_CODE_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_CODE_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_CODE_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_CODE_END" = "_lc_ge_OS_OsTask_Bsw_10ms_Core0_CODE_GROUP" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_CODE_LIMIT" = "_lc_ge_OS_OsTask_Bsw_10ms_Core0_CODE_GROUP";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_CODE_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_CODE_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_CODE_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_CODE_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_CODE_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_CODE_LIMIT" = 0;
+}
+if (exists(".text.OS_OsTask_Bsw_1ms_Core0_CODE"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_CODE_GROUP(align=8)
+  {
+    select "[.]text.OS_OsTask_Bsw_1ms_Core0_CODE";
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_CODE_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_CODE_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_CODE_END" = "_lc_ge_OS_OsTask_Bsw_1ms_Core0_CODE_GROUP" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_CODE_LIMIT" = "_lc_ge_OS_OsTask_Bsw_1ms_Core0_CODE_GROUP";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_CODE_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_CODE_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_CODE_LIMIT" = 0;
+}
+if (exists(".text.OS_OsTask_Bsw_20ms_Core0_CODE"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_CODE_GROUP(align=8)
+  {
+    select "[.]text.OS_OsTask_Bsw_20ms_Core0_CODE";
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_CODE_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_CODE_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_CODE_END" = "_lc_ge_OS_OsTask_Bsw_20ms_Core0_CODE_GROUP" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_CODE_LIMIT" = "_lc_ge_OS_OsTask_Bsw_20ms_Core0_CODE_GROUP";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_CODE_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_CODE_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_CODE_LIMIT" = 0;
+}
+if (exists(".text.OS_OsTask_Bsw_5ms_Core0_CODE"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_CODE_GROUP(align=8)
+  {
+    select "[.]text.OS_OsTask_Bsw_5ms_Core0_CODE";
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_CODE_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_CODE_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_CODE_END" = "_lc_ge_OS_OsTask_Bsw_5ms_Core0_CODE_GROUP" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_CODE_LIMIT" = "_lc_ge_OS_OsTask_Bsw_5ms_Core0_CODE_GROUP";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_CODE_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_CODE_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_CODE_LIMIT" = 0;
 }
 if (exists(".text.OS_OsTask_Init_OsCore0_CODE"))
 {
@@ -702,45 +766,45 @@ else
 
 
 
-#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0_FAR )
-if (exists(".rodata.OS_OsTask_Bsw_OsCore0_CONST"))
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0_FAR )
+if (exists(".rodata.OS_OsTask_Bsw_10ms_Core0_CONST"))
 {
-  group OS_OsTask_Bsw_OsCore0_CONST_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_CONST_GROUP(ordered, contiguous, fill, align=8)
   {
-    select "[.]rodata.OS_OsTask_Bsw_OsCore0_CONST";
+    select "[.]rodata.OS_OsTask_Bsw_10ms_Core0_CONST";
   }
-  "_OS_OsTask_Bsw_OsCore0_CONST_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_CONST_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_CONST_END" = "_lc_ge_OS_OsTask_Bsw_OsCore0_CONST_GROUP" - 1;
-  "_OS_OsTask_Bsw_OsCore0_CONST_LIMIT" = "_lc_ge_OS_OsTask_Bsw_OsCore0_CONST_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_CONST_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_END" = "_lc_ge_OS_OsTask_Bsw_10ms_Core0_CONST_GROUP" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_LIMIT" = "_lc_ge_OS_OsTask_Bsw_10ms_Core0_CONST_GROUP";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_CONST_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_CONST_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_CONST_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0_NEAR )
-if (exists(".zrodata.OS_OsTask_Bsw_OsCore0_CONST_FAST"))
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0_NEAR )
+if (exists(".zrodata.OS_OsTask_Bsw_10ms_Core0_CONST_FAST"))
 {
-  group OS_OsTask_Bsw_OsCore0_CONST_FAST_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_CONST_FAST_GROUP(ordered, contiguous, fill, align=8)
   {
-    select "[.]zrodata.OS_OsTask_Bsw_OsCore0_CONST_FAST";
+    select "[.]zrodata.OS_OsTask_Bsw_10ms_Core0_CONST_FAST";
   }
-  "_OS_OsTask_Bsw_OsCore0_CONST_FAST_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_CONST_FAST_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_CONST_FAST_END" = "_lc_ge_OS_OsTask_Bsw_OsCore0_CONST_FAST_GROUP" - 1;
-  "_OS_OsTask_Bsw_OsCore0_CONST_FAST_LIMIT" = "_lc_ge_OS_OsTask_Bsw_OsCore0_CONST_FAST_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_FAST_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_CONST_FAST_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_FAST_END" = "_lc_ge_OS_OsTask_Bsw_10ms_Core0_CONST_FAST_GROUP" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_FAST_LIMIT" = "_lc_ge_OS_OsTask_Bsw_10ms_Core0_CONST_FAST_GROUP";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_CONST_FAST_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_CONST_FAST_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_CONST_FAST_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_FAST_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_FAST_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_CONST_FAST_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0_INIT )
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0_INIT )
 
 
 
@@ -756,20 +820,236 @@ else
 
 #endif
 
-#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0
-# undef OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0
 #endif
 
-#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0_FAR
-# undef OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0_FAR
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0_FAR
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0_FAR
 #endif
 
-#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0_NEAR
-# undef OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0_NEAR
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0_NEAR
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0_NEAR
 #endif
 
-#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0_INIT
-# undef OS_LINK_CONST_TASK_OSTASK_BSW_OSCORE0_INIT
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0_INIT
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_10MS_CORE0_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0_FAR )
+if (exists(".rodata.OS_OsTask_Bsw_1ms_Core0_CONST"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_CONST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]rodata.OS_OsTask_Bsw_1ms_Core0_CONST";
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_CONST_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_END" = "_lc_ge_OS_OsTask_Bsw_1ms_Core0_CONST_GROUP" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_LIMIT" = "_lc_ge_OS_OsTask_Bsw_1ms_Core0_CONST_GROUP";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0_NEAR )
+if (exists(".zrodata.OS_OsTask_Bsw_1ms_Core0_CONST_FAST"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_CONST_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]zrodata.OS_OsTask_Bsw_1ms_Core0_CONST_FAST";
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_FAST_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_CONST_FAST_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_FAST_END" = "_lc_ge_OS_OsTask_Bsw_1ms_Core0_CONST_FAST_GROUP" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_FAST_LIMIT" = "_lc_ge_OS_OsTask_Bsw_1ms_Core0_CONST_FAST_GROUP";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_FAST_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_FAST_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_CONST_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0_FAR
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0_FAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0_NEAR
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0_INIT
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_1MS_CORE0_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0_FAR )
+if (exists(".rodata.OS_OsTask_Bsw_20ms_Core0_CONST"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_CONST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]rodata.OS_OsTask_Bsw_20ms_Core0_CONST";
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_CONST_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_END" = "_lc_ge_OS_OsTask_Bsw_20ms_Core0_CONST_GROUP" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_LIMIT" = "_lc_ge_OS_OsTask_Bsw_20ms_Core0_CONST_GROUP";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0_NEAR )
+if (exists(".zrodata.OS_OsTask_Bsw_20ms_Core0_CONST_FAST"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_CONST_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]zrodata.OS_OsTask_Bsw_20ms_Core0_CONST_FAST";
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_FAST_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_CONST_FAST_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_FAST_END" = "_lc_ge_OS_OsTask_Bsw_20ms_Core0_CONST_FAST_GROUP" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_FAST_LIMIT" = "_lc_ge_OS_OsTask_Bsw_20ms_Core0_CONST_FAST_GROUP";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_FAST_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_FAST_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_CONST_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0_FAR
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0_FAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0_NEAR
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0_INIT
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_20MS_CORE0_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0_FAR )
+if (exists(".rodata.OS_OsTask_Bsw_5ms_Core0_CONST"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_CONST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]rodata.OS_OsTask_Bsw_5ms_Core0_CONST";
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_CONST_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_END" = "_lc_ge_OS_OsTask_Bsw_5ms_Core0_CONST_GROUP" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_LIMIT" = "_lc_ge_OS_OsTask_Bsw_5ms_Core0_CONST_GROUP";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0_NEAR )
+if (exists(".zrodata.OS_OsTask_Bsw_5ms_Core0_CONST_FAST"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_CONST_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]zrodata.OS_OsTask_Bsw_5ms_Core0_CONST_FAST";
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_FAST_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_CONST_FAST_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_FAST_END" = "_lc_ge_OS_OsTask_Bsw_5ms_Core0_CONST_FAST_GROUP" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_FAST_LIMIT" = "_lc_ge_OS_OsTask_Bsw_5ms_Core0_CONST_FAST_GROUP";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_FAST_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_FAST_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_CONST_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_TASK ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0_FAR
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0_FAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0_NEAR
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0_INIT
+# undef OS_LINK_CONST_TASK_OSTASK_BSW_5MS_CORE0_INIT
 #endif
 
 
@@ -986,6 +1266,78 @@ else
 
 #ifdef OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_OSCORE0_INIT
 # undef OS_LINK_CONST_ISR_COUNTERISR_SYSTEMTIMER_OSCORE0_INIT
+#endif
+
+
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_ISR ) || defined ( OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR )
+if (exists(".rodata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]rodata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST";
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_END" = "_lc_ge_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_GROUP" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_LIMIT" = "_lc_ge_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_GROUP";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_ISR ) || defined ( OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR )
+if (exists(".zrodata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    select "[.]zrodata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST";
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST_END" = "_lc_ge_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST_GROUP" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST_LIMIT" = "_lc_ge_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST_GROUP";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CONST_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_CONST ) || defined ( OS_LINK_CONST_ISR ) || defined ( OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_INIT )
+
+
+
+
+
+
+
+
+
+
+
+
+
+#endif
+
+#ifdef OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE
+# undef OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE
+#endif
+
+#ifdef OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR
+# undef OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR
+#endif
+
+#ifdef OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR
+# undef OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR
+#endif
+
+#ifdef OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_INIT
+# undef OS_LINK_CONST_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_INIT
 #endif
 
 
@@ -3634,370 +3986,1474 @@ else
 
 
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0
-group OS_OsTask_Bsw_OsCore0_VAR_ALL_GROUP(ordered, contiguous, fill, align=8)
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0
+group OS_OsTask_Bsw_10ms_Core0_VAR_ALL_GROUP(ordered, contiguous, fill, align=8)
 {
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE_INIT )
-if (exists(".data.OS_OsTask_Bsw_OsCore0_VAR"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE_INIT )
+if (exists(".data.OS_OsTask_Bsw_10ms_Core0_VAR"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]data.OS_OsTask_Bsw_OsCore0_VAR";
+      select "[.]data.OS_OsTask_Bsw_10ms_Core0_VAR";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE_NOINIT )
-if (exists(".bss.OS_OsTask_Bsw_OsCore0_VAR_NOINIT"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE_NOINIT )
+if (exists(".bss.OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]bss.OS_OsTask_Bsw_OsCore0_VAR_NOINIT";
+      select "[.]bss.OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_NOINIT" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_NOINIT_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_NOINIT" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_NOINIT";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOINIT_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOINIT_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOINIT_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOINIT_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE_ZERO_INIT )
-if (exists(".bss.OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_bss") || exists(".data.OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE_ZERO_INIT )
+if (exists(".bss.OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_bss") || exists(".data.OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]bss.OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_bss";
-      select "[.]data.OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT";
+      select "[.]bss.OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_bss";
+      select "[.]data.OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_ZERO_INIT_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_ZERO_INIT_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE_INIT )
-if (exists(".zdata.OS_OsTask_Bsw_OsCore0_VAR_FAST"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE_INIT )
+if (exists(".zdata.OS_OsTask_Bsw_10ms_Core0_VAR_FAST"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_FAST_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_FAST_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_FAST_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_FAST_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]zdata.OS_OsTask_Bsw_OsCore0_VAR_FAST";
+      select "[.]zdata.OS_OsTask_Bsw_10ms_Core0_VAR_FAST";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_FAST" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_FAST" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_FAST_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE_NOINIT )
-if (exists(".zbss.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE_NOINIT )
+if (exists(".zbss.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]zbss.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT";
+      select "[.]zbss.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOINIT_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOINIT_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE_ZERO_INIT )
-if (exists(".zbss.OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_bss") || exists(".zdata.OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE_ZERO_INIT )
+if (exists(".zbss.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_bss") || exists(".zdata.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]zbss.OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_bss";
-      select "[.]zdata.OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT";
+      select "[.]zbss.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_bss";
+      select "[.]zdata.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_ZERO_INIT_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_ZERO_INIT_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE_INIT )
-if (exists(".data.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE_INIT )
+if (exists(".data.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]data.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE";
+      select "[.]data.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE_NOINIT )
-if (exists(".bss.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE_NOINIT )
+if (exists(".bss.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]bss.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT";
+      select "[.]bss.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_NOINIT_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_NOINIT_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE_ZERO_INIT )
-if (exists(".bss.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_bss") || exists(".data.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE_ZERO_INIT )
+if (exists(".bss.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_bss") || exists(".data.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]bss.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_bss";
-      select "[.]data.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT";
+      select "[.]bss.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_bss";
+      select "[.]data.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_NOCACHE_ZERO_INIT_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_NOCACHE_ZERO_INIT_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE_INIT )
-if (exists(".zdata.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE_INIT )
+if (exists(".zdata.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]zdata.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE";
+      select "[.]zdata.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE_NOINIT )
-if (exists(".zbss.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE_NOINIT )
+if (exists(".zbss.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]zbss.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT";
+      select "[.]zbss.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = 0;
 }
 #endif
 
-#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE_ZERO_INIT )
-if (exists(".zbss.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_bss") || exists(".zdata.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT"))
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE_ZERO_INIT )
+if (exists(".zbss.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_bss") || exists(".zdata.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT"))
 {
-  group OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  group OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
   {
-    section "OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    section "OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
     {
-      select "[.]zbss.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_bss";
-      select "[.]zdata.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT";
+      select "[.]zbss.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_bss";
+      select "[.]zdata.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT";
     }
-    reserved ".pad.OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT" (size=16);
+    reserved ".pad.OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT" (size=16);
   }
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP";
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT" - 1;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT";
 }
 else
 {
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_START" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_END" = 0;
-  "_OS_OsTask_Bsw_OsCore0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_10ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = 0;
 }
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0
-} /* OS_OsTask_Bsw_OsCore0_VAR_ALL_GROUP */
-"_OS_OsTask_Bsw_OsCore0_VAR_ALL_START" = "_lc_gb_OS_OsTask_Bsw_OsCore0_VAR_ALL_GROUP";
-"_OS_OsTask_Bsw_OsCore0_VAR_ALL_END" = "_lc_ge_OS_OsTask_Bsw_OsCore0_VAR_ALL_GROUP" - 1;
-"_OS_OsTask_Bsw_OsCore0_VAR_ALL_LIMIT" = "_lc_ge_OS_OsTask_Bsw_OsCore0_VAR_ALL_GROUP";
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0
+} /* OS_OsTask_Bsw_10ms_Core0_VAR_ALL_GROUP */
+"_OS_OsTask_Bsw_10ms_Core0_VAR_ALL_START" = "_lc_gb_OS_OsTask_Bsw_10ms_Core0_VAR_ALL_GROUP";
+"_OS_OsTask_Bsw_10ms_Core0_VAR_ALL_END" = "_lc_ge_OS_OsTask_Bsw_10ms_Core0_VAR_ALL_GROUP" - 1;
+"_OS_OsTask_Bsw_10ms_Core0_VAR_ALL_LIMIT" = "_lc_ge_OS_OsTask_Bsw_10ms_Core0_VAR_ALL_GROUP";
 
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE_INIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE_INIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE_INIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE_NOINIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE_NOINIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE_NOINIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE_ZERO_INIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_CACHE_ZERO_INIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_CACHE_ZERO_INIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE_INIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE_INIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE_INIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE_NOINIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE_NOINIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE_NOINIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE_ZERO_INIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_FAR_NOCACHE_ZERO_INIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_FAR_NOCACHE_ZERO_INIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE_INIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE_INIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE_INIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE_NOINIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE_NOINIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE_NOINIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE_ZERO_INIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_CACHE_ZERO_INIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_CACHE_ZERO_INIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE_INIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE_INIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE_INIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE_NOINIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE_NOINIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE_NOINIT
 #endif
 
-#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE_ZERO_INIT
-# undef OS_LINK_VAR_TASK_OSTASK_BSW_OSCORE0_NEAR_NOCACHE_ZERO_INIT
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_10MS_CORE0_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0
+group OS_OsTask_Bsw_1ms_Core0_VAR_ALL_GROUP(ordered, contiguous, fill, align=8)
+{
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE_INIT )
+if (exists(".data.OS_OsTask_Bsw_1ms_Core0_VAR"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_OsTask_Bsw_1ms_Core0_VAR";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE_NOINIT )
+if (exists(".bss.OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE_ZERO_INIT )
+if (exists(".bss.OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_bss") || exists(".data.OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_bss";
+      select "[.]data.OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE_INIT )
+if (exists(".zdata.OS_OsTask_Bsw_1ms_Core0_VAR_FAST"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_FAST_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_OsTask_Bsw_1ms_Core0_VAR_FAST";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_FAST" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE_NOINIT )
+if (exists(".zbss.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE_ZERO_INIT )
+if (exists(".zbss.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_bss") || exists(".zdata.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_bss";
+      select "[.]zdata.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE_INIT )
+if (exists(".data.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE_NOINIT )
+if (exists(".bss.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE_ZERO_INIT )
+if (exists(".bss.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_bss") || exists(".data.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_bss";
+      select "[.]data.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE_INIT )
+if (exists(".zdata.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE_NOINIT )
+if (exists(".zbss.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE_ZERO_INIT )
+if (exists(".zbss.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_bss") || exists(".zdata.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_bss";
+      select "[.]zdata.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_1ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0
+} /* OS_OsTask_Bsw_1ms_Core0_VAR_ALL_GROUP */
+"_OS_OsTask_Bsw_1ms_Core0_VAR_ALL_START" = "_lc_gb_OS_OsTask_Bsw_1ms_Core0_VAR_ALL_GROUP";
+"_OS_OsTask_Bsw_1ms_Core0_VAR_ALL_END" = "_lc_ge_OS_OsTask_Bsw_1ms_Core0_VAR_ALL_GROUP" - 1;
+"_OS_OsTask_Bsw_1ms_Core0_VAR_ALL_LIMIT" = "_lc_ge_OS_OsTask_Bsw_1ms_Core0_VAR_ALL_GROUP";
+
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_1MS_CORE0_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0
+group OS_OsTask_Bsw_20ms_Core0_VAR_ALL_GROUP(ordered, contiguous, fill, align=8)
+{
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE_INIT )
+if (exists(".data.OS_OsTask_Bsw_20ms_Core0_VAR"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_OsTask_Bsw_20ms_Core0_VAR";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE_NOINIT )
+if (exists(".bss.OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE_ZERO_INIT )
+if (exists(".bss.OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_bss") || exists(".data.OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_bss";
+      select "[.]data.OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE_INIT )
+if (exists(".zdata.OS_OsTask_Bsw_20ms_Core0_VAR_FAST"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_FAST_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_OsTask_Bsw_20ms_Core0_VAR_FAST";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_FAST" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE_NOINIT )
+if (exists(".zbss.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE_ZERO_INIT )
+if (exists(".zbss.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_bss") || exists(".zdata.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_bss";
+      select "[.]zdata.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE_INIT )
+if (exists(".data.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE_NOINIT )
+if (exists(".bss.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE_ZERO_INIT )
+if (exists(".bss.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_bss") || exists(".data.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_bss";
+      select "[.]data.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE_INIT )
+if (exists(".zdata.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE_NOINIT )
+if (exists(".zbss.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE_ZERO_INIT )
+if (exists(".zbss.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_bss") || exists(".zdata.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_bss";
+      select "[.]zdata.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_20ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0
+} /* OS_OsTask_Bsw_20ms_Core0_VAR_ALL_GROUP */
+"_OS_OsTask_Bsw_20ms_Core0_VAR_ALL_START" = "_lc_gb_OS_OsTask_Bsw_20ms_Core0_VAR_ALL_GROUP";
+"_OS_OsTask_Bsw_20ms_Core0_VAR_ALL_END" = "_lc_ge_OS_OsTask_Bsw_20ms_Core0_VAR_ALL_GROUP" - 1;
+"_OS_OsTask_Bsw_20ms_Core0_VAR_ALL_LIMIT" = "_lc_ge_OS_OsTask_Bsw_20ms_Core0_VAR_ALL_GROUP";
+
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_20MS_CORE0_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0
+group OS_OsTask_Bsw_5ms_Core0_VAR_ALL_GROUP(ordered, contiguous, fill, align=8)
+{
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE_INIT )
+if (exists(".data.OS_OsTask_Bsw_5ms_Core0_VAR"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_OsTask_Bsw_5ms_Core0_VAR";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE_NOINIT )
+if (exists(".bss.OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE_ZERO_INIT )
+if (exists(".bss.OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_bss") || exists(".data.OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_bss";
+      select "[.]data.OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE_INIT )
+if (exists(".zdata.OS_OsTask_Bsw_5ms_Core0_VAR_FAST"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_FAST_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_OsTask_Bsw_5ms_Core0_VAR_FAST";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_FAST" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE_NOINIT )
+if (exists(".zbss.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE_ZERO_INIT )
+if (exists(".zbss.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_bss") || exists(".zdata.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_bss";
+      select "[.]zdata.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE_INIT )
+if (exists(".data.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE_NOINIT )
+if (exists(".bss.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE_ZERO_INIT )
+if (exists(".bss.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_bss") || exists(".data.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_bss";
+      select "[.]data.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE_INIT )
+if (exists(".zdata.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE_NOINIT )
+if (exists(".zbss.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_TASK ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0 ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE_ZERO_INIT )
+if (exists(".zbss.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_bss") || exists(".zdata.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT"))
+{
+  group OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_bss";
+      select "[.]zdata.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT" - 1;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_OsTask_Bsw_5ms_Core0_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0
+} /* OS_OsTask_Bsw_5ms_Core0_VAR_ALL_GROUP */
+"_OS_OsTask_Bsw_5ms_Core0_VAR_ALL_START" = "_lc_gb_OS_OsTask_Bsw_5ms_Core0_VAR_ALL_GROUP";
+"_OS_OsTask_Bsw_5ms_Core0_VAR_ALL_END" = "_lc_ge_OS_OsTask_Bsw_5ms_Core0_VAR_ALL_GROUP" - 1;
+"_OS_OsTask_Bsw_5ms_Core0_VAR_ALL_LIMIT" = "_lc_ge_OS_OsTask_Bsw_5ms_Core0_VAR_ALL_GROUP";
+
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_TASK_OSTASK_BSW_5MS_CORE0_NEAR_NOCACHE_ZERO_INIT
 #endif
 
 
@@ -5102,6 +6558,374 @@ else
 
 #ifdef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_OSCORE0_NEAR_NOCACHE_ZERO_INIT
 # undef OS_LINK_VAR_ISR_COUNTERISR_SYSTEMTIMER_OSCORE0_NEAR_NOCACHE_ZERO_INIT
+#endif
+
+
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE
+group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ALL_GROUP(ordered, contiguous, fill, align=8)
+{
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE_INIT )
+if (exists(".data.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE_NOINIT )
+if (exists(".bss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE_ZERO_INIT )
+if (exists(".bss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_bss") || exists(".data.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_bss";
+      select "[.]data.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE_INIT )
+if (exists(".zdata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE_NOINIT )
+if (exists(".zbss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE_ZERO_INIT )
+if (exists(".zbss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_bss") || exists(".zdata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_bss";
+      select "[.]zdata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE_INIT )
+if (exists(".data.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]data.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE_NOINIT )
+if (exists(".bss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE_ZERO_INIT )
+if (exists(".bss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_bss") || exists(".data.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]bss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_bss";
+      select "[.]data.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE_INIT )
+if (exists(".zdata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zdata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE_NOINIT )
+if (exists(".zbss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_NOINIT_LIMIT" = 0;
+}
+#endif
+
+#if defined ( OS_LINK_VAR ) || defined ( OS_LINK_VAR_ISR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE ) || defined ( OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE_ZERO_INIT )
+if (exists(".zbss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_bss") || exists(".zdata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT"))
+{
+  group OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_GROUP(ordered, contiguous, fill, align=8)
+  {
+    section "OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_SECTION" (blocksize=2, attributes=rw)
+    {
+      select "[.]zbss.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_bss";
+      select "[.]zdata.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT";
+    }
+    reserved ".pad.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT" (size=16);
+  }
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_GROUP";
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_END" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT" - 1;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = "_lc_ub__pad_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT";
+}
+else
+{
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_START" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_END" = 0;
+  "_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_FAST_NOCACHE_ZERO_INIT_LIMIT" = 0;
+}
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE
+} /* OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ALL_GROUP */
+"_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ALL_START" = "_lc_gb_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ALL_GROUP";
+"_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ALL_END" = "_lc_ge_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ALL_GROUP" - 1;
+"_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ALL_LIMIT" = "_lc_ge_OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_VAR_ALL_GROUP";
+
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE_INIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE_NOINIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE_INIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_FAR_NOCACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE_INIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE_NOINIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_CACHE_ZERO_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE_INIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE_INIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE_NOINIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE_NOINIT
+#endif
+
+#ifdef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE_ZERO_INIT
+# undef OS_LINK_VAR_ISR_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_NEAR_NOCACHE_ZERO_INIT
 #endif
 
 

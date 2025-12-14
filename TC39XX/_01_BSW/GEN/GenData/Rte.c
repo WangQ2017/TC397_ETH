@@ -40,6 +40,7 @@
 #include "Rte_Cdd_Core4.h"
 #include "Rte_Cdd_Core5.h"
 #include "Rte_Cdd_Nm.h"
+#include "Rte_ComM.h"
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
 #include "Rte_Os_OsCore0_swc.h"
@@ -48,16 +49,31 @@
 #include "Rte_Os_OsCore3_swc.h"
 #include "Rte_Os_OsCore4_swc.h"
 #include "Rte_Os_OsCore5_swc.h"
+#include "Rte_StbM.h"
 #include "Rte_lock_control.h"
 #include "Rte_window_core1.h"
 #include "SchM_BswM.h"
+#include "SchM_Com.h"
+#include "SchM_ComM.h"
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
 #include "SchM_EcuM.h"
+#include "SchM_EthIf.h"
+#include "SchM_EthSM.h"
+#include "SchM_EthTSyn.h"
+#include "SchM_EthTrcv_30_Tja1100.h"
+#include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Irq.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
+#include "SchM_Nm.h"
+#include "SchM_PduR.h"
 #include "SchM_Port.h"
+#include "SchM_SoAd.h"
+#include "SchM_StbM.h"
+#include "SchM_TcpIp.h"
+#include "SchM_Uart.h"
+#include "SchM_UdpNm.h"
 
 #include "Rte_Hook.h"
 
@@ -322,6 +338,7 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_CONST_MSEC_SystemTimer_OsCore3_0 (0UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore4_0 (0UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore5_0 (0UL)
+#define RTE_CONST_MSEC_SystemTimer_OsCore0_1 (100000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore1_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore2_10 (1000000UL)
@@ -331,6 +348,7 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_2 (200000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore1_2 (200000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_20 (2000000UL)
+#define RTE_CONST_MSEC_SystemTimer_OsCore0_25 (2500000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_5 (500000UL)
 
 
@@ -353,8 +371,15 @@ FUNC(void, RTE_CODE) SchM_Init(void)
   uint32 id = GetCoreID();
   if (id == OS_CORE_ID_0) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
+    /* activate the tasks */
+    (void)ActivateTask(OsTask_Bsw_10ms_Core0); /* PRQA S 3417 */ /* MD_Rte_Os */
+
     /* activate the alarms used for TimingEvents */
-    (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_OsCore0_0_10ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(10)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(1)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(10)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_EthIf_EthIf_MainFunctionState, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(25)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(20)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     Rte_InitState = RTE_STATE_SCHM_INIT;
   }
@@ -518,7 +543,11 @@ FUNC(void, RTE_CODE) SchM_Deinit(void)
   if (id == OS_CORE_ID_0) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
     /* deactivate alarms */
-    (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_OsCore0_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_EthIf_EthIf_MainFunctionState); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     Rte_InitState = RTE_STATE_UNINIT;
   }
@@ -626,6 +655,14 @@ FUNC(void, RTE_CODE) SchM_Exit_Mcu_TomTgcReg(void)
   ResumeAllInterrupts();
 }
 
+
+
+/**********************************************************************************************************************
+ * RTE Schedulable entity for COM-Access from different partitions
+ *********************************************************************************************************************/
+FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void)
+{
+} /* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
 
 #define RTE_STOP_SEC_CODE
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

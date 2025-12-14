@@ -40,6 +40,7 @@
 #include "Rte_Cdd_Core4.h"
 #include "Rte_Cdd_Core5.h"
 #include "Rte_Cdd_Nm.h"
+#include "Rte_ComM.h"
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
 #include "Rte_Os_OsCore0_swc.h"
@@ -48,16 +49,31 @@
 #include "Rte_Os_OsCore3_swc.h"
 #include "Rte_Os_OsCore4_swc.h"
 #include "Rte_Os_OsCore5_swc.h"
+#include "Rte_StbM.h"
 #include "Rte_lock_control.h"
 #include "Rte_window_core1.h"
 #include "SchM_BswM.h"
+#include "SchM_Com.h"
+#include "SchM_ComM.h"
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
 #include "SchM_EcuM.h"
+#include "SchM_EthIf.h"
+#include "SchM_EthSM.h"
+#include "SchM_EthTSyn.h"
+#include "SchM_EthTrcv_30_Tja1100.h"
+#include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Irq.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
+#include "SchM_Nm.h"
+#include "SchM_PduR.h"
 #include "SchM_Port.h"
+#include "SchM_SoAd.h"
+#include "SchM_StbM.h"
+#include "SchM_TcpIp.h"
+#include "SchM_Uart.h"
+#include "SchM_UdpNm.h"
 
 #include "Rte_Hook.h"
 
@@ -266,6 +282,7 @@ VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM
 #define RTE_CONST_MSEC_SystemTimer_OsCore3_0 (0UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore4_0 (0UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore5_0 (0UL)
+#define RTE_CONST_MSEC_SystemTimer_OsCore0_1 (100000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore1_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore2_10 (1000000UL)
@@ -275,6 +292,7 @@ VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_2 (200000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore1_2 (200000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_20 (2000000UL)
+#define RTE_CONST_MSEC_SystemTimer_OsCore0_25 (2500000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_5 (500000UL)
 
 
@@ -422,25 +440,120 @@ TASK(OsTask_Asw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreacha
     {
       /* call runnable */
 //      Cdd_Nm_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-      Cdd_Core0_Runnable10ms();
+      Cdd_Core0_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 /**********************************************************************************************************************
- * Task:     OsTask_Bsw_OsCore0
+ * Task:     OsTask_Bsw_10ms_Core0
  * Priority: 30
  * Schedule: FULL
- * Alarm:    Cycle Time 0.01 s Alarm Offset 0 s
  *********************************************************************************************************************/
-TASK(OsTask_Bsw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
+TASK(OsTask_Bsw_10ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
+{
+  EventMaskType ev;
+
+  for(;;)
+  {
+    (void)WaitEvent(Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms | Rte_Ev_Run_EthIf_EthIf_MainFunctionState); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)GetEvent(OsTask_Bsw_10ms_Core0, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms | Rte_Ev_Run_EthIf_EthIf_MainFunctionState)); /* PRQA S 3417 */ /* MD_Rte_Os */
+
+    if ((ev & Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      EcuM_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call runnable */
+      BswM_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_EthIf_EthIf_MainFunctionState) != (EventMaskType)0)
+    {
+      /* call schedulable entity */
+      EthIf_MainFunctionState();
+    }
+  }
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+/**********************************************************************************************************************
+ * Task:     OsTask_Bsw_1ms_Core0
+ * Priority: 50
+ * Schedule: FULL
+ * Alarm:    Cycle Time 0.001 s Alarm Offset 0 s
+ *********************************************************************************************************************/
+TASK(OsTask_Bsw_1ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 {
 
-  /* call runnable */
-  EcuM_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+  /* call schedulable entity */
+  Com_MainFunctionRx();
+
+  /* call schedulable entity */
+  Com_MainFunctionTx();
+
+  /* call schedulable entity */
+  Rte_ComSendSignalProxyPeriodic();
+
+  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+/**********************************************************************************************************************
+ * Task:     OsTask_Bsw_20ms_Core0
+ * Priority: 20
+ * Schedule: FULL
+ * Alarm:    Cycle Time 0.02 s Alarm Offset 0 s
+ *********************************************************************************************************************/
+TASK(OsTask_Bsw_20ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
+{
+
+  /* call schedulable entity */
+  Eth_30_Tc3xx_MainFunction();
+
+  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+/**********************************************************************************************************************
+ * Task:     OsTask_Bsw_5ms_Core0
+ * Priority: 40
+ * Schedule: FULL
+ * Alarm:    Cycle Time 0.005 s Alarm Offset 0 s
+ *********************************************************************************************************************/
+TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
+{
+
+  /* call schedulable entity */
+  EthTrcv_30_Tja1100_MainFunction();
+
+  /* call schedulable entity */
+  EthTrcv_30_Tja1100_MainFunctionLinkHandling();
+
+  /* call schedulable entity */
+  EthIf_MainFunctionRx();
+
+  /* call schedulable entity */
+  UdpNm_MainFunction_0();
 
   /* call runnable */
-  BswM_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+  ComM_MainFunction_0(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  /* call schedulable entity */
+  EthSM_MainFunction();
+
+  /* call schedulable entity */
+  SoAd_MainFunction();
+
+  /* call schedulable entity */
+  TcpIp_MainFunction();
+
+  /* call schedulable entity */
+  EthTSyn_MainFunction();
+
+  /* call runnable */
+  StbM_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  /* call schedulable entity */
+  EthIf_MainFunctionTx();
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

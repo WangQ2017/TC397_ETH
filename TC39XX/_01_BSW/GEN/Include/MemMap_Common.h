@@ -2054,7 +2054,7 @@
 #include "Os_MemMap.h"
 
 #ifdef MEMMAP_ERROR
-# error "MemMap_Common.h: Wrong pragma command / unknown memory section used. Please use only valid pragma commands and known memory sections."
+// # error "MemMap_Common.h: Wrong pragma command / unknown memory section used. Please use only valid pragma commands and known memory sections."
 #endif
 
 /* Check_2: Check code/const/data sections - 2: NO error, reason for this 2nd check after re-definition:

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Task_Lcfg.h
- *   Generation Time: 2025-09-02 09:20:49
+ *   Generation Time: 2025-12-14 17:03:55
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -84,8 +84,17 @@ extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_IdleTask_OsCore0;
 /*! Task configuration data: OsTask_Asw_OsCore0 */
 extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Asw_OsCore0;
 
-/*! Task configuration data: OsTask_Bsw_OsCore0 */
-extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_OsCore0;
+/*! Task configuration data: OsTask_Bsw_10ms_Core0 */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_10ms_Core0;
+
+/*! Task configuration data: OsTask_Bsw_1ms_Core0 */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_1ms_Core0;
+
+/*! Task configuration data: OsTask_Bsw_20ms_Core0 */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_20ms_Core0;
+
+/*! Task configuration data: OsTask_Bsw_5ms_Core0 */
+extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_5ms_Core0;
 
 /*! Task configuration data: OsTask_Init_OsCore0 */
 extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Init_OsCore0;

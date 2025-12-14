@@ -1026,11 +1026,39 @@
             <Setting Value="ASC" Name="nattable.sortDirections"/>
             <Setting Value="1" Name="nattable.sortIndexes"/>
         </Settings>
+        <Settings Name="com.vector.cfg.gui.gce.internal.GCETable.MICROSAR.vBRS.vBRSHwConfig.vBRSEvalBoardInfo">
+            <Setting Value="0,1,2,3,4," Name="nattable.BODY.columnIndexOrder"/>
+            <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.BODY.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0:20,1:243,2:252,3:1037,4:483," Name="nattable.BODY.columnWidth.sizes"/>
+            <Setting Value="0" Name="nattable.COLUMN_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.COLUMN_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.CORNER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.CORNER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.ROW_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.ROW_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="ASC" Name="nattable.sortDirections"/>
+            <Setting Value="1" Name="nattable.sortIndexes"/>
+        </Settings>
         <Settings Name="com.vector.cfg.gui.gce.internal.GCETable.MICROSAR.vLinkGen.vLinkGenMemLayout.vLinkGenLinkerSections.vLinkGenLinkerSpecSection">
             <Setting Value="0,1,2,3,4,5,6," Name="nattable.BODY.columnIndexOrder"/>
             <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
             <Setting Value="false" Name="nattable.BODY.columnWidth.distributeRemainingSpace"/>
             <Setting Value="0:20,1:288,2:192,3:146,4:174,5:119,6:246," Name="nattable.BODY.columnWidth.sizes"/>
+            <Setting Value="0" Name="nattable.COLUMN_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.COLUMN_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.CORNER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.CORNER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0" Name="nattable.ROW_HEADER.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.ROW_HEADER.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="ASC" Name="nattable.sortDirections"/>
+            <Setting Value="1" Name="nattable.sortIndexes"/>
+        </Settings>
+        <Settings Name="com.vector.cfg.gui.gce.internal.GCETable.MICROSAR.vLinkGen.vLinkGenMemLayout.vLinkGenLogicalConstGroup">
+            <Setting Value="0,1,2,3,4,5,6,7," Name="nattable.BODY.columnIndexOrder"/>
+            <Setting Value="0" Name="nattable.BODY.columnWidth.defaultMinSize"/>
+            <Setting Value="false" Name="nattable.BODY.columnWidth.distributeRemainingSpace"/>
+            <Setting Value="0:20,1:297,2:305,3:416,4:144,5:147,6:116,7:117," Name="nattable.BODY.columnWidth.sizes"/>
             <Setting Value="0" Name="nattable.COLUMN_HEADER.columnWidth.defaultMinSize"/>
             <Setting Value="false" Name="nattable.COLUMN_HEADER.columnWidth.distributeRemainingSpace"/>
             <Setting Value="0" Name="nattable.CORNER.columnWidth.defaultMinSize"/>

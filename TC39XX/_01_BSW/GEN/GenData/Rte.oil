@@ -224,9 +224,54 @@
       ACCESSING_APPLICATION = OsApplication_OsCore4;
    }:"@RO@@NR@";
 
-   TASK OsTask_Bsw_OsCore0 {
-      ACTIVATION = 3:"@RO@";
+   TASK OsTask_Bsw_10ms_Core0 {
+      ACTIVATION = 1:"@RO@";
       PRIORITY = 30:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+      EVENT = Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms:"@RO@";
+      EVENT = Rte_Ev_Run_EthIf_EthIf_MainFunctionState:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms {
+      COUNTER = SystemTimer_OsCore0;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_Bsw_10ms_Core0;
+         EVENT = Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_EthIf_EthIf_MainFunctionState {
+      COUNTER = SystemTimer_OsCore0;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_Bsw_10ms_Core0;
+         EVENT = Rte_Ev_Run_EthIf_EthIf_MainFunctionState;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   TASK OsTask_Bsw_1ms_Core0 {
+      ACTIVATION = 3:"@RO@";
+      PRIORITY = 50:"@RO@";
       SCHEDULE = FULL:"@RO@";
 // TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
       AUTOSTART = FALSE:"@RO@";
@@ -237,11 +282,65 @@
       ACCESSING_APPLICATION = OsApplication_OsCore5;
    }:"@RO@@NR@";
 
-   ALARM Rte_Al_TE2_OsTask_Bsw_OsCore0_0_10ms {
+   ALARM Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms {
       COUNTER = SystemTimer_OsCore0;
       ACTION = ACTIVATETASK
       {
-         TASK = OsTask_Bsw_OsCore0;
+         TASK = OsTask_Bsw_1ms_Core0;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   TASK OsTask_Bsw_20ms_Core0 {
+      ACTIVATION = 3:"@RO@";
+      PRIORITY = 20:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction {
+      COUNTER = SystemTimer_OsCore0;
+      ACTION = ACTIVATETASK
+      {
+         TASK = OsTask_Bsw_20ms_Core0;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   TASK OsTask_Bsw_5ms_Core0 {
+      ACTIVATION = 3:"@RO@";
+      PRIORITY = 40:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms {
+      COUNTER = SystemTimer_OsCore0;
+      ACTION = ACTIVATETASK
+      {
+         TASK = OsTask_Bsw_5ms_Core0;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
       ACCESSING_APPLICATION = OsApplication_OsCore1;
@@ -518,6 +617,10 @@
       ACCESSING_APPLICATION = OsApplication_OsCore5;
    }:"@RO@@NR@";
 
+   EVENT Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
    EVENT Rte_Ev_Run_Cdd_Core0_Runnable_20 {
       MASK = AUTO;
    }:"@ROC@@NR@";
@@ -527,6 +630,10 @@
    }:"@ROC@@NR@";
 
    EVENT Rte_Ev_Run_Cdd_nm_Cdd_Nm_Runnable10ms {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
+   EVENT Rte_Ev_Run_EthIf_EthIf_MainFunctionState {
       MASK = AUTO;
    }:"@ROC@@NR@";
 
@@ -543,8 +650,15 @@
       ALARM = Rte_Al_TE_Cdd_Core0_Runnable_20;
       ALARM = Rte_Al_TE_Cdd_Core0_Runnable_5ms;
       ALARM = Rte_Al_TE_Cdd_nm_Cdd_Nm_Runnable10ms;
-      TASK = OsTask_Bsw_OsCore0;
-      ALARM = Rte_Al_TE2_OsTask_Bsw_OsCore0_0_10ms;
+      TASK = OsTask_Bsw_10ms_Core0;
+      ALARM = Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms;
+      ALARM = Rte_Al_TE_EthIf_EthIf_MainFunctionState;
+      TASK = OsTask_Bsw_1ms_Core0;
+      ALARM = Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms;
+      TASK = OsTask_Bsw_20ms_Core0;
+      ALARM = Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction;
+      TASK = OsTask_Bsw_5ms_Core0;
+      ALARM = Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms;
       TASK = OsTask_Init_OsCore0;
       TASK = OsTask_lock_2ms;
       ALARM = Rte_Al_TE_swc_lock_Runnable_2ms;

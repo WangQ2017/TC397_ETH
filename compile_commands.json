@@ -37,6 +37,30 @@
 },
 {
   "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\ComM_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\ComM_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/ComM_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/ComM_Lcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\ComM_PBcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\ComM_PBcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/ComM_PBcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/ComM_PBcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Com_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Com_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Com_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Com_Lcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Com_PBcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Com_PBcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Com_PBcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Com_PBcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
   "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Det_Cfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Det_Cfg.c",
   "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Det_Cfg.c",
   "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Det_Cfg.c.o"
@@ -64,6 +88,54 @@
   "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\EcuM_PBcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\EcuM_PBcfg.c",
   "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/EcuM_PBcfg.c",
   "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/EcuM_PBcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\EthIf_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\EthIf_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/EthIf_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/EthIf_Lcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\EthSM_Cfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\EthSM_Cfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/EthSM_Cfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/EthSM_Cfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\EthTSyn_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\EthTSyn_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/EthTSyn_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/EthTSyn_Lcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\EthTrcv_30_Tja1100_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\EthTrcv_30_Tja1100_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/EthTrcv_30_Tja1100_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/EthTrcv_30_Tja1100_Lcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Eth_30_Tc3xx_Irq.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Eth_30_Tc3xx_Irq.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Eth_30_Tc3xx_Irq.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Eth_30_Tc3xx_Irq.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Eth_30_Tc3xx_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Eth_30_Tc3xx_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Eth_30_Tc3xx_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Eth_30_Tc3xx_Lcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Nm_Cfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Nm_Cfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Nm_Cfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Nm_Cfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Nm_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Nm_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Nm_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Nm_Lcfg.c.o"
 },
 {
   "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
@@ -241,6 +313,18 @@
 },
 {
   "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\PduR_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\PduR_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/PduR_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/PduR_Lcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\PduR_PBcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\PduR_PBcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/PduR_PBcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/PduR_PBcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
   "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Rte.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Rte.c",
   "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Rte.c",
   "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/Rte.c.o"
@@ -283,6 +367,54 @@
 },
 {
   "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\SoAd_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\SoAd_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/SoAd_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/SoAd_Lcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\SoAd_PBcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\SoAd_PBcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/SoAd_PBcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/SoAd_PBcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\StbM_Cfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\StbM_Cfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/StbM_Cfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/StbM_Cfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\TcpIp_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\TcpIp_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/TcpIp_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/TcpIp_Lcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\TcpIp_PBcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\TcpIp_PBcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/TcpIp_PBcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/TcpIp_PBcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\UdpNm_Cfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\UdpNm_Cfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/UdpNm_Cfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/UdpNm_Cfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\UdpNm_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\UdpNm_Lcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/UdpNm_Lcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/UdpNm_Lcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\UdpNm_PBcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\UdpNm_PBcfg.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/UdpNm_PBcfg.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/UdpNm_PBcfg.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
   "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\vLinkGen_Lcfg.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\vLinkGen_Lcfg.c",
   "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/vLinkGen_Lcfg.c",
   "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/vLinkGen_Lcfg.c.o"
@@ -319,6 +451,18 @@
 },
 {
   "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Com\\Implementation\\Com.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Com\\Implementation\\Com.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/Com/Implementation/Com.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/Com/Implementation/Com.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\ComM\\Implementation\\ComM.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\ComM\\Implementation\\ComM.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/ComM/Implementation/ComM.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/ComM/Implementation/ComM.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
   "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Det\\Implementation\\Det.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Det\\Implementation\\Det.c",
   "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/Det/Implementation/Det.c",
   "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/Det/Implementation/Det.c.o"
@@ -328,6 +472,324 @@
   "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EcuM\\Implementation\\EcuM.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EcuM\\Implementation\\EcuM.c",
   "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EcuM/Implementation/EcuM.c",
   "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EcuM/Implementation/EcuM.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthCtrl.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthCtrl.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthCtrl.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthCtrl.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthCtrl_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthCtrl_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthCtrl_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthCtrl_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthSwt.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthSwt.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthSwt.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthSwt.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthSwt_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthSwt_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthSwt_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthSwt_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthTrcv.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthTrcv.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthTrcv.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthTrcv.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthTrcv_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_EthTrcv_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthTrcv_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_EthTrcv_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Gw.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Gw.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Gw.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Gw.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Gw_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Gw_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Gw_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Gw_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Link.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Link.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Link.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Link.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Link_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Link_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Link_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Link_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Mirror.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Mirror.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Mirror.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Mirror.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Mirror_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Mirror_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Mirror_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Mirror_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Mode.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Mode.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Mode.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Mode.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Mode_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Mode_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Mode_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Mode_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Rx.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Rx.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Rx.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Rx.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Rx_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Rx_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Rx_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Rx_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Stats.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Stats.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Stats.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Stats.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Stats_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Stats_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Stats_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Stats_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Tx.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Tx.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Tx.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Tx.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Tx_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Tx_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Tx_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Tx_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Utils.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Utils.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Utils.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Utils.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Utils_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_Utils_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Utils_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_Utils_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_ZeroCopy.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_ZeroCopy.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_ZeroCopy.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_ZeroCopy.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_ZeroCopy_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthIf\\Implementation\\EthIf_ZeroCopy_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_ZeroCopy_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthIf/Implementation/EthIf_ZeroCopy_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthSM\\Implementation\\EthSM.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthSM\\Implementation\\EthSM.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthSM/Implementation/EthSM.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthSM/Implementation/EthSM.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_Crc_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_Crc_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_Crc_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_Crc_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_Master_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_Master_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_Master_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_Master_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_Pdelay_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_Pdelay_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_Pdelay_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_Pdelay_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_Slave_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_Slave_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_Slave_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_Slave_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_SwtMgmt_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_SwtMgmt_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_SwtMgmt_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_SwtMgmt_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_SwtTimeSync_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_SwtTimeSync_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_SwtTimeSync_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_SwtTimeSync_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_TimeValidation_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_TimeValidation_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_TimeValidation_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_TimeValidation_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_Util_Int.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTSyn\\Implementation\\EthTSyn_Util_Int.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_Util_Int.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTSyn/Implementation/EthTSyn_Util_Int.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTrcv_30_Tja1100\\Implementation\\EthTrcv_30_Tja1100.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTrcv_30_Tja1100\\Implementation\\EthTrcv_30_Tja1100.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTrcv_30_Tja1100/Implementation/EthTrcv_30_Tja1100.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTrcv_30_Tja1100/Implementation/EthTrcv_30_Tja1100.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTrcv_30_Tja1100\\Implementation\\EthTrcv_30_Tja1100_Hw.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTrcv_30_Tja1100\\Implementation\\EthTrcv_30_Tja1100_Hw.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTrcv_30_Tja1100/Implementation/EthTrcv_30_Tja1100_Hw.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTrcv_30_Tja1100/Implementation/EthTrcv_30_Tja1100_Hw.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTrcv_30_Tja1100\\Implementation\\EthTrcv_30_Tja1100_Wakeup.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\EthTrcv_30_Tja1100\\Implementation\\EthTrcv_30_Tja1100_Wakeup.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTrcv_30_Tja1100/Implementation/EthTrcv_30_Tja1100_Wakeup.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/EthTrcv_30_Tja1100/Implementation/EthTrcv_30_Tja1100_Wakeup.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx_IrqHandler.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx_IrqHandler.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx_IrqHandler.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx_IrqHandler.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx_LL.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx_LL.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx_LL.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx_LL.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx_LL_IrqHandler.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx_LL_IrqHandler.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx_LL_IrqHandler.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx_LL_IrqHandler.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx_TimeSync.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx_TimeSync.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx_TimeSync.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx_TimeSync.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx_TrafficHandling.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Eth_30_Tc3xx\\Implementation\\Eth_30_Tc3xx_TrafficHandling.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx_TrafficHandling.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/Eth_30_Tc3xx/Implementation/Eth_30_Tc3xx_TrafficHandling.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase_Ber.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase_Ber.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase_Ber.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase_Ber.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase_Code.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase_Code.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase_Code.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase_Code.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase_PBuf.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase_PBuf.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase_PBuf.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase_PBuf.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase_Sock.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase_Sock.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase_Sock.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase_Sock.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase_String.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\IpBase_String.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase_String.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/IpBase_String.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\_Appl_Rand.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\_Appl_Rand.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/_Appl_Rand.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/_Appl_Rand.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\_Appl_Time.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\IpBase\\Implementation\\_Appl_Time.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/_Appl_Time.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/IpBase/Implementation/_Appl_Time.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Nm\\Implementation\\Nm.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Nm\\Implementation\\Nm.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/Nm/Implementation/Nm.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/Nm/Implementation/Nm.c.o"
 },
 {
   "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
@@ -604,6 +1066,234 @@
   "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\OS\\Implementation\\Os_XSignal.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\OS\\Implementation\\Os_XSignal.c",
   "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/OS/Implementation/Os_XSignal.c",
   "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/OS/Implementation/Os_XSignal.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_Bm.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_Bm.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_Bm.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_Bm.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_Fm.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_Fm.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_Fm.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_Fm.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_IFQ.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_IFQ.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_IFQ.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_IFQ.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_Lock.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_Lock.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_Lock.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_Lock.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_McQ.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_McQ.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_McQ.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_McQ.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_RmIf.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_RmIf.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_RmIf.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_RmIf.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_RmTp.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_RmTp.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_RmTp.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_RmTp.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_RmTp_TxInst.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_RmTp_TxInst.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_RmTp_TxInst.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_RmTp_TxInst.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_Sm.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\PduR\\Implementation\\PduR_Sm.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_Sm.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/PduR/Implementation/PduR_Sm.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_EventQueue.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_EventQueue.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_EventQueue.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_EventQueue.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_Measure.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_Measure.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_Measure.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_Measure.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_RouteGrp.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_RouteGrp.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_RouteGrp.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_RouteGrp.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_Rx.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_Rx.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_Rx.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_Rx.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_SoCon.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_SoCon.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_SoCon.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_SoCon.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_TcpIp.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_TcpIp.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_TcpIp.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_TcpIp.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_TimeoutList.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_TimeoutList.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_TimeoutList.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_TimeoutList.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_Tx.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_Tx.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_Tx.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_Tx.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_Util.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd_Util.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_Util.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/SoAd/Implementation/SoAd_Util.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\StbM\\Implementation\\StbM.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\StbM\\Implementation\\StbM.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/StbM/Implementation/StbM.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/StbM/Implementation/StbM.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_Arp.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_Arp.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_Arp.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_Arp.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_DhcpV4.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_DhcpV4.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_DhcpV4.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_DhcpV4.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_DhcpV4Server.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_DhcpV4Server.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_DhcpV4Server.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_DhcpV4Server.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_DhcpV6.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_DhcpV6.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_DhcpV6.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_DhcpV6.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IcmpV4.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IcmpV4.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IcmpV4.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IcmpV4.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IcmpV6.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IcmpV6.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IcmpV6.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IcmpV6.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IpSec.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IpSec.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IpSec.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IpSec.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IpV4.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IpV4.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IpV4.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IpV4.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IpV4_Priv.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IpV4_Priv.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IpV4_Priv.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IpV4_Priv.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IpV6.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IpV6.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IpV6.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IpV6.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IpV6_Priv.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_IpV6_Priv.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IpV6_Priv.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_IpV6_Priv.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_Ndp.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_Ndp.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_Ndp.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_Ndp.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_Priv.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_Priv.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_Priv.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_Priv.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_Tcp.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_Tcp.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_Tcp.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_Tcp.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_Udp.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\TcpIp\\Implementation\\TcpIp_Udp.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_Udp.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/TcpIp/Implementation/TcpIp_Udp.c.o"
+},
+{
+  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
+  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\UdpNm\\Implementation\\UdpNm.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\UdpNm\\Implementation\\UdpNm.c",
+  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Src/UdpNm/Implementation/UdpNm.c",
+  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Src/UdpNm/Implementation/UdpNm.c.o"
 },
 {
   "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",

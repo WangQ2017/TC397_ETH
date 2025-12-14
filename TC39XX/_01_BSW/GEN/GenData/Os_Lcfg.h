@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2025-09-02 09:20:49
+ *   Generation Time: 2025-12-14 17:03:55
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -292,15 +292,51 @@ extern FUNC(void, OS_OSTASK_ASW_OSCORE5_CODE) Os_Task_OsTask_Asw_OsCore5(void);
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
-# define OS_START_SEC_OsTask_Bsw_OsCore0_CODE
+# define OS_START_SEC_OsTask_Bsw_10ms_Core0_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /**********************************************************************************************************************
- *  OsTask_Bsw_OsCore0()
+ *  OsTask_Bsw_10ms_Core0()
  *********************************************************************************************************************/
-extern FUNC(void, OS_OSTASK_BSW_OSCORE0_CODE) Os_Task_OsTask_Bsw_OsCore0(void);
+extern FUNC(void, OS_OSTASK_BSW_10MS_CORE0_CODE) Os_Task_OsTask_Bsw_10ms_Core0(void);
 
-# define OS_STOP_SEC_OsTask_Bsw_OsCore0_CODE
+# define OS_STOP_SEC_OsTask_Bsw_10ms_Core0_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_OsTask_Bsw_1ms_Core0_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  OsTask_Bsw_1ms_Core0()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_OSTASK_BSW_1MS_CORE0_CODE) Os_Task_OsTask_Bsw_1ms_Core0(void);
+
+# define OS_STOP_SEC_OsTask_Bsw_1ms_Core0_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_OsTask_Bsw_20ms_Core0_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  OsTask_Bsw_20ms_Core0()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_OSTASK_BSW_20MS_CORE0_CODE) Os_Task_OsTask_Bsw_20ms_Core0(void);
+
+# define OS_STOP_SEC_OsTask_Bsw_20ms_Core0_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_OsTask_Bsw_5ms_Core0_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  OsTask_Bsw_5ms_Core0()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_OSTASK_BSW_5MS_CORE0_CODE) Os_Task_OsTask_Bsw_5ms_Core0(void);
+
+# define OS_STOP_SEC_OsTask_Bsw_5ms_Core0_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -457,6 +493,18 @@ extern FUNC(void, OS_OSTASK_LOCK_2MS_CODE) Os_Task_OsTask_lock_2ms(void);
 extern FUNC(void, OS_OSTASK_WINDOW_2MS_CODE) Os_Task_OsTask_window_2ms(void);
 
 # define OS_STOP_SEC_OsTask_window_2ms_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  EthIsr_EthCtrlConfig_EthInterruptServiceRoutine()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_ETHISR_ETHCTRLCONFIG_ETHINTERRUPTSERVICEROUTINE_CODE) Os_Isr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine(void);
+
+# define OS_STOP_SEC_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

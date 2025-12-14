@@ -124,6 +124,7 @@ Rte_Cdd_Core3.h<br>
 Rte_Cdd_Core4.h<br>
 Rte_Cdd_Core5.h<br>
 Rte_Cdd_Nm.h<br>
+Rte_ComM.h<br>
 Rte_Det.h<br>
 Rte_EcuM.h<br>
 Rte_Os_OsCore0_swc.h<br>
@@ -132,6 +133,7 @@ Rte_Os_OsCore2_swc.h<br>
 Rte_Os_OsCore3_swc.h<br>
 Rte_Os_OsCore4_swc.h<br>
 Rte_Os_OsCore5_swc.h<br>
+Rte_StbM.h<br>
 Rte_lock_control.h<br>
 Rte_window_core1.h<br>
 Rte_BswM_Type.h<br>
@@ -142,6 +144,7 @@ Rte_Cdd_Core3_Type.h<br>
 Rte_Cdd_Core4_Type.h<br>
 Rte_Cdd_Core5_Type.h<br>
 Rte_Cdd_Nm_Type.h<br>
+Rte_ComM_Type.h<br>
 Rte_Det_Type.h<br>
 Rte_EcuM_Type.h<br>
 Rte_Os_OsCore0_swc_Type.h<br>
@@ -150,6 +153,7 @@ Rte_Os_OsCore2_swc_Type.h<br>
 Rte_Os_OsCore3_swc_Type.h<br>
 Rte_Os_OsCore4_swc_Type.h<br>
 Rte_Os_OsCore5_swc_Type.h<br>
+Rte_StbM_Type.h<br>
 Rte_lock_control_Type.h<br>
 Rte_window_core1_Type.h<br>
 Rte_Main.h<br>
@@ -169,6 +173,7 @@ Cdd_Core3_MemMap.h<br>
 Cdd_Core4_MemMap.h<br>
 Cdd_Core5_MemMap.h<br>
 Cdd_Nm_MemMap.h<br>
+ComM_MemMap.h<br>
 Det_MemMap.h<br>
 EcuM_MemMap.h<br>
 Os_OsCore0_swc_MemMap.h<br>
@@ -177,6 +182,7 @@ Os_OsCore2_swc_MemMap.h<br>
 Os_OsCore3_swc_MemMap.h<br>
 Os_OsCore4_swc_MemMap.h<br>
 Os_OsCore5_swc_MemMap.h<br>
+StbM_MemMap.h<br>
 lock_control_MemMap.h<br>
 window_core1_MemMap.h<br>
 Rte_Compiler_Cfg.h<br>
@@ -193,21 +199,49 @@ Rte_check.mak<br>
 Rte_defs.mak<br>
 Rte_rules.mak<br>
 SchM_BswM.h<br>
+SchM_Com.h<br>
+SchM_ComM.h<br>
 SchM_Det.h<br>
 SchM_Dio.h<br>
 SchM_EcuM.h<br>
+SchM_EthIf.h<br>
+SchM_EthSM.h<br>
+SchM_EthTSyn.h<br>
+SchM_EthTrcv_30_Tja1100.h<br>
+SchM_Eth_30_Tc3xx.h<br>
 SchM_Irq.h<br>
 SchM_McalLib.h<br>
 SchM_Mcu.h<br>
+SchM_Nm.h<br>
+SchM_PduR.h<br>
 SchM_Port.h<br>
+SchM_SoAd.h<br>
+SchM_StbM.h<br>
+SchM_TcpIp.h<br>
+SchM_Uart.h<br>
+SchM_UdpNm.h<br>
 SchM_BswM_Type.h<br>
+SchM_Com_Type.h<br>
+SchM_ComM_Type.h<br>
 SchM_Det_Type.h<br>
 SchM_Dio_Type.h<br>
 SchM_EcuM_Type.h<br>
+SchM_EthIf_Type.h<br>
+SchM_EthSM_Type.h<br>
+SchM_EthTSyn_Type.h<br>
+SchM_EthTrcv_30_Tja1100_Type.h<br>
+SchM_Eth_30_Tc3xx_Type.h<br>
 SchM_Irq_Type.h<br>
 SchM_McalLib_Type.h<br>
 SchM_Mcu_Type.h<br>
+SchM_Nm_Type.h<br>
+SchM_PduR_Type.h<br>
 SchM_Port_Type.h<br>
+SchM_SoAd_Type.h<br>
+SchM_StbM_Type.h<br>
+SchM_TcpIp_Type.h<br>
+SchM_Uart_Type.h<br>
+SchM_UdpNm_Type.h<br>
 Rte.oil<br>
 Rte_Needs.ecuc.arxml<br>
 <br>
@@ -267,10 +301,28 @@ CONST Size: 0 Bytes<br>
 <TD>10</TD>
 </TR>
 <TR>
-<TD>OsTask_Bsw_OsCore0</TD>
-<TD>Basic</TD>
+<TD>OsTask_Bsw_10ms_Core0</TD>
+<TD>Extended</TD>
 <TD>FULL</TD>
 <TD>30</TD>
+</TR>
+<TR>
+<TD>OsTask_Bsw_1ms_Core0</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>50</TD>
+</TR>
+<TR>
+<TD>OsTask_Bsw_20ms_Core0</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>20</TD>
+</TR>
+<TR>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>Basic</TD>
+<TD>FULL</TD>
+<TD>40</TD>
 </TR>
 <TR>
 <TD>OsTask_Bsw_OsCore1</TD>
@@ -366,9 +418,9 @@ CONST Size: 0 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>BswM_MainFunction</TD>
-<TD>OsTask_Bsw_OsCore0</TD>
-<TD>n/a</TD>
-<TD>Rte_Al_TE2_OsTask_Bsw_OsCore0_0_10ms</TD>
+<TD>OsTask_Bsw_10ms_Core0</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>InitEvent</B></TD>
@@ -476,11 +528,130 @@ CONST Size: 0 Bytes<br>
 <TD>Rte_Al_TE_Cdd_nm_Cdd_Nm_Runnable10ms</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>ComM_MainFunction_0</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan10::GetCurrentComMode</TD>
+<TD>GetCurrentComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Pnc00::GetCurrentComMode</TD>
+<TD>GetCurrentComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_Vlan10::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_Vlan10::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan10::GetMaxComMode</TD>
+<TD>GetMaxComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Pnc00::GetMaxComMode</TD>
+<TD>GetMaxComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan10::GetRequestedComMode</TD>
+<TD>GetRequestedComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Pnc00::GetRequestedComMode</TD>
+<TD>GetRequestedComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_Vlan10::LimitChannelToNoComMode</TD>
+<TD>LimitChannelToNoComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::modeLimitation::LimitECUToNoComMode</TD>
+<TD>LimitECUToNoComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_Vlan10::PreventWakeUp</TD>
+<TD>PreventWakeUp</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::modeLimitation::ReadInhibitCounter</TD>
+<TD>ReadInhibitCounter</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan10::RequestComMode</TD>
+<TD>RequestComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Pnc00::RequestComMode</TD>
+<TD>RequestComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::modeLimitation::ResetInhibitCounter</TD>
+<TD>ResetInhibitCounter</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::modeLimitation::SetECUGroupClassification</TD>
+<TD>SetECUGroupClassification</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
-<TD>OsTask_Bsw_OsCore0</TD>
-<TD>n/a</TD>
-<TD>Rte_Al_TE2_OsTask_Bsw_OsCore0_0_10ms</TD>
+<TD>OsTask_Bsw_10ms_Core0</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> EcuM::EcuM_BootTarget::GetBootTarget</TD>
@@ -616,6 +787,41 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> StbM::GlobalTime_Slave_StbMSynchronizedTimeBase::GetCurrentTime</TD>
+<TD>GetCurrentTime</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> StbM::GlobalTime_Slave_StbMSynchronizedTimeBase::GetRateDeviation</TD>
+<TD>GetRateDeviation</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> StbM::GlobalTime_Slave_StbMSynchronizedTimeBase::GetTimeBaseStatus</TD>
+<TD>GetTimeBaseStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> StbM::GlobalTime_Slave_StbMSynchronizedTimeBase::GetTimeLeap</TD>
+<TD>GetTimeLeap</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>StbM_MainFunction</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
 <TD><B>TimingEvent</B> Cyclic 2ms</TD>
 <TD>Runnable_2ms</TD>
 <TD>OsTask_lock_2ms</TD>
@@ -656,16 +862,37 @@ CONST Size: 0 Bytes<br>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>BswM_MainFunction</TD>
-<TD>OsTask_Bsw_OsCore0</TD>
+<TD>OsTask_Bsw_10ms_Core0</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 1ms</TD>
+<TD>Com_MainFunctionRx</TD>
+<TD>OsTask_Bsw_1ms_Core0</TD>
 <TD>n/a</TD>
-<TD>Rte_Al_TE2_OsTask_Bsw_OsCore0_0_10ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 1ms</TD>
+<TD>Com_MainFunctionTx</TD>
+<TD>OsTask_Bsw_1ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>ComM_MainFunction_0</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
-<TD>OsTask_Bsw_OsCore0</TD>
-<TD>n/a</TD>
-<TD>Rte_Al_TE2_OsTask_Bsw_OsCore0_0_10ms</TD>
+<TD>OsTask_Bsw_10ms_Core0</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
@@ -701,6 +928,111 @@ CONST Size: 0 Bytes<br>
 <TD>OsTask_Bsw_OsCore5</TD>
 <TD>n/a</TD>
 <TD>Rte_Al_TE6_EcuM_EcuM_MainFunction</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>EthIf_MainFunctionRx</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 25ms</TD>
+<TD>EthIf_MainFunctionState</TD>
+<TD>OsTask_Bsw_10ms_Core0</TD>
+<TD>Rte_Ev_Run_EthIf_EthIf_MainFunctionState</TD>
+<TD>Rte_Al_TE_EthIf_EthIf_MainFunctionState</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>EthIf_MainFunctionTx</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>EthSM_MainFunction</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>EthTSyn_MainFunction</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>EthTrcv_30_Tja1100_MainFunction</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>EthTrcv_30_Tja1100_MainFunctionLinkHandling</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>Eth_30_Tc3xx_MainFunction</TD>
+<TD>OsTask_Bsw_20ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 1ms</TD>
+<TD>Rte_ComSendSignalProxyPeriodic</TD>
+<TD>OsTask_Bsw_1ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>SoAd_MainFunction</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>StbM_MainFunction</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>TcpIp_MainFunction</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>Uart_MainFunction_Read</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>Uart_MainFunction_Write</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>UdpNm_MainFunction_0</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>n/a</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 </TABLE>
 <P ALIGN=LEFT>

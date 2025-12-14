@@ -82,6 +82,8 @@ add_compile_options(
 
 set(LINKER_OPTIONS
     -t
+    -lrt
+    -lc_fpu
     --hex-format=s
     --lsl-file=${PROJECT_ROOT_DIR}/TC39XX/_01_BSW/GEN/Source/vLinkGen_Template.lsl
     --user-provided-initialization-code

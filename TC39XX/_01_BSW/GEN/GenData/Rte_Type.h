@@ -26,6 +26,8 @@
 # define RTE_TYPE_H
 
 # include "Rte.h"
+# include "Rte_Cfg.h"
+# include "ComStack_Types.h"
 
 /* PRQA S 1039 EOF */ /* MD_Rte_1039 */
 
@@ -33,11 +35,73 @@
  * Data type definitions
  *********************************************************************************************************************/
 
+# define Rte_TypeDef_StbM_OffsetRecordTableHeadType
+typedef struct
+{
+  uint8 OffsetTimeDomain;
+} StbM_OffsetRecordTableHeadType;
+
+# define Rte_TypeDef_StbM_PortIdType
+typedef struct
+{
+  uint64 clockIdentity;
+  uint16 portNumber;
+} StbM_PortIdType;
+
+# define Rte_TypeDef_StbM_SyncRecordTableHeadType
+typedef struct
+{
+  uint8 SynchronizedTimeDomain;
+  uint32 HWfrequency;
+  uint32 HWprescaler;
+} StbM_SyncRecordTableHeadType;
+
+# define Rte_TypeDef_StbM_TimeStampShortType
+typedef struct
+{
+  uint32 nanoseconds;
+  uint32 seconds;
+} StbM_TimeStampShortType;
+
+# define Rte_TypeDef_StbM_UserDataType
+typedef struct
+{
+  uint8 userDataLength;
+  uint8 userByte0;
+  uint8 userByte1;
+  uint8 userByte2;
+} StbM_UserDataType;
+
+# define Rte_TypeDef_StbM_VirtualLocalTimeType
+typedef struct
+{
+  uint32 nanosecondsLo;
+  uint32 nanosecondsHi;
+} StbM_VirtualLocalTimeType;
+
+# define Rte_TypeDef_ComM_InhibitionStatusType
+typedef uint8 ComM_InhibitionStatusType;
+
+# define Rte_TypeDef_ComM_UserHandleType
+typedef uint16 ComM_UserHandleType;
+
 # define Rte_TypeDef_EcuM_TimeType
 typedef uint32 EcuM_TimeType;
 
 # define Rte_TypeDef_EcuM_UserType
 typedef uint8 EcuM_UserType;
+
+# define Rte_TypeDef_StbM_CustomerIdType
+typedef uint16 StbM_CustomerIdType;
+
+# define Rte_TypeDef_StbM_RateDeviationType
+typedef sint16 StbM_RateDeviationType;
+
+# define Rte_TypeDef_StbM_SynchronizedTimeBaseType
+typedef uint16 StbM_SynchronizedTimeBaseType;
+
+# define Rte_TypeDef_StbM_TimeDiffType
+typedef sint32 StbM_TimeDiffType;
 
 # define Rte_TypeDef_TimeInMicrosecondsType
 typedef uint32 TimeInMicrosecondsType;
@@ -47,6 +111,9 @@ typedef uint8 BswM_ESH_Mode;
 
 # define Rte_TypeDef_BswM_ESH_RunRequest
 typedef uint8 BswM_ESH_RunRequest;
+
+# define Rte_TypeDef_ComM_ModeType
+typedef uint8 ComM_ModeType;
 
 # define Rte_TypeDef_EcuM_BootTargetType
 typedef uint8 EcuM_BootTargetType;
@@ -59,6 +126,95 @@ typedef uint8 EcuM_ShutdownCauseType;
 
 # define Rte_TypeDef_EcuM_StateType
 typedef uint8 EcuM_StateType;
+
+# define Rte_TypeDef_StbM_MasterConfigType
+typedef uint8 StbM_MasterConfigType;
+
+# define Rte_TypeDef_StbM_TimeBaseNotificationType
+typedef uint32 StbM_TimeBaseNotificationType;
+
+# define Rte_TypeDef_StbM_TimeBaseStatusType
+typedef uint8 StbM_TimeBaseStatusType;
+
+# define Rte_TypeDef_StbM_EthTimeMasterMeasurementType
+typedef struct
+{
+  uint16 sequenceId;
+  StbM_PortIdType sourcePortId;
+  StbM_VirtualLocalTimeType syncEgressTimestamp;
+  StbM_TimeStampShortType preciseOriginTimestamp;
+  sint64 correctionField;
+} StbM_EthTimeMasterMeasurementType;
+
+# define Rte_TypeDef_StbM_EthTimeSlaveMeasurementType
+typedef struct
+{
+  uint16 sequenceId;
+  StbM_PortIdType sourcePortId;
+  StbM_VirtualLocalTimeType syncIngressTimestamp;
+  StbM_TimeStampShortType preciseOriginTimestamp;
+  sint64 correctionField;
+  uint32 pDelay;
+  StbM_VirtualLocalTimeType referenceLocalTimestamp;
+  StbM_TimeStampShortType referenceGlobalTimestamp;
+} StbM_EthTimeSlaveMeasurementType;
+
+# define Rte_TypeDef_StbM_OffsetRecordTableBlockType
+typedef struct
+{
+  uint32 GlbSeconds;
+  uint32 GlbNanoSeconds;
+  StbM_TimeBaseStatusType TimeBaseStatus;
+} StbM_OffsetRecordTableBlockType;
+
+# define Rte_TypeDef_StbM_PdelayInitiatorMeasurementType
+typedef struct
+{
+  uint16 sequenceId;
+  StbM_PortIdType requestPortId;
+  StbM_PortIdType responsePortId;
+  StbM_VirtualLocalTimeType requestOriginTimestamp;
+  StbM_VirtualLocalTimeType responseReceiptTimestamp;
+  StbM_TimeStampShortType requestReceiptTimestamp;
+  StbM_TimeStampShortType responseOriginTimestamp;
+  StbM_VirtualLocalTimeType referenceLocalTimestamp;
+  StbM_TimeStampShortType referenceGlobalTimestamp;
+  uint32 pdelay;
+} StbM_PdelayInitiatorMeasurementType;
+
+# define Rte_TypeDef_StbM_PdelayResponderMeasurementType
+typedef struct
+{
+  uint16 sequenceId;
+  StbM_PortIdType requestPortId;
+  StbM_PortIdType responsePortId;
+  StbM_VirtualLocalTimeType requestReceiptTimestamp;
+  StbM_VirtualLocalTimeType responseOriginTimestamp;
+  StbM_VirtualLocalTimeType referenceLocalTimestamp;
+  StbM_TimeStampShortType referenceGlobalTimestamp;
+} StbM_PdelayResponderMeasurementType;
+
+# define Rte_TypeDef_StbM_SyncRecordTableBlockType
+typedef struct
+{
+  uint32 GlbSeconds;
+  uint32 GlbNanoSeconds;
+  StbM_TimeBaseStatusType TimeBaseStatus;
+  uint32 VirtualLocalTimeLow;
+  sint16 RateDeviation;
+  uint32 LocSeconds;
+  uint32 LocNanoSeconds;
+  uint32 PathDelay;
+} StbM_SyncRecordTableBlockType;
+
+# define Rte_TypeDef_StbM_TimeStampType
+typedef struct
+{
+  StbM_TimeBaseStatusType timeBaseStatus;
+  uint32 nanoseconds;
+  uint32 seconds;
+  uint16 secondsHi;
+} StbM_TimeStampType;
 
 
 # ifndef RTE_SUPPRESS_UNUSED_DATATYPES

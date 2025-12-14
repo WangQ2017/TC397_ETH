@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: .\vBrsCfg.h
- *   Generation Time: 2025-08-29 14:51:59
+ *   Generation Time: 2025-12-14 18:11:50
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -97,10 +97,18 @@
 /* Peripheral Clock (MHz) */
 #define BRS_PERIPH_CLOCK 100
 
+/* ETH Clock (Hz) */
+#define BRS_ETH_CLOCK 12500000
+
 /*******************************************************************************
  BRS software modules
 *******************************************************************************/
 #define BRS_ENABLE_WATCHDOG
+
+/*******************************************************************************
+ BRS communication interface configuration
+*******************************************************************************/
+#define BRS_ENABLE_ETHERNET_SUPPORT
 
 /*******************************************************************************
  Tested Derivative: Infineon Aurix 2G TC39x Family

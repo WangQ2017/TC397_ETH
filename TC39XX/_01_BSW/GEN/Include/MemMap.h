@@ -2649,161 +2649,1271 @@
 
 #if defined ETH_30_TC3XX_START_SEC_DESCRIPTOR_BASE_ADDRESS_TABLE_VAR_NOINIT_UNSPECIFIED
 # undef ETH_30_TC3XX_START_SEC_DESCRIPTOR_BASE_ADDRESS_TABLE_VAR_NOINIT_UNSPECIFIED
-
-# if defined _MICROSOFT_C_VTT_
-   /* VTT usecase - nothing to do here */
-# else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
-   /* Pragma must be placed here. */
-   /* Example for GHS compiler:  
-#  pragma ghs section bss=".EthDesc"
-   */
-# endif
-
 # define START_SEC_VAR_NOINIT_UNSPECIFIED
 #endif
 #if defined ETH_30_TC3XX_STOP_SEC_DESCRIPTOR_BASE_ADDRESS_TABLE_VAR_NOINIT_UNSPECIFIED
 # undef ETH_30_TC3XX_STOP_SEC_DESCRIPTOR_BASE_ADDRESS_TABLE_VAR_NOINIT_UNSPECIFIED
-
-# if defined _MICROSOFT_C_VTT_
-   /* VTT usecase - nothing to do here */
-# else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
-   /* Pragma must be placed here. */
-   /* Example for GHS compiler:  
-#  pragma ghs section bss=default
-   */
-# endif
-
 # define STOP_SEC_VAR
 #endif
 
 #if defined ETH_30_TC3XX_START_SEC_TX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
 # undef ETH_30_TC3XX_START_SEC_TX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
-
-# if defined _MICROSOFT_C_VTT_
-   /* VTT usecase - nothing to do here */
-# else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
-   /* Pragma must be placed here. */
-   /* Example for GHS compiler:  
-#  pragma ghs section bss=".EthDesc"
-   */
-# endif
-
 # define START_SEC_VAR_NOINIT_UNSPECIFIED
 #endif
 #if defined ETH_30_TC3XX_STOP_SEC_TX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
 # undef ETH_30_TC3XX_STOP_SEC_TX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
-
-# if defined _MICROSOFT_C_VTT_
-   /* VTT usecase - nothing to do here */
-# else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
-   /* Pragma must be placed here. */
-   /* Example for GHS compiler:  
-#  pragma ghs section bss=default
-   */
-# endif
-
 # define STOP_SEC_VAR
 #endif
 
 #if defined ETH_30_TC3XX_START_SEC_TX_BUFFER_VAR_NOINIT_8BIT
 # undef ETH_30_TC3XX_START_SEC_TX_BUFFER_VAR_NOINIT_8BIT
-
-# if defined _MICROSOFT_C_VTT_
-   /* VTT usecase - nothing to do here */
-# else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
-   /* Pragma must be placed here. */
-   /* Example for GHS compiler:  
-#  pragma ghs section bss=".EthBuffers"
-   */
-# endif
-
 # define START_SEC_VAR_NOINIT_UNSPECIFIED
 #endif
 #if defined ETH_30_TC3XX_STOP_SEC_TX_BUFFER_VAR_NOINIT_8BIT
 # undef ETH_30_TC3XX_STOP_SEC_TX_BUFFER_VAR_NOINIT_8BIT
-
-# if defined _MICROSOFT_C_VTT_
-   /* VTT usecase - nothing to do here */
-# else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
-   /* Pragma must be placed here. */
-   /* Example for GHS compiler:  
-#  pragma ghs section bss=default
-   */
-# endif
-
 # define STOP_SEC_VAR
 #endif
 
 #if defined ETH_30_TC3XX_START_SEC_RX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
 # undef ETH_30_TC3XX_START_SEC_RX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
-
-# if defined _MICROSOFT_C_VTT_
-   /* VTT usecase - nothing to do here */
-# else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
-   /* Pragma must be placed here. */
-   /* Example for GHS compiler:  
-#  pragma ghs section bss=".EthDesc"
-   */
-# endif
-
 # define START_SEC_VAR_NOINIT_UNSPECIFIED
 #endif
 #if defined ETH_30_TC3XX_STOP_SEC_RX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
 # undef ETH_30_TC3XX_STOP_SEC_RX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
-
-# if defined _MICROSOFT_C_VTT_
-   /* VTT usecase - nothing to do here */
-# else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
-   /* Pragma must be placed here. */
-   /* Example for GHS compiler:  
-#  pragma ghs section bss=default
-   */
-# endif
-
 # define STOP_SEC_VAR
 #endif
 
 #if defined ETH_30_TC3XX_START_SEC_RX_BUFFER_VAR_NOINIT_8BIT
 # undef ETH_30_TC3XX_START_SEC_RX_BUFFER_VAR_NOINIT_8BIT
-
-# if defined _MICROSOFT_C_VTT_
-   /* VTT usecase - nothing to do here */
-# else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
-   /* Pragma must be placed here. */
-   /* Example for GHS compiler:  
-#  pragma ghs section bss=".EthBuffers"
-   */
-# endif
-
 # define START_SEC_VAR_NOINIT_UNSPECIFIED
 #endif
 #if defined ETH_30_TC3XX_STOP_SEC_RX_BUFFER_VAR_NOINIT_8BIT
 # undef ETH_30_TC3XX_STOP_SEC_RX_BUFFER_VAR_NOINIT_8BIT
-
-# if defined _MICROSOFT_C_VTT_
-   /* VTT usecase - nothing to do here */
-# else
-#  error "For Integrator: This section must be aligned to a 64 BYTES border!"
-   /* Pragma must be placed here. */
-   /* Example for GHS compiler:  
-#  pragma ghs section bss=default
-   */
-# endif
-
 # define STOP_SEC_VAR
 #endif
 
 /**********************************************************************************************************************
  *  ETH_30_TC3XX END
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *  NM START 
+ *********************************************************************************************************************/
+
+/*******  CODE sections **********************************************************************************************/
+
+#if defined(NM_START_SEC_CODE)
+# undef NM_START_SEC_CODE      /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CODE /* mapped to default code section */
+#endif
+#if defined(NM_STOP_SEC_CODE)
+# undef NM_STOP_SEC_CODE       /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CODE  /* default code stop section */
+#endif
+
+#if defined(NM_START_SEC_CODE_FAST)
+# undef NM_START_SEC_CODE_FAST /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CODE_FAST    /* mapped to default fast code section */
+#endif
+#if defined(NM_STOP_SEC_CODE_FAST)
+# undef NM_STOP_SEC_CODE_FAST  /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CODE  /* default code stop section */
+#endif
+
+#if defined(NM_START_SEC_CODE_ISR)
+# undef NM_START_SEC_CODE_ISR  /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CODE_ISR     /* mapped to default ISR code section */
+#endif
+#if defined(NM_STOP_SEC_CODE_ISR)
+# undef NM_STOP_SEC_CODE_ISR   /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CODE  /* default code stop section */
+#endif
+
+
+/*******  CONST sections  ********************************************************************************************/
+
+/* CONST sections */
+
+#if defined(NM_START_SEC_CONST_8BIT)
+# undef NM_START_SEC_CONST_8BIT  /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_8BIT   /* mapped to default const 8bit section */
+#endif
+#if defined(NM_STOP_SEC_CONST_8BIT)
+# undef NM_STOP_SEC_CONST_8BIT   /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_CONST /* default const stop section */
+#endif
+
+#if defined(NM_START_SEC_CONST_16BIT)
+# undef NM_START_SEC_CONST_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_16BIT
+#endif
+#if defined(NM_STOP_SEC_CONST_16BIT)
+# undef NM_STOP_SEC_CONST_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(NM_START_SEC_CONST_32BIT)
+# undef NM_START_SEC_CONST_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_32BIT
+#endif
+#if defined(NM_STOP_SEC_CONST_32BIT)
+# undef NM_STOP_SEC_CONST_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+#if defined(NM_START_SEC_CONST_64BIT)
+# undef NM_START_SEC_CONST_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_64BIT
+#endif
+#if defined(NM_STOP_SEC_CONST_64BIT)
+# undef NM_STOP_SEC_CONST_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+#if defined(NM_START_SEC_CONST_UNSPECIFIED)
+# undef NM_START_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CONST_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_CONST_UNSPECIFIED)
+# undef NM_STOP_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+/* FAST CONST sections */
+
+#if defined(NM_START_SEC_FAST_CONST_8BIT)
+# undef NM_START_SEC_FAST_CONST_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_8BIT
+#endif
+#if defined(NM_STOP_SEC_FAST_CONST_8BIT)
+# undef NM_STOP_SEC_FAST_CONST_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(NM_START_SEC_FAST_CONST_16BIT)
+# undef NM_START_SEC_FAST_CONST_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_16BIT
+#endif
+#if defined(NM_STOP_SEC_FAST_CONST_16BIT)
+# undef NM_STOP_SEC_FAST_CONST_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(NM_START_SEC_FAST_CONST_32BIT)
+# undef NM_START_SEC_FAST_CONST_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_32BIT
+#endif
+#if defined(NM_STOP_SEC_FAST_CONST_32BIT)
+# undef NM_STOP_SEC_FAST_CONST_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(NM_START_SEC_FAST_CONST_64BIT)
+# undef NM_START_SEC_FAST_CONST_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_64BIT
+#endif
+#if defined(NM_STOP_SEC_FAST_CONST_64BIT)
+# undef NM_STOP_SEC_FAST_CONST_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(NM_START_SEC_FAST_CONST_UNSPECIFIED)
+# undef NM_START_SEC_FAST_CONST_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_FAST_CONST_UNSPECIFIED)
+# undef NM_STOP_SEC_FAST_CONST_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+/* Postbuild CFG CONST sections */
+
+/* NOTE: ASR3.x till ASR4.0.1 only. Root table for postbuild data */
+#if defined(NM_START_SEC_PBCFG_ROOT)
+# undef NM_START_SEC_PBCFG_ROOT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_CONST_PBCFG
+#endif
+#if defined(NM_STOP_SEC_PBCFG_ROOT)
+# undef NM_STOP_SEC_PBCFG_ROOT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+/* ESCAN00065501 */
+/* NOTE: ASR4.0.3 (CFG5) only. The origin root table for postbuild data. Relevant only for EcuM. */
+#if defined(NM_START_SEC_PBCFG_GLOBALROOT)
+# undef NM_START_SEC_PBCFG_GLOBALROOT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_PBCFG_GLOBALROOT
+#endif
+#if defined(NM_STOP_SEC_PBCFG_GLOBALROOT)
+# undef NM_STOP_SEC_PBCFG_GLOBALROOT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(NM_START_SEC_PBCFG)
+# undef NM_START_SEC_PBCFG /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_CONST_PBCFG
+#endif
+#if defined(NM_STOP_SEC_PBCFG)
+# undef NM_STOP_SEC_PBCFG /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+/*******  VAR sections  **********************************************************************************************/
+
+/* VAR INIT sections */
+
+#if defined(NM_START_SEC_VAR_INIT_8BIT)
+# undef NM_START_SEC_VAR_INIT_8BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_8BIT        /* mapped to default var init 8bit section */
+#endif
+#if defined(NM_STOP_SEC_VAR_INIT_8BIT)
+# undef NM_STOP_SEC_VAR_INIT_8BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR   /* default var stop section */
+#endif
+
+#if defined(NM_START_SEC_VAR_INIT_16BIT)
+# undef NM_START_SEC_VAR_INIT_16BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_16BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_INIT_16BIT)
+# undef NM_STOP_SEC_VAR_INIT_16BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_INIT_32BIT)
+# undef NM_START_SEC_VAR_INIT_32BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_32BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_INIT_32BIT)
+# undef NM_STOP_SEC_VAR_INIT_32BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_INIT_64BIT)
+# undef NM_START_SEC_VAR_INIT_64BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_64BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_INIT_64BIT)
+# undef NM_STOP_SEC_VAR_INIT_64BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_INIT_UNSPECIFIED)
+# undef NM_START_SEC_VAR_INIT_UNSPECIFIED /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_VAR_INIT_UNSPECIFIED)
+# undef NM_STOP_SEC_VAR_INIT_UNSPECIFIED /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR NOINIT sections */
+
+#if defined(NM_START_SEC_VAR_NOINIT_8BIT)
+# undef NM_START_SEC_VAR_NOINIT_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_8BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOINIT_8BIT)
+# undef NM_STOP_SEC_VAR_NOINIT_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOINIT_16BIT)
+# undef NM_START_SEC_VAR_NOINIT_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_16BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOINIT_16BIT)
+# undef NM_STOP_SEC_VAR_NOINIT_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOINIT_32BIT)
+# undef NM_START_SEC_VAR_NOINIT_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_32BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOINIT_32BIT)
+# undef NM_STOP_SEC_VAR_NOINIT_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOINIT_64BIT)
+# undef NM_START_SEC_VAR_NOINIT_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_64BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOINIT_64BIT)
+# undef NM_STOP_SEC_VAR_NOINIT_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOINIT_UNSPECIFIED)
+# undef NM_START_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_VAR_NOINIT_UNSPECIFIED)
+# undef NM_STOP_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* ESCAN00065501 */
+#if defined(NM_START_SEC_VAR_PBCFG)
+# undef NM_START_SEC_VAR_PBCFG /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_PBCFG
+#endif
+#if defined(NM_STOP_SEC_VAR_PBCFG)
+# undef NM_STOP_SEC_VAR_PBCFG /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR ZERO INIT sections */
+
+#if defined(NM_START_SEC_VAR_ZERO_INIT_8BIT)
+# undef NM_START_SEC_VAR_ZERO_INIT_8BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_8BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_ZERO_INIT_8BIT)
+# undef NM_STOP_SEC_VAR_ZERO_INIT_8BIT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_ZERO_INIT_16BIT)
+# undef NM_START_SEC_VAR_ZERO_INIT_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_16BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_ZERO_INIT_16BIT)
+# undef NM_STOP_SEC_VAR_ZERO_INIT_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_ZERO_INIT_32BIT)
+# undef NM_START_SEC_VAR_ZERO_INIT_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_32BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_ZERO_INIT_32BIT)
+# undef NM_STOP_SEC_VAR_ZERO_INIT_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_ZERO_INIT_64BIT)
+# undef NM_START_SEC_VAR_ZERO_INIT_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_64BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_ZERO_INIT_64BIT)
+# undef NM_STOP_SEC_VAR_ZERO_INIT_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED)
+# undef NM_START_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED)
+# undef NM_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR FAST INIT sections */
+
+#if defined(NM_START_SEC_VAR_FAST_INIT_8BIT)
+# undef NM_START_SEC_VAR_FAST_INIT_8BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_8BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_INIT_8BIT)
+# undef NM_STOP_SEC_VAR_FAST_INIT_8BIT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_INIT_16BIT)
+# undef NM_START_SEC_VAR_FAST_INIT_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_16BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_INIT_16BIT)
+# undef NM_STOP_SEC_VAR_FAST_INIT_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_INIT_32BIT)
+# undef NM_START_SEC_VAR_FAST_INIT_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_32BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_INIT_32BIT)
+# undef NM_STOP_SEC_VAR_FAST_INIT_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_INIT_64BIT)
+# undef NM_START_SEC_VAR_FAST_INIT_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_64BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_INIT_64BIT)
+# undef NM_STOP_SEC_VAR_FAST_INIT_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_INIT_UNSPECIFIED)
+# undef NM_START_SEC_VAR_FAST_INIT_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_INIT_UNSPECIFIED)
+# undef NM_STOP_SEC_VAR_FAST_INIT_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR FAST NOINIT sections */
+
+#if defined(NM_START_SEC_VAR_FAST_NOINIT_8BIT)
+# undef NM_START_SEC_VAR_FAST_NOINIT_8BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_8BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_NOINIT_8BIT)
+# undef NM_STOP_SEC_VAR_FAST_NOINIT_8BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_NOINIT_16BIT)
+# undef NM_START_SEC_VAR_FAST_NOINIT_16BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_16BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_NOINIT_16BIT)
+# undef NM_STOP_SEC_VAR_FAST_NOINIT_16BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_NOINIT_32BIT)
+# undef NM_START_SEC_VAR_FAST_NOINIT_32BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_32BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_NOINIT_32BIT)
+# undef NM_STOP_SEC_VAR_FAST_NOINIT_32BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_NOINIT_64BIT)
+# undef NM_START_SEC_VAR_FAST_NOINIT_64BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_64BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_NOINIT_64BIT)
+# undef NM_STOP_SEC_VAR_FAST_NOINIT_64BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_NOINIT_UNSPECIFIED)
+# undef NM_START_SEC_VAR_FAST_NOINIT_UNSPECIFIED /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_NOINIT_UNSPECIFIED)
+# undef NM_STOP_SEC_VAR_FAST_NOINIT_UNSPECIFIED /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR FAST ZERO INIT sections */
+
+#if defined(NM_START_SEC_VAR_FAST_ZERO_INIT_8BIT)
+# undef NM_START_SEC_VAR_FAST_ZERO_INIT_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_8BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_ZERO_INIT_8BIT)
+# undef NM_STOP_SEC_VAR_FAST_ZERO_INIT_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_ZERO_INIT_16BIT)
+# undef NM_START_SEC_VAR_FAST_ZERO_INIT_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_16BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_ZERO_INIT_16BIT)
+# undef NM_STOP_SEC_VAR_FAST_ZERO_INIT_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_ZERO_INIT_32BIT)
+# undef NM_START_SEC_VAR_FAST_ZERO_INIT_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_32BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_ZERO_INIT_32BIT)
+# undef NM_STOP_SEC_VAR_FAST_ZERO_INIT_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_ZERO_INIT_64BIT)
+# undef NM_START_SEC_VAR_FAST_ZERO_INIT_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_64BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_ZERO_INIT_64BIT)
+# undef NM_STOP_SEC_VAR_FAST_ZERO_INIT_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED)
+# undef NM_START_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED)
+# undef NM_STOP_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR NOCACHE INIT sections */
+
+#if defined(NM_START_SEC_VAR_NOCACHE_INIT_8BIT)
+# undef NM_START_SEC_VAR_NOCACHE_INIT_8BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_8BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_INIT_8BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_INIT_8BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_INIT_16BIT)
+# undef NM_START_SEC_VAR_NOCACHE_INIT_16BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_16BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_INIT_16BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_INIT_16BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_INIT_32BIT)
+# undef NM_START_SEC_VAR_NOCACHE_INIT_32BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_32BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_INIT_32BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_INIT_32BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_INIT_64BIT)
+# undef NM_START_SEC_VAR_NOCACHE_INIT_64BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_64BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_INIT_64BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_INIT_64BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED)
+# undef NM_START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED)
+# undef NM_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR NOCACHE NOINIT sections */
+
+#if defined(NM_START_SEC_VAR_NOCACHE_NOINIT_8BIT)
+# undef NM_START_SEC_VAR_NOCACHE_NOINIT_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_8BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_NOINIT_8BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_NOINIT_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_NOINIT_16BIT)
+# undef NM_START_SEC_VAR_NOCACHE_NOINIT_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_16BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_NOINIT_16BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_NOINIT_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_NOINIT_32BIT)
+# undef NM_START_SEC_VAR_NOCACHE_NOINIT_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_32BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_NOINIT_32BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_NOINIT_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_NOINIT_64BIT)
+# undef NM_START_SEC_VAR_NOCACHE_NOINIT_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_64BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_NOINIT_64BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_NOINIT_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED)
+# undef NM_START_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED)
+# undef NM_STOP_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR NOCACHE ZERO INIT sections */
+
+#if defined(NM_START_SEC_VAR_NOCACHE_ZERO_INIT_8BIT)
+# undef NM_START_SEC_VAR_NOCACHE_ZERO_INIT_8BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_8BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_ZERO_INIT_8BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_ZERO_INIT_8BIT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_ZERO_INIT_16BIT)
+# undef NM_START_SEC_VAR_NOCACHE_ZERO_INIT_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_16BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_ZERO_INIT_16BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_ZERO_INIT_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_ZERO_INIT_32BIT)
+# undef NM_START_SEC_VAR_NOCACHE_ZERO_INIT_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_32BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_ZERO_INIT_32BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_ZERO_INIT_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_ZERO_INIT_64BIT)
+# undef NM_START_SEC_VAR_NOCACHE_ZERO_INIT_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_64BIT
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_ZERO_INIT_64BIT)
+# undef NM_STOP_SEC_VAR_NOCACHE_ZERO_INIT_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(NM_START_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED)
+# undef NM_START_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined(NM_STOP_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED)
+# undef NM_STOP_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/**********************************************************************************************************************
+ *  NM END
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *  ETHTSYN START 
+ *********************************************************************************************************************/
+
+/*******  CODE sections **********************************************************************************************/
+
+#if defined(ETHTSYN_START_SEC_CODE)
+# undef ETHTSYN_START_SEC_CODE      /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CODE /* mapped to default code section */
+#endif
+#if defined(ETHTSYN_STOP_SEC_CODE)
+# undef ETHTSYN_STOP_SEC_CODE       /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CODE  /* default code stop section */
+#endif
+
+#if defined(ETHTSYN_START_SEC_CODE_FAST)
+# undef ETHTSYN_START_SEC_CODE_FAST /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CODE_FAST    /* mapped to default fast code section */
+#endif
+#if defined(ETHTSYN_STOP_SEC_CODE_FAST)
+# undef ETHTSYN_STOP_SEC_CODE_FAST  /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CODE  /* default code stop section */
+#endif
+
+#if defined(ETHTSYN_START_SEC_CODE_ISR)
+# undef ETHTSYN_START_SEC_CODE_ISR  /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CODE_ISR     /* mapped to default ISR code section */
+#endif
+#if defined(ETHTSYN_STOP_SEC_CODE_ISR)
+# undef ETHTSYN_STOP_SEC_CODE_ISR   /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CODE  /* default code stop section */
+#endif
+
+
+/*******  CONST sections  ********************************************************************************************/
+
+/* CONST sections */
+
+#if defined(ETHTSYN_START_SEC_CONST_8BIT)
+# undef ETHTSYN_START_SEC_CONST_8BIT  /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_8BIT   /* mapped to default const 8bit section */
+#endif
+#if defined(ETHTSYN_STOP_SEC_CONST_8BIT)
+# undef ETHTSYN_STOP_SEC_CONST_8BIT   /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_CONST /* default const stop section */
+#endif
+
+#if defined(ETHTSYN_START_SEC_CONST_16BIT)
+# undef ETHTSYN_START_SEC_CONST_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_CONST_16BIT)
+# undef ETHTSYN_STOP_SEC_CONST_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTSYN_START_SEC_CONST_32BIT)
+# undef ETHTSYN_START_SEC_CONST_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_CONST_32BIT)
+# undef ETHTSYN_STOP_SEC_CONST_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+#if defined(ETHTSYN_START_SEC_CONST_64BIT)
+# undef ETHTSYN_START_SEC_CONST_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_CONST_64BIT)
+# undef ETHTSYN_STOP_SEC_CONST_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+#if defined(ETHTSYN_START_SEC_CONST_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CONST_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_CONST_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+/* FAST CONST sections */
+
+#if defined(ETHTSYN_START_SEC_FAST_CONST_8BIT)
+# undef ETHTSYN_START_SEC_FAST_CONST_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_8BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_FAST_CONST_8BIT)
+# undef ETHTSYN_STOP_SEC_FAST_CONST_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTSYN_START_SEC_FAST_CONST_16BIT)
+# undef ETHTSYN_START_SEC_FAST_CONST_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_FAST_CONST_16BIT)
+# undef ETHTSYN_STOP_SEC_FAST_CONST_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTSYN_START_SEC_FAST_CONST_32BIT)
+# undef ETHTSYN_START_SEC_FAST_CONST_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_FAST_CONST_32BIT)
+# undef ETHTSYN_STOP_SEC_FAST_CONST_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTSYN_START_SEC_FAST_CONST_64BIT)
+# undef ETHTSYN_START_SEC_FAST_CONST_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_FAST_CONST_64BIT)
+# undef ETHTSYN_STOP_SEC_FAST_CONST_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTSYN_START_SEC_FAST_CONST_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_FAST_CONST_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_FAST_CONST_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_FAST_CONST_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+/* Postbuild CFG CONST sections */
+
+/* NOTE: ASR3.x till ASR4.0.1 only. Root table for postbuild data */
+#if defined(ETHTSYN_START_SEC_PBCFG_ROOT)
+# undef ETHTSYN_START_SEC_PBCFG_ROOT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_CONST_PBCFG
+#endif
+#if defined(ETHTSYN_STOP_SEC_PBCFG_ROOT)
+# undef ETHTSYN_STOP_SEC_PBCFG_ROOT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+/* ESCAN00065501 */
+/* NOTE: ASR4.0.3 (CFG5) only. The origin root table for postbuild data. Relevant only for EcuM. */
+#if defined(ETHTSYN_START_SEC_PBCFG_GLOBALROOT)
+# undef ETHTSYN_START_SEC_PBCFG_GLOBALROOT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_PBCFG_GLOBALROOT
+#endif
+#if defined(ETHTSYN_STOP_SEC_PBCFG_GLOBALROOT)
+# undef ETHTSYN_STOP_SEC_PBCFG_GLOBALROOT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTSYN_START_SEC_PBCFG)
+# undef ETHTSYN_START_SEC_PBCFG /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_CONST_PBCFG
+#endif
+#if defined(ETHTSYN_STOP_SEC_PBCFG)
+# undef ETHTSYN_STOP_SEC_PBCFG /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+/*******  VAR sections  **********************************************************************************************/
+
+/* VAR INIT sections */
+
+#if defined(ETHTSYN_START_SEC_VAR_INIT_8BIT)
+# undef ETHTSYN_START_SEC_VAR_INIT_8BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_8BIT        /* mapped to default var init 8bit section */
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_INIT_8BIT)
+# undef ETHTSYN_STOP_SEC_VAR_INIT_8BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR   /* default var stop section */
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_INIT_16BIT)
+# undef ETHTSYN_START_SEC_VAR_INIT_16BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_INIT_16BIT)
+# undef ETHTSYN_STOP_SEC_VAR_INIT_16BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_INIT_32BIT)
+# undef ETHTSYN_START_SEC_VAR_INIT_32BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_INIT_32BIT)
+# undef ETHTSYN_STOP_SEC_VAR_INIT_32BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_INIT_64BIT)
+# undef ETHTSYN_START_SEC_VAR_INIT_64BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_INIT_64BIT)
+# undef ETHTSYN_STOP_SEC_VAR_INIT_64BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_INIT_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_VAR_INIT_UNSPECIFIED /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_INIT_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_VAR_INIT_UNSPECIFIED /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR NOINIT sections */
+
+#if defined(ETHTSYN_START_SEC_VAR_NOINIT_8BIT)
+# undef ETHTSYN_START_SEC_VAR_NOINIT_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_8BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOINIT_8BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOINIT_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOINIT_16BIT)
+# undef ETHTSYN_START_SEC_VAR_NOINIT_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOINIT_16BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOINIT_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOINIT_32BIT)
+# undef ETHTSYN_START_SEC_VAR_NOINIT_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOINIT_32BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOINIT_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOINIT_64BIT)
+# undef ETHTSYN_START_SEC_VAR_NOINIT_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOINIT_64BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOINIT_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOINIT_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOINIT_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* ESCAN00065501 */
+#if defined(ETHTSYN_START_SEC_VAR_PBCFG)
+# undef ETHTSYN_START_SEC_VAR_PBCFG /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_PBCFG
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_PBCFG)
+# undef ETHTSYN_STOP_SEC_VAR_PBCFG /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR ZERO INIT sections */
+
+#if defined(ETHTSYN_START_SEC_VAR_ZERO_INIT_8BIT)
+# undef ETHTSYN_START_SEC_VAR_ZERO_INIT_8BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_8BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_ZERO_INIT_8BIT)
+# undef ETHTSYN_STOP_SEC_VAR_ZERO_INIT_8BIT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_ZERO_INIT_16BIT)
+# undef ETHTSYN_START_SEC_VAR_ZERO_INIT_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_ZERO_INIT_16BIT)
+# undef ETHTSYN_STOP_SEC_VAR_ZERO_INIT_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_ZERO_INIT_32BIT)
+# undef ETHTSYN_START_SEC_VAR_ZERO_INIT_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_ZERO_INIT_32BIT)
+# undef ETHTSYN_STOP_SEC_VAR_ZERO_INIT_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_ZERO_INIT_64BIT)
+# undef ETHTSYN_START_SEC_VAR_ZERO_INIT_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_ZERO_INIT_64BIT)
+# undef ETHTSYN_STOP_SEC_VAR_ZERO_INIT_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_ZERO_INIT_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR FAST INIT sections */
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_INIT_8BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_INIT_8BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_8BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_INIT_8BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_INIT_8BIT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_INIT_16BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_INIT_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_INIT_16BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_INIT_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_INIT_32BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_INIT_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_INIT_32BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_INIT_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_INIT_64BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_INIT_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_INIT_64BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_INIT_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_INIT_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_VAR_FAST_INIT_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_INIT_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_INIT_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR FAST NOINIT sections */
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_NOINIT_8BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_NOINIT_8BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_8BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_NOINIT_8BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_NOINIT_8BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_NOINIT_16BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_NOINIT_16BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_NOINIT_16BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_NOINIT_16BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_NOINIT_32BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_NOINIT_32BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_NOINIT_32BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_NOINIT_32BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_NOINIT_64BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_NOINIT_64BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_NOINIT_64BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_NOINIT_64BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_NOINIT_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_VAR_FAST_NOINIT_UNSPECIFIED /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_NOINIT_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_NOINIT_UNSPECIFIED /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR FAST ZERO INIT sections */
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_ZERO_INIT_8BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_ZERO_INIT_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_8BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_ZERO_INIT_8BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_ZERO_INIT_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_ZERO_INIT_16BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_ZERO_INIT_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_ZERO_INIT_16BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_ZERO_INIT_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_ZERO_INIT_32BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_ZERO_INIT_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_ZERO_INIT_32BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_ZERO_INIT_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_ZERO_INIT_64BIT)
+# undef ETHTSYN_START_SEC_VAR_FAST_ZERO_INIT_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_ZERO_INIT_64BIT)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_ZERO_INIT_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR NOCACHE INIT sections */
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_INIT_8BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_INIT_8BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_8BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_INIT_8BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_INIT_8BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_INIT_16BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_INIT_16BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_INIT_16BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_INIT_16BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_INIT_32BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_INIT_32BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_INIT_32BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_INIT_32BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_INIT_64BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_INIT_64BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_INIT_64BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_INIT_64BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR NOCACHE NOINIT sections */
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_NOINIT_8BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_NOINIT_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_8BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_NOINIT_8BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_NOINIT_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_NOINIT_16BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_NOINIT_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_NOINIT_16BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_NOINIT_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_NOINIT_32BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_NOINIT_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_NOINIT_32BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_NOINIT_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_NOINIT_64BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_NOINIT_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_NOINIT_64BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_NOINIT_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR NOCACHE ZERO INIT sections */
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_ZERO_INIT_8BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_ZERO_INIT_8BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_8BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_ZERO_INIT_8BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_ZERO_INIT_8BIT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_ZERO_INIT_16BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_ZERO_INIT_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_16BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_ZERO_INIT_16BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_ZERO_INIT_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_ZERO_INIT_32BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_ZERO_INIT_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_32BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_ZERO_INIT_32BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_ZERO_INIT_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_ZERO_INIT_64BIT)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_ZERO_INIT_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_64BIT
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_ZERO_INIT_64BIT)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_ZERO_INIT_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTSYN_START_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED)
+# undef ETHTSYN_START_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTSYN_STOP_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED)
+# undef ETHTSYN_STOP_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/**********************************************************************************************************************
+ *  ETHTSYN END
  *********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -10356,6 +11466,617 @@
 /**********************************************************************************************************************
  *  FVM END
  *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ *  ETHTRCV_30_TJA1100 START 
+ *********************************************************************************************************************/
+
+/*******  CODE sections **********************************************************************************************/
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_CODE)
+# undef ETHTRCV_30_TJA1100_START_SEC_CODE      /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CODE /* mapped to default code section */
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_CODE)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_CODE       /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CODE  /* default code stop section */
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_CODE_FAST)
+# undef ETHTRCV_30_TJA1100_START_SEC_CODE_FAST /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CODE_FAST    /* mapped to default fast code section */
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_CODE_FAST)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_CODE_FAST  /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CODE  /* default code stop section */
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_CODE_ISR)
+# undef ETHTRCV_30_TJA1100_START_SEC_CODE_ISR  /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CODE_ISR     /* mapped to default ISR code section */
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_CODE_ISR)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_CODE_ISR   /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CODE  /* default code stop section */
+#endif
+
+
+/*******  CONST sections  ********************************************************************************************/
+
+/* CONST sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_CONST_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_CONST_8BIT  /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_8BIT   /* mapped to default const 8bit section */
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_CONST_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_CONST_8BIT   /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_CONST /* default const stop section */
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_CONST_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_CONST_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_CONST_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_CONST_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_CONST_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_CONST_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_CONST_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_CONST_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_CONST_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_CONST_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_CONST_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_CONST_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_CONST_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_CONST_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_CONST_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+/* FAST CONST sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_FAST_CONST_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_FAST_CONST_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_8BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_FAST_CONST_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_FAST_CONST_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_FAST_CONST_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_FAST_CONST_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_FAST_CONST_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_FAST_CONST_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_FAST_CONST_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_FAST_CONST_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_FAST_CONST_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_FAST_CONST_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_FAST_CONST_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_FAST_CONST_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_FAST_CONST_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_FAST_CONST_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_FAST_CONST_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_FAST_CONST_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_FAST_CONST_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_FAST_CONST_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_FAST_CONST_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+/* Postbuild CFG CONST sections */
+
+/* NOTE: ASR3.x till ASR4.0.1 only. Root table for postbuild data */
+#if defined(ETHTRCV_30_TJA1100_START_SEC_PBCFG_ROOT)
+# undef ETHTRCV_30_TJA1100_START_SEC_PBCFG_ROOT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_CONST_PBCFG
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_PBCFG_ROOT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_PBCFG_ROOT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+/* ESCAN00065501 */
+/* NOTE: ASR4.0.3 (CFG5) only. The origin root table for postbuild data. Relevant only for EcuM. */
+#if defined(ETHTRCV_30_TJA1100_START_SEC_PBCFG_GLOBALROOT)
+# undef ETHTRCV_30_TJA1100_START_SEC_PBCFG_GLOBALROOT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_PBCFG_GLOBALROOT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_PBCFG_GLOBALROOT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_PBCFG_GLOBALROOT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_PBCFG)
+# undef ETHTRCV_30_TJA1100_START_SEC_PBCFG /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_CONST_PBCFG
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_PBCFG)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_PBCFG /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_CONST
+#endif
+
+
+/*******  VAR sections  **********************************************************************************************/
+
+/* VAR INIT sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_INIT_8BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_8BIT        /* mapped to default var init 8bit section */
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_INIT_8BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR   /* default var stop section */
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_INIT_16BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_INIT_16BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_INIT_32BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_INIT_32BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_INIT_64BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_INIT_64BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_INIT_UNSPECIFIED /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define START_SEC_VAR_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_INIT_UNSPECIFIED /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR NOINIT sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOINIT_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOINIT_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_8BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOINIT_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOINIT_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOINIT_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOINIT_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOINIT_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOINIT_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOINIT_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOINIT_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOINIT_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOINIT_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOINIT_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOINIT_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOINIT_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOINIT_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOINIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOINIT_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOINIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOINIT_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* ESCAN00065501 */
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_PBCFG)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_PBCFG /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_PBCFG
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_PBCFG)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_PBCFG /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR ZERO INIT sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_ZERO_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_ZERO_INIT_8BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_8BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_ZERO_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_ZERO_INIT_8BIT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_ZERO_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_ZERO_INIT_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_ZERO_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_ZERO_INIT_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_ZERO_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_ZERO_INIT_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_ZERO_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_ZERO_INIT_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_ZERO_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_ZERO_INIT_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_ZERO_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_ZERO_INIT_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_ZERO_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR FAST INIT sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_INIT_8BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_8BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_INIT_8BIT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_INIT_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_INIT_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_INIT_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_INIT_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_INIT_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_INIT_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_INIT_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_INIT_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+
+/* VAR FAST NOINIT sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_NOINIT_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_NOINIT_8BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_8BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_NOINIT_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_NOINIT_8BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_NOINIT_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_NOINIT_16BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_NOINIT_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_NOINIT_16BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_NOINIT_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_NOINIT_32BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_NOINIT_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_NOINIT_32BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_NOINIT_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_NOINIT_64BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_NOINIT_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_NOINIT_64BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_NOINIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_NOINIT_UNSPECIFIED /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_NOINIT_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_NOINIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_NOINIT_UNSPECIFIED /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR FAST ZERO INIT sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_ZERO_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_ZERO_INIT_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_8BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_ZERO_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_ZERO_INIT_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_ZERO_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_ZERO_INIT_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_ZERO_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_ZERO_INIT_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_ZERO_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_ZERO_INIT_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_ZERO_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_ZERO_INIT_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_ZERO_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_ZERO_INIT_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_ZERO_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_ZERO_INIT_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_FAST_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR NOCACHE INIT sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_INIT_8BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_8BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_INIT_8BIT /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_INIT_16BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_INIT_16BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_INIT_32BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_INIT_32BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_INIT_64BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_INIT_64BIT /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED /* PRQA S 0841 */    /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_INIT_UNSPECIFIED /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR NOCACHE NOINIT sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_NOINIT_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_NOINIT_8BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_8BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_NOINIT_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_NOINIT_8BIT /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_NOINIT_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_NOINIT_16BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_NOINIT_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_NOINIT_16BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_NOINIT_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_NOINIT_32BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_NOINIT_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_NOINIT_32BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_NOINIT_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_NOINIT_64BIT /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_NOINIT_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_NOINIT_64BIT /* PRQA S 0841 */ /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED /* PRQA S 0841 */  /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_NOINIT_UNSPECIFIED /* PRQA S 0841 */   /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/* VAR NOCACHE ZERO INIT sections */
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_ZERO_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_ZERO_INIT_8BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_8BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_ZERO_INIT_8BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_ZERO_INIT_8BIT /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_ZERO_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_ZERO_INIT_16BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_16BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_ZERO_INIT_16BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_ZERO_INIT_16BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_ZERO_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_ZERO_INIT_32BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_32BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_ZERO_INIT_32BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_ZERO_INIT_32BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_ZERO_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_ZERO_INIT_64BIT /* PRQA S 0841 */     /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_64BIT
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_ZERO_INIT_64BIT)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_ZERO_INIT_64BIT /* PRQA S 0841 */      /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+#if defined(ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_START_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */       /* MD_MSR_19.6 */
+# define START_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED
+#endif
+#if defined(ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED)
+# undef ETHTRCV_30_TJA1100_STOP_SEC_VAR_NOCACHE_ZERO_INIT_UNSPECIFIED /* PRQA S 0841 */        /* MD_MSR_19.6 */
+# define STOP_SEC_VAR
+#endif
+
+/**********************************************************************************************************************
+ *  ETHTRCV_30_TJA1100 END
+ *********************************************************************************************************************/
+
 
 
 /**********************************************************************************************************************

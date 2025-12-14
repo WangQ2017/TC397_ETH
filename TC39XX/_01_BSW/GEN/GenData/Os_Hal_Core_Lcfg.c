@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Core_Lcfg.c
- *   Generation Time: 2025-08-29 14:51:59
+ *   Generation Time: 2025-12-14 17:03:55
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -373,6 +373,7 @@ CONSTP2CONST(Os_IsrHwConfigType, OS_CONST, OS_CONST)
   &OsCfg_Isr_CounterIsr_SystemTimer_OsCore3_HwConfig,
   &OsCfg_Isr_CounterIsr_SystemTimer_OsCore4_HwConfig,
   &OsCfg_Isr_CounterIsr_SystemTimer_OsCore5_HwConfig,
+  &OsCfg_Isr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_HwConfig,
   &OsCfg_Isr_XSignalIsr_OsCore0_HwConfig,
   &OsCfg_Isr_XSignalIsr_OsCore1_HwConfig,
   &OsCfg_Isr_XSignalIsr_OsCore2_HwConfig,

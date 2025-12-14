@@ -40,6 +40,7 @@
 #include "Rte_Cdd_Core4.h"
 #include "Rte_Cdd_Core5.h"
 #include "Rte_Cdd_Nm.h"
+#include "Rte_ComM.h"
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
 #include "Rte_Os_OsCore0_swc.h"
@@ -48,18 +49,35 @@
 #include "Rte_Os_OsCore3_swc.h"
 #include "Rte_Os_OsCore4_swc.h"
 #include "Rte_Os_OsCore5_swc.h"
+#include "Rte_StbM.h"
 #include "Rte_lock_control.h"
 #include "Rte_window_core1.h"
 #include "SchM_BswM.h"
+#include "SchM_Com.h"
+#include "SchM_ComM.h"
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
 #include "SchM_EcuM.h"
+#include "SchM_EthIf.h"
+#include "SchM_EthSM.h"
+#include "SchM_EthTSyn.h"
+#include "SchM_EthTrcv_30_Tja1100.h"
+#include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Irq.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
+#include "SchM_Nm.h"
+#include "SchM_PduR.h"
 #include "SchM_Port.h"
+#include "SchM_SoAd.h"
+#include "SchM_StbM.h"
+#include "SchM_TcpIp.h"
+#include "SchM_Uart.h"
+#include "SchM_UdpNm.h"
 
 #include "Rte_Hook.h"
+
+#include "Rte_Cbk.h"
 
 /* AUTOSAR 3.x compatibility */
 #if !defined (RTE_LOCAL)
@@ -237,6 +255,7 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_CONST_MSEC_SystemTimer_OsCore3_0 (0UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore4_0 (0UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore5_0 (0UL)
+#define RTE_CONST_MSEC_SystemTimer_OsCore0_1 (100000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore1_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore2_10 (1000000UL)
@@ -246,6 +265,7 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_2 (200000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore1_2 (200000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_20 (2000000UL)
+#define RTE_CONST_MSEC_SystemTimer_OsCore0_25 (2500000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_5 (500000UL)
 
 

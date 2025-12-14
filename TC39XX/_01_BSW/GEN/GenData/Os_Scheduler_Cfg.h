@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Scheduler_Cfg.h
- *   Generation Time: 2025-09-02 11:14:44
+ *   Generation Time: 2025-12-14 17:03:55
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -48,7 +48,7 @@
 # define OS_CFG_SCHEDULE_ROUND_ROB_ENABLED       (STD_OFF)
 
 /*! Defines the number of all task queues. */
-# define OS_CFG_NUM_TASKQUEUES                   (22u)
+# define OS_CFG_NUM_TASKQUEUES                   (23u)
 
 /* Number of task queue activation slots: OsCore0 */
 # define OS_CFG_NUM_TASKQUEUE0_OSCORE0_SLOTS     (3u)
@@ -56,23 +56,24 @@
 # define OS_CFG_NUM_TASKQUEUE2_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE3_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE4_OSCORE0_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE5_OSCORE0_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE5_OSCORE0_SLOTS     (5u)
 # define OS_CFG_NUM_TASKQUEUE6_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE7_OSCORE0_SLOTS     (2u)
 # define OS_CFG_NUM_TASKQUEUE8_OSCORE0_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE9_OSCORE0_SLOTS     (4u)
+# define OS_CFG_NUM_TASKQUEUE9_OSCORE0_SLOTS     (7u)
 # define OS_CFG_NUM_TASKQUEUE10_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE11_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE12_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE13_OSCORE0_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE14_OSCORE0_SLOTS     (4u)
-# define OS_CFG_NUM_TASKQUEUE15_OSCORE0_SLOTS     (2u)
-# define OS_CFG_NUM_TASKQUEUE16_OSCORE0_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE14_OSCORE0_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE15_OSCORE0_SLOTS     (4u)
+# define OS_CFG_NUM_TASKQUEUE16_OSCORE0_SLOTS     (2u)
 # define OS_CFG_NUM_TASKQUEUE17_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE18_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE19_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE20_OSCORE0_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE21_OSCORE0_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE21_OSCORE0_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE22_OSCORE0_SLOTS     (2u)
 
 /* Number of task queue activation slots: OsCore1 */
 # define OS_CFG_NUM_TASKQUEUE0_OSCORE1_SLOTS     (1u)
@@ -91,12 +92,13 @@
 # define OS_CFG_NUM_TASKQUEUE13_OSCORE1_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE14_OSCORE1_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE15_OSCORE1_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE16_OSCORE1_SLOTS     (101u)
-# define OS_CFG_NUM_TASKQUEUE17_OSCORE1_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE16_OSCORE1_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE17_OSCORE1_SLOTS     (101u)
 # define OS_CFG_NUM_TASKQUEUE18_OSCORE1_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE19_OSCORE1_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE20_OSCORE1_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE21_OSCORE1_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE21_OSCORE1_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE22_OSCORE1_SLOTS     (2u)
 
 /* Number of task queue activation slots: OsCore2 */
 # define OS_CFG_NUM_TASKQUEUE0_OSCORE2_SLOTS     (1u)
@@ -116,11 +118,12 @@
 # define OS_CFG_NUM_TASKQUEUE14_OSCORE2_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE15_OSCORE2_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE16_OSCORE2_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE17_OSCORE2_SLOTS     (101u)
-# define OS_CFG_NUM_TASKQUEUE18_OSCORE2_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE17_OSCORE2_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE18_OSCORE2_SLOTS     (101u)
 # define OS_CFG_NUM_TASKQUEUE19_OSCORE2_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE20_OSCORE2_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE21_OSCORE2_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE21_OSCORE2_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE22_OSCORE2_SLOTS     (2u)
 
 /* Number of task queue activation slots: OsCore3 */
 # define OS_CFG_NUM_TASKQUEUE0_OSCORE3_SLOTS     (1u)
@@ -141,10 +144,11 @@
 # define OS_CFG_NUM_TASKQUEUE15_OSCORE3_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE16_OSCORE3_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE17_OSCORE3_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE18_OSCORE3_SLOTS     (101u)
-# define OS_CFG_NUM_TASKQUEUE19_OSCORE3_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE18_OSCORE3_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE19_OSCORE3_SLOTS     (101u)
 # define OS_CFG_NUM_TASKQUEUE20_OSCORE3_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE21_OSCORE3_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE21_OSCORE3_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE22_OSCORE3_SLOTS     (2u)
 
 /* Number of task queue activation slots: OsCore4 */
 # define OS_CFG_NUM_TASKQUEUE0_OSCORE4_SLOTS     (1u)
@@ -166,9 +170,10 @@
 # define OS_CFG_NUM_TASKQUEUE16_OSCORE4_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE17_OSCORE4_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE18_OSCORE4_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE19_OSCORE4_SLOTS     (101u)
-# define OS_CFG_NUM_TASKQUEUE20_OSCORE4_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE21_OSCORE4_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE19_OSCORE4_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE20_OSCORE4_SLOTS     (101u)
+# define OS_CFG_NUM_TASKQUEUE21_OSCORE4_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE22_OSCORE4_SLOTS     (2u)
 
 /* Number of task queue activation slots: OsCore5 */
 # define OS_CFG_NUM_TASKQUEUE0_OSCORE5_SLOTS     (1u)
@@ -191,8 +196,9 @@
 # define OS_CFG_NUM_TASKQUEUE17_OSCORE5_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE18_OSCORE5_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE19_OSCORE5_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE20_OSCORE5_SLOTS     (101u)
-# define OS_CFG_NUM_TASKQUEUE21_OSCORE5_SLOTS     (2u)
+# define OS_CFG_NUM_TASKQUEUE20_OSCORE5_SLOTS     (1u)
+# define OS_CFG_NUM_TASKQUEUE21_OSCORE5_SLOTS     (101u)
+# define OS_CFG_NUM_TASKQUEUE22_OSCORE5_SLOTS     (2u)
 
 
 /**********************************************************************************************************************
