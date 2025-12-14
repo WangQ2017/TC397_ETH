@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.h
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2025-12-14 21:00:01
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -73,9 +73,6 @@
 
 # define OS_START_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/*! Alarm configuration data: Rte_Al_TE2_OsTask_Asw_OsCore0_0_5ms */
-extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_OsTask_Asw_OsCore0_0_5ms;
 
 /*! Alarm configuration data: Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms;

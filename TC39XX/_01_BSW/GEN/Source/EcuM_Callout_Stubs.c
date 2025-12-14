@@ -253,10 +253,10 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitOne(void)
 {
   if(GetCoreID() == ECUM_CORE_ID_BSW)
   {
-    BswM_PreInit( BswM_Config_Ptr );
-    Port_Init( &Port_Config );
     Mcu_Init( &Mcu_Config );
     Mcu_InitClock(0);while (MCU_PLL_LOCKED != Mcu_GetPllStatus());Mcu_DistributePllClock();
+    BswM_PreInit( BswM_Config_Ptr );
+    Port_Init( &Port_Config );
   }
 
 /**********************************************************************************************************************

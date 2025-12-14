@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 8.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2025-12-13, 12:54:12      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2025-12-14, 21:25:59      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b191017-0938        !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -998,7 +998,7 @@ Container : Ethernet interrupt Configuration
 /* Ethernet interrupt Category Setting*/
 #define IRQ_GETH_SR0_PRIO             0x0
 #define IRQ_GETH_SR1_PRIO             0x0
-#define IRQ_GETH_SR2_PRIO             0x0
+#define IRQ_GETH_SR2_PRIO             0x15
 #define IRQ_GETH_SR3_PRIO             0x0
 #define IRQ_GETH_SR4_PRIO             0x0
 #define IRQ_GETH_SR5_PRIO             0x0

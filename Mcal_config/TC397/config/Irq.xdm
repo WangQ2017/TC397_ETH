@@ -7107,12 +7107,8 @@
                     <d:var name="IrqETHSR0Prio" type="INTEGER" value="0">
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>
-                    <d:var name="IrqETHSR1Prio" type="INTEGER" value="0">
-                      <a:a name="IMPORTER_INFO" value="@DEF"/>
-                    </d:var>
-                    <d:var name="IrqETHSR2Prio" type="INTEGER" value="0">
-                      <a:a name="IMPORTER_INFO" value="@DEF"/>
-                    </d:var>
+                    <d:var name="IrqETHSR1Prio" type="INTEGER" value="244"/>
+                    <d:var name="IrqETHSR2Prio" type="INTEGER" value="21"/>
                     <d:var name="IrqETHSR3Prio" type="INTEGER" value="0">
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>

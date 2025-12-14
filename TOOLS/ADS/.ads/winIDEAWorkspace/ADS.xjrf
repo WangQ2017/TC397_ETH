@@ -359,6 +359,47 @@
      <Breakpoints>
       <DisplayBPMessage>0</DisplayBPMessage>
       <DisplayHWBPMessage>0</DisplayHWBPMessage>
+      <Fetch>
+       <BP.0>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>True</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\GEN\Source\EcuM_Callout_Stubs.c&quot;::259</Name>
+        </__>
+       </BP.0>
+       <BP.1>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>True</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\GEN\Source\EcuM_Callout_Stubs.c&quot;::258</Name>
+        </__>
+       </BP.1>
+       <BP.2>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>True</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\GEN\Source\EcuM_Callout_Stubs.c&quot;::257</Name>
+        </__>
+       </BP.2>
+      </Fetch>
      </Breakpoints>
      <Debug>
       <Debugging>
@@ -557,14 +598,148 @@
     </Mode>
     <Op_System>
      <Debug>
+      <BPs>
+       <__.0>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>true</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\GEN\Source\EcuM_Callout_Stubs.c&quot;::259</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.0>
+       <__.1>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>true</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\GEN\Source\EcuM_Callout_Stubs.c&quot;::258</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.1>
+       <__.2>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>true</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\GEN\Source\EcuM_Callout_Stubs.c&quot;::257</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.2>
+      </BPs>
       <Processes>
        <__.0>
-        <URL>App/0</URL>
+        <URL>App/MS</URL>
        </__.0>
       </Processes>
      </Debug>
     </Op_System>
     <Plugins>
+     <_3BB2B9D2-577A-4597-90CE-7032BE77BD1F>
+      <Plugin>
+       <Configuration>
+        <CCTRLOnReset>
+         <AutoOnReset>false</AutoOnReset>
+         <InitialConfig>
+          <CountEnable>Enable</CountEnable>
+          <CounterMode>Task</CounterMode>
+          <M1CNT>IP_DISPATCH_STALL</M1CNT>
+          <M2CNT>LS_DISPATCH_STALL</M2CNT>
+          <M3CNT>LP_DISPATCH_STALL</M3CNT>
+         </InitialConfig>
+        </CCTRLOnReset>
+       </Configuration>
+      </Plugin>
+     </_3BB2B9D2-577A-4597-90CE-7032BE77BD1F>
+     <_3BB2B9D2-577A-4597-90CE-7032BE77BD1F1>
+      <Plugin>
+       <Configuration>
+        <CCTRLOnReset>
+         <AutoOnReset>false</AutoOnReset>
+         <InitialConfig>
+          <CountEnable>Enable</CountEnable>
+          <CounterMode>Task</CounterMode>
+          <M1CNT>IP_DISPATCH_STALL</M1CNT>
+          <M2CNT>LS_DISPATCH_STALL</M2CNT>
+          <M3CNT>LP_DISPATCH_STALL</M3CNT>
+         </InitialConfig>
+        </CCTRLOnReset>
+       </Configuration>
+      </Plugin>
+     </_3BB2B9D2-577A-4597-90CE-7032BE77BD1F1>
+     <_3BB2B9D2-577A-4597-90CE-7032BE77BD1F2>
+      <Plugin>
+       <Configuration>
+        <CCTRLOnReset>
+         <AutoOnReset>false</AutoOnReset>
+         <InitialConfig>
+          <CountEnable>Enable</CountEnable>
+          <CounterMode>Task</CounterMode>
+          <M1CNT>IP_DISPATCH_STALL</M1CNT>
+          <M2CNT>LS_DISPATCH_STALL</M2CNT>
+          <M3CNT>LP_DISPATCH_STALL</M3CNT>
+         </InitialConfig>
+        </CCTRLOnReset>
+       </Configuration>
+      </Plugin>
+     </_3BB2B9D2-577A-4597-90CE-7032BE77BD1F2>
+     <_3BB2B9D2-577A-4597-90CE-7032BE77BD1F3>
+      <Plugin>
+       <Configuration>
+        <CCTRLOnReset>
+         <AutoOnReset>false</AutoOnReset>
+         <InitialConfig>
+          <CountEnable>Enable</CountEnable>
+          <CounterMode>Task</CounterMode>
+          <M1CNT>IP_DISPATCH_STALL</M1CNT>
+          <M2CNT>LS_DISPATCH_STALL</M2CNT>
+          <M3CNT>LP_DISPATCH_STALL</M3CNT>
+         </InitialConfig>
+        </CCTRLOnReset>
+       </Configuration>
+      </Plugin>
+     </_3BB2B9D2-577A-4597-90CE-7032BE77BD1F3>
+     <_3BB2B9D2-577A-4597-90CE-7032BE77BD1F4>
+      <Plugin>
+       <Configuration>
+        <CCTRLOnReset>
+         <AutoOnReset>false</AutoOnReset>
+         <InitialConfig>
+          <CountEnable>Enable</CountEnable>
+          <CounterMode>Task</CounterMode>
+          <M1CNT>IP_DISPATCH_STALL</M1CNT>
+          <M2CNT>LS_DISPATCH_STALL</M2CNT>
+          <M3CNT>LP_DISPATCH_STALL</M3CNT>
+         </InitialConfig>
+        </CCTRLOnReset>
+       </Configuration>
+      </Plugin>
+     </_3BB2B9D2-577A-4597-90CE-7032BE77BD1F4>
+     <_3BB2B9D2-577A-4597-90CE-7032BE77BD1F5>
+      <Plugin>
+       <Configuration>
+        <CCTRLOnReset>
+         <AutoOnReset>false</AutoOnReset>
+         <InitialConfig>
+          <CountEnable>Enable</CountEnable>
+          <CounterMode>Task</CounterMode>
+          <M1CNT>IP_DISPATCH_STALL</M1CNT>
+          <M2CNT>LS_DISPATCH_STALL</M2CNT>
+          <M3CNT>LP_DISPATCH_STALL</M3CNT>
+         </InitialConfig>
+        </CCTRLOnReset>
+       </Configuration>
+      </Plugin>
+     </_3BB2B9D2-577A-4597-90CE-7032BE77BD1F5>
      <_4EF16EE0-E59F-44FF-AF75-2461D90EDF96>
       <Plugin>
        <Data>
@@ -2013,9 +2188,9 @@
            <Name></Name>
            <TC_Partition>0</TC_Partition>
            <Partitions.0>
-            <Enabled>false</Enabled>
+            <Enabled>true</Enabled>
             <Offset>0</Offset>
-            <Size>0</Size>
+            <Size>1024</Size>
            </Partitions.0>
            <Partitions.1>
             <Enabled>false</Enabled>

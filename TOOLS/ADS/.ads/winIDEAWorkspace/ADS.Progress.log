@@ -11,9 +11,10 @@ EMULATION	Final debug frequency set
 EMULATION	SoC ID match OK
 SoC	Detected device: TC390 series, rev. BC
 EMULATION	STARTED
-PROGRAMMING 	254514 bytes
-PROGRAMMING	Infineon TC39x_PFLASH_16MB (23 sectors)
+PROGRAMMING 	529750 bytes
+PROGRAMMING	Infineon TC39x_PFLASH_16MB (40 sectors)
 EMULATION	END - Without cleanup
+LOADING	H:\class\TC397_ETH\TOOLS\CMake\build\tc39x-fac-tasking\tc39x.elf
 EMULATION	Asserting reset
 EMULATION	Initial debug frequency set
 EMULATION	Connected to SoC/core(s)
@@ -21,10 +22,13 @@ EMULATION	Finished connecting to SoC
 EMULATION	Releasing reset
 EMULATION	Reset is INACTIVE
 EMULATION	Initialization script (if any) done
+No RAM which needs initialization found
 EMULATION	Final debug frequency set
 EMULATION	SoC ID match OK
 SoC	Detected device: TC390 series, rev. BC
 EMULATION	STARTED
+PROGRAMMING 	529750 bytes
+PROGRAMMING	Infineon TC39x_PFLASH_16MB (40 sectors)
 EMULATION	END - Without cleanup
 EMULATION	Asserting reset
 EMULATION	Initial debug frequency set

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Cfg.h
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2025-12-14 21:00:01
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -111,11 +111,10 @@
 # define OS_CFG_EVENT                            (STD_ON)
 
 /* Event masks */
-# define Rte_Ev_Cyclic2_OsTask_Asw_OsCore0_0_5ms     ((EventMaskType)1uLL)
 # define Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms     ((EventMaskType)1uLL)
-# define Rte_Ev_Run_Cdd_Core0_Runnable_20     ((EventMaskType)2uLL)
-# define Rte_Ev_Run_Cdd_Core0_Runnable_5ms     ((EventMaskType)4uLL)
-# define Rte_Ev_Run_Cdd_nm_Cdd_Nm_Runnable10ms     ((EventMaskType)8uLL)
+# define Rte_Ev_Run_Cdd_Core0_Runnable_20     ((EventMaskType)1uLL)
+# define Rte_Ev_Run_Cdd_Core0_Runnable_5ms     ((EventMaskType)2uLL)
+# define Rte_Ev_Run_Cdd_nm_Cdd_Nm_Runnable10ms     ((EventMaskType)4uLL)
 # define Rte_Ev_Run_EthIf_EthIf_MainFunctionState     ((EventMaskType)2uLL)
 
 /* Software counter timing macros */

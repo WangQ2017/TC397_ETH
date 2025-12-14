@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.c
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2025-12-14 21:00:01
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -74,9 +74,6 @@
 
 #define OS_START_SEC_CORE0_VAR_NOINIT_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/*! Dynamic alarm data: Rte_Al_TE2_OsTask_Asw_OsCore0_0_5ms */
-OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE2_OsTask_Asw_OsCore0_0_5ms_Dyn;
 
 /*! Dynamic alarm data: Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms */
 OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms_Dyn;
@@ -187,32 +184,6 @@ OS_LOCAL VAR(Os_AlarmType, OS_VAR_NOINIT) OsCfg_Alarm_Rte_Al_TE_Cdd_Core5_Cdd_Co
 
 #define OS_START_SEC_CORE0_CONST_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-/*! Alarm configuration data: Rte_Al_TE2_OsTask_Asw_OsCore0_0_5ms */
-CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_OsTask_Asw_OsCore0_0_5ms =
-{
-  /* .Alarm = */
-  {
-    /* .Job                   = */
-    {
-      /* .Dyn      = */ OS_ALARM_CASTDYN_ALARM_2_JOB(OsCfg_Alarm_Rte_Al_TE2_OsTask_Asw_OsCore0_0_5ms_Dyn),
-      /* .Counter  = */ OS_COUNTER_CASTCONFIG_TIMERHRT_2_COUNTER(OsCfg_Counter_SystemTimer_OsCore0),
-      /* .Callback = */ Os_AlarmActionSetEvent
-    },
-    /* .Autostart             = */
-    {
-      /* .AlarmTime        = */ 0uL, /* 0.0 sec */
-      /* .Cycle            = */ 0uL, /* 0.0 sec */
-      /* .ApplicationModes = */ OS_APPMODE_NONE,
-      /* .AlarmMode        = */ OS_ALARMMODE_ABSOLUTE
-    },
-    /* .AccessingApplications = */ (OS_APPID2MASK(OsApplication_OsCore0) | OS_APPID2MASK(OsApplication_OsCore1) | OS_APPID2MASK(OsApplication_OsCore2) | OS_APPID2MASK(OsApplication_OsCore3) | OS_APPID2MASK(OsApplication_OsCore4) | OS_APPID2MASK(OsApplication_OsCore5) | OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2) | OS_APPID2MASK(SystemApplication_OsCore3) | OS_APPID2MASK(SystemApplication_OsCore4) | OS_APPID2MASK(SystemApplication_OsCore5)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
-    /* .OwnerApplication      = */ &OsCfg_App_OsApplication_OsCore0
-  },
-  /* .Task  = */ &OsCfg_Task_OsTask_Asw_OsCore0,
-  /* .Mask  = */ Rte_Ev_Cyclic2_OsTask_Asw_OsCore0_0_5ms
-};
 
 
 /*! Alarm configuration data: Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms */
@@ -765,7 +736,6 @@ CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_Core5_
 CONSTP2CONST(Os_AlarmConfigType, OS_CONST, OS_CONST) OsCfg_AlarmRefs[OS_ALARMID_COUNT + 1] =  /* PRQA S 4521 */ /* MD_Os_Rule10.1_4521 */
 {
   OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_EcuM_EcuM_MainFunction),
-  OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_OsTask_Asw_OsCore0_0_5ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms),
   OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms),
   OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms),
