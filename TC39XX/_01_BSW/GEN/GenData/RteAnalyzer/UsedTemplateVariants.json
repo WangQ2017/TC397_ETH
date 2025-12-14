@@ -1,7 +1,7 @@
 {
    "description" : "RTE Analyzer used templates",
    "version" : "1.23.0",
-   "RTEOutputDirectory" : "E:/TC397_AUTOSAR_ETH/TC39XX/_01_BSW/GEN/GenData/",
+   "RTEOutputDirectory" : "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/",
    "Templates" : {
       "Components/Rte_BswM.h" : {
          "Rte_InitValue_Request_ESH_PostRunRequest_0_requestedMode" : {
@@ -50,6 +50,9 @@
          }
       },
       "Rte.c" : {
+         "Rte_ComSendSignalProxyPeriodic" : {
+            "6385f8a0383f30c82bd5286425ae2f6b" : {}
+         },
          "Rte_DisableAllInterrupts" : {
             "2220d8cbe5a86d9386e0df9c463a628a" : {},
             "e1b46dec18b0478ca7e71adddae2cb1d" : {}
@@ -97,6 +100,7 @@
             "9e23f15f2f9e9efb42f2eb14bf0c3227" : {},
             "9ee4996acacbd29a3ec6b8ce55359aa7" : {},
             "af75bd184864c2da323c8257b780888d" : {},
+            "c99c6a0e813c2189fdf538227d501504" : {},
             "c9e98da718f0716c779c5a0db6d32361" : {},
             "d056b65db089bfa3ec0b084b7a1262d5" : {},
             "d0a4b64b1709adbcfc031d9fc3eca7e4" : {},
@@ -172,14 +176,18 @@
             "433f32a3071ee81ee9a6b9edcbd9bcef" : {},
             "5497bb60a69ee2874c46e6281bc8fe3a" : {},
             "7e293cc4e10bb44bed3e5ddf4287be4a" : {},
+            "929d4ac6aba8d6cd1a2224ccc5a245c7" : {},
             "9c690fbf4504c3c233ad532161b9277e" : {},
             "a813cdab9038b5933c04fc0db3a05b1c" : {},
             "b009fb9446e25c222fd56d841b19d74d" : {},
             "c0f16f399b2a45c35212f3223b55b39f" : {},
             "c6ae291e674de2e93a3bf7101d9b4029" : {},
+            "c99c6a0e813c2189fdf538227d501504" : {},
             "d74e736c857523d804833c29ef1bde89" : {},
             "de369395b30bc76d91e50c84a3541f17" : {},
             "df8d3a247c046cf24b2c34aa66a1f6e2" : {},
+            "f47f27d43fc350e8ac7d1b89f9ab3f68" : {},
+            "fce406a78641ffeaa16e9efc76385fe1" : {},
             "ff483b2e26b3c69eb444ae295b040492" : {}
          }
       },
@@ -371,6 +379,7 @@
             "1c99628f7d72613bb84ac70bb8c41e18" : {},
             "2417f08aaafee4abd24715c408666f71" : {},
             "2aac5d65e80a96bea6e19fb64873b3e0" : {},
+            "2c12742a669cd4708a2147ea4207d1f0" : {},
             "2dd3834f31fb12b1e60406d281d96678" : {},
             "32dd55ef523876365917f43fe33d800b" : {},
             "3414df247e45b319f4ae35b1cef1c004" : {},
@@ -409,11 +418,113 @@
             "f1a1c259d249911ec2e30d5f851f1e6f" : {},
             "ffa7f1bf3c183ef517d80f97e0893fde" : {}
          },
-         "TASK(OsTask_Bsw_OsCore0)" : {
+         "TASK(OsTask_Bsw_10ms_Core0)" : {
+            "001a3efbfe49b7d5be906b5d15d108f6" : {},
+            "0cd8ce2f86bda9ede1f83d83b76260ef" : {},
+            "12da8d4797581dc299660cfb668a3a6b" : {},
+            "1b123921efa08c0c5dcacf7af5bb0e09" : {},
+            "1c99628f7d72613bb84ac70bb8c41e18" : {},
+            "2417f08aaafee4abd24715c408666f71" : {},
+            "2aac5d65e80a96bea6e19fb64873b3e0" : {},
+            "2c12742a669cd4708a2147ea4207d1f0" : {},
+            "2dd3834f31fb12b1e60406d281d96678" : {},
+            "32dd55ef523876365917f43fe33d800b" : {},
+            "3414df247e45b319f4ae35b1cef1c004" : {},
+            "34af92b1c9c2153872a9ef4790eebd0a" : {},
+            "3b1ed5538b67de1a9d8c24f43ac50d64" : {},
+            "3b7ee8908c44bcdcb5144f833a5ab5ab" : {},
+            "3ce0cd67cfc42e739472e2211faa4eaf" : {},
+            "41acb2c33defbe43a412a0c78058edfe" : {},
+            "4ee294fa49463811fffa265644cfd97f" : {},
+            "505ad5ff897418a0aeb986616b09a5d8" : {},
+            "53326dd15ac3f4c6da616bbaf8d83ee9" : {},
+            "5883d10ab6dde271702a8d5795c511ef" : {},
+            "5aa9bb21121f077b3a6956ba9e39d77f" : {},
+            "5ac621ed56e5af4229b45b3807bf0a6a" : {},
+            "6769cbc9af67d0a837e5d0b429c68907" : {},
+            "689591c33aac5aa459eb9b2ab6d0a966" : {},
+            "7b46780790d0ea770b24f4f8fdbabf17" : {},
+            "7c2459f385738818710b91822e44068f" : {},
+            "7e7562d0543f3db67e72a761aba526ba" : {},
+            "8439aff64d10d719dc4c67c405a95bcc" : {},
+            "84e316f08a6513cb9cdb5933f75630f5" : {},
+            "893dbe7756a6d962b54a3298703528f4" : {},
+            "894df3e616b7d1f6817d7ff0ab326643" : {},
+            "91bca86f52bf901d952cede02d9172d0" : {},
+            "924583d49c2db94b816df6998b00ae98" : {},
+            "9626a60246cd0cf0c639f237af5cac87" : {},
+            "99613e7531feb4b3317632643e798815" : {},
+            "9b5c269c9f3adc51a3d53e75b95b0ff7" : {},
+            "9bbe16e5f7debca9c9711cda4389a721" : {},
+            "b041fc8381982fb959ea9269d2765772" : {},
+            "bfdc05ffce13466b4ba700c7c225287c" : {},
+            "ce2e7f4d602003905e5ef43617540c24" : {},
+            "d4ac3c459f6d6d7435eec1e17e9567ba" : {},
+            "e14096eb42d88d4c0d16dd32d726c855" : {},
+            "ee580e3ce27c50fea39b4a86abb2351c" : {},
+            "f1a1c259d249911ec2e30d5f851f1e6f" : {},
+            "ffa7f1bf3c183ef517d80f97e0893fde" : {}
+         },
+         "TASK(OsTask_Bsw_1ms_Core0)" : {
+            "001a3efbfe49b7d5be906b5d15d108f6" : {},
+            "12da8d4797581dc299660cfb668a3a6b" : {},
+            "1b123921efa08c0c5dcacf7af5bb0e09" : {},
+            "2c12742a669cd4708a2147ea4207d1f0" : {},
+            "3414df247e45b319f4ae35b1cef1c004" : {},
+            "34af92b1c9c2153872a9ef4790eebd0a" : {},
+            "3b7ee8908c44bcdcb5144f833a5ab5ab" : {},
+            "3ce0cd67cfc42e739472e2211faa4eaf" : {},
+            "4ee294fa49463811fffa265644cfd97f" : {},
+            "53326dd15ac3f4c6da616bbaf8d83ee9" : {},
+            "6769cbc9af67d0a837e5d0b429c68907" : {},
+            "6abcd73f77ba0f0c7932bb3ce085d737" : {},
+            "6d706ac1540a908c81fd20b9fadf7b21" : {},
+            "7b46780790d0ea770b24f4f8fdbabf17" : {},
+            "7e7562d0543f3db67e72a761aba526ba" : {},
+            "8439aff64d10d719dc4c67c405a95bcc" : {},
+            "86e2f9c7837c9bf7ce55b5a05a4c0543" : {},
+            "893dbe7756a6d962b54a3298703528f4" : {},
+            "8faae30a912a8aceebfcb72d774a7a32" : {},
+            "9626a60246cd0cf0c639f237af5cac87" : {},
+            "99613e7531feb4b3317632643e798815" : {},
+            "9bbe16e5f7debca9c9711cda4389a721" : {},
+            "a894c7656c240f56962d8c99ed997011" : {},
+            "bfdc05ffce13466b4ba700c7c225287c" : {},
+            "f1a1c259d249911ec2e30d5f851f1e6f" : {}
+         },
+         "TASK(OsTask_Bsw_20ms_Core0)" : {
+            "001a3efbfe49b7d5be906b5d15d108f6" : {},
+            "12da8d4797581dc299660cfb668a3a6b" : {},
+            "1b123921efa08c0c5dcacf7af5bb0e09" : {},
+            "2c12742a669cd4708a2147ea4207d1f0" : {},
+            "3414df247e45b319f4ae35b1cef1c004" : {},
+            "34af92b1c9c2153872a9ef4790eebd0a" : {},
+            "3b7ee8908c44bcdcb5144f833a5ab5ab" : {},
+            "3ce0cd67cfc42e739472e2211faa4eaf" : {},
+            "4ee294fa49463811fffa265644cfd97f" : {},
+            "53326dd15ac3f4c6da616bbaf8d83ee9" : {},
+            "6769cbc9af67d0a837e5d0b429c68907" : {},
+            "6abcd73f77ba0f0c7932bb3ce085d737" : {},
+            "6d706ac1540a908c81fd20b9fadf7b21" : {},
+            "7b46780790d0ea770b24f4f8fdbabf17" : {},
+            "7e7562d0543f3db67e72a761aba526ba" : {},
+            "8439aff64d10d719dc4c67c405a95bcc" : {},
+            "86e2f9c7837c9bf7ce55b5a05a4c0543" : {},
+            "893dbe7756a6d962b54a3298703528f4" : {},
+            "8faae30a912a8aceebfcb72d774a7a32" : {},
+            "9626a60246cd0cf0c639f237af5cac87" : {},
+            "99613e7531feb4b3317632643e798815" : {},
+            "9bbe16e5f7debca9c9711cda4389a721" : {},
+            "a894c7656c240f56962d8c99ed997011" : {},
+            "bfdc05ffce13466b4ba700c7c225287c" : {},
+            "f1a1c259d249911ec2e30d5f851f1e6f" : {}
+         },
+         "TASK(OsTask_Bsw_5ms_Core0)" : {
             "001a3efbfe49b7d5be906b5d15d108f6" : {},
             "12da8d4797581dc299660cfb668a3a6b" : {},
             "1b123921efa08c0c5dcacf7af5bb0e09" : {},
             "2aac5d65e80a96bea6e19fb64873b3e0" : {},
+            "2c12742a669cd4708a2147ea4207d1f0" : {},
             "3414df247e45b319f4ae35b1cef1c004" : {},
             "34af92b1c9c2153872a9ef4790eebd0a" : {},
             "3b1ed5538b67de1a9d8c24f43ac50d64" : {},
@@ -1266,6 +1377,40 @@
             "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
          }
       },
+      "SchM_Com.h" : {
+         "SchM_Enter_Com_COM_EXCLUSIVE_AREA_BOTH" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_Com_COM_EXCLUSIVE_AREA_RX" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_Com_COM_EXCLUSIVE_AREA_TX" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_Com_COM_EXCLUSIVE_AREA_BOTH" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_Com_COM_EXCLUSIVE_AREA_RX" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_Com_COM_EXCLUSIVE_AREA_TX" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_ComM.h" : {
+         "SchM_Enter_ComM_COMM_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_ComM_COMM_EXCLUSIVE_AREA_1" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_ComM_COMM_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_ComM_COMM_EXCLUSIVE_AREA_1" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
       "SchM_Det.h" : {
          "SchM_Enter_Det_DET_EXCLUSIVE_AREA_0" : {
             "d04949d119d50064b356ac78c5423a4b" : {}
@@ -1300,6 +1445,86 @@
             "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
          }
       },
+      "SchM_EthIf.h" : {
+         "SchM_Enter_EthIf_ETHIF_EXCLUSIVE_AREA_CTRL_INIT" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_EthIf_ETHIF_EXCLUSIVE_AREA_RXTX_STATS" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_EthIf_ETHIF_EXCLUSIVE_AREA_SET_CTRL_MODE" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_EthIf_ETHIF_EXCLUSIVE_AREA_SIGNAL_QUALITY" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_EthIf_ETHIF_EXCLUSIVE_AREA_TX_MIRROR_ELEMENT" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_EthIf_ETHIF_EXCLUSIVE_AREA_CTRL_INIT" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_EthIf_ETHIF_EXCLUSIVE_AREA_RXTX_STATS" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_EthIf_ETHIF_EXCLUSIVE_AREA_SET_CTRL_MODE" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_EthIf_ETHIF_EXCLUSIVE_AREA_SIGNAL_QUALITY" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_EthIf_ETHIF_EXCLUSIVE_AREA_TX_MIRROR_ELEMENT" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_EthTSyn.h" : {
+         "SchM_Enter_EthTSyn_ETHTSYN_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_EthTSyn_ETHTSYN_EXCLUSIVE_AREA_GET_TS" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_EthTSyn_ETHTSYN_EXCLUSIVE_AREA_TIME_VALID" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_EthTSyn_ETHTSYN_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_EthTSyn_ETHTSYN_EXCLUSIVE_AREA_GET_TS" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_EthTSyn_ETHTSYN_EXCLUSIVE_AREA_TIME_VALID" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_EthTrcv_30_Tja1100.h" : {
+         "SchM_Enter_EthTrcv_30_Tja1100_ETHTRCV_30_TJA1100_EXCLUSIVE_AREA_SEQUENCE" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_EthTrcv_30_Tja1100_ETHTRCV_30_TJA1100_EXCLUSIVE_AREA_SEQUENCE" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_Eth_30_Tc3xx.h" : {
+         "SchM_Enter_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DISABLE_MAC" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_MII" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DISABLE_MAC" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_MII" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
       "SchM_McalLib.h" : {
          "SchM_Enter_McalLib_CpuEndInit" : {
             "d04949d119d50064b356ac78c5423a4b" : {}
@@ -1323,6 +1548,102 @@
             "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
          },
          "SchM_Exit_McalLib_StmTimerResolution" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_Nm.h" : {
+         "SchM_Enter_Nm_NM_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_Nm_NM_EXCLUSIVE_AREA_1" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_Nm_NM_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_Nm_NM_EXCLUSIVE_AREA_1" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_PduR.h" : {
+         "SchM_Enter_PduR_PDUR_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_PduR_PDUR_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_SoAd.h" : {
+         "SchM_Enter_SoAd_SOAD_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_SoAd_SOAD_EXCLUSIVE_AREA_1" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_SoAd_SOAD_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_SoAd_SOAD_EXCLUSIVE_AREA_1" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_StbM.h" : {
+         "SchM_Enter_StbM_STBM_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_StbM_STBM_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_TcpIp.h" : {
+         "SchM_Enter_TcpIp_TCPIP_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_TcpIp_TCPIP_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_UdpNm.h" : {
+         "SchM_Enter_UdpNm_UDPNM_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_UdpNm_UDPNM_EXCLUSIVE_AREA_1" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_UdpNm_UDPNM_EXCLUSIVE_AREA_2" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_UdpNm_UDPNM_EXCLUSIVE_AREA_3" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_UdpNm_UDPNM_EXCLUSIVE_AREA_4" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_UdpNm_UDPNM_EXCLUSIVE_AREA_5" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Enter_UdpNm_UDPNM_EXCLUSIVE_AREA_6" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_UdpNm_UDPNM_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_UdpNm_UDPNM_EXCLUSIVE_AREA_1" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_UdpNm_UDPNM_EXCLUSIVE_AREA_2" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_UdpNm_UDPNM_EXCLUSIVE_AREA_3" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_UdpNm_UDPNM_EXCLUSIVE_AREA_4" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_UdpNm_UDPNM_EXCLUSIVE_AREA_5" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         },
+         "SchM_Exit_UdpNm_UDPNM_EXCLUSIVE_AREA_6" : {
             "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
          }
       }

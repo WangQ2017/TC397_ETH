@@ -3,6 +3,17 @@
   <AR-PACKAGES>
     <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
       <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="e2b22e5d-7458-491d-9936-688488e6f364">
+          <SHORT-NAME>SoAd_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>16.05.01</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.02.02</AR-RELEASE-VERSION>
+        </BSW-IMPLEMENTATION>
+      </ELEMENTS>
       <AR-PACKAGES>
         <AR-PACKAGE UUID="2d646fe9-4225-4d8b-a4eb-d8a7d49731b0">
           <SHORT-NAME>SoAd_ib_bswmd</SHORT-NAME>
@@ -50,6 +61,9 @@
                   <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
                 </BSW-MODULE-ENTRY>
               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="ae615aae-dc77-4b41-a8be-d1b926729530">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
           </AR-PACKAGES>
         </AR-PACKAGE>

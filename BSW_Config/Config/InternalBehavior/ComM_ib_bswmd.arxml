@@ -3,6 +3,17 @@
   <AR-PACKAGES>
     <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
       <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="b484d690-bf7b-4b49-8cc0-23ce231b62c3">
+          <SHORT-NAME>ComM_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>13.00.01</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.00.03</AR-RELEASE-VERSION>
+        </BSW-IMPLEMENTATION>
+      </ELEMENTS>
       <AR-PACKAGES>
         <AR-PACKAGE UUID="fd95b105-f626-483c-bbb2-d69a8ae1e6ab">
           <SHORT-NAME>ComM_ib_bswmd</SHORT-NAME>
@@ -38,7 +49,7 @@
                         <BSW-TIMING-EVENT UUID="31320482-ae89-49af-8b4b-59aa92cb5ae2">
                           <SHORT-NAME>ComM_MainFunction_0TimingEvent0</SHORT-NAME>
                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM/ComMBehavior/ComM_MainFunction_0</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.02</PERIOD>
+                          <PERIOD>0.005</PERIOD>
                         </BSW-TIMING-EVENT>
                       </EVENTS>
                     </BSW-INTERNAL-BEHAVIOR>
@@ -50,6 +61,9 @@
                   <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
                 </BSW-MODULE-ENTRY>
               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="3c0c4c95-65b1-4f35-b88e-35060dabdc5c">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
           </AR-PACKAGES>
         </AR-PACKAGE>

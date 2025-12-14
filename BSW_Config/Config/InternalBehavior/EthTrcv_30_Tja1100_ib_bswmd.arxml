@@ -42,12 +42,12 @@
                         <BSW-TIMING-EVENT UUID="09b62135-0f81-4b22-b3d0-15db963e6ef0">
                           <SHORT-NAME>EthTrcv_30_Tja1100_MainFunctionTimingEvent0</SHORT-NAME>
                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv/EthTrcv_30_Tja1100Behavior/EthTrcv_30_Tja1100_MainFunction</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.001</PERIOD>
+                          <PERIOD>0.005</PERIOD>
                         </BSW-TIMING-EVENT>
                         <BSW-TIMING-EVENT UUID="bb603b9a-8b3f-4c1a-b8d1-2b1799d920ad">
                           <SHORT-NAME>EthTrcv_30_Tja1100_MainFunctionLinkHandlingTimingEvent0</SHORT-NAME>
                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv/EthTrcv_30_Tja1100Behavior/EthTrcv_30_Tja1100_MainFunctionLinkHandling</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.001</PERIOD>
+                          <PERIOD>0.005</PERIOD>
                         </BSW-TIMING-EVENT>
                       </EVENTS>
                     </BSW-INTERNAL-BEHAVIOR>

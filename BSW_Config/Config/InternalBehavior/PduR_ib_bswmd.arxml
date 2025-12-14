@@ -3,6 +3,17 @@
   <AR-PACKAGES>
     <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
       <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <ELEMENTS>
+        <BSW-IMPLEMENTATION UUID="4a156671-5151-4f19-a8b4-579effc27f33">
+          <SHORT-NAME>PduR_Impl</SHORT-NAME>
+          <MC-SUPPORT/>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <SW-VERSION>15.04.01</SW-VERSION>
+          <USED-CODE-GENERATOR>DaVinci Configurator</USED-CODE-GENERATOR>
+          <VENDOR-ID>30</VENDOR-ID>
+          <AR-RELEASE-VERSION>4.01.02</AR-RELEASE-VERSION>
+        </BSW-IMPLEMENTATION>
+      </ELEMENTS>
       <AR-PACKAGES>
         <AR-PACKAGE UUID="3eca0300-0a00-4f9b-bc86-51a7b2286a57">
           <SHORT-NAME>PduR_ib_bswmd</SHORT-NAME>
@@ -24,6 +35,9 @@
                   </INTERNAL-BEHAVIORS>
                 </BSW-MODULE-DESCRIPTION>
               </ELEMENTS>
+            </AR-PACKAGE>
+            <AR-PACKAGE UUID="056ea3e3-f2f8-4dcd-a948-3cb63e48cb44">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
           </AR-PACKAGES>
         </AR-PACKAGE>
