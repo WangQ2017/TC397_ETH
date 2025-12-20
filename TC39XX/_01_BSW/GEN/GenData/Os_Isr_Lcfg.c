@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.c
- *   Generation Time: 2025-12-14 21:26:07
+ *   Generation Time: 2025-12-20 10:43:27
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -86,8 +86,8 @@
 /*! Dynamic ISR data: CounterIsr_SystemTimer_OsCore0 */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_CounterIsr_SystemTimer_OsCore0_Dyn;
 
-/*! Dynamic ISR data: EthIsr_EthCtrlConfig_EthInterruptServiceRoutine */
-OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_Dyn;
+/*! Dynamic ISR data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Dyn;
 
 /*! Dynamic ISR data: XSignalIsr_OsCore0 */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_XSignalIsr_OsCore0_Dyn;
@@ -211,23 +211,23 @@ CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer_OsCore0 
 ,
   /* .Counter = */ OS_COUNTER_CASTCONFIG_TIMERHRT_2_COUNTER(OsCfg_Counter_SystemTimer_OsCore0)
 };
-/*! ISR configuration data: EthIsr_EthCtrlConfig_EthInterruptServiceRoutine */
-CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_HwConfig =
+/*! ISR configuration data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_HwConfig =
 {
-  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine,
-  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine,
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine,
   /* .IsMapped                  = */ FALSE,
   /* .IsPostActionRequired      = */ FALSE
 }
 ;  
-CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine =
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine =
 {
   /* .Thread   = */
   {
-    /* .ContextConfig         = */ &OsCfg_Hal_Context_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine,
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine,
     /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level2_Dyn,
     /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
-    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_Dyn),
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_SystemApplication_OsCore0,
     /* .Core                  = */ &OsCfg_Core_OsCore0,
     /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
@@ -241,8 +241,8 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_EthInterruptSer
     /* .InitDuringStartUp     = */ FALSE,
     /* .UsesFpu               = */ FALSE
   },
-  /* .SourceConfig              = */ &OsCfg_Isr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_HwConfig,
-  /* .IsrId                     = */ EthIsr_EthCtrlConfig_EthInterruptServiceRoutine,
+  /* .SourceConfig              = */ &OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_HwConfig,
+  /* .IsrId                     = */ EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine,
   /* .IsEnabledOnInitialization = */ TRUE
 }
 ;
@@ -750,7 +750,7 @@ CONSTP2CONST(Os_IsrConfigType, OS_CONST, OS_CONST) OsCfg_IsrRefs[OS_ISRID_COUNT 
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer_OsCore3),
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer_OsCore4),
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer_OsCore5),
-  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine),
   OS_XSIGNAL_CASTCONFIG_XSIGNALISR_2_ISR(OsCfg_Isr_XSignalIsr_OsCore0),
   OS_XSIGNAL_CASTCONFIG_XSIGNALISR_2_ISR(OsCfg_Isr_XSignalIsr_OsCore1),
   OS_XSIGNAL_CASTCONFIG_XSIGNALISR_2_ISR(OsCfg_Isr_XSignalIsr_OsCore2),

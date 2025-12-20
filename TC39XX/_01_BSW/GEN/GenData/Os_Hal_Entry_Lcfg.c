@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Entry_Lcfg.c
- *   Generation Time: 2025-12-14 21:26:07
+ *   Generation Time: 2025-12-20 10:43:26
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -162,7 +162,7 @@ Os_Hal_UnhandledInterruptEntry(0, 46)
 Os_Hal_UnhandledInterruptEntry(0, 47)
 Os_Hal_UnhandledInterruptEntry(0, 48)
 Os_Hal_UnhandledInterruptEntry(0, 49)
-Os_Hal_Cat2InterruptEntry(0, 50, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine)
+Os_Hal_Cat2InterruptEntry(0, 50, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine)
 Os_Hal_UnhandledInterruptEntry(0, 51)
 Os_Hal_UnhandledInterruptEntry(0, 52)
 Os_Hal_UnhandledInterruptEntry(0, 53)
@@ -212,7 +212,7 @@ Os_Hal_UnhandledInterruptEntry(0, 96)
 Os_Hal_UnhandledInterruptEntry(0, 97)
 Os_Hal_UnhandledInterruptEntry(0, 98)
 Os_Hal_UnhandledInterruptEntry(0, 99)
-Os_Hal_Cat2InterruptEntry(0, 100, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore0)
+Os_Hal_UnhandledInterruptEntry(0, 100)
 Os_Hal_UnhandledInterruptEntry(0, 101)
 Os_Hal_UnhandledInterruptEntry(0, 102)
 Os_Hal_UnhandledInterruptEntry(0, 103)
@@ -367,7 +367,7 @@ Os_Hal_UnhandledInterruptEntry(0, 251)
 Os_Hal_UnhandledInterruptEntry(0, 252)
 Os_Hal_UnhandledInterruptEntry(0, 253)
 Os_Hal_UnhandledInterruptEntry(0, 254)
-Os_Hal_UnhandledInterruptEntry(0, 255)
+Os_Hal_Cat2InterruptEntry(0, 255, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore0)
 
 #define OS_STOP_SEC_INTVEC_CORE0_CODE
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -505,7 +505,7 @@ Os_Hal_UnhandledInterruptEntry(1, 96)
 Os_Hal_UnhandledInterruptEntry(1, 97)
 Os_Hal_UnhandledInterruptEntry(1, 98)
 Os_Hal_UnhandledInterruptEntry(1, 99)
-Os_Hal_Cat2InterruptEntry(1, 100, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore1)
+Os_Hal_UnhandledInterruptEntry(1, 100)
 Os_Hal_UnhandledInterruptEntry(1, 101)
 Os_Hal_UnhandledInterruptEntry(1, 102)
 Os_Hal_UnhandledInterruptEntry(1, 103)
@@ -660,7 +660,7 @@ Os_Hal_UnhandledInterruptEntry(1, 251)
 Os_Hal_UnhandledInterruptEntry(1, 252)
 Os_Hal_UnhandledInterruptEntry(1, 253)
 Os_Hal_UnhandledInterruptEntry(1, 254)
-Os_Hal_UnhandledInterruptEntry(1, 255)
+Os_Hal_Cat2InterruptEntry(1, 255, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore1)
 
 #define OS_STOP_SEC_INTVEC_CORE1_CODE
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -798,7 +798,7 @@ Os_Hal_UnhandledInterruptEntry(2, 96)
 Os_Hal_UnhandledInterruptEntry(2, 97)
 Os_Hal_UnhandledInterruptEntry(2, 98)
 Os_Hal_UnhandledInterruptEntry(2, 99)
-Os_Hal_Cat2InterruptEntry(2, 100, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore2)
+Os_Hal_UnhandledInterruptEntry(2, 100)
 Os_Hal_UnhandledInterruptEntry(2, 101)
 Os_Hal_UnhandledInterruptEntry(2, 102)
 Os_Hal_UnhandledInterruptEntry(2, 103)
@@ -953,7 +953,7 @@ Os_Hal_UnhandledInterruptEntry(2, 251)
 Os_Hal_UnhandledInterruptEntry(2, 252)
 Os_Hal_UnhandledInterruptEntry(2, 253)
 Os_Hal_UnhandledInterruptEntry(2, 254)
-Os_Hal_UnhandledInterruptEntry(2, 255)
+Os_Hal_Cat2InterruptEntry(2, 255, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore2)
 
 #define OS_STOP_SEC_INTVEC_CORE2_CODE
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -1091,7 +1091,7 @@ Os_Hal_UnhandledInterruptEntry(3, 96)
 Os_Hal_UnhandledInterruptEntry(3, 97)
 Os_Hal_UnhandledInterruptEntry(3, 98)
 Os_Hal_UnhandledInterruptEntry(3, 99)
-Os_Hal_Cat2InterruptEntry(3, 100, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore3)
+Os_Hal_UnhandledInterruptEntry(3, 100)
 Os_Hal_UnhandledInterruptEntry(3, 101)
 Os_Hal_UnhandledInterruptEntry(3, 102)
 Os_Hal_UnhandledInterruptEntry(3, 103)
@@ -1246,7 +1246,7 @@ Os_Hal_UnhandledInterruptEntry(3, 251)
 Os_Hal_UnhandledInterruptEntry(3, 252)
 Os_Hal_UnhandledInterruptEntry(3, 253)
 Os_Hal_UnhandledInterruptEntry(3, 254)
-Os_Hal_UnhandledInterruptEntry(3, 255)
+Os_Hal_Cat2InterruptEntry(3, 255, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore3)
 
 #define OS_STOP_SEC_INTVEC_CORE3_CODE
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -1384,7 +1384,7 @@ Os_Hal_UnhandledInterruptEntry(4, 96)
 Os_Hal_UnhandledInterruptEntry(4, 97)
 Os_Hal_UnhandledInterruptEntry(4, 98)
 Os_Hal_UnhandledInterruptEntry(4, 99)
-Os_Hal_Cat2InterruptEntry(4, 100, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore4)
+Os_Hal_UnhandledInterruptEntry(4, 100)
 Os_Hal_UnhandledInterruptEntry(4, 101)
 Os_Hal_UnhandledInterruptEntry(4, 102)
 Os_Hal_UnhandledInterruptEntry(4, 103)
@@ -1539,7 +1539,7 @@ Os_Hal_UnhandledInterruptEntry(4, 251)
 Os_Hal_UnhandledInterruptEntry(4, 252)
 Os_Hal_UnhandledInterruptEntry(4, 253)
 Os_Hal_UnhandledInterruptEntry(4, 254)
-Os_Hal_UnhandledInterruptEntry(4, 255)
+Os_Hal_Cat2InterruptEntry(4, 255, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore4)
 
 #define OS_STOP_SEC_INTVEC_CORE4_CODE
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -1677,7 +1677,7 @@ Os_Hal_UnhandledInterruptEntry(5, 96)
 Os_Hal_UnhandledInterruptEntry(5, 97)
 Os_Hal_UnhandledInterruptEntry(5, 98)
 Os_Hal_UnhandledInterruptEntry(5, 99)
-Os_Hal_Cat2InterruptEntry(5, 100, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore5)
+Os_Hal_UnhandledInterruptEntry(5, 100)
 Os_Hal_UnhandledInterruptEntry(5, 101)
 Os_Hal_UnhandledInterruptEntry(5, 102)
 Os_Hal_UnhandledInterruptEntry(5, 103)
@@ -1832,7 +1832,7 @@ Os_Hal_UnhandledInterruptEntry(5, 251)
 Os_Hal_UnhandledInterruptEntry(5, 252)
 Os_Hal_UnhandledInterruptEntry(5, 253)
 Os_Hal_UnhandledInterruptEntry(5, 254)
-Os_Hal_UnhandledInterruptEntry(5, 255)
+Os_Hal_Cat2InterruptEntry(5, 255, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_CounterIsr_SystemTimer_OsCore5)
 
 #define OS_STOP_SEC_INTVEC_CORE5_CODE
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

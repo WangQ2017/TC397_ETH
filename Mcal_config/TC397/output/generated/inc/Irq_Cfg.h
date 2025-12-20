@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 8.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2025-12-14, 21:25:59      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2025-12-20, 10:42:18      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b191017-0938        !!!IGNORE-LINE!!!                   **
 **                                                                            **
@@ -74,7 +74,7 @@ Any CAT2 interrupt priority should be greater than CAT1 interrupt priority
 Only CAT1 interrupt category can be configured
 */
 
-#define IRQ_OSEK_ENABLE   (STD_OFF)
+#define IRQ_OSEK_ENABLE   (STD_ON)
 
 
 /*
@@ -986,7 +986,7 @@ Container : Ethernet interrupt Configuration
 /* Ethernet interrupt Category Setting*/
 #define IRQ_GETH_SR0_CAT              (IRQ_CAT1)
 #define IRQ_GETH_SR1_CAT              (IRQ_CAT1)
-#define IRQ_GETH_SR2_CAT              (IRQ_CAT1)
+#define IRQ_GETH_SR2_CAT              (IRQ_CAT2)
 #define IRQ_GETH_SR3_CAT              (IRQ_CAT1)
 #define IRQ_GETH_SR4_CAT              (IRQ_CAT1)
 #define IRQ_GETH_SR5_CAT              (IRQ_CAT1)
@@ -998,7 +998,7 @@ Container : Ethernet interrupt Configuration
 /* Ethernet interrupt Category Setting*/
 #define IRQ_GETH_SR0_PRIO             0x0
 #define IRQ_GETH_SR1_PRIO             0x0
-#define IRQ_GETH_SR2_PRIO             0x15
+#define IRQ_GETH_SR2_PRIO             0x32
 #define IRQ_GETH_SR3_PRIO             0x0
 #define IRQ_GETH_SR4_PRIO             0x0
 #define IRQ_GETH_SR5_PRIO             0x0

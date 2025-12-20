@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.h
- *   Generation Time: 2025-12-14 17:03:56
+ *   Generation Time: 2025-12-17 23:49:17
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -199,7 +199,7 @@
 #define NM_CONFIGURATION_VARIANT NM_CONFIGURATION_VARIANT_PRECOMPILE
 #endif
 #ifndef NM_POSTBUILD_VARIANT_SUPPORT
-#define NM_POSTBUILD_VARIANT_SUPPORT STD_OFF
+#define NM_POSTBUILD_VARIANT_SUPPORT STD_ON
 #endif
 
 

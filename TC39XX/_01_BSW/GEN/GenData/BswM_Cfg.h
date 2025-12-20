@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2025-12-20 16:10:33
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -44,6 +44,7 @@
 #include "BswM_EcuM.h"
 #include "BswM_Nm.h"
 #include "Rte_BswM_Type.h"
+#include "EthTrcv_30_Tja1100_Hw_Int.h" 
 
 
 
@@ -1289,6 +1290,7 @@ extern VAR(boolean, BSWM_VAR_NOINIT) BswM_PreInitialized;
 ----------------------------------------------------------------------------- */
 /* PRQA S 0777 CALLOUTDECLARATIONS */ /* MD_MSR_Rule5.2_0779 */
 extern FUNC(void, BSWM_CODE) BswM_AL_SetProgrammableInterrupts(void);
+extern FUNC(void, BSWM_CODE) BswM_Action_EthTrcvDebug(void);
 extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterPostRun(void);
 extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterPrepShutdown(void);
 extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterRun(void);

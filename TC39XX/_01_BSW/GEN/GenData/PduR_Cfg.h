@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2025-12-20 09:29:01
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -161,6 +161,17 @@
 /**\} */
 
 
+
+/**
+ * \defgroup PduRHandleIds Handle IDs.
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define PduRConf_PduRRoutingPathGroup_PduRRoutingPathGroup_Rx         1u
+#define PduRConf_PduRRoutingPathGroup_PduRRoutingPathGroup_Tx         0u
+/**\} */
 /* User Config File Start */
 
 /* User Config File End */

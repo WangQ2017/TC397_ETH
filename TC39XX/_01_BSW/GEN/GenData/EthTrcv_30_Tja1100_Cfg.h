@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTrcv_30_Tja1100_Cfg.h
- *   Generation Time: 2025-12-14 15:58:18
+ *   Generation Time: 2025-12-20 12:29:19
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -100,8 +100,8 @@
 /**********************************************************************************************************************
  *  SWITCH DEFINES
  *********************************************************************************************************************/
-# define ETHTRCV_30_TJA1100_DEV_ERROR_DETECT                        (STD_OFF)
-# define ETHTRCV_30_TJA1100_DEV_ERROR_REPORT                        (STD_OFF)
+# define ETHTRCV_30_TJA1100_DEV_ERROR_DETECT                        (STD_ON)
+# define ETHTRCV_30_TJA1100_DEV_ERROR_REPORT                        (STD_ON)
 # define ETHTRCV_30_TJA1100_PROD_ERROR_REPORTING                    (STD_OFF)
 # define ETHTRCV_30_TJA1100_VERSION_INFO_API                        (STD_OFF)
 # define ETHTRCV_30_TJA1100_ENABLE_GET_TRCV_MODE                    (STD_ON)

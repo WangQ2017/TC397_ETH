@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Interrupt_Lcfg.c
- *   Generation Time: 2025-12-14 21:26:07
+ *   Generation Time: 2025-12-20 10:43:26
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -82,7 +82,7 @@
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore0 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore0 =
 {
-  /* .Level          = */ 100,
+  /* .Level          = */ 255,
   /* .Source         = */ 0x300uL,
   /* .CoreAssignment = */ 0
 };
@@ -92,15 +92,15 @@ CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CounterIsr_Syste
   /* .Dummy         = */ (uint32)0
 };
 
-/*! HAL ISR configuration data: EthIsr_EthCtrlConfig_EthInterruptServiceRoutine */
-CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine =
+/*! HAL ISR configuration data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine =
 {
   /* .Level          = */ 50,
   /* .Source         = */ 0x588uL,
   /* .CoreAssignment = */ 0
 };
 
-CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine =
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine =
 {
   /* .Dummy         = */ (uint32)0
 };
@@ -134,7 +134,7 @@ CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore1 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore1 =
 {
-  /* .Level          = */ 100,
+  /* .Level          = */ 255,
   /* .Source         = */ 0x308uL,
   /* .CoreAssignment = */ 2
 };
@@ -173,7 +173,7 @@ CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore2 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore2 =
 {
-  /* .Level          = */ 100,
+  /* .Level          = */ 255,
   /* .Source         = */ 0x310uL,
   /* .CoreAssignment = */ 3
 };
@@ -212,7 +212,7 @@ CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore3 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore3 =
 {
-  /* .Level          = */ 100,
+  /* .Level          = */ 255,
   /* .Source         = */ 0x318uL,
   /* .CoreAssignment = */ 4
 };
@@ -251,7 +251,7 @@ CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore4 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore4 =
 {
-  /* .Level          = */ 100,
+  /* .Level          = */ 255,
   /* .Source         = */ 0x320uL,
   /* .CoreAssignment = */ 5
 };
@@ -290,7 +290,7 @@ CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore5 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore5 =
 {
-  /* .Level          = */ 100,
+  /* .Level          = */ 255,
   /* .Source         = */ 0x328uL,
   /* .CoreAssignment = */ 6
 };

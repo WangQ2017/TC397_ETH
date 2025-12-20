@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.c
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2025-12-17 23:58:57
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -219,7 +219,7 @@ VAR(ComM_PncPSleepTimerType, COMM_VAR_NOINIT) ComM_PncPSleepTimer[1];  /* PRQA S
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 VAR(ComM_PncSignalValuesUType, COMM_VAR_NOINIT) ComM_PncSignalValues;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index        Referable Keys */
+  /* Index        Referable Keys    */
   /*     0 */  /* [ComM_ComConf_ComSignal_ComSignalPnc_EIRA_ETH_Rx] */
   /*   ... */  /* [ComM_ComConf_ComSignal_ComSignalPnc_EIRA_ETH_Rx] */
   /*     6 */  /* [ComM_ComConf_ComSignal_ComSignalPnc_EIRA_ETH_Rx] */
@@ -244,7 +244,7 @@ VAR(ComM_PncSignalValuesUType, COMM_VAR_NOINIT) ComM_PncSignalValues;  /* PRQA S
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index        Referable Keys */
+  /* Index        Referable Keys    */
   /*     0 */  /* [ComMChannel_0, Channel0_To_User0, Channel0_To_User1] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
@@ -264,7 +264,7 @@ VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[1];  /* PRQA S
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 VAR(ComM_UserReqPncFullComType, COMM_VAR_NOINIT) ComM_UserReqPncFullCom[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index        Referable Keys */
+  /* Index        Referable Keys    */
   /*     0 */  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMPnc_00, Pnc0_To_User1] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT

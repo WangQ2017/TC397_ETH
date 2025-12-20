@@ -38,7 +38,9 @@
 
 #include "Rte_Cdd_Core0.h"
 #include "Dio.h"
+#include "ComM.h"
 // #include "Os.h"
+#include "EthTrcv_30_Tja1100_Hw_Int.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -76,7 +78,7 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Init
  *********************************************************************************************************************/
-
+    ComM_RequestComMode(ComMConf_ComMChannel_ComMChannel_Vlan10, COMM_FULL_COMMUNICATION);
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
@@ -104,9 +106,10 @@ volatile uint32 Cdd_Core0_Task_10ms_Cnt = 0;
  *********************************************************************************************************************/
 // Os_StatusType lx_Monitor_Status = 0;
 // TaskType lx_Monitor_Task = 0;
+volatile uint16 g_LinkStatus = 0;
 FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
 {
-  static Cdd_Core0_Runnable10ms_Data_cnt = 0;
+  static uint32 Cdd_Core0_Runnable10ms_Data_cnt = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Runnable10ms
@@ -126,6 +129,18 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ 
       Dio_WriteChannel(DioConf_DioChannel_DioChannel_LED1,1);
       Cdd_Core0_Runnable10ms_Data_cnt = 1;
     }
+
+
+    uint16         regVal = 0;
+    Std_ReturnType retVal = EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 2, &regVal);
+      if ((regVal != 0xffff) && ((regVal & 0x4) == 0x4))
+      {
+        g_LinkStatus = 1;
+      }
+      else
+      {
+        g_LinkStatus = 0;
+      }
     
   }
   

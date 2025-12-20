@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2025-12-17 23:58:57
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -83,7 +83,7 @@
 #define COMM_CONFIGURATION_VARIANT COMM_CONFIGURATION_VARIANT_PRECOMPILE
 #endif
 #ifndef COMM_POSTBUILD_VARIANT_SUPPORT
-#define COMM_POSTBUILD_VARIANT_SUPPORT STD_OFF
+#define COMM_POSTBUILD_VARIANT_SUPPORT STD_ON
 #endif
 
 #ifndef COMM_DEV_ERROR_DETECT
@@ -93,8 +93,8 @@
 #define COMM_DEV_ERROR_REPORT STD_ON
 #endif
 
-#define COMM_INIT_POINTER_ENABLED                       STD_OFF
-#define COMM_VERSION_INFO_API                           STD_OFF
+#define COMM_INIT_POINTER_ENABLED                       STD_ON
+#define COMM_VERSION_INFO_API                           STD_ON
 
 #define COMM_MODE_LIMITATION                            STD_OFF
 #define COMM_WAKEUP_INHIBITION                          STD_OFF
@@ -955,7 +955,7 @@ typedef struct sComM_UserPncByteMaskType
   \brief  These structs are used in unions to have a symbol based data representation style.
   \{
 */ 
-/**   \brief  type to be used as symbolic data element access to ComM_PncSignalValues */
+/**   \brief  type to be used as symbolic data element access to ComM_PncSignalValues in the predefined variant  */
 typedef struct ComM_PncSignalValuesStructSTag
 {
   ComM_PncSignalValuesType ComM_ComConf_ComSignal_ComSignalPnc_EIRA_ETH_Rx[7];

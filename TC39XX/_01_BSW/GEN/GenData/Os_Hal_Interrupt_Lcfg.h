@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Interrupt_Lcfg.h
- *   Generation Time: 2025-12-14 21:26:07
+ *   Generation Time: 2025-12-20 10:43:26
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -80,9 +80,9 @@
 extern CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore0;
 extern CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CounterIsr_SystemTimer_OsCore0;
 
-/*! HAL ISR configuration data: EthIsr_EthCtrlConfig_EthInterruptServiceRoutine */
-extern CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine;
-extern CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine;
+/*! HAL ISR configuration data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine */
+extern CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine;
+extern CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine;
 
 /*! HAL ISR configuration data: XSignalIsr_OsCore0 */
 extern CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_XSignalIsr_OsCore0;

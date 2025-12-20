@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Lcfg.c
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2025-12-20 09:29:01
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -217,6 +217,51 @@ CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[2] = {  /* PRQA S 1514, 153
 /*lint -restore */
 
 /**********************************************************************************************************************
+  PduR_RmDestRpgRom
+**********************************************************************************************************************/
+/** 
+  \var    PduR_RmDestRpgRom
+  \brief  PduRDestPdu specific PduRRoutingPathGroup information.
+  \details
+  Element              Description
+  InitialEnabledCnt    Amount of initially enabled PduRRoutingPathGroups
+*/ 
+#define PDUR_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(PduR_RmDestRpgRomType, PDUR_CONST) PduR_RmDestRpgRom[2] = {  /* PRQA S 1514, 1533, 1504 */  /* MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ExternalMcData */
+    /* Index    InitialEnabledCnt        Referable Keys */
+  { /*     0 */                0u },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_Eira_ETH_Rx/PduRDestPdu, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Rx] */
+  { /*     1 */                0u }   /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_Eira_ETH_Tx/PduRDestPdu, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Tx] */
+};
+#define PDUR_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  PduR_RmDestRpgRomInd
+**********************************************************************************************************************/
+/** 
+  \var    PduR_RmDestRpgRomInd
+  \brief  the indexes of the 1:1 sorted relation pointing to PduR_RmDestRpgRom
+*/ 
+#define PDUR_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(PduR_RmDestRpgRomIndType, PDUR_CONST) PduR_RmDestRpgRomInd[2] = {  /* PRQA S 1514, 1533, 1504 */  /* MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ExternalMcData */
+  /* Index     RmDestRpgRomInd      Referable Keys */
+  /*     0 */               1u,  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Tx] */
+  /*     1 */               0u   /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Rx] */
+};
+#define PDUR_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   PduR_RmGDestRom
 **********************************************************************************************************************/
 /** 
@@ -287,6 +332,54 @@ CONST(PduR_RmTransmitFctPtrType, PDUR_CONST) PduR_RmTransmitFctPtr[1] = {  /* PR
 /*lint -restore */
 
 /**********************************************************************************************************************
+  PduR_RpgExtIdRom
+**********************************************************************************************************************/
+/** 
+  \var    PduR_RpgExtIdRom
+  \brief  PduRRoutingPathGroup specific ROM information.
+  \details
+  Element                Description
+  PartitionIndexOfCsl
+*/ 
+#define PDUR_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(PduR_RpgExtIdRomType, PDUR_CONST) PduR_RpgExtIdRom[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    PartitionIndexOfCsl                                  Referable Keys */
+  { /*     0 */                  0u  /* CommonSharedMemory */ },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Tx] */
+  { /*     1 */                  0u  /* CommonSharedMemory */ }   /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Rx] */
+};
+#define PDUR_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  PduR_RpgRom
+**********************************************************************************************************************/
+/** 
+  \var    PduR_RpgRom
+  \brief  PduRRoutingPathGroup specific RAM information.
+  \details
+  Element       Description
+  MaskedBits    contains bitcoded the boolean data of PduR_EnabledAtInitOfRpgRom, PduR_RmDestRpgRomIndUsedOfRpgRom
+*/ 
+#define PDUR_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(PduR_RpgRomType, PDUR_CONST) PduR_RpgRom[2] = {  /* PRQA S 1514, 1533, 1504 */  /* MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ExternalMcData */
+    /* Index    MaskedBits        Referable Keys */
+  { /*     0 */      0x01u },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Tx] */
+  { /*     1 */      0x01u }   /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Rx] */
+};
+#define PDUR_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   PduR_Initialized
 **********************************************************************************************************************/
 /** 
@@ -304,13 +397,66 @@ VAR(PduR_InitializedType, PDUR_VAR_ZERO_INIT) PduR_Initialized = FALSE;  /* PRQA
 /*lint -restore */
 
 /**********************************************************************************************************************
+  PduR_RmDestRpgRam
+**********************************************************************************************************************/
+/** 
+  \var    PduR_RmDestRpgRam
+  \brief  PduRDestPdu specific PduRRoutingPathGroup information.
+  \details
+  Element       Description
+  EnabledCnt
+*/ 
+#define PDUR_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(PduR_RmDestRpgRamType, PDUR_VAR_NOINIT) PduR_RmDestRpgRam[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_Eira_ETH_Rx/PduRDestPdu, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Rx] */
+  /*     1 */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_Eira_ETH_Tx/PduRDestPdu, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Tx] */
+
+#define PDUR_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  PduR_RpgRam
+**********************************************************************************************************************/
+/** 
+  \var    PduR_RpgRam
+  \brief  PduRRoutingPathGroup specific RAM information.
+  \details
+  Element    Description
+  Enabled    TRUE, if the PduRRoutingPathGroup is active
+*/ 
+#define PDUR_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(PduR_RpgRamUType, PDUR_VAR_NOINIT) PduR_RpgRam;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Tx] */
+  /*     1 */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingPathGroup_Rx] */
+
+#define PDUR_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   PduR_PCPartitionConfig
 **********************************************************************************************************************/
 /** 
   \var    PduR_PCPartitionConfig
   \details
-  Element        Description
-  Initialized    the pointer to PduR_Initialized
+  Element            Description
+  Initialized        the pointer to PduR_Initialized
+  RmDestRpgRam       the pointer to PduR_RmDestRpgRam
+  RmDestRpgRom       the pointer to PduR_RmDestRpgRom
+  RmDestRpgRomInd    the pointer to PduR_RmDestRpgRomInd
+  RpgRam             the pointer to PduR_RpgRam
+  RpgRom             the pointer to PduR_RpgRom
 */ 
 #define PDUR_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -319,6 +465,11 @@ VAR(PduR_InitializedType, PDUR_VAR_ZERO_INIT) PduR_Initialized = FALSE;  /* PRQA
 CONST(PduR_PCPartitionConfigType, PDUR_CONST) PduR_PCPartitionConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   { /* Index: 0 Keys: [] */
       (&(PduR_Initialized))  /**< the pointer to PduR_Initialized */
+    , PduR_RmDestRpgRam      /**< the pointer to PduR_RmDestRpgRam */
+    , PduR_RmDestRpgRom      /**< the pointer to PduR_RmDestRpgRom */
+    , PduR_RmDestRpgRomInd   /**< the pointer to PduR_RmDestRpgRomInd */
+    , PduR_RpgRam.raw        /**< the pointer to PduR_RpgRam */
+    , PduR_RpgRom            /**< the pointer to PduR_RpgRom */
   }
 };
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED

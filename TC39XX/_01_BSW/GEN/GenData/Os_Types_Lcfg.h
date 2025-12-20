@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-12-14 21:00:02
+ *   Generation Time: 2025-12-20 10:43:27
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -119,7 +119,7 @@
 #define CounterIsr_SystemTimer_OsCore3 CounterIsr_SystemTimer_OsCore3
 #define CounterIsr_SystemTimer_OsCore4 CounterIsr_SystemTimer_OsCore4
 #define CounterIsr_SystemTimer_OsCore5 CounterIsr_SystemTimer_OsCore5
-#define EthIsr_EthCtrlConfig_EthInterruptServiceRoutine EthIsr_EthCtrlConfig_EthInterruptServiceRoutine
+#define EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine
 #define XSignalIsr_OsCore0 XSignalIsr_OsCore0
 #define XSignalIsr_OsCore1 XSignalIsr_OsCore1
 #define XSignalIsr_OsCore2 XSignalIsr_OsCore2
@@ -275,7 +275,7 @@ typedef enum
   CounterIsr_SystemTimer_OsCore3 = 3,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   CounterIsr_SystemTimer_OsCore4 = 4,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   CounterIsr_SystemTimer_OsCore5 = 5,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  EthIsr_EthCtrlConfig_EthInterruptServiceRoutine = 6,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine = 6,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   XSignalIsr_OsCore0 = 7,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   XSignalIsr_OsCore1 = 8,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   XSignalIsr_OsCore2 = 9,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */

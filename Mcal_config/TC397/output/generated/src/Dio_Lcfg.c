@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 7.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2025-12-13, 12:54:12       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2025-12-20, 17:52:53       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b191017-0938           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -72,8 +72,8 @@
   { 
     {
     /* Port0*/
-      DIO_PORT_NOT_CONFIGURED,
-      (0x0000U)
+      DIO_PORT_CONFIGURED,
+      (0x0003U)
     },
     {
     /* Port1*/

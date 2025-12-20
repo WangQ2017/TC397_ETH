@@ -26,9 +26,7 @@
                 <a:a name="IMPORTER_INFO" value="@DEF"/>
               </d:var>
               <d:ctr name="IrqGeneral" type="IDENTIFIABLE">
-                <d:var name="IrqOsekEnable" type="BOOLEAN" value="false">
-                  <a:a name="IMPORTER_INFO" value="@DEF"/>
-                </d:var>
+                <d:var name="IrqOsekEnable" type="BOOLEAN" value="true"/>
               </d:ctr>
               <d:lst name="IrqGPT120Config" type="MAP">
                 <d:ctr name="IrqGPT120Config_0" type="IDENTIFIABLE">
@@ -7078,9 +7076,7 @@
                     <d:var name="IrqETHSR1Cat" type="ENUMERATION" value="CAT1">
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>
-                    <d:var name="IrqETHSR2Cat" type="ENUMERATION" value="CAT1">
-                      <a:a name="IMPORTER_INFO" value="@DEF"/>
-                    </d:var>
+                    <d:var name="IrqETHSR2Cat" type="ENUMERATION" value="CAT2"/>
                     <d:var name="IrqETHSR3Cat" type="ENUMERATION" value="CAT1">
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>
@@ -7107,8 +7103,8 @@
                     <d:var name="IrqETHSR0Prio" type="INTEGER" value="0">
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>
-                    <d:var name="IrqETHSR1Prio" type="INTEGER" value="244"/>
-                    <d:var name="IrqETHSR2Prio" type="INTEGER" value="21"/>
+                    <d:var name="IrqETHSR1Prio" type="INTEGER" value="0"/>
+                    <d:var name="IrqETHSR2Prio" type="INTEGER" value="50"/>
                     <d:var name="IrqETHSR3Prio" type="INTEGER" value="0">
                       <a:a name="IMPORTER_INFO" value="@DEF"/>
                     </d:var>

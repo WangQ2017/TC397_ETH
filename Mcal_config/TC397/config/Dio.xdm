@@ -27,7 +27,7 @@
               </d:var>
               <d:ctr name="DioConfig" type="IDENTIFIABLE">
                 <d:lst name="DioPort" type="MAP">
-                  <d:ctr name="DioPort_0" type="IDENTIFIABLE">
+                  <d:ctr name="DioPort_33" type="IDENTIFIABLE">
                     <d:var name="DioPortId" type="INTEGER" value="33"/>
                     <d:lst name="DioPortEcucPartitionRef"/>
                     <d:lst name="DioChannel" type="MAP">
@@ -45,6 +45,31 @@
                       </d:ctr>
                       <d:ctr name="DioChannel_LED3" type="IDENTIFIABLE">
                         <d:var name="DioChannelId" type="INTEGER" value="4"/>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                    </d:lst>
+                    <d:lst name="DioChannelGroup" type="MAP"/>
+                  </d:ctr>
+                  <d:ctr name="DioPort_0" type="IDENTIFIABLE">
+                    <d:var name="DioPortId" type="INTEGER" value="0"/>
+                    <d:lst name="DioPortEcucPartitionRef"/>
+                    <d:lst name="DioChannel" type="MAP">
+                      <d:ctr name="DioChannel_PHY_RESET" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:lst name="DioChannelEcucPartitionRef"/>
+                      </d:ctr>
+                      <d:ctr name="DioChannel_PHY_WAKE" type="IDENTIFIABLE">
+                        <d:var name="DioChannelId" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
                         <d:lst name="DioChannelEcucPartitionRef"/>
                       </d:ctr>
                     </d:lst>

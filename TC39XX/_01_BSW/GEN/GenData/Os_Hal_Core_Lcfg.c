@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Core_Lcfg.c
- *   Generation Time: 2025-12-14 21:26:07
+ *   Generation Time: 2025-12-20 22:02:50
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -188,7 +188,7 @@ CONST(Os_Hal_CoreConfigType, OS_CONST) OsCfg_Hal_Core_OsCore1 =
 {
   /* .CoreId                  = */ 1, /* Physical id of OsCore1 */
   /* .ProgramCounterRegister  = */ OS_HAL_CORE1_PC,
-  /* .StartLabelAddress       = */ (uint32)&(_start_tc1), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
+  /* .StartLabelAddress       = */ (uint32)&(_start), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
   /* .DBGSRRegister           = */ OS_HAL_CORE1_DBGSR,
   /* .SYSCON_CORECON_Register = */ OS_HAL_CORE1_SYSCON_CORECON,
   /* .BOOTCONRegister         = */ OS_HAL_CORE1_BOOTCON
@@ -222,7 +222,7 @@ CONST(Os_Hal_CoreConfigType, OS_CONST) OsCfg_Hal_Core_OsCore2 =
 {
   /* .CoreId                  = */ 2, /* Physical id of OsCore2 */
   /* .ProgramCounterRegister  = */ OS_HAL_CORE2_PC,
-  /* .StartLabelAddress       = */ (uint32)&(_start_tc2), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
+  /* .StartLabelAddress       = */ (uint32)&(_start), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
   /* .DBGSRRegister           = */ OS_HAL_CORE2_DBGSR,
   /* .SYSCON_CORECON_Register = */ OS_HAL_CORE2_SYSCON_CORECON,
   /* .BOOTCONRegister         = */ OS_HAL_CORE2_BOOTCON
@@ -256,7 +256,7 @@ CONST(Os_Hal_CoreConfigType, OS_CONST) OsCfg_Hal_Core_OsCore3 =
 {
   /* .CoreId                  = */ 3, /* Physical id of OsCore3 */
   /* .ProgramCounterRegister  = */ OS_HAL_CORE3_PC,
-  /* .StartLabelAddress       = */ (uint32)&(_start_tc3), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
+  /* .StartLabelAddress       = */ (uint32)&(_start), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
   /* .DBGSRRegister           = */ OS_HAL_CORE3_DBGSR,
   /* .SYSCON_CORECON_Register = */ OS_HAL_CORE3_SYSCON_CORECON,
   /* .BOOTCONRegister         = */ OS_HAL_CORE3_BOOTCON
@@ -290,7 +290,7 @@ CONST(Os_Hal_CoreConfigType, OS_CONST) OsCfg_Hal_Core_OsCore4 =
 {
   /* .CoreId                  = */ 4, /* Physical id of OsCore4 */
   /* .ProgramCounterRegister  = */ OS_HAL_CORE4_PC,
-  /* .StartLabelAddress       = */ (uint32)&(_start_tc4), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
+  /* .StartLabelAddress       = */ (uint32)&(_start), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
   /* .DBGSRRegister           = */ OS_HAL_CORE4_DBGSR,
   /* .SYSCON_CORECON_Register = */ OS_HAL_CORE4_SYSCON_CORECON,
   /* .BOOTCONRegister         = */ OS_HAL_CORE4_BOOTCON
@@ -324,7 +324,7 @@ CONST(Os_Hal_CoreConfigType, OS_CONST) OsCfg_Hal_Core_OsCore5 =
 {
   /* .CoreId                  = */ 6, /* Physical id of OsCore5 */
   /* .ProgramCounterRegister  = */ OS_HAL_CORE6_PC,
-  /* .StartLabelAddress       = */ (uint32)&(_start_tc5), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
+  /* .StartLabelAddress       = */ (uint32)&(_start), /* PRQA S 0306, 0324 */ /* MD_Os_Hal_Rule11.4_0306, MD_Os_Hal_Rule11.2_0324 */
   /* .DBGSRRegister           = */ OS_HAL_CORE6_DBGSR,
   /* .SYSCON_CORECON_Register = */ OS_HAL_CORE6_SYSCON_CORECON,
   /* .BOOTCONRegister         = */ OS_HAL_CORE6_BOOTCON
@@ -373,7 +373,7 @@ CONSTP2CONST(Os_IsrHwConfigType, OS_CONST, OS_CONST)
   &OsCfg_Isr_CounterIsr_SystemTimer_OsCore3_HwConfig,
   &OsCfg_Isr_CounterIsr_SystemTimer_OsCore4_HwConfig,
   &OsCfg_Isr_CounterIsr_SystemTimer_OsCore5_HwConfig,
-  &OsCfg_Isr_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_HwConfig,
+  &OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_HwConfig,
   &OsCfg_Isr_XSignalIsr_OsCore0_HwConfig,
   &OsCfg_Isr_XSignalIsr_OsCore1_HwConfig,
   &OsCfg_Isr_XSignalIsr_OsCore2_HwConfig,

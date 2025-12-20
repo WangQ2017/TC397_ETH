@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Eth_30_Tc3xx_GenTypes.h
- *   Generation Time: 2025-12-14 16:26:31
+ *   Generation Time: 2025-12-20 16:24:06
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -533,7 +533,7 @@ typedef P2FUNC(void,           ETH_30_TC3XX_APPL_CODE, Eth_30_Tc3xx_EthTxConfirm
 #define ETH_30_TC3XX_NO_AMOUNTOFRXQUEUESOFETHCTRLTC3XX                255u
 #define ETH_30_TC3XX_NO_AMOUNTOFTXQUEUESOFETHCTRLTC3XX                255u
 #define ETH_30_TC3XX_NO_CSRCLOCKRANGEOFETHCTRLTC3XX                   65535u
-#define ETH_30_TC3XX_NO_PINROUTINGOFETHCTRLTC3XX                      4294967295uL
+#define ETH_30_TC3XX_NO_PINROUTINGOFETHCTRLTC3XX                      255u
 #define ETH_30_TC3XX_NO_OFFSETOFREGDATA                               65535u
 #define ETH_30_TC3XX_NO_VALUEOFREGDATA                                4294967295uL
 #define ETH_30_TC3XX_NO_ALIGNEDLASTSEGSIZEOFRXBUFFERHANDLING          65535u
@@ -1355,7 +1355,7 @@ typedef uint16 Eth_30_Tc3xx_CsrClockRangeOfEthCtrlTc3xxType;
 typedef uint16 Eth_30_Tc3xx_EthCtrlMiiInterfaceOfEthCtrlTc3xxType;
 
 /**   \brief  value based type definition for Eth_30_Tc3xx_PinRoutingOfEthCtrlTc3xx */
-typedef uint32 Eth_30_Tc3xx_PinRoutingOfEthCtrlTc3xxType;
+typedef uint8 Eth_30_Tc3xx_PinRoutingOfEthCtrlTc3xxType;
 
 /**   \brief  value based type definition for Eth_30_Tc3xx_ReadMiiResultOfEthCtrlTc3xxState */
 typedef uint16 Eth_30_Tc3xx_ReadMiiResultOfEthCtrlTc3xxStateType;
@@ -1807,12 +1807,12 @@ typedef struct sEth_30_Tc3xx_EthCtrlStateType
 /**   \brief  type used in Eth_30_Tc3xx_EthCtrlTc3xx */
 typedef struct sEth_30_Tc3xx_EthCtrlTc3xxType
 {
-  Eth_30_Tc3xx_PinRoutingOfEthCtrlTc3xxType PinRoutingOfEthCtrlTc3xx;  /**< Pin routing configuration */
   Eth_30_Tc3xx_CsrClockRangeOfEthCtrlTc3xxType CsrClockRangeOfEthCtrlTc3xx;  /**< CsrClockRange configuration */
   Eth_30_Tc3xx_EthCtrlMiiInterfaceOfEthCtrlTc3xxType EthCtrlMiiInterfaceOfEthCtrlTc3xx;  /**< MiiInterface of the controller */
   Eth_30_Tc3xx_ArmPpsOnTimeEnabledOfEthCtrlTc3xxType ArmPpsOnTimeEnabledOfEthCtrlTc3xx;  /**< ArmPpsOnTime configuration */
   Eth_30_Tc3xx_AmountOfRxQueuesOfEthCtrlTc3xxType AmountOfRxQueuesOfEthCtrlTc3xx;  /**< Amount of configured QoS Rx queues */
   Eth_30_Tc3xx_AmountOfTxQueuesOfEthCtrlTc3xxType AmountOfTxQueuesOfEthCtrlTc3xx;  /**< Amount of configured QoS Tx queues */
+  Eth_30_Tc3xx_PinRoutingOfEthCtrlTc3xxType PinRoutingOfEthCtrlTc3xx;  /**< Pin routing configuration */
 } Eth_30_Tc3xx_EthCtrlTc3xxType;
 
 /**   \brief  type used in Eth_30_Tc3xx_EthCtrlTc3xxState */
@@ -2051,97 +2051,97 @@ typedef struct sEth_30_Tc3xx_VlanIdTxDescrRingMapType
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_ActiveMacAddress */
 typedef struct Eth_30_Tc3xx_ActiveMacAddressStructSTag
 {
-  Eth_30_Tc3xx_ActiveMacAddressType EthCtrlConfig[6];
+  Eth_30_Tc3xx_ActiveMacAddressType EthCtrlConfig_MAIN[6];
 } Eth_30_Tc3xx_ActiveMacAddressStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_MulticastBucketCounters */
 typedef struct Eth_30_Tc3xx_MulticastBucketCountersStructSTag
 {
-  Eth_30_Tc3xx_MulticastBucketCountersType EthCtrlConfig[64];
+  Eth_30_Tc3xx_MulticastBucketCountersType EthCtrlConfig_MAIN[64];
 } Eth_30_Tc3xx_MulticastBucketCountersStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxBuffer */
 typedef struct Eth_30_Tc3xx_RxBufferStructSTag
 {
-  Eth_30_Tc3xx_RxBufferType EthCtrlConfig_EthRxBufConfig[3072];
+  Eth_30_Tc3xx_RxBufferType EthCtrlConfig_MAIN_EthRxBufConfig[3072];
 } Eth_30_Tc3xx_RxBufferStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxDescr */
 typedef struct Eth_30_Tc3xx_RxDescrStructSTag
 {
-  Eth_30_Tc3xx_RxDescriptorType EthCtrlConfig[2];
+  Eth_30_Tc3xx_RxDescriptorType EthCtrlConfig_MAIN[2];
 } Eth_30_Tc3xx_RxDescrStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxDescrRingProc */
 typedef struct Eth_30_Tc3xx_RxDescrRingProcStructSTag
 {
-  Eth_30_Tc3xx_RxDescrRingProcType EthCtrlConfig[1];
+  Eth_30_Tc3xx_RxDescrRingProcType EthCtrlConfig_MAIN[1];
 } Eth_30_Tc3xx_RxDescrRingProcStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxDescrState */
 typedef struct Eth_30_Tc3xx_RxDescrStateStructSTag
 {
-  Eth_30_Tc3xx_RxDescrStateType EthCtrlConfig[2];
+  Eth_30_Tc3xx_RxDescrStateType EthCtrlConfig_MAIN[2];
 } Eth_30_Tc3xx_RxDescrStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxTsContextStack */
 typedef struct Eth_30_Tc3xx_RxTsContextStackStructSTag
 {
-  Eth_30_Tc3xx_RxTsContextStackType EthCtrlConfig[1];
+  Eth_30_Tc3xx_RxTsContextStackType EthCtrlConfig_MAIN[1];
 } Eth_30_Tc3xx_RxTsContextStackStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxTsContextStackPos */
 typedef struct Eth_30_Tc3xx_RxTsContextStackPosStructSTag
 {
-  Eth_30_Tc3xx_RxTsContextStackPosType EthCtrlConfig[1];
+  Eth_30_Tc3xx_RxTsContextStackPosType EthCtrlConfig_MAIN[1];
 } Eth_30_Tc3xx_RxTsContextStackPosStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_TimeHandling */
 typedef struct Eth_30_Tc3xx_TimeHandlingStructSTag
 {
-  Eth_30_Tc3xx_TimeHandlingType EthCtrlConfig[1];
+  Eth_30_Tc3xx_TimeHandlingType EthCtrlConfig_MAIN[1];
 } Eth_30_Tc3xx_TimeHandlingStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_TxBuffer */
 typedef struct Eth_30_Tc3xx_TxBufferStructSTag
 {
-  Eth_30_Tc3xx_TxBufferType EthCtrlConfig[6144];
+  Eth_30_Tc3xx_TxBufferType EthCtrlConfig_MAIN[6144];
 } Eth_30_Tc3xx_TxBufferStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_TxBufferFreeElemNum */
 typedef struct Eth_30_Tc3xx_TxBufferFreeElemNumStructSTag
 {
-  Eth_30_Tc3xx_TxBufferFreeElemNumType EthCtrlConfig[1];
+  Eth_30_Tc3xx_TxBufferFreeElemNumType EthCtrlConfig_MAIN[1];
 } Eth_30_Tc3xx_TxBufferFreeElemNumStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_TxBufferState */
 typedef struct Eth_30_Tc3xx_TxBufferStateStructSTag
 {
-  Eth_30_Tc3xx_TxBufferStateType EthCtrlConfig[4];
+  Eth_30_Tc3xx_TxBufferStateType EthCtrlConfig_MAIN[4];
 } Eth_30_Tc3xx_TxBufferStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_TxDescr */
 typedef struct Eth_30_Tc3xx_TxDescrStructSTag
 {
-  Eth_30_Tc3xx_TxDescriptorType EthCtrlConfig[4];
+  Eth_30_Tc3xx_TxDescriptorType EthCtrlConfig_MAIN[4];
 } Eth_30_Tc3xx_TxDescrStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_TxDescrRingProc */
 typedef struct Eth_30_Tc3xx_TxDescrRingProcStructSTag
 {
-  Eth_30_Tc3xx_TxDescrRingProcType EthCtrlConfig[1];
+  Eth_30_Tc3xx_TxDescrRingProcType EthCtrlConfig_MAIN[1];
 } Eth_30_Tc3xx_TxDescrRingProcStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_TxDescrState */
 typedef struct Eth_30_Tc3xx_TxDescrStateStructSTag
 {
-  Eth_30_Tc3xx_TxDescrStateType EthCtrlConfig[4];
+  Eth_30_Tc3xx_TxDescrStateType EthCtrlConfig_MAIN[4];
 } Eth_30_Tc3xx_TxDescrStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_TxTsContext */
 typedef struct Eth_30_Tc3xx_TxTsContextStructSTag
 {
-  Eth_30_Tc3xx_TxTsContextType EthCtrlConfig[4];
+  Eth_30_Tc3xx_TxTsContextType EthCtrlConfig_MAIN[4];
 } Eth_30_Tc3xx_TxTsContextStructSType;
 
 /** 
@@ -2632,12 +2632,12 @@ extern CONST(Eth_30_Tc3xx_EthCtrlType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_EthCtrl[
   \brief  Tc3xx Ethernet controller specific configuration
   \details
   Element                Description
-  PinRouting             Pin routing configuration
   CsrClockRange          CsrClockRange configuration
   EthCtrlMiiInterface    MiiInterface of the controller
   ArmPpsOnTimeEnabled    ArmPpsOnTime configuration
   AmountOfRxQueues       Amount of configured QoS Rx queues
   AmountOfTxQueues       Amount of configured QoS Tx queues
+  PinRouting             Pin routing configuration
 */ 
 #define ETH_30_TC3XX_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

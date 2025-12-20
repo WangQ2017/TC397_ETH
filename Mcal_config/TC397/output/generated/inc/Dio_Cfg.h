@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 8.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2025-12-13, 12:54:12         !!!IGNORE-LINE!!!                **
+**  DATE, TIME: 2025-12-20, 17:52:54         !!!IGNORE-LINE!!!                **
 **                                                                            **
 **  GENERATOR : Build b191017-0938             !!!IGNORE-LINE!!!              **
 **                                                                            **
@@ -352,10 +352,10 @@ Symbolic names for DIO ports
 User Defined Symbolic Names for the DIO Ports, Channels & Channel Groups
 */
 /*
-DIO PORT : (DioPort_0)
+DIO PORT : (DioPort_33)
 */
-#ifndef DioConf_DioPort_DioPort_0
-#define DioConf_DioPort_DioPort_0 (DIO_PORT_33)
+#ifndef DioConf_DioPort_DioPort_33
+#define DioConf_DioPort_DioPort_33 (DIO_PORT_33)
 #endif
 /* DIO Channel : (DioChannel_LED0) */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
@@ -436,6 +436,52 @@ according to requirement ecuc_sws_2108*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
 according to requirement ecuc_sws_2108*/
 #define DioConf_DioChannel_DioChannel_LED3 (DIO_CHANNEL_33_4)
+#endif
+/*
+DIO PORT : (DioPort_0)
+*/
+#ifndef DioConf_DioPort_DioPort_0
+#define DioConf_DioPort_DioPort_0 (DIO_PORT_0)
+#endif
+/* DIO Channel : (DioChannel_PHY_RESET) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_PHY_RESET
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_PHY_RESET (DIO_CHANNEL_0_0)
+#endif
+/* DIO Channel : (DioChannel_PHY_WAKE) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_PHY_WAKE
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_PHY_WAKE (DIO_CHANNEL_0_1)
 #endif
 
 

@@ -106,7 +106,7 @@ volatile uint32 Cdd_Core1_Task_10ms_Cnt = 0;
 
 FUNC(void, Cdd_Core1_CODE) Cdd_Core1_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
 {
-    static Cdd_Core0_Runnable10ms_Data_cnt = 0;
+    static uint32 Cdd_Core0_Runnable10ms_Data_cnt = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Runnable10ms

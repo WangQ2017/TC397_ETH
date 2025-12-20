@@ -113,10 +113,10 @@ FUNC(void, OS_ERRORHOOK_CODE) ErrorHook(StatusType Error)
   Os_ErrorInformationType CurrentError;
   volatile uint8 endless = 1u;
   (void)Os_GetDetailedError(&CurrentError);
-  while(endless)
-  {
+  // while(endless)
+  // {
     
-  }
+  // }
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>
  *********************************************************************************************************************/

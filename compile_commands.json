@@ -439,12 +439,6 @@
 },
 {
   "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
-  "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\Source\\Os_Irq.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\Source\\Os_Irq.c",
-  "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/Source/Os_Irq.c",
-  "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/GEN/Source/Os_Irq.c.o"
-},
-{
-  "directory": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking",
   "command": "C:\\PROGRA~1\\TASKING\\TRICOR~1.3R1\\ctc\\bin\\cctc.exe -DBUILD_BIP -DBUILD_FACTORY_VERSION -DHT_CUSTOMER_PLATFORM -IH:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-fac-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\H_\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Integration\\EthTrcv_Callout.c.o -c H:\\class\\TC397_ETH\\TC39XX\\_01_BSW\\Integration\\EthTrcv_Callout.c",
   "file": "H:/class/TC397_ETH/TC39XX/_01_BSW/Integration/EthTrcv_Callout.c",
   "output": "H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/CMakeFiles/tc39x.dir/H_/class/TC397_ETH/TC39XX/_01_BSW/Integration/EthTrcv_Callout.c.o"

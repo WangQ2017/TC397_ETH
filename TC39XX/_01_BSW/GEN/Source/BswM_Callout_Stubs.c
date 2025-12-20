@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Callout_Stubs.c
- *   Generation Time: 2025-09-01 16:09:16
+ *   Generation Time: 2025-12-20 16:10:33
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -83,6 +83,26 @@ FUNC(void, BSWM_CODE) BswM_AL_SetProgrammableInterrupts(void)
  *********************************************************************************************************************/
 
 } /* End of BswM_AL_SetProgrammableInterrupts */
+
+volatile uint16 g_RegBMSR = 0;
+FUNC(void, BSWM_CODE) BswM_Action_EthTrcvDebug(void)
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           <USERBLOCK BswM_Action_EthTrcvDebug>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+  // uint16         regVal = 0;
+  // Std_ReturnType retVal = 0;
+
+  // do {
+  //   retVal = EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 2, &regVal); 
+  //   g_RegBMSR = regVal;
+  // } while ((regVal == 0xffff) || (regVal & 0x4) != 0x4);
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+} /* End of BswM_Action_EthTrcvDebug */
 
 
 FUNC(void, BSWM_CODE) BswM_ESH_OnEnterPostRun(void)
@@ -200,6 +220,23 @@ FUNC(void, BSWM_CODE) BswM_ESH_OnEnterWakeup(void)
  *********************************************************************************************************************/
   BswM_CoreSync(partitionIdx, coreSyncValue);
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           <USERBLOCK BswMUserCallout>                        DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+  uint16         regVal = 0;
+  Std_ReturnType retVal = EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 2, &regVal); 
+  g_RegBMSR = regVal;
+
+  while ((regVal & 0x4) != 0x4)
+  {
+    retVal = EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 2, &regVal); 
+    g_RegBMSR = regVal;
+  }
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!

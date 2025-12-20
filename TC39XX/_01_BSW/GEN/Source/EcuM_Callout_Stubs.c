@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2025-05-24 20:14:38
+ *   Generation Time: 2025-12-20 18:14:00
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -69,8 +69,22 @@
 #include "Det.h" 
 #include "Rte_Main.h" 
 #include "BswM.h" 
-#include "Port.h" 
+#include "Eth_30_Tc3xx.h" 
+#include "ComM.h" 
+#include "EthTSyn.h" 
+#include "SoAd.h" 
+#include "StbM.h" 
+#include "Com.h" 
+#include "PduR.h" 
+#include "EthSM.h" 
+#include "UdpNm.h" 
+#include "EthIf.h" 
+#include "TcpIp.h" 
+#include "EthTrcv_30_Tja1100.h" 
+#include "Nm.h" 
 #include "Mcu.h" 
+#include "Port.h" 
+#include "EthTrcv_Callout.h" 
 
 
 /**********************************************************************************************************************
@@ -233,6 +247,19 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitZero(void)
     Rte_InitMemory();
     BswM_InitMemory();
     Det_InitMemory();
+    Eth_30_Tc3xx_InitMemory();
+    ComM_InitMemory();
+    EthTSyn_InitMemory();
+    SoAd_InitMemory();
+    BswM_InitMemory();
+    Com_InitMemory();
+    PduR_InitMemory();
+    EthSM_InitMemory();
+    UdpNm_InitMemory();
+    EthIf_InitMemory();
+    TcpIp_InitMemory();
+    EthTrcv_30_Tja1100_InitMemory();
+    Nm_InitMemory();
   }
 
 /**********************************************************************************************************************
@@ -257,6 +284,8 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitOne(void)
     Mcu_InitClock(0);while (MCU_PLL_LOCKED != Mcu_GetPllStatus());Mcu_DistributePllClock();
     BswM_PreInit( BswM_Config_Ptr );
     Port_Init( &Port_Config );
+    PduR_PreInit( PduR_Config_Ptr );
+    EthTrcv_PhyReset();
   }
 
 /**********************************************************************************************************************

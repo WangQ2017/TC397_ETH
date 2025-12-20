@@ -88,19 +88,26 @@ derivative mpe
     size = 245760; /* 240 KiB */
     map (dest=bus:local_bus, dest_offset = 0x70000000, size = 245760);
   }
+  memory RegionBlock_Startup_NonCached
+  {
+    mau = 8;
+    type = rom;
+    size = 2048; /* 2 KiB */
+    map (dest=bus:local_bus, dest_offset = 0x80000000, size = 2048);
+  }
   memory RegionBlock_Startup_Cached
   {
     mau = 8;
     type = rom;
-    size = 1280; /* 1 KiB */
-    map (dest=bus:local_bus, dest_offset = 0x80000000, size = 1280);
+    size = 2048; /* 2 KiB */
+    map (dest=bus:local_bus, dest_offset = 0x80000800, size = 2048);
   }
   memory RegionBlock_PFlash0_Cached
   {
     mau = 8;
     type = rom;
-    size = 3144448; /* 3 MiB */
-    map (dest=bus:local_bus, dest_offset = 0x80000500, size = 3144448);
+    size = 3141632; /* 3 MiB */
+    map (dest=bus:local_bus, dest_offset = 0x80001000, size = 3141632);
   }
   memory RegionBlock_BMHD0
   {
@@ -113,6 +120,24 @@ derivative mpe
 
 section_layout mpe:vtc:linear
 {
+  group brsStartup_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_Startup_NonCached)
+  {
+    group brsStartup (ordered, contiguous, fill)
+    {
+      section "brsStartup_SEC" (fill, blocksize = 2, attributes = rx)
+      {
+        select ".text.brsStartupEntry";
+      }
+    }
+    "_brsStartup_START" = "_lc_gb_brsStartup";
+    "_brsStartup_END" = ("_lc_ge_brsStartup" == 0) ? 0 : "_lc_ge_brsStartup" - 1;
+    "_brsStartup_LIMIT" = "_lc_ge_brsStartup";
+
+    "_brsStartup_ALL_START" = "_brsStartup_START";
+    "_brsStartup_ALL_END" = "_brsStartup_END";
+    "_brsStartup_ALL_LIMIT" = "_brsStartup_LIMIT";
+  }
+
   group Startup_Code_GROUP (ordered, contiguous, run_addr = mem:mpe:RegionBlock_Startup_Cached)
   {
     group Startup_Code (ordered, contiguous, fill, align = 4)
@@ -3592,7 +3617,7 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_Default_Init_Task_Core6_Trusted_CODE";
         select "[.]text.OS_Default_Init_Task_Trusted_CODE";
         select "[.]text.OS_ERRORHOOK_CODE";
-        select "[.]text.OS_EthIsr_EthCtrlConfig_EthInterruptServiceRoutine_CODE";
+        select "[.]text.OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore0_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore1_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore2_CODE";
@@ -3895,15 +3920,15 @@ section_layout mpe:vtc:linear
   }
 
   "_RESET" = "brsStartupEntry";
-  "_start_tc5" = "brsStartupEntry";
   "_start" = "brsStartupEntry";
   "StartupEntry" = "brsStartupEntry";
   "_brsStartupEntry" = "brsStartupEntry";
-  "_start_tc0" = "brsStartupEntry";
-  "_start_tc1" = "brsStartupEntry";
-  "_start_tc2" = "brsStartupEntry";
-  "_start_tc3" = "brsStartupEntry";
-  "_start_tc4" = "brsStartupEntry";
+  "_start_tc0" = "_start";
+  "_start_tc1" = "_start";
+  "_start_tc2" = "_start";
+  "_start_tc3" = "_start";
+  "_start_tc4" = "_start";
+  "_start_tc5" = "_start";
 
   "__STARTUPSTACK_CORE0" = "_STACK_C0_LIMIT";
   "__STARTUPSTACK_CORE1" = "_STACK_C1_LIMIT";
