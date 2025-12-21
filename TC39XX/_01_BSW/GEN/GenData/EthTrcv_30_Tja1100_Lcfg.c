@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTrcv_30_Tja1100_Lcfg.c
- *   Generation Time: 2025-12-20 16:23:42
+ *   Generation Time: 2025-12-21 10:43:53
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -144,8 +144,8 @@ CONST(EthTrcv_30_Tja1100_EthTrcvType, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja11
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_19.1 */
 /*lint -restore */
 CONST(EthTrcv_30_Tja1100_EthTrcvTja1100Type, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja1100_EthTrcvTja1100[1] = {
-    /* Index    ExtLinkStateCheckEnabled  ClkMode                                                        Derivative                                             IntRevMii                                                         LdoMode                                                 LinkFailCounterResetVal  LinkStartupDelay  P0MiiAddress  P0PortSnv                                        P0SwitchSnv                                        PhyEnable                                                   */
-  { /*     0 */                    FALSE, ETHTRCV_30_TJA1100_INVALID_CLOCK_MODE_CLKMODEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_TJA1101_DERIVATIVEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_INT_REV_MII_INVALID_INTREVMIIOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_LDO_INVALID_LDOMODEOFETHTRCVTJA1100,                     40u,              20u,           0u, ETHTRCV_30_TJA1100_NO_P0PORTSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_NO_P0SWITCHSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_PHY_EN_INVALID_PHYENABLEOFETHTRCVTJA1100 }
+    /* Index    ExtLinkStateCheckEnabled  ClkMode                                                                    Derivative                                             IntRevMii                                                         LdoMode                                                 LinkFailCounterResetVal  LinkStartupDelay  P0MiiAddress  P0PortSnv                                        P0SwitchSnv                                        PhyEnable                                                   */
+  { /*     0 */                    FALSE, ETHTRCV_30_TJA1100_ETHTRCV_25_MHZ_EXT_CLOCK_INPUT_CLKMODEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_TJA1101_DERIVATIVEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_INT_REV_MII_INVALID_INTREVMIIOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_LDO_INVALID_LDOMODEOFETHTRCVTJA1100,                     40u,              20u,           0u, ETHTRCV_30_TJA1100_NO_P0PORTSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_NO_P0SWITCHSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_PHY_EN_INVALID_PHYENABLEOFETHTRCVTJA1100 }
 };
 #define ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
