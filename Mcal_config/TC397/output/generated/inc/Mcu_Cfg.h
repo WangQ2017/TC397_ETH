@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 21.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2025-05-30, 23:32:46         !!!IGNORE-LINE!!!                **
+**  DATE, TIME: 2025-12-21, 10:10:00         !!!IGNORE-LINE!!!                **
 **                                                                            **
 **  GENERATOR : Build b191017-0938             !!!IGNORE-LINE!!!              **
 **                                                                            **
@@ -47,7 +47,7 @@
 **                      Global Macro Definitions                              **
 *******************************************************************************/
 /* Autosar version of the module */
-#define MCU_AS_VERSION (422)
+#define MCU_AS_VERSION (440)
 
 /* AUTOSAR specification version numbers */
 #define MCU_AR_RELEASE_MAJOR_VERSION      (4U)
@@ -84,7 +84,7 @@
   ON  : Multicore error detection and reporting is Enabled
   OFF : Multicore error detection and reporting is Disabled
 */
-#define  MCU_MULTICORE_ERROR_DETECT (STD_OFF)
+#define  MCU_MULTICORE_ERROR_DETECT (STD_ON)
 
 /*
   Configuration: MCU_VERSION_INFO_API
@@ -119,7 +119,7 @@
   ENABLED  : Mcu_PerformReset API is available
   DISABLED : Mcu_PerformReset API is not available
 */
-#define  MCU_PERFORM_RESET_API (STD_OFF)
+#define  MCU_PERFORM_RESET_API (STD_ON)
 /*
   Configuration : MCU_GET_RAM_STATE_API (McuGetRamStateApi)
   Pre-processor switch to enable/disable the API Mcu_GetRamState.
@@ -422,63 +422,6 @@
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_CB0_RESET
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_CB0_RESET  (11U)
-#endif
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_CB1_RESET
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_CB1_RESET  (12U)
-#endif
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_CB3_RESET
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_CB3_RESET  (13U)
-#endif
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
 #ifndef McuConf_McuResetReasonConf_MCU_ESR0_RESET
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
@@ -517,120 +460,6 @@
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_EVR33_RESET
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_EVR33_RESET  (15U)
-#endif
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_EVRC_RESET
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_EVRC_RESET  (14U)
-#endif
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_LBIST_RESET
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_LBIST_RESET  (18U)
-#endif
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_POWER_ON_RESET
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_POWER_ON_RESET  (10U)
-#endif
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_RESET_MULTIPLE
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_RESET_MULTIPLE  (254U)
-#endif
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_RESET_UNDEFINED
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_RESET_UNDEFINED  (255U)
-#endif
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-  in generated code due to Autosar Naming constraints.*/
 #ifndef McuConf_McuResetReasonConf_MCU_SMU_RESET
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
@@ -650,7 +479,7 @@
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_STBYR_RESET
+#ifndef McuConf_McuResetReasonConf_MCU_SW_RESET
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -659,7 +488,7 @@
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_STBYR_RESET  (17U)
+  #define McuConf_McuResetReasonConf_MCU_SW_RESET  (3U)
 #endif
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
@@ -783,6 +612,120 @@
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
+#ifndef McuConf_McuResetReasonConf_MCU_POWER_ON_RESET
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+  #define McuConf_McuResetReasonConf_MCU_POWER_ON_RESET  (10U)
+#endif
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+#ifndef McuConf_McuResetReasonConf_MCU_CB0_RESET
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+  #define McuConf_McuResetReasonConf_MCU_CB0_RESET  (11U)
+#endif
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+#ifndef McuConf_McuResetReasonConf_MCU_CB1_RESET
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+  #define McuConf_McuResetReasonConf_MCU_CB1_RESET  (12U)
+#endif
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+#ifndef McuConf_McuResetReasonConf_MCU_CB3_RESET
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+  #define McuConf_McuResetReasonConf_MCU_CB3_RESET  (13U)
+#endif
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+#ifndef McuConf_McuResetReasonConf_MCU_EVRC_RESET
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+  #define McuConf_McuResetReasonConf_MCU_EVRC_RESET  (14U)
+#endif
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+#ifndef McuConf_McuResetReasonConf_MCU_EVR33_RESET
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+  #define McuConf_McuResetReasonConf_MCU_EVR33_RESET  (15U)
+#endif
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
 #ifndef McuConf_McuResetReasonConf_MCU_SUPPLY_WDOG_RESET
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
@@ -802,7 +745,7 @@
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
-#ifndef McuConf_McuResetReasonConf_MCU_SW_RESET
+#ifndef McuConf_McuResetReasonConf_MCU_STBYR_RESET
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -811,7 +754,64 @@
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
-  #define McuConf_McuResetReasonConf_MCU_SW_RESET  (3U)
+  #define McuConf_McuResetReasonConf_MCU_STBYR_RESET  (17U)
+#endif
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+#ifndef McuConf_McuResetReasonConf_MCU_LBIST_RESET
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+  #define McuConf_McuResetReasonConf_MCU_LBIST_RESET  (18U)
+#endif
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+#ifndef McuConf_McuResetReasonConf_MCU_RESET_MULTIPLE
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+  #define McuConf_McuResetReasonConf_MCU_RESET_MULTIPLE  (254U)
+#endif
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+#ifndef McuConf_McuResetReasonConf_MCU_RESET_UNDEFINED
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+  #define McuConf_McuResetReasonConf_MCU_RESET_UNDEFINED  (255U)
 #endif
 /* Production Error reporting enable/disabled macro */
 #define MCU_ENABLE_DEM_REPORT  (1U)

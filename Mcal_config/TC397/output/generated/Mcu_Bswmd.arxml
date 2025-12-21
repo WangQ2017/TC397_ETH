@@ -17,7 +17,7 @@
 **                                                                            **
 **  VERSION   : 23.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2025-12-13, 12:02:39          !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2025-12-21, 10:10:00          !!!IGNORE-LINE!!!               **
 **                                                                            **
 **  GENERATOR : Build b191017-0938            !!!IGNORE-LINE!!!               **
 **                                                                            **
@@ -75,6 +75,9 @@
               </BSW-MODULE-ENTRY-REF-CONDITIONAL>
               <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                 <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Mcu/BswModuleEntrys/Mcu_GetResetRawValue</BSW-MODULE-ENTRY-REF>
+              </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Mcu/BswModuleEntrys/Mcu_PerformReset</BSW-MODULE-ENTRY-REF>
               </BSW-MODULE-ENTRY-REF-CONDITIONAL>
               <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                 <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Mcu/BswModuleEntrys/Mcu_SetMode</BSW-MODULE-ENTRY-REF>
@@ -288,6 +291,15 @@
                   </BSW-MODULE-ENTRY-REF-CONDITIONAL>
                 </REQUIRED-ENTRYS>
               </BSW-MODULE-DEPENDENCY>
+              <BSW-MODULE-DEPENDENCY>
+                <SHORT-NAME>DetDependency</SHORT-NAME>
+                <TARGET-MODULE-ID>15</TARGET-MODULE-ID>
+                <REQUIRED-ENTRYS>
+                  <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Det/BswModuleEntrys/Det_ReportError</BSW-MODULE-ENTRY-REF>
+                  </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                </REQUIRED-ENTRYS>
+              </BSW-MODULE-DEPENDENCY>
             </BSW-MODULE-DEPENDENCYS>
             <INTERNAL-BEHAVIORS>
               <BSW-INTERNAL-BEHAVIOR>
@@ -321,6 +333,11 @@
                     <SHORT-NAME>Mcu_InitRamSection</SHORT-NAME>
                     <REENTRANCY-LEVEL>MULTICORE-REENTRANT</REENTRANCY-LEVEL>
                     <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Mcu/BswModuleEntrys/Mcu_InitRamSection</IMPLEMENTED-ENTRY-REF>
+                  </BSW-CALLED-ENTITY>
+                  <BSW-CALLED-ENTITY>
+                    <SHORT-NAME>Mcu_PerformReset</SHORT-NAME>
+                    <REENTRANCY-LEVEL>MULTICORE-REENTRANT</REENTRANCY-LEVEL>
+                    <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Mcu/BswModuleEntrys/Mcu_PerformReset</IMPLEMENTED-ENTRY-REF>
                   </BSW-CALLED-ENTITY>
                   <BSW-CALLED-ENTITY>
                     <SHORT-NAME>Mcu_SetMode</SHORT-NAME>
@@ -905,6 +922,15 @@
                 </SW-DATA-DEF-PROPS>
               </SW-SERVICE-ARG>
             </ARGUMENTS>
+          </BSW-MODULE-ENTRY>
+          <BSW-MODULE-ENTRY>
+            <SHORT-NAME>Mcu_PerformReset</SHORT-NAME>
+            <SERVICE-ID>7</SERVICE-ID>
+            <IS-REENTRANT>true</IS-REENTRANT>
+            <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+            <CALL-TYPE>REGULAR</CALL-TYPE>
+            <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+            <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
           </BSW-MODULE-ENTRY>
           <BSW-MODULE-ENTRY>
             <SHORT-NAME>Mcu_SetMode</SHORT-NAME>

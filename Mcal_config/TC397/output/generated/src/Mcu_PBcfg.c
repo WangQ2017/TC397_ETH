@@ -14,7 +14,7 @@
 **                                                                            **
 **  VERSION   : 33.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2025-05-30, 23:32:46       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2025-12-21, 10:13:01       !!!IGNORE-LINE!!!                  **
 **                                                                            **
 **  GENERATOR : Build b191017-0938           !!!IGNORE-LINE!!!                **
 **                                                                            **
@@ -71,9 +71,9 @@ static const Mcu_PllDistributionConfigType Mcu_kPllDistributionConfiguration_Con
   /* CCUCON0 value */
   0x17230113U,
   /* CCUCON1 value */
-  0x00000300U,
+  0x00000294U,
   /* CCUCON2 value */
-  0x00000001U,
+  0x05000001U,
   /* CCUCON5 value */
   0x00000032U,
   /* CCUCON6...CCUCON11 value */
@@ -111,7 +111,7 @@ static const Mcu_ClockConfigType Mcu_kClockConfiguration_Config[1] =
     {
       31U,
       0U,
-      1U,
+      3U,
       1U,
       0U,
       0U
@@ -133,7 +133,7 @@ static const Mcu_ClockConfigType Mcu_kClockConfiguration_Config[1] =
     /* External Clock configuration */
     0x00000000U,
     /* Backup frequency K Divider value for both PLLs */
-    0x0325U,
+    0x0355U,
     /* Converter Control Phase Synchronization configuration */
     0x00U,
   },/*McuClockReferencePointConfig*/
@@ -767,7 +767,7 @@ const Mcu_ConfigType Mcu_Config =
   /* Ptr to Standby Mode in config structure */
   &Mcu_kLowPowerModeConfiguration_Config,
   /* Reset configuration */
-  0x00000000U,
+  0x00000140U,
   /* Application Reset Disable configuration */
   0x00000000U,
   /* Trap configuration */

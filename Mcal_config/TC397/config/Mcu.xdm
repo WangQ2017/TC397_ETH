@@ -27,13 +27,9 @@
                 <a:a name="IMPORTER_INFO" value="@DEF"/>
               </d:var>
               <d:ctr name="McuGeneralConfiguration" type="IDENTIFIABLE">
-                <d:var name="McuDevErrorDetect" type="BOOLEAN" value="false">
-                  <a:a name="IMPORTER_INFO" value="@DEF"/>
-                </d:var>
+                <d:var name="McuDevErrorDetect" type="BOOLEAN" value="true"/>
                 <d:var name="McuMultiCoreErrorDetect" type="BOOLEAN" 
-                       value="false">
-                  <a:a name="IMPORTER_INFO" value="@DEF"/>
-                </d:var>
+                       value="true"/>
                 <d:var name="McuGetRamStateApi" type="BOOLEAN" value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
@@ -43,9 +39,7 @@
                 <d:var name="McuNoPll" type="BOOLEAN" value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
-                <d:var name="McuPerformResetApi" type="BOOLEAN" value="false">
-                  <a:a name="IMPORTER_INFO" value="@DEF"/>
-                </d:var>
+                <d:var name="McuPerformResetApi" type="BOOLEAN" value="true"/>
                 <d:var name="McuVersionInfoApi" type="BOOLEAN" value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
@@ -85,9 +79,7 @@
                        value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
-                <d:var name="McuSafetyEnable" type="BOOLEAN" value="false">
-                  <a:a name="IMPORTER_INFO" value="@DEF"/>
-                </d:var>
+                <d:var name="McuSafetyEnable" type="BOOLEAN" value="false"/>
                 <d:var name="McuInitCheckApi" type="BOOLEAN" value="false">
                   <a:a name="IMPORTER_INFO" value="@DEF"/>
                 </d:var>
@@ -165,13 +157,9 @@
                     <a:a name="IMPORTER_INFO" value="@DEF"/>
                   </d:var>
                   <d:var name="McuSWResetConf" type="ENUMERATION" 
-                         value="MCU_SW_APPLICATION_RESET_SEL2">
-                    <a:a name="IMPORTER_INFO" value="@DEF"/>
-                  </d:var>
+                         value="MCU_SW_SYSTEM_RESET_SEL1"/>
                   <d:var name="McuSMUResetConf" type="ENUMERATION" 
-                         value="MCU_SMU_NO_RESET_SEL0">
-                    <a:a name="IMPORTER_INFO" value="@DEF"/>
-                  </d:var>
+                         value="MCU_SMU_SYSTEM_RESET_SEL1"/>
                   <d:var name="McuSTM0ResetConf" type="ENUMERATION" 
                          value="MCU_STM0_NO_RESET_SEL0">
                     <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -377,13 +365,9 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="McuPeripheralPllNDivider" type="INTEGER" 
-                               value="39">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="31"/>
                         <d:var name="McuPeripheralPllK2Divider" type="INTEGER" 
-                               value="4">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="3"/>
                         <d:var name="McuPerPllK2DivStepUpChangeDelay" 
                                type="INTEGER" value="10">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -406,7 +390,7 @@
                                type="ENUMERATION" 
                                value="DIV_FACTOR_2_BYPASSED_SEL1"/>
                         <d:var name="McuPll2DivSelect" type="ENUMERATION" 
-                               value="MCU_K3_DIV_FACTOR_BYPASSED_SEL1"/>
+                               value="MCU_K3_DIV_FACTOR_NOT_BYPASSED_SEL0"/>
                         <d:var name="McuClockReferencePointFrequency1" 
                                type="FLOAT" value="1.6E8">
                           <a:a name="IMPORTER_INFO">
@@ -428,7 +412,7 @@
                                type="ENUMERATION" 
                                value="PLL_INPUT_CLOCK_SRC_SELECT_SEL1"/>
                         <d:var name="McuLowPowerDivValue" type="ENUMERATION" 
-                               value="LOW_POWER_DIVIDE_BY_240_SEL4"/>
+                               value="LOW_POWER_DIVIDER_DISABLE_SEL0"/>
                         <d:var name="McuSRIFrequency" type="FLOAT" value="3.0E8">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
@@ -538,17 +522,16 @@
                         </d:var>
                         <d:var name="McuMCanClockSourceSelection" 
                                type="ENUMERATION" 
-                               value="MCAN_CLOCK_SOURCE_DISABLED_SEL0">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
-                        <d:var name="McuMCanFrequency" type="FLOAT" value="0.0">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="MCAN_CLOCK_SOURCE_MCANI_SEL1"/>
+                        <d:var name="McuMCanFrequency" type="FLOAT" 
+                               value="4.0E7"/>
                         <d:var name="McuAscLinFastFrequency" type="FLOAT" 
                                value="2.0E8"/>
                         <d:var name="McuAscLinSlowClockSourceSelection" 
                                type="ENUMERATION" 
-                               value="ASCLINS_CLOCK_SOURCE_ASCLINSI_SEL1"/>
+                               value="ASCLINS_CLOCK_SOURCE_DISABLED_SEL0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
                         <d:var name="McuAscLinSlowFrequency" type="FLOAT" 
                                value="2.0E7"/>
                         <d:var name="McuQspiClockSourceSelection" 
@@ -573,38 +556,34 @@
                         </d:var>
                         <d:var name="McuI2CFrequency" type="FLOAT" value="1.0E8"/>
                         <d:var name="McuEbuClkEnable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="true"/>
                         <d:var name="McuEbuFrequency" type="FLOAT" value="1.6E8">
                           <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
                             <a:v>@CALC</a:v>
+                            <a:v>@DEF</a:v>
                           </a:a>
                         </d:var>
                         <d:var name="McuHsctFrequency" type="FLOAT" 
-                               value="4.0E8">
+                               value="3.2E8">
                           <a:a name="IMPORTER_INFO">
                             <a:v>@CALC</a:v>
                             <a:v>@DEF</a:v>
                           </a:a>
                         </d:var>
                         <d:var name="McuHspdmClkEnable" type="BOOLEAN" 
-                               value="false">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="true"/>
                         <d:var name="McuHspdm160Frequency" type="FLOAT" 
                                value="1.6E8">
                           <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
                             <a:v>@CALC</a:v>
+                            <a:v>@DEF</a:v>
                           </a:a>
                         </d:var>
                         <d:var name="McuHspdm320Frequency" type="FLOAT" 
                                value="1.6E8">
                           <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
                             <a:v>@CALC</a:v>
+                            <a:v>@DEF</a:v>
                           </a:a>
                         </d:var>
                         <d:var name="McuAdasFrequency" type="FLOAT" value="0.0">
@@ -614,10 +593,10 @@
                           </a:a>
                         </d:var>
                         <d:var name="McuGEthFrequency" type="FLOAT" 
-                               value="1.0E8">
+                               value="1.5E8">
                           <a:a name="IMPORTER_INFO">
-                            <a:v>@DEF</a:v>
                             <a:v>@CALC</a:v>
+                            <a:v>@DEF</a:v>
                           </a:a>
                         </d:var>
                         <d:var name="McuMcanHFrequency" type="FLOAT" 
@@ -682,22 +661,10 @@
                       </d:ctr>
                     </d:ctr>
                     <d:lst name="McuClockReferencePoint" type="MAP">
-                      <d:ctr name="McuClockReferencePoint_0" 
-                             type="IDENTIFIABLE">
-                        <d:var name="McuClockRefSelection" type="ENUMERATION" 
-                               value="MCU_CPU0_FREQUENCY"/>
-                        <d:var name="McuClockReferencePointFrequency" 
-                               type="FLOAT" value="3.0E8">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@CALC</a:v>
-                            <a:v>@DEF</a:v>
-                          </a:a>
-                        </d:var>
-                      </d:ctr>
                       <d:ctr name="McuClockReferencePoint_GETH" 
                              type="IDENTIFIABLE">
                         <d:var name="McuClockRefSelection" type="ENUMERATION" 
-                               value="MCU_GETH_FREQUENCY"/>
+                               value="MCU_CPU0_FREQUENCY"/>
                         <d:var name="McuClockReferencePointFrequency" 
                                type="FLOAT" value="1.0E8"/>
                       </d:ctr>
@@ -8974,8 +8941,9 @@
                       <d:ctr name="McuAscLinChannelAllocationConf" 
                              type="IDENTIFIABLE">
                         <d:var name="McuAscLinChannelAllocationConf" 
-                               type="ENUMERATION" 
-                               value="ASCLIN_CH_USED_BY_UART_DRIVER"/>
+                               type="ENUMERATION" value="ASCLIN_CH_NOT_USED">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
                         <d:var name="McuAscLinKernelId" type="ENUMERATION" 
                                value="ASCLIN0">
                           <a:a name="IMPORTER_INFO">
@@ -9053,10 +9021,16 @@
                       <d:ctr name="McuAscLinChannelAllocationConf" 
                              type="IDENTIFIABLE">
                         <d:var name="McuAscLinChannelAllocationConf" 
-                               type="ENUMERATION" 
-                               value="ASCLIN_CH_USED_BY_UART_DRIVER"/>
+                               type="ENUMERATION" value="ASCLIN_CH_NOT_USED">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
                         <d:var name="McuAscLinKernelId" type="ENUMERATION" 
-                               value="ASCLIN3"/>
+                               value="ASCLIN0">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
                       </d:ctr>
                     </d:ctr>
                     <d:ctr name="McuAscLinAllocationConf_6" type="IDENTIFIABLE">
