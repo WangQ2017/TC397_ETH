@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Eth_30_Tc3xx_Lcfg.c
- *   Generation Time: 2025-12-20 21:04:57
+ *   Generation Time: 2026-01-17 10:08:25
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -330,7 +330,7 @@ CONST(Eth_30_Tc3xx_RegDataType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_RegData[29] = {
 /*lint -restore */
 CONST(Eth_30_Tc3xx_RxBufferHandlingType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_RxBufferHandling[1] = {
     /* Index    AlignedLastSegSize  AlignedSegSize  MaxFrameSize  RxBufferEndIdx                                                                        RxBufferStartIdx                                                                        UnalignedSegSize  DescrNum  SegNum        Referable Keys */
-  { /*     0 */              1536u,          1536u,        1522u,          3072u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN_EthRxBufConfig */,               0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN_EthRxBufConfig */,            1522u,       2u,     2u }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  { /*     0 */              1536u,          1536u,        1522u,          6144u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN_EthRxBufConfig */,               0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN_EthRxBufConfig */,            1522u,       4u,     4u }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 };
 #define ETH_30_TC3XX_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -357,7 +357,7 @@ CONST(Eth_30_Tc3xx_RxBufferHandlingType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_RxBuff
 /*lint -restore */
 CONST(Eth_30_Tc3xx_RxDescrHandlingType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_RxDescrHandling[1] = {
     /* Index    RxDescrEndIdx                                                         RxDescrRingProcIdx                                                         RxDescrStartIdx                                                         RxDescrStateEndIdx                                                         RxDescrStateStartIdx                                                               Referable Keys */
-  { /*     0 */            2u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                 0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,              0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                 2u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                   0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  { /*     0 */            4u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                 0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,              0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                 4u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                   0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 };
 #define ETH_30_TC3XX_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -705,7 +705,8 @@ VAR(Eth_30_Tc3xx_RxBufferUType, ETH_30_TC3XX_VAR_NOINIT) Eth_30_Tc3xx_RxBuffer; 
 VAR(Eth_30_Tc3xx_RxDescrUType, ETH_30_TC3XX_VAR_NOINIT) Eth_30_Tc3xx_RxDescr;  /* PRQA S 0759 */  /* MD_CSL_18.4 */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
-  /*     1 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*   ... */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*     3 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 
 #define ETH_30_TC3XX_STOP_SEC_RX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -752,7 +753,8 @@ VAR(Eth_30_Tc3xx_RxDescrRingProcUType, ETH_30_TC3XX_VAR_NOINIT) Eth_30_Tc3xx_RxD
 VAR(Eth_30_Tc3xx_RxDescrStateUType, ETH_30_TC3XX_VAR_NOINIT) Eth_30_Tc3xx_RxDescrState;  /* PRQA S 0759 */  /* MD_CSL_18.4 */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
-  /*     1 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*   ... */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*     3 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 
 #define ETH_30_TC3XX_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1128,7 +1130,7 @@ CONST(Eth_30_Tc3xx_PCConfigsType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_PCConfig = {
     , NULL_PTR                                  /**< the pointer to Eth_30_Tc3xx_VlanIdRxDescrRingMap */
     , NULL_PTR                                  /**< the pointer to Eth_30_Tc3xx_VlanIdTxDescrRingMap */
     , NULL_PTR                                  /**< the pointer to Eth_30_Tc3xx_VlanPrioTxDescrRingMap */
-    , 3072u                                     /**< the number of elements in Eth_30_Tc3xx_RxBuffer */
+    , 6144u                                     /**< the number of elements in Eth_30_Tc3xx_RxBuffer */
     , 6144u                                     /**< the number of elements in Eth_30_Tc3xx_TxBuffer */
     , 6u                                        /**< the number of elements in Eth_30_Tc3xx_ActiveMacAddress */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_EthCtrl */
@@ -1142,10 +1144,10 @@ CONST(Eth_30_Tc3xx_PCConfigsType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_PCConfig = {
     , 0u                                        /**< the number of elements in Eth_30_Tc3xx_QosHandling */
     , 29u                                       /**< the number of elements in Eth_30_Tc3xx_RegData */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_RxBufferHandling */
-    , 2u                                        /**< the number of elements in Eth_30_Tc3xx_RxDescr */
+    , 4u                                        /**< the number of elements in Eth_30_Tc3xx_RxDescr */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_RxDescrHandling */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_RxDescrRingProc */
-    , 2u                                        /**< the number of elements in Eth_30_Tc3xx_RxDescrState */
+    , 4u                                        /**< the number of elements in Eth_30_Tc3xx_RxDescrState */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_RxTsContextStack */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_RxTsContextStackPos */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_RxTxNotificationCallouts */

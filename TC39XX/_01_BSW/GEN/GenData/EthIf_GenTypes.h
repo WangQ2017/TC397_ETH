@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthIf_GenTypes.h
- *   Generation Time: 2025-12-20 10:35:11
+ *   Generation Time: 2025-12-28 12:40:22
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -792,7 +792,7 @@ typedef P2FUNC(void,              ETHIF_APPL_CODE, EthIf_EgressTsIndFctPtrType)(
 #define ETHIF_NO_MIRRORRXDESTIDXIDXOFETHIFCTRL                        255u
 #define ETHIF_NO_MIRRORTXDESTIDXIDXOFETHIFCTRL                        255u
 #define ETHIF_NO_MTUOFETHIFCTRL                                       65535u
-#define ETHIF_NO_VLANIDOFETHIFCTRL                                    255u
+#define ETHIF_NO_VLANIDOFETHIFCTRL                                    65535u
 #define ETHIF_NO_ETHIFCTRLOFETHTRCVINDENDIDXOFETHTRCV                 255u
 #define ETHIF_NO_ETHIFCTRLOFETHTRCVINDSTARTIDXOFETHTRCV               255u
 #define ETHIF_NO_USERIDXOFEXPLICITBUFRELEASEFILTER                    255u
@@ -1577,7 +1577,7 @@ typedef enum eEthIf_TypeOfEthIfCtrlType
 } EthIf_TypeOfEthIfCtrlType;
 
 /**   \brief  value based type definition for EthIf_VlanIdOfEthIfCtrl */
-typedef uint8 EthIf_VlanIdOfEthIfCtrlType;
+typedef uint16 EthIf_VlanIdOfEthIfCtrlType;
 
 /**   \brief  value based type definition for EthIf_EthIfCtrlLinkCount */
 typedef uint8 EthIf_EthIfCtrlLinkCountType;
@@ -2033,6 +2033,7 @@ typedef struct sEthIf_EthIfCtrlType
   EthIf_SnvOfEthIfCtrlType SnvOfEthIfCtrl;  /**< SNV of the EthIf Controller */
   EthIf_TypeOfEthIfCtrlType TypeOfEthIfCtrl;  /**< Type of the EthIf Controller */
   EthIf_MtuOfEthIfCtrlType MtuOfEthIfCtrl;  /**< Maximum transfer unit of the EthIf Controller */
+  EthIf_VlanIdOfEthIfCtrlType VlanIdOfEthIfCtrl;  /**< VLAN ID associated with the EthIf Controller */
   EthIf_EthCtrlIdxOfEthIfCtrlType EthCtrlIdxOfEthIfCtrl;  /**< the index of the 1:1 relation pointing to EthIf_EthCtrl */
   EthIf_EthSwtDrvApiIdxOfEthIfCtrlType EthSwtDrvApiIdxOfEthIfCtrl;  /**< the index of the 0:1 relation pointing to EthIf_EthSwtDrvApi */
   EthIf_GatewayDestEthIfCtrlIdxIdxOfEthIfCtrlType GatewayDestEthIfCtrlIdxIdxOfEthIfCtrl;  /**< the index of the 0:1 relation pointing to EthIf_EthIfCtrl */
@@ -2041,7 +2042,6 @@ typedef struct sEthIf_EthIfCtrlType
   EthIf_MirrorTxDestIdxIdxOfEthIfCtrlType MirrorTxDestIdxIdxOfEthIfCtrl;  /**< the index of the 0:1 relation pointing to EthIf_MirrorDest */
   EthIf_PhysLayerInitElemsIdxOfEthIfCtrlType PhysLayerInitElemsIdxOfEthIfCtrl;  /**< the index of the 1:1 relation pointing to EthIf_PhysLayerInitElems */
   EthIf_PhysLayerModeElemsIdxOfEthIfCtrlType PhysLayerModeElemsIdxOfEthIfCtrl;  /**< the index of the 1:1 relation pointing to EthIf_PhysLayerModeElems */
-  EthIf_VlanIdOfEthIfCtrlType VlanIdOfEthIfCtrl;  /**< VLAN ID associated with the EthIf Controller */
 } EthIf_EthIfCtrlType;
 
 /**   \brief  type used in EthIf_EthIfCtrlRxStats */
@@ -2704,6 +2704,7 @@ extern CONST(EthIf_EthDrvApiType, ETHIF_CONST) EthIf_EthDrvApi[1];
   Snv                           SNV of the EthIf Controller
   Type                          Type of the EthIf Controller
   Mtu                           Maximum transfer unit of the EthIf Controller
+  VlanId                        VLAN ID associated with the EthIf Controller
   EthCtrlIdx                    the index of the 1:1 relation pointing to EthIf_EthCtrl
   EthSwtDrvApiIdx               the index of the 0:1 relation pointing to EthIf_EthSwtDrvApi
   GatewayDestEthIfCtrlIdxIdx    the index of the 0:1 relation pointing to EthIf_EthIfCtrl
@@ -2712,7 +2713,6 @@ extern CONST(EthIf_EthDrvApiType, ETHIF_CONST) EthIf_EthDrvApi[1];
   MirrorTxDestIdxIdx            the index of the 0:1 relation pointing to EthIf_MirrorDest
   PhysLayerInitElemsIdx         the index of the 1:1 relation pointing to EthIf_PhysLayerInitElems
   PhysLayerModeElemsIdx         the index of the 1:1 relation pointing to EthIf_PhysLayerModeElems
-  VlanId                        VLAN ID associated with the EthIf Controller
 */ 
 #define ETHIF_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

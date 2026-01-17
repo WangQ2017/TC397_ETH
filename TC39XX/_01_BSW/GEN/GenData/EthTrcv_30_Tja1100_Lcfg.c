@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTrcv_30_Tja1100_Lcfg.c
- *   Generation Time: 2025-12-21 10:43:53
+ *   Generation Time: 2026-01-16 10:59:14
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -91,12 +91,12 @@ CONST(EthTrcv_30_Tja1100_AccessEntityFctsType, ETHTRCV_30_TJA1100_CONST) EthTrcv
   \brief  Ethernet transceivers managed by the driver.
   \details
   Element                   Description
-  BasicCtrlRegVal           Initialization value of basic control register
   AutoNegEnabled            Auto negotiation configuration
   SoftResetOnInitEnabled    Soft reset on initialization configuraiton
   AccessEntityFctsIdx       the index of the 1:1 relation pointing to EthTrcv_30_Tja1100_AccessEntityFcts
   AccessEntitySnv           Entity providing access to the transceiver hardware
   AddressingIdx             Addressing index in context of the access entity to address the transceiver hardware
+  BasicCtrlRegVal           Initialization value of basic control register
   ConnectionNeg             Connection negotiation configuration
   DemEAccessEventId         ETHTRCV_E_ACCESS DEM event
   MiiMode                   Mii interface
@@ -111,8 +111,8 @@ CONST(EthTrcv_30_Tja1100_AccessEntityFctsType, ETHTRCV_30_TJA1100_CONST) EthTrcv
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_19.1 */
 /*lint -restore */
 CONST(EthTrcv_30_Tja1100_EthTrcvType, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja1100_EthTrcv[1] = {
-    /* Index    BasicCtrlRegVal  AutoNegEnabled  SoftResetOnInitEnabled  AccessEntityFctsIdx                                                            AccessEntitySnv                           AddressingIdx  ConnectionNeg                                              DemEAccessEventId                                 MiiMode                                       PhySignalQualityMean  SoCBaseRegAddr                                 SoftResetWaitCycles  Speed                                             WakeupIdx                                                                                          */
-  { /*     0 */         0x8060u,          FALSE,                   TRUE,                  0u  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig */, EthConf_EthCtrlConfig_EthCtrlConfig_MAIN,            0u, ETHTRCV_30_TJA1100_CONN_NEG_MASTER_CONNECTIONNEGOFETHTRCV, ETHTRCV_30_TJA1100_NO_DEMEACCESSEVENTIDOFETHTRCV, ETHTRCV_30_TJA1100_MII_MODE_MIIMODEOFETHTRCV,                 100u, ETHTRCV_30_TJA1100_NO_SOCBASEREGADDROFETHTRCV,                100u, ETHTRCV_30_TJA1100_TRCV_SPEED_100_SPEEDOFETHTRCV, ETHTRCV_30_TJA1100_NO_WAKEUPIDXOFETHTRCV  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig */ }
+    /* Index    AutoNegEnabled  SoftResetOnInitEnabled  AccessEntityFctsIdx                                                            AccessEntitySnv                           AddressingIdx  BasicCtrlRegVal  ConnectionNeg                                             DemEAccessEventId                                 MiiMode                                       PhySignalQualityMean  SoCBaseRegAddr                                 SoftResetWaitCycles  Speed                                             WakeupIdx                                                                                          */
+  { /*     0 */          FALSE,                   TRUE,                  0u  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig */, EthConf_EthCtrlConfig_EthCtrlConfig_MAIN,            0u,           0x60u, ETHTRCV_30_TJA1100_CONN_NEG_SLAVE_CONNECTIONNEGOFETHTRCV, ETHTRCV_30_TJA1100_NO_DEMEACCESSEVENTIDOFETHTRCV, ETHTRCV_30_TJA1100_MII_MODE_MIIMODEOFETHTRCV,                 100u, ETHTRCV_30_TJA1100_NO_SOCBASEREGADDROFETHTRCV,                100u, ETHTRCV_30_TJA1100_TRCV_SPEED_100_SPEEDOFETHTRCV, ETHTRCV_30_TJA1100_NO_WAKEUPIDXOFETHTRCV  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig */ }
 };
 #define ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -144,8 +144,8 @@ CONST(EthTrcv_30_Tja1100_EthTrcvType, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja11
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_19.1 */
 /*lint -restore */
 CONST(EthTrcv_30_Tja1100_EthTrcvTja1100Type, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja1100_EthTrcvTja1100[1] = {
-    /* Index    ExtLinkStateCheckEnabled  ClkMode                                                                    Derivative                                             IntRevMii                                                         LdoMode                                                 LinkFailCounterResetVal  LinkStartupDelay  P0MiiAddress  P0PortSnv                                        P0SwitchSnv                                        PhyEnable                                                   */
-  { /*     0 */                    FALSE, ETHTRCV_30_TJA1100_ETHTRCV_25_MHZ_EXT_CLOCK_INPUT_CLKMODEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_TJA1101_DERIVATIVEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_INT_REV_MII_INVALID_INTREVMIIOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_LDO_INVALID_LDOMODEOFETHTRCVTJA1100,                     40u,              20u,           0u, ETHTRCV_30_TJA1100_NO_P0PORTSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_NO_P0SWITCHSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_PHY_EN_INVALID_PHYENABLEOFETHTRCVTJA1100 }
+    /* Index    ExtLinkStateCheckEnabled  ClkMode                                                                  Derivative                                             IntRevMii                                                         LdoMode                                                 LinkFailCounterResetVal  LinkStartupDelay  P0MiiAddress  P0PortSnv                                        P0SwitchSnv                                        PhyEnable                                                   */
+  { /*     0 */                    FALSE, ETHTRCV_30_TJA1100_ETHTRCV_25_MHZ_XTAL_NO_CLOCK_CLKMODEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_TJA1101_DERIVATIVEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_INT_REV_MII_INVALID_INTREVMIIOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_LDO_INVALID_LDOMODEOFETHTRCVTJA1100,                     40u,              20u,           0u, ETHTRCV_30_TJA1100_NO_P0PORTSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_NO_P0SWITCHSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_PHY_EN_INVALID_PHYENABLEOFETHTRCVTJA1100 }
 };
 #define ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

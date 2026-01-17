@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Lcfg.c
- *   Generation Time: 2025-12-14 17:03:56
+ *   Generation Time: 2025-12-30 22:04:08
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -103,8 +103,8 @@ TCPIP_P2C(TcpIp_ConfigType) TcpIp_ConfigDataPtr = NULL_PTR;
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(TcpIp_AddrAssignmentCfgByPrioType, TCPIP_CONST) TcpIp_AddrAssignmentCfgByPrio[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index     AddrAssignmentCfgByPrio               Referable Keys */
-  /*     0 */ (TCPIP_IPADDR_ASSIGNMENT_STATIC)    /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10/TcpIpIpVXCtrl/TcpIpIpV4Ctrl] */
+  /* Index     AddrAssignmentCfgByPrio                                                              Referable Keys */
+  /*     0 */ (TCPIP_IPADDR_ASSIGNMENT_STATIC | TCPIP_IPV4_ADDR_ASSIGNMENT_FLAG_AUTO_TRIGGER)    /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10/TcpIpIpVXCtrl/TcpIpIpV4Ctrl] */
 };
 #define TCPIP_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -179,8 +179,8 @@ CONST(TcpIp_DefaultMulticastAddrV4Type, TCPIP_CONST) TcpIp_DefaultMulticastAddrV
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(TcpIp_DefaultUnicastAddrV4Type, TCPIP_CONST) TcpIp_DefaultUnicastAddrV4[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    DefGwAddr                                    NetAddr                                         NetMask                                                Referable Keys */
-  { /*     0 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */ , 0x21070A0AuL /*  10.10.7.33 LITTLE_ENDIAN  */ , 0x0000FFFFuL /*  255.255.0.0 LITTLE_ENDIAN  */  }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_10_7_33] */
+    /* Index    DefGwAddr                                    NetAddr                                            NetMask                                                  Referable Keys */
+  { /*     0 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */ , 0xC901A8C0uL /*  192.168.1.201 LITTLE_ENDIAN  */ , 0x00FFFFFFuL /*  255.255.255.0 LITTLE_ENDIAN  */  }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_10_7_33] */
 };
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -481,9 +481,9 @@ VAR(TcpIp_ArpTableEntryUType, TCPIP_VAR_NOINIT) TcpIp_ArpTableEntry;  /* PRQA S 
 /*lint -restore */
 VAR(TcpIp_Buf2TxReqMapUType, TCPIP_VAR_NOINIT) TcpIp_Buf2TxReqMap;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig] */
-  /*   ... */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig] */
-  /*     3 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig] */
+  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*   ... */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*     3 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

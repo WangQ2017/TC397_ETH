@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTrcv_30_Tja1100_GenTypes.h
- *   Generation Time: 2025-12-14 15:58:18
+ *   Generation Time: 2026-01-16 10:59:13
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -295,7 +295,7 @@ typedef P2FUNC(void,           ETHTRCV_30_TJA1100_APPL_CODE, EthTrcv_30_Tja1100_
 */ 
 #define ETHTRCV_30_TJA1100_NO_ACCESSENTITYSNVOFETHTRCV                255u
 #define ETHTRCV_30_TJA1100_NO_ADDRESSINGIDXOFETHTRCV                  255u
-#define ETHTRCV_30_TJA1100_NO_BASICCTRLREGVALOFETHTRCV                65535u
+#define ETHTRCV_30_TJA1100_NO_BASICCTRLREGVALOFETHTRCV                255u
 #define ETHTRCV_30_TJA1100_NO_DEMEACCESSEVENTIDOFETHTRCV              255u
 #define ETHTRCV_30_TJA1100_NO_PHYSIGNALQUALITYMEANOFETHTRCV           255u
 #define ETHTRCV_30_TJA1100_NO_SOCBASEREGADDROFETHTRCV                 255u
@@ -765,7 +765,7 @@ typedef uint8 EthTrcv_30_Tja1100_AddressingIdxOfEthTrcvType;
 typedef boolean EthTrcv_30_Tja1100_AutoNegEnabledOfEthTrcvType;
 
 /**   \brief  value based type definition for EthTrcv_30_Tja1100_BasicCtrlRegValOfEthTrcv */
-typedef uint16 EthTrcv_30_Tja1100_BasicCtrlRegValOfEthTrcvType;
+typedef uint8 EthTrcv_30_Tja1100_BasicCtrlRegValOfEthTrcvType;
 
 /**   \brief  value based type definition for EthTrcv_30_Tja1100_ConnectionNegOfEthTrcv */
 typedef uint8 EthTrcv_30_Tja1100_ConnectionNegOfEthTrcvType;
@@ -991,12 +991,12 @@ typedef struct sEthTrcv_30_Tja1100_AccessEntityFctsType
 /**   \brief  type used in EthTrcv_30_Tja1100_EthTrcv */
 typedef struct sEthTrcv_30_Tja1100_EthTrcvType
 {
-  EthTrcv_30_Tja1100_BasicCtrlRegValOfEthTrcvType BasicCtrlRegValOfEthTrcv;  /**< Initialization value of basic control register */
   EthTrcv_30_Tja1100_AutoNegEnabledOfEthTrcvType AutoNegEnabledOfEthTrcv;  /**< Auto negotiation configuration */
   EthTrcv_30_Tja1100_SoftResetOnInitEnabledOfEthTrcvType SoftResetOnInitEnabledOfEthTrcv;  /**< Soft reset on initialization configuraiton */
   EthTrcv_30_Tja1100_AccessEntityFctsIdxOfEthTrcvType AccessEntityFctsIdxOfEthTrcv;  /**< the index of the 1:1 relation pointing to EthTrcv_30_Tja1100_AccessEntityFcts */
   EthTrcv_30_Tja1100_AccessEntitySnvOfEthTrcvType AccessEntitySnvOfEthTrcv;  /**< Entity providing access to the transceiver hardware */
   EthTrcv_30_Tja1100_AddressingIdxOfEthTrcvType AddressingIdxOfEthTrcv;  /**< Addressing index in context of the access entity to address the transceiver hardware */
+  EthTrcv_30_Tja1100_BasicCtrlRegValOfEthTrcvType BasicCtrlRegValOfEthTrcv;  /**< Initialization value of basic control register */
   EthTrcv_30_Tja1100_ConnectionNegOfEthTrcvType ConnectionNegOfEthTrcv;  /**< Connection negotiation configuration */
   EthTrcv_30_Tja1100_DemEAccessEventIdOfEthTrcvType DemEAccessEventIdOfEthTrcv;  /**< ETHTRCV_E_ACCESS DEM event */
   EthTrcv_30_Tja1100_MiiModeOfEthTrcvType MiiModeOfEthTrcv;  /**< Mii interface */
@@ -1237,12 +1237,12 @@ extern CONST(EthTrcv_30_Tja1100_AccessEntityFctsType, ETHTRCV_30_TJA1100_CONST) 
   \brief  Ethernet transceivers managed by the driver.
   \details
   Element                   Description
-  BasicCtrlRegVal           Initialization value of basic control register
   AutoNegEnabled            Auto negotiation configuration
   SoftResetOnInitEnabled    Soft reset on initialization configuraiton
   AccessEntityFctsIdx       the index of the 1:1 relation pointing to EthTrcv_30_Tja1100_AccessEntityFcts
   AccessEntitySnv           Entity providing access to the transceiver hardware
   AddressingIdx             Addressing index in context of the access entity to address the transceiver hardware
+  BasicCtrlRegVal           Initialization value of basic control register
   ConnectionNeg             Connection negotiation configuration
   DemEAccessEventId         ETHTRCV_E_ACCESS DEM event
   MiiMode                   Mii interface

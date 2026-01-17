@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Eth_30_Tc3xx_GenTypes.h
- *   Generation Time: 2025-12-20 16:24:06
+ *   Generation Time: 2026-01-16 10:58:48
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -2063,13 +2063,13 @@ typedef struct Eth_30_Tc3xx_MulticastBucketCountersStructSTag
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxBuffer */
 typedef struct Eth_30_Tc3xx_RxBufferStructSTag
 {
-  Eth_30_Tc3xx_RxBufferType EthCtrlConfig_MAIN_EthRxBufConfig[3072];
+  Eth_30_Tc3xx_RxBufferType EthCtrlConfig_MAIN_EthRxBufConfig[6144];
 } Eth_30_Tc3xx_RxBufferStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxDescr */
 typedef struct Eth_30_Tc3xx_RxDescrStructSTag
 {
-  Eth_30_Tc3xx_RxDescriptorType EthCtrlConfig_MAIN[2];
+  Eth_30_Tc3xx_RxDescriptorType EthCtrlConfig_MAIN[4];
 } Eth_30_Tc3xx_RxDescrStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxDescrRingProc */
@@ -2081,7 +2081,7 @@ typedef struct Eth_30_Tc3xx_RxDescrRingProcStructSTag
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxDescrState */
 typedef struct Eth_30_Tc3xx_RxDescrStateStructSTag
 {
-  Eth_30_Tc3xx_RxDescrStateType EthCtrlConfig_MAIN[2];
+  Eth_30_Tc3xx_RxDescrStateType EthCtrlConfig_MAIN[4];
 } Eth_30_Tc3xx_RxDescrStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Eth_30_Tc3xx_RxTsContextStack */
@@ -2170,14 +2170,14 @@ typedef union Eth_30_Tc3xx_MulticastBucketCountersUTag
 /**   \brief  type to access Eth_30_Tc3xx_RxBuffer in an index and symbol based style. */
 typedef union Eth_30_Tc3xx_RxBufferUTag
 {  /* PRQA S 0750 */  /* MD_CSL_18.4 */
-  Eth_30_Tc3xx_RxBufferType raw[3072];
+  Eth_30_Tc3xx_RxBufferType raw[6144];
   Eth_30_Tc3xx_RxBufferStructSType str;
 } Eth_30_Tc3xx_RxBufferUType;
 
 /**   \brief  type to access Eth_30_Tc3xx_RxDescr in an index and symbol based style. */
 typedef union Eth_30_Tc3xx_RxDescrUTag
 {  /* PRQA S 0750 */  /* MD_CSL_18.4 */
-  Eth_30_Tc3xx_RxDescriptorType raw[2];
+  Eth_30_Tc3xx_RxDescriptorType raw[4];
   Eth_30_Tc3xx_RxDescrStructSType str;
 } Eth_30_Tc3xx_RxDescrUType;
 
@@ -2191,7 +2191,7 @@ typedef union Eth_30_Tc3xx_RxDescrRingProcUTag
 /**   \brief  type to access Eth_30_Tc3xx_RxDescrState in an index and symbol based style. */
 typedef union Eth_30_Tc3xx_RxDescrStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_18.4 */
-  Eth_30_Tc3xx_RxDescrStateType raw[2];
+  Eth_30_Tc3xx_RxDescrStateType raw[4];
   Eth_30_Tc3xx_RxDescrStateStructSType str;
 } Eth_30_Tc3xx_RxDescrStateUType;
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Lcfg.h
- *   Generation Time: 2025-12-14 17:03:56
+ *   Generation Time: 2025-12-21 17:40:32
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -2649,7 +2649,7 @@ typedef struct TcpIp_ArpTableEntryStructSTag
 /**   \brief  type to be used as symbolic data element access to TcpIp_Buf2TxReqMap */
 typedef struct TcpIp_Buf2TxReqMapStructSTag
 {
-  TcpIp_Buf2TxReqMapType EthCtrlConfig[4];
+  TcpIp_Buf2TxReqMapType EthCtrlConfig_MAIN[4];
 } TcpIp_Buf2TxReqMapStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_IpV4CtrlDyn */

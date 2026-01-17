@@ -106,7 +106,14 @@ volatile uint32 Cdd_Core0_Task_10ms_Cnt = 0;
  *********************************************************************************************************************/
 // Os_StatusType lx_Monitor_Status = 0;
 // TaskType lx_Monitor_Task = 0;
+#define LOOPBACK_INTERNAL_0  0U
+#define LOOPBACK_EXTERNAL_1  1U
+#define LOOPBACK_INTERNAL_2  2U
+#define LOOPBACK_REMOTE_3    3U
+#define LOOPBACK_INVILID     0xFFFFU
+volatile uint16 g_LoopBackMode = LOOPBACK_INVILID;
 volatile uint16 g_LinkStatus = 0;
+volatile uint16 g_phyRegDump[28] = {0};
 FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
 {
   static uint32 Cdd_Core0_Runnable10ms_Data_cnt = 0;
@@ -132,16 +139,36 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ 
 
 
     uint16         regVal = 0;
-    Std_ReturnType retVal = EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 2, &regVal);
-      if ((regVal != 0xffff) && ((regVal & 0x4) == 0x4))
-      {
-        g_LinkStatus = 1;
-      }
-      else
-      {
-        g_LinkStatus = 0;
-      }
+
+    Std_ReturnType retVal = EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 1, &regVal);
+    if ((regVal != 0xffff) && ((regVal & 0x4) == 0x4))
+    {
+      g_LinkStatus = 1;
+    }
+    else
+    {
+      g_LinkStatus = 0;
+    }
+
+    for (uint16 i = 0; i < 28; i++)
+    {
+        (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, i, &g_phyRegDump[i]);
+    }
     
+    if (g_LoopBackMode != LOOPBACK_INVILID)
+    {
+        regVal = 0;
+        (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 0U, &regVal);
+        regVal |= (1 << 14U);
+        (void)EthTrcv_30_Tja1100_Internal_WriteTrcvReg(0, 0U, regVal);
+
+        regVal = 0;
+        (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 17U, &regVal);
+        regVal |= (g_LoopBackMode << 3U);
+        (void)EthTrcv_30_Tja1100_Internal_WriteTrcvReg(0, 17U, regVal);
+
+        g_LoopBackMode = LOOPBACK_INVILID;
+    }
   }
   
 /**********************************************************************************************************************

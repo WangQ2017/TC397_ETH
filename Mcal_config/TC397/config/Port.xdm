@@ -203,9 +203,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -274,9 +272,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -345,9 +341,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -416,9 +410,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -487,9 +479,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -558,9 +548,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -629,9 +617,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -700,9 +686,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -771,9 +755,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -842,9 +824,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -913,9 +893,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -2994,9 +2972,7 @@
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
                                value="ALT6"/>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinMode">
                           <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
                             <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -3053,9 +3029,7 @@
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
                                value="ALT6"/>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinMode">
                           <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
                             <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -3163,7 +3137,7 @@
                         <d:var name="PortPinSymbolicName" type="STRING" 
                                value="PORT_11_PIN_5_GETH_TXCLKA_MII"/>
                         <d:var name="PortPinDirection" type="ENUMERATION" 
-                               value="PORT_PIN_OUT"/>
+                               value="PORT_PIN_IN"/>
                         <d:var name="PortPinDirectionChangeable" type="BOOLEAN" 
                                value="false">
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -3235,9 +3209,7 @@
                         <d:var name="PortPinInitialMode" type="ENUMERATION" 
                                value="ALT6"/>
                         <d:var name="PortPinLevelValue" type="ENUMERATION" 
-                               value="PORT_PIN_LEVEL_LOW">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               value="PORT_PIN_LEVEL_LOW"/>
                         <d:lst name="PortPinMode">
                           <d:var type="ENUMERATION" value="PORT_PIN_MODE_ALL">
                             <a:a name="IMPORTER_INFO" value="@DEF"/>
@@ -4058,9 +4030,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -4129,9 +4099,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -4200,9 +4168,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -4271,9 +4237,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -4567,9 +4531,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -4638,9 +4600,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -4709,9 +4669,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -4780,9 +4738,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -4851,9 +4807,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -4922,9 +4876,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -4993,9 +4945,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5064,9 +5014,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5135,9 +5083,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5265,9 +5211,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5336,9 +5280,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5407,9 +5349,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5478,9 +5418,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5549,9 +5487,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5620,9 +5556,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5691,9 +5625,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5762,9 +5694,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">
@@ -5833,9 +5763,7 @@
                           <a:a name="IMPORTER_INFO" value="@DEF"/>
                         </d:var>
                         <d:var name="PortPinInputPullResistor" 
-                               type="ENUMERATION" value="PORT_PIN_IN_PULL_UP">
-                          <a:a name="IMPORTER_INFO" value="@DEF"/>
-                        </d:var>
+                               type="ENUMERATION" value="PORT_PIN_IN_NO_PULL"/>
                         <d:var name="PortPinOutputPadDriveStrength" 
                                type="ENUMERATION" 
                                value="PORT_PIN_DEFAULT_DRIVER">

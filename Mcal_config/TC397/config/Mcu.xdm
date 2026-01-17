@@ -593,12 +593,7 @@
                           </a:a>
                         </d:var>
                         <d:var name="McuGEthFrequency" type="FLOAT" 
-                               value="1.5E8">
-                          <a:a name="IMPORTER_INFO">
-                            <a:v>@CALC</a:v>
-                            <a:v>@DEF</a:v>
-                          </a:a>
-                        </d:var>
+                               value="1.0E8"/>
                         <d:var name="McuMcanHFrequency" type="FLOAT" 
                                value="1.0E8">
                           <a:a name="IMPORTER_INFO">

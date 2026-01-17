@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthIf_Lcfg.c
- *   Generation Time: 2025-12-20 10:35:11
+ *   Generation Time: 2025-12-28 12:40:22
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -154,6 +154,7 @@ CONST(EthIf_EthDrvApiType, ETHIF_CONST) EthIf_EthDrvApi[1] = {  /* PRQA S 1514, 
   Snv                           SNV of the EthIf Controller
   Type                          Type of the EthIf Controller
   Mtu                           Maximum transfer unit of the EthIf Controller
+  VlanId                        VLAN ID associated with the EthIf Controller
   EthCtrlIdx                    the index of the 1:1 relation pointing to EthIf_EthCtrl
   EthSwtDrvApiIdx               the index of the 0:1 relation pointing to EthIf_EthSwtDrvApi
   GatewayDestEthIfCtrlIdxIdx    the index of the 0:1 relation pointing to EthIf_EthIfCtrl
@@ -162,15 +163,14 @@ CONST(EthIf_EthDrvApiType, ETHIF_CONST) EthIf_EthDrvApi[1] = {  /* PRQA S 1514, 
   MirrorTxDestIdxIdx            the index of the 0:1 relation pointing to EthIf_MirrorDest
   PhysLayerInitElemsIdx         the index of the 1:1 relation pointing to EthIf_PhysLayerInitElems
   PhysLayerModeElemsIdx         the index of the 1:1 relation pointing to EthIf_PhysLayerModeElems
-  VlanId                        VLAN ID associated with the EthIf Controller
 */ 
 #define ETHIF_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(EthIf_EthIfCtrlType, ETHIF_CONST) EthIf_EthIfCtrl[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    Snv                                               Type                                                Mtu    EthCtrlIdx                                                         EthSwtDrvApiIdx                                                                                     GatewayDestEthIfCtrlIdxIdx                                     LinkAggrThreshold  MirrorRxDestIdxIdx                                                                                     MirrorTxDestIdxIdx                                                                                     PhysLayerInitElemsIdx                                                                 PhysLayerModeElemsIdx                                                                 VlanId        Referable Keys */
-  { /*     0 */ EthIfConf_EthIfController_EthIfController_Vlan10, ETHIF_ETHIFCTRL_TYPE_Q_TAGGED_VLAN_TYPEOFETHIFCTRL, 1500u,         0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */, ETHIF_NO_ETHSWTDRVAPIIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */, ETHIF_NO_GATEWAYDESTETHIFCTRLIDXIDXOFETHIFCTRL  /* No_Dest */,                1u, ETHIF_NO_MIRRORRXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */, ETHIF_NO_MIRRORTXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */,                    0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */,                    0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */,    10u }   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig] */
+    /* Index    Snv                                               Type                                           Mtu    VlanId             EthCtrlIdx                                                         EthSwtDrvApiIdx                                                                                     GatewayDestEthIfCtrlIdxIdx                                     LinkAggrThreshold  MirrorRxDestIdxIdx                                                                                     MirrorTxDestIdxIdx                                                                                     PhysLayerInitElemsIdx                                                                 PhysLayerModeElemsIdx                                                                       Referable Keys */
+  { /*     0 */ EthIfConf_EthIfController_EthIfController_Vlan10, ETHIF_ETHIFCTRL_TYPE_PHYSICAL_TYPEOFETHIFCTRL, 1500u, ETHIF_INV_VLAN_ID,         0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */, ETHIF_NO_ETHSWTDRVAPIIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */, ETHIF_NO_GATEWAYDESTETHIFCTRLIDXIDXOFETHIFCTRL  /* No_Dest */,                1u, ETHIF_NO_MIRRORRXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */, ETHIF_NO_MIRRORTXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */,                    0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */,                    0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */ }   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig] */
 };
 #define ETHIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

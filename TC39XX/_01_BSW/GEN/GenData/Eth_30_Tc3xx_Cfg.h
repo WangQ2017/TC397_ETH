@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Eth_30_Tc3xx_Cfg.h
- *   Generation Time: 2025-12-20 19:45:47
+ *   Generation Time: 2025-12-21 11:52:17
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -99,8 +99,8 @@
 /**********************************************************************************************************************
  *  SWITCH DEFINES
  *********************************************************************************************************************/
-# define ETH_30_TC3XX_DEV_ERROR_DETECT                     (STD_ON)
-# define ETH_30_TC3XX_DEV_ERROR_REPORT                     (STD_ON)
+# define ETH_30_TC3XX_DEV_ERROR_DETECT                     (STD_OFF)
+# define ETH_30_TC3XX_DEV_ERROR_REPORT                     (STD_OFF)
 # define ETH_30_TC3XX_DEM_ERROR_DETECT                     (STD_OFF)
 # define ETH_30_TC3XX_ENABLE_RX_INTERRUPT                  (STD_OFF)
 # define ETH_30_TC3XX_ENABLE_TX_INTERRUPT                  (STD_ON)
