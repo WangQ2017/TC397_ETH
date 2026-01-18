@@ -1,11 +1,11 @@
 /**
  * \file IfxCpu_regdef.h
  * \brief
- * \copyright Copyright (c) 2021 Infineon Technologies AG. All rights reserved.
+ * \copyright Copyright (c) 2020 Infineon Technologies AG. All rights reserved.
  *
  *
- * Version: TC39XB_UM_V2.0.0.R0
- * Specification: TC3xx User Manual V2.0.0
+ * Version: TC39XB_UM_V1.4.0.R0
+ * Specification: TC3xx User Manual V1.4.0
  * MAY BE CHANGED BY USER [yes/no]: No
  *
  *                                 IMPORTANT NOTICE
@@ -288,7 +288,7 @@ typedef struct _Ifx_CPU_DIETR_Bits
     Ifx_Strict_32Bit reserved_17:15;    /**< \brief [31:17] \internal Reserved */
 } Ifx_CPU_DIETR_Bits;
 
-/** \brief CPUx Safety Protection Region DLMU Read Access Enable Register A${i} */
+/** \brief CPUx Safety Protection Region DLMU Read Access Enable Register A${x} */
 typedef struct _Ifx_CPU_DLMU_SPROT_RGNACCENA_R_Bits
 {
     Ifx_Strict_32Bit EN0:1;           /**< \brief [0:0] Access Enable for Master TAG ID 0 - EN0 (rw) */
@@ -325,7 +325,7 @@ typedef struct _Ifx_CPU_DLMU_SPROT_RGNACCENA_R_Bits
     Ifx_Strict_32Bit EN31:1;          /**< \brief [31:31] Access Enable for Master TAG ID 31 - EN31 (rw) */
 } Ifx_CPU_DLMU_SPROT_RGNACCENA_R_Bits;
 
-/** \brief CPUx Safety Protection Region DLMU Write Access Enable Register A${i} */
+/** \brief CPUx  Safety Protection Region DLMU Write Access Enable Register A${x} */
 typedef struct _Ifx_CPU_DLMU_SPROT_RGNACCENA_W_Bits
 {
     Ifx_Strict_32Bit EN0:1;           /**< \brief [0:0] Access Enable for Master TAG ID 0 - EN0 (rw) */
@@ -362,7 +362,7 @@ typedef struct _Ifx_CPU_DLMU_SPROT_RGNACCENA_W_Bits
     Ifx_Strict_32Bit EN31:1;          /**< \brief [31:31] Access Enable for Master TAG ID 31 - EN31 (rw) */
 } Ifx_CPU_DLMU_SPROT_RGNACCENA_W_Bits;
 
-/** \brief CPUx Safety Protection Region DLMU Read Access Enable Register B${i} */
+/** \brief CPUx Safety Protection Region DLMU Read Access Enable Register B${x} */
 typedef struct _Ifx_CPU_DLMU_SPROT_RGNACCENB_R_Bits
 {
     Ifx_Strict_32Bit EN32:1;          /**< \brief [0:0] Access Enable for Master TAG ID 32 - EN32 (rw) */
@@ -399,7 +399,7 @@ typedef struct _Ifx_CPU_DLMU_SPROT_RGNACCENB_R_Bits
     Ifx_Strict_32Bit EN63:1;          /**< \brief [31:31] Access Enable for Master TAG ID 63 - EN63 (rw) */
 } Ifx_CPU_DLMU_SPROT_RGNACCENB_R_Bits;
 
-/** \brief CPUx Safety Protection Region DLMU Write Access Enable Register B${i} */
+/** \brief CPUx  Safety Protection Region DLMU Write Access Enable Register B${x} */
 typedef struct _Ifx_CPU_DLMU_SPROT_RGNACCENB_W_Bits
 {
     Ifx_Strict_32Bit EN32:1;          /**< \brief [0:0] Access Enable for Master TAG ID 32 - EN32 (rw) */
@@ -436,14 +436,14 @@ typedef struct _Ifx_CPU_DLMU_SPROT_RGNACCENB_W_Bits
     Ifx_Strict_32Bit EN63:1;          /**< \brief [31:31] Access Enable for Master TAG ID 63 - EN63 (rw) */
 } Ifx_CPU_DLMU_SPROT_RGNACCENB_W_Bits;
 
-/** \brief CPUx Safety Protection DLMU Region Lower Address Register ${i} */
+/** \brief CPUx  Safety Protection DLMU Region Lower Address Register ${x} */
 typedef struct _Ifx_CPU_DLMU_SPROT_RGNLA_Bits
 {
     Ifx_Strict_32Bit reserved_0:5;    /**< \brief [4:0] \internal Reserved */
     Ifx_Strict_32Bit ADDR:27;         /**< \brief [31:5] Region Lower Address - ADDR (rw) */
 } Ifx_CPU_DLMU_SPROT_RGNLA_Bits;
 
-/** \brief CPUx Safety protection DLMU Region Upper Address Register ${i} */
+/** \brief CPUx  Safety protection DLMU Region Upper Address Register ${x} */
 typedef struct _Ifx_CPU_DLMU_SPROT_RGNUA_Bits
 {
     Ifx_Strict_32Bit reserved_0:5;    /**< \brief [4:0] \internal Reserved */
@@ -914,7 +914,7 @@ typedef struct _Ifx_CPU_PSW_Bits
     Ifx_Strict_32Bit USB:8;           /**< \brief [31:24] User Status Bits - USB (rw) */
 } Ifx_CPU_PSW_Bits;
 
-/** \brief CPUx Safety Protection SPR Region Write Access Enable Register A${i} */
+/** \brief CPUx  Safety Protection Region SPR Write Access Enable Register A${i} */
 typedef struct _Ifx_CPU_RGN_ACCENA_Bits
 {
     Ifx_Strict_32Bit EN0:1;           /**< \brief [0:0] Access Enable for Master TAG ID 0 - EN0 (rw) */
@@ -951,7 +951,7 @@ typedef struct _Ifx_CPU_RGN_ACCENA_Bits
     Ifx_Strict_32Bit EN31:1;          /**< \brief [31:31] Access Enable for Master TAG ID 31 - EN31 (rw) */
 } Ifx_CPU_RGN_ACCENA_Bits;
 
-/** \brief CPUx Safety Protection SPR Region Write Access Enable Register B${i} */
+/** \brief CPUx  Safety Protection Region SPR Write Access Enable Register B${i} */
 typedef struct _Ifx_CPU_RGN_ACCENB_Bits
 {
     Ifx_Strict_32Bit EN32:1;          /**< \brief [0:0] Access Enable for Master TAG ID 32 - EN32 (rw) */
@@ -988,14 +988,14 @@ typedef struct _Ifx_CPU_RGN_ACCENB_Bits
     Ifx_Strict_32Bit EN63:1;          /**< \brief [31:31] Access Enable for Master TAG ID 63 - EN63 (rw) */
 } Ifx_CPU_RGN_ACCENB_Bits;
 
-/** \brief CPUx Safety Protection SPR Region Lower Address Register ${i} */
+/** \brief CPUx  Safety Protection SPR Region Lower Address Register ${i} */
 typedef struct _Ifx_CPU_RGN_LA_Bits
 {
     Ifx_Strict_32Bit reserved_0:5;    /**< \brief [4:0] \internal Reserved */
     Ifx_Strict_32Bit ADDR:27;         /**< \brief [31:5] Region Lower Address - ADDR (rw) */
 } Ifx_CPU_RGN_LA_Bits;
 
-/** \brief CPUx Safety Protection SPR Region Upper Address Register ${i} */
+/** \brief CPUx  Safety protection SPR Region Upper Address Register ${i} */
 typedef struct _Ifx_CPU_RGN_UA_Bits
 {
     Ifx_Strict_32Bit reserved_0:5;    /**< \brief [4:0] \internal Reserved */
@@ -1093,7 +1093,7 @@ typedef struct _Ifx_CPU_SMACON_Bits
     Ifx_Strict_32Bit reserved_25:7;    /**< \brief [31:25] \internal Reserved */
 } Ifx_CPU_SMACON_Bits;
 
-/** \brief CPUx Safety Protection SPR Region Read Access Enable Register A${i} */
+/** \brief CPUx Safety Protection Region SPR Read Access Enable Register A${x} */
 typedef struct _Ifx_CPU_SPR_SPROT_RGNACCENA_R_Bits
 {
     Ifx_Strict_32Bit EN0:1;           /**< \brief [0:0] Access Enable for Master TAG ID 0 - EN0 (rw) */
@@ -1130,7 +1130,7 @@ typedef struct _Ifx_CPU_SPR_SPROT_RGNACCENA_R_Bits
     Ifx_Strict_32Bit EN31:1;          /**< \brief [31:31] Access Enable for Master TAG ID 31 - EN31 (rw) */
 } Ifx_CPU_SPR_SPROT_RGNACCENA_R_Bits;
 
-/** \brief CPUx Safety Protection SPR Region Read Access Enable Register B${i} */
+/** \brief CPUx Safety Protection Region SPR Read Access Enable Register B${x} */
 typedef struct _Ifx_CPU_SPR_SPROT_RGNACCENB_R_Bits
 {
     Ifx_Strict_32Bit EN32:1;          /**< \brief [0:0] Access Enable for Master TAG ID 32 - EN32 (rw) */
@@ -1530,7 +1530,7 @@ typedef union
     Ifx_CPU_DIETR_Bits B;             /**< \brief Bitfield access */
 } Ifx_CPU_DIETR;
 
-/** \brief CPUx Safety Protection Region DLMU Read Access Enable Register A${i}   */
+/** \brief CPUx Safety Protection Region DLMU Read Access Enable Register A${x}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -1538,7 +1538,7 @@ typedef union
     Ifx_CPU_DLMU_SPROT_RGNACCENA_R_Bits B;    /**< \brief Bitfield access */
 } Ifx_CPU_DLMU_SPROT_RGNACCENA_R;
 
-/** \brief CPUx Safety Protection Region DLMU Write Access Enable Register A${i}   */
+/** \brief CPUx  Safety Protection Region DLMU Write Access Enable Register A${x}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -1546,7 +1546,7 @@ typedef union
     Ifx_CPU_DLMU_SPROT_RGNACCENA_W_Bits B;    /**< \brief Bitfield access */
 } Ifx_CPU_DLMU_SPROT_RGNACCENA_W;
 
-/** \brief CPUx Safety Protection Region DLMU Read Access Enable Register B${i}   */
+/** \brief CPUx Safety Protection Region DLMU Read Access Enable Register B${x}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -1554,7 +1554,7 @@ typedef union
     Ifx_CPU_DLMU_SPROT_RGNACCENB_R_Bits B;    /**< \brief Bitfield access */
 } Ifx_CPU_DLMU_SPROT_RGNACCENB_R;
 
-/** \brief CPUx Safety Protection Region DLMU Write Access Enable Register B${i}   */
+/** \brief CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -1562,7 +1562,7 @@ typedef union
     Ifx_CPU_DLMU_SPROT_RGNACCENB_W_Bits B;    /**< \brief Bitfield access */
 } Ifx_CPU_DLMU_SPROT_RGNACCENB_W;
 
-/** \brief CPUx Safety Protection DLMU Region Lower Address Register ${i}   */
+/** \brief CPUx  Safety Protection DLMU Region Lower Address Register ${x}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -1570,7 +1570,7 @@ typedef union
     Ifx_CPU_DLMU_SPROT_RGNLA_Bits B;    /**< \brief Bitfield access */
 } Ifx_CPU_DLMU_SPROT_RGNLA;
 
-/** \brief CPUx Safety protection DLMU Region Upper Address Register ${i}   */
+/** \brief CPUx  Safety protection DLMU Region Upper Address Register ${x}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -1930,7 +1930,7 @@ typedef union
     Ifx_CPU_PSW_Bits B;               /**< \brief Bitfield access */
 } Ifx_CPU_PSW;
 
-/** \brief CPUx Safety Protection SPR Region Write Access Enable Register A${i}   */
+/** \brief CPUx  Safety Protection Region SPR Write Access Enable Register A${i}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -1938,7 +1938,7 @@ typedef union
     Ifx_CPU_RGN_ACCENA_Bits B;        /**< \brief Bitfield access */
 } Ifx_CPU_RGN_ACCENA;
 
-/** \brief CPUx Safety Protection SPR Region Write Access Enable Register B${i}   */
+/** \brief CPUx  Safety Protection Region SPR Write Access Enable Register B${i}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -1946,7 +1946,7 @@ typedef union
     Ifx_CPU_RGN_ACCENB_Bits B;        /**< \brief Bitfield access */
 } Ifx_CPU_RGN_ACCENB;
 
-/** \brief CPUx Safety Protection SPR Region Lower Address Register ${i}   */
+/** \brief CPUx  Safety Protection SPR Region Lower Address Register ${i}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -1954,7 +1954,7 @@ typedef union
     Ifx_CPU_RGN_LA_Bits B;            /**< \brief Bitfield access */
 } Ifx_CPU_RGN_LA;
 
-/** \brief CPUx Safety Protection SPR Region Upper Address Register ${i}   */
+/** \brief CPUx  Safety protection SPR Region Upper Address Register ${i}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -1994,7 +1994,7 @@ typedef union
     Ifx_CPU_SMACON_Bits B;            /**< \brief Bitfield access */
 } Ifx_CPU_SMACON;
 
-/** \brief CPUx Safety Protection SPR Region Read Access Enable Register A${i}   */
+/** \brief CPUx Safety Protection Region SPR Read Access Enable Register A${x}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -2002,7 +2002,7 @@ typedef union
     Ifx_CPU_SPR_SPROT_RGNACCENA_R_Bits B;    /**< \brief Bitfield access */
 } Ifx_CPU_SPR_SPROT_RGNACCENA_R;
 
-/** \brief CPUx Safety Protection SPR Region Read Access Enable Register B${i}   */
+/** \brief CPUx Safety Protection Region SPR Read Access Enable Register B${x}   */
 typedef union
 {
     Ifx_UReg_32Bit U;                 /**< \brief Unsigned access */
@@ -2142,10 +2142,10 @@ typedef union
 /** \brief RGN object */
 typedef volatile struct _Ifx_CPU_RGN
 {
-       Ifx_CPU_RGN_LA                      LA;                     /**< \brief 0, CPUx Safety Protection SPR Region Lower Address Register ${i}*/
-       Ifx_CPU_RGN_UA                      UA;                     /**< \brief 4, CPUx Safety Protection SPR Region Upper Address Register ${i}*/
-       Ifx_CPU_RGN_ACCENA                  ACCENA;                 /**< \brief 8, CPUx Safety Protection SPR Region Write Access Enable Register A${i}*/
-       Ifx_CPU_RGN_ACCENB                  ACCENB;                 /**< \brief C, CPUx Safety Protection SPR Region Write Access Enable Register B${i}*/
+       Ifx_CPU_RGN_LA                      LA;                     /**< \brief 0, CPUx  Safety Protection SPR Region Lower Address Register ${i}*/
+       Ifx_CPU_RGN_UA                      UA;                     /**< \brief 4, CPUx  Safety protection SPR Region Upper Address Register ${i}*/
+       Ifx_CPU_RGN_ACCENA                  ACCENA;                 /**< \brief 8, CPUx  Safety Protection Region SPR Write Access Enable Register A${i}*/
+       Ifx_CPU_RGN_ACCENB                  ACCENB;                 /**< \brief C, CPUx  Safety Protection Region SPR Write Access Enable Register B${i}*/
 } Ifx_CPU_RGN;
 /** \}  */
 /******************************************************************************/
@@ -2318,7 +2318,7 @@ typedef volatile struct _Ifx_CPU
        Ifx_CPU_KRST1                       KRST1;                  /**< \brief D004, CPUx  Reset Register 1*/
        Ifx_CPU_KRSTCLR                     KRSTCLR;                /**< \brief D008, CPUx Reset Clear Register*/
        Ifx_UReg_8Bit                       reserved_D00C[4084];    /**< \brief D00C, \internal Reserved */
-       Ifx_CPU_RGN                         RGN[8];                 /**< \brief E000, CPUx Safety Protection SPR Region Write Access Enable Register B${i}*/
+       Ifx_CPU_RGN                         RGN[8];                 /**< \brief E000, CPUx  Safety Protection Region SPR Write Access Enable Register B${i}*/
        Ifx_UReg_8Bit                       reserved_E080[8];       /**< \brief E080, \internal Reserved */
        Ifx_CPU_SPR_SPROT_RGNACCENA_R       SPR_SPROT_RGNACCENA_R0;    /**< \brief E088, */
        Ifx_CPU_SPR_SPROT_RGNACCENB_R       SPR_SPROT_RGNACCENB_R0;    /**< \brief E08C, */
@@ -2349,38 +2349,38 @@ typedef volatile struct _Ifx_CPU
        Ifx_CPU_LPB_SPROT_ACCENA_R          LPB_SPROT_ACCENA_R;     /**< \brief E110, CPUx Safety Protection Region LPB Read Access Enable Register A*/
        Ifx_CPU_LPB_SPROT_ACCENB_R          LPB_SPROT_ACCENB_R;     /**< \brief E114, CPUx Safety Protection Region LPB Read Access Enable Register B*/
        Ifx_UReg_8Bit                       reserved_E118[232];     /**< \brief E118, \internal Reserved */
-       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA0;      /**< \brief E200, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA0;      /**< \brief E204, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W0;    /**< \brief E208, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W0;    /**< \brief E20C, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA1;      /**< \brief E210, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA1;      /**< \brief E214, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W1;    /**< \brief E218, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W1;    /**< \brief E21C, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA2;      /**< \brief E220, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA2;      /**< \brief E224, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W2;    /**< \brief E228, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W2;    /**< \brief E22C, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA3;      /**< \brief E230, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA3;      /**< \brief E234, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W3;    /**< \brief E238, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W3;    /**< \brief E23C, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA4;      /**< \brief E240, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA4;      /**< \brief E244, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W4;    /**< \brief E248, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W4;    /**< \brief E24C, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA5;      /**< \brief E250, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA5;      /**< \brief E254, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W5;    /**< \brief E258, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W5;    /**< \brief E25C, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA6;      /**< \brief E260, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA6;      /**< \brief E264, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W6;    /**< \brief E268, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W6;    /**< \brief E26C, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA7;      /**< \brief E270, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA7;      /**< \brief E274, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W7;    /**< \brief E278, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
-       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W7;    /**< \brief E27C, CPUx Safety Protection Region DLMU Write Access Enable Register B${i}*/
+       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA0;      /**< \brief E200, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA0;      /**< \brief E204, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W0;    /**< \brief E208, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W0;    /**< \brief E20C, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA1;      /**< \brief E210, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA1;      /**< \brief E214, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W1;    /**< \brief E218, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W1;    /**< \brief E21C, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA2;      /**< \brief E220, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA2;      /**< \brief E224, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W2;    /**< \brief E228, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W2;    /**< \brief E22C, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA3;      /**< \brief E230, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA3;      /**< \brief E234, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W3;    /**< \brief E238, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W3;    /**< \brief E23C, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA4;      /**< \brief E240, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA4;      /**< \brief E244, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W4;    /**< \brief E248, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W4;    /**< \brief E24C, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA5;      /**< \brief E250, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA5;      /**< \brief E254, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W5;    /**< \brief E258, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W5;    /**< \brief E25C, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA6;      /**< \brief E260, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA6;      /**< \brief E264, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W6;    /**< \brief E268, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W6;    /**< \brief E26C, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNLA            DLMU_SPROT_RGNLA7;      /**< \brief E270, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNUA            DLMU_SPROT_RGNUA7;      /**< \brief E274, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENA_W      DLMU_SPROT_RGNACCENA_W7;    /**< \brief E278, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
+       Ifx_CPU_DLMU_SPROT_RGNACCENB_W      DLMU_SPROT_RGNACCENB_W7;    /**< \brief E27C, CPUx  Safety Protection Region DLMU Write Access Enable Register B${x}*/
        Ifx_UReg_8Bit                       reserved_E280[8];       /**< \brief E280, \internal Reserved */
        Ifx_CPU_DLMU_SPROT_RGNACCENA_R      DLMU_SPROT_RGNACCENA_R0;    /**< \brief E288, */
        Ifx_CPU_DLMU_SPROT_RGNACCENB_R      DLMU_SPROT_RGNACCENB_R0;    /**< \brief E28C, */

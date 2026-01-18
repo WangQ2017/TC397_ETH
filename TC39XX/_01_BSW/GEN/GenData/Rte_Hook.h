@@ -173,6 +173,8 @@
  *  SchM_EnterHook_Com_COM_EXCLUSIVE_AREA_RX_Start
  *  SchM_EnterHook_Com_COM_EXCLUSIVE_AREA_TX_Return
  *  SchM_EnterHook_Com_COM_EXCLUSIVE_AREA_TX_Start
+ *  SchM_EnterHook_Crc_CriticalSection_Return
+ *  SchM_EnterHook_Crc_CriticalSection_Start
  *  SchM_EnterHook_Det_DET_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_Det_DET_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_0_Return
@@ -259,6 +261,8 @@
  *  SchM_ExitHook_Com_COM_EXCLUSIVE_AREA_RX_Start
  *  SchM_ExitHook_Com_COM_EXCLUSIVE_AREA_TX_Return
  *  SchM_ExitHook_Com_COM_EXCLUSIVE_AREA_TX_Start
+ *  SchM_ExitHook_Crc_CriticalSection_Return
+ *  SchM_ExitHook_Crc_CriticalSection_Start
  *  SchM_ExitHook_Det_DET_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_Det_DET_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_0_Return

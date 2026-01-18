@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Eth_30_Tc3xx_Irq.c
- *   Generation Time: 2025-12-20 10:36:03
+ *   Generation Time: 2026-01-18 22:51:16
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -62,7 +62,7 @@
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_19.1 */
 
 /***********************************************************************************************************************
- *  EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine
+ *  EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx
  **********************************************************************************************************************/
 /*! \brief       Handles a interrupt related to the EthCtrlConfig_MAIN Ethernet controller
  *  \details     Function processes the interrupt event handlers and - if configured - pre- and post-ISR-User-Functions.
@@ -75,12 +75,12 @@
  *  \synchronous TRUE
  *  \pre         -
  **********************************************************************************************************************/
-ISR( EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine ) /* PRQA S 3408 */ /* MD_Eth_30_Tc3xx_3408 */
+ISR( EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx ) /* PRQA S 3408 */ /* MD_Eth_30_Tc3xx_3408 */
 {
   uint8 localCtrlIdx = Eth_30_Tc3xx_TransformToLocalCtrlIdx(EthConf_EthCtrlConfig_EthCtrlConfig_MAIN);
   uint8 isrIdx       = 0u;
   Eth_30_Tc3xx_ProcessIsr(localCtrlIdx, isrIdx);
-} /* EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine() */
+} /* EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx() */
 
 
 #define ETH_30_TC3XX_STOP_SEC_CODE

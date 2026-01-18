@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Task_Lcfg.c
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2026-01-18 21:28:31
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -405,7 +405,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_10ms_Core0 =
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_OsTask_Bsw_10ms_Core0,
     /* .Context               = */ &OsCfg_Hal_Context_OsTask_Bsw_10ms_Core0_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_OsTask_Bsw_10ms_Core0,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Task_Prio30,
     /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_OsTask_Bsw_10ms_Core0_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_OsApplication_OsCore0,
     /* .Core                  = */ &OsCfg_Core_OsCore0,
@@ -428,7 +428,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_10ms_Core0 =
     /* .AccessingApplications = */ (OS_APPID2MASK(OsApplication_OsCore0) | OS_APPID2MASK(OsApplication_OsCore1) | OS_APPID2MASK(OsApplication_OsCore2) | OS_APPID2MASK(OsApplication_OsCore3) | OS_APPID2MASK(OsApplication_OsCore4) | OS_APPID2MASK(OsApplication_OsCore5) | OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2) | OS_APPID2MASK(SystemApplication_OsCore3) | OS_APPID2MASK(SystemApplication_OsCore4) | OS_APPID2MASK(SystemApplication_OsCore5)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
   /* .NumSchEventsRoundRobin = */ 0uL,
   /* .RoundRobinEnabled      = */ FALSE,
-  /* .IsExtended             = */ (boolean)TRUE,
+  /* .IsExtended             = */ (boolean)FALSE,
   /* .StackSharing           = */ OS_TASKSCHEDULE_ALLOWED
 };
 
@@ -510,7 +510,7 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_5ms_Core0 =
   {
     /* .ContextConfig         = */ &OsCfg_Hal_Context_OsTask_Bsw_5ms_Core0,
     /* .Context               = */ &OsCfg_Hal_Context_OsTask_Bsw_5ms_Core0_Dyn,
-    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Task_Prio40,
+    /* .Stack                 = */ &OsCfg_Stack_OsTask_Bsw_5ms_Core0,
     /* .Dyn                   = */ OS_TASK_CASTDYN_TASK_2_THREAD(OsCfg_Task_OsTask_Bsw_5ms_Core0_Dyn),
     /* .OwnerApplication      = */ &OsCfg_App_OsApplication_OsCore0,
     /* .Core                  = */ &OsCfg_Core_OsCore0,
@@ -528,12 +528,12 @@ CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_5ms_Core0 =
   /* .HomePriority           = */ (Os_TaskPrioType)9uL,
   /* .TaskId                 = */ OsTask_Bsw_5ms_Core0,
   /* .RunningPriority        = */ (Os_TaskPrioType)9uL,
-  /* .MaxActivations         = */ (Os_ActivationCntType)3uL,
+  /* .MaxActivations         = */ (Os_ActivationCntType)1uL,
   /* .AutostartModes         = */ OS_APPMODE_NONE,
     /* .AccessingApplications = */ (OS_APPID2MASK(OsApplication_OsCore0) | OS_APPID2MASK(OsApplication_OsCore1) | OS_APPID2MASK(OsApplication_OsCore2) | OS_APPID2MASK(OsApplication_OsCore3) | OS_APPID2MASK(OsApplication_OsCore4) | OS_APPID2MASK(OsApplication_OsCore5) | OS_APPID2MASK(SystemApplication_OsCore0) | OS_APPID2MASK(SystemApplication_OsCore1) | OS_APPID2MASK(SystemApplication_OsCore2) | OS_APPID2MASK(SystemApplication_OsCore3) | OS_APPID2MASK(SystemApplication_OsCore4) | OS_APPID2MASK(SystemApplication_OsCore5)),  /* PRQA S 0410 */ /* MD_MSR_Dir1.1 */
   /* .NumSchEventsRoundRobin = */ 0uL,
   /* .RoundRobinEnabled      = */ FALSE,
-  /* .IsExtended             = */ (boolean)FALSE,
+  /* .IsExtended             = */ (boolean)TRUE,
   /* .StackSharing           = */ OS_TASKSCHEDULE_ALLOWED
 };
 

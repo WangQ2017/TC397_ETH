@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2023)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : Mcal_Compiler.h                                            **
 **                                                                            **
-**  VERSION      : 25.0.0                                                     **
+**  VERSION      : 1.40.0_19.0.0                                              **
 **                                                                            **
-**  DATE         : 2023-05-16                                                 **
+**  DATE         : 2020-01-03                                                 **
 **                                                                            **
 **  VARIANT      : NA                                                         **
 **                                                                            **
@@ -28,7 +28,7 @@
                    functions and macros                                       **
 **                                                                            **
 **  SPECIFICATION(S) : Specification of Compiler Abstraction, AUTOSAR         **
-**                     Release 4.2.2  and 4.4.0                               **
+**                     Release 4.2.2                                          **
 **                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
@@ -119,7 +119,7 @@ intrinsic function*/
 #endif
 
 /* [cover parentID={62B6B189-142A-46b4-8C1C-477F1887CD23}]
- * Intrensic Functions
+ * Intrensic Functions 
  * [/cover] */
 #ifdef _TASKING_C_TRICORE_
 #if (_TASKING_C_TRICORE_ == 1U)
@@ -132,8 +132,7 @@ intrinsic function*/
 
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
-#define DSYNC() __asm("dsync" \
-                       :::)
+#define DSYNC() (__dsync())
 
 /* Tasking Intrinsic: Disable Global Interrupt Flag */
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
@@ -162,10 +161,12 @@ intrinsic function*/
 #define MTCR(Reg, Data)   DSYNC();\
                           __mtcr((sint32)(Reg), (sint32)(Data))
 
+
 /* Tasking Intrinsic: No operation */
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
 #define NOP() (__nop())
+
 
 /*
 Tasking Intrinsic: CRC32 instruction
@@ -174,7 +175,7 @@ Tasking Intrinsic: CRC32 instruction
    given input.*/
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
-#define CRC32(b, a) (__crc32bw((unsigned_int)(b),(unsigned_int)(a)))
+#define CRC32(b, a) (__crc32bw((unsigned int)(b),(unsigned int)(a)))
 
 /*
 Tasking Intrinsic: CRC32B instruction
@@ -184,28 +185,7 @@ Tasking Intrinsic: CRC32B instruction
    last*/
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
-#define CRC32B(b, a) (__crc32b((unsigned_int)(b),(unsigned_int)(a)))
-
-/*
- * Tasking Intrinsic: CRCN instruction
- * CRCN function calculates the CRC of 1 to 8 bits of input data with width 1 to
- * 16 bit.
- * d : parameters of crc algorithm
- *
- * Bit31    15      12         10       9        8                2         Bit0
- *  ---------------------------------------------------------------------------
- * |        |        |         |        |        |                |    input   |
- * | poly-  | CRC    |    0    | inver  | bit    |        0       |    data    |
- * | nomial | width  |         | sion   | order  |                |    width   |
- * |        | (1-16) |         |        |        |                |    (1-8)   |
- *  ---------------------------------------------------------------------------
- * b : initial seed value or CRC of previous sequence of data
- * a : input data
- */
- /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
-intrinsic function*/
-#define CRCN(d, b, a) \
-                (__crcn((unsigned_int)(b),(unsigned_int)(d), (unsigned_int)(a)))
+#define CRC32B(b, a) (__crc32b((unsigned int)(b),(unsigned int)(a)))
 
 #endif
 #endif
@@ -215,7 +195,7 @@ intrinsic function*/
 
 /* CRC32 function calculates the CRC of four bytes in big-endian order for the
    given input.*/
-#define CRC32(b, a) (__crc32bw((unsigned_int)(b),(unsigned_int)(a)))
+#define CRC32(b, a) (__crc32bw((unsigned int)(b),(unsigned int)(a)))
 
 /* CRC declaration to ensure this function is always inlined */
 static INLINE unsigned __crc32bw( unsigned b, unsigned a ) \
@@ -237,7 +217,7 @@ static INLINE unsigned __crc32bw( unsigned b, unsigned a ) {
    last*/
 /* MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
    intrinsic function*/
-#define CRC32B(b, a) (__crc32b((unsigned_int)(b),(unsigned_int)(a)))
+#define CRC32B(b, a) (__crc32b((unsigned int)(b),(unsigned int)(a)))
 
 /* CRC declaration to ensure this function is always inlined */
 static INLINE unsigned __crc32b( unsigned b, unsigned a ) \
@@ -254,40 +234,6 @@ static INLINE unsigned __crc32b( unsigned b, unsigned a ) {
     return res;
 }
 
-
-/*
- * CRCN function calculates the CRC of 1 to 8 bits of input data with width 1 to
- * 16 bit.
- */
-/* [cover parentID={559F1AC9-23F4-4bc7-A192-3F268CFF3B28}][/cover] */
-/* MISRA2012_RULE_19_07_STATUS:Function like macro used to call the Tricore
-   intrinsic function*/
-#define CRCN(d, b, a) \
-                (__crcn ((unsigned_int)(d),(unsigned_int)(b),(unsigned_int)(a)))
-
-/* CRCN declaration to ensure this function is always inlined */
-static INLINE unsigned __crcn( unsigned d, unsigned b , unsigned a) \
-__attribute__ ((always_inline));
-
-/*
- * d : parameters of crc algorithm
- *
- * Bit31    15      12         10       9        8                2         Bit0
- *  ---------------------------------------------------------------------------
- * |        |        |         |        |        |                |    input   |
- * | poly-  | CRC    |    0    | inver  | bit    |        0       |    data    |
- * | nomial | width  |         | sion   | order  |                |    width   |
- * |        | (1-16) |         |        |        |                |    (1-8)   |
- *  ---------------------------------------------------------------------------
- * b : initial seed value or CRC of previous sequence of data
- * a : input data
-*/
-static INLINE unsigned __crcn( unsigned d, unsigned b, unsigned a) {
-  unsigned res;
-  __asm__ volatile
-             ("crcn %0,%1,%2,%3" :"=d"(res) : "d"(b), "d"(d), "d"(a): "memory");
-    return res;
-}
 
 /*
 Hitech Intrinsic: Insert ISYNC Instruction
@@ -365,7 +311,8 @@ intrinsic function*/
 /*
 Greenhills Intrinsic:  Move contents of a data register (Data)
 to the addressed core SFR (Reg).
-*/
+For Greenhills compiler, ISYNC is part of __mtcr call, hence not added in the
+macro definition*/
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
 #define MTCR(Reg, Data)   DSYNC();\
@@ -373,7 +320,7 @@ intrinsic function*/
                           ISYNC()
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
-#define NOP() __nop()
+//#define NOP() __nop()
 
 /*
 Greenhills Intrinsic: CRC32 instruction
@@ -382,7 +329,7 @@ Greenhills Intrinsic: CRC32 instruction
    given input.*/
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
   intrinsic function*/
-#define CRC32(b, a) (__crc32bw((unsigned_int)(b),(unsigned_int)(a)))
+#define CRC32(b, a) (__crc32bw((unsigned int)(b),(unsigned int)(a)))
 
 /* CRC declaration to ensure this function is always inlined */
 static INLINE unsigned __crc32bw( unsigned b, unsigned a ) \
@@ -404,7 +351,7 @@ static INLINE unsigned __crc32bw( unsigned b, unsigned a ) {
    last*/
 /* MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
    intrinsic function*/
-#define CRC32B(b, a) (__crc32b((unsigned_int)(b),(unsigned_int)(a)))
+#define CRC32B(b, a) (__crc32b((unsigned int)(b),(unsigned int)(a)))
 
 /* crcb declaration to ensure this function is always inlined */
 static INLINE unsigned __crc32b( unsigned b, unsigned a ) \
@@ -420,50 +367,14 @@ static INLINE unsigned __crc32b( unsigned b, unsigned a ) {
   __asm__ volatile("crc32.b %0, %1, %2" :"=d"(res) : "d"(b), "d"(a): "memory");
     return res;
 }
-
-/*
- * CRCN function calculates the CRC of 1 to 8 bits of input data with width 1 to
- * 16 bit.
- */
-/* [cover parentID={559F1AC9-23F4-4bc7-A192-3F268CFF3B28}][/cover] */
-/* MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
-   intrinsic function*/
-#define CRCN(d, b, a) \
-                (__crcn((unsigned_int)(d),(unsigned_int)(b), (unsigned_int)(a)))
-
-/* CRCN declaration to ensure this function is always inlined */
-static INLINE unsigned __crcn( unsigned d, unsigned b , unsigned a) \
-__attribute__ ((always_inline));
-
-/*
- * d : parameters of crc algorithm
- *
- * Bit31    15      12         10       9        8                2         Bit0
- *  ---------------------------------------------------------------------------
- * |        |        |         |        |        |                |    input   |
- * | poly-  | CRC    |    0    | inver  | bit    |        0       |    data    |
- * | nomial | width  |         | sion   | order  |                |    width   |
- * |        | (1-16) |         |        |        |                |    (1-8)   |
- *  ---------------------------------------------------------------------------
- * b : initial seed value or CRC of previous sequence of data
- * a : input data
- */
-static INLINE unsigned __crcn( unsigned d, unsigned b, unsigned a) {
-  unsigned res;
-
-  __asm__ volatile
-            ("crcn %0,%1,%2,%3": "=d"(res) : "d"(b), "d"(d), "d"(a) : "memory");
-    return res;
-}
-
 #endif /* #ifdef _GHS_C_TRICORE_ */
 #endif
 
 #ifdef _DIABDATA_C_TRICORE_
 #if (_DIABDATA_C_TRICORE_ == 1U)
 /*
- * Hitech Intrinsic: Insert ISYNC Instruction
- */
+Hitech Intrinsic: Insert ISYNC Instruction
+*/
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
 #define ISYNC() __isync()
@@ -492,9 +403,9 @@ intrinsic function*/
 intrinsic function*/
 #define MFCR(Reg) (__mfcr((Reg)))
 /*
- * Intrinsic:  Move contents of a data register (Data)
- * to the addressed core SFR (Reg)
- */
+Intrinsic:  Move contents of a data register (Data)
+to the addressed core SFR (Reg)
+*/
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
 #define MTCR(Reg, Data)   DSYNC();\
@@ -505,7 +416,7 @@ intrinsic function*/
 /* [cover parentID={8D500009-8000-4755-9A00-A1F075900E89}][/cover] */
 /*MISRA2012_RULE_19_07_STATUS:Function like macro used to call the Tricore
 intrinsic function*/
-#define CRC32(b, a) (__crc32bw((unsigned_int)(b),(unsigned_int)(a)))
+#define CRC32(b, a) (__crc32bw((unsigned int)(b),(unsigned int)(a)))
 
 /* CRC32B function calculates the CRC of 8 bits input data in which the least
    significant bit is processed first and most significant bit is processed
@@ -513,17 +424,7 @@ intrinsic function*/
 /* [cover parentID={D5E171A5-F94B-4e80-A365-4028FF7B9B11} ][/cover] */
 /* MISRA2012_RULE_19_07_STATUS:Function like macro used to call the Tricore
    intrinsic function*/
-#define CRC32B(b, a) (__crc32b((unsigned_int)(b),(unsigned_int)(a)))
-
-/*
- * CRCN function calculates the CRC of 1 to 8 bits of input data with width 1 to
- * 16 bit.
- */
-/* [cover parentID={559F1AC9-23F4-4bc7-A192-3F268CFF3B28}][/cover] */
-/* MISRA2012_RULE_19_07_STATUS:Function like macro used to call the Tricore
-   intrinsic function*/
-#define CRCN(d, b, a) \
-                (__crcn((unsigned_int)(d),(unsigned_int)(b), (unsigned_int)(a)))
+#define CRC32B(b, a) (__crc32b((unsigned int)(b),(unsigned int)(a)))
 
 #endif /* #ifdef _DIABDATA_C_TRICORE_ */
 #endif
@@ -555,8 +456,8 @@ intrinsic function*/
 **                                                                            **
 ** Description    : IMASKLDMST is used to write atomic instructions in        **
 **                  code.The function writes the number of bits of an integer **
-**                  value at a certain address location in memory with a      **
-**                  bitoffset. The number of bits must be a constant value    **
+**                  value at a certain address location in memory with a ...  **
+**                  bitoffset. The number of bits must be a constant value... **
 **                  Note that the Address must be Word Aligned.A direct type  **
 **                  cast to "int"is needed to avoid Misra Violation           **
 *******************************************************************************/
@@ -590,11 +491,9 @@ is needed to avoid Misra Violation
 /* [cover parentID={A1FBBD4D-8040-42e0-80F9-7577CAB1099B}][/cover] */
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
-/*MISRA2012_RULE_20_10_JUSTIFICATION: The "#" operator is used only to indicate
-  a constant used to set the number of bits required for IMASK instruction as
-  per inline assembly language syntax for Tasking compiler.
-  There is no impact due to order of evaluation associated with the "#" operator
-  used inside the inline assembly language construct */
+/*MISRA2012_RULE_20_10_JUSTIFICATION: '#' used only to set the number of bits
+ required for IMASK instruction. There is no impact of order of evaluation with
+ the # operator at this intrinsic function */
 #define IMASKLDMST(address,val,offset,bits) \
  __asm("imask e2,%0,%1,#" #bits " \n ldmst [%2]0,e2" \
         : : "d" (val), "d" (offset), "a" (address) : "e2")
@@ -752,7 +651,6 @@ intrinsic function*/
                                                     (unsigned)(pos), \
                                                     (unsigned)(width)))
 
-
 #endif /* #ifdef _DIABDATA_C_TRICORE_  */
 #endif
 
@@ -803,8 +701,8 @@ intrinsic function*/
 #endif
 
 /*******************************************************************************
-** Macro Syntax : cmpswap_w(unsigned_int volatile *address,                   **
-**                                unsigned_int value, unsigned_int condition) **
+** Macro Syntax : cmpswap_w(unsigned int volatile *address,                   **
+**                                unsigned int value, unsigned int condition) **
 **                                                                            **
 ** Parameters (in) : address : ResourceStatusPtr address                      **
 **                   value: This variable is updated with status of           **
@@ -816,8 +714,8 @@ intrinsic function*/
 *******************************************************************************/
 #ifdef _GNU_C_TRICORE_
 #if (_GNU_C_TRICORE_ == 1U)
-static INLINE unsigned_int cmpswap_w (unsigned_int volatile *address,
-           unsigned_int value, unsigned_int condition)
+static INLINE unsigned int cmpswap_w (unsigned int volatile *address,
+           unsigned int value, unsigned int condition)
 {
   __extension__ unsigned long long reg64
     = value | (unsigned long long) condition << 32;
@@ -850,8 +748,8 @@ static INLINE unsigned_int cmpswap_w (unsigned_int volatile *address,
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
 #define  Mcal_CmpAndSwap(ResourceStatusPtr,Value,Compare) \
-     __cmpswapw(((unsigned_int*)(void*)(ResourceStatusPtr)), \
-     ((unsigned_int)(Value)), ((unsigned_int)(Compare)) )
+     __cmpswapw(((unsigned int*)(void*)(ResourceStatusPtr)), \
+     ((unsigned int)(Value)), ((unsigned int)(Compare)) )
 
 #endif
 #endif
@@ -861,8 +759,8 @@ intrinsic function*/
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
 #define  Mcal_CmpAndSwap(ResourceStatusPtr,Value,Compare)  \
-        cmpswap_w(((unsigned_int*)(void*)ResourceStatusPtr), \
-        ((unsigned_int)Value), ((unsigned_int)Compare) )
+        cmpswap_w(((unsigned int*)(void*)ResourceStatusPtr), \
+        ((unsigned int)Value), ((unsigned int)Compare) )
 
 #endif
 #endif
@@ -883,7 +781,7 @@ intrinsic function*/
 #if (_DIABDATA_C_TRICORE_ == 1U)
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
-asm volatile unsigned_int inline Mcal_CmpAndSwap(
+asm volatile unsigned int inline Mcal_CmpAndSwap(
    volatile unsigned long *ResourceStatusPtr, unsigned long RetVal,\
                                                          unsigned long CmpVal)
 {
@@ -918,36 +816,13 @@ asm volatile unsigned inline __crc32b( unsigned  b, unsigned  a)
   mov %d3,a
   crc32.B %d2,%d2,%d3
 }
-
-/*
- * d : parameters of crc algorithm
- *
- * Bit31    15      12         10       9        8                2         Bit0
- *  ---------------------------------------------------------------------------
- * |        |        |         |        |        |                |    input   |
- * | poly-  | CRC    |    0    | inver  | bit    |        0       |    data    |
- * | nomial | width  |         | sion   | order  |                |    width   |
- * |        | (1-16) |         |        |        |                |    (1-8)   |
- *  ---------------------------------------------------------------------------
- * b : initial seed value or CRC of previous sequence of data
- * a : input data
- */
-asm volatile unsigned inline __crcn(unsigned  d, unsigned b, unsigned  a)
-{
-%reg d,b,a;
-!"%d3","%d2","%d4"
-  mov %d2,b
-  mov %d3,d
-  mov %d4,a
-  crcn %d2,%d2,%d3,%d4
-}
 #endif /* #ifdef _DIABDATA_C_TRICORE_ */
 #endif
 
 /*******************************************************************************
-** Macro Syntax : swapmskw(unsigned_int *address,                             **
-**                                unsigned_int value                          **
-**                                ,unsigned_int mask)                         **
+** Macro Syntax : swapmskw(unsigned int *address,                             **
+**                                unsigned int value                          **
+**                                ,unsigned int mask)                         **
 **                                                                            **
 ** Parameters (in) : address : ResourceStatusPtr address                      **
 **                   value: This variable is updated with status of           **
@@ -961,8 +836,8 @@ asm volatile unsigned inline __crcn(unsigned  d, unsigned b, unsigned  a)
 *******************************************************************************/
 #ifdef _GNU_C_TRICORE_
 #if (_GNU_C_TRICORE_ == 1U)
-static INLINE unsigned_int swapmskw (unsigned_int  *address,
-                                           unsigned_int value,unsigned_int mask)
+static INLINE unsigned int swapmskw (unsigned int  *address,
+                                           unsigned int value,unsigned int mask)
 {
   __extension__ unsigned long long reg64
     = value | (unsigned long long) mask << 32;
@@ -971,7 +846,7 @@ static INLINE unsigned_int swapmskw (unsigned_int  *address,
         : [reg]"+d" (reg64)
         : [addr]"a" (address)
         : "memory");
-     return ((unsigned_int)reg64 & mask);
+     return ((unsigned int)reg64 & mask);
 }
 
 #endif
@@ -996,8 +871,8 @@ static INLINE unsigned_int swapmskw (unsigned_int  *address,
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
 #define  Mcal_Swap(ResourceStatusPtr,Value,Mask) \
-    __swapmskw(((unsigned_int*)(ResourceStatusPtr)),((unsigned_int)Value),\
-             ((unsigned_int)Mask));
+    __swapmskw(((unsigned int*)(ResourceStatusPtr)),((unsigned int)Value),\
+             ((unsigned int)Mask));
 #endif
 #endif
 
@@ -1006,8 +881,8 @@ intrinsic function*/
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function*/
 #define  Mcal_Swap(ResourceStatusPtr,Value,Mask) \
-    swapmskw (((unsigned_int*)ResourceStatusPtr),((unsigned_int)Value),\
-             ((unsigned_int)Mask));
+    swapmskw (((unsigned int*)ResourceStatusPtr),((unsigned int)Value),\
+             ((unsigned int)Mask));
 #endif
 #endif
 
@@ -1027,11 +902,11 @@ intrinsic function*/
 /*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
 intrinsic function */
 #define  Mcal_Swap(ResourceStatusPtr,Value,Mask) \
-    swapmskw (((unsigned_int*)ResourceStatusPtr),((unsigned_int)Value),\
-             ((unsigned_int)Mask));
+    swapmskw (((unsigned int*)ResourceStatusPtr),((unsigned int)Value),\
+             ((unsigned int)Mask));
 
-asm volatile unsigned_int inline swapmskw(
-   unsigned_int *ResourceStatusPtr, unsigned long Value, unsigned long mask)
+asm volatile unsigned int inline swapmskw(
+   unsigned int *ResourceStatusPtr, unsigned long Value, unsigned long mask)
 {
 %reg Value,ResourceStatusPtr,mask;
 !"%d2","%d3"
@@ -1042,85 +917,4 @@ asm volatile unsigned_int inline swapmskw(
 }
 #endif /* _DIABDATA_C_TRICORE_ */
 #endif
-
-/*******************************************************************************
-** Macro Syntax : POPCNT(Value)                                               **
-**                                                                            **
-** Parameters (in) : Value: The uint32 value whose number of ones             **
-**                          is to be counted.                                 **
-**                                                                            **
-** Parameters (out): None                                                     **
-**                                                                            **
-** return value    : uint32 - Count of the number of bits set                 **
-**                   (Valid range: 0 to 32)                                   **
-**                                                                            **
-** Description     : POPCNT counts the number of ones in Value parameter and  **
-**                   returns the count as the result                          **
-**                                                                            **
-*******************************************************************************/
-#ifdef _TASKING_C_TRICORE_
-#if (_TASKING_C_TRICORE_ == 1U)
-/* [cover parentID={31327271-31E6-4741-9C3B-5D062691520D}][/cover] */
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
-intrinsic function*/
-#define POPCNT(Value)           (__popcntw((unsigned_int)Value))
-
-#endif
-#endif
-
-#ifdef _GNU_C_TRICORE_
-#if (_GNU_C_TRICORE_ == 1U)
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
-intrinsic function*/
-#define POPCNT(Value)           (_popcnt((unsigned_int)(Value)))
-
-/*POPCNT declaration to ensure this function is always inlined */
-static INLINE unsigned _popcnt(unsigned Value) __attribute__ ((always_inline));
-/*POPCNT counts the number of ones in Value parameter and
-returns the count as the result*/
-static INLINE unsigned _popcnt(unsigned Value)
-{
-  unsigned ResultVal;
-
-  __asm__ volatile("popcnt.w %0, %1"
-    :"=d"(ResultVal)
-    : "d"(Value));
-
-  return ResultVal;
-
-}
-#endif /* #if (_GNU_C_TRICORE_ == 1U) */
-#endif /* _GNU_C_TRICORE_ */
-
-#ifdef _GHS_C_TRICORE_
-#if (_GHS_C_TRICORE_ == 1U)
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
-intrinsic function*/
-#define POPCNT(Value)           (_popcnt((unsigned_int)(Value)))
-
-/*POPCNT declaration to ensure this function is always inlined */
-static INLINE unsigned _popcnt(unsigned Value) __attribute__ ((always_inline));
-/*POPCNT counts the number of ones in Value parameter and
-returns the count as the result*/
-static INLINE unsigned _popcnt(unsigned Value)
-{
-  unsigned ResultVal;
-  __asm__ volatile ("popcnt.w %0, %1"
-    : "=d"(ResultVal)
-    : "d"(Value));
-
-  return ResultVal;
-
-}
-#endif /* #if (_GHS_C_TRICORE_ == 1U) */
-#endif /* _GHS_C_TRICORE_ */
-
-#ifdef _DIABDATA_C_TRICORE_
-#if (_DIABDATA_C_TRICORE_ == 1U)
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro used to call the Tricore
-intrinsic function*/
-#define  POPCNT(Value)          (_popcnt_w((unsigned_int)(Value)))
-
-#endif /* #if (_DIABDATA_C_TRICORE_ == 1U) */
-#endif /* _DIABDATA_C_TRICORE_ */
 #endif /* MCAL_COMPILER_H  */

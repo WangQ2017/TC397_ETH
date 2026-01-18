@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2021)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,11 +12,11 @@
 **                                                                            **
 **  FILENAME  : Port_Cfg.h                                                    **
 **                                                                            **
-**  VERSION   : 11.0.0                                                         **
+**  VERSION   : 1.40.0_9.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2025-12-20, 17:47:50              !!!IGNORE-LINE!!!           **
+**  DATE, TIME: 2026-01-18, 20:54:23              !!!IGNORE-LINE !!!      **
 **                                                                            **
-**  GENERATOR : Build b191017-0938                !!!IGNORE-LINE!!!           ** 
+**  GENERATOR : Build b170330-0431                !!!IGNORE-LINE !!!        ** 
 **                                                                            **
 **  BSW MODULE DECRIPTION : Port.bmd                                          **
 **                                                                            **
@@ -31,7 +31,7 @@
 **  DESCRIPTION  : Port configuration generated out of ECUC file              **
 **                                                                            **
 **  SPECIFICATION(S) : Specification of Port Driver, AUTOSAR Release 4.2.2    **
-**                     and AUTOSAR Release 4.4.0                              **
+**                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
 *******************************************************************************/
@@ -40,13 +40,13 @@
 
 /* AUTOSAR specification version numbers */
 #define PORT_AR_RELEASE_MAJOR_VERSION  (4U)
-#define PORT_AR_RELEASE_MINOR_VERSION  (4U)
-#define PORT_AR_RELEASE_REVISION_VERSION (0U)
+#define PORT_AR_RELEASE_MINOR_VERSION  (2U)
+#define PORT_AR_RELEASE_REVISION_VERSION (2U)
 
 /* Vendor specific implementation version information */
-#define PORT_SW_MAJOR_VERSION  (20U)
-#define PORT_SW_MINOR_VERSION  (10U)
-#define PORT_SW_PATCH_VERSION  (0U)
+#define PORT_SW_MAJOR_VERSION  (10U)
+#define PORT_SW_MINOR_VERSION  (40U)
+#define PORT_SW_PATCH_VERSION  (1U)
 /*******************************************************************************
 **                      Includes                                              **
 *******************************************************************************/
@@ -61,7 +61,7 @@ Configuration: PORT_DEV_ERROR_DETECT
 - if STD_ON, DET is Enabled 
 - if STD_OFF, DET is Disabled 
 */
-#define PORT_DEV_ERROR_DETECT       (STD_OFF)
+#define PORT_DEV_ERROR_DETECT       (STD_ON)
 /*
 Configuration: PORT_VERSION_INFO_API 
 - if STD_ON,  Function Port_GetVersionInfo is available  
@@ -74,14 +74,14 @@ Configuration: PORT_SET_PIN_MODE_API
 - if STD_OFF, Function Port_SetPinMode is not available 
 */
 
-#define PORT_SET_PIN_MODE_API       (STD_OFF)
+#define PORT_SET_PIN_MODE_API       (STD_ON)
 /*
 Configuration: PORT_SET_PIN_DIRECTION_API
 - if STD_ON,  Function Port_SetPinDirection is available  
 - if STD_OFF, Function Port_SetPinDirection is not available 
 */
 
-#define PORT_SET_PIN_DIRECTION_API  (STD_OFF)
+#define PORT_SET_PIN_DIRECTION_API  (STD_ON)
 /*
 Configuration: PORT_INIT_API_MODE:
 -User Mode Macro for Init API
@@ -103,7 +103,7 @@ Configuration: PortInitCheckApi
 
 /*Macro for the constants*/
 
-#define PORT_DATA_OFS_EMER                (7U)
+#define PORT_DATA_OFS_EMER                (13U)
 
 
 /* Definition to specify the ports available on the microcontroller
@@ -145,6 +145,7 @@ microcontroller
 
 #define PORT_MAX_LPCR_REG           (7U)
 /*Macro that defines the derivate for errata PORTS_TC.H012 */
+
 #define PORT14_PDISC_MASK             (0U)
 
 /* Definition to specify the ports that are LVDS ports on the
@@ -245,7 +246,7 @@ User Defined Symbolic names of all port pins Port_ConfigSet
 /*   
 Port0   
 */ 
-/* Symbolic Name: PORT_0_PIN_0_PHY_RESET */
+/* Symbolic Name: PORT_0_PIN_0 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -254,7 +255,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_0_PORT_0_PIN_0_PHY_RESET 
+#ifndef PortConf_PortContainer_0_PORT_0_PIN_0 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -263,9 +264,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_0_PORT_0_PIN_0_PHY_RESET  (Port_PinType )(0x0000U)
+#define PortConf_PortContainer_0_PORT_0_PIN_0  (Port_PinType )(0x0000U)
 #endif
-/* Symbolic Name: PORT_0_PIN_1_PHY_WAKE */
+/* Symbolic Name: PORT_0_PIN_1 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -274,7 +275,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_0_PORT_0_PIN_1_PHY_WAKE 
+#ifndef PortConf_PortContainer_0_PORT_0_PIN_1 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -283,7 +284,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_0_PORT_0_PIN_1_PHY_WAKE  (Port_PinType )(0x0001U)
+#define PortConf_PortContainer_0_PORT_0_PIN_1  (Port_PinType )(0x0001U)
 #endif
 /* Symbolic Name: PORT_0_PIN_2 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1037,7 +1038,7 @@ in generated code due to Autosar Naming constraints.*/
 /*   
 Port11   
 */ 
-/* Symbolic Name: PORT_11_PIN_0_GETH_TXD3 */
+/* Symbolic Name: PORT_11_PIN_0 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1046,7 +1047,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_0_GETH_TXD3 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_0 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1055,9 +1056,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_0_GETH_TXD3  (Port_PinType )(0x00b0U)
+#define PortConf_PortContainer_11_PORT_11_PIN_0  (Port_PinType )(0x00b0U)
 #endif
-/* Symbolic Name: PORT_11_PIN_1_GETH_TXD2 */
+/* Symbolic Name: PORT_11_PIN_1 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1066,7 +1067,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_1_GETH_TXD2 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_1 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1075,9 +1076,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_1_GETH_TXD2  (Port_PinType )(0x00b1U)
+#define PortConf_PortContainer_11_PORT_11_PIN_1  (Port_PinType )(0x00b1U)
 #endif
-/* Symbolic Name: PORT_11_PIN_2_GETH_TXD1 */
+/* Symbolic Name: PORT_11_PIN_2 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1086,7 +1087,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_2_GETH_TXD1 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_2 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1095,9 +1096,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_2_GETH_TXD1  (Port_PinType )(0x00b2U)
+#define PortConf_PortContainer_11_PORT_11_PIN_2  (Port_PinType )(0x00b2U)
 #endif
-/* Symbolic Name: PORT_11_PIN_3_GETH_TXD0 */
+/* Symbolic Name: PORT_11_PIN_3 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1106,7 +1107,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_3_GETH_TXD0 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_3 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1115,9 +1116,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_3_GETH_TXD0  (Port_PinType )(0x00b3U)
+#define PortConf_PortContainer_11_PORT_11_PIN_3  (Port_PinType )(0x00b3U)
 #endif
-/* Symbolic Name: PORT_11_PIN_4_GETH_TXER_MII */
+/* Symbolic Name: PORT_11_PIN_4 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1126,7 +1127,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_4_GETH_TXER_MII 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_4 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1135,9 +1136,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_4_GETH_TXER_MII  (Port_PinType )(0x00b4U)
+#define PortConf_PortContainer_11_PORT_11_PIN_4  (Port_PinType )(0x00b4U)
 #endif
-/* Symbolic Name: PORT_11_PIN_5_GETH_TXCLKA_MII */
+/* Symbolic Name: PORT_11_PIN_5 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1146,7 +1147,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_5_GETH_TXCLKA_MII 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_5 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1155,9 +1156,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_5_GETH_TXCLKA_MII  (Port_PinType )(0x00b5U)
+#define PortConf_PortContainer_11_PORT_11_PIN_5  (Port_PinType )(0x00b5U)
 #endif
-/* Symbolic Name: PORT_11_PIN_6_GETH_TXEN */
+/* Symbolic Name: PORT_11_PIN_6 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1166,7 +1167,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_6_GETH_TXEN 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_6 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1175,9 +1176,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_6_GETH_TXEN  (Port_PinType )(0x00b6U)
+#define PortConf_PortContainer_11_PORT_11_PIN_6  (Port_PinType )(0x00b6U)
 #endif
-/* Symbolic Name: PORT_11_PIN_7_GETH_RXD3 */
+/* Symbolic Name: PORT_11_PIN_7 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1186,7 +1187,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_7_GETH_RXD3 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_7 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1195,9 +1196,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_7_GETH_RXD3  (Port_PinType )(0x00b7U)
+#define PortConf_PortContainer_11_PORT_11_PIN_7  (Port_PinType )(0x00b7U)
 #endif
-/* Symbolic Name: PORT_11_PIN_8_GETH_RXD2 */
+/* Symbolic Name: PORT_11_PIN_8 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1206,7 +1207,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_8_GETH_RXD2 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_8 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1215,9 +1216,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_8_GETH_RXD2  (Port_PinType )(0x00b8U)
+#define PortConf_PortContainer_11_PORT_11_PIN_8  (Port_PinType )(0x00b8U)
 #endif
-/* Symbolic Name: PORT_11_PIN_9_GETH_RXD1 */
+/* Symbolic Name: PORT_11_PIN_9 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1226,7 +1227,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_9_GETH_RXD1 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_9 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1235,9 +1236,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_9_GETH_RXD1  (Port_PinType )(0x00b9U)
+#define PortConf_PortContainer_11_PORT_11_PIN_9  (Port_PinType )(0x00b9U)
 #endif
-/* Symbolic Name: PORT_11_PIN_10_GETH_RXD0 */
+/* Symbolic Name: PORT_11_PIN_10 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1246,7 +1247,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_10_GETH_RXD0 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_10 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1255,9 +1256,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_10_GETH_RXD0  (Port_PinType )(0x00baU)
+#define PortConf_PortContainer_11_PORT_11_PIN_10  (Port_PinType )(0x00baU)
 #endif
-/* Symbolic Name: PORT_11_PIN_11_GETH_RXDV */
+/* Symbolic Name: PORT_11_PIN_11 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1266,7 +1267,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_11_GETH_RXDV 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_11 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1275,9 +1276,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_11_GETH_RXDV  (Port_PinType )(0x00bbU)
+#define PortConf_PortContainer_11_PORT_11_PIN_11  (Port_PinType )(0x00bbU)
 #endif
-/* Symbolic Name: PORT_11_PIN_12_GETH_RXCLK */
+/* Symbolic Name: PORT_11_PIN_12 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1286,7 +1287,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_12_GETH_RXCLK 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_12 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1295,9 +1296,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_12_GETH_RXCLK  (Port_PinType )(0x00bcU)
+#define PortConf_PortContainer_11_PORT_11_PIN_12  (Port_PinType )(0x00bcU)
 #endif
-/* Symbolic Name: PORT_11_PIN_13_GETH_RXERA_MII */
+/* Symbolic Name: PORT_11_PIN_13 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1306,7 +1307,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_11_PORT_11_PIN_13_GETH_RXERA_MII 
+#ifndef PortConf_PortContainer_11_PORT_11_PIN_13 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1315,7 +1316,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_11_PORT_11_PIN_13_GETH_RXERA_MII  (Port_PinType )(0x00bdU)
+#define PortConf_PortContainer_11_PORT_11_PIN_13  (Port_PinType )(0x00bdU)
 #endif
 /* Symbolic Name: PORT_11_PIN_14 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1360,7 +1361,7 @@ in generated code due to Autosar Naming constraints.*/
 /*   
 Port12   
 */ 
-/* Symbolic Name: PORT_12_PIN_0_GETH_MDC */
+/* Symbolic Name: PORT_12_PIN_0 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1369,7 +1370,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_12_PORT_12_PIN_0_GETH_MDC 
+#ifndef PortConf_PortContainer_12_PORT_12_PIN_0 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1378,9 +1379,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_12_PORT_12_PIN_0_GETH_MDC  (Port_PinType )(0x00c0U)
+#define PortConf_PortContainer_12_PORT_12_PIN_0  (Port_PinType )(0x00c0U)
 #endif
-/* Symbolic Name: PORT_12_PIN_1_GETH_MDIO */
+/* Symbolic Name: PORT_12_PIN_1 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1389,7 +1390,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_12_PORT_12_PIN_1_GETH_MDIO 
+#ifndef PortConf_PortContainer_12_PORT_12_PIN_1 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1398,7 +1399,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_12_PORT_12_PIN_1_GETH_MDIO  (Port_PinType )(0x00c1U)
+#define PortConf_PortContainer_12_PORT_12_PIN_1  (Port_PinType )(0x00c1U)
 #endif
 /*   
 Port13   
@@ -1486,7 +1487,7 @@ in generated code due to Autosar Naming constraints.*/
 /*   
 Port14   
 */ 
-/* Symbolic Name: PORT_14_PIN_0_UART_TX */
+/* Symbolic Name: PORT_14_PIN_0 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1495,7 +1496,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_14_PORT_14_PIN_0_UART_TX 
+#ifndef PortConf_PortContainer_14_PORT_14_PIN_0 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1504,9 +1505,9 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_14_PORT_14_PIN_0_UART_TX  (Port_PinType )(0x00e0U)
+#define PortConf_PortContainer_14_PORT_14_PIN_0  (Port_PinType )(0x00e0U)
 #endif
-/* Symbolic Name: PORT_14_PIN_1_UART_RX */
+/* Symbolic Name: PORT_14_PIN_1 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1515,7 +1516,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#ifndef PortConf_PortContainer_14_PORT_14_PIN_1_UART_RX 
+#ifndef PortConf_PortContainer_14_PORT_14_PIN_1 
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -1524,7 +1525,7 @@ in generated code due to Autosar Naming constraints.*/
 in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
 in generated code due to Autosar Naming constraints.*/
-#define PortConf_PortContainer_14_PORT_14_PIN_1_UART_RX  (Port_PinType )(0x00e1U)
+#define PortConf_PortContainer_14_PORT_14_PIN_1  (Port_PinType )(0x00e1U)
 #endif
 /* Symbolic Name: PORT_14_PIN_2 */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.

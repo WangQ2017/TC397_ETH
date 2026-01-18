@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2023)                                 **
+** Copyright (C) Infineon Technologies (2019)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : Dio.c                                                      **
 **                                                                            **
-**  VERSION      : 28.0.0                                                     **
+**  VERSION      : 1.40.0_16.0.0                                              **
 **                                                                            **
-**  DATE         : 2023-07-05                                                 **
+**  DATE         : 2019-11-08                                                 **
 **                                                                            **
 **  VARIANT      : Variant LT                                                 **
 **                                                                            **
@@ -27,12 +27,11 @@
 **  DESCRIPTION  : Dio Driver source file                                     **
 **                                                                            **
 **  SPECIFICATION(S) : Specification of Dio Driver, AUTOSAR Release 4.2.2     **
-**                     and AUTOSAR Release 4.4.0                              **
 **                                                                            **
-** MAY BE CHANGED BY USER : no                                                **
+**  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
 *******************************************************************************/
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}][/cover] */
+
 /* [cover parentID={684B8436-0E72-4797-A3B4-2A4FBDD083F0},
                    {AC8683E3-C8D8-4704-B9CC-4620683FE9C3}] [/cover] */
 
@@ -56,8 +55,8 @@
 #include "Det.h"
 #endif /* ((DIO_SAFETY_ENABLE == STD_ON) || (DIO_DEV_ERROR_DETECT == STD_ON)) */
 
-
-
+  
+   
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
 *******************************************************************************/
@@ -76,11 +75,11 @@
 #error "DIO_SW_PATCH_VERSION is not defined. "
 #endif
 /* Check for Correct inclusion of headers */
-#if ( DIO_SW_MAJOR_VERSION != 20U )
+#if ( DIO_SW_MAJOR_VERSION != 10U )
 #error "DIO_SW_MAJOR_VERSION does not match. "
 #endif
 
-#if ( DIO_SW_MINOR_VERSION != 25U )
+#if ( DIO_SW_MINOR_VERSION != 40U )
 #error "DIO_SW_MINOR_VERSION does not match. "
 #endif
 
@@ -92,27 +91,13 @@
 #error "DIO_AR_RELEASE_MAJOR_VERSION is not defined."
 #endif
 
-#ifndef DIO_AR_RELEASE_MINOR_VERSION
-#error "DIO_AR_RELEASE_MINOR_VERSION is not defined. "
-#endif
-
-#ifndef DIO_AR_RELEASE_REVISION_VERSION
-#error "DIO_AR_RELEASE_REVISION_VERSION is not defined. "
-#endif
 
 /* [cover parentID={F7FBC1BE-361C-48d8-BE05-13B8C0CF8618}]
   [/cover] */
-#if ( DIO_AR_RELEASE_MAJOR_VERSION != MCAL_AR_RELEASE_MAJOR_VERSION )
+#if ( DIO_AR_RELEASE_MAJOR_VERSION != 4U)
 #error "DIO_AR_RELEASE_MAJOR_VERSION does not match."
 #endif
 
-#if (DIO_AR_RELEASE_MINOR_VERSION != MCAL_AR_RELEASE_MINOR_VERSION )
-#error "DIO_AR_RELEASE_MINOR_VERSION does not match. "
-#endif
-
-#if ( DIO_AR_RELEASE_REVISION_VERSION != MCAL_AR_RELEASE_REVISION_VERSION )
-#error "DIO_AR_RELEASE_REVISION_VERSION does not match. "
-#endif
 
 /* [cover parentID={905B21B2-76DD-4e4d-8BE1-81E809E398B0}]
   [/cover] */
@@ -179,25 +164,6 @@
 #define DIO_OMR_MASK_BIT            ((uint32)0x00010001)
 
 #endif
-
-#if(DIO_MASKED_WRITE_PORT_API == STD_ON)
-#define OMR_BIT_UPDATE_SHIFT        (16U)
-#endif
-
-#if((DIO_SAFETY_ENABLE == STD_ON) || (DIO_DEV_ERROR_DETECT == STD_ON))
-#define PORT_NO_GREATER_THAN_32  (32U)
-#define PORT_POPCNT_CALC         (31U)
-#define PORT_POPCNT_CALC_32_63   (PORT_POPCNT_CALC + PORT_NO_GREATER_THAN_32)
-#endif
-
-/*******************************************************************************
-**                         User Mode Macros                                   **
-*******************************************************************************/
-
-/*[cover parentID={89094628-24A7-41b5-B0E1-47A7736F20AE}]
-User Mode macros not required
-[/cover]*/
-
 /*******************************************************************************
 **                   Function like macro definitions                          **
 *******************************************************************************/
@@ -218,7 +184,7 @@ User Mode macros not required
 **                      Private Constant Definitions                          **
 *******************************************************************************/
 /* [cover parentID={5713A17A-3FA1-427f-A0B6-89125A17689A},
-                   {72DABBEB-F27B-4677-B6B4-B53F634341BA}] [/cover] */
+                            {72DABBEB-F27B-4677-B6B4-B53F634341BA}] [/cover] */
 /* [cover parentID={2757CB7F-252C-4231-80B1-F6375E8BAE83},
                    {EA0715EE-3E3C-4aac-A42E-4B5CFC96CEED},
                    {566ED99C-0D96-46ac-97BF-E97B04E2C700}] [/cover] */
@@ -228,9 +194,9 @@ User Mode macros not required
 Dio_Memmap.h header is included without safegaurd.*/
 #include "Dio_MemMap.h"
 
-/* MISRA2012_RULE_8_9_JUSTIFICATION: The array Dio_kMaskAllPortPins
-cannot be made local since it is used by various APIs when Safety/DET is ON.
-Hence it cannot be defined within block scope. */
+/* MISRA2012_RULE_8_9_JUSTIFICATION: Variable Dio_kMaskAllPortPins cannot be
+defined at block scope as it declared as static const under memmap section
+DIO_START_SEC_CONST_ASIL_B_GLOBAL_16 */
 /* Mask values for all the ports.
    This constant is used to mask the All port pins within the port */
 static const Dio_PortLevelType Dio_kMaskAllPortPins[] =
@@ -395,11 +361,6 @@ LOCAL_INLINE Ifx_P *Dio_lGetPortAdr(const Dio_PortType PortNumber);
 
 /* INLINE function to identify the pin number from the passed ChannelId */
 LOCAL_INLINE uint8 Dio_lGetPinNumber(const Dio_ChannelType ChannelId);
-
-#if(DIO_SAFETY_ENABLE == STD_ON)
-/*INLINE function to check if the Level passed is valid */
-LOCAL_INLINE uint8 Dio_lCheckLevel(const Dio_LevelType Level);
-#endif
 
 /*******************************************************************************
 **                      Global Function Definitions                           **
@@ -605,7 +566,7 @@ void Dio_WriteChannel(const Dio_ChannelType ChannelId,
 
       Dio_lReportError(DIO_SID_WRITECHANNEL, DIO_E_PARAM_INVALID_CHANNEL_ID);
       ErrStatus = (uint8)E_NOT_OK;
-    }
+     }
     #endif
   }
   /* [cover parentID={9B9B7CD6-F0D7-4548-B082-52B225435AB4}]
@@ -614,13 +575,6 @@ void Dio_WriteChannel(const Dio_ChannelType ChannelId,
   if(ErrStatus == (uint8)E_OK)
   #endif /* DIO_DEV_ERROR_DETECT == STD_ON*/
   {
-    #if(DIO_SAFETY_ENABLE == STD_ON)
-    ErrStatus=Dio_lCheckLevel(Level);
-     /* [cover parentID={10D47BAE-3095-4e05-A568-3D6057D3CE29}]
-     [/cover] */
-    if(ErrStatus == (uint8)E_OK)
-    #endif
-    {
     /* Decide the value to be written depending
       on the input parameter Level */
     /* [cover parentID={6D6740AD-E184-4a0b-9408-DB950AA309DF}]
@@ -640,8 +594,6 @@ void Dio_WriteChannel(const Dio_ChannelType ChannelId,
        [/cover] */
     Mcal_SetBitAtomic(&(GetPortAddressPtr->OMR), Offset, 16,\
                        (OmrVal << PinNumber));
-    }
-
   }
   /* MISRA2012_RULE_2_2_JUSTIFICATION:Value assigned to variable
   GetPortAddressPtr is passed to Mcal_SetBitAtomic operation*/
@@ -770,7 +722,7 @@ void Dio_WritePort (const Dio_PortType PortId, const  Dio_PortLevelType Level)
   uint32  PortReadOnly;
   #endif
   #endif
-
+  
    /* [cover parentID={0A678F0C-6A6B-4c0e-839B-19AAE20E59C7}]
      Det is Enabled or Safety is Enabled
      [/cover] */
@@ -887,29 +839,16 @@ Dio_PortLevelType Dio_ReadChannelGroup
   /*  [cover parentID={D6AA7AB3-0F4F-480d-8EE6-1C6404026E7A}]
       Check for GroupID
       [/cover] */
-  /*  [cover parentID={6D8BC7AB-2AEF-463b-B497-CA0339576B64}]
-       [/cover] */
-  if(ChannelGroupIdPtr == NULL_PTR)
+
+  if( Dio_lCheckGroupId(ChannelGroupIdPtr) == (uint8)DIO_ERROR)
   {
-    /*  [cover parentID={6D55A459-F313-4e12-985C-56A53889E39F}]
-         [/cover] */
-    Dio_lReportError(DIO_SID_READCHANNELGROUP, DIO_E_PARAM_POINTER);
+    /* The group id passed to the Api is invalid. Report error id
+         DIO_E_PARAM_INVALID__GROUP to the error hook Api */
+    /* [cover parentID={4801209C-8E6E-4add-A591-830CD2141060}]
+       Report Error
+       [/cover] */
+    Dio_lReportError(DIO_SID_READCHANNELGROUP, DIO_E_PARAM_INVALID_GROUP);
     ErrStatus = (uint8)E_NOT_OK;
-  }
- /*  [cover parentID={093FB499-6E07-42d2-A831-38AFC46FA444}]
-       [/cover] */
-  if(ErrStatus == (uint8)E_OK)
-  {
-    if( Dio_lCheckGroupId(ChannelGroupIdPtr) == (uint8)DIO_ERROR)
-    {
-      /* The group id passed to the Api is invalid. Report error id
-           DIO_E_PARAM_INVALID__GROUP to the error hook Api */
-      /* [cover parentID={4801209C-8E6E-4add-A591-830CD2141060}]
-         Report Error
-         [/cover] */
-      Dio_lReportError(DIO_SID_READCHANNELGROUP, DIO_E_PARAM_INVALID_GROUP);
-      ErrStatus = (uint8)E_NOT_OK;
-    }
   }
   /* [cover parentID={01553059-1114-447e-9EEB-C3805171FE0F}]
      Have all Checks Passed
@@ -986,60 +925,46 @@ void Dio_WriteChannelGroup
   uint8  DioErrorStatus;
 
   ErrStatus = E_OK;
-   /* [cover parentID={2F2519CC-3F48-4bd0-B28B-EAD602D3AAFE}]
-  [/cover] */
-  if(ChannelGroupIdPtr == NULL_PTR)
-  {
-    /* [cover parentID={E2312224-8CE6-469e-8576-CB8A8D4B67D9}]
-    [/cover] */
-    Dio_lReportError(DIO_SID_WRITECHANNELGROUP, DIO_E_PARAM_POINTER);
-    ErrStatus = (uint8)E_NOT_OK;
-  }
-   /* [cover parentID={69F87D63-527F-4abd-8703-D66C40662AD5}]
-  [/cover] */
-  if(ErrStatus == (uint8)E_OK)
-  {
-    /* [cover parentID={A5D86D3E-A74B-477c-84BE-45128301E9D4}]
+  /* [cover parentID={A5D86D3E-A74B-477c-84BE-45128301E9D4}]
      If Invalid ChannelGroup
      [/cover] */
-    /* [cover parentID={1D325D81-BD2F-4f1b-AF97-62C94394B62E}]
+  /* [cover parentID={1D325D81-BD2F-4f1b-AF97-62C94394B62E}]
      Verify Group Id
      [/cover] */
-    if(Dio_lCheckGroupId(ChannelGroupIdPtr) == (uint8)DIO_ERROR)
-    {
-      DioErrorStatus = DIO_ERROR;
-    }
+  if(Dio_lCheckGroupId(ChannelGroupIdPtr) == (uint8)DIO_ERROR)
+  {
+    DioErrorStatus = DIO_ERROR;
+  }
 
-    /* Check if the port is Analog port for Write operation */
-    /* [cover parentID={382F4FCB-4C5B-439d-9357-A2154158A6A3}]
-       If Read Only port not Zero
-       [/cover] */
-    /* [cover parentID={31C3A394-C76B-4763-A4ED-34F6F8A4EE96}]
-       Verify Read Only Port
-      [/cover] */
-    else if (Dio_lIsPortReadOnly((uint32)(ChannelGroupIdPtr->port))
+  /* Check if the port is Analog port for Write operation */
+  /* [cover parentID={382F4FCB-4C5B-439d-9357-A2154158A6A3}]
+     If Read Only port not Zero
+     [/cover] */
+  /* [cover parentID={31C3A394-C76B-4763-A4ED-34F6F8A4EE96}]
+     Verify Read Only Port
+    [/cover] */
+  else if (Dio_lIsPortReadOnly((uint32)(ChannelGroupIdPtr->port))
            != (uint32)DIO_NUMBER_0)
-    {
-      DioErrorStatus = DIO_ERROR;
-    }
-    else
-    {
-      DioErrorStatus = DIO_NO_ERROR;
-    }
-        /* [cover parentID={5E8EACC6-B779-4ba0-8587-78732826E2B1}]
-       Check for Status
+  {
+    DioErrorStatus = DIO_ERROR;
+  }
+  else
+  {
+    DioErrorStatus = DIO_NO_ERROR;
+  }
+  /* [cover parentID={5E8EACC6-B779-4ba0-8587-78732826E2B1}]
+     Check for Status
+     [/cover] */
+  if (DioErrorStatus == DIO_ERROR)
+  {
+    /* The group id passed to the Api is invalid. Report error id
+          DIO_E_PARAM_INVALID__GROUP to the error hook Api */
+    /* [cover parentID={EF0EFB86-DEB2-453d-8AB2-88BE43DE43E8}]
+       Report Error
        [/cover] */
-    if (DioErrorStatus == DIO_ERROR)
-    {
-      /* The group id passed to the Api is invalid. Report error id
-             DIO_E_PARAM_INVALID__GROUP to the error hook Api */
-      /* [cover parentID={EF0EFB86-DEB2-453d-8AB2-88BE43DE43E8}]
-           Report Error
-           [/cover] */
-      Dio_lReportError(DIO_SID_WRITECHANNELGROUP, DIO_E_PARAM_INVALID_GROUP);
-      ErrStatus = (uint8)E_NOT_OK;
+    Dio_lReportError(DIO_SID_WRITECHANNELGROUP, DIO_E_PARAM_INVALID_GROUP);
+    ErrStatus = (uint8)E_NOT_OK;
 
-    }
   }
   /* [cover parentID={272C597D-86F8-48a7-A27B-9F6E70D48153}]
      Have all Checks passed
@@ -1165,7 +1090,7 @@ Dio_LevelType Dio_FlipChannel(const Dio_ChannelType ChannelId)
     ErrStatus = (uint8)E_NOT_OK;
   }
   else
-  {
+  {  
     /* [cover parentID={D65EBB11-5F03-4047-A192-777A40874A43}]
        ReadOnly Port is there
        [/cover] */
@@ -1366,7 +1291,7 @@ static void Dio_lReportError(const uint8 ApiId, const uint8 ErrorId)
      Check Det is Enabled
      [/cover] */
   #if (DIO_DEV_ERROR_DETECT == STD_ON)
-  (void)Det_ReportError(
+  Det_ReportError(
     DIO_MODULE_ID,
     DIO_INSTANCE_ID,
     ApiId,
@@ -1421,13 +1346,14 @@ LOCAL_INLINE uint8 Dio_lCheckChannelId(const Dio_ChannelType ChannelId,
                            const Dio_PortType PortNumber, const uint8 PinNumber)
 {
 
+  uint32       Index;
   uint32       ConfigIndex;
   uint32       PortAvailable;
   uint32       PinAvailable;
   uint8        ErrStatus;
-  uint32       PopcntTempVal;
 
   ErrStatus = (uint8)DIO_NO_ERROR;
+  ConfigIndex = DIO_NUMBER_0;
 
   /* [cover parentID={A3FAA4D9-94E0-4551-B208-AF2032F87771}]
      ChannelID > MaxPort Pin
@@ -1452,20 +1378,21 @@ LOCAL_INLINE uint8 Dio_lCheckChannelId(const Dio_ChannelType ChannelId,
     }
     else
     {
-      /* [cover parentID={1F3A93AB-E025-4f0d-8306-196B2C576BF1}]
-      [/cover] */
-      if(PortNumber < PORT_NO_GREATER_THAN_32)
+      /* [cover parentID={0BCE364E-2B1F-46d7-9339-7D5AFC719D66}]
+         Index Of Configuration
+         [/cover] */
+      for(Index = (uint32)DIO_NUMBER_0; Index <= (uint32)PortNumber; Index++)
       {
-       PopcntTempVal=DIO_PORTS_AVAILABLE_00_31 << (PORT_POPCNT_CALC - PortNumber);
-       ConfigIndex=POPCNT(PopcntTempVal)-1U;
+        /* [cover parentID={F2B75736-ECF0-4c2f-8D45-A658E8C73262}]
+           Identify Configuration
+           [/cover] */
+        if(Dio_lIsPortAvailable(Index) != (uint32)DIO_NUMBER_0)
+        {
+          ConfigIndex++; /* to identify the Index of configuration*/
+        }
       }
-      else
-      {
-       ConfigIndex=POPCNT(DIO_PORTS_AVAILABLE_00_31);
-       PopcntTempVal= (uint32)DIO_PORTS_AVAILABLE_32_63 <<(PORT_POPCNT_CALC_32_63 - PortNumber);
-       ConfigIndex +=POPCNT(PopcntTempVal) - 1U;
-      }
-
+      /*decremented since the ConfigIndex value is 1 for Index 0*/
+      ConfigIndex--;
       /* [cover parentID={AF6C6856-F626-4f56-8CCA-5472851357B3}]
          If Port Not Configured
          [/cover] */
@@ -1593,6 +1520,8 @@ LOCAL_INLINE uint8 Dio_lCheckChGrpValue
       ErrStatus = (uint8)DIO_NO_ERROR;
     }
   }
+
+
   return ErrStatus;
 }/* Dio_lCheckChGrpValue */
 
@@ -1624,12 +1553,13 @@ LOCAL_INLINE uint8 Dio_lCheckChGrpValue
 *******************************************************************************/
 LOCAL_INLINE uint8 Dio_lCheckPortId (const Dio_PortType PortId)
 {
+  uint32      Index;
   uint32      ConfigIndex;
   uint32      PortAvailable;
   uint8       ErrStatus;
-  uint32      PopcntTempVal;
 
   ErrStatus = (uint8)DIO_NO_ERROR;
+  ConfigIndex = 0U;
 
   PortAvailable = (uint32)Dio_lIsPortAvailable((uint32)PortId);
 
@@ -1643,19 +1573,21 @@ LOCAL_INLINE uint8 Dio_lCheckPortId (const Dio_PortType PortId)
   }
   else
   {
-    /* [cover parentID={35A07763-3B37-45da-B5B0-05ECFB7E2AF8}]
-    */
-    if(PortId < PORT_NO_GREATER_THAN_32)
+    /* [cover parentID={69B22E69-B4DC-4142-82D9-E8A2F008F412}]
+       Identify the Index of configuration
+       [/cover] */
+    for(Index = (uint32)0U; Index <= (uint32)PortId; Index++)
+    {
+      /* [cover parentID={C82597CE-E447-489e-BACB-D84CD01B8FA4}]
+         Check for Port
+         [/cover] */
+      if(Dio_lIsPortAvailable(Index) != (uint32)0U)
       {
-       PopcntTempVal=DIO_PORTS_AVAILABLE_00_31 << (PORT_POPCNT_CALC - PortId);
-       ConfigIndex=POPCNT(PopcntTempVal)-1U;
+        ConfigIndex++; /* to identify the Index of configuration*/
       }
-     else
-      {
-        ConfigIndex=POPCNT(DIO_PORTS_AVAILABLE_00_31);
-        PopcntTempVal= (uint32)DIO_PORTS_AVAILABLE_32_63 <<(PORT_POPCNT_CALC_32_63 - PortId);
-        ConfigIndex+= POPCNT(PopcntTempVal) - 1U;
-      }
+    }
+
+    ConfigIndex--;/*decremented since the ConfigIndex value is 1 for Index 0*/
     /* [cover parentID={DC80E749-616F-4375-982F-89EBD013F9CF}]
        Check for Configuration
        [/cover] */
@@ -2035,146 +1967,8 @@ LOCAL_INLINE uint8 Dio_lGetPinNumber(const Dio_ChannelType ChannelId)
   RetVal = (uint8)(ChannelId & (uint16)DIO_PIN_LOW4_MASK );
   return(RetVal);
 }
-#if(DIO_SAFETY_ENABLE == STD_ON)
-/*******************************************************************************
-** Traceability:[cover parentID={32B937D0-981A-4edb-A2E8-8196CF21378D}]       **
-**                                                                            **
-** Syntax           : LOCAL_INLINE uint8 Dio_lCheckLevel                      **
-**                    (                                                       **
-**                     const Dio_LevelType Level                              **
-**                    )                                                       **
-**                                                                            **
-** Description :  This INLINE function:                                       **
-**   - Checks if the level passed is valid                                    **
-**                                                                            **
-** [/cover]                                                                   **
-** Service ID:  NA                                                            **
-**                                                                            **
-** Sync/Async:  Synchronous                                                   **
-**                                                                            **
-** Reentrancy:  Reentrant                                                     **
-**                                                                            **
-** Parameters (in)  : Level- Level to be checked                              **
-**                                                                            **
-** Parameters (out) : None                                                    **
-**                                                                            **
-** Return value     : ErrStatus -E_OK  Level passed is Valid                  **
-**                    ErrStatus -E_NOT_OK  Level passed is not Valid          **
-**                                                                            **
-*******************************************************************************/
 
-LOCAL_INLINE uint8 Dio_lCheckLevel(const Dio_LevelType Level)
-{
-  uint8 ErrStatus = E_OK;
-   /* [cover parentID={A0E39821-FDC2-4717-B407-23CF9C3D11AC}]
-   [/cover] */
-  if((Level != STD_HIGH) && (Level != STD_LOW))
-  {
-   /* [cover parentID={B233AC52-EE3A-473a-A68C-D76AFB0438F7}]
-   [/cover] */
-   Mcal_ReportSafetyError(DIO_MODULE_ID, DIO_INSTANCE_ID,
-                  DIO_SID_WRITECHANNEL, DIO_E_PARAM_INVALID_LEVEL);
-   ErrStatus = E_NOT_OK;
-  }
-  return(ErrStatus);
-}
-#endif
 
-#if(DIO_MASKED_WRITE_PORT_API == STD_ON)
-/*******************************************************************************
-** Traceability:[cover parentID={7E417147-9571-4530-A9B6-59ED1BAED7B8}]       **
-**                                                                            **
-** Syntax           : void Dio_MaskedWritePort                                **
-**                    (                                                       **
-**                     const PortId,                                          **
-**                     const Dio_PortLevelType Level                          **
-**                     const Dio_PortLevelType Mask                           **
-**                    )                                                       **
-**                                                                            **
-**                                                                            **
-** Description :  This Api:                                                   **
-**      - Service to set the value of a given port with required mask.        **
-** [/cover]                                                                   **
-**                                                                            **
-** Service ID:  0x13                                                          **
-**                                                                            **
-** Sync/Async:  Synchronous                                                   **
-**                                                                            **
-** Reentrancy:  Reentrant                                                     **
-**                                                                            **
-** Parameters(in)   : PortId - ID of DIO port                                 **
-**                    Level - Level to be written                             **
-**                    Mask - Channels to be masked in the port                **
-**                                                                            **
-** Parameters (out) : none                                                    **
-**                                                                            **
-** Return value     : none                                                    **
-**                                                                            **
-*******************************************************************************/
-void Dio_MaskedWritePort
-(
-  const Dio_PortType PortId,
-  const Dio_PortLevelType Level,
-  const Dio_PortLevelType Mask
-)
-{
-
-  Ifx_P *GetPortAddressPtr;
-  #if ((DIO_SAFETY_ENABLE == STD_ON) || (DIO_DEV_ERROR_DETECT ==STD_ON))
-  #if (((DIO_PORTS_READONLY_00_31 != DIO_NUMBER_0)|| \
-                                   (DIO_PORTS_READONLY_32_63 != DIO_NUMBER_0)))
-  uint32  PortReadOnly;
-  #endif
-  uint8 ErrStatus = E_OK;
-  #endif
-  uint32 Clrbits;
-  uint32 Setbits;
-  uint32 PortVal;
-
-  #if ((DIO_SAFETY_ENABLE == STD_ON) || (DIO_DEV_ERROR_DETECT ==STD_ON))
-   /* [cover parentID={A22FFFB0-86DD-4358-8348-EE06FFA46A46}]
-   [/cover] */
-  if((Dio_lCheckPortId(PortId) == (uint8)DIO_ERROR))
-  {
-  /* [cover parentID={8D81B7FD-C398-421f-AD4C-47A1BF95DF48}]
-      [/cover] */
-  Dio_lReportError(DIO_SID_MASKEDWRITEPORT, DIO_E_PARAM_INVALID_PORT_ID);
-  ErrStatus = E_NOT_OK;
-  }
-  else
-  {
-   #if (((DIO_PORTS_READONLY_00_31 != DIO_NUMBER_0)|| \
-                                     (DIO_PORTS_READONLY_32_63 != DIO_NUMBER_0)))
-   PortReadOnly = Dio_lIsPortReadOnly((uint32)PortId);
-   /* [cover parentID={03D367D6-DBF9-48b1-B7C4-C653830EECFD}]
-      [/cover] */
-   if ((PortReadOnly != (uint32)DIO_NUMBER_0))
-    {
-      /* [cover parentID={F0E92ECF-5B1D-469a-9F8F-50ED10125FEF}]
-      [/cover] */
-      Dio_lReportError(DIO_SID_MASKEDWRITEPORT, DIO_E_PARAM_INVALID_PORT_ID);
-      ErrStatus = E_NOT_OK;
-    }
-  #endif
-  }
-  /* [cover parentID={50D2FC1B-7DFC-4c3f-BB42-4D48E977913A}]
-   [/cover] */
-  if(ErrStatus == E_OK)
-  #endif
-    {
-     /* GetPortAddressPtr will hold the port address */
-    GetPortAddressPtr = Dio_lGetPortAdr(PortId);
-
-    Clrbits = ((~(uint32)Level)& ((uint32)Mask));
-
-    Setbits = (Level & ((uint32)Mask));
-
-    PortVal= (uint32)((Clrbits << OMR_BIT_UPDATE_SHIFT )| Setbits);
-
-    GetPortAddressPtr->OMR.U = PortVal;
-    }
-}
-#endif
 #define DIO_STOP_SEC_CODE_ASIL_B_GLOBAL
 /* MISRA2012_RULE_4_10_JUSTIFICATION: To be compliant with autosar guidelines
 Dio_Memmap.h header is included without safegaurd.*/

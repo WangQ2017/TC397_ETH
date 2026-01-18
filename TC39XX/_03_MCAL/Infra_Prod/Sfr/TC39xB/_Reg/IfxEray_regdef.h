@@ -1,11 +1,11 @@
 /**
  * \file IfxEray_regdef.h
  * \brief
- * \copyright Copyright (c) 2021 Infineon Technologies AG. All rights reserved.
+ * \copyright Copyright (c) 2020 Infineon Technologies AG. All rights reserved.
  *
  *
- * Version: TC39XB_UM_V2.0.0.R0
- * Specification: TC3xx User Manual V2.0.0
+ * Version: TC39XB_UM_V1.4.0.R0
+ * Specification: TC3xx User Manual V1.4.0
  * MAY BE CHANGED BY USER [yes/no]: No
  *
  *                                 IMPORTANT NOTICE
@@ -269,7 +269,7 @@ typedef struct _Ifx_ERAY_EILS_Bits
     Ifx_UReg_32Bit reserved_19:5;     /**< \brief [23:19] \internal Reserved */
     Ifx_UReg_32Bit EDBL:1;            /**< \brief [24:24] Error Detected on Channel B Service Request Line - EDBL (rw) */
     Ifx_UReg_32Bit LTVBL:1;           /**< \brief [25:25] Latest Transmit Violation Channel B Service Request Line - LTVBL (rw) */
-    Ifx_UReg_32Bit TABBL:1;           /**< \brief [26:26] Transmission Across Boundary Channel B Service Request Line - TABBL (rw) */
+    Ifx_UReg_32Bit TABBL:1;           /**< \brief [26:26] Transmission Across Boundary Channel A Service Request Line - TABBL (rw) */
     Ifx_UReg_32Bit reserved_27:5;     /**< \brief [31:27] \internal Reserved */
 } Ifx_ERAY_EILS_Bits;
 

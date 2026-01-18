@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2023)                                 **
+** Copyright (C) Infineon Technologies (2019)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,11 +12,11 @@
 **                                                                            **
 **  FILENAME  : McalLib_Cfg.h                                                 **
 **                                                                            **
-**  VERSION   : 11.0.0                                                        **
+**  VERSION   : 10.0.0                                                        **
 **                                                                            **
-**  DATE, TIME: 2025-05-30, 23:32:48             !!!IGNORE-LINE!!!            **
+**  DATE, TIME: 2026-01-18, 19:51:56             !!!IGNORE-LINE!!!            **
 **                                                                            **
-**  GENERATOR : Build b191017-0938               !!!IGNORE-LINE!!!            **
+**  GENERATOR : Build b170330-0431               !!!IGNORE-LINE!!!            **
 **                                                                            **
 **  BSW MODULE DECRIPTION : McalLib.bmd                                       **
 **                                                                            **
@@ -46,16 +46,14 @@
 **                      Global Macro Definitions                              **
 *******************************************************************************/
 #define MCALLIB_AR_RELEASE_MAJOR_VERSION      (4U)
-#define MCALLIB_AR_RELEASE_MINOR_VERSION      (4U)
-#define MCALLIB_AR_RELEASE_REVISION_VERSION   (0U)
-#define MCALLIB_SW_MAJOR_VERSION              (20U)
-#define MCALLIB_SW_MINOR_VERSION              (25U)
-#define MCALLIB_SW_PATCH_VERSION              (0U)
+#define MCALLIB_AR_RELEASE_MINOR_VERSION      (2U)
+#define MCALLIB_AR_RELEASE_REVISION_VERSION   (2U)
+#define MCALLIB_SW_MAJOR_VERSION              (10U)
+#define MCALLIB_SW_MINOR_VERSION              (40U)
+#define MCALLIB_SW_PATCH_VERSION              (1U)
 
 /*Number of cores available*/
 #define MCAL_NO_OF_CORES              (0x6U)
-/* Number of active cores available */
-#define MCAL_NO_OF_ACTIVE_CORES       (0x6U)
 
 /* Backup clock frequency in MHz */
 #define MCAL_BACKUP_FREQUENCY         (0x64U)
@@ -98,7 +96,7 @@ Compile switch to enable/disable the Safety Enable API
 - ON if McalLibSafetyEnable   is true
 - OFF if McalLibSafetyEnable   is false
 */
-#define MCALLIB_SAFETY_ENABLE         (STD_OFF)
+#define  MCALLIB_SAFETY_ENABLE        (STD_OFF)
 
 /*For retriving the Master Core ID */
 #define MCAL_MASTER_COREID            (0U)

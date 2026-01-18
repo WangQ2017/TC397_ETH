@@ -1,11 +1,11 @@
 /**
  * \file IfxSpu_regdef.h
  * \brief
- * \copyright Copyright (c) 2021 Infineon Technologies AG. All rights reserved.
+ * \copyright Copyright (c) 2020 Infineon Technologies AG. All rights reserved.
  *
  *
- * Version: TC39XB_UM_V2.0.0.R0
- * Specification: TC3xx User Manual V2.0.0
+ * Version: TC39XB_UM_V1.4.0.R0
+ * Specification: TC3xx User Manual V1.4.0
  * MAY BE CHANGED BY USER [yes/no]: No
  *
  *                                 IMPORTANT NOTICE
@@ -337,7 +337,7 @@ typedef struct _Ifx_SPU_CLC_Bits
 {
     Ifx_UReg_32Bit DISR:1;            /**< \brief [0:0] Disable Request (rw) */
     Ifx_UReg_32Bit DISS:1;            /**< \brief [1:1] Disable Status (rh) */
-    Ifx_UReg_32Bit FDIS:1;            /**< \brief [2:2] Freeze Disable (rw) */
+    Ifx_UReg_32Bit reserved_2:1;      /**< \brief [2:2] \internal Reserved */
     Ifx_UReg_32Bit EDIS:1;            /**< \brief [3:3] Sleep Mode Enable Control (rw) */
     Ifx_UReg_32Bit reserved_4:28;     /**< \brief [31:4] \internal Reserved */
 } Ifx_SPU_CLC_Bits;

@@ -1,7 +1,7 @@
 
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2020)                                 **
+** Copyright (C) Infineon Technologies (2019)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -13,11 +13,11 @@
 **                                                                            **
 **  FILENAME  : Dio_Lcfg.c                                                    **
 **                                                                            **
-**  VERSION   : 7.0.0                                                         **
+**  VERSION   : 1.30.0_6.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2025-12-20, 17:52:53       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2026-01-18, 19:23:29       !!!IGNORE-LINE!!!                  **
 **                                                                            **
-**  GENERATOR : Build b191017-0938           !!!IGNORE-LINE!!!                **
+**  GENERATOR : Build b170330-0431           !!!IGNORE-LINE!!!                **
 **                                                                            **
 **  BSW MODULE DECRIPTION : Dio.bmd                                           **
 **                                                                            **
@@ -32,9 +32,8 @@
 **  DESCRIPTION  : Dio configuration generated out of ECUC file               **
 **                                                                            **
 **  SPECIFICATION(S) : Specification of Dio Driver, AUTOSAR Release 4.2.2     **
-**                    and AUTOSAR Release 4.4.0                               **
 **                                                                            **
-** MAY BE CHANGED BY USER : no                                                **
+**  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
 *******************************************************************************/
 

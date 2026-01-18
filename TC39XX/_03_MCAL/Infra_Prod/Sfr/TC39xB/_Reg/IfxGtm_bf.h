@@ -1,11 +1,11 @@
 /**
  * \file IfxGtm_bf.h
  * \brief
- * \copyright Copyright (c) 2021 Infineon Technologies AG. All rights reserved.
+ * \copyright Copyright (c) 2020 Infineon Technologies AG. All rights reserved.
  *
  *
- * Version: TC39XB_UM_V2.0.0.R0
- * Specification: TC3xx User Manual V2.0.0
+ * Version: TC39XB_UM_V1.4.0.R0
+ * Specification: TC3xx User Manual V1.4.0
  * MAY BE CHANGED BY USER [yes/no]: No
  *
  *                                 IMPORTANT NOTICE
@@ -20196,41 +20196,41 @@
 /** \brief Offset for Ifx_GTM_DATAIN_Bits.DATA */
 #define IFX_GTM_DATAIN_DATA_OFF (0u)
 
-/** \brief Length for Ifx_GTM_MSC_SET_CON3_Bits.SEL12 */
-#define IFX_GTM_MSC_SET_CON3_SEL12_LEN (5u)
+/** \brief Length for Ifx_GTM_MSC_SET_CON1_Bits.SEL4 */
+#define IFX_GTM_MSC_SET_CON1_SEL4_LEN (5u)
 
-/** \brief Mask for Ifx_GTM_MSC_SET_CON3_Bits.SEL12 */
-#define IFX_GTM_MSC_SET_CON3_SEL12_MSK (0x1fu)
+/** \brief Mask for Ifx_GTM_MSC_SET_CON1_Bits.SEL4 */
+#define IFX_GTM_MSC_SET_CON1_SEL4_MSK (0x1fu)
 
-/** \brief Offset for Ifx_GTM_MSC_SET_CON3_Bits.SEL12 */
-#define IFX_GTM_MSC_SET_CON3_SEL12_OFF (0u)
+/** \brief Offset for Ifx_GTM_MSC_SET_CON1_Bits.SEL4 */
+#define IFX_GTM_MSC_SET_CON1_SEL4_OFF (0u)
 
-/** \brief Length for Ifx_GTM_MSC_SET_CON3_Bits.SEL13 */
-#define IFX_GTM_MSC_SET_CON3_SEL13_LEN (5u)
+/** \brief Length for Ifx_GTM_MSC_SET_CON1_Bits.SEL5 */
+#define IFX_GTM_MSC_SET_CON1_SEL5_LEN (5u)
 
-/** \brief Mask for Ifx_GTM_MSC_SET_CON3_Bits.SEL13 */
-#define IFX_GTM_MSC_SET_CON3_SEL13_MSK (0x1fu)
+/** \brief Mask for Ifx_GTM_MSC_SET_CON1_Bits.SEL5 */
+#define IFX_GTM_MSC_SET_CON1_SEL5_MSK (0x1fu)
 
-/** \brief Offset for Ifx_GTM_MSC_SET_CON3_Bits.SEL13 */
-#define IFX_GTM_MSC_SET_CON3_SEL13_OFF (8u)
+/** \brief Offset for Ifx_GTM_MSC_SET_CON1_Bits.SEL5 */
+#define IFX_GTM_MSC_SET_CON1_SEL5_OFF (8u)
 
-/** \brief Length for Ifx_GTM_MSC_SET_CON3_Bits.SEL14 */
-#define IFX_GTM_MSC_SET_CON3_SEL14_LEN (5u)
+/** \brief Length for Ifx_GTM_MSC_SET_CON1_Bits.SEL6 */
+#define IFX_GTM_MSC_SET_CON1_SEL6_LEN (5u)
 
-/** \brief Mask for Ifx_GTM_MSC_SET_CON3_Bits.SEL14 */
-#define IFX_GTM_MSC_SET_CON3_SEL14_MSK (0x1fu)
+/** \brief Mask for Ifx_GTM_MSC_SET_CON1_Bits.SEL6 */
+#define IFX_GTM_MSC_SET_CON1_SEL6_MSK (0x1fu)
 
-/** \brief Offset for Ifx_GTM_MSC_SET_CON3_Bits.SEL14 */
-#define IFX_GTM_MSC_SET_CON3_SEL14_OFF (16u)
+/** \brief Offset for Ifx_GTM_MSC_SET_CON1_Bits.SEL6 */
+#define IFX_GTM_MSC_SET_CON1_SEL6_OFF (16u)
 
-/** \brief Length for Ifx_GTM_MSC_SET_CON3_Bits.SEL15 */
-#define IFX_GTM_MSC_SET_CON3_SEL15_LEN (5u)
+/** \brief Length for Ifx_GTM_MSC_SET_CON1_Bits.SEL7 */
+#define IFX_GTM_MSC_SET_CON1_SEL7_LEN (5u)
 
-/** \brief Mask for Ifx_GTM_MSC_SET_CON3_Bits.SEL15 */
-#define IFX_GTM_MSC_SET_CON3_SEL15_MSK (0x1fu)
+/** \brief Mask for Ifx_GTM_MSC_SET_CON1_Bits.SEL7 */
+#define IFX_GTM_MSC_SET_CON1_SEL7_MSK (0x1fu)
 
-/** \brief Offset for Ifx_GTM_MSC_SET_CON3_Bits.SEL15 */
-#define IFX_GTM_MSC_SET_CON3_SEL15_OFF (24u)
+/** \brief Offset for Ifx_GTM_MSC_SET_CON1_Bits.SEL7 */
+#define IFX_GTM_MSC_SET_CON1_SEL7_OFF (24u)
 
 /** \brief Length for Ifx_GTM_MSC_SET_CON0_Bits.SEL0 */
 #define IFX_GTM_MSC_SET_CON0_SEL0_LEN (5u)
@@ -20268,6 +20268,42 @@
 /** \brief Offset for Ifx_GTM_MSC_SET_CON0_Bits.SEL3 */
 #define IFX_GTM_MSC_SET_CON0_SEL3_OFF (24u)
 
+/** \brief Length for Ifx_GTM_MSC_SET_CON3_Bits.SEL12 */
+#define IFX_GTM_MSC_SET_CON3_SEL12_LEN (5u)
+
+/** \brief Mask for Ifx_GTM_MSC_SET_CON3_Bits.SEL12 */
+#define IFX_GTM_MSC_SET_CON3_SEL12_MSK (0x1fu)
+
+/** \brief Offset for Ifx_GTM_MSC_SET_CON3_Bits.SEL12 */
+#define IFX_GTM_MSC_SET_CON3_SEL12_OFF (0u)
+
+/** \brief Length for Ifx_GTM_MSC_SET_CON3_Bits.SEL13 */
+#define IFX_GTM_MSC_SET_CON3_SEL13_LEN (5u)
+
+/** \brief Mask for Ifx_GTM_MSC_SET_CON3_Bits.SEL13 */
+#define IFX_GTM_MSC_SET_CON3_SEL13_MSK (0x1fu)
+
+/** \brief Offset for Ifx_GTM_MSC_SET_CON3_Bits.SEL13 */
+#define IFX_GTM_MSC_SET_CON3_SEL13_OFF (8u)
+
+/** \brief Length for Ifx_GTM_MSC_SET_CON3_Bits.SEL14 */
+#define IFX_GTM_MSC_SET_CON3_SEL14_LEN (5u)
+
+/** \brief Mask for Ifx_GTM_MSC_SET_CON3_Bits.SEL14 */
+#define IFX_GTM_MSC_SET_CON3_SEL14_MSK (0x1fu)
+
+/** \brief Offset for Ifx_GTM_MSC_SET_CON3_Bits.SEL14 */
+#define IFX_GTM_MSC_SET_CON3_SEL14_OFF (16u)
+
+/** \brief Length for Ifx_GTM_MSC_SET_CON3_Bits.SEL15 */
+#define IFX_GTM_MSC_SET_CON3_SEL15_LEN (5u)
+
+/** \brief Mask for Ifx_GTM_MSC_SET_CON3_Bits.SEL15 */
+#define IFX_GTM_MSC_SET_CON3_SEL15_MSK (0x1fu)
+
+/** \brief Offset for Ifx_GTM_MSC_SET_CON3_Bits.SEL15 */
+#define IFX_GTM_MSC_SET_CON3_SEL15_OFF (24u)
+
 /** \brief Length for Ifx_GTM_MSC_SET_CON2_Bits.SEL8 */
 #define IFX_GTM_MSC_SET_CON2_SEL8_LEN (5u)
 
@@ -20303,42 +20339,6 @@
 
 /** \brief Offset for Ifx_GTM_MSC_SET_CON2_Bits.SEL11 */
 #define IFX_GTM_MSC_SET_CON2_SEL11_OFF (24u)
-
-/** \brief Length for Ifx_GTM_MSC_SET_CON1_Bits.SEL4 */
-#define IFX_GTM_MSC_SET_CON1_SEL4_LEN (5u)
-
-/** \brief Mask for Ifx_GTM_MSC_SET_CON1_Bits.SEL4 */
-#define IFX_GTM_MSC_SET_CON1_SEL4_MSK (0x1fu)
-
-/** \brief Offset for Ifx_GTM_MSC_SET_CON1_Bits.SEL4 */
-#define IFX_GTM_MSC_SET_CON1_SEL4_OFF (0u)
-
-/** \brief Length for Ifx_GTM_MSC_SET_CON1_Bits.SEL5 */
-#define IFX_GTM_MSC_SET_CON1_SEL5_LEN (5u)
-
-/** \brief Mask for Ifx_GTM_MSC_SET_CON1_Bits.SEL5 */
-#define IFX_GTM_MSC_SET_CON1_SEL5_MSK (0x1fu)
-
-/** \brief Offset for Ifx_GTM_MSC_SET_CON1_Bits.SEL5 */
-#define IFX_GTM_MSC_SET_CON1_SEL5_OFF (8u)
-
-/** \brief Length for Ifx_GTM_MSC_SET_CON1_Bits.SEL6 */
-#define IFX_GTM_MSC_SET_CON1_SEL6_LEN (5u)
-
-/** \brief Mask for Ifx_GTM_MSC_SET_CON1_Bits.SEL6 */
-#define IFX_GTM_MSC_SET_CON1_SEL6_MSK (0x1fu)
-
-/** \brief Offset for Ifx_GTM_MSC_SET_CON1_Bits.SEL6 */
-#define IFX_GTM_MSC_SET_CON1_SEL6_OFF (16u)
-
-/** \brief Length for Ifx_GTM_MSC_SET_CON1_Bits.SEL7 */
-#define IFX_GTM_MSC_SET_CON1_SEL7_LEN (5u)
-
-/** \brief Mask for Ifx_GTM_MSC_SET_CON1_Bits.SEL7 */
-#define IFX_GTM_MSC_SET_CON1_SEL7_MSK (0x1fu)
-
-/** \brief Offset for Ifx_GTM_MSC_SET_CON1_Bits.SEL7 */
-#define IFX_GTM_MSC_SET_CON1_SEL7_OFF (24u)
 
 /** \brief Length for Ifx_GTM_MSC_MSCQ_INLCON_Bits.SEL0 */
 #define IFX_GTM_MSC_MSCQ_INLCON_SEL0_LEN (2u)
@@ -24066,77 +24066,77 @@
 /** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_CTRL_Bits.ENDIS_CTRL7 */
 #define IFX_GTM_ATOM_AGC_ENDIS_CTRL_ENDIS_CTRL7_OFF (14u)
 
-/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT0 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT0_LEN (2u)
+/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL0 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL0_LEN (2u)
 
-/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT0 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT0_MSK (0x3u)
+/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL0 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL0_MSK (0x3u)
 
-/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT0 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT0_OFF (0u)
+/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL0 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL0_OFF (0u)
 
-/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT1 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT1_LEN (2u)
+/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL1 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL1_LEN (2u)
 
-/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT1 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT1_MSK (0x3u)
+/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL1 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL1_MSK (0x3u)
 
-/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT1 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT1_OFF (2u)
+/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL1 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL1_OFF (2u)
 
-/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT2 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT2_LEN (2u)
+/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL2 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL2_LEN (2u)
 
-/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT2 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT2_MSK (0x3u)
+/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL2 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL2_MSK (0x3u)
 
-/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT2 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT2_OFF (4u)
+/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL2 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL2_OFF (4u)
 
-/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT3 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT3_LEN (2u)
+/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL3 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL3_LEN (2u)
 
-/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT3 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT3_MSK (0x3u)
+/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL3 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL3_MSK (0x3u)
 
-/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT3 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT3_OFF (6u)
+/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL3 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL3_OFF (6u)
 
-/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT4 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT4_LEN (2u)
+/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL4 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL4_LEN (2u)
 
-/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT4 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT4_MSK (0x3u)
+/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL4 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL4_MSK (0x3u)
 
-/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT4 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT4_OFF (8u)
+/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL4 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL4_OFF (8u)
 
-/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT5 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT5_LEN (2u)
+/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL5 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL5_LEN (2u)
 
-/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT5 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT5_MSK (0x3u)
+/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL5 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL5_MSK (0x3u)
 
-/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT5 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT5_OFF (10u)
+/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL5 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL5_OFF (10u)
 
-/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT6 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT6_LEN (2u)
+/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL6 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL6_LEN (2u)
 
-/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT6 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT6_MSK (0x3u)
+/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL6 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL6_MSK (0x3u)
 
-/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT6 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT6_OFF (12u)
+/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL6 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL6_OFF (12u)
 
-/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT7 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT7_LEN (2u)
+/** \brief Length for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL7 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL7_LEN (2u)
 
-/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT7 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT7_MSK (0x3u)
+/** \brief Mask for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL7 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL7_MSK (0x3u)
 
-/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_STAT7 */
-#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT7_OFF (14u)
+/** \brief Offset for Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits.ENDIS_CTRL7 */
+#define IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL7_OFF (14u)
 
 /** \brief Length for Ifx_GTM_ATOM_AGC_ACT_TB_Bits.ACT_TB */
 #define IFX_GTM_ATOM_AGC_ACT_TB_ACT_TB_LEN (24u)

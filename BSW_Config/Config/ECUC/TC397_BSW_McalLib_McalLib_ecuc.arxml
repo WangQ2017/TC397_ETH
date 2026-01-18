@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd">
   <AR-PACKAGES>
-    <AR-PACKAGE UUID="baad48a0-3888-4cb1-b9ca-25640d31f461">
+    <AR-PACKAGE UUID="3159dba5-8d79-470b-9718-4b3cdec8e5d6">
       <SHORT-NAME>McalLib</SHORT-NAME>
       <ELEMENTS>
         <ECUC-MODULE-CONFIGURATION-VALUES>
@@ -17,7 +17,7 @@
           <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
           <MODULE-DESCRIPTION-REF DEST="BSW-IMPLEMENTATION">/AURIX2G/EcucDefs/McalLib_Impl</MODULE-DESCRIPTION-REF>
           <CONTAINERS>
-            <ECUC-CONTAINER-VALUE UUID="0e4ccefc-da05-4732-ba9d-0aa59b7c0b1a">
+            <ECUC-CONTAINER-VALUE UUID="ada6af13-1136-4709-aff3-877690fcd7be">
               <SHORT-NAME>CommonPublishedInformation</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/McalLib/CommonPublishedInformation</DEFINITION-REF>
               <PARAMETER-VALUES>
@@ -59,17 +59,17 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE UUID="1bcc6f28-28c8-40e6-8a8e-1c3f6f102268">
+            <ECUC-CONTAINER-VALUE UUID="a5e8092d-45e6-4978-8cc8-80f8f6eb6939">
               <SHORT-NAME>McalLibGeneral</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/McalLib/McalLibGeneral</DEFINITION-REF>
               <PARAMETER-VALUES>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AURIX2G/EcucDefs/McalLib/McalLibGeneral/McalLibSafetyEnable</DEFINITION-REF>
-                  <VALUE>true</VALUE>
+                  <VALUE>false</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE UUID="61692531-bf98-4546-8884-efe68ab29918">
+            <ECUC-CONTAINER-VALUE UUID="cdb73214-596f-410d-9443-77d2f8af8838">
               <SHORT-NAME>McalLibPublishedInformation</SHORT-NAME>
               <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AURIX2G/EcucDefs/McalLib/McalLibPublishedInformation</DEFINITION-REF>
               <PARAMETER-VALUES>

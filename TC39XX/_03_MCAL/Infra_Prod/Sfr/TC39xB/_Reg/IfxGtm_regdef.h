@@ -1,11 +1,11 @@
 /**
  * \file IfxGtm_regdef.h
  * \brief
- * \copyright Copyright (c) 2021 Infineon Technologies AG. All rights reserved.
+ * \copyright Copyright (c) 2020 Infineon Technologies AG. All rights reserved.
  *
  *
- * Version: TC39XB_UM_V2.0.0.R0
- * Specification: TC3xx User Manual V2.0.0
+ * Version: TC39XB_UM_V1.4.0.R0
+ * Specification: TC3xx User Manual V1.4.0
  * MAY BE CHANGED BY USER [yes/no]: No
  *
  *                                 IMPORTANT NOTICE
@@ -358,14 +358,14 @@ typedef struct _Ifx_GTM_ATOM_AGC_ENDIS_CTRL_Bits
 /** \brief ATOM${i} AGC Enable/Disable Status Register */
 typedef struct _Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits
 {
-    Ifx_Strict_32Bit ENDIS_STAT0:2;    /**< \brief [1:0] ATOM channel 0 enable/disable (rw) */
-    Ifx_Strict_32Bit ENDIS_STAT1:2;    /**< \brief [3:2] ATOM channel 1 enable/disable (rw) */
-    Ifx_Strict_32Bit ENDIS_STAT2:2;    /**< \brief [5:4] ATOM channel 2 enable/disable (rw) */
-    Ifx_Strict_32Bit ENDIS_STAT3:2;    /**< \brief [7:6] ATOM channel 3 enable/disable (rw) */
-    Ifx_Strict_32Bit ENDIS_STAT4:2;    /**< \brief [9:8] ATOM channel 4 enable/disable (rw) */
-    Ifx_Strict_32Bit ENDIS_STAT5:2;    /**< \brief [11:10] ATOM channel 5 enable/disable (rw) */
-    Ifx_Strict_32Bit ENDIS_STAT6:2;    /**< \brief [13:12] ATOM channel 6 enable/disable (rw) */
-    Ifx_Strict_32Bit ENDIS_STAT7:2;    /**< \brief [15:14] ATOM channel 7 enable/disable (rw) */
+    Ifx_Strict_32Bit ENDIS_CTRL0:2;    /**< \brief [1:0] ATOM channel 0 enable/disable (rw) */
+    Ifx_Strict_32Bit ENDIS_CTRL1:2;    /**< \brief [3:2] ATOM channel 1 enable/disable (rw) */
+    Ifx_Strict_32Bit ENDIS_CTRL2:2;    /**< \brief [5:4] ATOM channel 2 enable/disable (rw) */
+    Ifx_Strict_32Bit ENDIS_CTRL3:2;    /**< \brief [7:6] ATOM channel 3 enable/disable (rw) */
+    Ifx_Strict_32Bit ENDIS_CTRL4:2;    /**< \brief [9:8] ATOM channel 4 enable/disable (rw) */
+    Ifx_Strict_32Bit ENDIS_CTRL5:2;    /**< \brief [11:10] ATOM channel 5 enable/disable (rw) */
+    Ifx_Strict_32Bit ENDIS_CTRL6:2;    /**< \brief [13:12] ATOM channel 6 enable/disable (rw) */
+    Ifx_Strict_32Bit ENDIS_CTRL7:2;    /**< \brief [15:14] ATOM channel 7 enable/disable (rw) */
     Ifx_Strict_32Bit reserved_16:16;    /**< \brief [31:16] \internal Reserved */
 } Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits;
 
@@ -4063,19 +4063,19 @@ typedef struct _Ifx_GTM_MCS_CH_CTRG_Bits
 /** \brief MCS${i} Channel ${x} Control Register */
 typedef struct _Ifx_GTM_MCS_CH_CTRL_Bits
 {
-    Ifx_Strict_32Bit EN:1;            /**< \brief [0:0] Enable MCS-channel (rwh) */
-    Ifx_Strict_32Bit IRQ:1;           /**< \brief [1:1] Interrupt state (rh) */
-    Ifx_Strict_32Bit ERR:1;           /**< \brief [2:2] Error state (rh) */
+    Ifx_Strict_32Bit EN:1;            /**< \brief [0:0] Enable MCS-channel (rw) */
+    Ifx_Strict_32Bit IRQ:1;           /**< \brief [1:1] Interrupt state (r) */
+    Ifx_Strict_32Bit ERR:1;           /**< \brief [2:2] Error state (r) */
     Ifx_Strict_32Bit reserved_3:1;    /**< \brief [3:3] \internal Reserved */
-    Ifx_Strict_32Bit CY:1;            /**< \brief [4:4] Carry bit state (rh) */
-    Ifx_Strict_32Bit Z:1;             /**< \brief [5:5] Zero bit state (rh) */
-    Ifx_Strict_32Bit V:1;             /**< \brief [6:6] Overflow bit state (rh) */
-    Ifx_Strict_32Bit N:1;             /**< \brief [7:7] Negative bit state (rh) */
-    Ifx_Strict_32Bit CAT:1;           /**< \brief [8:8] Cancel ARU transfer state (rh) */
-    Ifx_Strict_32Bit CWT:1;           /**< \brief [9:9] Cancel WURM instruction state (rh) */
-    Ifx_Strict_32Bit SAT:1;           /**< \brief [10:10] Successful ARU transfer bit (rh) */
+    Ifx_Strict_32Bit CY:1;            /**< \brief [4:4] Carry bit state (r) */
+    Ifx_Strict_32Bit Z:1;             /**< \brief [5:5] Zero bit state (r) */
+    Ifx_Strict_32Bit V:1;             /**< \brief [6:6] Overflow bit state (r) */
+    Ifx_Strict_32Bit N:1;             /**< \brief [7:7] Negative bit state (r) */
+    Ifx_Strict_32Bit CAT:1;           /**< \brief [8:8] Cancel ARU transfer state (r) */
+    Ifx_Strict_32Bit CWT:1;           /**< \brief [9:9] Cancel WURM instruction state (r) */
+    Ifx_Strict_32Bit SAT:1;           /**< \brief [10:10] Successful ARU transfer bit (r) */
     Ifx_Strict_32Bit reserved_11:5;    /**< \brief [15:11] \internal Reserved */
-    Ifx_Strict_32Bit SP_CNT:3;        /**< \brief [18:16] Stack pointer counter value (rh) */
+    Ifx_Strict_32Bit SP_CNT:3;        /**< \brief [18:16] Stack pointer counter value (r) */
     Ifx_Strict_32Bit reserved_19:13;    /**< \brief [31:19] \internal Reserved */
 } Ifx_GTM_MCS_CH_CTRL_Bits;
 

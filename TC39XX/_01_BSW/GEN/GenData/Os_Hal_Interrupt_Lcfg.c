@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Interrupt_Lcfg.c
- *   Generation Time: 2025-12-20 10:43:26
+ *   Generation Time: 2026-01-18 22:49:12
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -92,15 +92,15 @@ CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_CounterIsr_Syste
   /* .Dummy         = */ (uint32)0
 };
 
-/*! HAL ISR configuration data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine */
-CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine =
+/*! HAL ISR configuration data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx =
 {
   /* .Level          = */ 50,
   /* .Source         = */ 0x588uL,
   /* .CoreAssignment = */ 0
 };
 
-CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine =
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx =
 {
   /* .Dummy         = */ (uint32)0
 };

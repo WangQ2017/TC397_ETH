@@ -1,11 +1,11 @@
 /**
  * \file IfxRif_bf.h
  * \brief
- * \copyright Copyright (c) 2021 Infineon Technologies AG. All rights reserved.
+ * \copyright Copyright (c) 2020 Infineon Technologies AG. All rights reserved.
  *
  *
- * Version: TC39XB_UM_V2.0.0.R0
- * Specification: TC3xx User Manual V2.0.0
+ * Version: TC39XB_UM_V1.4.0.R0
+ * Specification: TC3xx User Manual V1.4.0
  * MAY BE CHANGED BY USER [yes/no]: No
  *
  *                                 IMPORTANT NOTICE
@@ -71,15 +71,6 @@
 
 /** \brief Offset for Ifx_RIF_CLC_Bits.DISS */
 #define IFX_RIF_CLC_DISS_OFF (1u)
-
-/** \brief Length for Ifx_RIF_CLC_Bits.FDIS */
-#define IFX_RIF_CLC_FDIS_LEN (1u)
-
-/** \brief Mask for Ifx_RIF_CLC_Bits.FDIS */
-#define IFX_RIF_CLC_FDIS_MSK (0x1u)
-
-/** \brief Offset for Ifx_RIF_CLC_Bits.FDIS */
-#define IFX_RIF_CLC_FDIS_OFF (2u)
 
 /** \brief Length for Ifx_RIF_CLC_Bits.EDIS */
 #define IFX_RIF_CLC_EDIS_LEN (1u)
@@ -504,14 +495,14 @@
 /** \brief Offset for Ifx_RIF_INTCON_Bits.REE */
 #define IFX_RIF_INTCON_REE_OFF (2u)
 
-/** \brief Length for Ifx_RIF_INTCON_Bits.SWE0E */
-#define IFX_RIF_INTCON_SWE0E_LEN (1u)
+/** \brief Length for Ifx_RIF_INTCON_Bits.UEE */
+#define IFX_RIF_INTCON_UEE_LEN (1u)
 
-/** \brief Mask for Ifx_RIF_INTCON_Bits.SWE0E */
-#define IFX_RIF_INTCON_SWE0E_MSK (0x1u)
+/** \brief Mask for Ifx_RIF_INTCON_Bits.UEE */
+#define IFX_RIF_INTCON_UEE_MSK (0x1u)
 
-/** \brief Offset for Ifx_RIF_INTCON_Bits.SWE0E */
-#define IFX_RIF_INTCON_SWE0E_OFF (3u)
+/** \brief Offset for Ifx_RIF_INTCON_Bits.UEE */
+#define IFX_RIF_INTCON_UEE_OFF (3u)
 
 /** \brief Length for Ifx_RIF_INTCON_Bits.CRCE0 */
 #define IFX_RIF_INTCON_CRCE0_LEN (1u)
@@ -558,14 +549,14 @@
 /** \brief Offset for Ifx_RIF_INTCON_Bits.R1EE */
 #define IFX_RIF_INTCON_R1EE_OFF (8u)
 
-/** \brief Length for Ifx_RIF_INTCON_Bits.SWE1E */
-#define IFX_RIF_INTCON_SWE1E_LEN (1u)
+/** \brief Length for Ifx_RIF_INTCON_Bits.U1EE */
+#define IFX_RIF_INTCON_U1EE_LEN (1u)
 
-/** \brief Mask for Ifx_RIF_INTCON_Bits.SWE1E */
-#define IFX_RIF_INTCON_SWE1E_MSK (0x1u)
+/** \brief Mask for Ifx_RIF_INTCON_Bits.U1EE */
+#define IFX_RIF_INTCON_U1EE_MSK (0x1u)
 
-/** \brief Offset for Ifx_RIF_INTCON_Bits.SWE1E */
-#define IFX_RIF_INTCON_SWE1E_OFF (9u)
+/** \brief Offset for Ifx_RIF_INTCON_Bits.U1EE */
+#define IFX_RIF_INTCON_U1EE_OFF (9u)
 
 /** \brief Length for Ifx_RIF_INTCON_Bits.R1SE */
 #define IFX_RIF_INTCON_R1SE_LEN (1u)
@@ -603,14 +594,14 @@
 /** \brief Offset for Ifx_RIF_INTCON_Bits.REF */
 #define IFX_RIF_INTCON_REF_OFF (18u)
 
-/** \brief Length for Ifx_RIF_INTCON_Bits.SWE0F */
-#define IFX_RIF_INTCON_SWE0F_LEN (1u)
+/** \brief Length for Ifx_RIF_INTCON_Bits.UEF */
+#define IFX_RIF_INTCON_UEF_LEN (1u)
 
-/** \brief Mask for Ifx_RIF_INTCON_Bits.SWE0F */
-#define IFX_RIF_INTCON_SWE0F_MSK (0x1u)
+/** \brief Mask for Ifx_RIF_INTCON_Bits.UEF */
+#define IFX_RIF_INTCON_UEF_MSK (0x1u)
 
-/** \brief Offset for Ifx_RIF_INTCON_Bits.SWE0F */
-#define IFX_RIF_INTCON_SWE0F_OFF (19u)
+/** \brief Offset for Ifx_RIF_INTCON_Bits.UEF */
+#define IFX_RIF_INTCON_UEF_OFF (19u)
 
 /** \brief Length for Ifx_RIF_INTCON_Bits.CRCF0 */
 #define IFX_RIF_INTCON_CRCF0_LEN (1u)
@@ -657,14 +648,14 @@
 /** \brief Offset for Ifx_RIF_INTCON_Bits.R1EF */
 #define IFX_RIF_INTCON_R1EF_OFF (24u)
 
-/** \brief Length for Ifx_RIF_INTCON_Bits.SWE1F */
-#define IFX_RIF_INTCON_SWE1F_LEN (1u)
+/** \brief Length for Ifx_RIF_INTCON_Bits.U1EF */
+#define IFX_RIF_INTCON_U1EF_LEN (1u)
 
-/** \brief Mask for Ifx_RIF_INTCON_Bits.SWE1F */
-#define IFX_RIF_INTCON_SWE1F_MSK (0x1u)
+/** \brief Mask for Ifx_RIF_INTCON_Bits.U1EF */
+#define IFX_RIF_INTCON_U1EF_MSK (0x1u)
 
-/** \brief Offset for Ifx_RIF_INTCON_Bits.SWE1F */
-#define IFX_RIF_INTCON_SWE1F_OFF (25u)
+/** \brief Offset for Ifx_RIF_INTCON_Bits.U1EF */
+#define IFX_RIF_INTCON_U1EF_OFF (25u)
 
 /** \brief Length for Ifx_RIF_INTCON_Bits.R1SF */
 #define IFX_RIF_INTCON_R1SF_LEN (1u)
@@ -729,14 +720,14 @@
 /** \brief Offset for Ifx_RIF_FLAGSSET_Bits.RES */
 #define IFX_RIF_FLAGSSET_RES_OFF (18u)
 
-/** \brief Length for Ifx_RIF_FLAGSSET_Bits.SWE0S */
-#define IFX_RIF_FLAGSSET_SWE0S_LEN (1u)
+/** \brief Length for Ifx_RIF_FLAGSSET_Bits.UES */
+#define IFX_RIF_FLAGSSET_UES_LEN (1u)
 
-/** \brief Mask for Ifx_RIF_FLAGSSET_Bits.SWE0S */
-#define IFX_RIF_FLAGSSET_SWE0S_MSK (0x1u)
+/** \brief Mask for Ifx_RIF_FLAGSSET_Bits.UES */
+#define IFX_RIF_FLAGSSET_UES_MSK (0x1u)
 
-/** \brief Offset for Ifx_RIF_FLAGSSET_Bits.SWE0S */
-#define IFX_RIF_FLAGSSET_SWE0S_OFF (19u)
+/** \brief Offset for Ifx_RIF_FLAGSSET_Bits.UES */
+#define IFX_RIF_FLAGSSET_UES_OFF (19u)
 
 /** \brief Length for Ifx_RIF_FLAGSSET_Bits.CRCS0 */
 #define IFX_RIF_FLAGSSET_CRCS0_LEN (1u)
@@ -783,14 +774,14 @@
 /** \brief Offset for Ifx_RIF_FLAGSSET_Bits.R1ES */
 #define IFX_RIF_FLAGSSET_R1ES_OFF (24u)
 
-/** \brief Length for Ifx_RIF_FLAGSSET_Bits.SWE1S */
-#define IFX_RIF_FLAGSSET_SWE1S_LEN (1u)
+/** \brief Length for Ifx_RIF_FLAGSSET_Bits.U1ES */
+#define IFX_RIF_FLAGSSET_U1ES_LEN (1u)
 
-/** \brief Mask for Ifx_RIF_FLAGSSET_Bits.SWE1S */
-#define IFX_RIF_FLAGSSET_SWE1S_MSK (0x1u)
+/** \brief Mask for Ifx_RIF_FLAGSSET_Bits.U1ES */
+#define IFX_RIF_FLAGSSET_U1ES_MSK (0x1u)
 
-/** \brief Offset for Ifx_RIF_FLAGSSET_Bits.SWE1S */
-#define IFX_RIF_FLAGSSET_SWE1S_OFF (25u)
+/** \brief Offset for Ifx_RIF_FLAGSSET_Bits.U1ES */
+#define IFX_RIF_FLAGSSET_U1ES_OFF (25u)
 
 /** \brief Length for Ifx_RIF_FLAGSSET_Bits.R1SS */
 #define IFX_RIF_FLAGSSET_R1SS_LEN (1u)
@@ -827,15 +818,6 @@
 
 /** \brief Offset for Ifx_RIF_FLAGSCL_Bits.REC */
 #define IFX_RIF_FLAGSCL_REC_OFF (18u)
-
-/** \brief Length for Ifx_RIF_FLAGSCL_Bits.SWE0C */
-#define IFX_RIF_FLAGSCL_SWE0C_LEN (1u)
-
-/** \brief Mask for Ifx_RIF_FLAGSCL_Bits.SWE0C */
-#define IFX_RIF_FLAGSCL_SWE0C_MSK (0x1u)
-
-/** \brief Offset for Ifx_RIF_FLAGSCL_Bits.SWE0C */
-#define IFX_RIF_FLAGSCL_SWE0C_OFF (19u)
 
 /** \brief Length for Ifx_RIF_FLAGSCL_Bits.CRCC0 */
 #define IFX_RIF_FLAGSCL_CRCC0_LEN (1u)
@@ -882,14 +864,14 @@
 /** \brief Offset for Ifx_RIF_FLAGSCL_Bits.R1EC */
 #define IFX_RIF_FLAGSCL_R1EC_OFF (24u)
 
-/** \brief Length for Ifx_RIF_FLAGSCL_Bits.SWE1C */
-#define IFX_RIF_FLAGSCL_SWE1C_LEN (1u)
+/** \brief Length for Ifx_RIF_FLAGSCL_Bits.U1EC */
+#define IFX_RIF_FLAGSCL_U1EC_LEN (1u)
 
-/** \brief Mask for Ifx_RIF_FLAGSCL_Bits.SWE1C */
-#define IFX_RIF_FLAGSCL_SWE1C_MSK (0x1u)
+/** \brief Mask for Ifx_RIF_FLAGSCL_Bits.U1EC */
+#define IFX_RIF_FLAGSCL_U1EC_MSK (0x1u)
 
-/** \brief Offset for Ifx_RIF_FLAGSCL_Bits.SWE1C */
-#define IFX_RIF_FLAGSCL_SWE1C_OFF (25u)
+/** \brief Offset for Ifx_RIF_FLAGSCL_Bits.U1EC */
+#define IFX_RIF_FLAGSCL_U1EC_OFF (25u)
 
 /** \brief Length for Ifx_RIF_FLAGSCL_Bits.R1SC */
 #define IFX_RIF_FLAGSCL_R1SC_LEN (1u)

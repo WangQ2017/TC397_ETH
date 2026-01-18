@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2021)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : Uart.h                                                     **
 **                                                                            **
-**  VERSION      : 17.0.0                                                     **
+**  VERSION      : 1.40.0_12.0.0                                              **
 **                                                                            **
-**  DATE         : 2021-11-02                                                 **
+**  DATE         : 2020-01-14                                                 **
 **                                                                            **
 **  VARIANT      : Variant PB                                                 **
 **                                                                            **
@@ -24,14 +24,13 @@
 **                                                                            **
 **  VENDOR       : Infineon Technologies                                      **
 **                                                                            **
-**  TRACEABILITY : [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}]    **
+**  TRACEABILITY :                                                            **
 **                                                                            **
 **  DESCRIPTION  : Uart Driver header definition file.                        **
 **                                                                            **
 **  [/cover]                                                                  **
 **                                                                            **
-**  SPECIFICATION(S) : Specification of Uart Driver, AUTOSAR Release 4.2.2 and**
-**                                                  AUTOSAR Release 4.4.0     **
+**  SPECIFICATION(S) : Specification of Uart Driver, AUTOSAR Release 4.2.2    **
 **                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
@@ -173,22 +172,12 @@
 /* API Service ID for Uart_IsrError() */
 #define UART_SID_ISR_ERROR                  ((uint8)226)
 
-#if((UART_SAFETY_ENABLE == STD_ON) || (UART_RUNTIME_ERROR_DETECT == STD_ON))
+#if(UART_SAFETY_ENABLE == STD_ON)
 /* API Service ID for Uart_IsrReceive() */
 #define UART_SID_ISR_RECEIVE                ((uint8)227)
-#endif
 
-#if(UART_SAFETY_ENABLE == STD_ON)
 /* API Service ID for Uart_IsrTransmit() */
 #define UART_SID_ISR_TRANSMIT               ((uint8)228)
-#endif
-
-#if((UART_DEV_ERROR_DETECT == STD_ON) || (UART_SAFETY_ENABLE == STD_ON))
-/* API Service ID for Uart_StartStreaming() */
-#define UART_SID_START_STREAMING            ((uint8)229)
-
-/* API Service ID for Uart_StopStreaming() */
-#define UART_SID_STOP_STREAMING             ((uint8)230)
 #endif
 
 #endif
@@ -235,9 +224,7 @@ typedef enum
   /* Frame error */
   UART_E_FRAME_ERR,
   /* RXFIFO overflow error */
-  UART_E_RXFIFO_OVERFLOW,
-  /* Insufficient buffer error */
-  UART_E_INSUFFICIENT_BUFSIZE
+  UART_E_RXFIFO_OVERFLOW
 } Uart_ErrorIdType;
 
 /* [cover parentID={606E387E-7A78-44e0-8626-CEB0A3D8A452}] */
@@ -269,10 +256,10 @@ typedef enum
 {
   /* Channel in idle state */
   UART_IDLE = 0,
+  /* Channel is busy in receive operation */
+  UART_BUSY_RECEIVE,
   /* Channel is busy in transmit operation */
   UART_BUSY_TRANSMIT,
-    /* Channel is busy in receive operation */
-  UART_BUSY_RECEIVE,
   /* Channel is busy in transmit and receive operation */
   UART_BUSY_TRANSMIT_RECEIVE,
 } Uart_StatusType;
@@ -281,10 +268,7 @@ typedef enum
 /*  [/cover] */
 /* Type definition of notification function */
 typedef void(*Uart_NotificationPtrType)(Uart_ErrorIdType ErrorId);
-/* [cover parentID={9B1AB6C4-EDA1-4d91-9E9C-F4396CC39E66}] */
-/*  [/cover] */
-/* Type definition of Streaming notification function */
-typedef void(*Uart_Streaming_NotificationPtrType)(Uart_ErrorIdType ErrorId,Uart_SizeType RxDataSize);
+
 /* [cover parentID={FF2A2D9D-B285-4585-A66B-1F1E2022B572}] */
 /*  [/cover] */
 /*
@@ -298,7 +282,6 @@ typedef struct
   Uart_NotificationPtrType UartReceiveNotifPtr;
   Uart_NotificationPtrType UartAbortTransmitNotifPtr;
   Uart_NotificationPtrType UartAbortReceiveNotifPtr;
-  Uart_Streaming_NotificationPtrType UartStreamingNotifPtr;
 } Uart_NotifType;
 
 /* [cover parentID={E2A1C613-9230-43fd-996D-AE03DBE87C96}] */
@@ -421,7 +404,7 @@ extern void Uart_DeInit(void);
 #else
 /* MISRA2012_RULE_4_9_JUSTIFICATION: Function like macro used to generate
  compile time error in case of incorrect configuration*/
-#define Uart_DeInit(void)  (ERROR_Uart_DeInit_API_IS_NOT_SELECTED)
+#define Uart_DeInit(void)  (ERROR_Uart_DeInit_NOT_SELECTED)
 #endif
 
 /*******************************************************************************
@@ -517,76 +500,9 @@ extern Uart_SizeType Uart_AbortRead(const Uart_ChannelIdType Channel);
 #else
 /* MISRA2012_RULE_4_9_JUSTIFICATION: Function like macro used to generate
  compile time error in case of incorrect configuration*/
-#define Uart_AbortRead(Channel)  (ERROR_Uart_AbortRead_API_IS_NOT_SELECTED)
+#define Uart_AbortRead(Channel)  (ERROR_Uart_AbortRead_NOT_SELECTED)
 #endif
 
-/*******************************************************************************
-** Syntax : Uart_ReturnType Uart_StartStreaming                               **
-**  (                                                                         **
-**    const Uart_ChannelIdType channel,Uart_MemType *const MemPtr,            **
-**                                                const Uart_SizeType BufSize **
-**  )                                                                         **
-**                                                                            **
-** Service ID      : 229                                                      **
-**                                                                            **
-** Sync/Async      : Asynchronous                                             **
-**                                                                            **
-** Reentrancy      : Reentrant(Not for same channel)                          **
-**                                                                            **
-** Parameters (in) : Channel - Uart channel to be addressed.                  **
-**                   MemPtr - Memory location where data needs to be stored   **
-**                   BufSize -Application buffer length in Bytes.If channel   **
-**                         frame length configured with greater than 8 bit    **
-**                         then buffer length should be multiple of 2.        **
-**                                                                            **
-** Parameters (out): None                                                     **
-**                                                                            **
-** Return value    : UART_E_OK - Read operation was initiated successfully    **
-**                   UART_E_NOT_OK - Read operation couldn't be initiated     **
-**                   due to development errors                                **
-**                   UART_E_BUSY - Uart channel is busy with other            **
-**                   read operation                                           **
-**                                                                            **
-** Description     : Api to configure the given UART Channel for reception    **
-**                   of the specified number of data bytes and the memory     **
-**                   location to be used to store the received data           **
-*******************************************************************************/
-#if (UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-extern Uart_ReturnType Uart_StartStreaming(const Uart_ChannelIdType Channel, \
-                          Uart_MemType *const MemPtr, \
-                          const Uart_SizeType BufSize);
-#else
-/* MISRA2012_RULE_4_9_JUSTIFICATION: Function like macro used to generate
- compile time error in case of incorrect configuration*/
-#define Uart_StartStreaming(Channel,MemPtr,BufSize) (ERROR_Uart_StartStreaming_API_IS_NOT_SELECTED)
-#endif
-
-/*******************************************************************************
-** Syntax:Uart_ReturnType Uart_StopStreaming(const Uart_ChannelIdType Channel)**
-**                                                                            **
-** Service ID      : 230                                                      **
-**                                                                            **
-** Sync/Async      : Synchronous                                              **
-**                                                                            **
-** Reentrancy      : Reentrant  (Not for the same channel)                    **
-**                                                                            **
-** Parameters (in) : Channel - Uart channel to be addressed                   **
-**                                                                            **
-** Parameters (out): None                                                     **
-**                                                                            **
-** Return value    : UART_E_OK - Stop streaming was initiated successfully    **
-**                   UART_E_NOT_OK - Stop streaming couldn't be initiated     **
-**                   due to development errors                                **
-** Description     : API to stop streaming operation on given channel.        **
-**                                                                            **
-*******************************************************************************/
-#if (UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-extern Uart_ReturnType Uart_StopStreaming(const Uart_ChannelIdType Channel);
-#else
-/* MISRA2012_RULE_4_9_JUSTIFICATION: Function like macro used to generate
- compile time error in case of incorrect configuration*/
-#define Uart_StopStreaming(Channel) (ERROR_Uart_StopStreaming_API_IS_NOT_SELECTED)
-#endif
 /*******************************************************************************
 ** Syntax : Uart_SizeType Uart_AbortWrite( Uart_ChannelIdType Channel )       **
 **                                                                            **
@@ -613,7 +529,7 @@ extern Uart_SizeType Uart_AbortWrite(const Uart_ChannelIdType Channel);
 #else
 /* MISRA2012_RULE_4_9_JUSTIFICATION: Function like macro used to generate
  compile time error in case of incorrect configuration*/
-#define Uart_AbortWrite(Channel)  (ERROR_Uart_AbortWrite_API_IS_NOT_SELECTED)
+#define Uart_AbortWrite(Channel)  (ERROR_Uart_AbortWrite_NOT_SELECTED)
 #endif
 
 /*******************************************************************************
@@ -710,7 +626,59 @@ extern void Uart_IsrTransmit(const uint8 HwUnit);
 extern void Uart_IsrError(const uint8 HwUnit);
 #endif
 
-
+#if(UART_TX_MODE != UART_INTERRUPT_MODE)
+/*******************************************************************************
+** Syntax : void Uart_MainFunction_Write(void)                                **
+**                                                                            **
+** Service ID      : 225                                                      **
+**                                                                            **
+** Sync/Async      : Synchronous                                              **
+**                                                                            **
+** Reentrancy      : Non Reentrant.                                           **
+**                                                                            **
+** Parameters (in) : None                                                     **
+**                                                                            **
+** Parameters (out): None                                                     **
+**                                                                            **
+** Return value    : None                                                     **
+** Description     : Schedule function to handle transmits operation in       **
+**                                                             polling mode.  **
+**                                                                            **
+*******************************************************************************/
+extern void Uart_MainFunction_Write(void);
+#else
+/* MISRA2012_RULE_4_9_JUSTIFICATION: Function like macro used to generate
+ compile time error in case of incorrect configuration*/
+#define Uart_MainFunction_Write() \
+(ERROR_configuration_parameter_UartTxChannelMode_is_not_configured_in_\
+polling_mode_for_any_Uart_channel)
+#endif
+#if(UART_RX_MODE != UART_INTERRUPT_MODE)
+/*******************************************************************************
+** Syntax : void Uart_MainFunction_Read(void)                                 **
+**                                                                            **
+** Service ID      : 224                                                      **
+**                                                                            **
+** Sync/Async      : Synchronous                                              **
+**                                                                            **
+** Reentrancy      : Non Reentrant.                                           **
+**                                                                            **
+** Parameters (in) : None                                                     **
+**                                                                            **
+** Parameters (out): None                                                     **
+**                                                                            **
+** Return value    : None                                                     **
+** Description     : Schedule function to handle receives operation in        **
+**                                                            polling mode.   **
+**                                                                            **
+*******************************************************************************/
+extern void Uart_MainFunction_Read(void);
+#else
+/* MISRA2012_RULE_4_9_JUSTIFICATION: Function like macro used to generate
+ compile time error in case of incorrect configuration*/
+#define Uart_MainFunction_Read() (ERROR_configuration_parameter_\
+UartRxChannelMode_is_not_configured_in_polling_mode_for_any_Uart_channel)
+#endif
 
 #if(UART_INIT_CHECK_API == STD_ON)
 /*******************************************************************************
@@ -735,7 +703,7 @@ extern Std_ReturnType Uart_InitCheck(const Uart_ConfigType *const ConfigPtr);
 #else
 /* MISRA2012_RULE_4_9_JUSTIFICATION: Function like macro used to generate
  compile time error in case of incorrect configuration*/
-#define Uart_InitCheck(ConfigPtr)  (ERROR_Uart_InitCheck_API_IS_NOT_SELECTED)
+#define Uart_InitCheck(ConfigPtr)  (ERROR_Uart_InitCheck_NOT_SELECTED)
 #endif
 
 #if(UART_VERSION_INFO_API == STD_ON)
@@ -769,7 +737,7 @@ extern void Uart_GetVersionInfo(Std_VersionInfoType *const VersionInfoPtr);
 /* MISRA2012_RULE_4_9_JUSTIFICATION: Function like macro used to generate
  compile time error in case of incorrect configuration*/
 #define Uart_GetVersionInfo(VersionInfoPtr) \
-                                      (ERROR_Uart_GetVersionInfo_API_IS_NOT_SELECTED)
+                                      (ERROR_Uart_GetVersionInfo_NOT_SELECTED)
 #endif
 
 #define UART_STOP_SEC_CODE_ASIL_B_LOCAL
@@ -784,3 +752,4 @@ extern void Uart_GetVersionInfo(Std_VersionInfoType *const VersionInfoPtr);
 *******************************************************************************/
 #include "Uart_PBcfg.h"
 #endif
+

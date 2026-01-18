@@ -1,7 +1,7 @@
 
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2023)                                 **
+** Copyright (C) Infineon Technologies (2018)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -13,9 +13,9 @@
 **                                                                            **
 **  FILENAME     : Dio.h                                                      **
 **                                                                            **
-**  VERSION      : 9.0.0                                                     **
+**  VERSION      : 4.0.0                                                      **
 **                                                                            **
-**  DATE         : 2023-07-05                                                 **
+**  DATE         : 2018-08-07                                                 **
 **                                                                            **
 **  VARIANT      : Variant LT                                                 **
 **                                                                            **
@@ -27,13 +27,11 @@
 **                                                                            **
 **  DESCRIPTION  : Dio Driver header definition file                          **
 **                                                                            **
-**  SPECIFICATION(S) : Specification of Dio Driver, AUTOSAR Release 4.2.2 and **
-**                     AUTOSAR Release 4.4.0                                  **
+**  SPECIFICATION(S) : Specification of Dio Driver, AUTOSAR Release 4.2.2     **
 **                                                                            **
-**MAY BE CHANGED BY USER : no                                                 **
+**  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
 *******************************************************************************/
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}][/cover] */
 /* [cover parentID={932945B3-2C26-47f5-B876-357C8EF56E38},
                   {AC8683E3-C8D8-4704-B9CC-4620683FE9C3}] [/cover]*/
 #ifndef DIO_H
@@ -101,17 +99,9 @@
 #define DIO_SID_GETVERSIONINFO                ((uint8)18U)
 #endif
 
-#if(DIO_MASKED_WRITE_PORT_API == STD_ON)
-  /*Dio_MaskedWritePort Service Id */
-#define DIO_SID_MASKEDWRITEPORT                ((uint8)19U)
-#endif
+
 
 #endif /*(DIO_DEV_ERROR_DETECT == STD_ON)*/
-
-#if(DIO_SAFETY_ENABLE == STD_ON)
-/*Report if Invalid level is passed */
-#define DIO_E_PARAM_INVALID_LEVEL               ((uint8)50U)
-#endif
 
 /* DIO MODULE INSTANCE ID */
 #define DIO_INSTANCE_ID              ((uint8)0U)
@@ -443,11 +433,8 @@ extern Dio_LevelType Dio_FlipChannel
   const Dio_ChannelType ChannelId
 );
 #else
-/* MISRA2012_RULE_4_9_JUSTIFICATION: With Dio_FlipChannel disabled
-Dio_FlipChannel is implemented as Function like macro. Function like macro is
-used to generate compilation error, when an optional function is called by the
-application and not enabled in the configuration.*/
-#define Dio_FlipChannel(ChannelId)(ERROR_Dio_FlipChannel_API_IS_NOT_SELECTED)
+
+#define Dio_FlipChannel (ERROR_Dio_FlipChannel_NOT_SELECTED)
 #endif /* End for DIO_FLIP_CHANNEL_API */
 
 #if ( DIO_VERSION_INFO_API == STD_ON )
@@ -486,59 +473,8 @@ extern void Dio_GetVersionInfo
   Std_VersionInfoType * const VersionInfo
 );
 #else
-/* MISRA2012_RULE_4_9_JUSTIFICATION: With Dio_GetVersionInfo disabled
-Dio_GetVersionInfo is implemented as Function like macro. Function like macro
-is used to generate compilation error, when an optional function is called by
-the application and not enabled in the configuration.*/
-#define Dio_GetVersionInfo(VersionInfo)(ERROR_Dio_GetVersionInfo_API_IS_NOT_SELECTED)
+#define Dio_GetVersionInfo (ERROR_Dio_GetVersionInfo_NOT_SELECTED)
 #endif /* #if (DIO_VERSION_INFO_API == STD_ON) */
-
-#if (DIO_MASKED_WRITE_PORT_API == STD_ON )
-/*******************************************************************************
-** Traceability:                                                              **
-**                                                                            **
-** Syntax :void Dio_MaskedWritePort                                           **
-**                    (                                                       **
-**                     Dio_PortType PortId,                                   **
-**                     Dio_PortLevelType Level,                               **
-**                     Dio_PortLevelType Mask                                 **
-**                    )                                                       **
-**                                                                            **
-** Description :  This Api:                                                   **
-**   - Service to set the value of a given port with required mask.           **
-**                                                                            **
-**   - This Api is available if the Dio_MaskedWritePort is                    **
-**     set ON                                                                 **
-** [/cover]                                                                   **
-**                                                                            **
-** Service ID:  0x13                                                          **
-**                                                                            **
-** Sync/Async:  Synchronous                                                   **
-**                                                                            **
-** Reentrancy:  Reentrant                                                     **
-**                                                                            **
-** Parameters (in) :   PortId- ID of DIO Port                                 **
-**                     Level - Value to be written                            **
-**                     Mask - Channels to be masked in the port               **
-** Parameters (out):                                                          **
-**                                                                            **
-**                                                                            **
-** Return value    :  None                                                    **
-**                                                                            **
-*******************************************************************************/
-extern void Dio_MaskedWritePort
-(
-  const Dio_PortType PortId,
-  const Dio_PortLevelType Level,
-  const Dio_PortLevelType Mask
-);
-#else
-/* MISRA2012_RULE_4_9_JUSTIFICATION: With Dio_MaskedWritePort disabled
-Dio_MaskedWritePort is implemented as Function like macro. Function like macro
-is used to generate compilation error, when an optional function is called by
-the application and not enabled in the configuration.*/
-#define Dio_MaskedWritePort(PortId, Level, Mask)(ERROR_Dio_MaskedWritePort_API_IS_NOT_SELECTED)
-#endif /* End for DIO_MASKED_WRITE_PORT */
 
 /*******************************************************************************
 **                      Global Inline Function Definitions                    **

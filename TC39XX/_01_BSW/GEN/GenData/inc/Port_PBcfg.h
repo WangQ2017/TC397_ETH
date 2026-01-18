@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2020)                                 **
+** Copyright (C) Infineon Technologies (2019)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -10,15 +10,15 @@
 **                                                                            **
 ********************************************************************************
 **                                                                            **
-**  FILENAME  : Uart_PBcfg.h                                                  **
+**  FILENAME  : Port_PBcfg.h                                                  **
 **                                                                            **
-**  VERSION   : 7.0.0                                                         **
+**  VERSION   : 1.30.0_7.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2025-12-13, 12:54:12  !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2026-01-18, 20:54:23           !!!IGNORE-LINE !!!             **
 **                                                                            **
-**  GENERATOR : Build b191017-0938      !!!IGNORE-LINE!!!                   **
+**  GENERATOR : Build b170330-0431              !!!IGNORE-LINE !!!            **
 **                                                                            **
-**  BSW MODULE DECRIPTION : Uart.bmd                                          **
+**  BSW MODULE DECRIPTION : Port.bmd                                          **
 **                                                                            **
 **  VARIANT   : Variant PB                                                    **
 **                                                                            **
@@ -28,44 +28,31 @@
 **                                                                            **
 **  VENDOR    : Infineon Technologies                                         **
 **                                                                            **
-**  DESCRIPTION  : Uart configuration generated out of ECUC file              **
+**  DESCRIPTION  : Port configuration generated out of ECUC file               **
 **                                                                            **
-**  SPECIFICATION(S) :Specification of Uart Driver, AUTOSAR Release 4.2.2 and **
-**                                                  AUTOSAR Release 4.4.0     **
+**  SPECIFICATION(S) : Specification of Port Driver, AUTOSAR Release 4.2.2     **
 **                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
 *******************************************************************************/
-/* [cover parentID={040BB356-FE7A-4301-ADD6-EB5BE12C0AE7}]
-[/cover] */
-#ifndef UART_PBCFG_H
-#define UART_PBCFG_H
+#ifndef PORT_PBCFG_H
+#define PORT_PBCFG_H
+
 /*******************************************************************************
 **                      Includes                                              **
 *******************************************************************************/
-
 /*******************************************************************************
-**                      Global Macro Definitions                              **
+**                      Global Const Declaration                              **
 *******************************************************************************/
-#define UART_START_SEC_CONFIG_DATA_ASIL_B_LOCAL_UNSPECIFIED
-/* [cover parentID={84FCEDA9-01F7-4f48-AC8B-47FFAF8417E4}] */
-/*  [/cover] */
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safegaurd. It complies to Autosar guidelines. */
-/* MISRA2012_RULE_20_1_JUSTIFICATION: Declaration before #include,
- * this is due to inclusion of memmap.h to specify the location to which
- * the variable has to be placed. */
-#include "Uart_MemMap.h"
-/* Extern declaration of Uart Config Root */
-extern const Uart_ConfigType Uart_Config;
-#define UART_STOP_SEC_CONFIG_DATA_ASIL_B_LOCAL_UNSPECIFIED
-/* [cover parentID={84FCEDA9-01F7-4f48-AC8B-47FFAF8417E4}] */
-/*  [/cover] */
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safegaurd. It complies to Autosar guidelines. */
-/* MISRA2012_RULE_20_1_JUSTIFICATION: Declaration before #include,
- * this is due to inclusion of memmap.h to specify the location to which
- * the variable has to be placed. */
-#include "Uart_MemMap.h"
-#endif
+#define PORT_START_SEC_CONFIG_DATA_ASIL_B_GLOBAL_UNSPECIFIED
+/*MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header usage as per Autosar
+guideline.*/
+#include "Port_MemMap.h"
+/* Extern declaration of Port Config Root */
+extern const Port_ConfigType Port_Config;
 
+#define PORT_STOP_SEC_CONFIG_DATA_ASIL_B_GLOBAL_UNSPECIFIED
+/*MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header usage as per Autosar
+guideline.*/
+#include "Port_MemMap.h"
+#endif  /* PORT_PBCFG_H */

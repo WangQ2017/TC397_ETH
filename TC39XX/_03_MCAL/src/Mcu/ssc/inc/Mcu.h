@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2023)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : Mcu.h                                                      **
 **                                                                            **
-**  VERSION      : 26.0.0                                                     **
+**  VERSION      : 1.40.0_21.0.0                                              **
 **                                                                            **
-**  DATE         : 2023-05-22                                                 **
+**  DATE         : 2020-01-08                                                 **
 **                                                                            **
 **  VARIANT      : Variant PB                                                 **
 **                                                                            **
@@ -27,7 +27,6 @@
 **  DESCRIPTION  : Mcu Driver header definition file                          **
 **                                                                            **
 **  SPECIFICATION(S) : Specification of Mcu Driver, AUTOSAR Release 4.2.2     **
-**                     and 4.4.0                                              **
 **                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
@@ -41,7 +40,6 @@
 *******************************************************************************/
 /* Inclusion of common project headers */
 /*[cover parentID={025CCD64-3039-4b4c-A6B9-B92839818D73}][/cover]*/
-/*[cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}][/cover]*/
 #include "Std_Types.h"
 #include "McalLib.h"
 /*Inclusion of Mcu configuration header*/
@@ -236,13 +234,9 @@ typedef void*    Mcu_RamBaseAdrType;
 /* [cover parentID={B04F7350-1346-42df-B263-7B5C592423FB}][/cover]  */
 typedef uint32   Mcu_RamSizeType;
 
-/* RAM Section Write Size */
-/* [cover parentID={45245E11-428A-49ae-B8B0-C970D9CAE512}][/cover]  */
-typedef uint32   Mcu_RamWriteSizeType;
-
 /* Data Pre-setting to be initialized */
 /* [cover parentID={8127826C-90A3-4cb2-B670-3765062E724F}][/cover]  */
-typedef uint64    Mcu_RamPrstDatType;
+typedef uint8    Mcu_RamPrstDatType;
 /* [/cover]  */
 
 /* [cover parentID={FB075DB4-7FC7-4944-A192-EDD33CB9EE2F}] */
@@ -293,19 +287,19 @@ typedef enum
 typedef enum
 {
   MCU_CPU0        = 0x0U,    /* CPU0 identifier */
-  #if ( MCAL_NO_OF_ACTIVE_CORES > 1U )
+  #if ( MCAL_NO_OF_CORES > 1U )
   MCU_CPU1        = 0x1U,    /* CPU1 identifier */
   #endif
-  #if ( MCAL_NO_OF_ACTIVE_CORES > 2U )
+  #if ( MCAL_NO_OF_CORES > 2U )
   MCU_CPU2        = 0x2U,    /* CPU2 identifier */
   #endif
-  #if ( MCAL_NO_OF_ACTIVE_CORES > 3U )
+  #if ( MCAL_NO_OF_CORES > 3U )
   MCU_CPU3        = 0x3U,    /* CPU3 identifier */
   #endif
-  #if ( MCAL_NO_OF_ACTIVE_CORES > 4U )
+  #if ( MCAL_NO_OF_CORES > 4U )
   MCU_CPU4        = 0x4U,    /* CPU4 identifier */
   #endif
-  #if ( MCAL_NO_OF_ACTIVE_CORES > 5U )
+  #if ( MCAL_NO_OF_CORES > 5U )
   MCU_CPU5        = 0x5U,    /* CPU5 identifier */
   #endif
 } Mcu_CpuIdType;
@@ -395,7 +389,7 @@ typedef struct
   #endif
   uint32 Ccucon5;    /* Variable to configure Ccucon5 register */
   /* Variable to configure Ccucon[i] register [i = 6...12 : for Cpu0...Cpu5]*/
-  uint32 CcuconCpu[MCAL_NO_OF_ACTIVE_CORES];
+  uint32 CcuconCpu[MCAL_NO_OF_CORES];
 } Mcu_PllDistributionConfigType;
 /* [/cover]  */
 
@@ -439,13 +433,9 @@ typedef struct
 /* [cover parentID={9313E654-7696-4d46-8E19-41900A43E69C}] */
 typedef struct
 {
-  Mcu_RamBaseAdrType    RamBaseAdrPtr;  /* Pointer to Ram section base address             */
-  Mcu_RamSizeType       RamSize;        /* size of ram section                             */
-  Mcu_RamPrstDatType    RamPrstData;    /* initialization data value                       */
-  #if (MCAL_AR_VERSION == MCAL_AR_440)
-  uint64                RamData;        /* initialization data value to be written at once */
-  Mcu_RamWriteSizeType  RamWriteSize;   /* Number of bytes to be written at once in RAM    */
-  #endif
+  Mcu_RamBaseAdrType RamBaseAdrPtr;  /* Pointer to Ram section base address */
+  Mcu_RamSizeType    RamSize;        /* size of ram section                 */
+  Mcu_RamPrstDatType RamPrstData;    /* initialization data value           */
 } Mcu_RamConfigType;
 /* [/cover]  */
 
@@ -488,10 +478,6 @@ typedef struct
   uint32               Pmswcr4;
   /* Variable to store the configuration parameters of PMSWCR5 */
   uint32               Pmswcr5;
-  /* Variable to store the configuration parameters of EVRUVMON */
-  uint32               Evruvmon;
-  /* Variable to store the configuration parameters of EVRMONCTRL */
-  uint32               EvrmonCtrl;
   #if (MCU_NO_OF_STDBY_RAM_BLK != 0U)
   uint32              *StdbyRamAdr[MCU_NO_OF_STDBY_RAM_BLK];
   #endif
@@ -636,8 +622,6 @@ typedef struct
   uint32                          GtmToutSelCfg[MCU_GTM_NO_OF_TOUTSEL_AVAILABLE];
   /* Array to store TOUTSEL used mask*/
   uint32                          GtmToutSelCfgMsk[MCU_GTM_NO_OF_TOUTSEL_AVAILABLE];
-  /* Array to store TIMINSEL configurations*/
-  uint32                          GtmTimInSelCfg[MCU_GTM_NO_OF_TIM_AVAILABLE];
   /* Variable to store GTM TBU Configuration */
   uint32                          GtmTbuCfg;
   /* Variable to store the usage of TOM module */
@@ -678,7 +662,7 @@ typedef struct
   uint32                      McuArstDisCfg;
   /* Variable to store trap setting configuration */
   uint32                      McuTrapSettingConf0;
-  #if (MCAL_NO_OF_ACTIVE_CORES > 4U)
+  #if (MCAL_NO_OF_CORES > 4U)
   uint32                      McuTrapSettingConf1;
   #endif
   /* Variable to store global Eru filter configuration for channels */
@@ -714,6 +698,10 @@ typedef struct
 **                      Global Function Declarations                          **
 *******************************************************************************/
 #define MCU_START_SEC_CODE_ASIL_B_GLOBAL
+/* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header usage as per Autosar
+   guideline. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
+   without safeguard. It complies to Autosar guidelines. */
 #include "Mcu_MemMap.h"
 
 /*******************************************************************************
@@ -812,10 +800,7 @@ extern Std_ReturnType Mcu_InitRamSection(const Mcu_RamSectionType RamSection );
 *******************************************************************************/
 extern Std_ReturnType Mcu_InitClock(const Mcu_ClockType ClockSetting);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_InitClock(ClockSetting)      ERROR_Mcu_InitClock_API_IS_NOT_SELECTED
+#define Mcu_InitClock         ERROR_Mcu_InitClock_NOT_SELECTED
 #endif/* End of (MCU_INIT_CLOCK_API == STD_ON)*/
 
 #if (MCU_DISTRIBUTE_PLL_CLOCK_API == STD_ON)
@@ -844,11 +829,7 @@ extern Std_ReturnType Mcu_InitClock(const Mcu_ClockType ClockSetting);
 *******************************************************************************/
 extern Std_ReturnType Mcu_DistributePllClock( void );
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_DistributePllClock()\
-                    ERROR_Mcu_DistributePllClock_API_IS_NOT_SELECTED
+#define Mcu_DistributePllClock     ERROR_Mcu_DistributePllClock_NOT_SELECTED
 #endif/* End of (MCU_INIT_CLOCK_API == STD_ON)*/
 
 /*******************************************************************************
@@ -948,10 +929,7 @@ extern Mcu_RawResetType Mcu_GetResetRawValue( void );
 *******************************************************************************/
 extern void Mcu_PerformReset( void );
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_PerformReset()  ERROR_Mcu_PerformReset_API_IS_NOT_SELECTED
+#define Mcu_PerformReset  ERROR_Mcu_PerformReset_NOT_SELECTED
 #endif /* End of MCU_PERFORM_RESET_API */
 
 /*******************************************************************************
@@ -1013,11 +991,8 @@ extern void Mcu_SetMode(const Mcu_ModeType McuMode);
 *******************************************************************************/
 extern void Mcu_GetVersionInfo(Std_VersionInfoType * const versioninfo);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_GetVersionInfo(versioninfo)\
-                        ERROR_Mcu_GetVersionInfo_API_IS_NOT_SELECTED
+#define Mcu_GetVersionInfo\
+                        ERROR_McuVersionInfoApi_NOT_SELECTED
 #endif  /* #if (MCU_VERSION_INFO_API == STD_ON) */
 
 #if(MCU_GET_RAM_STATE_API == STD_ON)
@@ -1044,11 +1019,8 @@ extern void Mcu_GetVersionInfo(Std_VersionInfoType * const versioninfo);
 *******************************************************************************/
 extern Mcu_RamStateType Mcu_GetRamState(void);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_GetRamState()\
-                        ERROR_Mcu_GetRamState_API_IS_NOT_SELECTED
+#define Mcu_GetRamState\
+                        ERROR_McuGetRamStateApi_NOT_SELECTED
 #endif  /* #if (MCU_GET_RAM_STATE_API == STD_ON) */
 
 #if (MCU_CLK_SRC_FAILURE_NOTIF_API == STD_ON)
@@ -1075,11 +1047,8 @@ extern Mcu_RamStateType Mcu_GetRamState(void);
 *******************************************************************************/
 extern void Mcu_ClockFailureNotification(void);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_ClockFailureNotification()\
-                        ERROR_Mcu_ClockFailureNotification_API_IS_NOT_SELECTED
+#define Mcu_ClockFailureNotification\
+                        ERROR_McuClockSourceFailureNotification_NOT_SELECTED
 #endif  /* #if (MCU_CLK_SRC_FAILURE_NOTIF_API == STD_ON) */
 
 #if (MCU_CLR_COLD_RESET_STAT_API == STD_ON)
@@ -1105,11 +1074,7 @@ extern void Mcu_ClockFailureNotification(void);
 *******************************************************************************/
 extern void Mcu_ClearColdResetStatus( void );
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_ClearColdResetStatus()\
-                    ERROR_Mcu_ClearColdResetStatus_API_IS_NOT_SELECTED
+#define Mcu_ClearColdResetStatus  ERROR_McuClearColdResetApi_NOT_SELECTED
 #endif /* (MCU_CLR_COLD_RESET_STAT_API == STD_ON) */
 
 #if (MCU_DEINIT_API == STD_ON)
@@ -1138,10 +1103,7 @@ extern void Mcu_ClearColdResetStatus( void );
 *******************************************************************************/
 extern void Mcu_DeInit(void);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_DeInit()  ERROR_Mcu_DeInit_API_IS_NOT_SELECTED
+#define Mcu_DeInit  ERROR_McuIfxDeInitApi_NOT_SELECTED
 #endif
 
 #if (MCU_LOW_POWER_MODE_API == STD_ON)
@@ -1171,11 +1133,7 @@ extern void Mcu_DeInit(void);
 *******************************************************************************/
 extern uint32 Mcu_GetCpuIdleModeInitiator(void);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_GetCpuIdleModeInitiator()\
-                        ERROR_Mcu_GetCpuIdleModeInitiator_API_IS_NOT_SELECTED
+#define Mcu_GetCpuIdleModeInitiator  ERROR_McuIfxLpmApi_NOT_SELECTED
 #endif
 
 #if (MCU_LOW_POWER_MODE_API == STD_ON)
@@ -1205,10 +1163,7 @@ extern uint32 Mcu_GetCpuIdleModeInitiator(void);
 *******************************************************************************/
 extern Mcu_CpuModeType Mcu_GetCpuState(const Mcu_CpuIdType CpuId);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_GetCpuState(CpuId)  ERROR_Mcu_GetCpuState_API_IS_NOT_SELECTED
+#define Mcu_GetCpuState  ERROR_McuIfxLpmApi_NOT_SELECTED
 #endif
 
 #if (MCU_LOW_POWER_MODE_API == STD_ON)
@@ -1234,10 +1189,7 @@ extern Mcu_CpuModeType Mcu_GetCpuState(const Mcu_CpuIdType CpuId);
 *******************************************************************************/
 extern uint32 Mcu_GetWakeupCause(void);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_GetWakeupCause()  ERROR_Mcu_GetWakeupCause_API_IS_NOT_SELECTED
+#define Mcu_GetWakeupCause  ERROR_McuIfxLpmApi_NOT_SELECTED
 #endif
 
 #if (MCU_LOW_POWER_MODE_API == STD_ON)
@@ -1266,11 +1218,7 @@ extern uint32 Mcu_GetWakeupCause(void);
 *******************************************************************************/
 extern void Mcu_ClearWakeupCause(const uint32 WakeupCause);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_ClearWakeupCause(WakeupCause)\
-                           ERROR_Mcu_ClearWakeupCause_API_IS_NOT_SELECTED
+#define Mcu_ClearWakeupCause  ERROR_McuIfxLpmApi_NOT_SELECTED
 #endif
 
 #if (MCU_TRAP_API == STD_ON)
@@ -1296,10 +1244,7 @@ extern void Mcu_ClearWakeupCause(const uint32 WakeupCause);
 *******************************************************************************/
 extern uint32 Mcu_GetTrapCause(void);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_GetTrapCause()  ERROR_Mcu_GetTrapCause_API_IS_NOT_SELECTED
+#define Mcu_GetTrapCause  ERROR_McuIfxTrapApi_NOT_SELECTED
 #endif
 
 #if (MCU_TRAP_API == STD_ON)
@@ -1328,11 +1273,7 @@ extern uint32 Mcu_GetTrapCause(void);
 *******************************************************************************/
 extern void Mcu_SetTrapRequest(const Mcu_TrapRequestType TrapRequestId);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_SetTrapRequest(TrapRequestId)\
-                          ERROR_Mcu_SetTrapRequest_API_IS_NOT_SELECTED
+#define Mcu_SetTrapRequest  ERROR_McuIfxTrapApi_NOT_SELECTED
 #endif
 
 #if (MCU_TRAP_API == STD_ON)
@@ -1361,11 +1302,7 @@ extern void Mcu_SetTrapRequest(const Mcu_TrapRequestType TrapRequestId);
 *******************************************************************************/
 extern void Mcu_ClearTrapRequest(const Mcu_TrapRequestType TrapRequestId);
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_ClearTrapRequest(TrapRequestId)\
-                        ERROR_Mcu_ClearTrapRequest_API_IS_NOT_SELECTED
+#define Mcu_ClearTrapRequest  ERROR_McuIfxTrapApi_NOT_SELECTED
 #endif
 
 #if (MCU_CPU_CCUCON_UPDATE_API == STD_ON)
@@ -1403,11 +1340,7 @@ extern void Mcu_UpdateCpuCcuconReg
   const uint8 Delay
 );
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_UpdateCpuCcuconReg(CpuId,DivVal,Delay)\
-                               ERROR_Mcu_UpdateCpuCcuconReg_API_IS_NOT_SELECTED
+#define Mcu_UpdateCpuCcuconReg  ERROR_McuIfxCpuCcuconApi_NOT_SELECTED
 #endif
 
 
@@ -1442,10 +1375,7 @@ extern Std_ReturnType Mcu_InitCheck
   const Mcu_ConfigType * const ConfigPtr
 );
 #else
-/*MISRA2012_RULE_4_9_JUSTIFICATION:Function like macro is used to generate
-  compilation error, when an optional function is called by application
-  and not enabled in the configuration*/
-#define Mcu_InitCheck(ConfigPtr)  ERROR_Mcu_InitCheck_API_IS_NOT_SELECTED
+#define Mcu_InitCheck  ERROR_McuInitCheckApi_NOT_SELECTED
 #endif
 
 #define MCU_STOP_SEC_CODE_ASIL_B_GLOBAL
@@ -1460,3 +1390,4 @@ application software*/
 #include "Mcu_PBcfg.h"
 
 #endif  /* End of  MCU_H */
+

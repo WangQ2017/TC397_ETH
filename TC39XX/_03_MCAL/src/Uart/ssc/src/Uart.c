@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2023)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : Uart.c                                                     **
 **                                                                            **
-**  VERSION      : 34.0.0                                                     **
+**  VERSION      : 1.40.0_28.0.0                                              **
 **                                                                            **
-**  DATE         : 2023-05-24                                                 **
+**  DATE         : 2020-04-16                                                 **
 **                                                                            **
 **  VARIANT      : Variant PB                                                 **
 **                                                                            **
@@ -26,7 +26,7 @@
 **                                                                            **
 **  DESCRIPTION  : Uart driver source file.                                   **
 **                                                                            **
-**  SPECIFICATION(S):Specification of Uart driver, AUTOSAR Release4.2.2&4.4.0 **
+**  SPECIFICATION(S) : Specification of Uart driver, AUTOSAR Release 4.2.2    **
 **                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
@@ -40,7 +40,6 @@
 *******************************************************************************/
 /* Inclusion of SFR file */
 #include "IfxAsclin_reg.h"
-#include "IfxAsclin_bf.h"
 /* Inclusion of mcal specific header files */
 #include "McalLib.h"
 /* UART driver header file */
@@ -50,13 +49,8 @@
 #include "McalLib_OsStub.h"
 #endif
 /* Conditional inclusion of developement error tracer file */
-#if (UART_DEV_ERROR_DETECT == STD_ON) 
+#if ((UART_DEV_ERROR_DETECT == STD_ON) || (UART_RUNTIME_ERROR_DETECT == STD_ON))
 #include "Det.h"
-#endif
-
-/* Include Mcal_Wrapper header file if runtime error is enabled */
-#if (UART_RUNTIME_ERROR_DETECT == STD_ON)
-#include"Mcal_Wrapper.h"
 #endif
 /* Conditional inclusion of safety error header */
 /* [cover parentID= {16225CBD-29E1-4c54-91DA-FD91D2B6691B}]
@@ -65,9 +59,6 @@ Safety properties
 #if(UART_SAFETY_ENABLE == STD_ON)
 #include "Mcal_SafetyError.h"
 #endif
-
-/* Scheduled functions header file */
-#include "SchM_Uart.h"
 
 /*******************************************************************************
 **                      Imported Compiler Switch Check                        **
@@ -79,8 +70,7 @@ Safety properties
 #ifndef UART_SW_MAJOR_VERSION
 #error "UART_SW_MAJOR_VERSION is not defined. "
 #endif
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}]
-     [/cover] */
+
 #ifndef UART_SW_MINOR_VERSION
 #error "UART_SW_MINOR_VERSION is not defined. "
 #endif
@@ -109,9 +99,7 @@ Safety properties
 #error "DET_AR_RELEASE_MAJOR_VERSION is not defined. "
 #endif
 
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}]
-     [/cover] */
-#if ( DET_AR_RELEASE_MAJOR_VERSION != MCAL_AR_RELEASE_MAJOR_VERSION )
+#if ( DET_AR_RELEASE_MAJOR_VERSION != 4U )
 #error "DET_AR_RELEASE_MAJOR_VERSION does not match. "
 #endif
 
@@ -151,9 +139,7 @@ typedef enum
   /* UART channel RXFIFO copy in progress. */
   UART_RX_FIFO_COPY_IN_PROGRESS,
   /* UART channel receive abort in progress. */
-  UART_RX_ABORT_IN_PROGRESS,
-  /* UART channel stopstreaming in progress. */
-  UART_RX_STOP_STREAMING_IN_PROGRESS
+  UART_RX_ABORT_IN_PROGRESS
 } Uart_RxStateType;
 
 /* [cover parentID={D919E757-F884-4fba-A272-6119F74207CC}] */
@@ -175,12 +161,6 @@ typedef struct
   Uart_SizeType TxDataLeft;
   /* Number of bytes pending to receive */
   Uart_SizeType RxDataLeft;
-  #if(UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-  /* Application buffer size */
-  Uart_SizeType RxBufSize;
-  /* Channel receive mode */
-  uint8 ChanRxMode;
-  #endif
   /* Number of bytes transmited */
   Uart_SizeType TotalDataTxd;
   /* Number of bytes received */
@@ -235,11 +215,6 @@ typedef struct
 #define UART_RXFIFOCONREG_OUTW_1BYTE      (1U)
 #define UART_STEPSIZE_1BYTE               (1U)
 
-/* FIFO operating interrupt mode */
-#if((UART_TX_MODE != UART_POLLING_MODE)||(UART_RX_MODE != UART_POLLING_MODE))
-#define UART_COMBINED_MOVE_MODE           (0U)
-#endif
-
 /* Define to set and clear bit */
 #define UART_SET_BIT                      (1U)
 #define UART_CLEAR_BIT                    (0U)
@@ -258,9 +233,6 @@ typedef struct
 #define UART_IOCR_CFG_MASK                (0x3FFFFFFFU)
 /* ASCLIN UART mode */
 #define UART_FRAMECONREG_ASC_MODE         (0x00010000U)
-
-#define UART_TXFIFOCONREG_FIFO_MODE         (0U)
-#define UART_RXFIFOCONREG_FIFO_MODE         (0U)
 
 /* Bit position of baud rate numrator */
 #define UART_BRG_NUMERATOR_BITPOS           16U
@@ -298,22 +270,8 @@ typedef struct
 #define UART_RX_NOTFN_NOT_TRIGGERED         0U
 /* Set Mask for RXFIFO level, RXFIFO overflow, Parity error
 and Farame error bit fields */
-#define UART_PEE_FEE_RFLE_RFOE_MASK  (((uint32)IFX_ASCLIN_FLAGSENABLE_PEE_MSK  \
-    << IFX_ASCLIN_FLAGSENABLE_PEE_OFF)  | ((uint32)IFX_ASCLIN_FLAGSENABLE_FEE_MSK  \
-    << IFX_ASCLIN_FLAGSENABLE_FEE_OFF)  | ((uint32)IFX_ASCLIN_FLAGSENABLE_RFLE_MSK \
-    << IFX_ASCLIN_FLAGSENABLE_RFLE_OFF) | ((uint32)IFX_ASCLIN_FLAGSENABLE_RFOE_MSK\
-    << IFX_ASCLIN_FLAGSENABLE_RFOE_OFF))
+#define UART_PEE_FEE_RFLE_RFOE_MASK           (0x14050000U)
 
-#if (UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-/* Receive operating modes */
-#define UART_RX_IN_READ_MODE                 1U
-#define UART_RX_IN_STREAMING_MODE            2U
-
-/* RXFIFO interrupt levels */
-#define UART_RX_FIFO_INT_LEVEL_MIN          (0U)
-#define UART_RX_FIFO_INT_LEVEL_ONE          (1U)
-#define UART_RECEIVED_DATA_SIZE_ZERO        (0U)
-#endif
 /*******************************************************************************
 **                         User Mode Macros                                   **
 *******************************************************************************/
@@ -403,11 +361,7 @@ static void Uart_lStatusTimeout(const uint32 WaitTicks,
                                 const Ifx_ASCLIN *const HwModulePtr,
                                 const uint8 RegisterType,
                                 const uint8 ExpStatValue);
-#if (UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-static void Uart_lReceiveStreamingData(Ifx_ASCLIN *const HwModulePtr,
-                         Uart_ChannelInfoType *const ChannelInfoPtr,
-                         const Uart_ChannelConfigType *const ChannelConfigPtr);
-#endif
+
 #define UART_STOP_SEC_CODE_ASIL_B_LOCAL
 /* [cover parentID={84FCEDA9-01F7-4f48-AC8B-47FFAF8417E4}] */
 /*  [/cover] */
@@ -734,28 +688,10 @@ void Uart_MainFunction_Read(void)
           /* Check receive refill interrupt set */
           if(RecFillLevel > 0U)
           {
-            /* [cover parentID={EA15C5F0-1253-4425-901E-82AB43CA33DB}]
-            [/cover] */
-            #if(UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-            /* [cover parentID={33611D71-437C-4392-95AB-FD17B7C0DF11}]
-            [/cover] */
-            /* Check channel read operation in streaming mode */
-            if(ChannelInfoPtr->ChanRxMode == UART_RX_IN_STREAMING_MODE)
-            {
-            /* [cover parentID={AB7A73EB-AA91-41da-B3BC-6EBA70A110C4}]
-            [/cover] */
-            /* Handle received data in streaming mode*/
-            Uart_lReceiveStreamingData(HwModulePtr, ChannelInfoPtr, ChannelConfigPtr);
-            }
-            else
-            #endif
-            {
             /* [cover parentID={990828D2-2BB2-4e71-BB34-E149852A8249}]
             [/cover] */
-            /* Handle received data in normal read mode*/
             Uart_lRead(HwModulePtr, ChannelInfoPtr, ChannelConfigPtr, \
                        RecFillLevel);
-            }
           }
 
           /* [cover parentID={5B58E5F9-9227-4de2-9C55-77301895C56D}]
@@ -985,15 +921,14 @@ Std_ReturnType Uart_InitCheck(const Uart_ConfigType *const ConfigPtr)
         CompareFlag &= ~(SfrVal ^ CfgVal);
 
         /* Check TXFIFOCON  */
-        CfgVal = UART_TXFIFOCONREG_FIFO_MODE;
         if(ChannelConfigPtr->DataLength < UART_NINEBIT_DATLEN)
         {
-          CfgVal |= ((uint32)UART_TXFIFOCONREG_INW_1BYTE << \
+          CfgVal = ((uint32)UART_TXFIFOCONREG_INW_1BYTE << \
                     UART_TXFIFOCON_INW_BITPOS);
         }
         else
         {
-          CfgVal |= ((uint32)UART_TXFIFOCONREG_INW_2BYTE << \
+          CfgVal = ((uint32)UART_TXFIFOCONREG_INW_2BYTE << \
                     UART_TXFIFOCON_INW_BITPOS);
         }
 
@@ -1001,15 +936,14 @@ Std_ReturnType Uart_InitCheck(const Uart_ConfigType *const ConfigPtr)
         CompareFlag &= ~(SfrVal ^ CfgVal);
 
         /* Check RXFIFOCON  */
-        CfgVal = UART_RXFIFOCONREG_FIFO_MODE;
         if(ChannelConfigPtr->DataLength < UART_NINEBIT_DATLEN)
         {
-          CfgVal |= ((uint32)UART_RXFIFOCONREG_OUTW_1BYTE << \
+          CfgVal = ((uint32)UART_RXFIFOCONREG_OUTW_1BYTE << \
                     UART_RXFIFOCON_OUTW_BITPOS);
         }
         else
         {
-          CfgVal |= ((uint32)UART_RXFIFOCONREG_OUTW_2BYTE << \
+          CfgVal = ((uint32)UART_RXFIFOCONREG_OUTW_2BYTE << \
                     UART_RXFIFOCON_OUTW_BITPOS);
         }
 
@@ -1306,50 +1240,40 @@ void Uart_DeInit(void)
       /* [cover parentID={77C55436-A03A-464d-BD0C-7D28AEFB980C}]
       [/cover] */
       HwModulePtr->FLAGSCLEAR.B.TFLC = UART_SET_BIT;
-      /* [cover parentID={29068AF7-4781-4684-A955-8E87A7DA4A28}]
+      /* [cover parentID={DF1711AC-B77B-4591-8ADE-8D11712C5308}]
       [/cover] */
       #if (UART_RX_MODE != UART_POLLING_MODE)
-        /* [cover parentID={7EFCFF6B-1C79-47b1-A529-649502546FFA}]
+        /* [cover parentID={29068AF7-4781-4684-A955-8E87A7DA4A28}]
         [/cover] */
         #if (UART_RX_MODE == UART_MIXED_MODE)
-      /* [cover parentID={0F1099F3-0F21-4a28-9736-546F523DBECD}]
-      [/cover] */
-      /* Check channel RX configured in polling mode */
+        /* [cover parentID={0F1099F3-0F21-4a28-9736-546F523DBECD}]
+        [/cover] */
+        /* Check channel RX configured in polling mode */
         if(ChannelConfigPtr->RxMode != UART_POLLING_MODE)
-      #endif
+        #endif
       {
         /* [cover parentID={9A01A3F1-D2B4-4929-B37D-E598E911A52B}]
         [/cover] */
-        /* Disable receive interrupts and RXFIFO interrupt mode */
         Uart_lDisableReadInterrupts(HwModulePtr);
-
-
-        /* [cover parentID={D548D5E8-5948-4127-91B1-58413750017F}]
-        [/cover] */
-        HwModulePtr->RXFIFOCON.B.FM = UART_CLEAR_BIT;
-
       }
       #endif
-      /* [cover parentID={C8BB867D-9CAB-4b8d-9B82-BAE8228B728E}]
+      /* [cover parentID={2FE524F0-0C6A-43ca-928B-408983419A84}]
+      [/cover] */
+      /* [cover parentID={5262D02A-ED4B-41d1-839E-58B8AECF8F4A}]
       [/cover] */
       #if (UART_TX_MODE != UART_POLLING_MODE)
-        /* [cover parentID={24149B90-B798-4324-932F-75A2DF708B74}]
+        /* [cover parentID={C8BB867D-9CAB-4b8d-9B82-BAE8228B728E}]
         [/cover] */
         #if (UART_TX_MODE == UART_MIXED_MODE)
-      /* [cover parentID={D5AC9ED5-E119-4ac9-95EF-CB80CF24B885}]
-      [/cover] */
-      /* Check channel TX configured in polling mode */
+        /* [cover parentID={D5AC9ED5-E119-4ac9-95EF-CB80CF24B885}]
+        [/cover] */
+        /* Check channel TX configured in polling mode */
         if(ChannelConfigPtr->TxMode != UART_POLLING_MODE)
-      #endif
+        #endif
       {
         /* [cover parentID={BF3798BD-2973-46ff-A279-3B33B6EFAE24}]
         [/cover] */
-        /* Clear TXFIFO level interrupt and interrupt mode */
         HwModulePtr->FLAGSENABLE.B.TFLE = UART_CLEAR_BIT;
-
-        /* [cover parentID={F749ED47-0A46-44d7-8BC0-F4C8BA598AE6}]
-        [/cover] */
-        HwModulePtr->TXFIFOCON.B.FM = UART_CLEAR_BIT;
       }
       #endif
       /* [cover parentID={B74C51A4-F281-4a35-B004-2560751F8CFF}]
@@ -1442,9 +1366,6 @@ Uart_ReturnType Uart_Read(const Uart_ChannelIdType Channel,
     ChannelInfoPtr->RxDataLeft = Size;
     ChannelInfoPtr->TotalDataRxd = 0U;
     ChannelInfoPtr->RxNotfn = UART_RX_NOTFN_NOT_TRIGGERED;
-    #if (UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-    ChannelInfoPtr->ChanRxMode = UART_RX_IN_READ_MODE;
-    #endif
     /* [cover parentID={A775039E-7EAD-46f3-9CF3-6E98BC868B95}]
     [/cover] */
     /* Extract SFRs address for target ASCLIN Unit */
@@ -1477,17 +1398,17 @@ Uart_ReturnType Uart_Read(const Uart_ChannelIdType Channel,
     /* Copy transmit fill level to check spurius interrupt */
     HwModulePtr->RXFIFOCON.B.INTLEVEL = IntLevel;
     ChannelInfoPtr->RxIntLevel = IntLevel + 1U;
-    /* [cover parentID={4DB647BF-1F8C-4733-8FC4-D0497AB63E78}]
+    /* [cover parentID={E9460862-5473-4e73-A94E-5EE60C969236}]
     [/cover] */
     #if (UART_RX_MODE != UART_POLLING_MODE)
-      /* [cover parentID={D840C322-4458-4f71-AEC8-FB7FB2DA7122}]
+      /* [cover parentID={4DB647BF-1F8C-4733-8FC4-D0497AB63E78}]
       [/cover] */
       #if (UART_RX_MODE == UART_MIXED_MODE)
-    /* [cover parentID={BBF9AF60-A570-417e-8AF2-2CD0BFE873E4}]
-    [/cover] */
-    /* Check read operation for current channel configured in interrupt mode */
+      /* [cover parentID={BBF9AF60-A570-417e-8AF2-2CD0BFE873E4}]
+      [/cover] */
+      /* Check read operation for current channel configured in interrupt mode */
       if(Uart_ConfigPtr->ChannelConfigPtr[Channel].RxMode != UART_POLLING_MODE)
-    #endif
+      #endif
     {
       /* [cover parentID={9FE13698-9996-4084-89AD-86C5A331389B}]
       [/cover] */
@@ -1505,297 +1426,6 @@ Uart_ReturnType Uart_Read(const Uart_ChannelIdType Channel,
 
   return RetValue;
 }
-#if (UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-/*******************************************************************************
-** Traceability     : [cover parentID={713CDDB0-E6F7-41f4-BA83-D0D4E135E3C2}] **
-** Syntax : Uart_ReturnType Uart_StartStreaming                               **
-**  (                                                                         **
-**    const Uart_ChannelIdType channel,Uart_MemType *const MemPtr,            **
-**                                                const Uart_SizeType BufSize **
-**  )                                                                         **
-**                                                                            **
-** Service ID      : 229                                                      **
-**                                                                            **
-** Sync/Async      : Asynchronous                                             **
-**                                                                            **
-** Reentrancy      : Reentrant(Not for same channel)                          **
-**                                                                            **
-** Parameters (in) : Channel - UART channel id for the streaming mode         **
-**                             operation.                                     **
-**                   MemPtr - Application buffer address.The UART driver uses **
-**                            this buffer to copy the received UART data from **
-**                            the hardware FIFO memory to this application    **
-**                            buffer and invokes streaming notification       **
-**                            function.                                       **
-**                  BufSize - The length of the application buffer in bytes   **
-**                            which is passed in the parameter MemPtr. Since  **
-**                            the hardware FIFO size is 16 bytes, at a time   **
-**                            UART hardware can store up to 16 bytes. So      **
-**                            recommended BufSize is 16 bytes anything above  **
-**                            will not be utilized by the UART driver         **
-**                                                                            **
-** Parameters (out): None                                                     **
-**                                                                            **
-** Return value    : UART_E_OK - Streaming operation was initiated            **
-**                   successfully                                             **
-**                   UART_E_NOT_OK - Streaming operation couldn't be initiated**
-**                   due to development errors                                **
-**                   UART_E_BUSY - Uart channel is busy with other            **
-**                   Streaming or read operation                              **
-**                                                                            **
-** Description     : Api to configure the receiving operation in streaming    **
-**                   mode for specified UART channel in polling or            **
-**                   interrupt mode                                           **
-**                                                                            **
-*******************************************************************************/
-Uart_ReturnType Uart_StartStreaming(const Uart_ChannelIdType Channel,
-                          Uart_MemType *const MemPtr,
-                          const Uart_SizeType BufSize)
-{
-  Ifx_ASCLIN* HwModulePtr;
-  Uart_ChannelInfoType* ChannelInfoPtr;
-  const Uart_ChannelConfigType *ChannelConfigPtr;
-  Uart_ReturnType RetValue = UART_E_OK;
-  uint8 IntLevel;
-
-  /* [cover parentID={E1CA14EC-AE8E-48a0-8E6F-C0F39A888A16}]
-  [/cover] */
-  /* DET or SAFETY is ON */
-  #if ((UART_DEV_ERROR_DETECT == STD_ON) || (UART_SAFETY_ENABLE == STD_ON))
-    /* [cover parentID={28F502D9-EF30-49a4-B71F-0D8A02264377}]
-    [/cover] */
-    /* Validate input parameters */
-    RetValue = Uart_lCheckDetError(Channel, BufSize,\
-                                            UART_SID_START_STREAMING, MemPtr);
-    /* [cover parentID={445765AE-8657-47e6-A8D1-D7C2999CD5B0}]
-    [/cover] */
-  if(RetValue == UART_E_OK)
-  #else
-    /* [cover parentID={7ED0EA81-F4F5-4501-8210-59B0A9CD5B20}]
-    [/cover] */
-    ChannelInfoPtr = &Uart_ChannelInfo[Channel];
-
-    /* [cover parentID={EB69E4E3-B897-4f70-BA52-814D32D607CA}]
-    [/cover] */
-    /* Check read operation is ongoing for same channel */
-    if(ChannelInfoPtr->ChanRxState != UART_RX_IDLE)
-      {
-        /* [cover parentID={1F62665C-4D51-402f-8DCE-4A8B3888E97E}]
-        [/cover] */
-        /* Update return value with busy */
-        RetValue = UART_E_BUSY;
-      }
-    else
-  #endif
-  {
-    #if ((UART_DEV_ERROR_DETECT == STD_ON) || (UART_SAFETY_ENABLE == STD_ON))
-    ChannelInfoPtr = &Uart_ChannelInfo[Channel];
-    #endif
-    /* [cover parentID={777E6E03-49E6-4f8e-9095-F659B6D3F34A}]
-    [/cover] */
-    /* Extract SFRs address for target ASCLIN Unit */
-    ChannelConfigPtr = &(Uart_ConfigPtr->ChannelConfigPtr[Channel]);
-    HwModulePtr = Uart_HwModuleAddr[ChannelConfigPtr->HwModule];
-
-    /* [cover parentID={44B4FE03-00D3-4378-8003-69CC7DAB9CE8}]
-    [/cover] */
-    /* Update Uart_ChannelInfo for Streaming Operation */
-    ChannelInfoPtr->ChanRxState = UART_RX_PREP_IN_PROGRESS;
-    ChannelInfoPtr->RxBuffPtr = MemPtr;
-    ChannelInfoPtr->RxBufSize = BufSize;
-    ChannelInfoPtr->RxNotfn = UART_RX_NOTFN_NOT_TRIGGERED;
-    ChannelInfoPtr->ChanRxMode = UART_RX_IN_STREAMING_MODE;
-
-    /* Flush the RXFIFO */
-    HwModulePtr->RXFIFOCON.B.FLUSH = UART_SET_BIT;
-
-    /* [cover parentID={8062B707-4BDA-460e-ABC1-88A2A460F4D1}]
-    [/cover] */
-    /* Clear read interrupt */
-    Uart_lClearReadInterrupts(HwModulePtr);
-
-
-    /* [cover parentID={1A2BD08A-DF79-4f56-A5DE-8F55CA655C76}]
-    [/cover] */
-    /* Is DataLength more than 8 bits */
-    if(ChannelConfigPtr->DataLength >= UART_NINEBIT_DATLEN)
-      {
-        /* [cover parentID={82088F06-E5A8-40c3-B153-F75DFCBF8E5D}]
-        [/cover] */
-        /* Set receive Interrupt level to 2Bytes */
-        IntLevel = UART_RX_FIFO_INT_LEVEL_ONE;
-      }
-    else
-      {
-        /* [cover parentID={065AFD54-FFDD-4c73-89BE-B47554C1882E}]
-        [/cover] */
-        /* Set receive Interrupt level to 1Byte */
-        IntLevel = UART_RX_FIFO_INT_LEVEL_MIN;
-      }
-    /* Copy Receive fill level to check spurius interrupt */
-    HwModulePtr->RXFIFOCON.B.INTLEVEL = IntLevel;
-    ChannelInfoPtr->RxIntLevel = IntLevel + 1U;
-
-    /* [cover parentID={1A4431DF-B3A5-4b1b-B655-49E30D30F850}]
-    [/cover] */
-    #if (UART_RX_MODE != UART_POLLING_MODE)
-      /* [cover parentID={40893C6E-0B79-469a-9CC8-EACE9F95B416}]
-      [/cover] */
-      #if (UART_RX_MODE == UART_MIXED_MODE)
-    /* [cover parentID={BD35AFAB-2CB6-4822-A53A-1A92F77D697E}]
-    [/cover] */
-    /* Check read operation for current channel configured in interrupt mode */
-      if(ChannelConfigPtr->RxMode != UART_POLLING_MODE)
-    #endif
-    {
-      /* [cover parentID={709A0F8F-29B0-4277-8EEF-0027AE6AE9FA}]
-      [/cover] */
-      /* Enable RXFIFO level and error interrupt */
-      Uart_lEnableReadInterrupts(HwModulePtr);
-    }
-    #endif
-    /* [cover parentID={68D18281-6A5E-4142-9BF6-B05AA53D3672}]
-    [/cover] */
-    /* Enable RXFIFO */
-    HwModulePtr->RXFIFOCON.B.ENI = UART_SET_BIT;
-    ChannelInfoPtr->ChanRxState = UART_RX_IN_PROGRESS;
-
-  }
-
-  return RetValue;
-}
-#endif
-
-#if (UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-/*******************************************************************************
-** Traceability     : [cover parentID={24571EE4-2E3C-46e3-9CD6-1735B930AD7B}] **
-** Syntax:Uart_ReturnType Uart_StopStreaming(const Uart_ChannelIdType Channel)**
-**                                                                            **
-** Service ID      : 230                                                      **
-**                                                                            **
-** Sync/Async      : Synchronous                                              **
-**                                                                            **
-** Reentrancy      : Reentrant  (Not for the same channel)                    **
-**                                                                            **
-** Parameters (in) : Channel - Uart channel id which is configured for the    **
-**                                         in straming mode                   **
-**                                                                            **
-** Parameters (out): None                                                     **
-**                                                                            **
-** Return value    : UART_E_OK - Streaming operation of the channel is        **
-**                                                  stopped successfully      **
-**                   UART_E_NOT_OK -Streaming operation of the channel        **
-**                                  couldn't stopped due to development       **
-**                                  errors or channel receive state is not in **
-**                                  progress                                  **
-** Description     : API to stop streaming operation on given channel.        **
-**                                                                            **
-*******************************************************************************/
-Uart_ReturnType Uart_StopStreaming(const Uart_ChannelIdType Channel)
-{
-  Ifx_ASCLIN *HwModulePtr;
-  const Uart_ChannelConfigType *ChannelConfigPtr;
-  Uart_ChannelInfoType *ChannelInfoPtr;
-  Uart_ReturnType RetValue = UART_E_OK;
-
-
-    ChannelInfoPtr = &Uart_ChannelInfo[Channel];
-  /* [cover parentID={AA22F99E-0EA5-4313-93E8-8D94614C5A57}]
-  [/cover] */
-  /* DET or SAFETY is ON */
-  #if((UART_DEV_ERROR_DETECT == STD_ON) || (UART_SAFETY_ENABLE == STD_ON))
-  /* [cover parentID={C88FD45B-0186-4bcf-9E60-BA404D3F67A2}]
-  [/cover] */
-  /* Is Uart driver initialized */
-  if(Uart_InitStatus == UART_UNINITIALISED)
-  {
-    /* [cover parentID={7C70FA80-E826-4661-B5F2-3E0C653DD91B}]
-    [/cover] */
-    /* Uart is not uninitialized report DET */
-    Uart_lReportError(UART_SID_STOP_STREAMING, UART_E_UNINIT);
-    RetValue = UART_E_NOT_OK;
-  }
-  else
-  {
-    /* [cover parentID={4D1C4549-49D3-4c55-970F-5903D10601DE}]
-    [/cover] */
-    /* ChannelId is invalid report DET */
-    RetValue = Uart_lChannelCheck(Channel, UART_SID_STOP_STREAMING);
-
-    /* [cover parentID={129F32E8-58A7-4e7e-A5F5-C84824A4B7F5}]
-    [/cover] */
-    /*Is channel ID valid and in streaming mode*/
-    if((RetValue == UART_E_OK) &&
-    (ChannelInfoPtr->ChanRxMode != UART_RX_IN_STREAMING_MODE))
-    {
-        /* [cover parentID={CB2BCF14-E925-42f0-9E64-DE67FEEA6B90}]
-        [/cover] */
-        /*Report Uart driver is not in sreaming mode error*/
-       Uart_lReportError(UART_SID_STOP_STREAMING, UART_E_INVALID_CHANNEL);
-       RetValue = UART_E_NOT_OK;
-    }
-  }
-
-  /* [cover parentID={3556B661-5A8B-447f-A623-0791BFA4518B}]
-  [/cover] */
-  if(RetValue == UART_E_OK)
-  #endif
-  {
-
-    /* [cover parentID={5EFEAFE5-6D07-40a9-9A54-F5A1E3EDB20A}]
-    [/cover] */
-    /* Check receive in progress */
-    if(ChannelInfoPtr->ChanRxState == UART_RX_IN_PROGRESS)
-    {
-        /* [cover parentID={B45FC54B-5663-4107-86B1-EA6757EA51DE}]
-        [/cover] */
-        /* Set receive state with stop streaming in progress */
-      ChannelInfoPtr->ChanRxState = UART_RX_STOP_STREAMING_IN_PROGRESS;
-      ChannelConfigPtr = &(Uart_ConfigPtr->ChannelConfigPtr[Channel]);
-      HwModulePtr = Uart_HwModuleAddr[ChannelConfigPtr->HwModule];
-
-      /* Disable and flush RXFIFO */
-      HwModulePtr->RXFIFOCON.B.ENI = UART_CLEAR_BIT;
-      HwModulePtr->RXFIFOCON.B.FLUSH = UART_SET_BIT;
-
-      /* [cover parentID={B689C14D-0DD6-4204-B9F6-A2ACF33048AB}]
-      [/cover] */
-      /* Clear and disable Rx overflow and level interrupts */
-      Uart_lClearReadInterrupts(HwModulePtr);
-
-      /* [cover parentID={2DC9F736-7926-42d8-A327-02C0CA1506C9}]
-      [/cover] */
-      #if (UART_RX_MODE != UART_POLLING_MODE)
-      /* [cover parentID={9D8FBC35-A17D-4894-A0C9-65B85448BEAB}]
-      [/cover] */
-        #if (UART_RX_MODE == UART_MIXED_MODE)
-      /* [cover parentID={7BBABC18-7D8E-43bf-BEFD-AD24FA7A2984}]
-      [/cover] */
-      /* Check if read operation in interrupt mode */
-        if(ChannelConfigPtr->RxMode != UART_POLLING_MODE)
-      #endif
-      {
-        Uart_lDisableReadInterrupts(HwModulePtr);
-      }
-      #endif
-
-      /* [cover parentID={F4B00BFC-B153-42b0-B3D0-D0A643BA0578}]
-      [/cover] */
-      /* Reset channel info structure */
-      ChannelInfoPtr->RxBuffPtr = NULL_PTR;
-      /* Reset channel state */
-      ChannelInfoPtr->ChanRxState = UART_RX_IDLE;
-    }
-    else
-    {
-        RetValue = UART_E_NOT_OK;
-    }
-  }
-
-  return RetValue;
-}
-#endif
-
 /*******************************************************************************
 ** Traceability     : [cover parentID={8BED9241-561A-48c1-B43E-9D7304BC92F9}] **
 ** Syntax : Uart_ReturnType Uart_Write                                        **
@@ -1923,8 +1553,6 @@ Uart_SizeType Uart_AbortRead(const Uart_ChannelIdType Channel)
   const Uart_ChannelConfigType *ChannelConfigPtr;
   Uart_ChannelInfoType *ChannelInfoPtr;
   Uart_SizeType UartRetSize;
-
-  ChannelInfoPtr = &Uart_ChannelInfo[Channel];
   #if((UART_DEV_ERROR_DETECT == STD_ON) || (UART_SAFETY_ENABLE == STD_ON))
   Uart_ReturnType RetValue;
   #endif
@@ -1953,20 +1581,6 @@ Uart_SizeType Uart_AbortRead(const Uart_ChannelIdType Channel)
     [/cover] */
     /* ChannelId is invalid report DET */
     RetValue = Uart_lChannelCheck(Channel, UART_SID_ABORT_READ);
-    #if(UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-    /* [cover parentID={D000553D-7D83-4d31-A0DF-05FE18A3D415}]
-    [/cover] */
-    /*Is channel ID valid and in streaming mode*/
-    if((RetValue == UART_E_OK) &&
-    (ChannelInfoPtr->ChanRxMode != UART_RX_IN_READ_MODE))
-    {
-        /* [cover parentID={22E09971-BB7C-4799-BF79-A6B5B7925568}]
-        [/cover] */
-        /* Report Uart driver is not in normal read mode */
-       Uart_lReportError(UART_SID_ABORT_READ, UART_E_INVALID_CHANNEL);
-       RetValue = UART_E_NOT_OK;
-    }
-    #endif
   }
 
   /* [cover parentID={F30E1A6F-6E9A-4430-9212-ADD437C19246}]
@@ -1974,6 +1588,7 @@ Uart_SizeType Uart_AbortRead(const Uart_ChannelIdType Channel)
   if(RetValue == UART_E_OK)
   #endif
   {
+    ChannelInfoPtr = &Uart_ChannelInfo[Channel];
     /* [cover parentID={36FF27BF-91C6-4dbc-AB94-E42306A53B13}]
     [/cover] */
     if(ChannelInfoPtr->ChanRxState == UART_RX_IN_PROGRESS)
@@ -1992,17 +1607,17 @@ Uart_SizeType Uart_AbortRead(const Uart_ChannelIdType Channel)
       /* Clear and disable Rx overflow and level interrupts */
       Uart_lClearReadInterrupts(HwModulePtr);
 
-      /* [cover parentID={70922CBC-C774-49a1-807B-FC44125BC1A7}]
+      /* [cover parentID={EB2433EE-9F8F-4f95-B909-90AF635D6DDE}]
       [/cover] */
       #if (UART_RX_MODE != UART_POLLING_MODE)
-      /* [cover parentID={2BE2DFF7-1919-4cea-B323-DF3941845E9B}]
-      [/cover] */
+        /* [cover parentID={70922CBC-C774-49a1-807B-FC44125BC1A7}]
+        [/cover] */
         #if (UART_RX_MODE == UART_MIXED_MODE)
-      /* [cover parentID={0E47C788-D20A-44e9-B72B-A5181D8C2846}]
-      [/cover] */
-      /* Check if read operation in interrupt mode */
+        /* [cover parentID={0E47C788-D20A-44e9-B72B-A5181D8C2846}]
+        [/cover] */
+        /* Check if read operation in interrupt mode */
         if(ChannelConfigPtr->RxMode != UART_POLLING_MODE)
-      #endif
+        #endif
       {
         /* [cover parentID={076D2D56-3D6A-4938-9FD0-D9ACDB039638}]
         [/cover] */
@@ -2127,17 +1742,17 @@ Uart_SizeType Uart_AbortWrite(const Uart_ChannelIdType Channel)
       /* Clear TXFIFO TXFIFO level interrupts */
       HwModulePtr->FLAGSCLEAR.B.TFLC = UART_SET_BIT;
 
-      /* [cover parentID={FDF96931-A983-486f-81CF-4F26198D4CF6}]
+      /* [cover parentID={F3A87B9D-DD96-47c0-9444-AE0785D38FFE}]
       [/cover] */
       #if (UART_TX_MODE != UART_POLLING_MODE)
-        /* [cover parentID={B6C2BD08-E2DC-49b4-9AE1-CE01890F275C}]
+        /* [cover parentID={FDF96931-A983-486f-81CF-4F26198D4CF6}]
         [/cover] */
         #if (UART_TX_MODE == UART_MIXED_MODE)
-      /* [cover parentID={AA9A4C3E-B66B-4a7d-B74A-F3E5315F5687}]
-      [/cover] */
-      /* Check if write operation in interrupt mode */
+        /* [cover parentID={AA9A4C3E-B66B-4a7d-B74A-F3E5315F5687}]
+        [/cover] */
+        /* Check if write operation in interrupt mode */
         if(ChannelConfigPtr->TxMode != UART_POLLING_MODE)
-      #endif
+        #endif
       {
         /* [cover parentID={2D517F37-A4A9-4b20-8FD4-AAF54DCE15FC}]
         [/cover] */
@@ -2388,8 +2003,7 @@ void Uart_IsrReceive(const uint8 HwUnit)
       /* Check receive notification already triggered and rx abort
          is in progress */
       if((ChannelInfoPtr->RxNotfn != UART_RX_NOTFN_TRIGGERED) && \
-         (ChannelInfoPtr->ChanRxState != UART_RX_ABORT_IN_PROGRESS) &&
-         (ChannelInfoPtr->ChanRxState != UART_RX_STOP_STREAMING_IN_PROGRESS))
+         (ChannelInfoPtr->ChanRxState != UART_RX_ABORT_IN_PROGRESS))
       {
         /* [cover parentID={9A2ACC17-F70A-4fe9-92A3-32D1F90FBABD}]
         [/cover] */
@@ -2398,27 +2012,10 @@ void Uart_IsrReceive(const uint8 HwUnit)
             (FillLevel >= ChannelInfoPtr->RxIntLevel) && \
             (FlagEnable == UART_SET_BIT) && (ReceiveStatus == UART_SET_BIT))
         {
-            /* [cover parentID={DFFA73B7-979B-4960-958F-294C004EC4B0}]
-            [/cover] */
-            #if(UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-            /* [cover parentID={957ED603-0F7C-498a-8F73-833EDE3D2D9D}]
-            [/cover] */
-            /* Check channel read operation in streaming mode */
-            if(ChannelInfoPtr->ChanRxMode == UART_RX_IN_STREAMING_MODE)
-            {
-            /* [cover parentID={1A756836-FCD1-4cd0-8BD3-7827D485CA0E}]
-            [/cover] */
-            /* Handle received data in streaming mode*/
-            Uart_lReceiveStreamingData(HwModulePtr, ChannelInfoPtr, ChannelConfigPtr);
-            }
-            else
-            #endif
-            {
-            /* Handle received data in normal read mode*/
-            /* [cover parentID={3456BB52-71EF-403e-98FB-31A1697E4306}]
-            [/cover] */
-             Uart_lRead(HwModulePtr, ChannelInfoPtr, ChannelConfigPtr, 0U);
-            }
+          /* Handle received data */
+          /* [cover parentID={3456BB52-71EF-403e-98FB-31A1697E4306}]
+          [/cover] */
+          Uart_lRead(HwModulePtr, ChannelInfoPtr, ChannelConfigPtr, 0U);
         }
         #if (UART_SAFETY_ENABLE == STD_ON)
         else
@@ -2433,7 +2030,7 @@ void Uart_IsrReceive(const uint8 HwUnit)
       }
       else
       {
-        #if (UART_ABORT_READ_API == STD_ON)||(UART_RECEIVE_STREAMING_MODE_API == STD_ON)
+        #if (UART_ABORT_READ_API == STD_ON)
         /* Check rx notification already triggered */
         if(ChannelInfoPtr->RxNotfn != UART_RX_NOTFN_NOT_TRIGGERED)
         #endif
@@ -2570,9 +2167,6 @@ void Uart_IsrTransmit(const uint8 HwUnit)
 #endif
 
 #if((UART_TX_MODE != UART_POLLING_MODE)||(UART_RX_MODE != UART_POLLING_MODE))
-/*CYCLOMATIC_Uart_IsrError_JUSTIFICATION:
-Uart_IsrError has to verify receive states and transmit complete status flags
-and also has to check for error scenarios. For better design readability, the function is not divided further.*/
 /*******************************************************************************
 ** Traceability     : [cover parentID={2B420FC6-404E-4b40-AE40-D0C30BBC3EEC}] **
 ** Syntax           : void Uart_IsrError( const uint8  HwUnit)                **
@@ -2681,7 +2275,7 @@ void Uart_IsrError(const uint8 HwUnit)
       }
 
       #if (UART_SAFETY_ENABLE == STD_ON)
-      #if((UART_ABORT_READ_API == STD_ON) || (UART_ABORT_WRITE_API == STD_ON) || (UART_RECEIVE_STREAMING_MODE_API == STD_ON))
+      #if((UART_ABORT_READ_API == STD_ON) || (UART_ABORT_WRITE_API == STD_ON))
 
       #if(UART_ABORT_WRITE_API == STD_OFF)
       if(ChanRxState == UART_RX_ABORT_IN_PROGRESS)
@@ -2848,7 +2442,6 @@ static void Uart_lRead(Ifx_ASCLIN *const HwModulePtr,
     NumBytesRead = ChannelInfoPtr->RxIntLevel;
   }
 
-
   /* [cover parentID={983A2430-3B46-4794-B49C-E97FAE8A8C09}]
   [/cover] */
   /* Extract Uart frame length */
@@ -2890,6 +2483,12 @@ static void Uart_lRead(Ifx_ASCLIN *const HwModulePtr,
       ReadCount = ReadCount + UART_STEPSIZE_1BYTE;
     }
   }
+
+  /* [cover parentID={D5E0D806-B9BA-4a09-BA69-9ADB9106AF93}]
+  [/cover] */
+  /* Clear RXFIFO level interrupt */
+  HwModulePtr->FLAGSCLEAR.B.RFLC = UART_SET_BIT;
+
   /* [cover parentID={874E9225-DEBB-4636-9D8E-DFF018113111}]
   [/cover] */
   /* Update Uart channel info with total data received */
@@ -2939,17 +2538,17 @@ static void Uart_lRead(Ifx_ASCLIN *const HwModulePtr,
     [/cover] */
     /* Disable RXFIFO */
     HwModulePtr->RXFIFOCON.B.ENI = UART_CLEAR_BIT;
-     /* [cover parentID={9504A03C-78E9-458a-9E72-D8481BDB5136}]
+    /* [cover parentID={EA30CF11-3DA3-4087-8A95-9EF31F96F4C7}]
       [/cover] */
     #if (UART_RX_MODE != UART_POLLING_MODE)
-      /* [cover parentID={1EC4BD58-00A7-4416-A106-86E5E70FA7B5}]
+      /* [cover parentID={61BED4E7-8027-425a-8320-3142965F3068}]
       [/cover] */
       #if (UART_RX_MODE == UART_MIXED_MODE)
-    /* [cover parentID={B7F79AC9-B351-4062-8339-B732ADC8B5BF}]
-    [/cover] */
-    /* Check if read operation in interrupt mode */
+      /* [cover parentID={B7F79AC9-B351-4062-8339-B732ADC8B5BF}]
+      [/cover] */
+      /* Check if read operation in interrupt mode */
       if(ChannelConfigPtr->RxMode != UART_POLLING_MODE)
-    #endif
+      #endif
     {
       /* [cover parentID={79A194DA-75BE-4474-B1D9-A2A1454EDED1}]
       [/cover] */
@@ -2979,199 +2578,6 @@ static void Uart_lRead(Ifx_ASCLIN *const HwModulePtr,
   }
 }
 
-#if(UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-/*******************************************************************************
-** Traceability     : [cover parentID={9FFEC06A-0EBC-47e5-A282-ACEC274E8F53}] **
-** Syntax           : static void Uart_lReceiveStreamingData                  **
-**  (                                                                         **
-**    Ifx_ASCLIN * const HwModulePtr,Uart_ChannelInfoType  *const             **
-**      ChannelInfoPtr, const Uart_ChannelConfigType *const ChannelConfigPtr) **
-**                                                                            **
-** Service ID       : NA                                                      **
-**                                                                            **
-** Sync/Async       : Synchronous                                             **
-**                                                                            **
-** Reentrancy       : Reentrant(Not for same channel)                         **
-**                                                                            **
-** Parameters (in)  : ChannelConfigPtr - Uart channel to be addressed         **
-**                                                                            **
-** Parameters (out) : None                                                    **
-**                                                                            **
-** Parameters (inout) : HwModulePtr - ASCLIN SFR address                      **
-**                      ChannelInfoPtr - Channel information address          **
-**                                                                            **
-** Return value     : None                                                    **
-**                                                                            **
-** Description      : Function to copy received UART data from the hardware   **
-**                    FIFO memory to the application buffer in in streaming   **
-**                    mode.After copying the data, this function invokes the  **
-**                    streaming notification function.                        **
-*******************************************************************************/
-static void Uart_lReceiveStreamingData(Ifx_ASCLIN *const HwModulePtr,
-                         Uart_ChannelInfoType *const ChannelInfoPtr,
-                         const Uart_ChannelConfigType *const ChannelConfigPtr)
-{
-  Uart_MemType *BuffPtr;
-  uint16 TempReadWord;
-  uint16 NumBytesRead;
-  uint8 UartFrameLen;
-  uint8 ReadCount;
-
-  /* [cover parentID={C153106A-7F7C-4b46-80FF-50316579342B}]
-  [/cover] */
-  /* Set buffer pointer with application buffer pointer */
-  BuffPtr =  ChannelInfoPtr->RxBuffPtr;
-
-  /* [cover parentID={F6C641EA-89C5-47c2-90BE-0AB04C0821BB}]
-  [/cover] */
-  /* Extract number of bytes to be read */
-  NumBytesRead = HwModulePtr->RXFIFOCON.B.FILL;
-
-    /* [cover parentID={3F182B3C-78BE-4e43-8706-741A7DA6DE54}]
-    [/cover] */
-    /*check buffer size is more than the received data size */
-    if(ChannelInfoPtr->RxBufSize >= NumBytesRead)
-    {
-      /* Extract Uart frame length */
-      UartFrameLen = ChannelConfigPtr->DataLength;
-
-      /* [cover parentID={6F05ED73-AAD1-47cc-97AF-168854A1A293}]
-      [/cover] */
-      /* Sart Read count from 0 */
-      ReadCount = 0U;
-
-      /* [cover parentID={73AC279E-0CE2-4ac0-9022-BBA8D8B5A0E1}]
-      [/cover] */
-      /* Copy all receive bytes in application buffer */
-      while(ReadCount < NumBytesRead)
-      {
-        /* [cover parentID={4AFD2EDA-8C30-45f2-8E63-F2A5E8C2683D}]
-        [/cover] */
-        /* [cover parentID={400B8389-18A3-4200-997A-CCD88136548C}]
-        [/cover] */
-        /* Check frame size is 9 bit */
-        if(UartFrameLen >= UART_NINEBIT_DATLEN)
-        {
-          /* [cover parentID={10E32977-9B78-4612-AC59-9D7EE69A8684}]
-          [/cover] */
-          /* Prepare 16 bits data and update application buffer */
-          TempReadWord = (uint16)(HwModulePtr->RXDATA.U);
-          BuffPtr[ReadCount] = (Uart_MemType)(TempReadWord);
-          BuffPtr[ReadCount + 1U] = (Uart_MemType)(TempReadWord >> \
-                                    UART_SHIFT_EIGHT_BIT);
-          /* Update local pointer and read count */
-          ReadCount = ReadCount + UART_STEPSIZE_2BYTE;
-        }
-        else
-        {
-          /* [cover parentID={F11DF8A3-ACE5-46ae-95C4-FEA9736CE017}]
-          [/cover] */
-          /* Update application buffer  */
-          BuffPtr[ReadCount] = (Uart_MemType)(HwModulePtr->RXDATA.U);
-          /* Update read count  */
-          ReadCount = ReadCount + UART_STEPSIZE_1BYTE;
-        }
-      }
-      /* [cover parentID={174E429E-6232-4d5e-852D-BACC92E5B5B6}]
-      [/cover] */
-      /* Flush the RXFIFO  */
-      HwModulePtr->RXFIFOCON.B.FLUSH = UART_SET_BIT;
-
-     /* [cover parentID={0FA41AD8-D442-4810-8B71-E032707F980B}]
-     [/cover] */
-     /* Check receive notification pointer is valid */
-     if(ChannelConfigPtr->UartNotif.UartStreamingNotifPtr != NULL_PTR)
-        {
-            /* [cover parentID={AECC2F47-5F8A-4105-B3BC-0EC30BA4C34F}]
-            [/cover] */
-            /* Call the streaming notification function */
-            ChannelConfigPtr->UartNotif.UartStreamingNotifPtr(UART_E_NO_ERR,\
-                                                                NumBytesRead);
-        }
-    }
-    else
-    {
-        /* [cover parentID={4ACDEA03-BF30-4377-95EE-83D4A6072D33}]
-        [/cover] */
-        /* Check Runtime error is enabled */
-        #if (UART_RUNTIME_ERROR_DETECT == STD_ON)
-
-        /* [cover parentID={1DC396F2-F2D7-4d66-B8C6-2A6B128BD4D0}]
-        [/cover] */
-        /* Check channel is configured in polling mode */
-        if(ChannelConfigPtr->RxMode != UART_POLLING_MODE)
-        {
-        /* [cover parentID={6BBD9C3F-381E-4390-9490-7D7B4352B876}]
-        [/cover] */
-        /* Report runtime error with SID ISR error */
-        (void)Mcal_Wrapper_Det_ReportRuntimeError((uint16)UART_MODULE_ID,
-              UART_INSTANCE_ID, UART_SID_ISR_RECEIVE,
-              (uint8)UART_E_INSUFFICIENT_BUFSIZE);
-        }
-        else
-        {
-        /* [cover parentID={619CAD25-5495-4742-B3E0-DE5F254CA644}]
-        [/cover] */
-        /* Report runtime error with SID Main Read */
-        (void)Mcal_Wrapper_Det_ReportRuntimeError((uint16)UART_MODULE_ID,
-              UART_INSTANCE_ID, UART_SID_MAIN_READ,
-              (uint8)UART_E_INSUFFICIENT_BUFSIZE);
-        }
-        #endif
-
-          /* [cover parentID={54F5874C-8D4D-4279-8B02-EFAD5EDF34D2}]
-          [/cover] */
-          /* Disable and flush RXFIFO */
-          HwModulePtr->RXFIFOCON.B.ENI = UART_CLEAR_BIT;
-          HwModulePtr->RXFIFOCON.B.FLUSH = UART_SET_BIT;
-
-          /* [cover parentID={BF9C5D27-41CE-41b6-8F15-70013C36488D}]
-          [/cover] */
-          /* Clear and disable Rx overflow and level interrupts */
-          Uart_lClearReadInterrupts(HwModulePtr);
-
-          /* [cover parentID={DD8CD868-DE07-4905-B19D-BE50D63444A0}]
-          [/cover] */
-          #if (UART_RX_MODE != UART_POLLING_MODE)
-          /* [cover parentID={DC18124C-D93A-4df7-BA4E-7D1EA5C3CAF2}]
-          [/cover] */
-            #if (UART_RX_MODE == UART_MIXED_MODE)
-          /* [cover parentID={958C8206-EA40-40dd-9AC9-C60C4D0BC027}]
-          [/cover] */
-          /* Check if read operation in interrupt mode */
-            if(ChannelConfigPtr->RxMode != UART_POLLING_MODE)
-          #endif
-          {
-            /* [cover parentID={815AC398-55E7-43c5-9EC1-DA988E4CAA0D}]
-            [/cover] */
-            /* Disable Rx overflow and level interrupts */
-            Uart_lDisableReadInterrupts(HwModulePtr);
-          }
-          #endif
-
-
-          /* [cover parentID={B7A5D6E0-6CA5-4323-B940-4C8D55D32D1B}]
-          [/cover] */
-          /* Reset channel info structure */
-          ChannelInfoPtr->RxBuffPtr = NULL_PTR;
-          ChannelInfoPtr->ChanRxState = UART_RX_IDLE;
-
-            /* [cover parentID={AD3825BD-009E-4e68-B468-01F68F8B3428}]
-            [/cover] */
-            /* Check streaming notification function pointer not
-            equal to NULL    */
-            if(ChannelConfigPtr->UartNotif.UartStreamingNotifPtr != NULL_PTR)
-            {
-            /* [cover parentID={2176AE4E-415B-4078-9422-843936C805C7}]
-            [/cover] */
-            /*Call streaming notification function */
-            ChannelConfigPtr->UartNotif.UartStreamingNotifPtr(UART_E_INSUFFICIENT_BUFSIZE,UART_RECEIVED_DATA_SIZE_ZERO);
-            }
-      }
-
-}
-#endif
-
 #if (UART_RX_MODE != UART_POLLING_MODE)
 /*******************************************************************************
 ** Traceability     : [cover parentID={DF8BBEA1-D8F9-4586-A3A8-B4DEB37B6251}] **
@@ -3200,7 +2606,7 @@ LOCAL_INLINE void Uart_lEnableReadInterrupts(Ifx_ASCLIN *const HwModulePtr)
   [/cover] */
   /* Enable RXFIFO level, RXFIFO overflow, Parity and Farame error
      interrupt */
-    HwModulePtr->FLAGSENABLE.U |= UART_PEE_FEE_RFLE_RFOE_MASK;
+  HwModulePtr->FLAGSENABLE.U |= UART_PEE_FEE_RFLE_RFOE_MASK;
 }
 #endif
 
@@ -3234,17 +2640,17 @@ LOCAL_INLINE void Uart_lTrasmitComplete(Ifx_ASCLIN *const HwModulePtr,
 {
   /* [cover parentID={A1B90D05-47E5-4c46-8724-53E8AB8DA654}]
   [/cover] */
-  /* [cover parentID={ED3F7704-5A67-43e1-95DC-915F3BC47308}]
+  /* [cover parentID={C448438A-CFEC-4acd-B0DF-A4B970D01AD2}]
   [/cover] */
   #if (UART_TX_MODE != UART_POLLING_MODE)
-    /* [cover parentID={8D3EDA15-9327-4fa4-8D55-F36AAD7DF3B2}]
+    /* [cover parentID={ED3F7704-5A67-43e1-95DC-915F3BC47308}]
     [/cover] */
     #if (UART_TX_MODE == UART_MIXED_MODE)
-  /* [cover parentID={103725A9-6587-4be8-A66A-DF5B6DAE3045}]
-  [/cover] */
-  /* Check if write operation in interrupt mode */
+    /* [cover parentID={103725A9-6587-4be8-A66A-DF5B6DAE3045}]
+    [/cover] */
+    /* Check if write operation in interrupt mode */
     if(ChannelConfigPtr->TxMode != UART_POLLING_MODE)
-  #endif
+    #endif
   {
     /* [cover parentID={8CF9B643-6688-4f18-A98A-38DECC376F36}]
     [/cover] */
@@ -3353,14 +2759,8 @@ static void Uart_lReceiveError(
   Uart_lClearReadInterrupts(HwModulePtr);
   /* [cover parentID={67AF5CD0-2FBE-4529-A45A-2E179FFC12CA}]
   [/cover] */
-  #if(UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-  if((RuntimeErrorId == UART_E_RXFIFO_OVERFLOW) && \
-    (ChannelInfoPtr->RxDataLeft <= UART_BUFFER_SIZE) &&
-    (ChannelInfoPtr->ChanRxMode == UART_RX_IN_READ_MODE))
-  #else
   if((RuntimeErrorId == UART_E_RXFIFO_OVERFLOW) && \
     (ChannelInfoPtr->RxDataLeft <= UART_BUFFER_SIZE))
-  #endif
   {
     /* [cover parentID={9512703C-DAB4-43b4-B13C-E237379CFCC8}]
     [/cover] */
@@ -3381,50 +2781,31 @@ static void Uart_lReceiveError(
     /* Report runtime error */
     if(ChannelConfigPtr->RxMode != UART_POLLING_MODE)
     {
-      (void)Mcal_Wrapper_Det_ReportRuntimeError((uint16)UART_MODULE_ID,
-            UART_INSTANCE_ID,UART_SID_ISR_ERROR,(uint8)RuntimeErrorId);
+      Det_ReportRuntimeError((uint16)UART_MODULE_ID,
+                             UART_INSTANCE_ID,
+                             UART_SID_ISR_ERROR,
+                             (uint8)RuntimeErrorId);
     }
     else
     {
-      (void)Mcal_Wrapper_Det_ReportRuntimeError((uint16)UART_MODULE_ID,
-            UART_INSTANCE_ID, UART_SID_MAIN_READ,(uint8)RuntimeErrorId);
+      Det_ReportRuntimeError((uint16)UART_MODULE_ID,
+                             UART_INSTANCE_ID,
+                             UART_SID_MAIN_READ,
+                             (uint8)RuntimeErrorId);
     }
     #endif
 
     ChannelInfoPtr->RxNotfn = UART_RX_NOTFN_TRIGGERED;
     /* Reset channel rx state */
     ChannelInfoPtr->ChanRxState = UART_RX_IDLE;
-
-    #if(UART_RECEIVE_STREAMING_MODE_API == STD_ON)
-    /* Check channel read operation in streaming mode */
-    /* [cover parentID={1CE96BB7-2735-4829-8CC6-F0DB67F5C165}]
-        [/cover] */
-    if(ChannelInfoPtr->ChanRxMode == UART_RX_IN_STREAMING_MODE)
+    /* [cover parentID={3FA7B157-4BD2-4f14-9AA5-266D39BAAE71}]
+    [/cover] */
+    if(ChannelConfigPtr->UartNotif.UartReceiveNotifPtr != NULL_PTR)
     {
-        /* [cover parentID={24CF1C07-09FC-4064-8F22-54D537AEC26D}]
-        [/cover] */
-        /* Check receive notification pointer is valid */
-        if(ChannelConfigPtr->UartNotif.UartStreamingNotifPtr != NULL_PTR)
-        {
-        /* [cover parentID={25227751-C359-43c4-9E0F-23C2DD087360}]
-        [/cover] */
-        /* Call the streaming notification function */
-        ChannelConfigPtr->UartNotif.UartStreamingNotifPtr(RuntimeErrorId,\
-                                                                UART_RECEIVED_DATA_SIZE_ZERO);
-        }
-    }
-    else
-    #endif
-    {
-        /* [cover parentID={3FA7B157-4BD2-4f14-9AA5-266D39BAAE71}]
-        [/cover] */
-        if(ChannelConfigPtr->UartNotif.UartReceiveNotifPtr != NULL_PTR)
-        {
-        /* [cover parentID={BF027EB9-43C9-4b7a-908F-E2CFFE12AABD}]
-        [/cover] */
-        /*Call receive notification function */
-        ChannelConfigPtr->UartNotif.UartReceiveNotifPtr(RuntimeErrorId);
-        }
+      /* [cover parentID={BF027EB9-43C9-4b7a-908F-E2CFFE12AABD}]
+      [/cover] */
+      /*Call receive notification function */
+      ChannelConfigPtr->UartNotif.UartReceiveNotifPtr(RuntimeErrorId);
     }
   }
 }
@@ -3659,42 +3040,6 @@ static void Uart_lHwInit(const uint8 HwUnit,
   /* Select receive line */
   HwModulePtr->IOCR.B.ALTI = ChannelConfigPtr->RxPin;
 
-  /* [cover parentID={882A0ABB-B2C0-4858-A8E7-114578D3078C}]
-  [/cover] */
-  #if (UART_RX_MODE != UART_POLLING_MODE)
-  /* [cover parentID={86048A7F-0315-4187-AA96-281FFB1C7A60}]
-  [/cover] */
-    #if (UART_RX_MODE == UART_MIXED_MODE)
-    /* [cover parentID={4E990346-845E-4d92-9DA1-AAE130E52C17}]
-    [/cover] */
-    /* Check channel RX configured in polling mode */
-    if(ChannelConfigPtr->RxMode != UART_POLLING_MODE)
-    #endif
-      {
-        /* [cover parentID={1DE53D6E-21E0-4d68-9566-763E8E84C27D}]
-        [/cover] */
-        /* Set RXFIFO interrupt mode to combined move mode */
-        HwModulePtr->RXFIFOCON.B.FM = UART_COMBINED_MOVE_MODE;
-      }
-  #endif
-      /* [cover parentID={8B5E505A-328A-4789-B5B5-5BEE75D26559}]
-      [/cover] */
-  #if (UART_TX_MODE != UART_POLLING_MODE)
-        /* [cover parentID={A044B012-4825-426b-820D-9B4AC20A45FB}]
-        [/cover] */
-        #if (UART_TX_MODE == UART_MIXED_MODE)
-        /* [cover parentID={E9A00803-E25B-4a91-9415-D034E0013612}]
-        [/cover] */
-        /* Check channel TX configured in polling mode */
-        if(ChannelConfigPtr->TxMode != UART_POLLING_MODE)
-        #endif
-      {
-        /* [cover parentID={16764FF0-34F4-4d8d-9571-008EA1430E51}]
-        [/cover] */
-        /* Set TXFIFO interrupt mode to combined move mode */
-        HwModulePtr->TXFIFOCON.B.FM = UART_COMBINED_MOVE_MODE;
-      }
-  #endif
   /* [cover parentID={43B19A4C-BBC3-4cf1-87F9-0EDB839278F1}]
   [/cover] */
   /* Enable clock source */
@@ -3816,7 +3161,6 @@ static void Uart_lStatusTimeout(const uint32 WaitTicks,
 *******************************************************************************/
 LOCAL_INLINE void Uart_lDisableReadInterrupts(Ifx_ASCLIN *const HwModulePtr)
 {
-
   /* [cover parentID={2AF4CAE3-BC96-42d9-BDDD-9E6529DADC8E}]
   [/cover] */
   /* Disable Parity, Frame, RXFIFO overflow and RXFIFO level interrupt errror */
@@ -3852,7 +3196,6 @@ LOCAL_INLINE void Uart_lClearReadInterrupts(Ifx_ASCLIN *const HwModulePtr)
   [/cover] */
   /* Clear Parity, Frame, RxFIFO overflow and RxFIFO level interrupts */
   HwModulePtr->FLAGSCLEAR.U |= (UART_PEE_FEE_RFLE_RFOE_MASK);
-
 }
 
 /*******************************************************************************
@@ -3925,8 +3268,6 @@ static void Uart_lWrite(Ifx_ASCLIN *const HwModulePtr,
     {
       NumBytesWrite -= StepSize;
     }
-    /* [cover parentID={1F714919-0CAC-40a9-A9D8-EAD27D68E3E2}]
-  [/cover] */
     #if (UART_TX_MODE != UART_POLLING_MODE)
     else
     {
@@ -3942,15 +3283,15 @@ static void Uart_lWrite(Ifx_ASCLIN *const HwModulePtr,
     NumBytesWrite = UART_BUFFER_SIZE;
   }
 
-  /* [cover parentID={6DAE0C17-008F-48da-95FE-2A538B923D42}]
+  /* [cover parentID={10815081-7EFC-4ed4-8E56-0A6173F72843}]
     [/cover] */
   #if (UART_TX_MODE != UART_POLLING_MODE)
-  /* [cover parentID={8072C2FA-693C-48d0-BDD1-92D8DA733646}]
-  [/cover] */
+    /* [cover parentID={6DAE0C17-008F-48da-95FE-2A538B923D42}]
+    [/cover] */
     #if (UART_TX_MODE == UART_MIXED_MODE)
-  /* [cover parentID={A40A7F31-165D-4f22-984C-77A491D3B775}]
-  [/cover] */
-  /* Check if write operation in interrupt mode */
+    /* [cover parentID={A40A7F31-165D-4f22-984C-77A491D3B775}]
+    [/cover] */
+    /* Check if write operation in interrupt mode */
     if(ChannelConfigPtr->TxMode != UART_POLLING_MODE)
     #endif
   {
@@ -4016,7 +3357,7 @@ static void Uart_lWrite(Ifx_ASCLIN *const HwModulePtr,
     HwModulePtr->FLAGSCLEAR.B.TCC = UART_SET_BIT;
     /* [cover parentID={0EF396C5-8C72-4c68-B192-EDE5BDA0F9E6}]
     [/cover] */
-    /* [cover parentID={A8CA0785-78D6-473a-93E5-D36DED6D316A}]
+    /* [cover parentID={E455A3E4-43C6-4d80-AF09-9D053DF569E1}]
     [/cover] */
     #if (UART_TX_MODE != UART_POLLING_MODE)
       /* [cover parentID={0EF396C5-8C72-4c68-B192-EDE5BDA0F9E6}]
@@ -4026,7 +3367,7 @@ static void Uart_lWrite(Ifx_ASCLIN *const HwModulePtr,
       [/cover] */
       /* Check if write operation in interrupt mode */
       if(ChannelConfigPtr->TxMode != UART_POLLING_MODE)
-    #endif
+      #endif
     {
       /* [cover parentID={53DB3510-A5D8-4782-A5EC-5379B796BC82}]
       [/cover] */
@@ -4384,7 +3725,7 @@ static void Uart_lReportError(const uint8 ApiId, const uint8 ErrorId)
   #if (UART_DEV_ERROR_DETECT == STD_ON)
   /* [cover parentID={DD35001C-BCB0-4f89-B1D5-BB67FE25EC4B}]
   [/cover] */
-  (void)Det_ReportError(UART_MODULE_ID, UART_INSTANCE_ID, ApiId, ErrorId);
+  Det_ReportError(UART_MODULE_ID, UART_INSTANCE_ID, ApiId, ErrorId);
   #endif
 
   #if (UART_SAFETY_ENABLE == STD_ON)

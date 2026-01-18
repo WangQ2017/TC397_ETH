@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2021)                                 **
+** Copyright (C) Infineon Technologies (2019)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -13,9 +13,9 @@
 **                                                                            **
 **  FILENAME     : McalLib.h                                                  **
 **                                                                            **
-**  VERSION      : 17.0.0                                                     **
+**  VERSION      : 1.40.0_14.0.0                                              **
 **                                                                            **
-**  DATE         : 2021-02-22                                                 **
+**  DATE         : 2019-11-08                                                 **
 **                                                                            **
 **  VARIANT      : Variant PC                                                 **
 **                                                                            **
@@ -34,14 +34,12 @@
 *******************************************************************************/
 #ifndef MCAL_LIB_H
 #define MCAL_LIB_H
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}][/cover] */
 /*******************************************************************************
 **                      Includes                                              **
 *******************************************************************************/
 /* [cover parentID={AE7302B7-A9ED-4ec6-B0D1-8F777770FBE2}][/cover] */
 #include "McalLib_Cfg.h"
 #include "Mcal_Compiler.h"
-#include "Mcal_Version.h"
 
 /*******************************************************************************
 **                      Global Macro Definitions                              **
@@ -189,7 +187,7 @@
 **                                                                            **
 ** Syntax           : Mcal_SetBitAtomic(DataPtr,BitPos,BitLen,Data)           **
 **                                                                            **
-** Description      : This API like macro receives a pointer to a 32 bit word **
+** Description      : This API like macro receives a pointer to a 32bit word  **
 **                    and places Data in specified Bit Positions specified by **
 **                    starting bit position BitPos and data length BitLen     **
 **                                                                            **
@@ -212,10 +210,10 @@
 **                                                                            **
 *******************************************************************************/
 
-/* MISRA2012_RULE_4_9_JUSTIFICATION: 'Mcal_SetBitAtomic' implemented for atomic
- * bitwise write operation. Since this is compiler dependent, for ease of use,
- * it is implemented as function like macro.
- * No side effects foreseen by violating this MISRA rule. */
+/* MISRA2012_RULE_4_9_JUSTIFICATION: 'Mcal_SetBitAtomic' implemented to write
+ * bitwise atomically. Since this is compiler dependent, for easy of use, it is
+ * implemented as function like macro . No side effects foreseen by violating
+ * this MISRA rule. */
 
 #define Mcal_SetBitAtomic(DataPtr,BitPos,BitLen,Data) \
       IMASKLDMST((DataPtr),(Data),(BitPos),(BitLen))
@@ -227,7 +225,7 @@
 **                                                                            **
 ** Description      : This API like macro receives a 32bit word, extracts data**
 **                    starting bit positions BitPos of length BitLen and      **
-**                    returns a 32 bit word.                                  **
+**                    returns a 32bit word.                                   **
 **                                                                            **
 ** Service ID       : NA                                                      **
 **                                                                            **
@@ -247,10 +245,10 @@
 ** Return value     : Data that is extracted from DataVaue                    **
 **                                                                            **
 *******************************************************************************/
-/* MISRA2012_RULE_4_9_JUSTIFICATION: 'Mcal_GetBitAtomic' implemented for
- * bitwise read operation. Since this is compiler dependent, for ease of use,
- * it is implemented as function like macro.
- * No side effects foreseen by violating this MISRA rule. */
+/* MISRA2012_RULE_4_9_JUSTIFICATION: 'Mcal_GetBitAtomic' implemented to read
+ * bitwise atomically. Since this is compiler dependent, for easy of use, it is
+ * implemented as function like macro . No side effects foreseen by violating
+ * this MISRA rule. */
 
 #define Mcal_GetBitAtomic(DataValue,BitPos,BitLen) \
             (EXTRACT((DataValue),(BitPos),(BitLen)))
@@ -844,9 +842,9 @@ extern uint32 Mcal_GetCpuIndex(void);
 ** Parameters(in)   : LockAddress - It is used to lock the shared variables.  **
 **                    Timeout - It is total time provided in micro second by  **
 **                              user using which spinlock should be acquired. **
-**                              Timeout value should be in range of 1 us to   **
-**                              1048575 us (timeout when passed as 1 indicate **
-**                              as 1 us to this API).                         **
+**                              Timeout value should be in range of 1 µs to   **
+**                              1048575 µs (timeout when passed as 1 indicate **
+**                              as 1 µs to this API).                         **
 **                                                                            **
 ** Parameters (out) : None                                                    **
 **                                                                            **

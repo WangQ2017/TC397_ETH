@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthIf_GenTypes.h
- *   Generation Time: 2025-12-28 12:40:22
+ *   Generation Time: 2026-01-18 22:57:26
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -2254,7 +2254,7 @@ typedef struct sEthIf_WakeupMapType
 /**   \brief  type to be used as symbolic data element access to EthIf_TxContext */
 typedef struct EthIf_TxContextStructSTag
 {
-  EthIf_TxContextType EthCtrlConfig_MAIN[4];
+  EthIf_TxContextType EthCtrlConfig_MAIN[10];
 } EthIf_TxContextStructSType;
 
 /** 
@@ -2269,7 +2269,7 @@ typedef struct EthIf_TxContextStructSTag
 /**   \brief  type to access EthIf_TxContext in an index and symbol based style. */
 typedef union EthIf_TxContextUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  EthIf_TxContextType raw[4];
+  EthIf_TxContextType raw[10];
   EthIf_TxContextStructSType str;
 } EthIf_TxContextUType;
 

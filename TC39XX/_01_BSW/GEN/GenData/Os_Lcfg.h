@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2025-12-20 10:43:27
+ *   Generation Time: 2026-01-18 22:49:12
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -496,15 +496,15 @@ extern FUNC(void, OS_OSTASK_WINDOW_2MS_CODE) Os_Task_OsTask_window_2ms(void);
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
-# define OS_START_SEC_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE
+# define OS_START_SEC_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /**********************************************************************************************************************
- *  EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine()
+ *  EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx()
  *********************************************************************************************************************/
-extern FUNC(void, OS_ETHISR_ETHCTRLCONFIG_MAIN_ETHINTERRUPTSERVICEROUTINE_CODE) Os_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine(void);
+extern FUNC(void, OS_ETHISR_ETHCTRLCONFIG_MAIN_ETHINTERRUPTSERVICEROUTINE_Q0TX_CODE) Os_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx(void);
 
-# define OS_STOP_SEC_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE
+# define OS_STOP_SEC_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

@@ -398,7 +398,7 @@ ETH_30_TC3XX_LOCAL_INLINE FUNC(boolean, ETH_30_TC3XX_CODE) Eth_30_Tc3xx_IsValidA
  *  \synchronous TRUE
  *  \pre         -
  */
-ETH_30_TC3XX_LOCAL_INLINE FUNC(Std_ReturnType, ETH_30_TC3XX_CODE) Eth_30_Tc3xx_Internal_ControllerInit(
+ FUNC(Std_ReturnType, ETH_30_TC3XX_CODE) Eth_30_Tc3xx_Internal_ControllerInit(
   uint8 ctrlIdx,
   uint8 cfgIdx);
 
@@ -1631,7 +1631,7 @@ ETH_30_TC3XX_LOCAL_INLINE FUNC(boolean, ETH_30_TC3XX_CODE) Eth_30_Tc3xx_IsValidA
  *
  *
  */
-ETH_30_TC3XX_LOCAL_INLINE FUNC(Std_ReturnType, ETH_30_TC3XX_CODE) Eth_30_Tc3xx_Internal_ControllerInit(
+ FUNC(Std_ReturnType, ETH_30_TC3XX_CODE) Eth_30_Tc3xx_Internal_ControllerInit(
   uint8 ctrlIdx,
   uint8 cfgIdx)
 {
@@ -4056,9 +4056,9 @@ FUNC(Std_ReturnType, ETH_30_TC3XX_CODE) Eth_30_Tc3xx_ControllerInit(
   uint8 CfgIdx)
 {
   /* ----- Local Variables ---------------------------------------------- */
-  Std_ReturnType retVal = E_NOT_OK;
-  uint8 errorId = ETH_30_TC3XX_E_NO_ERROR;
-  uint8 localCtrlIdx = Eth_30_Tc3xx_TransformToLocalCtrlIdx(CtrlIdx);
+  volatile Std_ReturnType retVal = E_NOT_OK;
+  volatile uint8 errorId = ETH_30_TC3XX_E_NO_ERROR;
+  volatile uint8 localCtrlIdx = Eth_30_Tc3xx_TransformToLocalCtrlIdx(CtrlIdx);
 #if (ETH_30_TC3XX_DEV_ERROR_DETECT == STD_OFF)
   ETH_30_TC3XX_DUMMY_STATEMENT(retVal); /* PRQA S 3112 */ /* MD_MSR_14.2 */
 #endif /* ETH_30_TC3XX_DEV_ERROR_DETECT */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTrcv_30_Tja1100_GenTypes.h
- *   Generation Time: 2026-01-16 10:59:13
+ *   Generation Time: 2026-01-18 20:11:43
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -299,7 +299,7 @@ typedef P2FUNC(void,           ETHTRCV_30_TJA1100_APPL_CODE, EthTrcv_30_Tja1100_
 #define ETHTRCV_30_TJA1100_NO_DEMEACCESSEVENTIDOFETHTRCV              255u
 #define ETHTRCV_30_TJA1100_NO_PHYSIGNALQUALITYMEANOFETHTRCV           255u
 #define ETHTRCV_30_TJA1100_NO_SOCBASEREGADDROFETHTRCV                 255u
-#define ETHTRCV_30_TJA1100_NO_SOFTRESETWAITCYCLESOFETHTRCV            255u
+#define ETHTRCV_30_TJA1100_NO_SOFTRESETWAITCYCLESOFETHTRCV            65535u
 #define ETHTRCV_30_TJA1100_NO_WAKEUPIDXOFETHTRCV                      255u
 #define ETHTRCV_30_TJA1100_NO_LINKFAILCOUNTERRESETVALOFETHTRCVTJA1100 255u
 #define ETHTRCV_30_TJA1100_NO_LINKSTARTUPDELAYOFETHTRCVTJA1100        255u
@@ -786,7 +786,7 @@ typedef uint8 EthTrcv_30_Tja1100_SoCBaseRegAddrOfEthTrcvType;
 typedef boolean EthTrcv_30_Tja1100_SoftResetOnInitEnabledOfEthTrcvType;
 
 /**   \brief  value based type definition for EthTrcv_30_Tja1100_SoftResetWaitCyclesOfEthTrcv */
-typedef uint8 EthTrcv_30_Tja1100_SoftResetWaitCyclesOfEthTrcvType;
+typedef uint16 EthTrcv_30_Tja1100_SoftResetWaitCyclesOfEthTrcvType;
 
 /**   \brief  value based type definition for EthTrcv_30_Tja1100_SpeedOfEthTrcv */
 typedef uint8 EthTrcv_30_Tja1100_SpeedOfEthTrcvType;
@@ -991,6 +991,7 @@ typedef struct sEthTrcv_30_Tja1100_AccessEntityFctsType
 /**   \brief  type used in EthTrcv_30_Tja1100_EthTrcv */
 typedef struct sEthTrcv_30_Tja1100_EthTrcvType
 {
+  EthTrcv_30_Tja1100_SoftResetWaitCyclesOfEthTrcvType SoftResetWaitCyclesOfEthTrcv;  /**< Soft reset wait cycles */
   EthTrcv_30_Tja1100_AutoNegEnabledOfEthTrcvType AutoNegEnabledOfEthTrcv;  /**< Auto negotiation configuration */
   EthTrcv_30_Tja1100_SoftResetOnInitEnabledOfEthTrcvType SoftResetOnInitEnabledOfEthTrcv;  /**< Soft reset on initialization configuraiton */
   EthTrcv_30_Tja1100_AccessEntityFctsIdxOfEthTrcvType AccessEntityFctsIdxOfEthTrcv;  /**< the index of the 1:1 relation pointing to EthTrcv_30_Tja1100_AccessEntityFcts */
@@ -1002,7 +1003,6 @@ typedef struct sEthTrcv_30_Tja1100_EthTrcvType
   EthTrcv_30_Tja1100_MiiModeOfEthTrcvType MiiModeOfEthTrcv;  /**< Mii interface */
   EthTrcv_30_Tja1100_PhySignalQualityMeanOfEthTrcvType PhySignalQualityMeanOfEthTrcv;  /**< Mean value of phyisical signal quality */
   EthTrcv_30_Tja1100_SoCBaseRegAddrOfEthTrcvType SoCBaseRegAddrOfEthTrcv;  /**< Base register address within memory space of SoC in case PHY is integrated as module into SoC. */
-  EthTrcv_30_Tja1100_SoftResetWaitCyclesOfEthTrcvType SoftResetWaitCyclesOfEthTrcv;  /**< Soft reset wait cycles */
   EthTrcv_30_Tja1100_SpeedOfEthTrcvType SpeedOfEthTrcv;  /**< Transceiver speed */
   EthTrcv_30_Tja1100_WakeupIdxOfEthTrcvType WakeupIdxOfEthTrcv;  /**< the index of the 0:1 relation pointing to EthTrcv_30_Tja1100_Wakeup */
 } EthTrcv_30_Tja1100_EthTrcvType;
@@ -1237,6 +1237,7 @@ extern CONST(EthTrcv_30_Tja1100_AccessEntityFctsType, ETHTRCV_30_TJA1100_CONST) 
   \brief  Ethernet transceivers managed by the driver.
   \details
   Element                   Description
+  SoftResetWaitCycles       Soft reset wait cycles
   AutoNegEnabled            Auto negotiation configuration
   SoftResetOnInitEnabled    Soft reset on initialization configuraiton
   AccessEntityFctsIdx       the index of the 1:1 relation pointing to EthTrcv_30_Tja1100_AccessEntityFcts
@@ -1248,7 +1249,6 @@ extern CONST(EthTrcv_30_Tja1100_AccessEntityFctsType, ETHTRCV_30_TJA1100_CONST) 
   MiiMode                   Mii interface
   PhySignalQualityMean      Mean value of phyisical signal quality
   SoCBaseRegAddr            Base register address within memory space of SoC in case PHY is integrated as module into SoC.
-  SoftResetWaitCycles       Soft reset wait cycles
   Speed                     Transceiver speed
   WakeupIdx                 the index of the 0:1 relation pointing to EthTrcv_30_Tja1100_Wakeup
 */ 

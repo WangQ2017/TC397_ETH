@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2023)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : Mcu.c                                                      **
 **                                                                            **
-**  VERSION      : 52.0.0                                                     **
+**  VERSION      : 1.40.0_46.0.0                                              **
 **                                                                            **
-**  DATE         : 2023-05-22                                                 **
+**  DATE         : 2020-04-27                                                 **
 **                                                                            **
 **  VARIANT      : Variant PB                                                 **
 **                                                                            **
@@ -26,8 +26,7 @@
 **                                                                            **
 **  DESCRIPTION  : Mcu Driver source file                                     **
 **                                                                            **
-**  SPECIFICATION(S) : Specification of Mcu Driver, AUTOSAR Release 4.2.2 and **
-**                     4.4.0                                                  **
+**  SPECIFICATION(S) : Specification of Mcu Driver, AUTOSAR Release 4.2.2     **
 **                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
@@ -39,12 +38,10 @@
 /* [cover parentID={06798858-8368-416d-B33B-DF81AD5ADCA1}][/cover] */
 /* [cover parentID={7BECF43B-4104-476f-91BC-65753183E675}][/cover] */
 /* [cover parentID={EEE64FD5-CC6C-490f-9686-1A9647CE55F1}][/cover] */
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}][/cover] */
 #include "Mcu.h"
 #include "Mcu_17_TimerIp.h"
 #include "IfxScu_reg.h"
 #include "IfxPms_reg.h"
-#include "IfxPms_bf.h"
 /* Mcu Operation in User 1 Mode  */
 #if (MCU_INIT_DEINIT_API_MODE == MCU_MCAL_USER1) || \
     (MCU_RUNTIME_API_MODE == MCU_MCAL_USER1)
@@ -68,8 +65,22 @@
 #endif
 /* End of #if (MCU_GTM_USED == STD_ON) */
 
-#if (MCU_E_ERR_DEM_REPORTING == STD_ON)
-#include "Mcal_Wrapper.h"
+#if ((MCU_E_OSC_FAILURE_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||                \
+(MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||     \
+(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) || \
+(MCU_E_SYSTEM_PLL_LOCK_LOSS_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||       \
+(MCU_E_PERIPHERAL_PLL_LOCK_LOSS_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||   \
+(MCU_E_GTM_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||         \
+(MCU_E_GTM_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||        \
+(MCU_E_CONVCTRL_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||    \
+(MCU_E_CONVCTRL_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||   \
+(MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||          \
+(MCU_E_CCU6_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||        \
+(MCU_E_CCU6_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||       \
+(MCU_E_PMSWCR_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||          \
+(MCU_E_GPT12_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||       \
+(MCU_E_GPT12_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT))
+#include "Dem.h"
 #endif
 
 #if (MCU_DEV_ERROR_DETECT == STD_ON)
@@ -88,24 +99,8 @@
 #error "MCU_AR_RELEASE_MAJOR_VERSION is not defined."
 #endif
 
-#if (MCU_AR_RELEASE_MAJOR_VERSION != MCAL_AR_RELEASE_MAJOR_VERSION)
+#if (MCU_AR_RELEASE_MAJOR_VERSION != 4U)
 #error "MCU_AR_RELEASE_MAJOR_VERSION does not match."
-#endif
-
-#ifndef MCU_AR_RELEASE_MINOR_VERSION
-#error "MCU_AR_RELEASE_MINOR_VERSION is not defined."
-#endif
-
-#if (MCU_AR_RELEASE_MINOR_VERSION != MCAL_AR_RELEASE_MINOR_VERSION)
-#error "MCU_AR_RELEASE_MINOR_VERSION does not match."
-#endif
-
-#ifndef MCU_AR_RELEASE_REVISION_VERSION
-#error "MCU_AR_RELEASE_REVISION_VERSION is not defined."
-#endif
-
-#if (MCU_AR_RELEASE_REVISION_VERSION != MCAL_AR_RELEASE_REVISION_VERSION)
-#error "MCU_AR_RELEASE_REVISION_VERSION does not match."
 #endif
 
 #ifndef MCU_SW_MAJOR_VERSION
@@ -121,15 +116,15 @@
 #endif
 
 /*[cover parentID={BBD0BE43-D6EB-45c7-B4E8-FA2B9BEB7D7A}]*/
-#if (MCU_SW_MAJOR_VERSION != 20U)
+#if (MCU_SW_MAJOR_VERSION != 10U)
 #error "MCU_SW_MAJOR_VERSION does not match."
 #endif
 
-#if (MCU_SW_MINOR_VERSION != 25U)
+#if (MCU_SW_MINOR_VERSION != 40U)
 #error "MCU_SW_MINOR_VERSION does not match."
 #endif
 
-#if (MCU_SW_PATCH_VERSION != 0U)
+#if (MCU_SW_PATCH_VERSION != 2U)
 #error "MCU_SW_PATCH_VERSION does not match."
 #endif
 
@@ -143,6 +138,31 @@
 #error "DET_AR_RELEASE_MAJOR_VERSION does not match."
 #endif
 #endif /* End for MCU_DEV_ERROR_DETECT */
+
+#if ((MCU_E_OSC_FAILURE_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||                \
+(MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||     \
+(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) || \
+(MCU_E_SYSTEM_PLL_LOCK_LOSS_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||       \
+(MCU_E_PERIPHERAL_PLL_LOCK_LOSS_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||   \
+(MCU_E_GTM_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||         \
+(MCU_E_GTM_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||        \
+(MCU_E_CONVCTRL_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||    \
+(MCU_E_CONVCTRL_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||   \
+(MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||          \
+(MCU_E_CCU6_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||        \
+(MCU_E_CCU6_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||       \
+(MCU_E_PMSWCR_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||          \
+(MCU_E_GPT12_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT) ||       \
+(MCU_E_GPT12_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT))
+
+#ifndef DEM_AR_RELEASE_MAJOR_VERSION
+#error "DEM_AR_RELEASE_MAJOR_VERSION is not defined."
+#endif
+
+#if (DEM_AR_RELEASE_MAJOR_VERSION != 4U)
+#error "DEM_AR_RELEASE_MAJOR_VERSION does not match."
+#endif
+#endif
 /*[/cover]*/
 
 /*******************************************************************************
@@ -157,37 +177,15 @@
 /* Mcu driver macros for commonly used numerical values */
 #define MCU_PMSWCR_BUSY    (1U)
 
-/*Mcu RAM section Macros*/
-#if (MCAL_AR_VERSION == MCAL_AR_440)
-
-#define MCU_RAM_WRITE_SIZE_HALF_WORD           (2U)
-#define MCU_RAM_WRITE_SIZE_WORD                (4U)
-#define MCU_RAM_WRITE_SIZE_DOUBLE_WORD         (8U)
-#endif
-
 #if ((MCU_NO_OF_STDBY_RAM_BLK != 0U) || (MCU_GTM_USED == STD_ON))
 #define MCU_STARTING_INDEX (0U)
 #endif
 
 #define MCU_RAM_SIZE_ZERO  (0U)
-
-#define MCU_PMS_EVRUVMON_MASK (((uint32)IFX_PMS_UVMON_SWDUVVAL_MSK << \
-IFX_PMS_UVMON_SWDUVVAL_OFF) | ((uint32)IFX_PMS_UVMON_EVRCUVVAL_MSK << \
-IFX_PMS_UVMON_EVRCUVVAL_OFF))
-
-#define MCU_PMS_EVRMONCTRL_MASK (((uint32)IFX_PMS_MONCTRL_SWDUVMOD_MSK << \
-IFX_PMS_MONCTRL_SWDUVMOD_OFF) | ((uint32)IFX_PMS_MONCTRL_EVRCUVMOD_MSK << \
-IFX_PMS_MONCTRL_EVRCUVMOD_OFF))
-
-#define MCU_PMSWCR5_MASK    (((uint32)IFX_PMS_PMSWCR5_BPTRISTREQ_MSK << \
-IFX_PMS_PMSWCR5_BPTRISTREQ_OFF) | ((uint32)IFX_PMS_PMSWCR5_TRISTREQ_MSK << \
-IFX_PMS_PMSWCR5_TRISTREQ_OFF)   | ((uint32)IFX_PMS_PMSWCR5_ESR0TRIST_MSK << \
-IFX_PMS_PMSWCR5_ESR0TRIST_OFF)  | ((uint32)IFX_PMS_PMSWCR5_PORSTDF_MSK << \
-IFX_PMS_PMSWCR5_PORSTDF_OFF))
+#define MCU_PMSWCR4_MASK   ((uint32)0x01000011U)
 
 #if (MCU_INITCHECK_API == STD_ON)
-#define MCU_PMSWCR5_INITCHECK_MASK (MCU_PMSWCR5_MASK ^ \
-((uint32)IFX_PMS_PMSWCR5_BPTRISTREQ_MSK << IFX_PMS_PMSWCR5_BPTRISTREQ_OFF))
+#define MCU_PMSWCR5_MASK ((uint32)0xFFFFFFFEU)
 #endif
 
 /* Mcu driver state definition */
@@ -232,10 +230,6 @@ IFX_PMS_PMSWCR5_PORSTDF_OFF))
 /* CCUCON0 lock status timeout value */
 #define MCU_CCUCON0_LCK_TIMEOUT ((uint32)1500U)
 #if (MCU_INIT_CLOCK_API == STD_ON)
-/*CPU will be running at backup clock frequency. Highest possible frequency is
-  100 MHz HW recommends a maximum delay of 5 uS. The while loop takes min
-  4 instructions. Hence timeout = 4*(1500/100000000) = 60us.
-  Higher value is given for safety margin*/
 #define MCU_CCUCON12_LCK_TIMEOUT ((uint32)1500U)
 #define MCU_PLLPWD_DELAY        ((uint32)1200000U)
 #endif
@@ -275,11 +269,7 @@ IFX_PMS_PMSWCR5_PORSTDF_OFF))
 #define MCU_FSOURCE_CLKSEL_PLLCLK (1U)
 #endif
 /* Timeout for validating the frequency of PLL. Values are given as safety
-   margin of x3 from worst possible tick-counts.
-   CPU will be running at backup clock frequency. Highest possible frequency
-   is 100 MHz i.e. 10 nS per instruction HW recommends a maximum delay of 5 uS.
-   The while loop takes min 4 instructions.
-   Hence a sufficient timeout with safety margin is provided.
+   margin of x3 from worst possible tick-counts
 */
 #define MCU_PLL_PWDSTAT_TIMEOUT ((uint32)1000U)
 #define MCU_PLL_KDIVRDY_TIMEOUT ((uint32)1000U)
@@ -346,19 +336,6 @@ IFX_PMS_PMSWCR5_PORSTDF_OFF))
 
 #if (MCU_INITCHECK_API == STD_ON)
 #define MCU_TBU_CHEN_MSK          ((uint32)0x000000AAU)
-
-#define MCU_GTM_ATOM_TRIG_INITCHK_READ_MSK    (0x0000FFFFU)
-#define MCU_GTM_ATOM_RSTCN0_INITCHK_READ_MSK  (0xFFFF0000U)
-
-#define MCU_GTM_TOM_TRIG_INITCHK_READ_MSK  (0x0000FFFFU)
-#define MCU_GTM_TOM_RSTCN0_INITCHK_READ_MSK   (0xFFFF0000U)
-
-#define MCU_GTM_ATOM_TRIG_INITCHK_MSK    (0x00005555U)
-#define MCU_GTM_ATOM_RSTCN0_INITCHK_MSK  (0x55550000U)
-
-#define MCU_GTM_TOM_TRIG_INITCHK_MSK  (0x00005555U)
-#define MCU_GTM_TOM_RSTCN0_INITCHK_MSK   (0x55550000U)
-
 #endif
 
 #if (MCU_DEINIT_API == STD_ON)
@@ -585,11 +562,10 @@ IFX_PMS_PMSWCR5_PORSTDF_OFF))
 /* STBYEVEN bit is made 1 for update of STBYEV bits*/
 #define MCU_PMSWCR1_DEINIT_VALUE ((uint32)0x09000000U)
 #define MCU_PMSWCR3_DEINIT_VALUE ((uint32)0x00000000U)
+#define MCU_PMSWCR4_DEINIT_VALUE ((uint32)0x01000031U)
 #define MCU_PMSWCR5_DEINIT_VALUE ((uint32)0x00000001U)
 #define MCU_RSTCON_DEINIT_VALUE  ((uint32)0x00000282U)
 #define MCU_ARSTDIS_DEINIT_VALUE ((uint32)0U)
-#define MCU_EVRUVMON_DEINIT_VALUE ((uint32)0x007500B8U)
-#define MCU_EVRMONCTRL_DEINIT_VALUE ((uint32)0x00200020U)
 #endif
 
 #if (MCU_LOW_POWER_MODE_API == STD_ON)
@@ -629,11 +605,6 @@ IFX_PMS_PMSWCR5_PORSTDF_OFF))
 #define GPT12_TIMER_CLK_DISABLED (0x1U)
 #endif
 
-#define GPT12_TXCON_RESET_VAL     (0x0U)
-
-#if (MCU_INITCHECK_API == STD_ON)
-#define GPT12_TXCON_INITCHECK_MSK (0xFFFFE7FFU)
-#endif
 #endif
 
 /* Macros related to CCU6 kernel */
@@ -782,6 +753,8 @@ IFX_PMS_PMSWCR5_PORSTDF_OFF))
 /*[cover parentID={64F85676-14B5-4fd8-BC46-F4B276E05AC6}][/cover]*/
 /*[cover parentID={72DABBEB-F27B-4677-B6B4-B53F634341BA}][/cover]*/
 #define MCU_START_SEC_CODE_ASIL_B_GLOBAL
+/* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header usage as per Autosar
+   guideline. */
 /* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
    without safeguard. It complies to Autosar guidelines. */
 /*[cover parentID={EA0715EE-3E3C-4aac-A42E-4B5CFC96CEED}][/cover]*/
@@ -809,7 +782,6 @@ LOCAL_INLINE void Mcu_lPerPllToBackUpClockFreq(const uint8 ApiId);
 LOCAL_INLINE Std_ReturnType Mcu_lSwitchToBackUpClockFreq(
   const uint8 ApiId,
   const Mcu_ClockType ClockSettingIndex);
-LOCAL_INLINE Std_ReturnType Mcu_lCcuconLckChk(const uint8 ApiId);
 LOCAL_INLINE Mcu_ResetType Mcu_lGetRstReason(const Mcu_RawResetType
     RstReasonRaw);
 LOCAL_INLINE Mcu_ResetType Mcu_lGetRstReason2(const Mcu_RawResetType
@@ -833,7 +805,6 @@ LOCAL_INLINE void Mcu_lPerPllToDesiredFreq(void);
 LOCAL_INLINE void Mcu_lGtmCmuGlobalInit(void);
 LOCAL_INLINE void Mcu_lGtmTriggerInit(void);
 LOCAL_INLINE void Mcu_lGtmToutSelInit(void);
-LOCAL_INLINE void Mcu_lGtmTimInselInit(void);
 LOCAL_INLINE void Mcu_lGtmTbuGlobalInit(void);
 LOCAL_INLINE void Mcu_lGtmCcmGlobalInit(void);
 LOCAL_INLINE void Mcu_lGtmAtomGlobalInit(void);
@@ -845,7 +816,6 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmGlobalInitCheck(void);
 LOCAL_INLINE Std_ReturnType Mcu_lGtmCmuGlobalInitCheck(void);
 LOCAL_INLINE Std_ReturnType Mcu_lGtmTriggerInitCheck(void);
 LOCAL_INLINE Std_ReturnType Mcu_lGtmToutSelInitCheck(void);
-LOCAL_INLINE Std_ReturnType Mcu_lGtmTimInselInitCheck(void);
 LOCAL_INLINE Std_ReturnType Mcu_lGtmCcmGlobalInitCheck(void);
 LOCAL_INLINE Std_ReturnType Mcu_lGtmAtomGlobalInitCheck(void);
 LOCAL_INLINE Std_ReturnType Mcu_lGtmTomGlobalInitCheck(void);
@@ -857,7 +827,6 @@ LOCAL_INLINE void Mcu_lGtmCmuGlobalDeInit(void);
 LOCAL_INLINE void Mcu_lGtmTriggerDeInit(void);
 LOCAL_INLINE void Mcu_lGtmTbuGlobalDeInit(void);
 LOCAL_INLINE void Mcu_lGtmToutSelDeInit(void);
-LOCAL_INLINE void Mcu_lGtmTimInselDeInit(void);
 LOCAL_INLINE void Mcu_lGtmCcmGlobalDeInit(void);
 LOCAL_INLINE void Mcu_lGtmAtomGlobalDeInit(void);
 LOCAL_INLINE void Mcu_lGtmTomGlobalDeInit(void);
@@ -899,16 +868,6 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitClockDetCheck
 #endif
 #endif
 /* End of #if (MCU_INIT_CLOCK_API == STD_ON) */
-
-
-#if (MCU_E_ERR_DEM_REPORTING == STD_ON)
-static void Mcu_lReportDemError
-(
-const Dem_EventIdType EventId,
-const Dem_EventStatusType EventStatus
-);
-#endif
-
 
 #define MCU_STOP_SEC_CODE_ASIL_B_GLOBAL
 /* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header usage as per Autosar
@@ -993,24 +952,21 @@ static uint32 Mcu_DriverState;
 /*[cover parentID={03618BDC-C1C3-43eb-A2DA-6022929F2B11}][/cover]*/
 void Mcu_Init(const Mcu_ConfigType *const ConfigPtr)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMSWCR1 Pmswcr1Val;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMTRCSR0 Pmtrcsr0Val;
   #if (MCU_CLR_COLD_RESET_STAT_API == STD_OFF)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_RSTCON2 Rstcon2Val;
   #endif
   volatile uint32 TempVal;
-  uint32 Pmswcr5Val;
-  uint32 EvruvmonVal;
-  uint32 EvrmonCtrlVal;
 
   Std_ReturnType ClcError = (Std_ReturnType)E_OK;
 
@@ -1150,19 +1106,11 @@ void Mcu_Init(const Mcu_ConfigType *const ConfigPtr)
       MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_PMSWCR0.U,
           Mcu_ConfigPtr->McuLowPowerModeCfgPtr->Pmswcr0);
 
-      Pmswcr5Val = PMS_PMSWCR5.U & (~MCU_PMSWCR5_MASK);
-      Pmswcr5Val |= (Mcu_ConfigPtr->McuLowPowerModeCfgPtr->Pmswcr5 & MCU_PMSWCR5_MASK);
-      MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_PMSWCR5.U, Pmswcr5Val);
+      MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_PMSWCR4.U,
+          Mcu_ConfigPtr->McuLowPowerModeCfgPtr->Pmswcr4 | MCU_PMSWCR4_MASK);
 
-      /*[cover parentID={374F2C73-7F5B-40c8-8AA8-C728B8EE6236}]*/
-      EvruvmonVal = PMS_EVRUVMON.U & (~MCU_PMS_EVRUVMON_MASK);
-      EvruvmonVal |= (Mcu_ConfigPtr->McuLowPowerModeCfgPtr->Evruvmon & MCU_PMS_EVRUVMON_MASK);
-      MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_EVRUVMON.U, EvruvmonVal);
-
-      EvrmonCtrlVal = PMS_EVRMONCTRL.U & (~MCU_PMS_EVRMONCTRL_MASK);
-      EvrmonCtrlVal |= (Mcu_ConfigPtr->McuLowPowerModeCfgPtr->EvrmonCtrl & MCU_PMS_EVRMONCTRL_MASK);
-      MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_EVRMONCTRL.U, EvrmonCtrlVal);
-      /*[/cover]*/
+      MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_PMSWCR5.U,
+          Mcu_ConfigPtr->McuLowPowerModeCfgPtr->Pmswcr5);
     }
     /* [cover parentID={8034AAF1-C460-49a5-853C-FCCDCA80BEFE}]
      *  Check for EVRC configuration
@@ -1245,13 +1193,10 @@ void Mcu_Init(const Mcu_ConfigType *const ConfigPtr)
 /*[cover parentID={03618BDC-C1C3-43eb-A2DA-6022929F2B11}][/cover]*/
 void Mcu_DeInit(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMTRCSR0 Pmtrcsr0Val;
-  uint32 Pmswcr5Val;
-  uint32 EvruvmonVal;
-  uint32 EvrmonCtrlVal;
   Std_ReturnType ClcError = E_OK;
   /*
     Development Error Check: (only if Development Error Detection is ON)
@@ -1341,20 +1286,11 @@ void Mcu_DeInit(void)
       MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_PMSWCR3.U,
           MCU_PMSWCR3_DEINIT_VALUE);
 
-      Pmswcr5Val = PMS_PMSWCR5.U & (~MCU_PMSWCR5_MASK);
-      Pmswcr5Val |= MCU_PMSWCR5_DEINIT_VALUE;
+      MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_PMSWCR4.U,
+          MCU_PMSWCR4_DEINIT_VALUE);
+
       MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_PMSWCR5.U,
-          Pmswcr5Val);
-
-      EvruvmonVal = PMS_EVRUVMON.U & (~MCU_PMS_EVRUVMON_MASK);
-      EvruvmonVal |= MCU_EVRUVMON_DEINIT_VALUE;
-      MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_EVRUVMON.U,
-          EvruvmonVal);
-
-      EvrmonCtrlVal = PMS_EVRMONCTRL.U & (~MCU_PMS_EVRMONCTRL_MASK);
-      EvrmonCtrlVal |= MCU_EVRMONCTRL_DEINIT_VALUE;
-      MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&PMS_EVRMONCTRL.U,
-          EvrmonCtrlVal);
+          MCU_PMSWCR5_DEINIT_VALUE);
     }
 
     /* [cover parentID={8CF05707-C21B-473d-9E33-64DAF167CC90}]
@@ -1463,7 +1399,9 @@ void Mcu_DeInit(void)
 /*[cover parentID={E9E7877F-B957-480b-9D6D-10CC6AE0AA86}][/cover]*/
 Std_ReturnType Mcu_InitRamSection(const Mcu_RamSectionType RamSection)
 {
+  uint8 *RamBasePtr;
   Mcu_RamSizeType RamLength;
+  uint8 RamData;
   Std_ReturnType RetValue = (Std_ReturnType)E_NOT_OK;
 
   /*
@@ -1528,110 +1466,21 @@ Std_ReturnType Mcu_InitRamSection(const Mcu_RamSectionType RamSection)
         2. Loop through the complete memory section and initialize it with
            configured data.
       */
+      RamBasePtr = (uint8 *)Mcu_ConfigPtr->McuRamCfgPtr[RamSection].
+      /* MISRA2012_RULE_11_5_JUSTIFICATION: cast from void pointer to uint8
+         pointer is made as ram initialization is performed byte by byte. */
+                   RamBaseAdrPtr;
+      RamData = (uint8)Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamPrstData;
+      RamLength = Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamSize;
 
-      #if (MCAL_AR_VERSION == MCAL_AR_440)
-      uint32 RamWriteSize;
-
-      RamWriteSize = Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamWriteSize;
-
-      /*[cover parentID={10C7EA8B-2117-4d22-9DF7-39B87D740ADD}][/cover]*/
-      if (MCU_RAM_WRITE_SIZE_HALF_WORD == RamWriteSize)
+      /* [cover parentID={D8FD5C74-0894-4b8b-A495-656AC9234249}]
+       * Loop through complete memory section
+       * [/cover] */
+      while (RamLength > (Mcu_RamSizeType)MCU_RAM_SIZE_ZERO)
       {
-        uint16 *RamBasePtr;
-        uint16 RamData;
-        RamBasePtr = (uint16 *)Mcu_ConfigPtr->McuRamCfgPtr[RamSection].
-        /* MISRA2012_RULE_11_5_JUSTIFICATION: cast from void pointer to uint16
-        pointer is made as ram initialization is performed 2 bytes at once. */
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: cast from void pointer to uint16
-        pointer is made as ram initialization is performed 2 bytes at once. */
-                     RamBaseAdrPtr;
-        RamData = (uint16)Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamData;
-        RamLength = Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamSize
-                                               / MCU_RAM_WRITE_SIZE_HALF_WORD;
-
-        /* [cover parentID={D8FD5C74-0894-4b8b-A495-656AC9234249}]
-         * Loop through complete memory section
-         * [/cover] */
-        while (RamLength > (Mcu_RamSizeType)MCU_RAM_SIZE_ZERO)
-        {
-          *RamBasePtr = RamData;
-          RamBasePtr++;
-          RamLength--;
-        }
-      }
-      /*[cover parentID={066DE2E2-BD03-458a-B7C4-6BCB8C7EDAA5}][/cover]*/
-      else if (MCU_RAM_WRITE_SIZE_WORD == RamWriteSize)
-      {
-        uint32 *RamBasePtr;
-        uint32 RamData;
-        RamBasePtr = (uint32 *)Mcu_ConfigPtr->McuRamCfgPtr[RamSection].
-        /* MISRA2012_RULE_11_5_JUSTIFICATION: cast from void pointer to uint32
-        pointer is made as ram initialization is performed 4 bytes at once. */
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: cast from void pointer to uint32
-        pointer is made as ram initialization is performed 4 bytes at once. */
-                     RamBaseAdrPtr;
-        RamData = (uint32)Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamData;
-        RamLength = Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamSize
-                                                    / MCU_RAM_WRITE_SIZE_WORD;
-
-        /* [cover parentID={D8FD5C74-0894-4b8b-A495-656AC9234249}]
-         * Loop through complete memory section
-         * [/cover] */
-        while (RamLength > (Mcu_RamSizeType)MCU_RAM_SIZE_ZERO)
-        {
-          *RamBasePtr = RamData;
-          RamBasePtr++;
-          RamLength--;
-        }
-      }
-
-      else if (MCU_RAM_WRITE_SIZE_DOUBLE_WORD == RamWriteSize)
-      {
-        uint64 *RamBasePtr;
-        uint64 RamData;
-        RamBasePtr = (uint64 *)Mcu_ConfigPtr->McuRamCfgPtr[RamSection].
-        /* MISRA2012_RULE_11_5_JUSTIFICATION: cast from void pointer to uint64
-        pointer is made as ram initialization is performed 8 bytes at once. */
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: cast from void pointer to uint64
-        pointer is made as ram initialization is performed 8 bytes at once. */
-                     RamBaseAdrPtr;
-        RamData = Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamData;
-        RamLength = Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamSize
-                                             / MCU_RAM_WRITE_SIZE_DOUBLE_WORD;
-
-        /* [cover parentID={D8FD5C74-0894-4b8b-A495-656AC9234249}]
-         * Loop through complete memory section
-         * [/cover] */
-        while (RamLength > (Mcu_RamSizeType)MCU_RAM_SIZE_ZERO)
-        {
-          *RamBasePtr = RamData;
-          RamBasePtr++;
-          RamLength--;
-        }
-      }
-
-      /*[cover parentID={6EB4CCE6-023A-4e86-8257-F2845602B40B}][/cover]*/
-      else
-      #endif
-      {
-        uint8 *RamBasePtr;
-        uint8 RamData;
-        RamBasePtr = (uint8 *)Mcu_ConfigPtr->McuRamCfgPtr[RamSection].
-        /* MISRA2012_RULE_11_5_JUSTIFICATION: cast from void pointer to uint8
-           pointer is made as ram initialization is performed byte by byte. */
-                     RamBaseAdrPtr;
-        RamData = (uint8)Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamPrstData;
-        RamLength = Mcu_ConfigPtr->McuRamCfgPtr[RamSection].RamSize;
-
-        /* [cover parentID={D8FD5C74-0894-4b8b-A495-656AC9234249}]
-         * Loop through complete memory section
-         * [/cover] */
-        while (RamLength > (Mcu_RamSizeType)MCU_RAM_SIZE_ZERO)
-        {
-          *RamBasePtr = RamData;
-          RamBasePtr++;
-          RamLength--;
-        }
+        *RamBasePtr = RamData;
+        RamBasePtr++;
+        RamLength--;
       }
       RetValue = (Std_ReturnType)E_OK;
     }
@@ -1686,21 +1535,21 @@ Std_ReturnType Mcu_InitRamSection(const Mcu_RamSectionType RamSection)
 /*[cover parentID={E9E7877F-B957-480b-9D6D-10CC6AE0AA86}][/cover]*/
 Std_ReturnType Mcu_InitClock(const Mcu_ClockType ClockSetting)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-    defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+    access. Variable of SFR type defined for writing into register.
     No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_SYSPLLCON0 Syspllcon0Val;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PERPLLCON0 Perpllcon0Val;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_CONVERTER_PHSCFG ConvCtrlPhscfg;
   #if (MCU_SAFETY_ENABLE == STD_ON)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_CONVERTER_PHSCFG ReadBack;
   #endif
@@ -1767,7 +1616,7 @@ Std_ReturnType Mcu_InitClock(const Mcu_ClockType ClockSetting)
           2. Move the PLLs in power-saving mode to avoid unintended current
              jumps.
           3. Wait (with timeout) until PLLs power-saving mode in not active.
-          4. Report Production error in case of timeout error.
+          4. Report DEM in case of timeout error.
         */
 
         /* Moving PLLs into power-saving mode */
@@ -1810,14 +1659,14 @@ Std_ReturnType Mcu_InitClock(const Mcu_ClockType ClockSetting)
         if (0x0U == SCU_SYSPLLSTAT.B.PWDSTAT)
         {
           /* [cover parentID={EA8C88BD-C991-480a-8C9C-0757C17EF5DA}]
-           * If Production error Reporting is ON
+           * If DEM Reporting is ON
            * [/cover] */
           #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-          /* Report Production error for system PLL error */
+          /* Report DEM for system PLL error */
           /* [cover parentID={DF1E8931-1FEF-497f-A436-8EB6E3AA1777}]
-           * Report System PLL Time-Out Production error
+           * Report System PLL Time-Out DEM
            * [/cover] */
-          Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+          Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                                 DEM_EVENT_STATUS_FAILED);
           #endif
           RetValue = (Std_ReturnType)E_NOT_OK;
@@ -1825,11 +1674,11 @@ Std_ReturnType Mcu_InitClock(const Mcu_ClockType ClockSetting)
         #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
         else
         {
-          /* Report Production error for system PLL passed */
+          /* Report DEM for system PLL passed */
           /* [cover parentID={C0DEBA0E-EDA9-479c-BFDF-7027A13FF9E0}]
-           Report Production error Event Passed for System PLL Timeout
+           Report DEM Event Passed for System PLL Timeout
           [/cover] */
-          Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+          Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                                 DEM_EVENT_STATUS_PASSED);
         }
         #endif
@@ -1842,14 +1691,14 @@ Std_ReturnType Mcu_InitClock(const Mcu_ClockType ClockSetting)
           /*[cover parentID={61C5F8AA-689A-4f26-9C0E-FA196C1287C2}][/cover]*/
           #if (MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR_DEM_REPORT == \
           MCU_ENABLE_DEM_REPORT)
-          /* Report Production error for peripheral PLL error */
+          /* Report DEM for peripheral PLL error */
           /* [cover parentID={05E8FF43-A772-4ddb-B63F-1798A4240528}]
            Report Peripheral PLL Time-Out DEM
            [/cover] */
           /* [cover parentID={35CA0459-D655-442d-8304-3455D92BFE74}]
            Report Peripheral PLL Time-Out DEM
            [/cover] */
-          Mcu_lReportDemError(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
+          Dem_ReportErrorStatus(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
                                 DEM_EVENT_STATUS_FAILED);
           #endif
           RetValue = (Std_ReturnType)E_NOT_OK;
@@ -1858,11 +1707,11 @@ Std_ReturnType Mcu_InitClock(const Mcu_ClockType ClockSetting)
         MCU_ENABLE_DEM_REPORT)
         else
         {
-          /* Report Production error for peripheral PLL passed */
+          /* Report DEM for peripheral PLL passed */
           /* [cover parentID={46E5587C-7FA0-4b5e-9058-4040C4B6E533}]
-          Report Production error Event Passed for Peripheral PLL Timeout
+          Report DEM Event Passed for Peripheral PLL Timeout
           [/cover] */
-          Mcu_lReportDemError(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
+          Dem_ReportErrorStatus(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
                                 DEM_EVENT_STATUS_PASSED);
         }
         #endif
@@ -1991,8 +1840,8 @@ Std_ReturnType Mcu_InitClock(const Mcu_ClockType ClockSetting)
 /*[cover parentID={E9E7877F-B957-480b-9D6D-10CC6AE0AA86}][/cover]*/
 Std_ReturnType Mcu_DistributePllClock(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_CCUCON0 Ccucon0Val;
   uint32 ClkselVal, TimeoutCtr, Ccucon0Lck;
@@ -2120,13 +1969,14 @@ Std_ReturnType Mcu_DistributePllClock(void)
        * [/cover] */
       if (0x0U == TimeoutCtr)
       {
-
+        /* [cover parentID={4CB4F60C-AE4F-428a-847F-06712C7EDD9C}]
+         * If DEM Reporting is ON */
         #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-        /* Report Production error for system PLL error */
-        /* [cover parentID=]
+        /* Report DEM for system PLL error */
+        /* [cover parentID={CEFF1EA6-9F6D-4b76-8362-38441D7106F7}]
          * Report Error: Event failed
          * [/cover] */
-        Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+        Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                               DEM_EVENT_STATUS_FAILED);
         #endif
 
@@ -2139,8 +1989,11 @@ Std_ReturnType Mcu_DistributePllClock(void)
          * frequency.
          */
         #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-        /* Report Production error for system PLL error */
-        Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+        /* Report DEM for system PLL error */
+        /* [cover parentID={3A08EE94-6F6E-47e6-8D32-994A56101ACE}]
+         * Report Error: Event Passed
+         * [/cover] */
+        Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                               DEM_EVENT_STATUS_PASSED);
         #endif
         /*[/cover]*/
@@ -2398,8 +2251,8 @@ Mcu_RawResetType Mcu_GetResetRawValue(void)
 /*[cover parentID={E9E7877F-B957-480b-9D6D-10CC6AE0AA86}][/cover]*/
 void Mcu_PerformReset(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_SWRSTCON SwResetReq;
   uint32 ResetDelayTicks, BaseSTMTick, CurrSTMTick, DelayTickResolution;
@@ -2490,17 +2343,9 @@ void Mcu_PerformReset(void)
 **                                                                            **
 ** Syntax          :  void Mcu_SetMode( const Mcu_ModeType McuMode )          **
 **                                                                            **
-** Description     : This API sets the device to idle, sleep or standby mode. **
-**                   In Idle mode, the CPU is idle and peripherals are active.**
-**                   In sleep mode, the CPUs are idle and selected peripherals**
-**                   are put to sleep and other peripherals work at gated     **
-**                   clocks. In standby mode, the CPU and all peripherals are **
-**                   put to sleep. On a wakeup event after idle/sleep, the    **
-**                   program execution continues from last instruction before **
-**                   it went to sleep. On a wakeup event after standby, the   **
-**                   program execution starts from the reset vector.  Please  **
-**                   refer the HW UM for the pre-conditions to be taken care  **
-**                   before invoking Mcu_SetMode for the desired mode.        **
+** Description     : This API sets the selected power mode for MCU. In case   **
+**                   the CPU is switched off, the function is returned after  **
+**                   wake-up is performed.                                    **
 **                                                                            **
 ** Service ID      : 0x08                                                     **
 **                                                                            **
@@ -2789,8 +2634,8 @@ Mcu_RamStateType Mcu_GetRamState(void)
 **                                                                            **
 ** Syntax          : void Mcu_ClockFailureNotification ( void )               **
 **                                                                            **
-** Description     : This service reports Production error when called        **
-**                   in case of PLL lock loss                                 **
+** Description     : This service reports DEM error when called in case of    **
+**                   PLL lock loss                                            **
 **                                                                            **
 ** Service ID      : NA                                                       **
 **                                                                            **
@@ -2812,15 +2657,15 @@ void Mcu_ClockFailureNotification(void)
   uint32 OscconPllHv, OscconPllLv;
   #endif
 
-  /* Report Production error for clock loss failure */
+  /* Report DEM for clock loss failure */
   /*[cover parentID={B021273D-D599-4997-A1DB-1054D1D46341}][/cover]*/
   #if (MCU_E_SYSTEM_PLL_LOCK_LOSS_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
   if (0x1U != SCU_SYSPLLSTAT.B.LOCK)
   {
-    /* [cover parentID=]
-     * Report Production error
+    /* [cover parentID={D464E42D-20DA-49ff-BDF5-57BC90E5B479}]
+     * Report DEM
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_SYSTEM_PLL_LOCK_LOSS, DEM_EVENT_STATUS_FAILED);
+    Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_LOCK_LOSS, DEM_EVENT_STATUS_FAILED);
   }
   #endif
 
@@ -2829,10 +2674,10 @@ void Mcu_ClockFailureNotification(void)
   /*[cover parentID={74567C60-1B18-4c2c-AD83-1FCF815758E7}][/cover]*/
   if (0x1U != SCU_PERPLLSTAT.B.LOCK)
   {
-    /* [cover parentID=]
-     * Report Production error
+    /* [cover parentID={F38CE122-AD6F-4a21-8E69-2C8B48CC01FE}]
+     * Report DEM
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_PERIPHERAL_PLL_LOCK_LOSS,
+    Dem_ReportErrorStatus(MCU_E_PERIPHERAL_PLL_LOCK_LOSS,
                           DEM_EVENT_STATUS_FAILED);
   }
   #endif
@@ -2843,10 +2688,10 @@ void Mcu_ClockFailureNotification(void)
   /*[cover parentID={265F6BA1-0834-40c7-8CB8-A81576C2B4DC}][/cover]*/
   if ((0x0U == OscconPllHv) || (0x0U == OscconPllLv))
   {
-    /* [cover parentID=]
-     * Report Production error
+    /* [cover parentID={B45560A2-D9DA-458b-B045-D1D041714EA4}]
+     * Report DEM
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_OSC_FAILURE, DEM_EVENT_STATUS_FAILED);
+    Dem_ReportErrorStatus(MCU_E_OSC_FAILURE, DEM_EVENT_STATUS_FAILED);
   }
   #endif
 }
@@ -2876,8 +2721,8 @@ void Mcu_ClockFailureNotification(void)
 /*[cover parentID={E9E7877F-B957-480b-9D6D-10CC6AE0AA86}][/cover]*/
 void Mcu_ClearColdResetStatus(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_RSTCON2 Rstcon2Val;
   /*
@@ -3081,7 +2926,7 @@ Mcu_CpuModeType Mcu_GetCpuState(const Mcu_CpuIdType CpuId)
     /* [cover parentID={1C86CFA0-6CF0-46db-89AD-7EC4D7F7DCF1}]
      * Is CPU Id Invalid
      * [/cover] */
-    if ((uint32)CpuId >= MCAL_NO_OF_ACTIVE_CORES)
+    if ((uint32)CpuId >= MCAL_NO_OF_CORES)
     {
       /* [cover parentID={D1A1488F-1FC0-46f9-97D4-9365E0FD9CB5}]
       Report DET
@@ -3538,7 +3383,7 @@ void Mcu_UpdateCpuCcuconReg(
   /* [cover parentID={B99490E5-C76F-4043-ADD1-861052140504}]
    * Is CPU Id Invalid
    * [/cover] */
-  else if ((uint32)CpuId >= MCAL_NO_OF_ACTIVE_CORES)
+  else if ((uint32)CpuId >= MCAL_NO_OF_CORES)
   {
     {
       /* [cover parentID={497A500F-A3AC-4e52-BDF2-74D933FA4269}]
@@ -3631,25 +3476,25 @@ void Mcu_UpdateCpuCcuconReg(
 [/cover]*/
 Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-   defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+   access. Variable of SFR type defined for writing into register.
    No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMSWCR1 Pmswcr1Val;
 
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_CCUCON0 Ccucon0Val;
 
   #if (MCU_INIT_CLOCK_API == STD_ON)
   Mcu_SystemPllConfigType PllSource;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_SYSPLLCON0 Syspllcon0Val;
 
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-    defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+    access. Variable of SFR type defined for writing into register.
     No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PERPLLCON0 Perpllcon0Val;
   #endif
@@ -3659,15 +3504,15 @@ Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
   uint32 ConfigVal;
   Std_ReturnType CompResult;
   Std_ReturnType RetVal = E_NOT_OK;
-  uint32 CmpVal = 0xFFFFFFFFU;
+  volatile uint32 CmpVal = 0xFFFFFFFFU;
   Ccucon0Val.U = SCU_CCUCON0.U;
 
   /* [cover parentID={15C9329D-2BD5-4d2a-AE23-AA6B9DA016C1}]
-   * Is configuration pointer not NULL, MCU driver initialized
-   * and Clocksetting is in range
+   * Is configuration pointer not NULL, MCU driver initialized,
+   * Mcu_ResetStatusVal non-zero and Clocksetting is in range
    * [/cover] */
   if ((Mcu_DriverState == MCU_DRIVER_INITIALIZED) &&
-      (ConfigPtr == Mcu_ConfigPtr) &&
+      (ConfigPtr == Mcu_ConfigPtr) && 
       (Mcu_ClockSetting <= Mcu_ConfigPtr->McuNoOfClockCfg))
   {
     Pmswcr1Val.U = (SCU_PMSWCR1.U & MCU_PMSWCR1_VAL_MSK);
@@ -3705,7 +3550,7 @@ Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
     /* [cover parentID={C4ADDE94-3F0C-4e19-B546-0553B0CFCA4E}]
      * If more than 4 cores are available
      * [/cover] */
-    #if (MCAL_NO_OF_ACTIVE_CORES > 4U)
+    #if (MCAL_NO_OF_CORES > 4U)
     SfrVal    = SCU_TRAPDIS1.U;
     ConfigVal = (ConfigPtr->McuTrapSettingConf1);
     CmpVal   &= ~(SfrVal ^ ConfigVal);
@@ -3762,18 +3607,12 @@ Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
     CmpVal   &= ~(SfrVal ^ ConfigVal);
 
     #if (MCU_GPT1_USED == STD_ON)
-    SfrVal = (GPT120_T3CON.U & GPT12_TXCON_INITCHECK_MSK);
-    CmpVal   &= ~(SfrVal);
-
     SfrVal = (uint32)GPT120_T3CON.B.BPS1;
     ConfigVal = (uint32)Mcu_ConfigPtr->McuGpt12PreScalarConfigPtr->Gpt1PrescalarDiv;
     CmpVal   &= ~(SfrVal ^ ConfigVal);
     #endif
 
     #if (MCU_GPT2_USED == STD_ON)
-    SfrVal = (GPT120_T6CON.U & GPT12_TXCON_INITCHECK_MSK);
-    CmpVal   &= ~(SfrVal);
-
     SfrVal = (uint32)GPT120_T6CON.B.BPS2;
     ConfigVal = (uint32)Mcu_ConfigPtr->McuGpt12PreScalarConfigPtr->Gpt2PrescalarDiv;
     CmpVal   &= ~(SfrVal ^ ConfigVal);
@@ -3909,7 +3748,7 @@ Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
     /* [cover parentID={1E0B8164-6DFC-4ac7-97D5-F4457D496F67}]
      * If more than 1 core is available
      * [/cover] */
-    #if (MCAL_NO_OF_ACTIVE_CORES > 1U)
+    #if (MCAL_NO_OF_CORES > 1U)
     SfrVal    = (SCU_CCUCON7.U);
     ConfigVal = ConfigPtr->McuClockSettingPtr[Mcu_ClockSetting]
                 .PllDistributionCfgPtr->CcuconCpu[1];
@@ -3918,7 +3757,7 @@ Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
     /* [cover parentID={F43BE123-1A98-4833-8FCB-F861BC2F2B7A}]
      * If more than 2 core is available
      * [/cover] */
-    #if (MCAL_NO_OF_ACTIVE_CORES > 2U)
+    #if (MCAL_NO_OF_CORES > 2U)
     SfrVal    = (SCU_CCUCON8.U);
     ConfigVal = ConfigPtr->McuClockSettingPtr[Mcu_ClockSetting]
                 .PllDistributionCfgPtr->CcuconCpu[2];
@@ -3927,7 +3766,7 @@ Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
     /* [cover parentID={091EB9C5-9181-4d1f-BA29-1DD6D0789029}]
      * If more than 3 cores are available
      * [/cover] */
-    #if (MCAL_NO_OF_ACTIVE_CORES > 3U)
+    #if (MCAL_NO_OF_CORES > 3U)
     SfrVal    = (SCU_CCUCON9.U);
     ConfigVal = ConfigPtr->McuClockSettingPtr[Mcu_ClockSetting]
                 .PllDistributionCfgPtr->CcuconCpu[3];
@@ -3936,7 +3775,7 @@ Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
     /* [cover parentID={EE242DD5-047A-4fbf-9BD6-E88BD77BAAC3}]
      * If more than 4 cores are available
      * [/cover] */
-    #if (MCAL_NO_OF_ACTIVE_CORES > 4U)
+    #if (MCAL_NO_OF_CORES > 4U)
     SfrVal    = (SCU_CCUCON10.U);
     ConfigVal = ConfigPtr->McuClockSettingPtr[Mcu_ClockSetting]
                 .PllDistributionCfgPtr->CcuconCpu[4];
@@ -3945,7 +3784,7 @@ Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
     /* [cover parentID={5168E2FD-F273-4f27-8A55-485CF186DF60}]
      * If more than 5 cores are available
      * [/cover] */
-    #if (MCAL_NO_OF_ACTIVE_CORES > 5U)
+    #if (MCAL_NO_OF_CORES > 5U)
     SfrVal    = (SCU_CCUCON11.U);
     ConfigVal = ConfigPtr->McuClockSettingPtr[Mcu_ClockSetting]
                 .PllDistributionCfgPtr->CcuconCpu[5];
@@ -3972,7 +3811,7 @@ Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
                 .PllDistributionCfgPtr->Ccucon5;
     CmpVal   &= ~(SfrVal ^ ConfigVal);
 
-    SfrVal    = SCU_EXTCON.U;
+    SfrVal    = (SCU_EXTCON.U) & 0x3FFFFFFFU;
     ConfigVal = ConfigPtr->McuClockSettingPtr[Mcu_ClockSetting]
                 .ExternalClockCfg;
     CmpVal   &= ~(SfrVal ^ ConfigVal);
@@ -4038,8 +3877,8 @@ Std_ReturnType Mcu_InitCheck(const Mcu_ConfigType *const ConfigPtr)
 LOCAL_INLINE Std_ReturnType Mcu_lGtmGlobalInit(void)
 {
 
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_GTM_CLC GtmClcVal;
   Std_ReturnType GtmInitStatus = E_NOT_OK;
@@ -4074,13 +3913,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmGlobalInit(void)
   if (MCU_GTM_MODULE_ENABLE == (uint32)GTM_CLC.B.DISS)
   {
     /* [cover parentID={75B4CDF9-2C7D-49e5-9B8D-A4BEA5A17588}]
-     * If Production error Reporting is ON*/
+     * If DEM Reporting is ON*/
     #if (MCU_E_GTM_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-    /*Report Production error for GTM enable passed*/
+    /*Report DEM for GTM enable passed*/
     /* [cover parentID={F332F740-976D-4fa8-AEE0-CC43E0015CA0}]
-     * Report Production error: Event Passed
+     * Report DEM: Event Passed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_GTM_CLC_ENABLE_ERR, DEM_EVENT_STATUS_PASSED);
+    Dem_ReportErrorStatus(MCU_E_GTM_CLC_ENABLE_ERR, DEM_EVENT_STATUS_PASSED);
     #endif
     /* Initialize various GTM sub-modules */
     /* [cover parentID={8F591719-3B5C-4164-9DA4-4D3DF9F02DD9}]
@@ -4107,24 +3946,19 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmGlobalInit(void)
      * Initialize GTM to ADC trigger
      * [/cover] */
     Mcu_lGtmTriggerInit();
-    /* [cover parentID={65F0419A-11CF-485b-9662-D6E227EB5329}]
-     * Initialize Toutselx registers
-     * [/cover] */
     Mcu_lGtmToutSelInit();
-
-    Mcu_lGtmTimInselInit();
     GtmInitStatus = E_OK;
   }
   else
   {
     #if (MCU_E_GTM_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-    /*Report Production error for GTM enable error*/
+    /*Report DEM for GTM enable error*/
     /*[cover parentID={DB971738-669E-4adf-9860-55AB1412C102} ]
     [/cover]*/
     /* [cover parentID={8D8985C7-A014-44a0-8144-A168E375FB53}]
-     * Report Production error: Event failed
+     * Report DEM: Event failed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_GTM_CLC_ENABLE_ERR, DEM_EVENT_STATUS_FAILED);
+    Dem_ReportErrorStatus(MCU_E_GTM_CLC_ENABLE_ERR, DEM_EVENT_STATUS_FAILED);
     #endif
     /*[/cover] */
   }
@@ -4158,20 +3992,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmGlobalInit(void)
 *******************************************************************************/
 LOCAL_INLINE Std_ReturnType Mcu_lGtmGlobalDeInit(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_GTM_CLC GtmClcVal;
   Std_ReturnType GtmDeInitStatus = E_NOT_OK;
 
-  /* [cover parentID={A2737666-F0E0-4945-B69E-AA5D504B4D74}]
-   * De-Initialize TOUTSELx
-   * [/cover] */
   Mcu_lGtmToutSelDeInit();
-  /* [cover parentID={9B56D035-5638-45e7-B9CF-2846544FE625}]
-   * De-Initialize TIMINSELx
-   * [/cover] */
-  Mcu_lGtmTimInselDeInit();
   /*Disable GTM module*/
   /* [cover parentID={BE19B839-010E-43e8-8582-5C5DFB9A95BD}]
    * De-Initialize TOM module
@@ -4208,14 +4035,14 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmGlobalDeInit(void)
   if (MCU_GTM_MODULE_DISABLE == (uint32)GTM_CLC.B.DISS)
   {
     /* [cover parentID={AD9EFCF0-BFF2-4fe8-887E-4BC226C6A3BE}]
-     * If Production error Reporting is ON*/
+     * If DEM Reporting is ON*/
     #if (MCU_E_GTM_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-    /*Report Production error for GTM module disable passed*/
+    /*Report DEM for GTM module disable passed*/
     /*[cover parentID={306D1B8B-A598-4a6f-BA97-3D14E1C483C7} ][/cover]*/
     /* [cover parentID={531E0FF0-6879-4ed5-9568-33B5533754F7}]
-     * Report Production error: Event Passed
+     * Report DEM: Event Passed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_GTM_CLC_DISABLE_ERR,
+    Dem_ReportErrorStatus(MCU_E_GTM_CLC_DISABLE_ERR,
                           DEM_EVENT_STATUS_PASSED);
     #endif
     GtmDeInitStatus = E_OK;
@@ -4223,11 +4050,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmGlobalDeInit(void)
   #if (MCU_E_GTM_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
   else
   {
-    /*Report Production error for GTM module disable error*/
+    /*Report DEM for GTM module disable error*/
     /* [cover parentID={01F83276-AB42-412f-9F74-EE9D588B30D0}]
-     * Report Production error: Event Failed
+     * Report DEM: Event Failed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_GTM_CLC_DISABLE_ERR, DEM_EVENT_STATUS_FAILED);
+    Dem_ReportErrorStatus(MCU_E_GTM_CLC_DISABLE_ERR, DEM_EVENT_STATUS_FAILED);
   }
   #endif
   /*[/cover] */
@@ -4501,7 +4328,7 @@ LOCAL_INLINE void Mcu_lGtmTriggerInit(void)
 
 /*******************************************************************************
 **                                                                            **
-** Traceability    : [cover parentID={889CBC14-0B14-4a03-959B-0D9AACECAC6A}]  **
+** Traceability    : [cover parentID={7BED3F75-F94B-4a8b-A284-61BF8753DF01}]  **
 **                                                                            **
 ** Syntax          : LOCAL_INLINE void Mcu_lGtmToutSelInit(void)              **
 **                                                                            **
@@ -4529,8 +4356,7 @@ LOCAL_INLINE void Mcu_lGtmToutSelInit(void)
   */
   uint8 ToutSelRegIndex;
 
-  /*[cover parentID={90AB3615-CEB9-4208-9B9B-51C7766243C1}][/cover]*/
-  /*[cover parentID={4C4A4DA3-F8CC-49ea-A0F9-713AA6673C0B}][/cover]*/
+  /*[cover parentID={ED60583A-9FE4-4932-AC44-E6C16438A56C}][/cover]*/
   for (ToutSelRegIndex = MCU_STARTING_INDEX;
        ToutSelRegIndex < MCU_GTM_NO_OF_TOUTSEL_AVAILABLE; ToutSelRegIndex++)
   {
@@ -4541,49 +4367,10 @@ LOCAL_INLINE void Mcu_lGtmToutSelInit(void)
   }
 }
 
-/*******************************************************************************
-**                                                                            **
-** Traceability    : [cover parentID={3455F71F-CEE3-4465-A43F-BF5BC0072EC0}]  **
-**                                                                            **
-** Syntax          : LOCAL_INLINE void Mcu_lGtmTimInselInit(void)             **
-**                                                                            **
-** Description     : Function that initializes the Port to GTM TIM            **
-**                   configuration settings.                                  **
-**                                                                            **
-** Service ID      : None                                                     **
-**                                                                            **
-** Sync/Async      : Synchronous                                              **
-**                                                                            **
-** Reentrancy      : Non-Reentrant                                            **
-**                                                                            **
-** Parameters (in) : None                                                     **
-**                                                                            **
-** Parameters (out): None                                                     **
-**                                                                            **
-** Return value    : None                                                     **
-**                                                                            **
-*******************************************************************************/
-/*[cover parentID={C0F73721-E73F-4445-B04C-813F73AB0716}][/cover]*/
-LOCAL_INLINE void Mcu_lGtmTimInselInit(void)
-{
-  /*
-     Configure GTM TIMINSEL configuration registers.
-  */
-  uint8 TimInSelRegIndex;
-
-  /*[cover parentID={D9667840-AC80-445c-98F1-5ED59E39EF12}][/cover]*/
-  for (TimInSelRegIndex = MCU_STARTING_INDEX;
-       TimInSelRegIndex < MCU_GTM_NO_OF_TIM_AVAILABLE; TimInSelRegIndex++)
-  {
-    MODULE_GTM.TIMINSEL[TimInSelRegIndex].U |= Mcu_ConfigPtr->McuGtmConfigPtr
-                                             ->GtmTimInSelCfg[TimInSelRegIndex];
-  }
-}
-
 #if (MCU_DEINIT_API == STD_ON)
 /*******************************************************************************
 **                                                                            **
-** Traceability    : [cover parentID={44A09A2F-B54F-4fb7-AF14-F777400DBD05}]  **
+** Traceability    : [cover parentID={7CEB15A2-2BEB-49cc-B89C-E90975C4D382}]  **
 **                                                                            **
 ** Syntax          : LOCAL_INLINE void Mcu_lGtmToutSelDeInit(void)            **
 **                                                                            **
@@ -4611,54 +4398,13 @@ LOCAL_INLINE void Mcu_lGtmToutSelDeInit(void)
   */
   uint8 ToutSelRegIndex;
 
-  /*[cover parentID={A3C93AE3-0B27-412b-B563-83DD8363ECFD}][/cover]*/
+  /*[cover parentID={A6A81316-9359-487f-B120-CE0C3D463E99}][/cover]*/
   for (ToutSelRegIndex = MCU_STARTING_INDEX;
        ToutSelRegIndex < MCU_GTM_NO_OF_TOUTSEL_AVAILABLE; ToutSelRegIndex++)
   {
     MODULE_GTM.TOUTSEL[ToutSelRegIndex].U &=
     (~(Mcu_ConfigPtr->McuGtmConfigPtr->GtmToutSelCfg[ToutSelRegIndex]));
 
-  }
-}
-#endif
-/* End of #if (MCU_DEINIT_API == STD_ON) */
-
-#if (MCU_DEINIT_API == STD_ON)
-/*******************************************************************************
-**                                                                            **
-** Traceability    : [cover parentID={6941873D-2B9B-4dc7-A9BE-60F9E3CD0935}]  **
-**                                                                            **
-** Syntax          : LOCAL_INLINE void Mcu_lGtmTimInselDeInit(void)           **
-**                                                                            **
-** Description     : Function that resets the Port to GTM TIM configuration   **
-**                   settings.                                                **
-**                                                                            **
-** Service ID      : None                                                     **
-**                                                                            **
-** Sync/Async      : Synchronous                                              **
-**                                                                            **
-** Reentrancy      : Non-Reentrant                                            **
-**                                                                            **
-** Parameters (in) : None                                                     **
-**                                                                            **
-** Parameters (out): None                                                     **
-**                                                                            **
-** Return value    : None                                                     **
-**                                                                            **
-*******************************************************************************/
-/*[cover parentID={C0F73721-E73F-4445-B04C-813F73AB0716}][/cover]*/
-LOCAL_INLINE void Mcu_lGtmTimInselDeInit(void)
-{
-  /*
-     Configure GTM TIMINSEL configuration registers.
-  */
-  uint8 TimInSelRegIndex;
-
-  for (TimInSelRegIndex = MCU_STARTING_INDEX;
-       TimInSelRegIndex < MCU_GTM_NO_OF_TIM_AVAILABLE; TimInSelRegIndex++)
-  {
-    MODULE_GTM.TIMINSEL[TimInSelRegIndex].U &=
-    (~(Mcu_ConfigPtr->McuGtmConfigPtr->GtmTimInSelCfg[TimInSelRegIndex]));
   }
 }
 #endif
@@ -5012,6 +4758,9 @@ LOCAL_INLINE void Mcu_lGtmTomGlobalInit(void)
        * it is getting cast into is a known type . */
       /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
        * by violating this MISRA rule. */
+      /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+       * modules. Since the Module values are
+       * validated by the user, no side effects are foreseen */
       TomTgcRegPtr   = GTM_TOM_TGC_POINTER(TomModuleIndex, 0x0U);
       GtmTomCfgIndex = (0x2U * TomModuleIndex);
       TomTgcRegPtr->TGC_INT_TRIG.U =
@@ -5028,6 +4777,9 @@ LOCAL_INLINE void Mcu_lGtmTomGlobalInit(void)
        * it is getting cast into is a known type . */
       /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
        * by violating this MISRA rule. */
+      /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+       * modules. Since the Module values are
+       * validated by the user, no side effects are foreseen */
       TomTgcRegPtr   = GTM_TOM_TGC_POINTER(TomModuleIndex, 0x1U);
       GtmTomCfgIndex = ((2U * TomModuleIndex) + 0x1U);
       /*Global Configuration of TOM0 Group0*/
@@ -5089,6 +4841,9 @@ LOCAL_INLINE void Mcu_lGtmTomGlobalDeInit(void)
        * it is getting cast into is a known type . */
       /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
        * by violating this MISRA rule. */
+      /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+       * modules. Since the Module values are
+       * validated by the user, no side effects are foreseen */
       TomTgcRegPtr = GTM_TOM_TGC_POINTER(TomModuleIndex, 0x0U);
       /*Global Configuration of TOM0 Group0*/
 
@@ -5104,6 +4859,9 @@ LOCAL_INLINE void Mcu_lGtmTomGlobalDeInit(void)
        * by violating this MISRA rule. */
       /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
        * by violating this MISRA rule. */
+      /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+       * modules. Since the Module values are
+       * validated by the user, no side effects are foreseen */
       TomTgcRegPtr = GTM_TOM_TGC_POINTER(TomModuleIndex, 0x1U);
       /*Global Configuration of TOM0 Group0*/
       TomTgcRegPtr->TGC_INT_TRIG.U = MCU_TOM_INT_TRIG_RST_VAL;
@@ -5156,6 +4914,9 @@ LOCAL_INLINE void Mcu_lGtmAtomGlobalInit(void)
     if (((Mcu_ConfigPtr->McuGtmConfigPtr->GtmAtomModuleUsage >>
           AtomModuleIndex) & 0x1U) == 0x1U)
     {
+      /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different
+       * TOM modules. Since the Module values are
+       * validated by the user, no side effects are foreseen */
       AtomAgcRegPtr = GTM_ATOM_AGC_POINTER(AtomModuleIndex);
       /*Global Configuration of ATOM GroupX*/
       AtomAgcRegPtr->INT_TRIG.U =
@@ -5214,6 +4975,9 @@ LOCAL_INLINE void Mcu_lGtmAtomGlobalDeInit(void)
           AtomModuleIndex) &
          0x1U) == 0x1U)
     {
+      /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+       * modules. Since the Module values are
+       * validated by the user, no side effects are foreseen */
       AtomAgcRegPtr = GTM_ATOM_AGC_POINTER(AtomModuleIndex);
       /*Global Configuration of ATOM GroupX*/
       AtomAgcRegPtr->INT_TRIG.U = MCU_ATOM_INT_TRIG_RST_VAL;
@@ -5254,21 +5018,21 @@ LOCAL_INLINE void Mcu_lGtmAtomGlobalDeInit(void)
 /*[cover parentID={F762790E-FD9A-47c4-91FD-31BFB7E3952A}][/cover]*/
 LOCAL_INLINE Std_ReturnType Mcu_lGpt12Init(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_GPT12_CLC Gpt12ClcVal;
 
   #if (MCU_GPT1_USED == STD_ON)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_GPT12_T3CON GptT3Con;
   #endif
 
   #if (MCU_GPT2_USED == STD_ON)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_GPT12_T6CON GptT6Con;
   #endif
@@ -5307,25 +5071,25 @@ LOCAL_INLINE Std_ReturnType Mcu_lGpt12Init(void)
   {
     Gpt12InitStatus = E_NOT_OK;
     /* [cover parentID={7F3F78CC-FF98-4204-BE88-07E7D8DCB2B9}]
-     * If Production error Reporting is ON */
+     * If DEM Reporting is ON */
     #if (MCU_E_GPT12_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /* [/cover] */
-    /*Report Production error for CLC enable failed*/
+    /*Report DEM for CLC enable failed*/
     /* [cover parentID={C6CDAE4C-88F4-4308-831B-5BCAC0CA4B30}]
-     * Report Production error: Event Failed
+     * Report DEM: Event Failed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_GPT12_CLC_ENABLE_ERR, DEM_EVENT_STATUS_FAILED);
+    Dem_ReportErrorStatus(MCU_E_GPT12_CLC_ENABLE_ERR, DEM_EVENT_STATUS_FAILED);
     #endif
   }
   #if (MCU_E_GPT12_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
   else
   {
-    /*Report Production error for CLC enable passed*/
+    /*Report DEM for CLC enable passed*/
     /*[cover parentID={F85FBFEA-DAED-482d-A18E-52A2B07079AB} ][/cover]*/
     /* [cover parentID={A67BEF70-75C4-428a-84BD-61E4AD766B6D}]
-    * Report Production error: Event Passed
+    * Report DEM: Event Passed
     * [/cover] */
-    Mcu_lReportDemError(MCU_E_GPT12_CLC_ENABLE_ERR, DEM_EVENT_STATUS_PASSED);
+    Dem_ReportErrorStatus(MCU_E_GPT12_CLC_ENABLE_ERR, DEM_EVENT_STATUS_PASSED);
   }
   #endif
   /* [/cover] */
@@ -5333,7 +5097,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGpt12Init(void)
   {
     /*[cover parentID={B6B1C64C-AA23-4215-A1B0-02B3ACFB04C0}]*/
     #if (MCU_GPT1_USED == STD_ON)
-    GptT3Con.U = GPT12_TXCON_RESET_VAL;
+    GptT3Con.U = GPT120_T3CON.U;
     GptT3Con.B.BPS1 = Mcu_ConfigPtr->McuGpt12PreScalarConfigPtr->Gpt1PrescalarDiv;
     MCU_SFR_INIT_DEINIT_WRITE32(&GPT120_T3CON.U, GptT3Con.U);
     #endif
@@ -5341,7 +5105,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGpt12Init(void)
 
     /*[cover parentID={2DC34AA5-D28D-4494-BA6C-E57A8590BD8F}]*/
     #if (MCU_GPT2_USED == STD_ON)
-    GptT6Con.U = GPT12_TXCON_RESET_VAL;
+    GptT6Con.U = GPT120_T6CON.U;
     GptT6Con.B.BPS2 = Mcu_ConfigPtr->McuGpt12PreScalarConfigPtr->Gpt2PrescalarDiv;
     MCU_SFR_INIT_DEINIT_WRITE32(&GPT120_T6CON.U, GptT6Con.U);
     #endif
@@ -5378,44 +5142,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lGpt12Init(void)
 *******************************************************************************/
 LOCAL_INLINE Std_ReturnType Mcu_lGpt12DeInit(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_GPT12_CLC Gpt12ClcVal;
   Std_ReturnType Gpt12InitStatus = E_OK;
-
-  #if (MCU_GPT1_USED == STD_ON)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
-     No side effects foreseen by violating this MISRA rule.*/
-  Ifx_GPT12_T3CON GptT3Con;
-  #endif
-
-  #if (MCU_GPT2_USED == STD_ON)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
-     No side effects foreseen by violating this MISRA rule.*/
-  Ifx_GPT12_T6CON GptT6Con;
-  #endif
-
-  /*[cover parentID={87C07D30-7F2F-4413-BB55-B9CD2D9DF7BD}]
-   * Gpt block 1 used */
-  #if (MCU_GPT1_USED == STD_ON)
-  /* De-Initialize Gpt block 1 */
-  GptT3Con.U = GPT12_TXCON_RESET_VAL;
-  MCU_SFR_INIT_DEINIT_WRITE32(&GPT120_T3CON.U, GptT3Con.U);
-  #endif
-  /*[/cover]*/
-
-  /*[cover parentID={BD7BB187-BC81-4258-A956-EB9DE9B77C01}]
-   * GPt block 2 is used */
-  #if (MCU_GPT2_USED == STD_ON)
-  /* De-Initialize Gpt block 2 */
-  GptT6Con.U = GPT12_TXCON_RESET_VAL;
-  MCU_SFR_INIT_DEINIT_WRITE32(&GPT120_T6CON.U, GptT6Con.U);
-  #endif
-  /*[/cover]*/
-
   /*
     GPT12 initialization
     1. Disable GPT12 module clock.
@@ -5423,7 +5154,6 @@ LOCAL_INLINE Std_ReturnType Mcu_lGpt12DeInit(void)
 
   Gpt12ClcVal.U = GPT120_CLC.U;
   Gpt12ClcVal.B.DISR = GPT12_TIMER_DISABLE;
-  Gpt12ClcVal.B.EDIS = 0x0U;
 
   MCU_LIB_INIT_DEINIT_WRITEPERIPENDINITPROTREG(&GPT120_CLC.U,
       Gpt12ClcVal.U);
@@ -5436,24 +5166,24 @@ LOCAL_INLINE Std_ReturnType Mcu_lGpt12DeInit(void)
   {
     Gpt12InitStatus = E_NOT_OK;
     /* [cover parentID={223601F0-0BD6-47f5-B2D3-08D683009DB9}]
-     * If Production error Reporting is ON*/
+     * If DEM Reporting is ON*/
 
     #if (MCU_E_GPT12_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-    /*Report Production error for CLC disable failed*/
+    /*Report DEM for CLC disable failed*/
     /* [cover parentID={96C1E83C-73A0-430d-AF78-E9193A400E75}]
-     * Report Production error: Event Failed
+     * Report DEM: Event Failed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_GPT12_CLC_DISABLE_ERR, DEM_EVENT_STATUS_FAILED);
+    Dem_ReportErrorStatus(MCU_E_GPT12_CLC_DISABLE_ERR, DEM_EVENT_STATUS_FAILED);
     #endif
   }
   #if (MCU_E_GPT12_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
   else
   {
-    /*Report Production error for CLC disable passed*/
+    /*Report DEM for CLC disable passed*/
     /* [cover parentID={4A2D70C9-4FB8-47f2-B338-028DC030C012}]
-     * Report Production error: Event Passed
+     * Report DEM: Event Passed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_GPT12_CLC_DISABLE_ERR, DEM_EVENT_STATUS_PASSED);
+    Dem_ReportErrorStatus(MCU_E_GPT12_CLC_DISABLE_ERR, DEM_EVENT_STATUS_PASSED);
   }
   /*[/cover]*/
   #endif
@@ -5495,8 +5225,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lCcu6Init(void)
 
   /*[cover parentID={C568FC9C-3169-4ac8-8F04-3BD09EEBCB3A}]*/
   #if (MCU_CCU60_USED == STD_ON)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-   defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+   access. Variable of SFR type defined for writing into register.
    No side effects foreseen by violating this MISRA rule.*/
   Ifx_CCU6_CLC Ccu60ClcVal;
   Ccu60ClcVal.U = CCU60_CLC.U;
@@ -5522,9 +5252,9 @@ LOCAL_INLINE Std_ReturnType Mcu_lCcu6Init(void)
 
   /*[cover parentID={220B27BD-8BA5-4414-8875-CB3D0DF89091}][/cover]*/
   #if (MCU_CCU61_USED == STD_ON)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
-     No side effects foreseen by violating this MISRA rule.*/
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+   access. Variable of SFR type defined for writing into register.
+   No side effects foreseen by violating this MISRA rule.*/
   Ifx_CCU6_CLC Ccu61ClcVal;
   Ccu61ClcVal.U = CCU61_CLC.U;
   Ccu61ClcVal.B.DISR = CCU6_KERNEL_ENABLE;
@@ -5562,13 +5292,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lCcu6Init(void)
   )
   {
     /* [cover parentID={89FCB181-B846-4b15-A177-5AB75E93ABAD}]
-     * If Production error Reporting is ON*/
+     * If DEM Reporting is ON*/
     #if (MCU_E_CCU6_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-    /*Report Production error for CLC enable passed*/
+    /*Report DEM for CLC enable passed*/
     /* [cover parentID={D9190440-57A7-4431-9FC7-446CB7B8D39B}]
-     * Report Production error: Event Passed
+     * Report DEM: Event Passed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_CCU6_CLC_ENABLE_ERR, DEM_EVENT_STATUS_PASSED);
+    Dem_ReportErrorStatus(MCU_E_CCU6_CLC_ENABLE_ERR, DEM_EVENT_STATUS_PASSED);
     #endif
     #if (MCU_CCU60_USED == STD_ON)
     CCU60_ISR.U = CCU6_INTERRUPT_FLAG_CLR;
@@ -5582,12 +5312,12 @@ LOCAL_INLINE Std_ReturnType Mcu_lCcu6Init(void)
   /*[/cover] */
   else
   {
-    /*Report Production error for CLC enable failed*/
+    /*Report DEM for CLC enable failed*/
     /*[cover parentID={F68D83A6-8FDD-4a3f-98CF-F4AAAA3D3CE0} ][/cover]*/
     /* [cover parentID={F6CF1602-3005-4c6f-83D6-3C6086411388}]
-    * Report Production error: Event Failed
+    * Report DEM: Event Failed
     * [/cover] */
-    Mcu_lReportDemError(MCU_E_CCU6_CLC_ENABLE_ERR, DEM_EVENT_STATUS_FAILED);
+    Dem_ReportErrorStatus(MCU_E_CCU6_CLC_ENABLE_ERR, DEM_EVENT_STATUS_FAILED);
   }
   #endif
   /*[cover parentID={364B7666-F2FF-43ab-B2E9-27071C261205}][/cover]
@@ -5624,8 +5354,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lCcu6DeInit(void)
   Std_ReturnType Ccu6ClcStatus = E_NOT_OK;
 
   #if (MCU_CCU60_USED == STD_ON)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-  defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+  access. Variable of SFR type defined for writing into register.
   No side effects foreseen by violating this MISRA rule.*/
   Ifx_CCU6_CLC Ccu60ClcVal;
   CCU60_ISR.U = CCU6_INTERRUPT_FLAG_CLR;
@@ -5639,9 +5369,9 @@ LOCAL_INLINE Std_ReturnType Mcu_lCcu6DeInit(void)
   #endif
 
   #if (MCU_CCU61_USED == STD_ON)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
-     No side effects foreseen by violating this MISRA rule.*/
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+  access. Variable of SFR type defined for writing into register.
+  No side effects foreseen by violating this MISRA rule.*/
   Ifx_CCU6_CLC Ccu61ClcVal;
   CCU61_ISR.U = CCU6_INTERRUPT_FLAG_CLR;
   Ccu61ClcVal.U = CCU61_CLC.U;
@@ -5670,12 +5400,12 @@ LOCAL_INLINE Std_ReturnType Mcu_lCcu6DeInit(void)
   )
   {
     /* [cover parentID={E6F37713-1E34-4d46-A0A1-0323EB830F25}]
-     * If Production error Reporting is ON*/
+     * If DEM Reporting is ON*/
     #if (MCU_E_CCU6_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /* [cover parentID={8E4A706A-82C5-4c27-89D2-EC1289FB9F2D}]
-     * Report Production error: Event Passed
+     * Report DEM: Event Passed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_CCU6_CLC_DISABLE_ERR, DEM_EVENT_STATUS_PASSED);
+    Dem_ReportErrorStatus(MCU_E_CCU6_CLC_DISABLE_ERR, DEM_EVENT_STATUS_PASSED);
     #endif
     Ccu6ClcStatus = E_OK;
   }
@@ -5683,12 +5413,12 @@ LOCAL_INLINE Std_ReturnType Mcu_lCcu6DeInit(void)
   /*[/cover] */
   else
   {
-    /*Report Production error for CLC disable failed*/
+    /*Report DEM for CLC disable failed*/
     /*[cover parentID={DD6955D7-BDA0-488f-B2B8-5782FEED35BC} ][/cover]*/
     /* [cover parentID={C3005699-E034-47f5-B10A-D0A95E9A8AA3}]
-    * Report Production error: Event Failed
+    * Report DEM: Event Failed
     * [/cover] */
-    Mcu_lReportDemError(MCU_E_CCU6_CLC_DISABLE_ERR, DEM_EVENT_STATUS_FAILED);
+    Dem_ReportErrorStatus(MCU_E_CCU6_CLC_DISABLE_ERR, DEM_EVENT_STATUS_FAILED);
   }
   #endif
   /*[cover parentID={CA3D6D48-0DD3-4f6f-B28C-21967D18A5E7}][/cover]
@@ -5722,8 +5452,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lCcu6DeInit(void)
 *******************************************************************************/
 LOCAL_INLINE Std_ReturnType Mcu_lConvCtrlInit(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_CONVERTER_CLC ConvCtrlClcVal;
   Std_ReturnType ConvCtrlInitStatus = E_OK;
@@ -5741,26 +5471,26 @@ LOCAL_INLINE Std_ReturnType Mcu_lConvCtrlInit(void)
   {
     ConvCtrlInitStatus = E_NOT_OK;
     /* [cover parentID={C3A5973F-B709-48bd-8501-E07899FD643A}]
-     * If Production error Reporting is ON*/
+     * If DEM Reporting is ON*/
     #if (MCU_E_CONVCTRL_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-    /*Report Production error for CLC enable failed*/
+    /*Report DEM for CLC enable failed*/
     /*[cover parentID={A3F405D3-6A98-4d85-B8A5-A6B377095307} ]
     [/cover] */
     /* [cover parentID={FEFEA6B3-2DEE-428f-BAA8-1E48416EBBEB}]
-     * Report Production error: Event failed
+     * Report DEM: Event failed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_CONVCTRL_CLC_ENABLE_ERR,
+    Dem_ReportErrorStatus(MCU_E_CONVCTRL_CLC_ENABLE_ERR,
                           DEM_EVENT_STATUS_FAILED);
     #endif
   }
   #if (MCU_E_CONVCTRL_CLC_ENABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
   else
   {
-    /*Report Production error for CLC enable passed*/
+    /*Report DEM for CLC enable passed*/
     /* [cover parentID={CD76B24E-1A89-4b8c-AC42-A340D03540CF}]
-     * Report Production error: Event Passed
+     * Report DEM: Event Passed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_CONVCTRL_CLC_ENABLE_ERR,
+    Dem_ReportErrorStatus(MCU_E_CONVCTRL_CLC_ENABLE_ERR,
                           DEM_EVENT_STATUS_PASSED);
   }
   #endif
@@ -5793,8 +5523,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lConvCtrlInit(void)
 *******************************************************************************/
 LOCAL_INLINE Std_ReturnType Mcu_lConvCtrlDeInit(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_CONVERTER_CLC ConvCtrlClcVal;
   Std_ReturnType ConvCtrlInitStatus = E_OK;
@@ -5811,26 +5541,26 @@ LOCAL_INLINE Std_ReturnType Mcu_lConvCtrlDeInit(void)
   {
     ConvCtrlInitStatus = E_NOT_OK;
     /* [cover parentID={4B430AF8-BB30-49d5-88D0-A58F46F63EF2}]
-     * If Production error Reporting is ON*/
+     * If DEM Reporting is ON*/
     #if (MCU_E_CONVCTRL_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-    /*Report Production error for CLC disable failed*/
+    /*Report DEM for CLC disable failed*/
     /*[cover parentID={84234C2B-11B9-4fd7-8B14-90D601156E0F}]
     [/cover]*/
     /* [cover parentID={2A07E7AE-36D8-48a6-BF74-D004D646F587}]
-     * Report Production error: Event failed
+     * Report DEM: Event failed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_CONVCTRL_CLC_DISABLE_ERR,
+    Dem_ReportErrorStatus(MCU_E_CONVCTRL_CLC_DISABLE_ERR,
                           DEM_EVENT_STATUS_FAILED);
     #endif
   }
   #if (MCU_E_CONVCTRL_CLC_DISABLE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
   else
   {
-    /* Report Production error for CLC disable passed*/
+    /* Report DEM for CLC disable passed*/
     /* [cover parentID={8456F272-DE17-4cfe-AA12-F9936338EDF7}]
-     * Report Production error: Event Passed
+     * Report DEM: Event Passed
      * [/cover] */
-    Mcu_lReportDemError(MCU_E_CONVCTRL_CLC_DISABLE_ERR,
+    Dem_ReportErrorStatus(MCU_E_CONVCTRL_CLC_DISABLE_ERR,
                           DEM_EVENT_STATUS_PASSED);
   }
   #endif
@@ -5870,13 +5600,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitOscClock(void)
 {
   Std_ReturnType RetValue = (Std_ReturnType)E_OK;
   Mcu_SystemPllConfigType PllSource;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_OSCCON OscconVal;
 
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_SYSPLLCON0 Syspllcon0Val;
 
@@ -5905,7 +5635,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitOscClock(void)
       2. Set OSCVAL value and perform oscillator watchdog reset
       3. Wait (with timeout) until Oscillator frequency becomes
          usable. (check against Lower and Upper ranges both)
-      4. In case Oscillator setup timeout expires, Report Production error and
+      4. In case Oscillator setup timeout expires, report DEM and
          return Mcu_InitClock() with an error.
     */
     OscconVal.U = SCU_OSCCON.U;
@@ -5914,7 +5644,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitOscClock(void)
     OscconVal.B.OSCVAL = MCU_OSCVAL_REG_VALUE;
     OscconVal.B.OSCRES = 0x1U;
   }
-  /* [cover parentID={EE6330D3-8F5F-44da-A00C-6AD0DEE928ED}]
+  /* [cover parentID={F7CF6BCD-168A-4e70-AC6E-FD10F6B82533}]
    * Is Backup clock used as PLL Source
    * [/cover] */
   else if (MCU_PLL_INSEL_BACKUP == (uint32)PllSource.Insel)
@@ -5934,7 +5664,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitOscClock(void)
         (uint32)(OscconVal.U));
 
   /*Skip oscillator watchdog monitoring for Backup clock*/
-  /* [cover parentID={E76971BB-329F-4e6c-86D9-A8C20B468731}]
+  /* [cover parentID={20AA28AB-D35F-4b0a-AE75-8FF852FA17F7}]
    * Is Oscillator/SYSCLK used as PLL Source
    * [/cover] */
   if (MCU_PLL_INSEL_BACKUP != (uint32)PllSource.Insel)
@@ -5963,16 +5693,16 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitOscClock(void)
     if (0x0U == TimeoutCtr)
     {
       /* [cover parentID={D435DD7F-C13D-479c-A39B-1B58E6E68ED8}]
-       * If Production error Reporting is ON*/
+       * If DEM reporting is ON*/
       #if (MCU_E_OSC_FAILURE_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-      /* Report Production error for oscillator error */
+      /* Report DEM for oscillator error */
       /* [cover parentID={AF6AE147-0A47-495f-985D-4CF4C74F555B}]
-       * Report Production error: Event Failed
+       * Report DEM: Event Failed
        * [/cover] */
       /* [cover parentID={EFE3583A-E5A7-42a0-9268-DBB266EFEF3F}]
-       * Report Production error: Event Failed
+       * Report DEM: Event Failed
        * [/cover] */
-      Mcu_lReportDemError(MCU_E_OSC_FAILURE,
+      Dem_ReportErrorStatus(MCU_E_OSC_FAILURE,
                             DEM_EVENT_STATUS_FAILED);
       #endif
       /*[/cover] */
@@ -5984,13 +5714,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitOscClock(void)
     else
     {
       /* [cover parentID={58DB094C-DCE1-4aa6-A4CF-67996FDE4A14}]
-       * If Production error Reporting is ON*/
+       * If DEM Reporting is ON*/
       #if (MCU_E_OSC_FAILURE_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-      /* Report Production error for oscillator passed */
+      /* Report DEM for oscillator passed */
       /* [cover parentID={98F8323C-7BDB-4174-9DC6-A3DDB5B17E4F}]
-       * Report Production error: Event Passed
+       * Report DEM: Event Passed
        * [/cover] */
-      Mcu_lReportDemError(MCU_E_OSC_FAILURE,
+      Dem_ReportErrorStatus(MCU_E_OSC_FAILURE,
                             DEM_EVENT_STATUS_PASSED);
       #endif
       /* [/cover] */
@@ -6026,20 +5756,20 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitOscClock(void)
 *******************************************************************************/
 LOCAL_INLINE Std_ReturnType Mcu_lInitPllClock(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_SYSPLLCON0 Syspllcon0Val;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_SYSPLLCON1 Syspllcon1Val;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PERPLLCON0 Perpllcon0Val;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PERPLLCON1 Perpllcon1Val;
   volatile uint32 TimeoutCtr;
@@ -6154,8 +5884,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllClock(void)
   /*
     PLL mode check:
     1. Wait (with timeout) until PLLs have moved to normal mode.
-    2. In case of timeout, raise a Production error and return Mcu_InitClock()
-       with an Error.
+    2. In case of timeout, raise a DEM and return Mcu_InitClock() with
+       an Error.
   */
 
   TimeoutCtr = MCU_PLL_PWDSTAT_TIMEOUT;
@@ -6178,14 +5908,14 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllClock(void)
   if (0x1U == SCU_SYSPLLSTAT.B.PWDSTAT)
   {
     /* [cover parentID={D0981CC1-A188-4d16-80E7-DBB84F068208}]
-         * If Production error Reporting is ON*/
+         * If DEM Reporting is ON*/
     #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /*      [/cover] */
-    /*Report Production error for system PLL normal mode timeout error*/
+    /*Report DEM for system PLL normal mode timeout error*/
     /* [cover parentID={90FFE3CE-27EC-4afa-8CCF-1621ECE7D6B7}]
-    Report Production error: Event Failed for System PLL
+    Report DEM: Event Failed for System PLL
     [/cover] */
-    Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+    Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                           DEM_EVENT_STATUS_FAILED);
     #endif
 
@@ -6194,11 +5924,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllClock(void)
   #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
   else
   {
-    /*Report Production error for system PLL normal mode timeout passed*/
+    /*Report DEM for system PLL normal mode timeout passed*/
     /* [cover parentID={DD81C8CB-F2A4-49a3-9394-1BCDEA26AB24}]
-    Report Production error: Event Passed for System PLL
+    Report DEM: Event Passed for System PLL
     [/cover] */
-    Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+    Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                           DEM_EVENT_STATUS_PASSED);
   }
   #endif
@@ -6209,14 +5939,14 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllClock(void)
   if (0x1U == SCU_PERPLLSTAT.B.PWDSTAT)
   {
     /* [cover parentID={9F93092D-762B-4142-9583-4E38B2199F3C}]
-     * If Production error Reporting is ON*/
+     * If DEM Reporting is ON*/
 
     #if (MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-    /*Report Production error for peripheral PLL normal mode timeout error*/
+    /*Report DEM for peripheral PLL normal mode timeout error*/
     /* [cover parentID={3F2E931E-63B0-44d9-AB0C-24BD894781B2}]
-    Report Production error: Event Failed for Peripheral PLL
+    Report DEM: Event Failed for Peripheral PLL
     [/cover] */
-    Mcu_lReportDemError(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
+    Dem_ReportErrorStatus(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
                           DEM_EVENT_STATUS_FAILED);
     #endif
 
@@ -6225,11 +5955,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllClock(void)
   #if (MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
   else
   {
-    /*Report Production error for peripheral PLL normal mode timeout passed*/
+    /*Report DEM for peripheral PLL normal mode timeout passed*/
     /* [cover parentID={46C928CC-9161-485b-BBC1-64C3CE982AD1}]
-    Report Production error: Event Passed for Peripheral PLL
+    Report DEM: Event Passed for Peripheral PLL
     [/cover] */
-    Mcu_lReportDemError(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
+    Dem_ReportErrorStatus(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
                           DEM_EVENT_STATUS_PASSED);
   }
   #endif
@@ -6305,8 +6035,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllKDivCheck(void)
     PLL K2DIV check:
     1. Wait (with timeout) until K2DIV values are effectively applied
        for system and peripheral PLLs.
-    2. In case of timeout, raise a Production error and return Mcu_InitClock()
-       with an Error.
+    2. In case of timeout, raise a DEM and return Mcu_InitClock() with
+       an Error.
   */
   TimeoutCtr = MCU_PLL_KDIVRDY_TIMEOUT;
   SysPllStat = (uint32)SCU_SYSPLLSTAT.B.K2RDY;
@@ -6333,13 +6063,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllKDivCheck(void)
   if (0x0U == SCU_SYSPLLSTAT.B.K2RDY)
   {
     /* [cover parentID={6CAF4879-1020-450b-B9C1-E2F0B7C1DEF0}]
-     * If Production error Reporting is ON*/
+     * If DEM Reporting is ON*/
     #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-    /*Report Production error for system PLL error*/
+    /*Report DEM for system PLL error*/
     /* [cover parentID={F6943986-7B4D-4c35-9612-EF5675B9DD8C}]
-     * Report Production error: Event Failed for System PLL
+     * Report DEM: Event Failed for System PLL
     [/cover] */
-    Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+    Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                           DEM_EVENT_STATUS_FAILED);
     #endif
 
@@ -6348,11 +6078,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllKDivCheck(void)
   #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
   else
   {
-    /*Report Production error for system PLL passed*/
+    /*Report DEM for system PLL passed*/
     /* [cover parentID={3ADC86EC-CBEF-49cb-A039-D7F8AEDDAA4D}]
-     * Report Production error: Event Passed for System PLL
+     * Report DEM: Event Passed for System PLL
     [/cover] */
-    Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+    Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                           DEM_EVENT_STATUS_PASSED);
   }
   #endif
@@ -6365,13 +6095,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllKDivCheck(void)
   if ((0x0U == PerPllStat) || (0x0U == PerPllStat1))
   {
     /* [cover parentID={A0B010C4-5ACF-423d-81C9-86A1F8D9AD56}]
-     * If Production error Reporting is ON*/
+     * If DEM Reporting is ON*/
     #if (MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-    /*Report Production error for peripheral PLL error*/
+    /*Report DEM for peripheral PLL error*/
     /* [cover parentID={81373284-4D27-4f23-9A27-59B17DA7F2F4}]
-     * Report Production error: Event Failed for Peripheral PLL
+     * Report DEM: Event Failed for Peripheral PLL
     [/cover] */
-    Mcu_lReportDemError(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
+    Dem_ReportErrorStatus(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
                           DEM_EVENT_STATUS_FAILED);
     #endif
 
@@ -6380,11 +6110,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllKDivCheck(void)
   #if (MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
   else
   {
-    /*Report Production error for peripheral PLL passed*/
+    /*Report DEM for peripheral PLL passed*/
     /* [cover parentID={68CDA2FC-A0E8-4f0c-91D5-E0B3B50F1940}]
-     * Report Production error: Event Passed for Peripheral PLL
+     * Report DEM: Event Passed for Peripheral PLL
      [/cover] */
-    Mcu_lReportDemError(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
+    Dem_ReportErrorStatus(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
                           DEM_EVENT_STATUS_PASSED);
   }
   #endif
@@ -6420,8 +6150,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitPllKDivCheck(void)
 *******************************************************************************/
 LOCAL_INLINE Std_ReturnType Mcu_lInitClockTree(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_CCUCON0 Ccucon0Val;
   uint32 TimeoutCtr, Ccucon0Lck, Ccucon5Lck;
@@ -6449,8 +6179,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitClockTree(void)
 
   /*
     Update for CCUCON0 register divider values
-    1. Check if CCUCON0 register lock is free and report the Production error
-       accordingly.
+    1. Check if CCUCON0 register lock is free and report the DEM accordingly.
     2. Update the register
   */
   /* [cover parentID={2068F600-417B-4813-87EB-017233692E38}]
@@ -6487,18 +6216,18 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitClockTree(void)
     if ((0x1U == Ccucon0Lck) || (0x1U == Ccucon5Lck))
     {
       /* [cover parentID={A07D9DCC-8EF2-48fc-A97F-4F688B8EBE72}]
-       * If Production error Reporting is ON*/
+       * If DEM Reporting is ON*/
       #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-      /* Report Production error for system PLL error */
+      /* Report DEM for system PLL error */
       /* [cover parentID={CA6A9A2F-7F4B-4fdc-8C0F-35090FEEA944}]
-       Report Production error: Event Failed
+       Report DEM: Event Failed
        [/cover] */
       /*[cover parentID={86FD62A6-E150-44c5-B439-37325BCA944E} ]
         [/cover]*/
       /* [cover parentID={E4ED1A33-4973-4142-80DC-6736A98D2B64}]
-       * Report Production error: Event Failed
+       * Report DEM: Event Failed
        * [/cover] */
-      Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+      Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                             DEM_EVENT_STATUS_FAILED);
       #endif
 
@@ -6507,14 +6236,14 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitClockTree(void)
     else
     {
       #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-      /* Report Production error for system PLL error */
+      /* Report DEM for system PLL error */
       /* [cover parentID={95F25D8B-584B-487e-B5E5-2AFDB07C179D}]
-      Report Production error: Event Passed
+      Report DEM: Event Passed
       [/cover] */
       /* [cover parentID={BE1F873C-CCE1-4a48-B108-F80A9998CED4}]
-       * Report Production error: Event Passed
+       * Report DEM: Event Passed
        * [/cover] */
-      Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+      Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                             DEM_EVENT_STATUS_PASSED);
       #endif
       /*[/cover] */
@@ -6555,13 +6284,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitClockTree(void)
       if ((0x1U == Ccucon3Lck) || (0x1U == Ccucon4Lck))
       {
         #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-        /* Report Production error for system PLL error */
+        /* Report DEM for system PLL error */
         /* [cover parentID={CA6A9A2F-7F4B-4fdc-8C0F-35090FEEA944}]
-         Report Production error: Event Failed
+         Report DEM: Event Failed
          [/cover] */
         /*[cover parentID={86FD62A6-E150-44c5-B439-37325BCA944E} ]
           [/cover]*/
-        Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+        Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                               DEM_EVENT_STATUS_FAILED);
         #endif
 
@@ -6570,11 +6299,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitClockTree(void)
       else
       {
         #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-        /* Report Production error for system PLL error */
+        /* Report DEM for system PLL error */
         /* [cover parentID={95F25D8B-584B-487e-B5E5-2AFDB07C179D}]
-        Report Production error: Event Passed
+        Report DEM: Event Passed
         [/cover] */
-        Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+        Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                               DEM_EVENT_STATUS_PASSED);
         #endif
 
@@ -6645,8 +6374,12 @@ LOCAL_INLINE Std_ReturnType Mcu_lSwitchToBackUpClockFreq(
   const uint8 ApiId,
   const Mcu_ClockType ClockSettingIndex)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
+     No side effects foreseen by violating this MISRA rule.*/
+  Ifx_SCU_CCUCON0 Ccucon0Val;
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_SYSPLLCON1 Syspllcon1Val;
 
@@ -6754,13 +6487,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lSwitchToBackUpClockFreq(
     if (0x0U == TimeoutCtr)
     {
       /* [cover parentID={DA8EFA29-B606-49ea-A3ED-95ACCDCC0C26}]
-       * If Production error Reporting is ON*/
+       * If DEM Reporting is ON*/
       #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-      /*Report Production error for system PLL error*/
-      /* [cover parentID=]
-       * Report Production error: Event Failed
+      /*Report DEM for system PLL error*/
+      /* [cover parentID={9608B2CC-C76B-4a6c-A60F-E5063ED92006}]
+       * Report DEM: Event Failed
        * [/cover] */
-      Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+      Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                             DEM_EVENT_STATUS_FAILED);
       #endif
       RetValue = (Std_ReturnType)E_NOT_OK;
@@ -6768,11 +6501,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lSwitchToBackUpClockFreq(
     else
     {
       #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-      /*Report Production error for system PLL error*/
-      /* [cover parentID=]
-       * Report Production error: Event Passed
+      /*Report DEM for system PLL error*/
+      /* [cover parentID={ED7BE767-4387-465e-AC64-41A31160EA97}]
+       * Report DEM: Event Passed
        * [/cover] */
-      Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+      Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                             DEM_EVENT_STATUS_PASSED);
       #endif
       /*[/cover] */
@@ -6804,86 +6537,15 @@ LOCAL_INLINE Std_ReturnType Mcu_lSwitchToBackUpClockFreq(
      * Ram Peripheral PLL frequencies to Backup Clock frequency
      * [/cover] */
     Mcu_lPerPllToBackUpClockFreq(ApiId);
-    /*[cover parentID={2176E0C4-FCB6-4b22-9126-B25C9C3EEA2D}][/cover]*/
-    RetValue = Mcu_lCcuconLckChk(ApiId);
-  }
-  /*[cover parentID={8B9FAFDD-F1ED-41cd-8E37-0FBDD786455E}][/cover]
-    [cover parentID={8C3CD177-F59F-4adc-AF1F-3C2A61777BB4}][/cover]*/
-  return RetValue;
-}
+    /* Move clock tree distribution source as backup clock. */
+    Ccucon0Val.U = SCU_CCUCON0.U;
+    Ccucon0Val.B.CLKSEL = MCU_FSOURCE_CLKSEL_BACKUPCLK;
+    Ccucon0Val.B.UP = 0x1U;
+    Ccucon0Val.U = (uint32)Ccucon0Val.U & MCU_CCUCON0_RSVD_BIT_MASK;
 
-
-/*******************************************************************************
-**                                                                            **
-** Traceability    : [cover parentID={F8F9759F-5956-406c-9EC7-F7971D97FC74}]  **
-**                                                                            **
-** Syntax          : LOCAL_INLINE Std_ReturnType Mcu_lCcuconLckChk            **
-**                   (void)                                                   **
-**                                                                            **
-** Description     : This function checks whether CCUCON0 is ready to         **
-**                   be updated or not.                                       **
-**                                                                            **
-** Sync/Async      : Synchronous                                              **
-**                                                                            **
-** Reentrancy      : Non-Reentrant                                            **
-**                                                                            **
-** Parameters (in) : ApiId: The service ID of API from which the function     **
-**                          is called.                                        **
-**                                                                            **
-** Parameters (out): None                                                     **
-**                                                                            **
-** Return value    : E_OK     : CCUCON0 is unlocked and can be updated        **
-**                   E_NOT_OK : CCUCON0 is locked and can't be updated        **
-**                                                                            **
-*******************************************************************************/
-LOCAL_INLINE Std_ReturnType Mcu_lCcuconLckChk(const uint8 ApiId)
-{
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
-     No side effects foreseen by violating this MISRA rule.*/
-  Ifx_SCU_CCUCON0 Ccucon0Val;
-
-  uint32 Ccucon0Lck;
-  uint32 TimeoutCtr;
-  Std_ReturnType RetValue = (Std_ReturnType)E_OK;
-
-  /* Move clock tree distribution source as backup clock. */
-  Ccucon0Val.U = SCU_CCUCON0.U;
-  Ccucon0Val.B.CLKSEL = MCU_FSOURCE_CLKSEL_BACKUPCLK;
-  Ccucon0Val.B.UP = 0x1U;
-  Ccucon0Val.U = (uint32)Ccucon0Val.U & MCU_CCUCON0_RSVD_BIT_MASK;
-
-  TimeoutCtr = MCU_CCUCON0_LCK_TIMEOUT;
-
-  Ccucon0Lck = (uint32)SCU_CCUCON0.B.LCK;
-
-  while ((TimeoutCtr > 0x0U) && (0x1U == Ccucon0Lck))
-  {
-    Ccucon0Lck = (uint32)SCU_CCUCON0.B.LCK;
-
-    TimeoutCtr--;
-  }
-
-  /*[cover parentID={F6C60C6F-70E1-4615-A22B-14809D00ADB8}]*/
-  if (0x1U == Ccucon0Lck)
-  {
-    #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-
-    Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
-                          DEM_EVENT_STATUS_FAILED);
-    #endif
-
-    RetValue = (Std_ReturnType)E_NOT_OK;
-  }
-  else
-  {
-    #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-
-    Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
-                          DEM_EVENT_STATUS_PASSED);
-    #endif
-
-    /*[cover parentID={FE3084DC-7C1D-4f2e-BF40-C78BB83EEAAA}]*/
+    /* [cover parentID={FF7C5F56-15D0-4e77-B4B0-2A1DFBBB13BC}]
+     * Is this local function called for local initialization
+     * [/cover] */
     if (ApiId == MCU_API_INITCLOCK)
     {
 
@@ -6897,9 +6559,10 @@ LOCAL_INLINE Std_ReturnType Mcu_lCcuconLckChk(const uint8 ApiId)
           (uint32)(Ccucon0Val.U));
     }
   }
-  return (RetValue);
+  /*[cover parentID={8B9FAFDD-F1ED-41cd-8E37-0FBDD786455E}][/cover]
+    [cover parentID={8C3CD177-F59F-4adc-AF1F-3C2A61777BB4}][/cover]*/
+  return RetValue;
 }
-
 
 /*******************************************************************************
 **                                                                            **
@@ -6929,8 +6592,8 @@ LOCAL_INLINE void Mcu_lPerPllToBackUpClockFreq(const uint8 ApiId)
   uint32 PerpllKDiv, KDivRampDelayTicks;
   uint32 PllBackupFreqKDiv, PerpllPDiv, PerpllNDiv;
   uint32 DelayTickResolution, BaseSTMTick, CurrSTMTick;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PERPLLCON1 Perpllcon1Val;
 
@@ -7159,8 +6822,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lSwitchToDesiredFreq(void)
   uint32 DelayTickResolution, BaseSTMTick, CurrSTMTick, SysPllStat;
   volatile uint32 TimeoutCtr;
   Std_ReturnType RetValue = (Std_ReturnType)E_OK;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_SYSPLLCON1 Syspllcon1Val;
 
@@ -7229,13 +6892,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lSwitchToDesiredFreq(void)
     if (0x0U == TimeoutCtr)
     {
       /* [cover parentID={C98AD486-A4BA-40eb-AF64-1938F96DC459}]
-       * If Production error Reporting is ON */
+       * If DEM Reporting is ON */
       #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-      /*Report Production error for system PLL error*/
-      /* [cover parentID=]
-       * Report Production error: Event Failed
+      /*Report DEM for system PLL error*/
+      /* [cover parentID={79793ED6-DE5D-4cd8-B183-C19E8633ADD6}]
+       * Report DEM: Event Failed
        * [/cover] */
-      Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+      Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                             DEM_EVENT_STATUS_FAILED);
       #endif
 
@@ -7244,11 +6907,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lSwitchToDesiredFreq(void)
     else
     {
       #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-      /*Report Production error for system PLL passed*/
-      /* [cover parentID=]
-       * Report Production error: Event Passed
+      /*Report DEM for system PLL passed*/
+      /* [cover parentID={E3EFA80B-2484-441c-BAEF-DFDD53B8A327}]
+       * Report DEM: Event Passed
        * [/cover] */
-      Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+      Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                             DEM_EVENT_STATUS_PASSED);
       #endif
       /*[/cover] */
@@ -7314,8 +6977,8 @@ LOCAL_INLINE void Mcu_lPerPllToDesiredFreq(void)
 {
   uint32 CurrentKDivVal, TargetKDivVal, KDivRampDelayTicks;
   uint32 DelayTickResolution, BaseSTMTick, CurrSTMTick;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PERPLLCON1 Perpllcon1Val;
 
@@ -7836,21 +7499,21 @@ LOCAL_INLINE void Mcu_lSetSleepMode(const uint8 CoreId)
 **                                                                            **
 *******************************************************************************/
 /* CYCLOMATIC_Mcu_lSetStandbyMode_JUSTIFICATION: This Function has cyclomatic
-   Complexity >15. This is due to higher number of Production error and DET
-   checks inside the function. This local function is the functional block for
-   switching system to StandyBy mode.*/
+   Complexity >15. This is due to higher number of DEM and DET checks inside
+   the function. This local function is the functional block for switching
+   system to StandyBy mode.*/
 LOCAL_INLINE void Mcu_lSetStandbyMode(const uint8 CoreId)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_SYSPLLCON0 Syspllcon0Val;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PERPLLCON0 Perpllcon0Val;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMSWCR1 Pmswcr1Val;
   volatile uint32 TimeoutCtr;
@@ -7945,14 +7608,14 @@ LOCAL_INLINE void Mcu_lSetStandbyMode(const uint8 CoreId)
         if (0x0U == SCU_SYSPLLSTAT.B.PWDSTAT)
         {
           #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-          /* Report Production error for system PLL error */
-          /* [cover parentID=]
-             Report Production error: Event Failed
+          /* Report DEM for system PLL error */
+          /* [cover parentID={09E1284D-DF22-418f-9AF6-66271C583ABD}]
+             Report DEM: Event Failed
           [/cover] */
           /* [cover parentID={A94E9C59-3D01-45d6-8722-A6F06AF3AD12}]
-             Report Production error: Event Failed
+             Report DEM: Event Failed
           [/cover] */
-          Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+          Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                                 DEM_EVENT_STATUS_FAILED);
           #endif
 
@@ -7961,11 +7624,11 @@ LOCAL_INLINE void Mcu_lSetStandbyMode(const uint8 CoreId)
         #if (MCU_E_SYSTEM_PLL_TIMEOUT_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
         else
         {
-          /* Report Production error for system PLL passed */
-          /* [cover parentID=]
-           * Report Production error: Event Passed
+          /* Report DEM for system PLL passed */
+          /* [cover parentID={C30D5A98-7BFC-46bd-9CBB-4438388D6F67}]
+           * Report DEM: Event Passed
            * [/cover] */
-          Mcu_lReportDemError(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
+          Dem_ReportErrorStatus(MCU_E_SYSTEM_PLL_TIMEOUT_ERR,
                                 DEM_EVENT_STATUS_PASSED);
         }
         #endif
@@ -7976,17 +7639,17 @@ LOCAL_INLINE void Mcu_lSetStandbyMode(const uint8 CoreId)
         if (0x0U == SCU_PERPLLSTAT.B.PWDSTAT)
         {
           /* [cover parentID={666C7474-1D48-46a1-8FF5-67EDB2E577F2}]
-           * If Production error Reporting is ON*/
+           * If DEM Reporting is ON*/
           #if (MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR_DEM_REPORT == \
           MCU_ENABLE_DEM_REPORT)
-          /* Report Production error for peripheral PLL error */
-          /* [cover parentID=]
-           * Report Production error: Event Failed
+          /* Report DEM for peripheral PLL error */
+          /* [cover parentID={673F947F-EA68-48b4-AE05-6593CDC70DEE}]
+           * Report DEM: Event Failed
           [/cover] */
           /* [cover parentID={35CA0459-D655-442d-8304-3455D92BFE74}]
-           *  Report Production error: Event Failed
+           *  Report DEM: Event Failed
            [/cover] */
-          Mcu_lReportDemError(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
+          Dem_ReportErrorStatus(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
                                 DEM_EVENT_STATUS_FAILED);
           #endif
           RetValue = E_NOT_OK;
@@ -7995,8 +7658,11 @@ LOCAL_INLINE void Mcu_lSetStandbyMode(const uint8 CoreId)
         MCU_ENABLE_DEM_REPORT)
         else
         {
-          /* Report Production error for peripheral PLL passed */
-          Mcu_lReportDemError(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
+          /* Report DEM for peripheral PLL passed */
+          /* [cover parentID={2B4DC5F0-ED5B-426f-BE93-86C8C089CC52}]
+           * Report DEM: Event Passed
+          [/cover] */
+          Dem_ReportErrorStatus(MCU_E_PERIPHERAL_PLL_TIMEOUT_ERR,
                                 DEM_EVENT_STATUS_PASSED);
         }
         #endif
@@ -8037,15 +7703,15 @@ LOCAL_INLINE void Mcu_lSetStandbyMode(const uint8 CoreId)
           if (MCU_PMSWCR_BUSY == PMS_PMSWCR3.B.BUSY)
           {
             /* [cover parentID={50F03EBD-09E1-400f-B94E-11F6040D52C4}]
-            * If Production error Reporting is ON*/
+            * If DEM Reporting is ON*/
             #if (MCU_E_PMSWCR_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-            /* Report Production error for  PMSWCR3 update error */
+            /* Report DEM for  PMSWCR3 update error */
             /* [cover parentID={687D25F7-BACB-4024-9F76-52B9FF44C141} ]
             [/cover]*/
             /* [cover parentID={7C9750F3-AD52-4a98-A801-9A4A1D27C645}]
-            * Report Production error: Event Failed
+            * Report DEM: Event Failed
             * [/cover] */
-            Mcu_lReportDemError(MCU_E_PMSWCR_UPDATE_ERR,
+            Dem_ReportErrorStatus(MCU_E_PMSWCR_UPDATE_ERR,
                                   DEM_EVENT_STATUS_FAILED);
             #endif
             RetValue = E_NOT_OK;
@@ -8057,11 +7723,11 @@ LOCAL_INLINE void Mcu_lSetStandbyMode(const uint8 CoreId)
             * desired frequency.
             */
             #if (MCU_E_PMSWCR_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
-            /* Report Production error for system PLL error */
+            /* Report DEM for system PLL error */
             /* [cover parentID={38D8FA1F-823F-46e7-AB5E-56ADD5A90FEC}]
-            * Report Production error: Event Passed
+            * Report DEM: Event Passed
             * [/cover] */
-            Mcu_lReportDemError(MCU_E_PMSWCR_UPDATE_ERR,
+            Dem_ReportErrorStatus(MCU_E_PMSWCR_UPDATE_ERR,
                                   DEM_EVENT_STATUS_PASSED);
             #endif
             /* [/cover] */
@@ -8146,7 +7812,7 @@ LOCAL_INLINE void Mcu_lWriteTrapDisReg(void)
   /* [cover parentID={B4EFFB58-5B64-4a79-A606-97EBBAAD3326}]
    * If number of Cores available is more than 4
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 4U)
+  #if (MCAL_NO_OF_CORES > 4U)
 
   MCU_LIB_INIT_DEINIT_WRITEPERIPENDINITPROTREG(&SCU_TRAPDIS1.U,
       Mcu_ConfigPtr->McuTrapSettingConf1);
@@ -8183,7 +7849,7 @@ LOCAL_INLINE void Mcu_lResetTrapDisReg(void)
   /* [cover parentID={37B5AD55-931D-478b-8A39-EC9156EC7928}]
    * If number of Cores available is more than 4
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 4U)
+  #if (MCAL_NO_OF_CORES > 4U)
 
   MCU_LIB_INIT_DEINIT_WRITEPERIPENDINITPROTREG(&SCU_TRAPDIS1.U,
       MCU_TRAPDIS1_RESET_VAL);
@@ -8223,7 +7889,7 @@ LOCAL_INLINE void Mcu_lInitCcuConCpuReg(void)
   /* [cover parentID={D625B019-3200-4251-A1B1-EE3800F190F4}]
    * If more than 1 core is available
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 1U)
+  #if (MCAL_NO_OF_CORES > 1U)
   /*Clock Divider Configuration for Core1 */
 
   MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&SCU_CCUCON7.U,
@@ -8233,7 +7899,7 @@ LOCAL_INLINE void Mcu_lInitCcuConCpuReg(void)
   /* [cover parentID={92767265-CDDE-41c0-B63B-05E21980EF8C}]
    * If more than 2 cores are available
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 2U)
+  #if (MCAL_NO_OF_CORES > 2U)
   /*Clock Divider Configuration for Core2 */
 
   MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&SCU_CCUCON8.U,
@@ -8243,7 +7909,7 @@ LOCAL_INLINE void Mcu_lInitCcuConCpuReg(void)
   /* [cover parentID={ED475AD4-C56D-4527-86D1-7822D88D5427}]
    * If more than 3 cores are available
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 3U)
+  #if (MCAL_NO_OF_CORES > 3U)
   /*Clock Divider Configuration for Core3 */
 
   MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&SCU_CCUCON9.U,
@@ -8253,7 +7919,7 @@ LOCAL_INLINE void Mcu_lInitCcuConCpuReg(void)
   /* [cover parentID={77537818-3180-4422-B059-E45AC6CD0F09}]
    * If more than 4 cores are available
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 4U)
+  #if (MCAL_NO_OF_CORES > 4U)
   /*Clock Divider Configuration for Core4 */
 
   MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&SCU_CCUCON10.U,
@@ -8263,7 +7929,7 @@ LOCAL_INLINE void Mcu_lInitCcuConCpuReg(void)
   /* [cover parentID={7F7478AE-F77F-47fe-9255-DCABB05BEB39}]
    * If more than 5 cores are available
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 5U)
+  #if (MCAL_NO_OF_CORES > 5U)
   /*Clock Divider Configuration for Core5 */
 
   MCU_LIB_INIT_DEINIT_WRITESAFETYENDINITPROTREG(&SCU_CCUCON11.U,
@@ -8307,7 +7973,7 @@ LOCAL_INLINE uint32 Mcu_lGetCpuMode(const uint32 CoreId)
       /* [cover parentID={52DE09A6-E126-4e0c-B9D0-49F54B272495}]
        * If more than 1 core is available
        * [/cover] */
-      #if (MCAL_NO_OF_ACTIVE_CORES > 1U)
+      #if (MCAL_NO_OF_CORES > 1U)
     /* [cover parentID={5DDCB03F-810D-4e0f-8843-F78ECAC8045F}]
      * Is selected CPU Core1
      * [/cover] */
@@ -8319,7 +7985,7 @@ LOCAL_INLINE uint32 Mcu_lGetCpuMode(const uint32 CoreId)
       /* [cover parentID={BCFF1A5B-FCD9-4ae6-A0AE-34F3D7E67B0B}]
        * If more than 2 cores are available
        * [/cover] */
-      #if (MCAL_NO_OF_ACTIVE_CORES > 2U)
+      #if (MCAL_NO_OF_CORES > 2U)
     /* [cover parentID={040569F5-975E-4a59-A41F-0714B2CF2446}]
      * Is selected CPU Core2
      * [/cover] */
@@ -8331,7 +7997,7 @@ LOCAL_INLINE uint32 Mcu_lGetCpuMode(const uint32 CoreId)
       /* [cover parentID={C3E0BEE2-04F2-46b4-A945-1732D440B5C4}]
        * If more than 3 cores are available
        * [/cover] */
-      #if (MCAL_NO_OF_ACTIVE_CORES > 3U)
+      #if (MCAL_NO_OF_CORES > 3U)
     /* [cover parentID={A6F09EDF-1430-4f9e-A477-88FCCCA1D394}]
      * Is selected CPU Core3
      * [/cover] */
@@ -8343,7 +8009,7 @@ LOCAL_INLINE uint32 Mcu_lGetCpuMode(const uint32 CoreId)
       /* [cover parentID={BBDFA620-5FD8-42fe-A622-EC6B052EFFB2}]
        * If more than 4 cores are available
        * [/cover] */
-      #if (MCAL_NO_OF_ACTIVE_CORES > 4U)
+      #if (MCAL_NO_OF_CORES > 4U)
     /* [cover parentID={4BC0F895-5D14-4fba-97DB-279318CDCAC5}]
      * Is selected CPU Core4
      * [/cover] */
@@ -8355,7 +8021,7 @@ LOCAL_INLINE uint32 Mcu_lGetCpuMode(const uint32 CoreId)
       /* [cover parentID={7D597FA9-38F0-4538-8BC7-194ECB195BD7}]
        * If more than 5 cores are available
        * [/cover] */
-      #if (MCAL_NO_OF_ACTIVE_CORES > 5U)
+      #if (MCAL_NO_OF_CORES > 5U)
     /* [cover parentID={E8AA565B-A627-401c-B957-7B5AFB5A8DDB}]
      * Is selected CPU Core5
      * [/cover] */
@@ -8396,52 +8062,52 @@ LOCAL_INLINE uint32 Mcu_lGetCpuMode(const uint32 CoreId)
 *******************************************************************************/
 LOCAL_INLINE void Mcu_lSetCpuMode(const uint32 CoreId, const uint32 ModeReq)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMCSR0 PMCSR0Val;
   /* [cover parentID={D470E823-8860-4329-9C7D-C3287BE4751A}]
    * If number of Cores is more than 1
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 1U)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  #if (MCAL_NO_OF_CORES > 1U)
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMCSR1 PMCSR1Val;
   #endif
   /* [cover parentID={957C02BB-F288-4034-BEA3-819D4A5941CF}]
    * If number of Cores is more than 2
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 2U)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  #if (MCAL_NO_OF_CORES > 2U)
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMCSR2 PMCSR2Val;
   #endif
   /* [cover parentID={630BC937-DAD7-4071-A6D8-20EC3C287B1A}]
    * If number of Cores is more than 3
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 3U)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  #if (MCAL_NO_OF_CORES > 3U)
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMCSR3 PMCSR3Val;
   #endif
   /* [cover parentID={E5EB92DD-1486-4342-AF4F-6D898A7B5589}]
    * If number of cores is more than 4
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 4U)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  #if (MCAL_NO_OF_CORES > 4U)
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMCSR4 PMCSR4Val;
   #endif
   /* [cover parentID={B6A4298F-EFDB-48dc-A701-438F33887320}]
    * If number of cores is more than 5
    * [/cover] */
-  #if (MCAL_NO_OF_ACTIVE_CORES > 5U)
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  #if (MCAL_NO_OF_CORES > 5U)
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_PMCSR5 PMCSR5Val;
   #endif
@@ -8465,7 +8131,7 @@ LOCAL_INLINE void Mcu_lSetCpuMode(const uint32 CoreId, const uint32 ModeReq)
       /* [cover parentID={D470E823-8860-4329-9C7D-C3287BE4751A}]
        * If number of Cores is more than 1
        * [/cover] */
-      #if (MCAL_NO_OF_ACTIVE_CORES > 1U)
+      #if (MCAL_NO_OF_CORES > 1U)
     /* [cover parentID={D274CFE0-FC37-40cb-8D60-21C90EA634E4}]
      * Is Core1  selected
      * [/cover] */
@@ -8484,7 +8150,7 @@ LOCAL_INLINE void Mcu_lSetCpuMode(const uint32 CoreId, const uint32 ModeReq)
       /* [cover parentID={957C02BB-F288-4034-BEA3-819D4A5941CF}]
        * If number of Cores is more than 2
        * [/cover] */
-      #if (MCAL_NO_OF_ACTIVE_CORES > 2U)
+      #if (MCAL_NO_OF_CORES > 2U)
     /* [cover parentID={48B59F24-D01E-4daf-B863-CA97EE49DBC7}]
      * Is Core2 selected
      * [/cover] */
@@ -8503,7 +8169,7 @@ LOCAL_INLINE void Mcu_lSetCpuMode(const uint32 CoreId, const uint32 ModeReq)
       /* [cover parentID={630BC937-DAD7-4071-A6D8-20EC3C287B1A}]
        * If number of Cores is more than 3
        * [/cover] */
-      #if (MCAL_NO_OF_ACTIVE_CORES > 3U)
+      #if (MCAL_NO_OF_CORES > 3U)
     /* [cover parentID={73C6AF87-98DC-4607-B96A-A58C777DEF5C}]
      * Is Core3 selected
      * [/cover] */
@@ -8522,7 +8188,7 @@ LOCAL_INLINE void Mcu_lSetCpuMode(const uint32 CoreId, const uint32 ModeReq)
       /* [cover parentID={E5EB92DD-1486-4342-AF4F-6D898A7B5589}]
        * If number of cores is more than 4
        * [/cover] */
-      #if (MCAL_NO_OF_ACTIVE_CORES > 4U)
+      #if (MCAL_NO_OF_CORES > 4U)
     /* [cover parentID={F7ED9270-7F77-4396-988A-42FFDD9DFF74}]
      * Is Core4 Selected
      * [/cover] */
@@ -8541,7 +8207,7 @@ LOCAL_INLINE void Mcu_lSetCpuMode(const uint32 CoreId, const uint32 ModeReq)
       /* [cover parentID={B6A4298F-EFDB-48dc-A701-438F33887320}]
        * If number of cores is more than 5
        * [/cover] */
-      #if (MCAL_NO_OF_ACTIVE_CORES > 5U)
+      #if (MCAL_NO_OF_CORES > 5U)
     /* [cover parentID={0C8C3934-B5F0-43aa-8B1A-1309A98AF2B3}]
      * Is Core5 selected
      * [/cover] */
@@ -8606,8 +8272,7 @@ static void Mcu_lReportError(const uint8 ApiId, const uint8 ErrorId)
   /* [cover parentID={8C7FD36E-1813-4a5d-80AE-608719DBBDEC}]
    * Report DET
    * [/cover] */
-  (void)Det_ReportError((uint16)MCU_MODULE_ID, MCU_MODULE_INSTANCE,
-                                                         ApiId, ErrorId);
+  Det_ReportError((uint16)MCU_MODULE_ID, MCU_MODULE_INSTANCE, ApiId, ErrorId);
   #endif
 }
 #endif
@@ -8651,8 +8316,7 @@ static void Mcu_lReportMultiCoreError(
   /* [cover parentID={83B5FC08-42FD-4af8-B8A7-8DD46C90B3B1}]
    * Report MultiCore error
    * [/cover] */
-  (void)Det_ReportError((uint16)MCU_MODULE_ID, MCU_MODULE_INSTANCE,
-                                                            ApiId, ErrorId);
+  Det_ReportError((uint16)MCU_MODULE_ID, MCU_MODULE_INSTANCE, ApiId, ErrorId);
   #endif
 
   /* [cover parentID={64F4C44F-D603-4a25-BEC0-DCBBD0938588}]
@@ -8695,13 +8359,13 @@ static void Mcu_lReportMultiCoreError(
 *******************************************************************************/
 LOCAL_INLINE Std_ReturnType Mcu_lGtmGlobalInitCheck(void)
 {
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-     defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+     access. Variable of SFR type defined for writing into register.
      No side effects foreseen by violating this MISRA rule.*/
   Ifx_GTM_CLC GtmClcVal;
   uint32 SfrVal;
   uint32 ConfigVal;
-  uint32 CmpVal = 0xFFFFFFFFU;
+  volatile uint32 CmpVal = 0xFFFFFFFFU;
   Std_ReturnType CompResult;
   Std_ReturnType RetVal = E_NOT_OK;
   uint8 TbuChInfo = (uint8)(Mcu_ConfigPtr->McuGtmConfigPtr->GtmTbuCfg &
@@ -8817,13 +8481,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmGlobalInitCheck(void)
     CompResult = Mcu_lGtmTriggerInitCheck();
     CmpVal    &= ~(E_OK ^ (uint32)CompResult);
 
-    /* [cover parentID={55AFEF64-157B-4ce6-9E45-7A978CDA3070}]
-     * Verify Toutselx settings
-     * [/cover] */
     CompResult = Mcu_lGtmToutSelInitCheck();
-    CmpVal    &= ~(E_OK ^ (uint32)CompResult);
-
-    CompResult = Mcu_lGtmTimInselInitCheck();
     CmpVal    &= ~(E_OK ^ (uint32)CompResult);
   }
 
@@ -8864,7 +8522,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmCmuGlobalInitCheck(void)
 {
   uint32 SfrVal;
   uint32 ConfigVal;
-  uint32 CmpVal = 0xFFFFFFFFU;
+  volatile uint32 CmpVal = 0xFFFFFFFFU;
   Std_ReturnType RetVal = E_NOT_OK;
 
   SfrVal    = GTM_CMU_GCLK_NUM.U;
@@ -8996,7 +8654,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmCcmGlobalInitCheck(void)
 {
   uint32 SfrVal;
   uint32 ConfigVal;
-  uint32 CmpVal = 0xFFFFFFFFU;
+  volatile uint32 CmpVal = 0xFFFFFFFFU;
   Std_ReturnType RetVal = E_NOT_OK;
   uint8 ClusterIndex;
   uint8 ClsClkVal;
@@ -9076,7 +8734,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmCcmGlobalInitCheck(void)
 LOCAL_INLINE Std_ReturnType Mcu_lGtmAtomGlobalInitCheck(void)
 {
   const Ifx_GTM_ATOM_AGC *AtomAgcRegPtr;
-  uint32 CmpVal = 0xFFFFFFFFU;
+  volatile uint32 CmpVal = 0xFFFFFFFFU;
   uint32 SfrVal;
   uint32 ConfigVal;
   Std_ReturnType RetVal = E_NOT_OK;
@@ -9096,18 +8754,19 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmAtomGlobalInitCheck(void)
           AtomModuleIndex) & 0x1U) == 0x1U)
     {
 
+      /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+       * modules. Since the Module values are
+       * validated by the user, no side effects are foreseen */
       AtomAgcRegPtr = GTM_ATOM_AGC_POINTER(AtomModuleIndex);
 
-      SfrVal    = AtomAgcRegPtr->INT_TRIG.U & MCU_GTM_ATOM_TRIG_INITCHK_READ_MSK;
-      ConfigVal = ((Mcu_ConfigPtr->McuGtmConfigPtr->GtmAtomCfg[AtomModuleIndex]
-                   .AtomAgcIntTrigRstCn0 ^ MCU_GTM_ATOM_TRIG_INITCHK_MSK) 
-                  & MCU_GTM_ATOM_TRIG_INITCHK_READ_MSK);
+      SfrVal    = AtomAgcRegPtr->INT_TRIG.U;
+      ConfigVal = (Mcu_ConfigPtr->McuGtmConfigPtr->GtmAtomCfg[AtomModuleIndex]
+                   .AtomAgcIntTrigRstCn0 & MCU_GTM_ATOM_AGC_INT_TRIG_MASK);
       CmpVal   &= ~(SfrVal ^ ConfigVal);
 
-      SfrVal    = AtomAgcRegPtr->FUPD_CTRL.U & MCU_GTM_ATOM_RSTCN0_INITCHK_READ_MSK;
-      ConfigVal = ((Mcu_ConfigPtr->McuGtmConfigPtr->GtmAtomCfg[AtomModuleIndex]
-                   .AtomAgcIntTrigRstCn0 ^ MCU_GTM_ATOM_RSTCN0_INITCHK_MSK) 
-                  & MCU_GTM_ATOM_RSTCN0_INITCHK_READ_MSK);
+      SfrVal    = AtomAgcRegPtr->FUPD_CTRL.U;
+      ConfigVal = (Mcu_ConfigPtr->McuGtmConfigPtr->GtmAtomCfg[AtomModuleIndex]
+                   .AtomAgcIntTrigRstCn0 & MCU_GTM_ATOM_AGC_RST_CN0_MASK);
       CmpVal   &= ~(SfrVal ^ ConfigVal);
 
       SfrVal    = (AtomAgcRegPtr->ACT_TB.U & (~MCU_ATOM_ACT_TB_TRIG_MSK));
@@ -9151,7 +8810,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmAtomGlobalInitCheck(void)
 LOCAL_INLINE Std_ReturnType Mcu_lGtmTomGlobalInitCheck(void)
 {
   const Mcu_17_Gtm_TomTgc *TomTgcRegPtr;
-  uint32 CmpVal = 0xFFFFFFFFU;
+  volatile uint32 CmpVal = 0xFFFFFFFFU;
   uint32 SfrVal;
   uint32 ConfigVal;
   Std_ReturnType RetVal = E_NOT_OK;
@@ -9175,19 +8834,20 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmTomGlobalInitCheck(void)
        * it is getting cast into is a known type . */
       /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
        * by violating this MISRA rule. */
+      /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+       * modules. Since the Module values are
+       * validated by the user, no side effects are foreseen */
       TomTgcRegPtr   = GTM_TOM_TGC_POINTER(TomModuleIndex, 0x0U);
       GtmTomCfgIndex = (2U * TomModuleIndex);
 
-      SfrVal    = TomTgcRegPtr->TGC_INT_TRIG.U & MCU_GTM_TOM_TRIG_INITCHK_READ_MSK;
-      ConfigVal = ((Mcu_ConfigPtr->McuGtmConfigPtr->GtmTomCfg[GtmTomCfgIndex]
-                   .TomTgcIntTrigRstCn0 ^ MCU_GTM_TOM_TRIG_INITCHK_MSK) 
-           & MCU_GTM_TOM_TRIG_INITCHK_READ_MSK);
+      SfrVal    = TomTgcRegPtr->TGC_INT_TRIG.U;
+      ConfigVal = (Mcu_ConfigPtr->McuGtmConfigPtr->GtmTomCfg[GtmTomCfgIndex]
+                   .TomTgcIntTrigRstCn0 & MCU_GTM_TOM_TGC_INT_TRIG_MASK);
       CmpVal   &= ~(SfrVal ^ ConfigVal);
 
-      SfrVal    = TomTgcRegPtr->TGC_FUPD_CTRL.U & MCU_GTM_TOM_RSTCN0_INITCHK_READ_MSK;
-      ConfigVal = ((Mcu_ConfigPtr->McuGtmConfigPtr->GtmTomCfg[GtmTomCfgIndex]
-                   .TomTgcIntTrigRstCn0 ^ MCU_GTM_TOM_RSTCN0_INITCHK_MSK) 
-           & MCU_GTM_TOM_RSTCN0_INITCHK_READ_MSK);
+      SfrVal    = TomTgcRegPtr->TGC_FUPD_CTRL.U;
+      ConfigVal = (Mcu_ConfigPtr->McuGtmConfigPtr->GtmTomCfg[GtmTomCfgIndex]
+                   .TomTgcIntTrigRstCn0 & MCU_GTM_TOM_TGC_RST_CN0_MASK);
       CmpVal   &= ~(SfrVal ^ ConfigVal);
 
       SfrVal    = (TomTgcRegPtr->TGC_ACT_TB.U & (~MCU_TOM_ACT_TB_TRIG_MSK));
@@ -9200,19 +8860,20 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmTomGlobalInitCheck(void)
        * it is getting cast into is a known type . */
       /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
        * by violating this MISRA rule. */
+      /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+       * modules. Since the Module values are
+       * validated by the user, no side effects are foreseen */
       TomTgcRegPtr   = GTM_TOM_TGC_POINTER(TomModuleIndex, 0x1U);
       GtmTomCfgIndex = ((2U * TomModuleIndex) + 0x1U);
 
-      SfrVal    = TomTgcRegPtr->TGC_INT_TRIG.U & MCU_GTM_TOM_TRIG_INITCHK_READ_MSK;
-      ConfigVal = ((Mcu_ConfigPtr->McuGtmConfigPtr->GtmTomCfg[GtmTomCfgIndex]
-                   .TomTgcIntTrigRstCn0 ^ MCU_GTM_TOM_TRIG_INITCHK_MSK) 
-           & MCU_GTM_TOM_TRIG_INITCHK_READ_MSK);
+      SfrVal    = TomTgcRegPtr->TGC_INT_TRIG.U;
+      ConfigVal = (Mcu_ConfigPtr->McuGtmConfigPtr->GtmTomCfg[GtmTomCfgIndex]
+                   .TomTgcIntTrigRstCn0 & MCU_GTM_TOM_TGC_INT_TRIG_MASK);
       CmpVal   &= ~(SfrVal ^ ConfigVal);
 
-      SfrVal    = TomTgcRegPtr->TGC_FUPD_CTRL.U & MCU_GTM_TOM_RSTCN0_INITCHK_READ_MSK;
-      ConfigVal = ((Mcu_ConfigPtr->McuGtmConfigPtr->GtmTomCfg[GtmTomCfgIndex]
-                   .TomTgcIntTrigRstCn0 ^ MCU_GTM_TOM_RSTCN0_INITCHK_MSK) 
-           & MCU_GTM_TOM_RSTCN0_INITCHK_READ_MSK);
+      SfrVal    = TomTgcRegPtr->TGC_FUPD_CTRL.U;
+      ConfigVal = (Mcu_ConfigPtr->McuGtmConfigPtr->GtmTomCfg[GtmTomCfgIndex]
+                   .TomTgcIntTrigRstCn0 & MCU_GTM_TOM_TGC_RST_CN0_MASK);
       CmpVal   &= ~(SfrVal ^ ConfigVal);
 
       SfrVal    = (TomTgcRegPtr->TGC_ACT_TB.U & (~MCU_TOM_ACT_TB_TRIG_MSK));
@@ -9256,7 +8917,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmTriggerInitCheck(void)
 {
   uint32 SfrVal;
   uint32 ConfigVal;
-  uint32 CmpVal = 0xFFFFFFFFU;
+  volatile uint32 CmpVal = 0xFFFFFFFFU;
   Std_ReturnType RetVal = E_NOT_OK;
 
   SfrVal    = (uint32)GTM_ADCTRIG0OUT0.U;
@@ -9345,7 +9006,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmTriggerInitCheck(void)
 
 /*******************************************************************************
 **                                                                            **
-** Traceability    : [cover parentID={DEFD04E6-5C91-46ca-AEBA-FC422E8AE179}]  **
+** Traceability    : [cover parentID={06C0E41E-883C-4016-B386-6058CFAAF836}]  **
 **                                                                            **
 ** Syntax          : LOCAL_INLINE Std_ReturnType Mcu_lGtmToutSelInitCheck     **
 **                   (void)                                                   **
@@ -9370,10 +9031,10 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmToutSelInitCheck(void)
   uint8 ToutSelRegIndex;
   uint32 SfrVal;
   uint32 ConfigVal;
-  uint32 CmpVal = 0xFFFFFFFFU;
+  volatile uint32 CmpVal = 0xFFFFFFFFU;
   Std_ReturnType RetVal = E_NOT_OK;
 
-  /* [cover parentID=][/cover]*/
+  /* [cover parentID={1F42C7D0-5036-40cf-9D71-40D5BC36F454}][/cover]*/
   for (ToutSelRegIndex = MCU_STARTING_INDEX;
        ToutSelRegIndex < MCU_GTM_NO_OF_TOUTSEL_AVAILABLE; ToutSelRegIndex++)
   {
@@ -9383,54 +9044,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmToutSelInitCheck(void)
     CmpVal   &= ~(SfrVal ^ ConfigVal);
   }
 
-  /* [cover parentID={6B86B871-09D3-478c-86DF-8D7EED7A0859}][/cover]*/
-  if (CmpVal == 0xFFFFFFFFU)
-  {
-    RetVal = E_OK;
-  }
-
-  return RetVal;
-}
-
-/*******************************************************************************
-**                                                                            **
-** Traceability    : [cover parentID={B70AFE1A-59DD-4ce7-8DA0-C306B3C1A654}]  **
-**                                                                            **
-** Syntax          : LOCAL_INLINE Std_ReturnType Mcu_lGtmTimInselInitCheck    **
-**                   (void)                                                   **
-**                                                                            **
-** Description     : This function checks whether Port to GTM TIM             **
-**                   initialization is successful or not.                     **
-**                                                                            **
-** Sync/Async      : Synchronous                                              **
-**                                                                            **
-** Reentrancy      : Reentrant for other channels                             **
-**                                                                            **
-** Parameters (in) : None                                                     **
-**                                                                            **
-** Parameters (out): None                                                     **
-**                                                                            **
-** Return value    : E_OK     : Port to GTM TIM Initialization successful     **
-**                   E_NOT_OK : Port to GTM TIM Initialization failed         **
-**                                                                            **
-*******************************************************************************/
-LOCAL_INLINE Std_ReturnType Mcu_lGtmTimInselInitCheck(void)
-{
-  uint8 TimInSelRegIndex;
-  uint32 SfrVal;
-  uint32 ConfigVal;
-  uint32 CmpVal = 0xFFFFFFFFU;
-  Std_ReturnType RetVal = E_NOT_OK;
-
-  for (TimInSelRegIndex = MCU_STARTING_INDEX;
-       TimInSelRegIndex < MCU_GTM_NO_OF_TIM_AVAILABLE; TimInSelRegIndex++)
-  {
-    SfrVal = MODULE_GTM.TIMINSEL[TimInSelRegIndex].U;
-    ConfigVal = Mcu_ConfigPtr->McuGtmConfigPtr->GtmTimInSelCfg[TimInSelRegIndex];
-    CmpVal   &= ~(SfrVal ^ ConfigVal);
-  }
-
-  /* [cover parentID={D1EB08B5-881E-49e2-9396-13B4E66804BC}][/cover]*/
+  /* [cover parentID={17A6E92A-326C-468e-8FA3-C938FB127AB4}][/cover]*/
   if (CmpVal == 0xFFFFFFFFU)
   {
     RetVal = E_OK;
@@ -9443,7 +9057,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lGtmTimInselInitCheck(void)
 #if (MCU_INITCHECK_API == STD_ON)
 /*******************************************************************************
 **                                                                            **
-** Traceability    : [cover parentID={C4878123-A713-4867-A83A-A3BEB7CB5C73}]  **
+** Traceability    : [cover parentID={DE67D04E-A656-443a-8638-AC2DE994651F}]  **
 **                                                                            **
 ** Syntax          : LOCAL_INLINE Std_ReturnType Mcu_lLpmInitCheck            **
 **                   (void)                                                   **
@@ -9467,13 +9081,13 @@ LOCAL_INLINE Std_ReturnType Mcu_lLpmInitCheck(void)
 {
   uint32 SfrVal;
   uint32 ConfigVal;
-  uint32 CmpVal = 0xFFFFFFFFU;
+  volatile uint32 CmpVal = 0xFFFFFFFFU;
   Std_ReturnType RetVal = E_NOT_OK;
 
   /* If low-power standby configuration is available, validate
    * power management for low power mode standby settings.
    */
-  /* [cover parentID={6B1DBAD5-FDF5-4974-AC9B-6CC423337912}]
+  /* [cover parentID={A2F88291-94BD-42a9-BD8F-47AFB966C4B1}]
    * Is low power standby configuration available
    * [/cover] */
   if ((Mcu_ConfigPtr->McuLowPowerModeCfgPtr->MaxModeEvrcCtrl.McuMode &
@@ -9483,22 +9097,16 @@ LOCAL_INLINE Std_ReturnType Mcu_lLpmInitCheck(void)
     ConfigVal = (Mcu_ConfigPtr->McuLowPowerModeCfgPtr->Pmswcr0);
     CmpVal   &= ~(SfrVal ^ ConfigVal);
 
-    SfrVal    = PMS_PMSWCR5.U & MCU_PMSWCR5_INITCHECK_MASK;
+    SfrVal    = PMS_PMSWCR4.U;
+    ConfigVal = (Mcu_ConfigPtr->McuLowPowerModeCfgPtr->Pmswcr4);
+    CmpVal   &= ~(SfrVal ^ ConfigVal);
+
+    SfrVal    = PMS_PMSWCR5.U;
     ConfigVal = ((Mcu_ConfigPtr->McuLowPowerModeCfgPtr->Pmswcr5) &
-                  MCU_PMSWCR5_INITCHECK_MASK);
-    CmpVal   &= ~(SfrVal ^ ConfigVal);
-
-    SfrVal    = PMS_EVRUVMON.U & MCU_PMS_EVRUVMON_MASK;
-    ConfigVal = ((Mcu_ConfigPtr->McuLowPowerModeCfgPtr->Evruvmon) &
-                  MCU_PMS_EVRUVMON_MASK);
-    CmpVal   &= ~(SfrVal ^ ConfigVal);
-
-    SfrVal    = PMS_EVRMONCTRL.U & MCU_PMS_EVRMONCTRL_MASK;
-    ConfigVal = ((Mcu_ConfigPtr->McuLowPowerModeCfgPtr->EvrmonCtrl) &
-                  MCU_PMS_EVRMONCTRL_MASK);
+                 MCU_PMSWCR5_MASK);
     CmpVal   &= ~(SfrVal ^ ConfigVal);
   }
-  /* [cover parentID={876C5BFA-4EB2-4702-BCC2-9FBFF85A43C0}]
+  /* [cover parentID={41B8395B-6DF1-4be0-913E-0C465D184571}]
    * Is EVRC sleep mode configuration available
    * [/cover] */
   if ((((uint32)Mcu_ConfigPtr->McuLowPowerModeCfgPtr->MaxModeEvrcCtrl.McuMode) &
@@ -9510,7 +9118,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lLpmInitCheck(void)
     CmpVal    &= ~(SfrVal ^ ConfigVal);
   }
 
-  /*[cover parentID={CB921A68-DD52-4e6b-BC74-0C6EE39AC9D3}][/cover]*/
+  /*[cover parentID={A07B8056-B121-403a-A315-9B3401A908D0}][/cover]*/
   if (CmpVal == 0xFFFFFFFFU)
   {
     RetVal = E_OK;
@@ -9635,12 +9243,12 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitCcuCon12(void)
 {
   Std_ReturnType RetValue = E_OK;
   uint32 TimeoutCtr;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-   defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+   access. Variable of SFR type defined for writing into register.
    No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_CCUCON1 Ccucon1Val;
-  /* MISRA2012_RULE_19_2_JUSTIFICATION: RAM variable of SFR union type
-   defined to modify certain bits and avoid 32-bit mask value.
+  /* MISRA2012_RULE_19_2_JUSTIFICATION: Union based type definition for SFR
+   access. Variable of SFR type defined for writing into register.
    No side effects foreseen by violating this MISRA rule.*/
   Ifx_SCU_CCUCON2 Ccucon2Val;
 
@@ -9660,11 +9268,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitCcuCon12(void)
   if (0x1U == SCU_CCUCON1.B.LCK)
   {
     /* [cover parentID={0463F5D1-08AA-427c-A680-CB9B8876721A}]
-     * If Production error Reporting is Enabled [/cover] */
+     * If DEM Reporting is Enabled [/cover] */
     #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /* [cover parentID={36B40D2E-E451-425e-8BAA-30D557ED4D47}]
-     * Report Production error: Event Failed [/cover] */
-    Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+     * Report DEM: Event Failed [/cover] */
+    Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                           DEM_EVENT_STATUS_FAILED);
     #endif
 
@@ -9674,8 +9282,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitCcuCon12(void)
   {
     #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /* [cover parentID={D6A46CB8-1955-4cd1-B6E7-50418C581C42}]
-     * Report Production error: Event Passed [/cover] */
-    Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+     * Report DEM: Event Passed [/cover] */
+    Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                           DEM_EVENT_STATUS_PASSED);
     #endif
 
@@ -9698,11 +9306,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitCcuCon12(void)
   if (0x1U == SCU_CCUCON2.B.LCK)
   {
     /* [cover parentID={16741F0F-91BF-4f10-A25F-755C0653468E}]
-     * If Production error Reporting is Enabled [/cover] */
+     * If DEM Reporting is Enabled [/cover] */
     #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /* [cover parentID={673EA2CC-4776-44bb-9854-811CE578383A}]
-     * Report Production error: Event Failed [/cover] */
-    Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+     * Report DEM: Event Failed [/cover] */
+    Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                           DEM_EVENT_STATUS_FAILED);
     #endif
 
@@ -9712,8 +9320,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitCcuCon12(void)
   {
     #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /* [cover parentID={2ED3C3F6-A33A-4a2f-A4D7-1B7F68B0881E}]
-     * Report Production error: Event Passed [/cover] */
-    Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+     * Report DEM: Event Passed [/cover] */
+    Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                           DEM_EVENT_STATUS_PASSED);
     #endif
 
@@ -9736,11 +9344,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitCcuCon12(void)
   if (0x1U == SCU_CCUCON1.B.LCK)
   {
     /* [cover parentID={B08F2EA3-4E43-4bdb-99FA-02206284067D}]
-     * If Production error Reporting is Enabled [/cover] */
+     * If DEM Reporting is Enabled [/cover] */
     #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /* [cover parentID={24B8BA0C-D7BB-4dc1-B331-E8630880A3F7}]
-     * Report Production error: Event Failed [/cover] */
-    Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+     * Report DEM: Event Failed [/cover] */
+    Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                           DEM_EVENT_STATUS_FAILED);
     #endif
 
@@ -9750,8 +9358,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitCcuCon12(void)
   {
     #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /* [cover parentID={33F32075-7901-433d-A89C-BA45BC502545}]
-     * Report Production error: Event Passed [/cover] */
-    Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+     * Report DEM: Event Passed [/cover] */
+    Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                           DEM_EVENT_STATUS_PASSED);
     #endif
 
@@ -9775,11 +9383,11 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitCcuCon12(void)
   if (0x1U == SCU_CCUCON2.B.LCK)
   {
     /* [cover parentID={85C83FC6-1B31-4922-92C2-8C99CB03474A}]
-     * If Production error Reporting is Enabled [/cover] */
+     * If DEM Reporting is Enabled [/cover] */
     #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /* [cover parentID={FF53C723-7862-48b9-9F4E-8F313E89FC16}]
-     * Report Production error: Event Failed [/cover] */
-    Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+     * Report DEM: Event Failed [/cover] */
+    Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                           DEM_EVENT_STATUS_FAILED);
     #endif
 
@@ -9789,8 +9397,8 @@ LOCAL_INLINE Std_ReturnType Mcu_lInitCcuCon12(void)
   {
     #if (MCU_E_CCUCON_UPDATE_ERR_DEM_REPORT == MCU_ENABLE_DEM_REPORT)
     /* [cover parentID={B1306855-C355-49d3-9CD5-15406101B513}]
-     * Report Production error: Event Failed [/cover] */
-    Mcu_lReportDemError(MCU_E_CCUCON_UPDATE_ERR,
+     * Report DEM: Event Failed [/cover] */
+    Dem_ReportErrorStatus(MCU_E_CCUCON_UPDATE_ERR,
                           DEM_EVENT_STATUS_PASSED);
     #endif
 
@@ -9886,43 +9494,7 @@ LOCAL_INLINE Std_ReturnType Mcu_lEnableClockControl(void)
 
   return ClcError;
 }
-#if (MCU_E_ERR_DEM_REPORTING == STD_ON)
-/*******************************************************************************
-**                                                                            **
-** Traceability    :  [cover parentID={F5BD6EA8-8DEF-4683-BDE3-E798D87FD814}] **
-**                                                                            **
-** Syntax          : static void Mcu_lReportDemError                          **
-**                       (const Dem_EventIdType EventId,                      **
-**                        const Dem_EventStatusType ErrorId)                  **
-**                                                                            **
-** Description     :  This function calls the appropriate Production error    **
-**                    handlers.                                               **
-**                                                                            **
-** Sync/Async      :  Synchronous                                             **
-**                                                                            **
-** Reentrancy      :  Reentrant                                               **
-**                                                                            **
-** Parameters (in) :  Dem_EventIdType   - DEM Event ID.                       **
-**                    Dem_EventStatusType - DEM status ID.                    **
-**                                                                            **
-** Parameters (out):  None                                                    **
-**                                                                            **
-** Return value    :  None                                                    **
-**                                                                            **
-*******************************************************************************/
-static void Mcu_lReportDemError
-(
-const Dem_EventIdType EventId,
-const Dem_EventStatusType EventStatus
-)
-{
-  #if (MCAL_AR_VERSION == MCAL_AR_440)
-    (void)Mcal_Wrapper_Dem_SetEventStatus(EventId, EventStatus);
-  #else
-    Mcal_Wrapper_Dem_ReportErrorStatus(EventId, EventStatus);
-  #endif
-}
-#endif /*End of MCU_ENABLE_DEM_REPORT */
+
 #define MCU_STOP_SEC_CODE_ASIL_B_GLOBAL
 /* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
    without safeguard. It complies to Autosar guidelines. */

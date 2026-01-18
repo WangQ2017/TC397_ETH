@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2021)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : Port.c                                                     **
 **                                                                            **
-**  VERSION      : 34.0.0                                                     **
+**  VERSION      : 1.40.1_28.0.0                                              **
 **                                                                            **
-**  DATE         : 2021-09-21                                                 **
+**  DATE         : 2020-02-12                                                 **
 **                                                                            **
 **  VARIANT      : Variant PB                                                 **
 **                                                                            **
@@ -26,8 +26,7 @@
 **                                                                            **
 **  DESCRIPTION  : Port Driver source file                                    **
 **                                                                            **
-**  SPECIFICATION(S) : Specification of Port Driver, AUTOSAR Release 4.2.2 and**
-**                       AUTOSAR 4.4.0                                        **
+**  SPECIFICATION(S) : Specification of Port Driver, AUTOSAR Release 4.2.2    **
 **                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
@@ -35,9 +34,9 @@
 /*******************************************************************************
 **                      Include Section                                       **
 *******************************************************************************/
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}][/cover] */
 /* [cover parentID={E856B263-08D5-4c7b-A28C-B8E999A614B1},
 {AD0B28C9-D316-40a1-ABA7-4CDC9BCABA97}] [/cover] */
+
 
 /* Inclusion of Port Register structure header file */
 #include "IfxPort_reg.h"
@@ -50,7 +49,6 @@
 /* Own header file, this includes own configuration file also */
 #include "Port.h"
 
-#include "IfxPort_bf.h"
 /* Conditional Inclusion of Developement Error Tracer File */
 #if (PORT_DEV_ERROR_DETECT == STD_ON)
 #include "Det.h"
@@ -122,14 +120,14 @@
 #endif
 
 /* Check for Correct inclusion of headers */
-#if ( PORT_SW_MAJOR_VERSION != 20U )
+#if ( PORT_SW_MAJOR_VERSION != 10U )
 #error "PORT_SW_MAJOR_VERSION does not match. "
 #endif
-#if ( PORT_SW_MINOR_VERSION != 10U )
+#if ( PORT_SW_MINOR_VERSION != 40U )
 #error "PORT_SW_MINOR_VERSION does not match. "
 #endif
 
-#if(PORT_SW_PATCH_VERSION!= 0U)
+#if(PORT_SW_PATCH_VERSION!= 1U)
 #error "PORT_SW_PATCH_VERSION does not match."
 #endif
 
@@ -137,24 +135,8 @@
 #error "PORT_AR_RELEASE_MAJOR_VERSION is not defined."
 #endif
 
-#ifndef PORT_AR_RELEASE_MINOR_VERSION
-#error "PORT_AR_RELEASE_MINOR_VERSION is not defined. "
-#endif
-
-#ifndef PORT_AR_RELEASE_REVISION_VERSION
-#error "PORT_AR_RELEASE_REVISION_VERSION is not defined. "
-#endif
-
-#if (PORT_AR_RELEASE_MAJOR_VERSION != MCAL_AR_RELEASE_MAJOR_VERSION )
+#if ( PORT_AR_RELEASE_MAJOR_VERSION != 4U)
 #error "PORT_AR_RELEASE_MAJOR_VERSION does not match."
-#endif
-
-#if (PORT_AR_RELEASE_MINOR_VERSION != MCAL_AR_RELEASE_MINOR_VERSION )
-#error "PORT_AR_RELEASE_MINOR_VERSION does not match. "
-#endif
-
-#if ( PORT_AR_RELEASE_REVISION_VERSION != MCAL_AR_RELEASE_REVISION_VERSION )
-#error "PORT_AR_RELEASE_REVISION_VERSION does not match. "
 #endif
 
 /* [cover parentID={7D755BBC-2E98-4aaf-B2E7-86E896E303B2} ] [/cover] */
@@ -184,6 +166,14 @@
 /* Initial level data offset */
  #define PORT_DATA_OFS_LEVEL    (0x4U)
 
+/* If pin mode changeable is enabled */
+#if (PORT_SET_PIN_MODE_API == STD_ON)
+/* Pin mode changeable or not offset */
+#define PORT_DATA_OFS_MODE     (0x7U)
+
+#define PORT_OUT_PIN_MASK      (0xC0U)
+
+#endif /* (PORT_SET_PIN_MODE_API) */
 
 /* If Direction changeable is enabled */
 #if (PORT_SET_PIN_DIRECTION_API == STD_ON)
@@ -204,11 +194,9 @@
 #endif /* (PORT_SET_PIN_DIRECTION_API) */
 
 
-#if (PORT_SET_PIN_DIRECTION_API == STD_ON)
+#if((PORT_SET_PIN_DIRECTION_API == STD_ON) || (PORT_SET_PIN_MODE_API == STD_ON))
 /* Mask to get direction info from Pin control value */
 #define PORT_DIR_MSK           (0x80U)
-/* Pin shift position */
-#define PIN_SHIFT             (0x1U)
 #endif
 
 /* IOCR0 register offset in Ifx_P */
@@ -227,9 +215,7 @@
 
 
 /* Status to indicate that PORT is initialized */
-/* MISRA2012_RULE_2_5_JUSTIFICATION: This macro is referenced only when certain
-precompile configuration switch is enabled */
-#define PORT_INITIALIZED       ((uint8)1)
+#define PORT_INITIALIZED  ((uint8)1)
 
 
 /* Before Setting the Iocr register, To Check the Port number below
@@ -259,19 +245,20 @@ precompile configuration switch is enabled */
 #define PORT_NUMBER_32         (0x20U)
 #define PORT_NUMBER_31         (0x1FU)
 #define PORT_CONSTANT_0x01     (0x01U)
-
-#if (PORT_SET_PIN_DIRECTION_API == STD_ON)
-#define PORT_POPCNT_CALC         (31U)
-#define PORT_POPCNT_CALC_32_63   (PORT_POPCNT_CALC + PORT_NUMBER_32)
-#endif
-
 #if((PORT_SET_PIN_DIRECTION_API == STD_ON) || (PORT_SET_PIN_MODE_API == STD_ON))
 #define PORT_PIN_DIV           0x4
 #define PORT_PIN_IOCR_LEN      0x8
 #define PORT_PIN_MUL           0x8
 #endif
 
+#if (PORT_SET_PIN_MODE_API == STD_ON)
+#if (PORT_DEV_ERROR_DETECT == STD_ON)||(PORT_SAFETY_ENABLE == STD_ON)
 
+/* Available Inverted Port Mask */
+#define AVAILABLE_MODE_MASK    ((Port_PinModeType)(0xC7U))
+
+#endif /*(PORT_SET_PIN_MODE_API==STD_ON) */
+#endif
 /* (PORT_DEV_ERROR_DETECT == STD_ON)*/
 
 /* Maximum port pin number */
@@ -281,8 +268,19 @@ precompile configuration switch is enabled */
 /*PortLPCR available */
 #define PORT_LPCR_AVAILABLE 0xFFFFU
 
+
 /*PortPin available */
 #define PIN_AVAILABLE 16
+#endif
+
+/* Shift for IOCR*/
+#if (PORT_SET_PIN_MODE_API == STD_ON)
+#define  IOCR_VALUE (0x4U)
+#endif
+
+/* Pin shift position */
+#if (PORT_SET_PIN_DIRECTION_API == STD_ON)
+#define  PIN_SHIFT (0x1U)
 #endif
 
 /*mask for Errata*/
@@ -295,36 +293,7 @@ precompile configuration switch is enabled */
 
 /* mask for LCK bit in PCSR*/
 #if(PORT_INIT_CHECK_API==STD_ON)
-#define PORT_31_PCSR_MASK                (0x7FFFFFFFU)
-#endif
-
-/* used in SetPinMode API */
-#if (PORT_SET_PIN_MODE_API == STD_ON)
-/* Pin mode changeable or not offset */
-#define PORT_DATA_OFS_MODE                 (0x7U)
-/* Shift for IOCR */
-#define IOCR_VALUE                         (0x4U)
-#define MAX_ELEC_CHAR                      (0x08U)
-#define PORT_PIN_GET_DIRECTION             (0x80U)
-#define PORT_GET_ALT_VALUE_SET             (0x38U)
-#define PORT_ALT_MODE_MASK                 (0xC0U)
-#define IOCR_ELEC_CHAR_MASK                ((uint8)0x07U)
-#define PIN_NOINPUTPULL                    ((uint8)0x00U)
-#define PIN_PULLDOWN                       ((uint8)0x08U)
-#define PIN_PULLUP                         ((uint8)0x10U)
-#define PIN_OPENDRAIN                      ((uint8)0x40U)
-#if (PORT_DEV_ERROR_DETECT == STD_ON)
-#define PIN_CHARACTERISTIC_RANGE           ((uint8)0x05U)
-#define PIN_MODE_RANGE                     ((uint8)0x07U)
-#endif /* (PORT_DEV_ERROR_DETECT == STD_ON)*/
-#if (PORT_SAFETY_ENABLE == STD_ON)
-#define PIN_MODE_OUT_RANGE                 ((uint8)0x04U)
-#endif /* (PORT_SAFETY_ENABLE == STD_ON) */
-#if (PORT_DEV_ERROR_DETECT == STD_ON)||(PORT_SAFETY_ENABLE == STD_ON)
-#define IOCR_ALT_MODE_MASK                 ((uint8)0xF8U)
-#define IOCR_ALT_MODE_POS                  ((uint8)0x03U)
-#define PORT_OUT_PIN_MASK                  ((uint8)0x80U)
-#endif /* (PORT_DEV_ERROR_DETECT == STD_ON)||(PORT_SAFETY_ENABLE == STD_ON) */
+#define PORT_31_PCSR_MASK     (0x7FFFFFFFU)
 #endif
 /*******************************************************************************
 **                   Function like macro definitions                          **
@@ -442,7 +411,7 @@ Port_Memmap.h header is included without safegaurd.*/
 Autosar  guidelines. */
 #include "Port_MemMap.h"
 
-#if ((PORT_DEV_ERROR_DETECT == STD_ON )||(PORT_SAFETY_ENABLE == STD_ON) ||(PORT_INIT_CHECK_API==STD_ON))
+
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
 /* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
@@ -459,7 +428,9 @@ Autosar guidelines. */
 #include "Port_MemMap.h"
 /* Init Status Variable. It has to be initialized to "0U" after every reset as 0
   represents the deinitialized state */
+#if ((PORT_DEV_ERROR_DETECT == STD_ON )||(PORT_SAFETY_ENABLE == STD_ON) ||(PORT_INIT_CHECK_API==STD_ON))  
 static uint8 Port_InitStatus;
+#endif
 /* Stop 8 bit variable section */
 /* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
@@ -475,7 +446,7 @@ Port_Memmap.h header is included without safegaurd.*/
 /* MISRA2012_RULE_20_1_JUSTIFICATION: Port_Memmap.h header included as per
 Autosar guidelines. */
 #include "Port_MemMap.h"
-#endif
+
 
 /*[cover parentID={4579FE20-92DA-4848-93DB-7AD4FD35DD50}] [/cover]*/
 #define PORT_START_SEC_CODE_ASIL_B_GLOBAL
@@ -545,7 +516,7 @@ LOCAL_INLINE uint8 Port_lChkPin
   Port_PinType Pin, uint32 PortNo, uint32 PinNo
 );
 #endif /* (PORT_DEV_ERROR_DETECT == STD_ON)*/
-#endif
+#endif /* (PORT_SET_PIN_DIRECTION_API == STD_ON) || (PORT_SET_PIN_MODE_API == STD_ON)*/
 
 #if (PORT_SET_PIN_MODE_API == STD_ON)
 #if (PORT_DEV_ERROR_DETECT == STD_ON)||(PORT_SAFETY_ENABLE == STD_ON)
@@ -554,8 +525,7 @@ LOCAL_INLINE uint8 Port_lChkPin
   in the Port_SetPinMode Api  */
 LOCAL_INLINE uint32 Port_lModeErrChk
 (
-  const uint8 Dir, const uint8 PinMode, const uint8 PinCharacteristic,
-  const uint32 ConfigIndex, const uint32 PinNumber
+  uint8 Dir, Port_PinModeType Mode, uint32 ConfigIndex, uint32 PinNumber
 );
 #endif
 /* (PORT_DEV_ERROR_DETECT == STD_ON)*/
@@ -660,7 +630,7 @@ LOCAL_INLINE uint8 Port_lCheckInitStatus (const uint8 ApiId);
 **                                                                            **
 ** Sync/Async:  Synchronous                                                   **
 **                                                                            **
-** Reentrancy:  Non Reentrant                                                 **
+** Reentrancy:  Non Reentrant                                                  **
 **                                                                            **
 ** Parameters (in) :  ConfigPtr - Pointer to Port configuration               **
 **                                                                            **
@@ -669,8 +639,7 @@ LOCAL_INLINE uint8 Port_lCheckInitStatus (const uint8 ApiId);
 ** Return value    :  None                                                    **
 **                                                                            **
 *******************************************************************************/
-/* [cover parentID={B728EB0E-7DF1-43a6-BA99-26E5E5AB2820}
-  ,{FF638487-3C81-4b25-BB75-F23CC17B1D51}][/cover] */
+/* [cover parentID={B728EB0E-7DF1-43a6-BA99-26E5E5AB2820}][/cover] */
 
 void Port_Init ( const Port_ConfigType * const ConfigPtr )
 {
@@ -683,14 +652,14 @@ void Port_Init ( const Port_ConfigType * const ConfigPtr )
   [/cover] */
 
   #if (PORT_DEV_ERROR_DETECT == STD_ON )||(PORT_SAFETY_ENABLE == STD_ON)
-  /* [cover parentID={AA59C056-39D2-446e-A53A-78319518692C}]
+  /* [cover parentID={C28ED7B4-5DAE-4726-83F7-334BABF41846}]
   Check if the input parameter is NULL pointer
   [/cover] */
 
   if (ConfigPtr == NULL_PTR)
   {
     /* Report PORT_E_INIT_FAILED DET */
-    /* [cover parentID={BB2CFE1F-730A-4d1f-93E3-A6D90B294464}]
+    /* [cover parentID={24BA64CA-5C45-4e1d-82B5-7EFC96F508A0}]
     Report error PORT_E_INIT_FAILED
     [/cover] */
     Port_lReportError(PORT_SID_INIT, PORT_E_INIT_FAILED);
@@ -721,7 +690,8 @@ void Port_Init ( const Port_ConfigType * const ConfigPtr )
     /* [cover parentID={6554EAD4-0747-405a-B40D-904D5321D11A}]
      Set Driver state as Intialized
     [/cover] */
-
+    /* [cover parentID={B8F76FC7-65E7-48f9-9685-C5A52A55F517}]
+    [/cover] */
     #if ((PORT_DEV_ERROR_DETECT == STD_ON )||(PORT_SAFETY_ENABLE == STD_ON) || (PORT_INIT_CHECK_API == STD_ON))
     Port_InitStatus = PORT_INITIALIZED;
     #endif
@@ -774,12 +744,13 @@ void Port_SetPinDirection(
   /* Each Port Number for the hardware unit  */
   uint32               PortNumber;
   uint32               PinNumber;
-  uint32               PopcntTempVal;
+
 
   #if (PORT_DEV_ERROR_DETECT == STD_ON)||(PORT_SAFETY_ENABLE == STD_ON)
   uint8                ErrReport;
   #endif /*PORT_DEV_ERROR_DETECT == STD_ON*/
   uint32               ConfigIndex;
+  uint32               Index;
   const uint8         *IocrDataPtr;
   volatile uint32      *IocrRegPtr;
   const uint32        *DataPtr;
@@ -832,48 +803,44 @@ void Port_SetPinDirection(
     }
     /* [cover parentID={069D6832-BF8C-4a96-8CB8-55B552F337DB}]
     Is the Pin passed valid
-    [/cover] */
+    [/cover] */   
     if(ErrStatus == (uint8)E_OK)
     #endif /* (PORT_DEV_ERROR_DETECT == STD_ON) || (PORT_SAFETY_ENABLE == STD_ON) */
     {
       #if (PORT_SAFETY_ENABLE == STD_ON)
-      ErrStatus = Port_lDirectionChk(Direction);
-       /* [cover parentID={260E26AE-2773-4b64-8FF1-C68FC88A2FD0}]
+       {       
+        ErrStatus = Port_lDirectionChk(Direction);
+       }
+       /* [cover parentID={DDBAC7F2-1DD2-4e24-A187-4D630B0500CF}]
        Have all check passed
        [/cover] */
       if(ErrStatus == (uint8)E_OK)
       #endif /* PORT_SAFETY_ENABLE == STD_ON */
       {
         {
-        /* [cover parentID={F1F12241-F396-4abb-BF8B-59D21349B878}]
+        /* [cover parentID={31152497-8D82-4430-8747-4EB5E38812F5}]
+        Check for availble ports
+        [/cover] */
+        ConfigIndex = 0U;
+        /* [cover parentID={8C8E216C-509B-47ac-9A9E-8F3508B8904F}]
         check if port is available
         [/cover] */
-        if(PortNumber < PORT_NUMBER_32)
+        for(Index = 0U; Index < PortNumber; Index++)
         {
-         PopcntTempVal = PORTS_AVAILABLE_00_31 << (PORT_POPCNT_CALC - PortNumber);
-         ConfigIndex = POPCNT(PopcntTempVal) - 1U;
-        }
-        else
-        {
-         ConfigIndex = POPCNT(PORTS_AVAILABLE_00_31);
-         PopcntTempVal = (uint32)PORTS_AVAILABLE_32_63 <<(PORT_POPCNT_CALC_32_63 - PortNumber);
-         ConfigIndex += POPCNT(PopcntTempVal) - 1U;
+          /* [cover parentID={31613E83-6AD8-485c-9BAE-D37E83EB1086}]
+          check if port is available
+          [/cover] */
+          if(Port_lIsPortAvailable(Index) != (uint32)0U)
+          {
+            ConfigIndex++; /* to identify the Index of configuration*/
+          }
         }
 
         /* Get the config data location for specified Port */
-        /* MISRA2012_RULE_11_5_JUSTIFICATION: The PortConfigSetPtr is a pointer
-        to structure of type Port_n_ConfigType used to keep configuration data
-        for each port. The conversion to the required type (const uint32*) is
-        done as direct assignment to DataPtr, pointer of type const uint32 is
-        not possible. The conversion will produce a pointer that is correctly
-        aligned and hence no side effects foreseen by violating this
-        MISRA rule.*/
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-        is done as it can hold the address of any type, here a structure pointer
-        and then typecasted to the required (const uint32*) as direct assignment
-        to DataPtr, pointer of type const uint32 is not possible. The conversion
-        will produce a pointer that is correctly aligned and hence no side
-        effects foreseen by violating this MISRA rule.*/
+        /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration
+        data for each port */
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration
+        data for each port */
         /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
         configuration address calculation for each port and is within allowed
         range*/
@@ -920,19 +887,10 @@ void Port_SetPinDirection(
           [/cover] */
           PortAddressPtr = Port_lAdr(PortNumber);
           /* Get the IOCR0 register address of particular port */
-          /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR Access. The conversion to
-          the required type (volatile uint32*) is done as direct assignment to
-          IocrRegPtr, pointer of type volatile uint32 is not possible.
-          The conversion will produce a pointer that is correctly aligned
-          and hence no side effects foreseen by violating this
-          MISRA rule.*/
-          /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR Access. The conversion to
-          (volatile void*) is done as it can hold the address of any type, here
-          a structure pointer and then typecasted to the required
-          (volatile uint32*) as direct assignment to IocrRegPtr, pointer of
-          type volatile uint32 is not possible. The conversion will produce a
-          pointer that is correctly aligned and hence no side effects foreseen
-          by violating this MISRA rule.*/
+          /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate SFR address
+           for each port */
+          /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate SFR address
+           for each port */
           /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
                         SFR address calculation and is within allowed range.*/
           IocrRegPtr = ((volatile uint32*)(volatile void*)PortAddressPtr + \
@@ -962,10 +920,10 @@ void Port_SetPinDirection(
    }
   }
   /* MISRA2012_RULE_2_2_JUSTIFICATION:Value assigned to variable
-  IocrRegPtr is passed to Mcal_SetBitAtomic operation.*/
+         IocrRegPtr is passed to Mcal_SetBitAtomic operation*/
   /* MISRA2012_RULE_8_13_JUSTIFICATION: No side effects foreseen
-  by violating this MISRA rule, as the pointer IocrRegPtr is
-  acessed using assembly instruction.*/
+  by violating this MISRA rule, as the pointer GlbIndexStatusPtr is
+  accessed using assembly instruction. */
 } /* Port_SetPinDirection */
 #endif /* Direction changes allowed / Port_SetPinDirection API is ON */
 
@@ -1043,22 +1001,10 @@ void Port_RefreshPortDirection(void)
       {
         /* Pointer to the data for the port */
         DataPtr = (const uint32*)(const void*)
-                  /* MISRA2012_RULE_11_5_JUSTIFICATION: The PortConfigSetPtr
-                  is a pointer to structure of type Port_n_ConfigType used to
-                  keep configuration data for each port. The conversion to the
-                  required type (const uint32*) is done as direct assignment
-                  to DataPtr, pointer of type const uint32 is not possible. The
-                  conversion will produce a pointer that is correctly aligned
-                  and hence no side effects foreseen by violating this
-                  MISRA rule.*/
-                  /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to
-                  (const void*) is done as it can hold the address of any
-                  type, here a structure pointer and then typecasted to
-                  the required (const uint32*) as direct assignment to
-                  DataPtr, pointer of   type const uint32 is not possible.
-                  The conversion will produce a pointer that is correctly
-                  aligned and hence no side effects foreseen by violating
-                  this MISRA rule.*/
+                  /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access
+                  configuration data for each port */
+                  /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access
+                  configuration data for each port */
                   /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is
                   used due to configuration address calculation for each port
                   and is within allowed range.*/
@@ -1077,17 +1023,10 @@ void Port_RefreshPortDirection(void)
         #endif /* PORT_SET_PIN_DIRECTION_API == STD_ON*/
 
         /* Pointer to control data for the first pin */
-        /* MISRA2012_RULE_11_5_JUSTIFICATION: Each 32-bit wide IOCR register
-        controls four GPIO port lines. Thus DataPtr is converted to (const uint8*)
-        to get the configuration address of each port. The conversion will
-        produce a pointer that is correctly aligned and hence no side effects
-        foreseen by violating this MISRA rule.*/
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-        is done as it can hold the address of any type. Here DataPtr is
-        typecasted to the required (const uint8*) as direct assignment to
-        IocrDataPtr, pointer of type const uint8 is not possible. The conversion
-        will produce a pointer that is correctly aligned and hence no side
-        effects foreseen by violating this MISRA rule.*/
+        /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration
+        data for each port */
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration
+        data for each port */
         /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
          configuration address calculation for each port and is within allowed
          range.*/
@@ -1103,38 +1042,17 @@ void Port_RefreshPortDirection(void)
         /* Get the IOCR0 register address of particular port */
         IocrRegPtr = (volatile uint8 *)(volatile void*)
                      /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate
-                     SFR address for each port.  Each 32-bit wide IOCR register
-                     controls four GPIO port lines. Thus it is again converted
-                     to (volatile uint8 *) to get the SFR address of each port.
-                     The conversion will produce a pointer that is correctly
-                     aligned and hence no side effects foreseen by violating
-                     this MISRA rule.*/
+                     SFR address for each port */
                      /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate
-                     SFR address for each port. The conversion to (volatile void*)
-                     is done as it can hold the address of any type. Each
-                     32-bit wide IOCR register controls four GPIO port lines.
-                     Thus it is again converted to (volatile uint8 *) to get the
-                     SFR address of each port. The conversion will produce a
-                     pointer that is correctly aligned and hence no side
-                     effects foreseen by violating this MISRA rule.*/
-                     /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is
-                     used due to SFR address calculation and is within allowed
-                     range.*/
+                     SFR address for each port */
+                      /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is
+                      used due to SFR address calculation and is within allowed
+                      range.*/
                      ((volatile uint32 *)(volatile void*)PortAddressPtr + \
-                     /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate
-                     SFR address for each port.Here PortAddressPtr is typecasted
-                     to the required (volatile uint32 *) to get the base address
-                     of the SFR. The conversion will produce a pointer that is
-                     correctly aligned and hence no side effects foreseen by
-                     violating this MISRA rule.*/
-                     /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate
-                     SFR address for each port. The conversion to (volatile void*)
-                     is done as it can hold the address of any type. Here
-                     PortAddressPtr is typecasted to the required
-                     (volatile uint32 *) to get the base address of the SFR. The
-                     conversion will produce a pointer that is correctly
-                     aligned and hence no side effects foreseen by violating
-                     this MISRA rule.*/
+                      /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate
+                      SFR address for each port */
+                      /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate
+                      SFR address for each port */
                       /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
                       SFR address calculation and is within allowed range.*/
                       PORT_IOCR0_REG_OFFSET);
@@ -1231,8 +1149,7 @@ void Port_RefreshPortDirection(void)
 ** Return value    :  None                                                    **
 **                                                                            **
 *******************************************************************************/
-/* [cover parentID={DD6796CD-419A-4189-970F-EC176967EBD0},
-{E872D973-122B-4afa-8C53-EA61CA747541}]
+/* [cover parentID={DD6796CD-419A-4189-970F-EC176967EBD0}]
 Port_SetPinMode
 [/cover] */
 void Port_SetPinMode(const Port_PinType Pin, const Port_PinModeType Mode)
@@ -1244,11 +1161,6 @@ void Port_SetPinMode(const Port_PinType Pin, const Port_PinModeType Mode)
   uint32           ErrMode;
   uint8            ErrReport;
   uint8            Direction;
-
-  /*Mode_Mask used for getting the last three bits */
-  uint8 Mode_Mask =(Mode & IOCR_ALT_MODE_MASK);
-  /* PinMode used for the getting the characterstic passed by the user */
-  uint8 PinMode = (Mode_Mask >> IOCR_ALT_MODE_POS);
   #endif
   uint32           ConfigIndex;
   uint32           Index;
@@ -1257,9 +1169,7 @@ void Port_SetPinMode(const Port_PinType Pin, const Port_PinModeType Mode)
   uint8            ReadMode;
   uint8            SetMode;
   Ifx_P           *PortAddressPtr;
-  /* Array to store the iocr update value for various chracterstic */
-  /*PinCharacteristic used to get the values except the charcerstic values */
-  uint8 PinCharacteristic = Mode & (IOCR_ELEC_CHAR_MASK);
+
   /* [cover parentID={E88E8FD6-6EF8-4b35-8789-E25321923A81},
   {FE1BC003-5F92-447e-966C-3C31F1649F10}]
   Safety and DET Check ON
@@ -1336,19 +1246,10 @@ void Port_SetPinMode(const Port_PinType Pin, const Port_PinModeType Mode)
         }
       }
       /* Get the config data location for specified Port */
-      /* MISRA2012_RULE_11_5_JUSTIFICATION: The PortConfigSetPtr is a pointer
-        to structure of type Port_n_ConfigType used to keep configuration data
-        for each port. The conversion to the required type (const uint32*) is
-        done as direct assignment to DataPtr, pointer of type const uint32 is
-        not possible. The conversion will produce a pointer that is correctly
-        aligned and hence no side effects foreseen by violating this
-        MISRA rule.*/
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-        is done as it can hold the address of any type, here a structure pointer
-        and then typecasted to the required (const uint32*) as direct assignment
-        to DataPtr, pointer of type const uint32 is not possible. The conversion
-        will produce a pointer that is correctly aligned and hence no side
-        effects foreseen by violating this MISRA rule.*/
+      /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration data
+      for each port */
+      /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration data
+      for each port */
       /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
       configuration address calculation for each port and is within allowed range.*/
       DataPtr = (const uint32*)(const void*) \
@@ -1360,19 +1261,10 @@ void Port_SetPinMode(const Port_PinType Pin, const Port_PinModeType Mode)
       [/cover] */
       PortAddressPtr = Port_lAdr(PortNumber);
       /* Get the IOCR0 register address of particular port */
-      /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR Access. The conversion to
-          the required type (volatile uint32*) is done as direct assignment to
-          IocrRegPtr, pointer of type volatile uint32 is not possible.
-          The conversion will produce a pointer that is correctly aligned
-          and hence no side effects foreseen by violating this
-          MISRA rule.*/
-          /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR Access. The conversion to
-          (volatile void*) is done as it can hold the address of any type, here
-          a structure pointer and then typecasted to the required
-          (volatile uint32*) as direct assignment to IocrRegPtr, pointer of
-          type volatile uint32 is not possible. The conversion will produce a
-          pointer that is correctly aligned and hence no side effects foreseen
-          by violating this MISRA rule.*/
+      /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate SFR address
+      for each port */
+      /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate SFR address
+       for each port */
       /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
                     SFR address calculation and is within allowed range.*/
 
@@ -1410,33 +1302,32 @@ void Port_SetPinMode(const Port_PinType Pin, const Port_PinModeType Mode)
         #if (PORT_DEV_ERROR_DETECT == STD_ON)||(PORT_SAFETY_ENABLE == STD_ON)
         /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
         SFR data calculation for each pin and is within allowed range.*/
-        Direction = (*((volatile uint8*)(IocrRegPtr) + (PinNumber % IOCR_VALUE))) & PORT_OUT_PIN_MASK;
+        Direction = *((volatile uint8*)(IocrRegPtr) + (PinNumber % IOCR_VALUE));
+        ErrMode = Port_lModeErrChk(Direction, Mode, ConfigIndex, PinNumber);
+        if (ErrMode == (uint32)1U)
+        {
+          /* [cover parentID={6448ED38-EC9B-4411-A0B0-4628AE3D66C5}]
+          Report DET PORT_E_PARAM_INVALID_MODE
+          [/cover] */
+          /* Report PORT_E_PARAM_INVALID_MODE DET if pin mode is not valid */
+          Port_lReportError(PORT_SID_SETPINMODE, PORT_E_PARAM_INVALID_MODE);
 
-        ErrMode = Port_lModeErrChk(Direction, PinMode, PinCharacteristic, ConfigIndex, PinNumber);
-        /* [cover parentID={AAD027EA-86D2-4b3c-9ED5-074FC754F555}]
-        [/cover] */
-        if (ErrMode == E_OK)
+        }
+        else
         #endif
         {
-
           /*Read the IOCR register value for the Pin */
           /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
           SFR data calculation for each pin and is within allowed range.*/
           ReadMode = *((volatile uint8*)(IocrRegPtr) + (PinNumber % (IOCR_VALUE)));
-
-          uint8 PinAltMask = (Mode & PORT_GET_ALT_VALUE_SET);
-            /* Array to store the iocr update value for various chracterstic */
-          uint8 IOCR_VALUE_TABLE[MAX_ELEC_CHAR]={((ReadMode & PORT_ALT_MODE_MASK) | PinAltMask),PIN_NOINPUTPULL,PIN_PULLDOWN,PIN_PULLUP,
-          PinAltMask ,(PIN_OPENDRAIN|PinAltMask),0x00,0x00};
-
-          SetMode = (((ReadMode) & (PORT_PIN_GET_DIRECTION)) | (IOCR_VALUE_TABLE[PinCharacteristic]));
-
+          /* Get the IOCR register value for new Mode */
+          SetMode = ((ReadMode & (uint8)PORT_OUT_PIN_MASK) | (uint8)Mode);
           /* [cover parentID={92E68909-8F48-407d-BA48-267EFDF6E342}]
           Set the new mode in IOCR register
           [/cover] */
           /* Set the new mode in IOCR register */
           Mcal_SetBitAtomic(IocrRegPtr, (PinNumber % ((uint32)PORT_PIN_DIV)) \
-                            *(uint32)PORT_PIN_MUL, PORT_PIN_IOCR_LEN,SetMode);
+                            *(uint32)PORT_PIN_MUL, PORT_PIN_IOCR_LEN, SetMode);
         }
       }
 
@@ -1598,51 +1489,19 @@ LOCAL_INLINE void Port_lIOInit(void)
   ConfigIndex = 0U;
 
    #if (PORT_MAX_LPCR_REG !=0U)
-   /* MISRA2012_RULE_11_5_JUSTIFICATION: The Port_LVDSConfigTypePtr is a pointer
-    to structure of type Port_n_LVDSConfigType used to keep configuration data
-    for each port. The conversion to the required type (const uint32*) is
-    done as direct assignment to LVDSDataPtr, pointer of type const uint32 is
-    not possible. The conversion will produce a pointer that is correctly
-    aligned and hence no side effects foreseen by violating this
-    MISRA rule.*/
-    /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-    is done as it can hold the address of any type, here a structure pointer
-    and then typecasted to the required (const uint32*) as direct assignment
-    to LVDSDataPtr, pointer of type const uint32 is not possible. The conversion
-    will produce a pointer that is correctly aligned and hence no side
-    effects foreseen by violating this MISRA rule.*/
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration data */
+  /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration data */
   LVDSDataPtr = (const uint32*)(const void*) \
                 (Port_kConfigPtr->Port_LVDSConfigTypePtr);
   #endif
 
-    /* MISRA2012_RULE_11_5_JUSTIFICATION: The Port_PCSRConfigTypePtr is a pointer
-    to structure of type Port_PCSRConfigType used to keep configuration data
-    for each port. The conversion to the required type (const uint32*) is
-    done as direct assignment to PCSRDataPtr, pointer of type const uint32 is
-    not possible. The conversion will produce a pointer that is correctly
-    aligned and hence no side effects foreseen by violating this
-    MISRA rule.*/
-    /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-    is done as it can hold the address of any type, here a structure pointer
-    and then typecasted to the required (const uint32*) as direct assignment
-    to PCSRDataPtr, pointer of type const uint32 is not possible. The conversion
-    will produce a pointer that is correctly aligned and hence no side
-    effects foreseen by violating this MISRA rule.*/
+  /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration data */
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration data */
   PCSRDataPtr = (const uint32*)(const void*)\
                 (Port_kConfigPtr->Port_PCSRConfigTypePtr);
 
-    /* MISRA2012_RULE_11_5_JUSTIFICATION: The PDiscSet is a pointer used to keep
-    configuration data for each port. The conversion to the required type
-    (const uint32*) is done as direct assignment to PDISCDataPtr, pointer of
-    type const uint32 is not possible. The conversion will produce a pointer
-    that is correctly aligned and hence no side effects foreseen by violating
-    this MISRA rule.*/
-    /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-    is done as it can hold the address of any type and then typecasted to
-    the required (const uint32*) as direct assignment to PDISCDataPtr,
-    pointer of type const uint32 is not possible. The conversion
-    will produce a pointer that is correctly aligned and hence no side
-    effects foreseen by violating this MISRA rule.*/
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration data */
+  /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration data */
   PDISCDataPtr = (const uint32*)(const void*)(Port_kConfigPtr->PDiscSet);
   /* [cover parentID={D5D7B024-C6C2-42ce-B672-F4E7A96B355E}]
   Write P_OUT and IOCR registers for all Ports
@@ -1663,19 +1522,10 @@ LOCAL_INLINE void Port_lIOInit(void)
       ConfigDataPtr = (Port_kConfigPtr->PortConfigSetPtr) + ConfigIndex ;
 
       /* Address of each port configuration */
-      /* MISRA2012_RULE_11_5_JUSTIFICATION: The ConfigDataPtr is a pointer
-        to structure of type Port_n_ConfigType used to keep configuration data
-        for each port. The conversion to the required type (const uint32*) is
-        done as direct assignment to DataPtr, pointer of type const uint32 is
-        not possible. The conversion will produce a pointer that is correctly
-        aligned and hence no side effects foreseen by violating this
-        MISRA rule.*/
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-        is done as it can hold the address of any type, here a structure pointer
-        and then typecasted to the required (const uint32*) as direct assignment
-        to DataPtr, pointer of type const uint32 is not possible. The conversion
-        will produce a pointer that is correctly aligned and hence no side
-        effects foreseen by violating this MISRA rule.*/
+      /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration data
+      for each port */
+      /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration data
+      for each port */
       DataPtr = (const uint32 *)(const void*)(ConfigDataPtr);
       /* [cover parentID={539753A5-0E20-4ff6-8130-0AACC3226BC6}]
       Get Port address
@@ -1695,7 +1545,7 @@ LOCAL_INLINE void Port_lIOInit(void)
       Check For Read Only Port
       [/cover] */
       #if (PORTS_READONLY_AVAIL != 0U)
-
+      
       if(Port_lIsPortReadOnly(PortNumber) == (uint32)0U)
       #endif
       {
@@ -1704,7 +1554,7 @@ LOCAL_INLINE void Port_lIOInit(void)
         PortLevel = (*(DataPtr + PORT_DATA_OFS_LEVEL));
         PortAddressPtr->OUT.U = (uint32)PortLevel;
       }
-
+     
       /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
       configuration data calculation for each port and is within allowed range.*/
       /* [cover parentID={B16CEA6F-BCC5-43c7-B827-91A30008E176}]
@@ -1712,14 +1562,10 @@ LOCAL_INLINE void Port_lIOInit(void)
       [/cover] */
       EmerStopConf = (*(DataPtr + PORT_DATA_OFS_EMER));
       /* MISRA2012_RULE_11_3_JUSTIFICATION: Conversion between pointers of
-      different object types due to SFR access. The conversion to
-      the required type is done by typecasting with ( uint32*) and
-      will produce a pointer that is correctly aligned and hence no side
-      effects foreseen by violating this MISRA rule.*/
-      /* MISRA2012_RULE_11_8_JUSTIFICATION:The typecasting is performed to
-      update the SFR. This is a register name which is having a volatile
-      qualifier and by typecasting, the input argument for the API discards
-      volatile keyword. No side effects foreseen by violating this MISRA rule.*/
+      different object types due to SFR access. */
+      /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect the
+      const/volatile properties*/
+
       PORT_LIB_INIT_WRITEPERIPENDINITPROTREG((uint32*) & (PortAddressPtr->ESR.U), \
                                              EmerStopConf);
       /* [cover parentID={26C66A27-1BE3-4703-95D0-4882A6650331}]
@@ -1735,7 +1581,7 @@ LOCAL_INLINE void Port_lIOInit(void)
       [/cover] */
       if(Port_lIsPortIocrAvailable(PortNumber, (uint16)PORT_PIN_4_7) != (uint16)0U)
       {
-        /* [cover parentID={26C66A27-1BE3-4703-95D0-4882A6650331}]
+        /* [cover parentID={6E9FC89A-4FB8-4802-B770-B975959180BE}]
         Update the second  set of  IOCR bits
         [/cover] */
         PortAddressPtr->IOCR4.U  = *DataPtr;
@@ -1762,7 +1608,7 @@ LOCAL_INLINE void Port_lIOInit(void)
       /* [cover parentID={2A9011F1-4A12-4d0d-A327-5FD4C3C08996}]
       Check if Port supports LVDS
       [/cover] */
-
+     
       /* [cover parentID={32C4BED6-18CF-4f17-A87F-5579EC4D918B}]
       Check if Port supports LVDS
       [/cover] */
@@ -1770,18 +1616,9 @@ LOCAL_INLINE void Port_lIOInit(void)
       if(Port_lIsPortLVDSAvailable(PortNumber) != (uint32)0U)
       {
         /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate SFR address
-        for each port. The conversion to the required type (volatile uint32*)
-        is done as direct assignment to LVDSRegPtr, pointer of type
-        volatile uint32 is not possible. The conversion will produce a pointer
-        that is correctly aligned and hence no side effects foreseen
-        by violating this MISRA rule.*/
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR Access. The conversion to
-        (volatile void*) is done as it can hold the address of any type, here
-        a structure pointer and then typecasted to the required
-        (volatile uint32*) as direct assignment to LVDSRegPtr, pointer of
-        type volatile uint32 is not possible. The conversion will produce a
-        pointer that is correctly aligned and hence no side effects foreseen
-        by violating this MISRA rule.*/
+        for each port */
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate SFR address
+        for each port */
         /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
         SFR address calculation and is within allowed range.*/
         LVDSRegPtr  = ((volatile uint32*)(volatile void*)PortAddressPtr + \
@@ -1798,15 +1635,25 @@ LOCAL_INLINE void Port_lIOInit(void)
           [/cover] */
           if(Port_lIsPortPinPairAvailable(*LVDSDataPtr) == (uint32)0U)
           {
-            /* MISRA2012_RULE_11_3_JUSTIFICATION:  The typecasting is performed
-            to update the SFR address for each PORT. The conversion to (uint32*)
-            will produce a pointer that is correctly aligned and hence no side
-            effects foreseen by violating this MISRA rule.*/
-            /* MISRA2012_RULE_11_8_JUSTIFICATION: The typecasting is performed
-            to update the SFR address for each PORT. The register name is having
-            a volatile qualifier and by typecasting, the input argument for
-            the API discards volatile keyword. No side effects foreseen by
-            violating this MISRA rule.*/
+            /*Fix for errata PORTS_TC.H012 - */
+            #if(PORT14_PDISC_MASK == PORT_14_DISC_DISABLE)
+            Ifx_P_PDISC DiscReg;
+            if((PortNumber == PORT_NUM_14) && (counter == PORT_LPCR5_COUNTER))
+            {
+              if(1U == Mcal_GetBitAtomic(*LVDSDataPtr, 1, 1))
+              {
+                DiscReg.U = (P14_PDISC.U) & (~(uint32)(PORT14_PDISC_MASK));
+                PORT_LIB_INIT_WRITEPERIPENDINITPROTREG(&P14_PDISC, DiscReg.U);
+                P14_IOCR8.B.PC11 = PORT_IOCR_PULLUP_ENABLE;
+
+              }
+            }
+            #endif
+
+            /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate SFR
+            address for each port */
+            /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect
+            the const/volatile properties*/
             PORT_LIB_INIT_WRITEPERIPENDINITPROTREG((uint32*)LVDSRegPtr, \
                                                    *LVDSDataPtr);
           }
@@ -1827,18 +1674,9 @@ LOCAL_INLINE void Port_lIOInit(void)
       if(Port_lIsPortPCSRAvailable(PortNumber) != (uint32)0U)
       {
         /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate SFR address
-        for each port. The conversion to the required type (volatile uint32*)
-        is done as direct assignment to PCSRRegPtr, pointer of type
-        volatile uint32 is not possible. The conversion will produce a pointer
-        that is correctly aligned and hence no side effects foreseen
-        by violating this MISRA rule.*/
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR Access. The conversion to
-        (volatile void*) is done as it can hold the address of any type, here
-        a structure pointer and then typecasted to the required
-        (volatile uint32*) as direct assignment to PCSRRegPtr, pointer of
-        type volatile uint32 is not possible. The conversion will produce a
-        pointer that is correctly aligned and hence no side effects foreseen
-        by violating this MISRA rule.*/
+        for each port */
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate SFR address
+        for each port */
         /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is
            used due to SFR address calculation and is within allowe range.*/
         PCSRRegPtr = ((volatile uint32*)(volatile void*)PortAddressPtr +
@@ -1846,15 +1684,11 @@ LOCAL_INLINE void Port_lIOInit(void)
            used due to SFR address calculation and is within allowe range.*/
                      PORT_PCSR_REG_OFFSET);
         /* PCSRn */
-        /* MISRA2012_RULE_11_3_JUSTIFICATION:  The typecasting is performed
-        to update the SFR address for each PORT. The conversion to (uint32 *)
-        will produce a pointer that is correctly aligned and hence no side
-        effects foreseen by violating this MISRA rule.*/
-        /* MISRA2012_RULE_11_8_JUSTIFICATION: The typecasting is performed
-        to update the SFR address for each PORT. The register name is having
-        a volatile qualifier and by typecasting, the input argument for
-        the API discards volatile keyword. No side effects foreseen by
-        violating this MISRA rule.*/
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate SFR address
+        for each port */
+        /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect
+         the const/volatile properties*/
+
         PORT_LIB_INIT_WRITESAFETYENDINITPROTREG((uint32*)PCSRRegPtr, *PCSRDataPtr);
         PCSRDataPtr++;
       }
@@ -1864,18 +1698,9 @@ LOCAL_INLINE void Port_lIOInit(void)
       if(Port_lIsPortPDISCAvailable(PortNumber) != (uint32)0U)
       {
         /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate SFR address
-        for each port. The conversion to the required type (volatile uint32*)
-        is done as direct assignment to PDISCRegPtr, pointer of type
-        volatile uint32 is not possible. The conversion will produce a pointer
-        that is correctly aligned and hence no side effects foreseen
-        by violating this MISRA rule.*/
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR Access. The conversion to
-        (volatile void*) is done as it can hold the address of any type, here
-        a structure pointer and then typecasted to the required
-        (volatile uint32*) as direct assignment to PDISCRegPtr, pointer of
-        type volatile uint32 is not possible. The conversion will produce a
-        pointer that is correctly aligned and hence no side effects foreseen
-        by violating this MISRA rule.*/
+          for each port */
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate SFR address
+          for each port */
         /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
           SFR address calculation and is within allowed range.*/
         PDISCRegPtr = ((volatile uint32*)(volatile void*)PortAddressPtr +
@@ -1883,15 +1708,10 @@ LOCAL_INLINE void Port_lIOInit(void)
           SFR address calculation and is within allowed range.*/
                        PORT_PDISC_REG_OFFSET);
          /* PDISC */
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: The typecasting is performed
-        to update the SFR address for each PORT. The conversion to (uint32 *)
-        will produce a pointer that is correctly aligned and hence no side
-        effects foreseen by violating this MISRA rule.*/
-        /* MISRA2012_RULE_11_8_JUSTIFICATION: The typecasting is performed
-        to update the SFR address for each PORT. The register name is having
-        a volatile qualifier and by typecasting, the input argument for
-        the API discards volatile keyword. No side effects foreseen by
-        violating this MISRA rule.*/
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to calculate SFR address
+         for each port */
+        /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect
+           the const/volatile properties*/
         PORT_LIB_INIT_WRITEPERIPENDINITPROTREG((uint32 *)PDISCRegPtr, \
                                                *PDISCDataPtr );
         PDISCDataPtr++;
@@ -1899,11 +1719,6 @@ LOCAL_INLINE void Port_lIOInit(void)
       ConfigIndex++;
     }
   } /* For loop */
-  /*Fix for errata PORTS_TC.H012 - */
-  #if(PORT14_PDISC_MASK == PORT_14_DISC_DISABLE)
-  PORT_LIB_INIT_WRITEPERIPENDINITPROTREG(&P14_PDISC,0);
-  P14_IOCR8.B.PC11 = PORT_IOCR_PULLUP_ENABLE;
-  #endif
 }
 
 /*******************************************************************************
@@ -1958,14 +1773,10 @@ LOCAL_INLINE void Port_lPDRInit(void)
       Get port address
       [/cover] */
       PortAddressPtr = Port_lAdr(PortNumber);
-      /* MISRA2012_RULE_11_3_JUSTIFICATION: The typecasting is performed to
-      update the SFR. The conversion to (unit32*)will produce a pointer that
-      is correctly aligned and hence no side effects foreseen by violating
-      this MISRA rule.*/
-      /* MISRA2012_RULE_11_8_JUSTIFICATION:The typecasting is performed to
-      update the SFR. The register name which is having a volatile
-      qualifier and by typecasting, the input  argument for the API discards
-      volatile keyword. No side effects foreseen by violating this MISRA rule.*/
+      /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration
+       data  for each port */
+      /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect the
+      const/volatile properties*/
       /* [cover parentID={2D7A1D09-E3DA-407b-9096-883803226046}]
       Initialize Port PDR0 register with Driver Strength 0
       [/cover] */
@@ -1981,15 +1792,10 @@ LOCAL_INLINE void Port_lPDRInit(void)
       [/cover] */
       if(Port_lIsPortPdr1Available(PortNumber) != (uint16)0U)
       {
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: The typecasting is performed to
-        update the SFR. The conversion to (unit32*)will produce a pointer that
-        is correctly aligned and hence no side effects foreseen by violating
-        this MISRA rule.*/
-        /* MISRA2012_RULE_11_8_JUSTIFICATION: The typecasting is performed to
-        update the SFR. This is a register name which is having a volatile
-        qualifier and by typecasting, the input  argument for the API
-        discards volatile keyword. No side effects foreseen by violating
-        this MISRA rule.*/
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration
+         data for each port */
+        /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect the
+          const/volatile properties*/
         /* [cover parentID={39547610-8FF7-4f5d-8C8B-711E03CE320F}]
         Initialize Port PDR1 register with Driver Strength 1
         [/cover] */
@@ -2413,99 +2219,70 @@ DET is ON or Safety is ON
 ** Reentrancy:  Reentrant                                                     **
 **                                                                            **
 ** Parameters (in)  :   Dir - Current direction of a pin                      **
-**                      PinMode -mode to be set                               **
+**                      Mode - port pin mode to be set                        **
 **                      ConfigIndex - Array Index                             **
 **                      PinNumber - port pin number                           **
-**                      PinCharacteristic-Pin characteristic value passed     **
-**                      by the user                                           **
-**                                                                            **
 **                                                                            **
 ** Parameters (out) : none                                                    **
 **                                                                            **
-** Return value     : E_NOT_OK- No error in the pin mode                      **
-**                    ErrStatus -Error in the pin mode                        **     **                                                                            **
+** Return value     : 0 - No error in the pin mode                            **
+**                    1 - Error in the pin mode                               **
 **                                                                            **
 *******************************************************************************/
 LOCAL_INLINE uint32 Port_lModeErrChk
 (
-  const uint8 Dir, const uint8 PinMode, const uint8 PinCharacteristic,
-  const uint32 ConfigIndex,
+  const uint8 Dir, const Port_PinModeType Mode, const uint32 ConfigIndex,
   const uint32 PinNumber
 )
 {
-  uint32 ErrStatus = E_OK;
-   #if (PORT_DEV_ERROR_DETECT == STD_ON)
-   /* [cover parentID={8D90C76F-3D76-469d-9D9E-4DA2875CB942}]
-   [/cover] */
-   if((PinCharacteristic > PIN_CHARACTERISTIC_RANGE)  || (PinMode > PIN_MODE_RANGE))
-    {
-     Port_lReportError(PORT_SID_SETPINMODE, PORT_E_PARAM_INVALID_MODE);
-     ErrStatus=E_NOT_OK;
-    }
-    /* [cover parentID={CC8591DC-78F2-4555-B11B-14376A094192}]
-    [/cover] */
-    if(ErrStatus == E_OK)
-   #endif
-    {
-      /* [cover parentID={EF62A9D7-186E-462b-9779-FAED0609497F}]
-       [/cover] */
-      if(Dir == (uint8)PORT_PIN_OUT)
-       {
-          #if(PORT_SAFETY_ENABLE == STD_ON)
-           /* [cover parentID={0F90B3AC-7795-4c38-85CA-F44B1A664B4B}]
-          [/cover] */
-          if((PinCharacteristic < PIN_MODE_OUT_RANGE)&&(PinCharacteristic != (uint8)0U))
-           {
-            Mcal_ReportSafetyError(PORT_MODULE_ID, PORT_INSTANCE_ID,
-            PORT_SID_SETPINMODE, PORT_E_IMPLAUSIBLE_MODE);
-            ErrStatus=E_NOT_OK;
-           }
-           #if (PORT_DEV_ERROR_DETECT == STD_ON)
-           if(ErrStatus == E_OK)
-           #endif
-          #endif
-          {
-          #if (PORT_DEV_ERROR_DETECT == STD_ON)
-            uint32 Mode_supported;  /* mode is supported or not */
-            Mode_supported = ((uint32)PORT_CONSTANT_0x01) << PinMode;
-            /* [cover parentID={4256F8B1-8DEF-447c-AF81-918E0D822FF3}]
-             [/cover] */
-            if(((uint32)(Port_kConfigPtr-> \
-            PortPinHwSupportedModes[ConfigIndex].U[PinNumber]) &
-            Mode_supported ) == (uint32)0U
-              )
-            {
-             Port_lReportError(PORT_SID_SETPINMODE, PORT_E_PARAM_INVALID_MODE);
-             ErrStatus = E_NOT_OK;
+  uint32 ErrStatus;
 
-            }
-          #endif
-          UNUSED_PARAMETER(ConfigIndex);
-          UNUSED_PARAMETER(PinNumber);
-          }
-       }
-       #if(PORT_SAFETY_ENABLE == STD_ON)
-       else
-       {
-         /*[cover parentID={FEF26A84-8FE8-47b0-BAAA-15E697D809B5}]
-          [/cover] */
-         /* [cover parentID={5B151392-8D9B-4e0e-9CBD-B76D52362C5D}]
-          [/cover] */
-         /* [cover parentID={2E637D8C-1A28-485e-8659-AFB9729EF54B}]
-          [/cover] */
-        if(((PinCharacteristic > IOCR_ALT_MODE_POS)||
-              (PinCharacteristic == (uint8)0U)) || (PinMode !=  (uint8)0U))
-         {
-         Mcal_ReportSafetyError(PORT_MODULE_ID, PORT_INSTANCE_ID,
-         PORT_SID_SETPINMODE, PORT_E_IMPLAUSIBLE_MODE);
-         ErrStatus=E_NOT_OK;
-         }
-       }
-       #endif
+  ErrStatus = 0U;
+
+
+  /* [cover parentID={65841578-2C62-4e98-9B75-1D0A717AC55F}]
+  Is Pin Configured as Input
+  [/cover] */
+  /* parameter Pin is valid, check for the pin valid mode */
+  if ((Dir & (uint8)PORT_DIR_MSK) == (uint8)PORT_PIN_IN)
+  {
+    /* [cover parentID={32605480-8D08-4653-994C-3E5F79D26B08}]
+    Is mode set as GPIO
+    [/cover] */
+    if (Mode != (Port_PinModeType)PORT_PIN_MODE_GPIO)
+    {
+      ErrStatus = 1U;
     }
+  }
+  /* [cover parentID={65D53813-A790-48d2-981F-4ABFDA160F2F}]
+  Is mode available
+  [/cover] */
+  else if ( (Mode & AVAILABLE_MODE_MASK) != (uint8)0U)
+  {
+    ErrStatus = 1U;
+  }
+  else
+  {
+    uint32 Position;        /* Variables for determining if the specified*/
+    uint32 Mode_supported;  /* mode is supported or not */
+
+    Position = (uint32) Mode >> PORT_IOCR_PC_POS;
+    Mode_supported = ((uint32)PORT_CONSTANT_0x01) << Position;
+    /* [cover parentID={2ED65F0E-0C08-4fd6-8CF0-5731A2C25FD4}]
+    Is mode supported by hardware
+    [/cover] */
+    if(((uint32)(Port_kConfigPtr-> \
+                 PortPinHwSupportedModes[ConfigIndex].U[PinNumber]) &
+        Mode_supported ) == (uint32)0U
+      )
+    {
+      ErrStatus = 1U;
+    }
+  }
+
   return(ErrStatus);
 }
-#endif /*(PORT_DEV_ERROR_DETECT == STD_ON) || (PORT_SAFETY_ENABLE == STD_ON) */
+#endif /*(PORT_DEV_ERROR_DETECT == STD_ON)*/
 #endif /*(PORT_SET_PIN_MODE_API == STD_ON)*/
 
 #if((PORT_SET_PIN_DIRECTION_API == STD_ON) || (PORT_SET_PIN_MODE_API == STD_ON))
@@ -2664,7 +2441,7 @@ LOCAL_INLINE uint8 Port_lChkPin(const Port_PinType Pin, const uint32 PortNo,
       [/cover] */
      #if (PORTS_READONLY_AVAIL != 0U)
       if (PortReadOnly != (uint32)0U)
-
+     
       {
         RetVal = 1U;
       }
@@ -2767,7 +2544,7 @@ LOCAL_INLINE uint32 Port_lIsPortLVDSAvailable63(const uint32 Port)
 ** Description      : This INLINE function:                                   **
 **   - Checks if the port supports LVDS                                       **
 **                                                                            **
-** [/cover]                                                                   **
+** [/cover]                                                                    **
 ** Service ID:  NA                                                            **
 **                                                                            **
 ** Sync/Async:  Synchronous                                                   **
@@ -2978,7 +2755,7 @@ static void Port_lReportError(const uint8 ApiId, const uint8 ErrorId)
   /* [cover parentID={4DB52DC1-D227-424b-AC57-D58D53065A99}]
   Report Error
   [/cover] */
-  (void)Det_ReportError((uint16)PORT_MODULE_ID, PORT_INSTANCE_ID, \
+  Det_ReportError(PORT_MODULE_ID, PORT_INSTANCE_ID, \
                   ApiId, ErrorId);
   /* End of report to DET */
   #endif
@@ -2986,7 +2763,7 @@ static void Port_lReportError(const uint8 ApiId, const uint8 ErrorId)
   Is Safety Enable
   [/cover] */
   #if (PORT_SAFETY_ENABLE == STD_ON)
-  Mcal_ReportSafetyError((uint16)PORT_MODULE_ID, PORT_INSTANCE_ID, \
+  Mcal_ReportSafetyError(PORT_MODULE_ID, PORT_INSTANCE_ID, \
                          ApiId, ErrorId);
   /* End of report to Safety */
   #endif
@@ -3055,11 +2832,11 @@ LOCAL_INLINE uint32 Port_lIsPortPDISCAvailable(const uint32 Port)
 **                                                                            **
 ** Reentrancy:  Reentrant                                                     **
 **                                                                            **
-** Parameters (in) : Port - Port to be checked                                **
+** Parameters (in)  :  Port - Port to be checked                              **
 **                                                                            **
-** Parameters (out): None                                                     **
+** Parameters (out) : None                                                    **
 **                                                                            **
-** Return value    : RetValue -Value which denotes whether Port supports PDISC**
+** Return value     : RetValue -Value which denotes whether Port supports PDISC**
 **                                                                            **
 *******************************************************************************/
 
@@ -3130,30 +2907,29 @@ LOCAL_INLINE uint32 Port_lIsPortPDISCAvailable63(const uint32 Port)
 **                      parameters.                                           **
 **                                                                            **
 ** Description      : This API checks the initialization values after PORT is **
-**                    initialized. It should be called after Port_Init to     **
-**                    check the initialization values.                        **
+**                    initialized. It should be called after Port_Init to check**
+**                    the initialization values.                              **
 *******************************************************************************/
-/* [cover parentID={41FC0F28-97F4-4d16-8C00-6F654869397F}][/cover] */
 Std_ReturnType Port_InitCheck (const Port_ConfigType* const ConfigPtr)
 {
-  Std_ReturnType ErrorFlag = E_NOT_OK;
-  /* [cover parentID={3E9E6763-2D6B-4e4b-8565-E2D23E1FE9D0}]
-  check if port is initialised
-  [/cover] */
+  Std_ReturnType ErrorFlag = E_NOT_OK;   
+  /* [cover parentID={72AAF784-32E2-464e-9F93-204E82290CED}]
+  check if port is initialised 
+  [/cover] */  
   if((Port_InitStatus == PORT_INITIALIZED ) && (ConfigPtr ==Port_kConfigPtr))
   {
     ErrorFlag = Port_lPDRCheck(ConfigPtr);
-    /* [cover parentID={29FAFD9A-63A7-4cb3-9DB5-B2833B579E59}]
-    [/cover] */
+    /* [cover parentID={0159E6B0-849B-4905-821C-FE96C827FC89}]
+    [/cover] */     
     if(ErrorFlag == E_OK)
-    {
+    {   
      ErrorFlag = Port_lIOInitCheck(ConfigPtr);
     }
   }
  return ErrorFlag;
-}
+} 
 /*******************************************************************************
-** Traceability     : [cover parentID={6F886031-4EFD-4741-9C03-763AD16D28FF}] **
+** Traceability     : [cover parentID={6F886031-4EFD-4741-9C03-763AD16D28FF}] **                         
 **                                                                            **
 ** Syntax           :LOCAL_INLINE  Std_ReturnType Port_lPDRCheck              **
 **                   (                                                        **
@@ -3269,12 +3045,11 @@ LOCAL_INLINE Std_ReturnType Port_lPDRCheck(const Port_ConfigType* const ConfigPt
 **                                                                            **
 ** Description      : This API checks the initialization values after PORT is **
 **                   initialized. It should be called after Port_InitCheck to **
-**                    check the initialization values.                        **
+**                    check the initialization values.                         **
 *******************************************************************************/
 
 LOCAL_INLINE Std_ReturnType Port_lIOInitCheck(const Port_ConfigType* const ConfigPtr)
 {
-
   const Port_n_ConfigType *ConfigDataPtr;
   const uint32            *DataPtr;
   Std_ReturnType ErrorFlag = E_NOT_OK;
@@ -3286,6 +3061,8 @@ LOCAL_INLINE Std_ReturnType Port_lIOInitCheck(const Port_ConfigType* const Confi
   const uint32            *Ptr_Config;
   const uint32            *PCSRDataPtr;
   const uint32            *PDISCDataPtr;
+  volatile const uint32   *PCSRRegPtr;
+  volatile const uint32   *PDISCRegPtr;
   volatile uint32 CompareFlag = 0xFFFFFFFFU;
   /* Index to identify the port configuration information
   from the configuration array  */
@@ -3301,47 +3078,18 @@ LOCAL_INLINE Std_ReturnType Port_lIOInitCheck(const Port_ConfigType* const Confi
   ConfigIndex = 0U;
 
   #if (PORT_MAX_LPCR_REG !=0U)
-  /* MISRA2012_RULE_11_5_JUSTIFICATION: The Port_LVDSConfigTypePtr is a pointer
-    to structure of type Port_n_LVDSConfigType used to keep configuration data
-    for each port. The conversion to the required type (const uint32*) is
-    done as direct assignment to LVDSDataPtr, pointer of type const uint32 is
-    not possible. The conversion will produce a pointer that is correctly
-    aligned and hence no side effects foreseen by violating this
-    MISRA rule.*/
-    /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-    is done as it can hold the address of any type, here a structure pointer
-    and then typecasted to the required (const uint32*) as direct assignment
-    to LVDSDataPtr, pointer of type const uint32 is not possible. The conversion
-    will produce a pointer that is correctly aligned and hence no side
-    effects foreseen by violating this MISRA rule.*/
+  /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration data
+  for each port */
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration data */
   LVDSDataPtr = (const uint32*)(const void*)(ConfigPtr->Port_LVDSConfigTypePtr);
   #endif
- /* MISRA2012_RULE_11_5_JUSTIFICATION: The Port_PCSRConfigTypePtr is a pointer
-    to structure of type Port_PCSRConfigType used to keep configuration data
-    for each port. The conversion to the required type (const uint32*) is
-    done as direct assignment to PCSRDataPtr, pointer of type const uint32 is
-    not possible. The conversion will produce a pointer that is correctly
-    aligned and hence no side effects foreseen by violating this
-    MISRA rule.*/
-    /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-    is done as it can hold the address of any type, here a structure pointer
-    and then typecasted to the required (const uint32*) as direct assignment
-    to PCSRDataPtr, pointer of type const uint32 is not possible. The conversion
-    will produce a pointer that is correctly aligned and hence no side
-    effects foreseen by violating this MISRA rule.*/
+  /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration data
+  for each port */
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration data */
   PCSRDataPtr = (const uint32*)(const void*)  (ConfigPtr->Port_PCSRConfigTypePtr);
-  /* MISRA2012_RULE_11_5_JUSTIFICATION: The PDiscSet is a pointer used to keep
-    configuration data for each port. The conversion to the required type
-    (const uint32*) is done as direct assignment to PDISCDataPtr, pointer of
-    type const uint32 is not possible. The conversion will produce a pointer
-    that is correctly aligned and hence no side effects foreseen by violating
-    this MISRA rule.*/
-    /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-    is done as it can hold the address of any type and then typecasted to
-    the required (const uint32*) as direct assignment to PDISCDataPtr,
-    pointer of type const uint32 is not possible. The conversion
-    will produce a pointer that is correctly aligned and hence no side
-    effects foreseen by violating this MISRA rule.*/
+  /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration data
+  for each port */
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration data */
   PDISCDataPtr = (const uint32*)(const void*) (ConfigPtr->PDiscSet);
   /* [cover parentID={9FDD7385-47AA-4913-9918-E2C345F6402F}]
   Check For Available Ports
@@ -3356,19 +3104,10 @@ LOCAL_INLINE Std_ReturnType Port_lIOInitCheck(const Port_ConfigType* const Confi
       /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
       configuration address calculation for each port and is within allowed range.*/
       ConfigDataPtr = (ConfigPtr->PortConfigSetPtr) + ConfigIndex ;
-      /* MISRA2012_RULE_11_5_JUSTIFICATION: The ConfigDataPtr is a pointer
-      to structure of type Port_n_ConfigType used to keep configuration data
-      for each port. The conversion to the required type (const uint32*) is
-      done as direct assignment to DataPtr, pointer of type const uint32 is
-      not possible. The conversion will produce a pointer that is correctly
-      aligned and hence no side effects foreseen by violating this
-      MISRA rule.*/
-      /* MISRA2012_RULE_11_3_JUSTIFICATION: The conversion to (const void*)
-      is done as it can hold the address of any type, here a structure pointer
-      and then typecasted to the required (const uint32*) as direct assignment
-      to DataPtr, pointer of type const uint32 is not possible. The conversion
-      will produce a pointer that is correctly aligned and hence no side
-      effects foreseen by violating this MISRA rule.*/
+      /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration data
+      for each port */
+      /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to access configuration data
+      for each port */
       DataPtr = (const uint32 *)(const void*)(ConfigDataPtr);
       /* [cover parentID={64FE7B89-0357-48b9-94DB-23633F4E37CD}]
       Get Port Address
@@ -3388,48 +3127,25 @@ LOCAL_INLINE Std_ReturnType Port_lIOInitCheck(const Port_ConfigType* const Confi
       #endif
       {
         SfrVal = PortAddressPtr->OUT.U ;
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: The compiler prevents the
-        assignment of value of the element PinLevel of structure ConfigPtr
-        into a uint32 variable as PinLevel element is of type Port_n_PinType
-        which is a bitfield structure. Port_n_PinType structure is of size
-        uint32 and hence using a uint32 pointer typecast to derive the value.
-        The conversion will produce a pointer that is correctly aligned and
-        hence no side effects foreseen by violating this MISRA rule.*/
-        /* MISRA2012_RULE_11_8_JUSTIFICATION: The typecasting is performed to
-        access configuration data for each port. This ConfigPtr which is having
-        a const qualifier and by typecasting with (uint32*), it discards const
-        keyword. No side effects foreseen by violating this MISRA rule.*/
-        /* MISRA2012_RULE_1_3_JUSTIFICATION: The compiler prevents the
-        assignment of value of the element PinLevel of structure ConfigPtr
-        into a uint32 variable as PinLevel element is of type Port_n_PinType
-        which is a bitfield structure. Port_n_PinType structure is of size
-        uint32 and hence using a uint32 pointer typecast to derive the value.
-        Thus no issues seen.*/
-        Ptr_Config = (uint32 *)& (ConfigPtr->PortConfigSetPtr[ConfigIndex].PinLevel);
-        CfgVal = *(Ptr_Config);
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration
+        data for each port */
+        /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect the
+        const/volatile properties*/
+        /* MISRA2012_RULE_1_3_JUSTIFICATION:ConfigPtr is used to read the value and 
+        The address is not used beyond the context of the API, hence it is not an issue*/
+        Ptr_Config = (uint32*)&(ConfigPtr->PortConfigSetPtr[ConfigIndex].PinLevel);
+        CfgVal = *Ptr_Config;
         CompareFlag &= ~(SfrVal ^ CfgVal);
       }
       SfrVal = PortAddressPtr->ESR.U;
-      /* MISRA2012_RULE_11_3_JUSTIFICATION: The compiler prevents the assignment
-      of value of the element EmergencyStopConf of structure ConfigPtr into
-      a uint32 variable as EmergencyStopConf element is of type Port_n_PinType
-      which is a bitfield structure. Port_n_PinType is of size uint32 and
-      hence using a uint32 pointer typecast to derive the value. The conversion
-      will produce a pointer that is correctly aligned and hence no side
-      effects foreseen by violating this MISRA rule.*/
-      /* MISRA2012_RULE_11_8_JUSTIFICATION: The typecasting is performed to
-      access configuration data for each port. This ConfigPtr which is having
-      a const qualifier and by typecasting with (uint32*), it discards const
-      keyword. No side effects foreseen by violating this MISRA rule.*/
-      /* MISRA2012_RULE_1_3_JUSTIFICATION: The compiler prevents the assignment
-      of value of the element EmergencyStopConf of structure ConfigPtr into
-      a uint32 variable as EmergencyStopConf element is of type Port_n_PinType
-      which is a bitfield structure. Port_n_PinType is of size uint32 and
-      hence using a uint32 pointer typecast to derive the value. Thus no
-      issues seen.*/
-      Ptr_Config = (uint32 *)&(ConfigPtr->PortConfigSetPtr[ConfigIndex].EmergencyStopConf);
-      CfgVal = *(Ptr_Config);
-
+      /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration
+        data for each port */
+      /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect the
+        const/volatile properties*/
+      /* MISRA2012_RULE_1_3_JUSTIFICATION:ConfigPtr is used to read the value and 
+      The address is not used beyond the context of the API, hence it is not an issue*/
+      Ptr_Config = (uint32*)&ConfigPtr->PortConfigSetPtr[ConfigIndex].EmergencyStopConf;
+      CfgVal = *Ptr_Config;
       CompareFlag &= ~(SfrVal ^ CfgVal);
       SfrVal = PortAddressPtr->IOCR0.U ;
       CfgVal = *(DataPtr);
@@ -3452,16 +3168,6 @@ LOCAL_INLINE Std_ReturnType Port_lIOInitCheck(const Port_ConfigType* const Confi
       {
         SfrVal = PortAddressPtr->IOCR8.U;
         CfgVal = *(DataPtr);
-        #if(PORT14_PDISC_MASK == PORT_14_DISC_DISABLE)
-        /* [cover parentID={75D2C28F-7E85-4578-8B67-8AB0E2F4303E}]
-        Is Port Number 14
-        [/cover] */
-        if(PortNumber == 14U)
-        {
-          CfgVal &= (~(IFX_P_IOCR8_PC11_MSK << IFX_P_IOCR8_PC11_OFF));
-          CfgVal |= (PORT_IOCR_PULLUP_ENABLE<<IFX_P_IOCR8_PC11_OFF );
-        }
-        #endif
         CompareFlag &= ~(SfrVal ^ CfgVal);
       }
       DataPtr++;
@@ -3488,28 +3194,16 @@ LOCAL_INLINE Std_ReturnType Port_lIOInitCheck(const Port_ConfigType* const Confi
       if(Port_lIsPortLVDSAvailable(PortNumber) != (uint32)0U)
       {
         /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate SFR address
-        for each port. The conversion to the required type (volatile uint32*)
-        is done as direct assignment to LVDSRegPtr, pointer of type
-        volatile uint32 is not possible. The conversion will produce a pointer
-        that is correctly aligned and hence no side effects foreseen
-        by violating this MISRA rule.*/
-        /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR Access. The conversion to
-        (volatile void*) is done as it can hold the address of any type, here
-        a structure pointer and then typecasted to the required
-        (volatile uint32*) as direct assignment to LVDSRegPtr, pointer of
-        type volatile uint32 is not possible. The conversion will produce a
-        pointer that is correctly aligned and hence no side effects foreseen
-        by violating this MISRA rule.*/
+        for each port */
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration
+        data for each port */
         /* MISRA2012_RULE_18_4_JUSTIFICATION: Pointer arithmetic is used due to
         SFR address calculation and is within allowed range.*/
-        /* MISRA2012_RULE_11_8_JUSTIFICATION: The typecasting is performed to
-        update the SFR address for each port. The PortAddressPtr is
-        having a const qualifier and by typecasting, the input  argument
-        for the API discards this keyword. No side effects foreseen by
-        violating this MISRA rule.*/
+        /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect the
+        const/volatile properties*/
         LVDSRegPtr  = ((volatile uint32*)(volatile void*)PortAddressPtr \
                        + PORT_LPCR_REG_OFFSET);
-
+        
         /* [cover parentID={A7E42B70-13DF-4658-ABD5-58F8CA46B1AB}]
         Check for LVDS
         [/cover] */
@@ -3544,24 +3238,37 @@ LOCAL_INLINE Std_ReturnType Port_lIOInitCheck(const Port_ConfigType* const Confi
       [/cover] */
       if(Port_lIsPortPCSRAvailable(PortNumber) != (uint32)0U)
       {
-        SfrVal = (PortAddressPtr->PCSR.U) & PORT_31_PCSR_MASK;
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration
+        data for each port */
+        /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate SFR address
+        for each port */
+        /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect the
+        const/volatile properties*/
+        PCSRRegPtr = (volatile uint32*)(volatile void*)&(PortAddressPtr->PCSR.U);
+        
+        SfrVal = (*(PCSRRegPtr)) & PORT_31_PCSR_MASK;
         CfgVal = (*(PCSRDataPtr)) & PORT_31_PCSR_MASK;
         CompareFlag &= ~(SfrVal ^ CfgVal);
         PCSRDataPtr++;
       }
       if(Port_lIsPortPDISCAvailable(PortNumber) != (uint32)0U)
       {
-       SfrVal = (PortAddressPtr->PDISC.U);
-       CfgVal = *(PDISCDataPtr);
-       CompareFlag &= ~(SfrVal ^ CfgVal);
-       PDISCDataPtr++;
+        /* MISRA2012_RULE_11_3_JUSTIFICATION: Performed to access configuration
+        data for each port */
+        /* MISRA2012_RULE_11_5_JUSTIFICATION: Performed to calculate SFR address
+        for each port */
+        /* MISRA2012_RULE_11_8_JUSTIFICATION: Cast does not affect the
+        const/volatile properties*/
+                       
+        PDISCRegPtr = (volatile uint32*)(volatile void*)&(PortAddressPtr->PDISC.U);
+        SfrVal = *(PDISCRegPtr);
+        CfgVal = *(PDISCDataPtr);
+        CompareFlag &= ~(SfrVal ^ CfgVal);
+        PDISCDataPtr++;
       }
       ConfigIndex++;
     }
   }
-  #if(PORT14_PDISC_MASK == PORT_14_DISC_DISABLE)
-  CompareFlag &= ~(P14_PDISC.U ^ 0x0U);
-  #endif
   if (CompareFlag != 0xFFFFFFFFU)
   {
     ErrorFlag = E_NOT_OK;
@@ -3577,7 +3284,7 @@ LOCAL_INLINE Std_ReturnType Port_lIOInitCheck(const Port_ConfigType* const Confi
 #if(PORT_SET_PIN_DIRECTION_API == STD_ON)
 #if(PORT_SAFETY_ENABLE == STD_ON)
 /*******************************************************************************
-** Traceability:[cover parentID={41E32907-EB61-4dd1-8F96-DE39C66B3272}]       **
+** Traceability:[cover parentID={77092432-AC65-4082-BEF5-404C0DCF174A}]       **
 **                                                                            **
 ** Syntax           : LOCAL_INLINE uint8 Port_lDirectionChk                   **
 **                    (                                                       **
@@ -3605,16 +3312,19 @@ LOCAL_INLINE Std_ReturnType Port_lIOInitCheck(const Port_ConfigType* const Confi
 *******************************************************************************/
 LOCAL_INLINE uint8 Port_lDirectionChk( const Port_PinDirectionType Dir)
 {
-  uint8 ErrStatus = E_OK;
-  /* [cover parentID={C7364599-76EB-4f2a-8657-50160A20C08D}]
+  uint8 ErrStatus = E_NOT_OK;
+  /* [cover parentID={4A42C6A0-FCD9-46e8-9A2F-ABDED4BCA71A}]
   Check if direction passed is valid
   [/cover] */
-  if((Dir != PORT_PIN_IN) && ( Dir != PORT_PIN_OUT))
+  if((Dir == PORT_PIN_IN) || ( Dir == PORT_PIN_OUT))
   {
-    ErrStatus = E_NOT_OK;
-    /* [cover parentID={B5D1507C-8BEC-45a2-BF68-4040258BF247}]
-    Mcal_ReportSafetyError
-    [/cover] */
+    ErrStatus = E_OK;
+  }
+  else
+  {    
+     /* [cover parentID={36F2970E-C579-44f3-9CA3-E581A285B2CD}]
+     Report error if Port direction passed is Invalid
+     [/cover] */
      Mcal_ReportSafetyError(PORT_MODULE_ID, PORT_INSTANCE_ID,
                   PORT_SID_SETPINDIRECTION, PORT_E_PARAM_INVALID_DIRECTION);
   }
@@ -3624,7 +3334,7 @@ LOCAL_INLINE uint8 Port_lDirectionChk( const Port_PinDirectionType Dir)
 #endif /* (PORT_SET_PIN_DIRECTION_API == STD_ON) */
 #if (PORT_DEV_ERROR_DETECT == STD_ON )||(PORT_SAFETY_ENABLE == STD_ON)
 /*******************************************************************************
-** Traceability:[cover parentID={748F1600-0954-4c11-B30F-8CF9746D48E3}]       **
+** Traceability:[cover parentID={50B423E0-43B2-47de-875F-69FEEE41AD1A}]       **
 **                                                                            **
 ** Syntax           : LOCAL_INLINE uint8 Port_lCheckInitStatus                **
 **                    (                                                       **
@@ -3653,12 +3363,12 @@ LOCAL_INLINE uint8 Port_lDirectionChk( const Port_PinDirectionType Dir)
 LOCAL_INLINE uint8 Port_lCheckInitStatus (const uint8 ApiId)
 {
   uint8 ErrStatus = E_OK;
-  /* [cover parentID={F78E386B-0771-4b63-B068-BE7F64B21F7C}]
+  /* [cover parentID={9E906D26-E465-4740-90A0-767B2035D5A4}]
   Check for Intialized state of port
-  [/cover] */
+  [/cover] */  
   if (Port_InitStatus != PORT_INITIALIZED)
     {
-      /* [cover parentID={2A1742C4-C05F-484c-91B8-689596DAD248}]
+      /* [cover parentID={B007A6D8-C2FE-4484-95A3-7065016B341D}]
       Report DET PORT_E_UNINIT
       [/cover] */
       Port_lReportError(ApiId, PORT_E_UNINIT);
@@ -3675,4 +3385,3 @@ Port_Memmap.h header is included without safegaurd.*/
 /* MISRA2012_RULE_20_1_JUSTIFICATION: Port_Memmap.h header included as per
 Autosar guidelines. */
 #include "Port_MemMap.h"
-

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2025-12-20 10:43:27
+ *   Generation Time: 2026-01-18 22:49:12
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -119,7 +119,7 @@
 #define CounterIsr_SystemTimer_OsCore3 CounterIsr_SystemTimer_OsCore3
 #define CounterIsr_SystemTimer_OsCore4 CounterIsr_SystemTimer_OsCore4
 #define CounterIsr_SystemTimer_OsCore5 CounterIsr_SystemTimer_OsCore5
-#define EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine
+#define EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx
 #define XSignalIsr_OsCore0 XSignalIsr_OsCore0
 #define XSignalIsr_OsCore1 XSignalIsr_OsCore1
 #define XSignalIsr_OsCore2 XSignalIsr_OsCore2
@@ -145,6 +145,7 @@
 #define Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms
 #define Rte_Al_TE_Cdd_nm_Cdd_Nm_Runnable10ms Rte_Al_TE_Cdd_nm_Cdd_Nm_Runnable10ms
 #define Rte_Al_TE_EthIf_EthIf_MainFunctionState Rte_Al_TE_EthIf_EthIf_MainFunctionState
+#define Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction
 #define Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction
 #define Rte_Al_TE_swc_lock_Runnable_2ms Rte_Al_TE_swc_lock_Runnable_2ms
 #define Rte_Al_TE_window_core1_Runnable_windows_2ms Rte_Al_TE_window_core1_Runnable_windows_2ms
@@ -275,7 +276,7 @@ typedef enum
   CounterIsr_SystemTimer_OsCore3 = 3,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   CounterIsr_SystemTimer_OsCore4 = 4,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   CounterIsr_SystemTimer_OsCore5 = 5,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine = 6,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx = 6,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   XSignalIsr_OsCore0 = 7,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   XSignalIsr_OsCore1 = 8,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   XSignalIsr_OsCore2 = 9,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
@@ -306,10 +307,11 @@ typedef enum
   Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_Cdd_nm_Cdd_Nm_Runnable10ms = 15,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_EthIf_EthIf_MainFunctionState = 16,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction = 17,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_swc_lock_Runnable_2ms = 18,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_window_core1_Runnable_windows_2ms = 19,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ALARMID_COUNT = 20
+  Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction = 17,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction = 18,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_swc_lock_Runnable_2ms = 19,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_window_core1_Runnable_windows_2ms = 20,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ALARMID_COUNT = 21
 } AlarmType;
 
 /*! Counter identifiers. */

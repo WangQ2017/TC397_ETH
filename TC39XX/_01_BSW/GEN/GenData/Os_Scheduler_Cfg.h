@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Scheduler_Cfg.h
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2026-01-18 21:03:03
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -60,7 +60,7 @@
 # define OS_CFG_NUM_TASKQUEUE6_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE7_OSCORE0_SLOTS     (2u)
 # define OS_CFG_NUM_TASKQUEUE8_OSCORE0_SLOTS     (1u)
-# define OS_CFG_NUM_TASKQUEUE9_OSCORE0_SLOTS     (7u)
+# define OS_CFG_NUM_TASKQUEUE9_OSCORE0_SLOTS     (5u)
 # define OS_CFG_NUM_TASKQUEUE10_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE11_OSCORE0_SLOTS     (1u)
 # define OS_CFG_NUM_TASKQUEUE12_OSCORE0_SLOTS     (1u)

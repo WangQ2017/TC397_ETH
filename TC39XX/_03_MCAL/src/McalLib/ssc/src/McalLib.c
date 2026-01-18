@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2023)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : McalLib.c                                                  **
 **                                                                            **
-**  VERSION      : 41.0.0                                                     **
+**  VERSION      : 1.40.0_36.0.0                                              **
 **                                                                            **
-**  DATE         : 2023-05-16                                                 **
+**  DATE         : 2020-02-28                                                 **
 **                                                                            **
 **  VARIANT      : Variant PC                                                 **
 **                                                                            **
@@ -34,7 +34,6 @@
 /* [cover parentID={4C08C419-6659-4ae1-A70F-A5C8FC62A22B}][/cover] */
 /* [cover parentID={EBC12FA6-C2FB-416e-8518-7337947C6D63}][/cover] */
 /* [cover parentID={ACBBD55B-CDB7-4936-BF3A-D2A247B8A6DF}][/cover] */
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}][/cover] */
 /*******************************************************************************
 **                      Includes                                              **
 *******************************************************************************/
@@ -155,15 +154,15 @@
 #endif
 
 /* Check for Correct inclusion of headers */
-#if ( MCALLIB_SW_MAJOR_VERSION != 20U )
+#if ( MCALLIB_SW_MAJOR_VERSION != 10U )
  #error "MCALLIB_SW_MAJOR_VERSION does not match. "
 #endif
 
-#if ( MCALLIB_SW_MINOR_VERSION != 25U )
+#if ( MCALLIB_SW_MINOR_VERSION != 40U )
  #error "MCALLIB_SW_MINOR_VERSION does not match. "
 #endif
 
-#if (MCALLIB_SW_PATCH_VERSION != 0U)
+#if (MCALLIB_SW_PATCH_VERSION != 1U)
  #error "MCALLIB_SW_PATCH_VERSION does not match."
 #endif
 /*******************************************************************************
@@ -241,14 +240,14 @@ static const uint8 Mcal_kCoreXMemSegment[MCAL_COREID_MAX_VALUE + 0x1U] =
 /* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header usage as per Autosar
    guideline. */
 #include "McalLib_MemMap.h"
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond
-  32 characters in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond
-  32 characters in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond
-  32 characters in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond
-  32 characters in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
 #define MCALLIB_START_SEC_CONST_ASIL_B_GLOBAL_32
 /* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
    without safeguard. It complies to Autosar guidelines. */
@@ -319,6 +318,10 @@ static const uint32 Mcal_kPsprGlobalEndAddress[MCAL_COREID_MAX_VALUE + 0x1U] =
   #endif
 };
 
+/* MISRA2012_RULE_8_9_JUSTIFICATION: No side effects foreseen
+ * by violating this MISRA rule as this variable is accessed in only one API.
+ * The reason behind defining it as global is to avoid RAM consumtion at runtime
+ */
 static const uint32 Mcal_kPsprGlobalBaseAddress[MCAL_COREID_MAX_VALUE + 0x1U] =
 {
   MCAL_PSPR0_BASE_ADDR,
@@ -340,14 +343,14 @@ static const uint32 Mcal_kPsprGlobalBaseAddress[MCAL_COREID_MAX_VALUE + 0x1U] =
   #endif
 };
 
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond
-  32 characters in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond
-  32 characters in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond
-  32 characters in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond
-  32 characters in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
 #define MCALLIB_STOP_SEC_CONST_ASIL_B_GLOBAL_32
 /* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
    without safeguard. It complies to Autosar guidelines. */
@@ -355,7 +358,7 @@ static const uint32 Mcal_kPsprGlobalBaseAddress[MCAL_COREID_MAX_VALUE + 0x1U] =
    guideline. */
 #include "McalLib_MemMap.h"
 /* [cover parentID={1A65EADD-AFD0-4845-B2D2-8257E086DD67}]No user mode macro
-  used [/cover] */
+used [/cover] */
 
 /*******************************************************************************
 **                      Private Type Definitions                              **
@@ -555,8 +558,7 @@ uint32 Mcal_SetCpuWdgPassword(const uint32 Password)
 **                                                                            **
 ** Description      : This interface is used by applications to resume        **
 **                    protection of CPU endinit protected registers of the    **
-**                    CPU they are executing on. This interface also supports **
-**                    write access to CPU endinit protected CSFRs.            **
+**                    CPU they are executing on.                              **
 **                                                                            **
 ** Service ID       : 0x7E                                                    **
 **                                                                            **
@@ -577,8 +579,8 @@ void Mcal_WriteCpuEndInitProtReg(volatile void* const RegAddress,
 {
   McalLib_CpuEndInitRetType CpuEndInitRet;
   uint32 CoreId;
-  /* MISRA2012_RULE_11_6_JUSTIFICATION: The address of the register is
-   * compared against CSFR register offset.
+  /* MISRA2012_RULE_11_6_JUSTIFICATION:The address of the register is
+   * comapred against CSFR register offsets.
    * There are no other operation performed, hence this convesion
    * does not cause any issue */
   uint32 TempAddr = (uint32)RegAddress;
@@ -627,8 +629,8 @@ void Mcal_WriteCpuEndInitProtReg(volatile void* const RegAddress,
     /* [cover parentID={9AB7EC4B-1C37-4b90-9D90-F7B9FE87F06E}][/cover] */
     if (TempAddr > MCAL_16BIT_MAX_ADDR)
     {
-      /* MISRA2012_RULE_11_5_JUSTIFICATION: Conversion between
-       * pointer to void and pointer to object due to SFR access. */
+      /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access.
+       * No side effects foreseen by violating this MISRA rule. */
       /* MISRA2012_RULE_11_3_JUSTIFICATION: Conversion between
        * pointers of different object types due to SFR access. */
       *((volatile uint32*)RegAddress) = (uint32)DataValue;
@@ -804,9 +806,7 @@ uint32 Mcal_SetSafetyEndInitPassword(const uint32 Password)
 **                                                                            **
 ** Description      : This API is needed to write required values to safety   **
 **                    end-init protected registers by unprotecting to write   **
-**                    and protecting back to keep protection intact. This     **
-**                    interface also supports write access to safety endinit  **
-**                    protected CSFRs.                                        **
+**                    and protecting back to keep protection intact           **
 **                                                                            **
 **                                                                            **
 ** Service ID       : 0x7F                                                    **
@@ -928,9 +928,7 @@ void Mcal_WriteSafetyEndInitProtReg16(volatile void* const RegAddress,
 **                                                                            **
 ** Description      : This API is needed to write required values to safety   **
 **                    end-init protected register bits by unprotecting to     **
-**                    write and protecting back to keep protection intact.    **
-**                    This interface also supports write access to safety     **
-**                    endinit protected CSFRs.                                **
+                      write and protecting back to keep protection intact     **
 **                                                                            **
 **                                                                            **
 **                                                                            **
@@ -1168,8 +1166,8 @@ void Mcal_WritePeripEndInitProtReg(volatile void* const RegAddress,
     /* [cover parentID={444D88B6-6F28-42d8-A9B3-DC73B0B2CD23}]
      * Update the register
      * [/cover] */
-    /* MISRA2012_RULE_11_5_JUSTIFICATION: Conversion between
-     * pointer to void and pointer to object due to SFR access. */
+    /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access.
+     * No side effects foreseen by violating this MISRA rule. */
     /* MISRA2012_RULE_11_3_JUSTIFICATION: Conversion between
      * pointers of different object types due to SFR access. */
     *((volatile uint32*)RegAddress) = DataValue;
@@ -1708,17 +1706,11 @@ uint32 Mcal_DelayTickResolution(void)
 *******************************************************************************/
 uint32 Mcal_DelayResetTickCalibration(void)
 {
-  /* Added local variable TimerResolution to hold value of STM timer resolution */
-  uint32 TimerResolution;
-
   /* [cover parentID={2203708E-A73E-4414-AC15-6ECB9D9A5858}]
      Calculate STM timer resolution in 1ns resolution[/cover] */
   /* [cover parentID={C59047B9-C9CC-4b5a-B2CD-EBE16E90A41B}][/cover] */
-  /* Local variable assigned value of Mcal_lDelayResetTickCalibration
-  to avoid violation of CertC rule : EXP30-C Do not depend on the order 
-  of evaluation for side effects*/
-  TimerResolution = Mcal_lDelayResetTickCalibration(MCALLIB_SID_DELAYTICKRESOLUTION);
-  Mcal_StmTimerResolution = TimerResolution;
+  Mcal_StmTimerResolution = (uint32)Mcal_lDelayResetTickCalibration
+                                              (MCALLIB_SID_DELAYTICKRESOLUTION);
 
   /* [cover parentID={F8D3FCA6-8D9A-406c-8E9F-28E04CFBFB5B}]
    Return STM timer resolution[/cover] */
@@ -2142,9 +2134,7 @@ LOCAL_INLINE uint16 Mcal_lDecryptPw(const uint32 Value)
 **                                                                            **
 ** Description      : This API is needed to write required values to safety   **
 **                    end-init protected registers by unprotecting to write   **
-**                    and protecting back to keep protection intact. This     **
-**                    interface also supports write access to safety endinit  **
-**                    protected CSFRs.                                        **
+**                    and protecting back to keep protection intact           **
 **                                                                            **
 **                                                                            **
 ** Service ID       : NA                                                      **
@@ -2172,25 +2162,22 @@ LOCAL_INLINE void Mcal_lWriteSafetyEndInitProtection
                                                 const uint8  Accesstype,
                                                 const uint8  ApiId)
 {
-  /* MISRA2012_RULE_11_5_JUSTIFICATION: Conversion between
-   * pointer to void and pointer to object due to SFR access. */
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule.*/
   /* MISRA2012_RULE_11_3_JUSTIFICATION: Conversion between
    * pointers of different object types due to SFR access. */
   volatile uint32* const RegAddress32 = RegAddress;
-  /* MISRA2012_RULE_11_5_JUSTIFICATION: Conversion between
-   * pointer to void and pointer to object due to SFR access. */
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule.*/
   /* MISRA2012_RULE_11_3_JUSTIFICATION: Conversion between
    * pointers of different object types due to SFR access. */
   volatile uint16* const RegAddress16 = RegAddress;
   uint32 TempData;
-  /* MISRA2012_RULE_11_6_JUSTIFICATION: The address of the register is
+  /* MISRA2012_RULE_11_6_JUSTIFICATION:The address of the register is
    * comapred against CSFR register offsets.
    * There are no other operation performed, hence this convesion
    * does not cause any issue */
   uint32 TempAddr = (uint32)RegAddress;
-
-  /* Mask the DataValue as per the passed Mask */
-  uint32 MaskedData = DataValue & Mask;
 
   /* Critical section to protect SCU_SEICON0 and SCU_SEICON1 register*/
   /* [cover parentID={65DFF53B-24CB-4967-90D4-398D7423E928}]
@@ -2227,13 +2214,13 @@ LOCAL_INLINE void Mcal_lWriteSafetyEndInitProtection
       /* [cover parentID={9FB76018-74B9-498a-B8E8-953D7C6DAFCA}][/cover] */
       if(Mask == MCAL_DEFAULT_MASK_VALUE)
       {
-        *RegAddress32 = MaskedData;
+        *RegAddress32 = DataValue;
       }
       else
       {
         /* Read the SFR and write only the bits based on the mask */
         TempData = (uint32)(((uint32) *RegAddress32 & (uint32)~Mask) |
-                   MaskedData);
+                   (uint32)DataValue);
 
         *RegAddress32 = TempData;
       }
@@ -2244,17 +2231,17 @@ LOCAL_INLINE void Mcal_lWriteSafetyEndInitProtection
        * Update the register
        * [/cover]
        */
-      *RegAddress16 = (uint16)MaskedData;
+      *RegAddress16 = (uint16)DataValue;
     }
   }
   else
   {
     /* CPU specific registers are updated using MTCR */
-    /* MISRA2012_RULE_11_6_JUSTIFICATION: The address of the register is
+    /* MISRA2012_RULE_11_6_JUSTIFICATION:The address of the register is
      * comapred against CSFR register offsets.
      * There are no other operation performed, hence this convesion
      * does not cause any issue */
-    /* MISRA2012_RULE_11_4_JUSTIFICATION: The address of the register is
+    /* MISRA2012_RULE_11_4_JUSTIFICATION:The address of the register is
      * comapred against CSFR register offsets.
      * There are no other operation performed, hence this convesion
      * does not cause any issue */
@@ -2262,19 +2249,19 @@ LOCAL_INLINE void Mcal_lWriteSafetyEndInitProtection
     switch((uint32)RegAddress32)
     {
       case CPU_COMPAT:
-          MTCR(CPU_COMPAT, MaskedData);
+          MTCR(CPU_COMPAT, DataValue);
           break;
       case CPU_SYSCON:
-          MTCR(CPU_SYSCON, MaskedData);
+          MTCR(CPU_SYSCON, DataValue);
           break;
       case CPU_TPS_EXTIM_ENTRY_LVAL:
-          MTCR(CPU_TPS_EXTIM_ENTRY_LVAL, MaskedData);
+          MTCR(CPU_TPS_EXTIM_ENTRY_LVAL, DataValue);
           break;
       case CPU_TPS_EXTIM_EXIT_LVAL:
-          MTCR(CPU_TPS_EXTIM_EXIT_LVAL, MaskedData);
+          MTCR(CPU_TPS_EXTIM_EXIT_LVAL, DataValue);
           break;
       case CPU_TPS_EXTIM_CLASS_EN:
-          MTCR(CPU_TPS_EXTIM_CLASS_EN, MaskedData);
+          MTCR(CPU_TPS_EXTIM_CLASS_EN, DataValue);
           break;
       default:
           /* This case is not possible, kept only for MISRA compliance */
@@ -2397,7 +2384,7 @@ LOCAL_INLINE uint32 Mcal_lDelayResetTickCalibration(const uint8 ApiId)
          Check the Source of freq PLL0 clock sel[/cover] */
       switch(PLL0ClkSel)
       {
-        /*Fall through is used as the logic for oscillator frequency
+        /*Fall through is used as the logic for oscillator frequency 
          * calculation and SYSCLK frequency calculation is exactly same*/
         /* [cover parentID={5EB344C3-9A2B-4bca-92AA-9B89A1FE3DDA}]
             Is PLL0 clock source Osc 0 clock [/cover] */
@@ -2750,10 +2737,6 @@ static uint32 Mcal_lUpdatePeripheralEndInit(const uint32 NewPassword,
   {
     /* Calculate the value to be written in SCU_EICON0,
      * to update it with new password */
-	 /* [cover parentID={8A80061E-1AE0-4d21-AE7E-2A80AB93C630}]
-     * Calculate the value to be written in SCU_EICON0,
-     * to update it with new password
-     * [/cover] */
     NewEicon0Value = ((uint32)MCAL_PER_ENDINIT_WDT_TIMER_REL |
                      ((uint32)NewPassword << (uint32)IFX_SCU_EICON0_EPW_OFF) |
                      ((uint32)MCAL_PER_ENDINIT_PROTECTED <<
@@ -2766,9 +2749,6 @@ static uint32 Mcal_lUpdatePeripheralEndInit(const uint32 NewPassword,
     dummy = MODULE_SCU.EICON0.U;
 
     /* Update the SCU_SEICON0 with the new password */
-    /* [cover parentID={E0716D6C-3D3D-4d96-8625-F6E0DAB3B87A}]
-     * Update the SCU_SEICON0 with the new password
-     * [/cover] */
     MODULE_SCU.EICON0.U = NewEicon0Value;
 
     /* Read back the EICON0 reg to ensure Write is is done correctly */
@@ -2792,9 +2772,6 @@ static uint32 Mcal_lUpdatePeripheralEndInit(const uint32 NewPassword,
   UNUSED_PARAMETER(dummy);
 
   /* Return the old password */
-  /* [cover parentID={C52BFE95-3C6F-4d08-BF04-AEC275D5A191}]
-     * Return the old password
-     * [/cover] */
   return Password;
 }
 
@@ -2937,13 +2914,21 @@ static McalLib_CpuEndInitRetType Mcal_lUpdateCpuEndInit(
   }
 
   /* Unlock the WDTCPUxCON0 register */
+  /* MISRA2012_RULE_11_4_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
   MODULE_SCU.WDTCPU[CoreIdIndex].CON0.U = UnlockCpuWdtCon0Value;
 
+  /* MISRA2012_RULE_11_4_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
   dummy = MODULE_SCU.WDTCPU[CoreIdIndex].CON0.U;
 
   /* Update the WDTCPUxCON0 to re-enable/temporary disable ENDINIT protection */
+  /* MISRA2012_RULE_11_4_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
   MODULE_SCU.WDTCPU[CoreIdIndex].CON0.U = NewCpuWdtCon0Value;
 
+  /* MISRA2012_RULE_11_4_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
   dummy = MODULE_SCU.WDTCPU[CoreIdIndex].CON0.U;
 
   UNUSED_PARAMETER(dummy);
@@ -2985,6 +2970,8 @@ LOCAL_INLINE uint32 Mcal_lCalculateTimerReloadVal(const uint32 CoreId,
                                      const uint32 TimerRelValAtReset,
                                      const boolean SetResetProtection)
 {
+  /* MISRA2012_RULE_11_4_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
   uint32 TimerReload = Mcal_GetBitAtomic(MODULE_SCU.WDTCPU[CoreId].SR.U,
                                          IFX_SCU_WDTCPU_SR_TIM_OFF,
                                          IFX_SCU_WDTCPU_SR_TIM_LEN);
@@ -3180,10 +3167,10 @@ LOCAL_INLINE void Mcal_lReleaseSpinlock(volatile uint32 * const LockAddress)
    * resources before releasing the lock
    */
   DSYNC();
-
+  
   /* Clear the lock variable */
   Mcal_SetBitAtomic(LockAddress, 0x0U, 0x1, SPINLOCKFREE);
-
+  
   /* MISRA2012_RULE_2_7_JUSTIFICATION: No side effects foreseen
    * by violating this MISRA rule, as the variable LockAddress is
    * accessed using only assembly instruction.

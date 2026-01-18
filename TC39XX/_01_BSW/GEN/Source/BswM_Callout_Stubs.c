@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Callout_Stubs.c
- *   Generation Time: 2025-12-20 16:10:33
+ *   Generation Time: 2026-01-18 21:32:33
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -84,7 +84,7 @@ FUNC(void, BSWM_CODE) BswM_AL_SetProgrammableInterrupts(void)
 
 } /* End of BswM_AL_SetProgrammableInterrupts */
 
-volatile uint16 g_RegBMSR = 0;
+
 FUNC(void, BSWM_CODE) BswM_Action_EthTrcvDebug(void)
 {
 /**********************************************************************************************************************

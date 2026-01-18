@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2021)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : Port.h                                                     **
 **                                                                            **
-**  VERSION      : 16.0.0                                                     **
+**  VERSION      : 1.40.0_12.0.0                                              **
 **                                                                            **
-**  DATE         : 2021-03-02                                                 **
+**  DATE         : 2020-01-08                                                 **
 **                                                                            **
 **  VARIANT      : Variant PB                                                 **
 **                                                                            **
@@ -27,12 +27,12 @@
 **  DESCRIPTION  : Port Driver header definition file                         **
 **                                                                            **
 **  SPECIFICATION(S) : Specification of Port Driver, AUTOSAR Release 4.2.2    **
-**                    and AUTOSAR Release 4.4.0                               **
+**                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
 *******************************************************************************/
 /* [cover parentID={D7726A2C-6661-41d6-9A98-46EF8E4879D4}] [/cover]*/
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}] [/cover] */
+
 #ifndef PORT_H
 #define PORT_H
 
@@ -93,9 +93,6 @@
 /* Service is called if invalid direction is passed at runtime */
 #if (PORT_SAFETY_ENABLE == STD_ON)
 #define  PORT_E_PARAM_INVALID_DIRECTION   ((uint8)0x32U)
-
-/* Service is called if implaussible characteristics is passed at runtime */
-#define PORT_E_IMPLAUSIBLE_MODE           ((uint8)0x33U)
 #endif
 
 /*
@@ -138,13 +135,6 @@
 #define  PORT_PIN_MODE_ALT5             (0x28U)
 #define  PORT_PIN_MODE_ALT6             (0x30U)
 #define  PORT_PIN_MODE_ALT7             (0x38U)
-#define PORT_INPUT_NO_PULL              (0x01U)
-#define PORT_INPUT_PULL_DOWN            (0x02U)
-#define PORT_INPUT_PULL_UP              (0x03U)
-#define PORT_OUTPUT_PUSH_PULL           (0x04U)
-#define PORT_OUTPUT_OPEN_DRAIN          (0x05U)
-
-
 
 /* Macros to define whether pin direction can be changed
    during runtime or not */
@@ -432,11 +422,9 @@ extern void Port_SetPinDirection
 );
 #else
 /* MISRA2012_RULE_4_9_JUSTIFICATION: With PortSetPinDirectionApi disabled
-Port_SetPinDirection is implemented as Function like macro. Function like
-macro is used to generate compilation error, when an optional function is
-called by application and not enabled in the configuration.*/
+Port_SetPinDirection is implemented as Function like macro*/
 #define Port_SetPinDirection(Pin,Direction) \
-                                (ERROR_Port_SetPinDirection_API_IS_NOT_SELECTED)
+                (ERROR_Port_SetPinDirection_NOT_SELECTED)
 #endif /* (PORT_SET_PIN_DIRECTION_API) */
 
 /*******************************************************************************
@@ -501,11 +489,9 @@ extern void Port_GetVersionInfo
 );
 #else
 /* MISRA2012_RULE_4_9_JUSTIFICATION: With Port_GetVersionInfo disabled
- Port_GetVersionInfo is implemented as Function like macro. Function like
- macro is used to generate compilation error, when an optional function is
- called by application and not enabled in the configuration.*/
+Port_GetVersionInfo is implemented as Function like macro*/
 #define Port_GetVersionInfo(versioninfo) \
-                                 (ERROR_Port_GetVersionInfo_API_IS_NOT_SELECTED)
+                        (ERROR_Port__GetVersionInfo_NOT_SELECTED)
 #endif /* PORT_VERSION_INFO_API == STD_ON */
 
 /* Enable / Disable the use of the function */
@@ -546,10 +532,8 @@ extern void Port_SetPinMode
 );
 #else
 /* MISRA2012_RULE_4_9_JUSTIFICATION: With Port_SetPinMode disabled
-Port_SetPinMode is implemented as Function like macro. Function like
-macro is used to generate compilation error, when an optional function
-is called by application and not enabled in the configuration.*/
-#define Port_SetPinMode(Pin,Mode) (ERROR_Port_SetPinMode_API_IS_NOT_SELECTED)
+Port_SetPinMode is implemented as Function like macro*/
+#define Port_SetPinMode(Pin,Mode) (ERROR_Port_SetPinMode_NOT_SELECTED)
 #endif /* (PORT_SET_PIN_MODE_API) */
 
 #if(PORT_INIT_CHECK_API==STD_ON)
@@ -563,7 +547,7 @@ is called by application and not enabled in the configuration.*/
 **                                                                            **
 ** Sync/Async       : Synchronous                                             **
 **                                                                            **
-** Reentrancy       : Non Reentrant                                           **
+** Reentrancy       : Re-entrant                                              **
 **                                                                            **
 ** Parameters(in)   :                                                         **
 **                                                                            **
@@ -574,16 +558,14 @@ is called by application and not enabled in the configuration.*/
 **                      parameters.                                           **
 **                                                                            **
 ** Description      : This API checks the initialization values after PORT is **
-**                    initialized. It should be called after Port_Init to     **
-**                    check the initialization values.                        **
+**                    initialized. It should be called after Port_Init to check**
+**                    the initialization values.                              **
 *******************************************************************************/
 extern Std_ReturnType Port_InitCheck (const Port_ConfigType* const ConfigPtr);
 #else
 /* MISRA2012_RULE_4_9_JUSTIFICATION: With Port_InitCheck disabled
-Port_InitCheck is implemented as Function like macro. Function like macro is
-used to generate compilation error, when an optional function is called by
-application and not enabled in the configuration.*/
-#define Port_InitCheck(ConfigPtr) (ERROR_Port_InitCheck_API_IS_NOT_SELECTED)
+Port_InitCheck is implemented as Function like macro*/
+#define Port_InitCheck(ConfigPtr) (ERROR_Port_InitCheck_NOT_SELECTED)
 #endif
 
 /*******************************************************************************

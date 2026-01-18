@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2021)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : Mcu_17_TimerIp.h                                           **
 **                                                                            **
-**  VERSION      : 24.0.0                                                     **
+**  VERSION      : 1.40.0_19.0.0                                              **
 **                                                                            **
-**  DATE         : 2021-02-04                                                 **
+**  DATE         : 2020-01-07                                                 **
 **                                                                            **
 **  VARIANT      : Variant PB                                                 **
 **                                                                            **
@@ -32,7 +32,6 @@
 **                                                                            **
 *******************************************************************************/
 /*[cover parentID={CA14F0F2-695F-47fd-928A-C41F5D0ED7CF}][/cover]*/
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}][/cover] */
 #ifndef MCU_17_TIMERIP_H
 #define MCU_17_TIMERIP_H
 
@@ -104,10 +103,10 @@
 #define GTM_TOM_IRQ_MODE_POS                  (0x6U)
 #define GTM_TOM_REG_RESET                     (0x0U)
 #define GTM_TOM_CH_PER_TGC                    (0x8U)
-#define GTM_TOM_CH_ENABLE                     (0x2UL)
-#define GTM_TOM_CH_OUT_ENABLE                 (0x2UL)
-#define GTM_TOM_CH_DISABLE                    (0x1UL)
-#define GTM_TOM_CH_OUT_DISABLE                (0x1UL)
+#define GTM_TOM_CH_ENABLE                     (0x2U)
+#define GTM_TOM_CH_OUT_ENABLE                 (0x2U)
+#define GTM_TOM_CH_DISABLE                    (0x1U)
+#define GTM_TOM_CH_OUT_DISABLE                (0x1U)
 #define GTM_TOM_BITS_PER_CHAN                 (0x2U)
 #define GTM_TOM_CH_SW_RESET                   (0x1U)
 #define GTM_TOM_TGC0                          (0x0U)
@@ -122,15 +121,15 @@
 #define GTM_DISABLE_RSTCN0_FUPD               (0x55555555U)
 #define GTM_RESTORE_RSTCN0_FUPD               (0x55555555U)
 #define GTM_TOM_CHAN_PER_SRN                  (0x2U)
-#define GTM_TOM_CH_STAT_NO_UPDATE             (0x0UL)
+#define GTM_TOM_CH_STAT_NO_UPDATE             (0x0U)
 
 /* Macros related to ATOM module */
 #define GTM_MAX_ATOM_CHANNELS                 (MCU_17_GTM_NO_OF_ATOM_MODULES * \
                                                 MCU_17_GTM_NO_OF_ATOM_CHANNELS)
-#define GTM_ATOM_CH_ENABLE                    (0x2UL)
-#define GTM_ATOM_CH_DISABLE                   (0x1UL)
-#define GTM_ATOM_CH_OUT_ENABLE                (0x2UL)
-#define GTM_ATOM_CH_OUT_DISABLE               (0x1UL)
+#define GTM_ATOM_CH_ENABLE                    (0x2U)
+#define GTM_ATOM_CH_DISABLE                   (0x1U)
+#define GTM_ATOM_CH_OUT_ENABLE                (0x2U)
+#define GTM_ATOM_CH_OUT_DISABLE               (0x1U)
 #define GTM_ATOM_CLR_PENDING_IRQ              (0x3U)
 #define GTM_ATOM_IRQ_EN_REG_MSK               (0x3U)
 #define GTM_ATOM_IRQ_MODE_POS                 (0x6U)
@@ -141,9 +140,9 @@
 #define GTM_ATOM_HOST_TRIGGER_ENABLE          (0x1U)
 #define GTM_ATOM_HOST_TRIGGER_DISABLE         (0x0U)
 #define GTM_ATOM_DISABLE_STAT_UPDATE          (0x0U)
-#define GTM_ATOM_CH_SW_RESET                  (0x1UL)
+#define GTM_ATOM_CH_SW_RESET                  (0x1U)
 #define GTM_ATOM_CHAN_PER_SRN                 (0x2U)
-#define GTM_ATOM_CH_STAT_NO_UPDATE            (0x0UL)
+#define GTM_ATOM_CH_STAT_NO_UPDATE            (0x0U)
 #define GTM_CHANNEL_NO_OFF                    (0x0U)
 #define GTM_MODULE_NO_OFF                     (0x8U)
 #define GTM_MODULE_NO_MASK                    (0x0000FF00U)
@@ -158,7 +157,7 @@
 
 /* Type definitions relating to GTM timer APIs */
 /*[cover parentID= {1AD85D3E-1AEA-4b06-87AE-6F486891194E}]*/
-typedef uint32 Mcu_17_Gtm_TimerOutType;
+typedef uint8 Mcu_17_Gtm_TimerOutType;
 #define MCU_GTM_TIMER_TOM                ((Mcu_17_Gtm_TimerOutType)0U)
 #define MCU_GTM_TIMER_ATOM               ((Mcu_17_Gtm_TimerOutType)1U)
 /*[/cover]*/
@@ -231,8 +230,7 @@ typedef struct
   uint32 TimChExtendedCtrlReg;
   uint32 TimChFltRisingEdge;
   uint32 TimChFltFallingEdge;
-  uint32 TimChTduvReg;
-  uint32 TimChIntEnMode;
+  uint8 TimChIntEnMode;
 } Mcu_17_Gtm_TimChConfigType;
 /*[/cover]*/
 
@@ -247,7 +245,8 @@ typedef struct
   uint32 TimerChCM1Reg;
   uint32 TimerChSR0Reg;
   uint32 TimerChSR1Reg;
-  uint32 TimerChIntEnMode;
+  uint32 TimerChPortOutConfig;
+  uint8 TimerChIntEnMode;
 } Mcu_17_Gtm_TomAtomChConfigType;
 /*[/cover]*/
 
@@ -386,9 +385,9 @@ typedef struct
 typedef struct
 {
   Mcu_17_Ccu6_TimerChIdentifierType TimerId;
-  uint32 IEnBitPos;
-  uint32 IEnLen;
-  uint32 RegVal;
+  uint8 IEnBitPos;
+  uint8 IEnLen;
+  uint8 RegVal;
 } Mcu_17_Ccu6_TimerChIntType;
 /*[/cover]*/
 
@@ -399,7 +398,7 @@ typedef uint8 Mcu_17_Gpt12_TimerBlockType;
 #define MCU_GPT12_GPT2_BLOCK             ((Mcu_17_Gpt12_TimerBlockType)2U)
 
 /*[cover parentID={C25405DB-6F2E-4d52-9143-FFFA96C1F04B}][/cover]*/
-typedef uint32 Mcu_17_Gpt12_TimerChIdentifierType;
+typedef uint8 Mcu_17_Gpt12_TimerChIdentifierType;
 #define MCU_GPT12_TIMER2             ((Mcu_17_Gpt12_TimerChIdentifierType)0U)
 #define MCU_GPT12_TIMER3             ((Mcu_17_Gpt12_TimerChIdentifierType)1U)
 #define MCU_GPT12_TIMER4             ((Mcu_17_Gpt12_TimerChIdentifierType)2U)
@@ -424,7 +423,7 @@ typedef struct
   Mcu_17_Gpt12_TimerChIdentifierType TimerId;
   uint32 TimerCtrlReg;
   uint32 TimerCntReg;
-  uint32 PortInSelReg;/* [3-2] - ISTxEUD , [1-0] - ISTxIN , [4-31] - Reserved*/
+  uint8 PortInSelReg;/* [3-2] - ISTxEUD , [1-0] - ISTxIN */
 } Mcu_17_Gpt12_TimerConfigType;
 /*[/cover]*/
 
@@ -433,7 +432,7 @@ typedef struct
 /*[cover parentID={CFCE01EB-5298-4ab1-A129-239258F61A6C}]*/
 typedef void (* const Mcu_17_Timer_CallbackFuncPtrType)
 (
-  uint32 LogicalChannelId,
+  uint8 LogicalChannelId,
   uint32 StatusFlags
 );
 /*[/cover]*/
@@ -452,7 +451,7 @@ typedef struct
 
 /* Type definitions relating to STM timer APIs */
 /*[cover parentID={ECB708E5-F0DC-43df-83E8-A008A7F046FA}][/cover]*/
-typedef uint32 Mcu_17_Stm_StmIdentifierType;
+typedef uint8 Mcu_17_Stm_StmIdentifierType;
 
 /*[cover parentID={02C8E207-B5A9-4794-B66B-43C02B11B8D0}][/cover]*/
 typedef uint8 Mcu_17_Stm_StmCmpIdentifierType;
@@ -518,8 +517,9 @@ typedef uint8 Mcu_17_Eru_SrcIdentifierType;
 **                      Global Function Declarations                          **
 *******************************************************************************/
 #define MCU_17_TIMERIP_START_SEC_CODE_ASIL_B_GLOBAL
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safeguard. It complies to Autosar guidelines. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: 'Mcu_MemMap.h' is header file which
+ * contains the memory sections for MCU_17_TIMERIP. It should not be guarded by
+ * standard include. No side effects foreseen by violating this MISRA rule. */
 #include "Mcu_MemMap.h"
 
 #if (MCU_GTM_USED == STD_ON)
@@ -2125,8 +2125,9 @@ extern void Mcu_17_Stm_ComparatorIntDisable
 );
 
 #define MCU_17_TIMERIP_STOP_SEC_CODE_ASIL_B_GLOBAL
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safeguard. It complies to Autosar guidelines. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: 'Mcu_MemMap.h' is header file which
+ * contains the memory sections for MCU_17_TIMERIP. It should not be guarded by
+ * standard include. No side effects foreseen by violating this MISRA rule. */
 #include "Mcu_MemMap.h"
 
 /*******************************************************************************
@@ -2391,3 +2392,4 @@ extern void Mcu_17_Eru_GatingIsr
 
 #endif
 /* End of #ifndef MCU_17_TIMERIP_H */
+

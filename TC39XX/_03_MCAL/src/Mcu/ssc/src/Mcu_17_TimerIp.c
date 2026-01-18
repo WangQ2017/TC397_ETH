@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2023)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,9 +12,9 @@
 **                                                                            **
 **  FILENAME     : Mcu_17_TimerIp.c                                           **
 **                                                                            **
-**  VERSION      : 49.0.0                                                     **
+**  VERSION      : 1.40.0_39.0.0                                              **
 **                                                                            **
-**  DATE         : 2023-05-22                                                 **
+**  DATE         : 2020-01-23                                                 **
 **                                                                            **
 **  VARIANT      : Variant PB                                                 **
 **                                                                            **
@@ -36,7 +36,6 @@
 **                      Includes                                              **
 *******************************************************************************/
 /*[cover parentID={F2756C3A-492E-44d2-8568-B4B9891F2239}][/cover]*/
-/* [cover parentID={F5CF0050-FA3F-4e14-8C3E-FD0E8CB08831}][/cover] */
 #include "Mcu.h"
 #include "Mcu_17_TimerIp.h"
 #include "Mcu_17_TimerIp_Local.h"
@@ -117,7 +116,7 @@
 
 /* Macros related to GTM timer user data table */
 #define GTM_USER_ID_MSK                         (0xFFU)
-#define GTM_LOG_CH_ID_MSK                       (0xFFFFU)
+#define GTM_LOG_CH_ID_MSK                       (0xFFU)
 #define GTM_LOG_CH_ID_BITPOS                    (0x8U)  /* Bit position 8 */
 
 
@@ -131,13 +130,21 @@
 #define GTM_TOM_MODULES_IN_ICM_REG              (0x2U)
 #define GTM_CHANNELS_PER_TOM_MODULE             (MCU_17_GTM_NO_OF_TOM_CHANNELS)
 
-#define GTM_OUTEN_ENDIS_CTRL_MSK                (0xFFFFFFFFU)
-#define GTM_TOM_EN_MSK                          (0x3U)
-#define GTM_ENDIS_OUTEN_BIT_INDEX               (0x3UL)
-#define GTM_ATOM_EN_MSK                         (0x3U)
-#define TOUTSEL_LEN                             (0x3U)
+#define TOUTSEL_LEN                              (0x3U)
 #define MCAL_SELx_TOUTSEL                       (0x8U)
+#define GTM_TOM_TGC_GLB_CTRL_RST_CH_LEN         (0x1)
+#define GTM_ATOM_AGC_GLB_CTRL_RST_CH_LEN        (0x1)
 #define GTM_TIM_RST_RST_CH_LEN                  (0x1)
+#define GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT_LEN   (0x2)
+#define GTM_TOM_TGC_ENDIS_CTRL_ENDIS_CTRL_LEN   (0x2)
+#define GTM_TOM_TGC_GLB_CTRL_UPEN_CTRL0_LEN     (0x2)
+#define GTM_ATOM_AGC_GLB_CTRL_UPEN_CTRL0_LEN    (0x2)
+#define GTM_TOM_TGC_OUTEN_STAT_OUTEN_STAT_LEN   (0x2)
+#define GTM_TOM_TGC_OUTEN_CTRL_OUTEN_CTRL_LEN   (0x2)
+#define GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL_LEN  (0x2)
+#define GTM_ATOM_AGC_ENDIS_CTRL_ENDIS_CTRL_LEN  (0x2)
+#define GTM_ATOM_AGC_OUTEN_STAT_OUTEN_STAT_LEN  (0x2)
+#define GTM_ATOM_AGC_OUTEN_CTRL_OUTEN_CTRL_LEN  (0x2)
 #define GTM_TIM_CH_CTRL_TIM_EN_LEN              (0x1)
 #define GTM_TOUTSEL_SELx_LEN                    (0x4)
 #define GTM_TIMINSEL_CHxSEL_LEN                 (0x4)
@@ -180,15 +187,6 @@
 #define CCU6_INP_CC6x_DEINIT_VAL                (0x0)
 #define CCU6_PISEL0_CC6x_DEINIT_VAL             (0x0)
 #define CCU6_T12MSEL_MSEL6x_DEINIT_VAL          (0x0)
-#define CCU6_PISEL2_ISCNTx_DEINIT_VAL           (0x0)
-#define CCU6_PISEL2_TxEXT_DEINIT_VAL            (0x0)
-#define CCU6_PISEL2_IST13HR_DEINIT_VAL          (0x0)
-#define CCU6_CMPSTAT_PS_BITS_DEINIT_VAL         (0x0)
-#define CCU6_CMPSTAT_COUT6xPS_DEINIT_VAL        (0x0)
-#define CCU6_CMPSTAT_T13IM_DEINIT_VAL           (0x0)
-#define CCU6_CMPMODIF_MCC6xS_DEINIT_VAL         (0x0)
-#define CCU6_CMPMODIF_MCC6xR_DEINIT_VAL         (0x1)
-#define CCU6_TCTR2_T12_DEINIT_VAL               (0x0)
 
 #define CCU6_TCTR0_T12CLK_LEN                   (0x3)
 #define CCU6_TCTR0_T12PRE_LEN                   (0x1)
@@ -244,38 +242,6 @@
 #define CCU6_IEN_RCC6xRF_LEN                    (0x2)
 #define CCU6_IEN_SINGLE_EDGE                    (0x1)
 #define CCU6_IEN_BOTH_EDGE                      (0x2)
-#define CCU6_TCTR2_T12SSC_LEN                   (0x1)
-#define CCU6_TCTR2_T12SSC_MSK                   (0x1U)
-#define CCU6_TCTR2_T12RSEL_LEN                  (0x2)
-#define CCU6_TCTR2_T12RSEL_MSK                  (0x3U)
-#define CCU6_PISEL2_ISCNT12_LEN                 (0x2)
-#define CCU6_PISEL2_ISCNT12_MSK                 (0x3U)
-#define CCU6_PISEL2_T12EXT_LEN                  (0x1)
-#define CCU6_PISEL2_T12EXT_MSK                  (0x1U)
-#define CCU6_PISEL2_ISCNT13_LEN                 (0x2)
-#define CCU6_PISEL2_T13EXT_LEN                  (0x1)
-#define CCU6_PISEL2_IST13HR_LEN                 (0x2)
-#define CCU6_CMPSTAT_COUT63PS_LEN               (0x1)
-#define CCU6_CMPSTAT_T13IM_LEN                  (0x1)
-#define CCU6_CMPSTAT_PS_BITS_LEN                (0x2)
-#define CCU6_CMPSTAT_PS_BITS_MSK                (0x2U)
-#define CCU6_CMPMODIF_MCC60S_LEN                (0x1)
-#define CCU6_CMPMODIF_MCC60R_LEN                (0x1)
-#define CCU6_CMPMODIF_MCC63S_LEN                (0x1)
-#define CCU6_CMPMODIF_MCC63R_LEN                (0x1)
-#define CCU6_IEN_ENT12OM_MSK                    (0x1u)
-#define CCU6_IEN_ENTRPF_MSK                     (0x1u)
-#define CCU6_IEN_ENCHE_MSK                      (0x1u)
-#define CCU6_IEN_ENWHE_MSK                      (0x1u)
-#define CCU6_IEN_ENIDLE_MSK                     (0x1u)
-#define CCU6_IEN_ENSTR_MSK                      (0x1u)
-#define CCU6_IEN_ENT12OM_LEN                    (0x1)
-#define CCU6_IEN_ENTRPF_LEN                     (0x1)
-#define CCU6_IEN_ENCHE_LEN                      (0x1)
-#define CCU6_IEN_ENWHE_LEN                      (0x1)
-#define CCU6_IEN_ENIDLE_LEN                     (0x1)
-#define CCU6_IEN_ENSTR_LEN                      (0x1)
-
 
 #define CCU6_T13_INT_PM_CM_MSK                  (0x300U)
 #define CCU6_T12_INT_PM_MSK                     (0x80U)
@@ -285,7 +251,6 @@
 #define CCU6_COMPARATOR_BITLEN                  (0x2U)
 #define CCU6_BIT_CLEAR                          (0x0U)
 #define CCU6_KERNEL_ENABLE                      (0x0U)
-#define CCU6_BIT_SET                            (0x1U)
 
 #define CCU6_USER_ID_MSK                        (0xFFU)
 #define CCU6_ISR_STS_LEN                        (0x5U)
@@ -376,10 +341,23 @@
 /*******************************************************************************
 **                      Private Constant Definitions                          **
 *******************************************************************************/
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
 /*[cover parentID={5713A17A-3FA1-427f-A0B6-89125A17689A}][/cover]*/
 #define MCU_17_TIMERIP_START_SEC_CONST_ASIL_B_GLOBAL_UNSPECIFIED
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safeguard. It complies to Autosar guidelines. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: 'Mcu_MemMap.h' is header file which
+ * contains the memory sections for Timer IP APIs. It should not be guarded by
+ * standard include. No side effects foreseen by violating this MISRA rule. */
+/* MISRA2012_RULE_20_1_JUSTIFICATION: 'Mcu_17_Timer_DrivFuncCallbackLst'
+ * declared before MemMap header file. This variable needs to be placed in a
+ * appropriate memory section. No side effects foreseen by violating
+ * this MISRA rule */
 #include "Mcu_MemMap.h"
 
 static const Mcu_17_Timer_CallbackFuncPtrType \
@@ -390,6 +368,9 @@ Mcu_17_Timer_DrivFuncCallbackLst[TIMER_NO_OF_CALLBACK] =
 
   /* WDG driver callback notification */
   #if (MCU_17_TIMERIP_WDG_USER == STD_ON)
+  /* MISRA2012_RULE_11_1_JUSTIFICATION: 'Wdg_17_Scu_Isr' API arguments are
+   * defined with module specific data types but are basically uint8 and uint32.
+   * No side effects foreseen by violating this MISRA rule */
   &Wdg_17_Scu_Isr,
   #else
   NULL_PTR,
@@ -397,6 +378,9 @@ Mcu_17_Timer_DrivFuncCallbackLst[TIMER_NO_OF_CALLBACK] =
 
   /* PWM driver callback notification */
   #if (MCU_17_TIMERIP_PWM_USER == STD_ON)
+  /* MISRA2012_RULE_11_1_JUSTIFICATION: 'Pwm_17_GtmCcu6_Isr' API arguments are
+   * defined with module specific data types but are basically uint8 and uint32.
+   * No side effects foreseen by violating this MISRA rule */
   &Pwm_17_GtmCcu6_Isr,
   #else
   NULL_PTR,
@@ -404,6 +388,9 @@ Mcu_17_Timer_DrivFuncCallbackLst[TIMER_NO_OF_CALLBACK] =
 
   /* GPT driver callback notification */
   #if (MCU_17_TIMERIP_GPT_USER == STD_ON)
+  /* MISRA2012_RULE_11_1_JUSTIFICATION: 'Gpt_Isr' API arguments are
+   * defined with module specific data types but are basically uint8 and uint32.
+   * No side effects foreseen by violating this MISRA rule */
   &Gpt_Isr,
   #else
   NULL_PTR,
@@ -411,6 +398,9 @@ Mcu_17_Timer_DrivFuncCallbackLst[TIMER_NO_OF_CALLBACK] =
 
   /* ICU driver callback notification */
   #if (MCU_17_TIMERIP_ICU_USER == STD_ON)
+  /* MISRA2012_RULE_11_1_JUSTIFICATION: 'Icu_17_TimerIp_Timer_Isr' API arguments
+   * are defined with module specific data types but are basically uint8 and
+   * uint32. No side effects foreseen by violating this MISRA rule */
   &Icu_17_TimerIp_Timer_Isr,
   #else
   NULL_PTR,
@@ -425,8 +415,8 @@ Mcu_17_Timer_DrivFuncCallbackLst[TIMER_NO_OF_CALLBACK] =
 
   /* DSADC driver callback notification */
   #if (MCU_17_TIMERIP_DSADC_USER == STD_ON)
-  /* MISRA2012_RULE_11_1_JUSTIFICATION: 'Dsadc_TimerIsr' API arguments are
-   * defined with module specific data types but are basically uint32.
+  /* MISRA2012_RULE_11_1_JUSTIFICATION: 'Stm_Isr' API arguments are
+   * defined with module specific data types but are basically uint8 and uint32.
    * No side effects foreseen by violating this MISRA rule */
   &Dsadc_TimerIsr,
   #else
@@ -435,6 +425,9 @@ Mcu_17_Timer_DrivFuncCallbackLst[TIMER_NO_OF_CALLBACK] =
 
   /* STM driver callback notification */
   #if (MCU_17_TIMERIP_STM_USER == STD_ON)
+  /* MISRA2012_RULE_11_1_JUSTIFICATION: 'Stm_Isr' API arguments are
+   * defined with module specific data types but are basically uint8 and uint32.
+   * No side effects foreseen by violating this MISRA rule */
   &Stm_Isr,
   #else
   NULL_PTR,
@@ -496,11 +489,23 @@ Mcu_17_Gpt12_TimerCtrlReg[MCU_17_GPT12_NO_OF_TIMERS] =
    * by violating this MISRA rule. */
 };
 
+
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
 #define MCU_17_TIMERIP_STOP_SEC_CONST_ASIL_B_GLOBAL_UNSPECIFIED
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safeguard. It complies to Autosar guidelines. */
-/* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header usage as per Autosar
-   guideline. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: 'Mcu_MemMap.h' is header file which
+ * contains the memory sections for Timer IP APIs. It should not be guarded by
+ * standard include. No side effects foreseen by violating this MISRA rule. */
+/* MISRA2012_RULE_20_1_JUSTIFICATION: 'Mcu_17_Gpt12_TimerCtrlReg'
+ * declared before MemMap header file. This variable needs to be placed in a
+ * appropriate memory section. No side effects foreseen by violating
+ * this MISRA rule */
 #include "Mcu_MemMap.h"
 
 
@@ -515,10 +520,13 @@ Mcu_17_Gpt12_TimerCtrlReg[MCU_17_GPT12_NO_OF_TIMERS] =
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
 #define MCU_17_TIMERIP_START_SEC_VAR_INIT_ASIL_B_GLOBAL_32
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safeguard. It complies to Autosar guidelines. */
-/* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header usage as per Autosar
-   guideline. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: 'Mcu_MemMap.h' is header file which
+* contains the memory sections for Timer IP APIs. It should not be guarded by
+* standard include. No side effects foreseen by violating this MISRA rule. */
+/* MISRA2012_RULE_20_1_JUSTIFICATION: variable 'Mcu_17_Tgc_LockAddress' and
+ * 'Mcu_17_Agc_LockAddress' declared before MemMap header file. This variable
+ * needs to be placed in appropriate memory section. No side effects foreseen
+ * by violating this MISRA rule */
 #include "Mcu_MemMap.h"
 /* MISRA2012_RULE_8_9_JUSTIFICATION: No side effects foreseen
  * by violating this MISRA rule, as the variable is accessed via pointer by
@@ -594,10 +602,13 @@ static uint32 Mcu_17_Agc_LockAddress[MCU_17_GTM_NO_OF_ATOM_MODULES]   =
 /* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
   in generated code due to Autosar Naming constraints.*/
 #define MCU_17_TIMERIP_STOP_SEC_VAR_INIT_ASIL_B_GLOBAL_32
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safeguard. It complies to Autosar guidelines. */
-/* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header usage as per Autosar
-   guideline. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: 'Mcu_MemMap.h' is header file which
+ * contains the memory sections for Timer IP APIs. It should not be guarded by
+ * standard include. No side effects foreseen by violating this MISRA rule. */
+/* MISRA2012_RULE_20_1_JUSTIFICATION: variable 'Mcu_17_Tgc_LockAddress' and
+ * 'Mcu_17_Agc_LockAddress' declared before MemMap header file. This variable
+ * needs to be placed in appropriate memory section. No side effects foreseen
+ * by violating this MISRA rule */
 #include "Mcu_MemMap.h"
 #endif
 /* End of #if (MCU_GTM_USED == STD_ON) */
@@ -609,10 +620,19 @@ static uint32 Mcu_17_Agc_LockAddress[MCU_17_GTM_NO_OF_ATOM_MODULES]   =
 **                      Private Function Declarations                         **
 *******************************************************************************/
 #if (MCU_GTM_USED == STD_ON)
-    
+
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
 #define MCU_17_TIMERIP_START_SEC_CODE_ASIL_B_GLOBAL
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safeguard. It complies to Autosar guidelines. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: 'Mcu_MemMap.h' is header file which
+ * contains the memory sections for Timer IP APIs. It should not be guarded by
+ * standard include. No side effects foreseen by violating this MISRA rule. */
 /* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header included as per Autosar
    guidelines. */
 #include "Mcu_MemMap.h"
@@ -632,9 +652,18 @@ LOCAL_INLINE uint8 Mcu_17_Gtm_lGetIntSource(const uint32 Value, \
 LOCAL_INLINE uint32* Mcu_17_lGetLockAddress(const uint8 Module, \
     const uint8 Index, const Mcu_17_Gtm_TimerOutType TimerType);
 
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
 #define MCU_17_TIMERIP_STOP_SEC_CODE_ASIL_B_GLOBAL
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safeguard. It complies to Autosar guidelines. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: 'Mcu_MemMap.h' is header file which
+ * contains the memory sections for Timer IP APIs. It should not be guarded by
+ * standard include. No side effects foreseen by violating this MISRA rule. */
 /* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header included as per Autosar
    guidelines. */
 #include "Mcu_MemMap.h"
@@ -653,9 +682,18 @@ LOCAL_INLINE uint32* Mcu_17_lGetLockAddress(const uint8 Module, \
 /*******************************************************************************
 **                      Global Function Definitions                           **
 *******************************************************************************/
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
 #define MCU_17_TIMERIP_START_SEC_CODE_ASIL_B_GLOBAL
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safeguard. It complies to Autosar guidelines. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: 'Mcu_MemMap.h' is header file which
+ * contains the memory sections for Timer IP APIs. It should not be guarded by
+ * standard include. No side effects foreseen by violating this MISRA rule. */
 /* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header included as per Autosar
    guidelines. */
 #include "Mcu_MemMap.h"
@@ -695,11 +733,11 @@ void Mcu_17_Gtm_TomChannelInit
 
   Ifx_GTM_TOM_CH* TomChannelRegPtr;
   /* Retrieve the TOM module index value */
-  Module = (uint8)((ConfigPtr->TimerId & GTM_MODULE_NO_MASK) >>
+  Module = (uint8)((ConfigPtr->TimerId & GTM_MODULE_NO_MASK) >> \
                    GTM_MODULE_NO_OFF);
 
   /* Retrieve the TOM module channel number */
-  Channel = (uint8)((ConfigPtr->TimerId & GTM_CHANNEL_NO_MASK) >>
+  Channel = (uint8)((ConfigPtr->TimerId & GTM_CHANNEL_NO_MASK) >> \
                     GTM_CHANNEL_NO_OFF);
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
@@ -707,7 +745,9 @@ void Mcu_17_Gtm_TomChannelInit
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
-
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * channels. Since the Module and channel values are
+   * validated by the user, no side effects are foreseen */
   TomChannelRegPtr = GTM_TOM_CH_POINTER((uint8)Module, Channel);
 
   /* Clear any pending interrupts associated with TOM channel register */
@@ -715,7 +755,7 @@ void Mcu_17_Gtm_TomChannelInit
 
   /* Disable all TOM interrupts */
   TomChannelRegPtr->IRQ.EN.U = GTM_TOM_REG_RESET;
-
+  
   /* Configure the TOM Channel control register */
   TomChannelRegPtr->CTRL.U = ConfigPtr->TimerChCtrlReg;
 
@@ -735,12 +775,12 @@ void Mcu_17_Gtm_TomChannelInit
   TomChannelRegPtr->SR1.U = ConfigPtr->TimerChSR1Reg;
 
   /* Configure the Interrupt mode of  TOM Channel register */
-  TomChannelRegPtr->IRQ.MODE.U = ((ConfigPtr->TimerChIntEnMode >>
-                                    GTM_TOM_IRQ_MODE_POS) &
+  TomChannelRegPtr->IRQ.MODE.U = (((uint32)ConfigPtr->TimerChIntEnMode >> 
+                                    GTM_TOM_IRQ_MODE_POS) & 
                                   (uint32)IFX_GTM_TOM_CH_IRQ_MODE_IRQ_MODE_MSK);
 
   /* Enable the interrupts associated with TOM Channel register */
-  TomChannelRegPtr->IRQ.EN.U = (ConfigPtr->TimerChIntEnMode &
+  TomChannelRegPtr->IRQ.EN.U = ((uint32)ConfigPtr->TimerChIntEnMode & 
                                (uint32)GTM_TOM_IRQ_EN_REG_MSK);
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
@@ -793,14 +833,17 @@ void Mcu_17_Gtm_TomChannelShadowTransfer
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Calculate the value to disable force update of CM0, CM1 and CRK_SRC
    * registers for the input TOM channel
    */
 
-  FupdDisableCh = ((uint32)GTM_TOM_FORCE_UPDATE_DISABLE <<
-                   ((uint32)GTM_TOM_BITS_PER_CHAN *
+  FupdDisableCh = ((uint32)GTM_TOM_FORCE_UPDATE_DISABLE << \
+                   ((uint32)GTM_TOM_BITS_PER_CHAN * \
                     (uint32)((uint32)Channel & GTM_TGC_CHANNEL_MASK)));
 
   /* Get the Lock address */
@@ -837,9 +880,10 @@ void Mcu_17_Gtm_TomChannelShadowTransfer
 
   /* Enable force update of CM0, CM1 and CRK_SRC registers for the
    * input TOM channel */
-  TomTgcRegPtr->TGC_FUPD_CTRL.U = ((uint32)GTM_TOM_FORCE_UPDATE_ENABLE <<
-                                   ((uint32)GTM_TOM_BITS_PER_CHAN *
-                             (uint32)((uint32)Channel & GTM_TGC_CHANNEL_MASK)));
+  TomTgcRegPtr->TGC_FUPD_CTRL.U = \
+                                  ((uint32)GTM_TOM_FORCE_UPDATE_ENABLE << \
+                                   ((uint32)GTM_TOM_BITS_PER_CHAN * \
+                                    (uint32)((uint32)Channel & GTM_TGC_CHANNEL_MASK)));
 
   /* Initiate Host trigger to update of CM0, CM1 and CLK_SRC
    * registers from their respective shadow registers.*/
@@ -918,10 +962,10 @@ void Mcu_17_Gtm_TomChannelDeInit
 )
 {
   Ifx_GTM_TOM_CH * TomChannelRegPtr; /* Pointer to TOM channel Register */
-  Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
+  const Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
   uint32* LockAddr;
   uint8 TomTgcIndex = (Channel >> GTM_TGC_DIVIDER);
-  uint8 BitPos = ((uint8)IFX_GTM_TOM_TGC_GLB_CTRL_RST_CH0_OFF +
+  uint8 BitPos = ((uint8)IFX_GTM_TOM_TGC_GLB_CTRL_RST_CH0_OFF + \
                   (Channel & GTM_TGC_CHANNEL_MASK));
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
@@ -929,6 +973,9 @@ void Mcu_17_Gtm_TomChannelDeInit
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * channels. Since the Module and channel values are
+   * validated by the user, no side effects are foreseen */
   TomChannelRegPtr = GTM_TOM_CH_POINTER(Module, Channel);
 
   /* Clear any pending interrupts associated with TOM channel register */
@@ -939,6 +986,9 @@ void Mcu_17_Gtm_TomChannelDeInit
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Get the Lock address */
@@ -961,7 +1011,12 @@ void Mcu_17_Gtm_TomChannelDeInit
   /* [cover parentID={D66BA7C5-46C9-4cea-AAB0-A0604DC11283}]
    * Reset the desired TOM channel through Global control
    * [/cover] */
-  TomTgcRegPtr->TGC_GLB_CTRL.U = (0x1UL << BitPos);
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_GLB_CTRL.U), \
+                    BitPos, \
+                    GTM_TOM_TGC_GLB_CTRL_RST_CH_LEN, \
+                    GTM_TOM_CH_SW_RESET);
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release spinlock */
   /* [cover parentID={16B69607-E141-474d-8DF9-F3C321AA4641}]
@@ -976,6 +1031,13 @@ void Mcu_17_Gtm_TomChannelDeInit
   SchM_Exit_Mcu_TomTgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -1018,11 +1080,10 @@ void Mcu_17_Gtm_TomChannelEnable
   const Mcu_17_Gtm_TimerOutputEnableType TimerOutputEn
 )
 {
-  Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
+  const Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
   uint32* LockAddr;
-  uint32 EndisCtrlVal, OutEnCtrlVal, RegMaskVal;
   uint8 TomTgcIndex = (Channel >> GTM_TGC_DIVIDER);
-  uint8 BitPos =     ((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN *
+  uint8 BitPos =      ((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN * \
                        (Channel & GTM_TGC_CHANNEL_MASK));
   uint8 OutputState = GTM_BIT_SET << TimerOutputEn;
 
@@ -1033,6 +1094,9 @@ void Mcu_17_Gtm_TomChannelEnable
 
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Get the Lock address */
@@ -1056,25 +1120,35 @@ void Mcu_17_Gtm_TomChannelEnable
   /* [cover parentID={10B600EE-6DA4-44a9-A02C-F901507AE148}]
    * Enable TOM channel in Enable/Disable Status and then in
    * Enable/Disable control [/cover]*/
-  TomTgcRegPtr->TGC_ENDIS_STAT.U = (GTM_TOM_CH_ENABLE << BitPos);
-
-  RegMaskVal = GTM_OUTEN_ENDIS_CTRL_MSK ^ (GTM_ENDIS_OUTEN_BIT_INDEX << BitPos);
-  EndisCtrlVal = (GTM_TOM_CH_STAT_NO_UPDATE << BitPos);
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_ENDIS_STAT.U),
+                    BitPos,
+                    GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT_LEN, \
+                    GTM_TOM_CH_ENABLE);
 
   /* Write value 0x0 into TOM channel bit-field in ENDIS_CTRL register,
    * which prevents any update from ENDIS_CTRL to ENDIS_STAT
    * on an update trigger*/
-  TomTgcRegPtr->TGC_ENDIS_CTRL.U = RegMaskVal | EndisCtrlVal;
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_ENDIS_CTRL.U), \
+                    BitPos, \
+                    GTM_TOM_TGC_ENDIS_CTRL_ENDIS_CTRL_LEN, \
+                    GTM_TOM_CH_STAT_NO_UPDATE);
 
   /* Enable or disable the TOM channel output in OUTEN_STAT register*/
-  TomTgcRegPtr->TGC_OUTEN_STAT.U = ((uint32)OutputState << BitPos);
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_OUTEN_STAT.U), \
+                    BitPos, \
+                    GTM_TOM_TGC_OUTEN_STAT_OUTEN_STAT_LEN, \
+                    OutputState);
 
-  OutEnCtrlVal = (GTM_TOM_CH_STAT_NO_UPDATE << BitPos);
   /* Write value 0x0 into TOM channel bit-field in OUTEN_CTRL register, which
    * prevents any update from OUTEN_CTRL to OUTEN_STAT on an update trigger*/
-  TomTgcRegPtr->TGC_OUTEN_CTRL.U = RegMaskVal | OutEnCtrlVal;
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_OUTEN_CTRL.U), \
+                    BitPos, \
+                    GTM_TOM_TGC_OUTEN_CTRL_OUTEN_CTRL_LEN, \
+                    GTM_TOM_CH_STAT_NO_UPDATE);
   /*[/cover]*/
   /*[/cover]*/
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
    /* Release Spinlock */
   /* [cover parentID={FFD916B1-1611-42fd-B84D-2DB75DAF6A45}]
@@ -1087,6 +1161,11 @@ void Mcu_17_Gtm_TomChannelEnable
    * Exit Critical section
    * [/cover] */
   SchM_Exit_Mcu_TomTgcReg();
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -1123,11 +1202,10 @@ void Mcu_17_Gtm_TomChannelDisable
   const uint8 Channel
 )
 {
-  Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
+  const Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
   uint32* LockAddr;
-  uint32 EndisCtrlVal, OutEnCtrlVal, RegMaskVal;
   uint8 TomTgcIndex = (Channel >> GTM_TGC_DIVIDER);
-  uint8 BitPos =      ((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN *
+  uint8 BitPos =      ((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN * \
                        (Channel & GTM_TGC_CHANNEL_MASK));
 
 
@@ -1137,6 +1215,9 @@ void Mcu_17_Gtm_TomChannelDisable
 
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Get the Lock address */
@@ -1160,24 +1241,35 @@ void Mcu_17_Gtm_TomChannelDisable
   /* [cover parentID={73F56B33-B588-4649-8261-C72B967621D0}]
    * Disable TOM channel in Enable/Disable Status and
    * then in Enable/Disable control [/cover]*/
-  TomTgcRegPtr->TGC_ENDIS_STAT.U = (GTM_TOM_CH_DISABLE << BitPos);
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_ENDIS_STAT.U),
+                    BitPos,
+                    GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT_LEN, \
+                    GTM_TOM_CH_DISABLE);
 
   /* Disable the TOM channel output in OUTEN_STAT register*/
-  TomTgcRegPtr->TGC_OUTEN_STAT.U = (GTM_TOM_CH_OUT_DISABLE << BitPos);
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_OUTEN_STAT.U), \
+                    BitPos, \
+                    GTM_TOM_TGC_OUTEN_STAT_OUTEN_STAT_LEN, \
+                    GTM_TOM_CH_OUT_DISABLE);
 
-  RegMaskVal = GTM_OUTEN_ENDIS_CTRL_MSK ^ (GTM_ENDIS_OUTEN_BIT_INDEX << BitPos);
-  EndisCtrlVal = (GTM_TOM_CH_STAT_NO_UPDATE << BitPos);
   /* Write value 0x0 into TOM channel bit-field in ENDIS_CTRL register,
    *  which prevents any update from ENDIS_CTRL to ENDIS_STAT on an update
    *  trigger*/
-  TomTgcRegPtr->TGC_ENDIS_CTRL.U = RegMaskVal | EndisCtrlVal;
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_ENDIS_CTRL.U), \
+                    BitPos, \
+                    GTM_TOM_TGC_ENDIS_CTRL_ENDIS_CTRL_LEN, \
+                    GTM_TOM_CH_STAT_NO_UPDATE);
 
-  OutEnCtrlVal = (GTM_TOM_CH_STAT_NO_UPDATE << BitPos);
   /* Write value 0x0 into TOM channel bit-field in OUTEN_CTRL register, which
    *  prevents any update from OUTEN_CTRL to OUTEN_STAT on an update trigger*/
-  TomTgcRegPtr->TGC_OUTEN_CTRL.U = RegMaskVal | OutEnCtrlVal;
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_OUTEN_CTRL.U), \
+                    BitPos, \
+                    GTM_TOM_TGC_OUTEN_CTRL_OUTEN_CTRL_LEN, \
+                    GTM_TOM_CH_STAT_NO_UPDATE);
   /*[/cover]*/
   /*[/cover]*/
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release Spinlock */
   /* [cover parentID={FCF26CD2-86F2-4e9e-BA3C-F7D1BFEA86E9}]
@@ -1192,6 +1284,11 @@ void Mcu_17_Gtm_TomChannelDisable
   SchM_Exit_Mcu_TomTgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -1236,7 +1333,7 @@ Mcu_17_Gtm_TimerStatusType Mcu_17_Gtm_IsTomChannelEnabled
   uint8 TomChStatus;
   uint8 TomTgcIndex = (Channel >> GTM_TGC_DIVIDER);
 
-  uint8 BitPos = (((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN)*
+  uint8 BitPos = (((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN)* \
                   (Channel & GTM_TGC_CHANNEL_MASK));
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
@@ -1245,14 +1342,20 @@ Mcu_17_Gtm_TimerStatusType Mcu_17_Gtm_IsTomChannelEnabled
 
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Obtain the channel enabled status from ENDIS_STAT register
    * 0x2 - Channel enabled
    * 0x1 - Channel disabled
    */
-  TomChStatus = (uint8)((TomTgcRegPtr->TGC_ENDIS_STAT.U >> BitPos) &
-                         GTM_TOM_EN_MSK);
+  TomChStatus = (uint8)Mcal_GetBitAtomic
+                ( \
+                  TomTgcRegPtr->TGC_ENDIS_STAT.U,
+                  BitPos,
+                  GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT_LEN);
 
   /* Right shift by 1U to fit into return format
    * 0x1 - Channel enabled/running
@@ -1300,6 +1403,7 @@ void Mcu_17_Gtm_TomTriggerRequest
 {
   Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
   uint32*            LockAddr;
+  uint32  FupdCtrlBackup;
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule, as the pointer to the object type
@@ -1307,6 +1411,9 @@ void Mcu_17_Gtm_TomTriggerRequest
 
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Get the Lock address */
@@ -1326,11 +1433,15 @@ void Mcu_17_Gtm_TomTriggerRequest
    * [/cover] */
   Mcal_GetSpinlock(LockAddr, GTM_SPINLOCK_TIMEOUT);
 
+  FupdCtrlBackup = TomTgcRegPtr->TGC_FUPD_CTRL.U;
   /* [cover parentID={C76861C2-8DFC-43ad-84D6-3309F5091DA5}]
    * Update the Enable/Disable control register and give a Host trigger*/
-  TomTgcRegPtr->TGC_ENDIS_CTRL.U = (uint32)TriggerChannels;
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_ENDIS_CTRL.U), 0, 16, TriggerChannels);
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_FUPD_CTRL.U), 0, 16, TriggerChannels);
 
-  /* Initiate Host trigger to update ENDIS_STAT and OUTEN_STAT registers*/
+  /* Initiate Host trigger to update of CM0, CM1 and CLK_SRC registers
+   * from their respective shadow registers. Also ENDIS_STAT and OUTEN_STAT
+   * are also updated */
   (TomTgcRegPtr->TGC_GLB_CTRL.U) |= GTM_TOM_HOST_TRIGGER_ENABLE;
   /*[/cover] */
   /* A delay is provided to allow the update of CM0, CM1 and CLK_SRC registers
@@ -1339,6 +1450,8 @@ void Mcu_17_Gtm_TomTriggerRequest
   NOP();
   NOP();
 
+  TomTgcRegPtr->TGC_FUPD_CTRL.U = (uint32)(FupdCtrlBackup ^ \
+                                  (uint32)GTM_RESTORE_RSTCN0_FUPD);
   /* Release Spinlock */
   /* [cover parentID={FD74998E-9641-43c7-AD70-831F80409E48}]
    * Release Spin Lock
@@ -1354,6 +1467,11 @@ void Mcu_17_Gtm_TomTriggerRequest
 
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_7_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -1371,7 +1489,7 @@ void Mcu_17_Gtm_TomTriggerRequest
 **                                                                            **
 ** Sync/Async       : Synchronous                                             **
 **                                                                            **
-** Reentrancy       : Reentrant for different channels                        **
+** Reentrancy       : Reentrant for other channels                            **
 **                                                                            **
 ** Parameters(in)   : ConfigPtr - Pointer to configuration data of a TOM      **
 **                    channel                                                 **
@@ -1403,14 +1521,14 @@ Std_ReturnType Mcu_17_Gtm_TomChInitCheck
   CmpFlag = 0xFFFFFFFFU;
 
   /* Retrieve the TOM module index value */
-  Module = (uint8)((ConfigPtr->TimerId & GTM_MODULE_NO_MASK) >>
+  Module = (uint8)((ConfigPtr->TimerId & GTM_MODULE_NO_MASK) >> \
                    GTM_MODULE_NO_OFF);
 
   /* Retrieve the TOM module channel number */
-  Channel = (uint8)((ConfigPtr->TimerId & GTM_CHANNEL_NO_MASK) >>
+  Channel = (uint8)((ConfigPtr->TimerId & GTM_CHANNEL_NO_MASK) >> \
                     GTM_CHANNEL_NO_OFF);
 
-  BitPos  = ((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN *
+  BitPos  = ((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN * \
              (Channel & GTM_TGC_CHANNEL_MASK));
 
   TomTgcIndex = (Channel / (uint8)GTM_TOM_CH_PER_TGC);
@@ -1421,6 +1539,9 @@ Std_ReturnType Mcu_17_Gtm_TomChInitCheck
 
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * channels. Since the Module and channel values are
+   * validated by the user, no side effects are foreseen */
   TomChannelRegPtr = GTM_TOM_CH_POINTER((uint8)Module, Channel);
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
@@ -1428,6 +1549,9 @@ Std_ReturnType Mcu_17_Gtm_TomChInitCheck
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Verify CTRL register's contents are as per configuration */
@@ -1436,8 +1560,8 @@ Std_ReturnType Mcu_17_Gtm_TomChInitCheck
   CmpFlag &= ~(SfrVal ^ ConfigVal);
 
   /* Verify CN0 register's contents if Timer is not enabled */
-  TomChStatus = (uint8)((TomTgcRegPtr->TGC_ENDIS_STAT.U >> BitPos) &
-                         GTM_TOM_EN_MSK);
+  TomChStatus = (uint8)Mcal_GetBitAtomic(TomTgcRegPtr->TGC_ENDIS_STAT.U, \
+                                         BitPos, GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT_LEN);
 
   /* [cover parentID={C1BE73A3-0B84-4c8a-84D0-A47D0A1D5078}]
      * Is channel enabled
@@ -1471,13 +1595,14 @@ Std_ReturnType Mcu_17_Gtm_TomChInitCheck
 
   /* Verify IRQ_MODE register's contents are as per configuration */
   SfrVal = (uint32)TomChannelRegPtr->IRQ.MODE.U;
-  ConfigVal = ((ConfigPtr->TimerChIntEnMode >> GTM_TOM_IRQ_MODE_POS)
+  ConfigVal = (((uint32)
+                ConfigPtr->TimerChIntEnMode >> GTM_TOM_IRQ_MODE_POS) \
                & (uint32)IFX_GTM_TOM_CH_IRQ_MODE_IRQ_MODE_MSK);
   CmpFlag &= ~(SfrVal ^ ConfigVal);
 
   /* Verify IRQ_EN register's contents against configuration */
   SfrVal = (uint32)TomChannelRegPtr->IRQ.EN.U;
-  ConfigVal = (ConfigPtr->TimerChIntEnMode
+  ConfigVal = ((uint32)ConfigPtr->TimerChIntEnMode\
                & (uint32)GTM_TOM_IRQ_EN_REG_MSK);
   CmpFlag &= ~(SfrVal ^ ConfigVal);
 
@@ -1528,21 +1653,24 @@ void Mcu_17_Gtm_TomChUpdateEnDis
   const Mcu_17_Gtm_TimerUpdateEnableType UpEnVal
 )
 {
-  Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
+  const Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
   uint32* LockAddr;
   uint8 TomTgcIndex = (Channel >> GTM_TGC_DIVIDER);
 
-  uint8 BitPos =  (((uint8)IFX_GTM_TOM_TGC_GLB_CTRL_UPEN_CTRL0_LEN *
-                    (Channel & GTM_TGC_CHANNEL_MASK)) +
+  uint8 BitPos =  (((uint8)IFX_GTM_TOM_TGC_GLB_CTRL_UPEN_CTRL0_LEN * \
+                    (Channel & GTM_TGC_CHANNEL_MASK)) + \
                    IFX_GTM_TOM_TGC_GLB_CTRL_UPEN_CTRL0_OFF);
 
-  uint32 UpenValue = ((uint32)GTM_BIT_SET << (uint32)UpEnVal);
+  uint8 UpenValue = GTM_BIT_SET << UpEnVal;
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule, as the pointer to the object type
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Get the Lock address */
@@ -1566,7 +1694,12 @@ void Mcu_17_Gtm_TomChUpdateEnDis
   /* [cover parentID={59E849F1-5421-4118-BF10-213DD1D871BA}]
    * Enable TOM channel in Global control register
    * [/cover] */
-  TomTgcRegPtr->TGC_GLB_CTRL.U = (UpenValue << BitPos);
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_GLB_CTRL.U),
+                    BitPos,
+                    GTM_TOM_TGC_GLB_CTRL_UPEN_CTRL0_LEN, \
+                    UpenValue);
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release Spinlock */
   /* [cover parentID={73631CD7-801C-4de0-BCFE-1AB9DEB06463}]
@@ -1581,6 +1714,11 @@ void Mcu_17_Gtm_TomChUpdateEnDis
   SchM_Exit_Mcu_TomTgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -1619,11 +1757,10 @@ void Mcu_17_Gtm_TomChOutEnCtrlUpdate
   const Mcu_17_Gtm_TimerOutputEnTriggerType TimerOutputEnDis
 )
 {
-  Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
+  const Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
   uint32* LockAddr;
-  uint32 OutEnCtrlVal, RegMaskVal;
   uint8 TomTgcIndex = (Channel >> GTM_TGC_DIVIDER);
-  uint8 BitPos      = ((uint8)IFX_GTM_TOM_TGC_OUTEN_CTRL_OUTEN_CTRL0_LEN *
+  uint8 BitPos      = ((uint8)IFX_GTM_TOM_TGC_OUTEN_CTRL_OUTEN_CTRL0_LEN * \
                        (Channel & GTM_TGC_CHANNEL_MASK));
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
@@ -1631,6 +1768,9 @@ void Mcu_17_Gtm_TomChOutEnCtrlUpdate
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Get the Lock address */
@@ -1650,14 +1790,17 @@ void Mcu_17_Gtm_TomChOutEnCtrlUpdate
    * [/cover] */
   Mcal_GetSpinlock(LockAddr, GTM_SPINLOCK_TIMEOUT);
 
-  RegMaskVal = GTM_OUTEN_ENDIS_CTRL_MSK ^ (GTM_ENDIS_OUTEN_BIT_INDEX << BitPos);
-  OutEnCtrlVal = ((uint32)(TimerOutputEnDis) << BitPos);
   /* Write value 0x0 into TOM channel bit-field in OUTEN_CTRL register, which
    * prevents any update from OUTEN_CTRL to OUTEN_STAT on an update trigger*/
   /* [cover parentID={FA4F4A5E-7A69-4f7e-9795-34DE8C276FE2}]
    * Update Output Enable control register
    * [/cover] */
-  TomTgcRegPtr->TGC_OUTEN_CTRL.U = RegMaskVal | OutEnCtrlVal;
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_OUTEN_CTRL.U), \
+                    BitPos, \
+                    GTM_TOM_TGC_OUTEN_CTRL_OUTEN_CTRL_LEN, \
+                    TimerOutputEnDis);
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release Spinlock */
   /* [cover parentID={FA574E99-4539-46d7-86FD-A704F88A1944}]
@@ -1672,6 +1815,15 @@ void Mcu_17_Gtm_TomChOutEnCtrlUpdate
   SchM_Exit_Mcu_TomTgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
+  /* MISRA2012_RULE_2_7_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -1709,10 +1861,10 @@ void Mcu_17_Gtm_TomChOutEnStatUpdate
   const Mcu_17_Gtm_TimerOutputEnableType TimerOutputEnDis
 )
 {
-  Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
+  const Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
   uint32* LockAddr;
   uint8 TomTgcIndex = (Channel >> GTM_TGC_DIVIDER);
-  uint8 BitPos      = ((uint8)IFX_GTM_TOM_TGC_OUTEN_STAT_OUTEN_STAT0_LEN *
+  uint8 BitPos      = ((uint8)IFX_GTM_TOM_TGC_OUTEN_STAT_OUTEN_STAT0_LEN * \
                        (Channel & GTM_TGC_CHANNEL_MASK));
 
   uint8 OutputState = GTM_BIT_SET << TimerOutputEnDis;
@@ -1722,6 +1874,9 @@ void Mcu_17_Gtm_TomChOutEnStatUpdate
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Get the Lock address */
@@ -1745,7 +1900,12 @@ void Mcu_17_Gtm_TomChOutEnStatUpdate
   /* [cover parentID={EDBD8B4A-F002-46f9-B12B-C129A1D6D853}]
    * Update TOM channel Output enable status register
    * [/cover] */
-  TomTgcRegPtr->TGC_OUTEN_STAT.U = ((uint32)OutputState << BitPos);
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_OUTEN_STAT.U), \
+                    BitPos, \
+                    GTM_TOM_TGC_OUTEN_STAT_OUTEN_STAT_LEN, \
+                    OutputState);
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release Spinlock */
   /* [cover parentID={C2EB0393-6DAC-41e5-937B-615C437302FE}]
@@ -1760,6 +1920,15 @@ void Mcu_17_Gtm_TomChOutEnStatUpdate
   SchM_Exit_Mcu_TomTgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
+  /* MISRA2012_RULE_2_7_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -1797,11 +1966,10 @@ void Mcu_17_Gtm_TomChEndisCtrlUpdate
   const Mcu_17_Gtm_TimerEnTriggerType TimerEnDis
 )
 {
-  Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
+  const Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
   uint32* LockAddr;
-  uint32 EndisCtrlVal, RegMaskVal;
   uint8 TomTgcIndex = (Channel >> GTM_TGC_DIVIDER);
-  uint8 BitPos      = ((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN *
+  uint8 BitPos      = ((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN * \
                        (Channel & GTM_TGC_CHANNEL_MASK));
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
@@ -1809,6 +1977,9 @@ void Mcu_17_Gtm_TomChEndisCtrlUpdate
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Get the Lock address */
@@ -1828,16 +1999,16 @@ void Mcu_17_Gtm_TomChEndisCtrlUpdate
    * [/cover] */
   Mcal_GetSpinlock(LockAddr, GTM_SPINLOCK_TIMEOUT);
 
-  RegMaskVal = GTM_OUTEN_ENDIS_CTRL_MSK ^ (GTM_ENDIS_OUTEN_BIT_INDEX << BitPos);
-  EndisCtrlVal = ((uint32)(TimerEnDis) << BitPos);
-
   /* Write value 0x0 into TOM channel bit-field in ENDIS_CTRL register,
    * which prevents any update from ENDIS_CTRL to ENDIS_STAT
    * on an update trigger*/
   /* [cover parentID={F4F8A4DA-DAC4-41f3-8B83-8CDF3CA03FB1}]
    * Update TOM channel Enable/Disable control register
    * [/cover] */
-  TomTgcRegPtr->TGC_ENDIS_CTRL.U = RegMaskVal | EndisCtrlVal;
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_ENDIS_CTRL.U), \
+                    BitPos, GTM_TOM_TGC_ENDIS_CTRL_ENDIS_CTRL_LEN, TimerEnDis);
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release Spinlock */
   /* [cover parentID={3853BF67-C472-4371-8008-88664F7883CC}]
@@ -1852,6 +2023,15 @@ void Mcu_17_Gtm_TomChEndisCtrlUpdate
   SchM_Exit_Mcu_TomTgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
+  /* MISRA2012_RULE_2_7_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -1888,10 +2068,10 @@ void Mcu_17_Gtm_TomChEndisStatUpdate
   const Mcu_17_Gtm_TimerEnableType TimerEnDis
 )
 {
-  Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
+  const Mcu_17_Gtm_TomTgc * TomTgcRegPtr;
   uint32* LockAddr;
   uint8 TomTgcIndex = (Channel >> GTM_TGC_DIVIDER);
-  uint8 BitPos      = ((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN *
+  uint8 BitPos      = ((uint8)IFX_GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT0_LEN * \
                        (Channel & GTM_TGC_CHANNEL_MASK));
 
   uint8 EnDisVal = GTM_BIT_SET << TimerEnDis;
@@ -1902,6 +2082,9 @@ void Mcu_17_Gtm_TomChEndisStatUpdate
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   TomTgcRegPtr = GTM_TOM_TGC_POINTER(Module, TomTgcIndex);
 
   /* Get the Lock address */
@@ -1925,7 +2108,12 @@ void Mcu_17_Gtm_TomChEndisStatUpdate
   /* [cover parentID={278E87CB-EEA5-4fa2-AC47-54A8788AC8F6}]
    * Update TOM channel Enable/Disable status register
    * [/cover] */
-  TomTgcRegPtr->TGC_ENDIS_STAT.U = ((uint32)EnDisVal << BitPos);
+  Mcal_SetBitAtomic(&(TomTgcRegPtr->TGC_ENDIS_STAT.U),
+                    BitPos,
+                    GTM_TOM_TGC_ENDIS_STAT_ENDIS_STAT_LEN, \
+                    EnDisVal);
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release Spinlock */
   /* [cover parentID={8A09A5EF-708A-4730-AD57-6DA64BAA3848}]
@@ -1940,7 +2128,11 @@ void Mcu_17_Gtm_TomChEndisStatUpdate
   SchM_Exit_Mcu_TomTgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
-  
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -1981,11 +2173,11 @@ void Mcu_17_Gtm_AtomChannelInit
   Ifx_GTM_ATOM_CH *AtomChannelRegPtr;
 
   /* Retrieve the ATOM module index value */
-  Module = (uint8)((ConfigPtr->TimerId & GTM_MODULE_NO_MASK)
+  Module = (uint8)((ConfigPtr->TimerId & GTM_MODULE_NO_MASK) \
                    >> GTM_MODULE_NO_OFF);
 
   /* Retrieve the ATOM module channel number */
-  Channel = (uint8)((ConfigPtr->TimerId & GTM_CHANNEL_NO_MASK)
+  Channel = (uint8)((ConfigPtr->TimerId & GTM_CHANNEL_NO_MASK) \
                     >> GTM_CHANNEL_NO_OFF);
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
@@ -1993,6 +2185,9 @@ void Mcu_17_Gtm_AtomChannelInit
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * channels. Since the Module and channel values are
+   * validated by the user, no side effects are foreseen */
   AtomChannelRegPtr = GTM_ATOM_CH_POINTER(Module, Channel);
 
   /* Clear any pending interrupts associated with ATOM channel register */
@@ -2015,17 +2210,17 @@ void Mcu_17_Gtm_AtomChannelInit
 
   /* Configure the ATOM Channel CCU1 compare shadow register */
   AtomChannelRegPtr->SR1.U = ConfigPtr->TimerChSR1Reg;
-
+  
   /* Configure the ATOM Channel control register */
   AtomChannelRegPtr->CTRL.U = ConfigPtr->TimerChCtrlReg;
 
   /* Configure the Interrupt mode of ATOM Channel register */
-  AtomChannelRegPtr->IRQ.MODE.U = ((ConfigPtr->TimerChIntEnMode >>
-                                  GTM_ATOM_IRQ_MODE_POS) &
+  AtomChannelRegPtr->IRQ.MODE.U = (((uint32)ConfigPtr->TimerChIntEnMode >> 
+                                  GTM_ATOM_IRQ_MODE_POS) & 
                                 (uint32)IFX_GTM_ATOM_CH_IRQ_MODE_IRQ_MODE_MSK);
 
   /* Enable the interrupts associated with ATOM Channel register */
-  AtomChannelRegPtr->IRQ.EN.U = (ConfigPtr->TimerChIntEnMode &
+  AtomChannelRegPtr->IRQ.EN.U = ((uint32)ConfigPtr->TimerChIntEnMode & 
                                 (uint32)GTM_ATOM_IRQ_EN_REG_MSK);
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
@@ -2072,12 +2267,15 @@ void Mcu_17_Gtm_AtomChannelShadowTransfer
   uint32 FupdCtrlBackup;
   uint32 FupdDisableCh;
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   AtomAgcRegPtr = GTM_ATOM_AGC_POINTER(Module);
 
   /* Calculate the value to disable force update of CM0, CM1 and CRK_SRC
    * registers for the input ATOM channel
    */
-  FupdDisableCh = ((uint32)GTM_ATOM_FORCE_UPDATE_DISABLE <<
+  FupdDisableCh = ((uint32)GTM_ATOM_FORCE_UPDATE_DISABLE << \
                    ((uint32)GTM_ATOM_BITS_PER_CHAN * (uint32)Channel));
 
   /* Get the Lock address */
@@ -2113,8 +2311,8 @@ void Mcu_17_Gtm_AtomChannelShadowTransfer
 
   /* Enable force update of CM0, CM1 and CRK_SRC registers for
    * the input ATOM channel */
-  AtomAgcRegPtr->FUPD_CTRL.U = ((uint32)GTM_ATOM_FORCE_UPDATE_ENABLE <<
-                            ((uint32)GTM_ATOM_BITS_PER_CHAN * (uint32)Channel));
+  AtomAgcRegPtr->FUPD_CTRL.U = ((uint32)GTM_ATOM_FORCE_UPDATE_ENABLE << \
+                                ((uint32)GTM_ATOM_BITS_PER_CHAN * (uint32)Channel));
 
   /* Initiate Host trigger to update of CM0, CM1 and CLK_SRC registers
    * from their respective shadow registers. Also ENDIS_STAT and OUTEN_STAT
@@ -2140,7 +2338,7 @@ void Mcu_17_Gtm_AtomChannelShadowTransfer
   AtomAgcRegPtr->FUPD_CTRL.U = FupdDisableCh;
 
   /* Restore back the contents of ENDIS_STAT and OUTEN_STAT registers */
-  AtomAgcRegPtr->FUPD_CTRL.U = (uint32)(FupdCtrlBackup ^
+  AtomAgcRegPtr->FUPD_CTRL.U = (uint32)(FupdCtrlBackup ^ \
                                         (uint32)GTM_RESTORE_RSTCN0_FUPD);
   AtomAgcRegPtr->ENDIS_CTRL.U = EndisCtrlBackup;
   AtomAgcRegPtr->OUTEN_CTRL.U = OutenCtrlBackup;
@@ -2193,18 +2391,23 @@ void Mcu_17_Gtm_AtomChannelDeInit
 )
 {
   Ifx_GTM_ATOM_CH  * AtomChannelRegPtr; /* Pointer to ATOM CH Register */
-  Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Pointer to ATOM AGC Register   */
+  const Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Pointer to ATOM AGC Register   */
   uint32* LockAddr;
-  uint8 BitPos = (uint8)IFX_GTM_ATOM_AGC_GLB_CTRL_RST_CH0_OFF +
-                  Channel;
+  uint8 BitPos = (uint8)IFX_GTM_ATOM_AGC_GLB_CTRL_RST_CH0_OFF + Channel;
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule, as the pointer to the object type
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * channels. Since the Module and channel values are
+   * validated by the user, no side effects are foreseen */
   AtomChannelRegPtr = GTM_ATOM_CH_POINTER(Module, Channel);
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   AtomAgcRegPtr = GTM_ATOM_AGC_POINTER(Module);
 
   /* Get the Lock address */
@@ -2233,7 +2436,10 @@ void Mcu_17_Gtm_AtomChannelDeInit
   /* [cover parentID={AACEDF9E-FD9A-453b-A896-D867AC522471}]
    * Reset the desired ATOM channel through Global control
    * [/cover] */
-  AtomAgcRegPtr->GLB_CTRL.U = (GTM_ATOM_CH_SW_RESET << BitPos);
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->GLB_CTRL.U), BitPos, \
+                    GTM_ATOM_AGC_GLB_CTRL_RST_CH_LEN, GTM_ATOM_CH_SW_RESET);
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release Spinlock */
   /* [cover parentID={59683371-A0DC-4c4d-8109-C91C72B68DA8}]
@@ -2249,6 +2455,8 @@ void Mcu_17_Gtm_AtomChannelDeInit
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
 
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: BitPos is used in Mcal_SetBitAtomic.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -2291,13 +2499,15 @@ void Mcu_17_Gtm_AtomChannelEnable
   const Mcu_17_Gtm_TimerOutputEnableType TimerOutputEn
 )
 {
-  Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
+  const Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
   uint32 * LockAddr;
-  uint32 EndisCtrlVal, OutEnCtrlVal, RegMaskVal;
   uint8 OutputState = GTM_BIT_SET << TimerOutputEn;
-  uint8 BitPos = (((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT0_LEN) *
-                    Channel);
+  uint8 BitPos = \
+                 (uint8)(((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL0_LEN) * Channel);
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   AtomAgcRegPtr =  GTM_ATOM_AGC_POINTER(Module);
 
   /* Get the Lock address */
@@ -2322,24 +2532,35 @@ void Mcu_17_Gtm_AtomChannelEnable
   /* [cover parentID={303FBB0E-F4FF-4b26-B954-35ABA7CCD955}]
    * Enable ATOM channel in Enable/Disable Status and
    * then in Enable/Disable control*/
-  AtomAgcRegPtr->ENDIS_STAT.U = (GTM_ATOM_CH_ENABLE << BitPos);
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->ENDIS_STAT.U), \
+                    BitPos, \
+                    GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL_LEN, \
+                    GTM_ATOM_CH_ENABLE);
 
-  RegMaskVal = GTM_OUTEN_ENDIS_CTRL_MSK ^ (GTM_ENDIS_OUTEN_BIT_INDEX << BitPos);
-  EndisCtrlVal = (GTM_ATOM_CH_STAT_NO_UPDATE << BitPos);
   /* Write value 0x0 into ATOM channel bit-field in ENDIS_CTRL register,which
    * prevents any update from ENDIS_CTRL to ENDIS_STAT on an update trigger*/
-  AtomAgcRegPtr->ENDIS_CTRL.U = RegMaskVal | EndisCtrlVal;
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->ENDIS_CTRL.U), \
+                    BitPos, \
+                    GTM_ATOM_AGC_ENDIS_CTRL_ENDIS_CTRL_LEN, \
+                    GTM_ATOM_CH_STAT_NO_UPDATE);
 
   /* Enable or disable the ATOM channel output in OUTEN_STAT register*/
-  AtomAgcRegPtr->OUTEN_STAT.U = ((uint32)OutputState << BitPos);
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->OUTEN_STAT.U), \
+                    BitPos, \
+                    GTM_ATOM_AGC_OUTEN_STAT_OUTEN_STAT_LEN, \
+                    OutputState);
 
-  OutEnCtrlVal = (GTM_ATOM_CH_STAT_NO_UPDATE << BitPos);
   /* Write value 0x0 into ATOM channel bit-field in OUTEN_CTRL register,
    * which prevents any update from OUTEN_CTRL to OUTEN_STAT on
    * an update trigger*/
-  AtomAgcRegPtr->OUTEN_CTRL.U = RegMaskVal | OutEnCtrlVal;
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->OUTEN_CTRL.U), \
+                    BitPos, \
+                    GTM_ATOM_AGC_OUTEN_CTRL_OUTEN_CTRL_LEN, \
+                    GTM_ATOM_CH_STAT_NO_UPDATE);
   /*[/cover]*/
   /*[/cover] */
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release Spinlock */
   /* [cover parentID={ED18C816-451E-4477-B573-0822BA2BFF31}]
@@ -2355,6 +2576,10 @@ void Mcu_17_Gtm_AtomChannelEnable
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
 
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -2391,12 +2616,14 @@ void Mcu_17_Gtm_AtomChannelDisable
   const uint8 Channel
 )
 {
-  Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
+  const Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
   uint32* LockAddr;
-  uint32 EndisCtrlVal, OutEnCtrlVal, RegMaskVal;
-  uint8 BitPos = ((((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT0_LEN) *
-                    Channel));
+  uint8 BitPos = \
+                 (uint8)((((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL0_LEN) * Channel));
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   AtomAgcRegPtr =  GTM_ATOM_AGC_POINTER(Module);
 
   /* Get the Lock address */
@@ -2421,25 +2648,35 @@ void Mcu_17_Gtm_AtomChannelDisable
   /* [cover parentID={01C1AE5A-B128-4efd-B095-C230E43D0E20}]
    * Disable ATOM channel in Enable/Disable Status and
    * then in Enable/Disable control*/
-  AtomAgcRegPtr->ENDIS_STAT.U = (GTM_ATOM_CH_DISABLE << BitPos);
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->ENDIS_STAT.U), \
+                    BitPos, \
+                    GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL_LEN, \
+                    GTM_ATOM_CH_DISABLE);
 
   /* Disable the ATOM channel output in OUTEN_STAT register*/
-  AtomAgcRegPtr->OUTEN_STAT.U = (GTM_ATOM_CH_OUT_DISABLE << BitPos);
-
-  RegMaskVal = GTM_OUTEN_ENDIS_CTRL_MSK ^ (GTM_ENDIS_OUTEN_BIT_INDEX << BitPos);
-  EndisCtrlVal = (GTM_ATOM_CH_STAT_NO_UPDATE << BitPos);
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->OUTEN_STAT.U), \
+                    BitPos, \
+                    GTM_ATOM_AGC_OUTEN_STAT_OUTEN_STAT_LEN, \
+                    GTM_ATOM_CH_OUT_DISABLE);
 
   /* Write value 0x0 into ATOM channel bit-field in ENDIS_CTRL register, which
    * prevents any update from ENDIS_CTRL to ENDIS_STAT on an update trigger*/
-  AtomAgcRegPtr->ENDIS_CTRL.U = RegMaskVal | EndisCtrlVal;
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->ENDIS_CTRL.U), \
+                    BitPos, \
+                    GTM_ATOM_AGC_ENDIS_CTRL_ENDIS_CTRL_LEN, \
+                    GTM_ATOM_CH_STAT_NO_UPDATE);
 
-  OutEnCtrlVal = (GTM_ATOM_CH_STAT_NO_UPDATE << BitPos);
   /* Write value 0x0 into ATOM channel bit-field in OUTEN_CTRL register,
    * which prevents any update from OUTEN_CTRL to OUTEN_STAT on an
    * update trigger*/
-  AtomAgcRegPtr->OUTEN_CTRL.U = RegMaskVal | OutEnCtrlVal;
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->OUTEN_CTRL.U), \
+                    BitPos, \
+                    GTM_ATOM_AGC_OUTEN_CTRL_OUTEN_CTRL_LEN, \
+                    GTM_ATOM_CH_STAT_NO_UPDATE);
   /*[/cover]*/
   /* [/cover] */
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release Spinlock */
   /* [cover parentID={CC3D55EF-2B67-4ddb-AC4A-6E4146B03B2A}]
@@ -2455,6 +2692,10 @@ void Mcu_17_Gtm_AtomChannelDisable
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
 
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -2500,17 +2741,23 @@ Mcu_17_Gtm_TimerStatusType Mcu_17_Gtm_IsAtomChannelEnabled
   const Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
 
   uint8 AtomChStatus;
-  uint8 BitPos = ((((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT0_LEN) *
-                    Channel));
+  uint8 BitPos = \
+                 (uint8)((((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL0_LEN) * Channel));
 
+
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   AtomAgcRegPtr =  GTM_ATOM_AGC_POINTER(Module);
 
   /* Obtain the channel enabled status from ENDIS_STAT register
    * 0x3 - Channel enabled
    * 0x0 - Channel disabled
    */
-  AtomChStatus = (uint8)((AtomAgcRegPtr->ENDIS_STAT.U >> BitPos) &
-                          GTM_ATOM_EN_MSK);
+  AtomChStatus = (uint8)Mcal_GetBitAtomic(
+                   AtomAgcRegPtr->ENDIS_STAT.U, \
+                   BitPos, \
+                   GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL_LEN);
 
   /* Right shift by 1U to fit into return format
    * 0x1 - Channel enabled
@@ -2556,6 +2803,9 @@ void Mcu_17_Gtm_AtomTriggerRequest
   Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
   uint32*           LockAddr;
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   AtomAgcRegPtr =  GTM_ATOM_AGC_POINTER(Module);
 
   /* Get the Lock address */
@@ -2579,9 +2829,11 @@ void Mcu_17_Gtm_AtomTriggerRequest
   /* [cover parentID={6D62BF2A-2F46-44e9-80B9-FD65FF68B0CD}]
    * Update the Enable/Disable control register and give a Host trigger
    * [/cover] */
-  AtomAgcRegPtr->ENDIS_CTRL.U = (uint32)TriggerChannels;
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->ENDIS_CTRL.U), 0, 16, TriggerChannels);
 
-  /* Initiate Host trigger to update ENDIS_STAT and OUTEN_STAT registers*/
+  /* Initiate Host trigger to update of CM0, CM1 and CLK_SRC registers
+   * from their respective shadow registers. Also ENDIS_STAT and OUTEN_STAT
+   * are also updated */
   (AtomAgcRegPtr->GLB_CTRL.U) |= GTM_ATOM_HOST_TRIGGER_ENABLE;
 
   /* A delay is provided to allow the update of CM0, CM1 and CLK_SRC registers
@@ -2603,6 +2855,11 @@ void Mcu_17_Gtm_AtomTriggerRequest
   SchM_Exit_Mcu_AtomAgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_7_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -2620,7 +2877,7 @@ void Mcu_17_Gtm_AtomTriggerRequest
 **                                                                            **
 ** Sync/Async       : Synchronous                                             **
 **                                                                            **
-** Reentrancy       : Reentrant for different channels                        **
+** Reentrancy       : Reentrant for other channels                            **
 **                                                                            **
 ** Parameters(in)   : ConfigPtr - Pointer to configuration data of a ATOM     **
 **                    channel                                                 **
@@ -2658,15 +2915,21 @@ Std_ReturnType Mcu_17_Gtm_AtomChInitCheck
   Channel = (uint8)((ConfigPtr->TimerId & GTM_CHANNEL_NO_MASK) \
                     >> GTM_CHANNEL_NO_OFF);
 
-  BitPos = (((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT0_LEN) * Channel);
+  BitPos = (((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL0_LEN) * Channel);
 
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule, as the pointer to the object type
     * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
     * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * channels. Since the Module and channel values are
+    * validated by the user, no side effects are foreseen */
   AtomChannelRegPtr = GTM_ATOM_CH_POINTER(Module, Channel);
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   AtomAgcRegPtr =  GTM_ATOM_AGC_POINTER(Module);
 
   /* Verify CTRL register's contents are as per configuration */
@@ -2675,8 +2938,8 @@ Std_ReturnType Mcu_17_Gtm_AtomChInitCheck
   CmpVal &= ~(SfrVal ^ ConfigVal);
 
   /* Verify CN0 register's contents if Timer is not enabled */
-  AtomChStatus = (uint8)((AtomAgcRegPtr->ENDIS_STAT.U >> BitPos) &
-                          GTM_ATOM_EN_MSK);
+  AtomChStatus = (uint8)Mcal_GetBitAtomic(AtomAgcRegPtr->ENDIS_STAT.U, \
+                                          BitPos, GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL_LEN);
 
   /* Check is ATOM Channel disabled */
   /* [cover parentID={5CDF6A4A-89B9-4691-B101-6CEBC191D237}]
@@ -2711,13 +2974,14 @@ Std_ReturnType Mcu_17_Gtm_AtomChInitCheck
 
   /* Verify IRQ_MODE register's contents are as per configuration */
   SfrVal = (uint32)AtomChannelRegPtr->IRQ.MODE.U;
-  ConfigVal = ((ConfigPtr->TimerChIntEnMode >> GTM_ATOM_IRQ_MODE_POS) \
+  ConfigVal = (((uint32)
+                ConfigPtr->TimerChIntEnMode >> GTM_ATOM_IRQ_MODE_POS) \
                & (uint32)IFX_GTM_ATOM_CH_IRQ_MODE_IRQ_MODE_MSK);
   CmpVal &= ~(SfrVal ^ ConfigVal);
 
   /* Verify IRQ_EN register's contents against configuration */
   SfrVal = AtomChannelRegPtr->IRQ.EN.U;
-  ConfigVal = (ConfigPtr->TimerChIntEnMode\
+  ConfigVal = ((uint32)ConfigPtr->TimerChIntEnMode\
                & (uint32)GTM_ATOM_IRQ_EN_REG_MSK);
   CmpVal &= ~(SfrVal ^ ConfigVal);
 
@@ -2768,12 +3032,15 @@ void Mcu_17_Gtm_AtomChUpdateEnDis
   const Mcu_17_Gtm_TimerUpdateEnableType UpEnVal
 )
 {
-  Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
+  const Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
   uint32* LockAddr;
   uint8 BitPos    = ((((uint8)IFX_GTM_ATOM_AGC_GLB_CTRL_UPEN_CTRL0_LEN) * \
                       Channel) + 0x10U);
   uint8 UpenValue = GTM_BIT_SET << UpEnVal;
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TOM
+   * modules. Since the Module values are validated by the user, no side effect
+   * are foreseen. */
   AtomAgcRegPtr =  GTM_ATOM_AGC_POINTER(Module);
 
   /* Get the Lock address */
@@ -2798,7 +3065,12 @@ void Mcu_17_Gtm_AtomChUpdateEnDis
   /* [cover parentID={E6C1E02B-07F7-458d-98B3-97DFCE8C5695}]
    * Enable ATOM channel in Global control register
    * [/cover] */
-  AtomAgcRegPtr->GLB_CTRL.U = ((uint32)UpenValue << BitPos);
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->GLB_CTRL.U),
+                    BitPos,
+                    GTM_ATOM_AGC_GLB_CTRL_UPEN_CTRL0_LEN, \
+                    UpenValue);
+  /* MISRA2012_RULE_8_13_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
 
   /* Release Spinlock */
   /* [cover parentID={99EB7171-839E-43ef-9301-A1603028E089}]
@@ -2813,6 +3085,11 @@ void Mcu_17_Gtm_AtomChUpdateEnDis
   SchM_Exit_Mcu_AtomAgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -2851,12 +3128,14 @@ void Mcu_17_Gtm_AtomChOutEnCtrlUpdate
   const Mcu_17_Gtm_TimerOutputEnTriggerType TimerOutputEnDis
 )
 {
-  Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
+  const Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
   uint32* LockAddr;
-  uint32 OutEnCtrlVal, RegMaskVal;
   uint8 BitPos = (((uint8)IFX_GTM_ATOM_AGC_OUTEN_CTRL_OUTEN_CTRL0_LEN) * \
                   Channel);
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are validated by the user,
+   * no side effects are foreseen */
   AtomAgcRegPtr =  GTM_ATOM_AGC_POINTER(Module);
 
   /* Get the Lock address */
@@ -2877,15 +3156,16 @@ void Mcu_17_Gtm_AtomChOutEnCtrlUpdate
    * [/cover] */
   Mcal_GetSpinlock(LockAddr, GTM_SPINLOCK_TIMEOUT);
 
-  RegMaskVal = GTM_OUTEN_ENDIS_CTRL_MSK ^ (GTM_ENDIS_OUTEN_BIT_INDEX << BitPos);
-  OutEnCtrlVal = ((uint32)(TimerOutputEnDis) << BitPos);
   /* Write value 0x0 into ATOM channel bit-field in OUTEN_CTRL register,
    * which prevents any update from OUTEN_CTRL to OUTEN_STAT on
    * an update trigger*/
   /* [cover parentID={CDE32B71-A3A4-4d81-A22C-1216C1577CFB}]
    * Update ATOM channel Output enable control register
    * [/cover] */
-  AtomAgcRegPtr->OUTEN_CTRL.U = RegMaskVal | OutEnCtrlVal;
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->OUTEN_CTRL.U), \
+                    BitPos, \
+                    GTM_ATOM_AGC_OUTEN_CTRL_OUTEN_CTRL_LEN, \
+                    TimerOutputEnDis);
 
   /* Release Spinlock */
   /* [cover parentID={C460BCC6-03D8-4c3f-8274-2AA9EC56B71A}]
@@ -2901,6 +3181,14 @@ void Mcu_17_Gtm_AtomChOutEnCtrlUpdate
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
 
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
+  /* MISRA2012_RULE_2_7_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -2938,12 +3226,15 @@ void Mcu_17_Gtm_AtomChOutEnStatUpdate
   const Mcu_17_Gtm_TimerOutputEnableType TimerOutputEnDis
 )
 {
-  Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
+  const Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
   uint32* LockAddr;
   uint8 BitPos = (((uint8)IFX_GTM_ATOM_AGC_OUTEN_STAT_OUTEN_STAT0_LEN) * \
                   Channel);
   uint8 OutputState = GTM_BIT_SET << TimerOutputEnDis;
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   AtomAgcRegPtr =  GTM_ATOM_AGC_POINTER(Module);
 
   /* Get the Lock address */
@@ -2968,7 +3259,8 @@ void Mcu_17_Gtm_AtomChOutEnStatUpdate
   /* [cover parentID={84BE88FA-0D5E-4e04-8E11-D006F3DAC36B}]
    * Update ATOM channel Output enable status register
    * [/cover] */
-  AtomAgcRegPtr->OUTEN_STAT.U = ((uint32)OutputState << BitPos);
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->OUTEN_STAT.U), BitPos, \
+                    GTM_ATOM_AGC_OUTEN_STAT_OUTEN_STAT_LEN, OutputState);
 
   /* Release Spinlock */
   /* [cover parentID={7481BC00-3EBD-4d9f-933C-D8891F9196DE}]
@@ -2983,6 +3275,11 @@ void Mcu_17_Gtm_AtomChOutEnStatUpdate
   SchM_Exit_Mcu_AtomAgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -3020,12 +3317,14 @@ void Mcu_17_Gtm_AtomChEndisCtrlUpdate
   const Mcu_17_Gtm_TimerEnTriggerType TimerEnDis
 )
 {
-  Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
+  const Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
   uint32* LockAddr;
-  uint32 EndisCtrlVal, RegMaskVal;
-  uint8 BitPos = (((uint8)IFX_GTM_ATOM_AGC_ENDIS_CTRL_ENDIS_CTRL0_LEN) * \
+  uint8 BitPos = (((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL0_LEN) * \
                   Channel);
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   AtomAgcRegPtr =  GTM_ATOM_AGC_POINTER(Module);
 
   /* Get the Lock address */
@@ -3049,12 +3348,11 @@ void Mcu_17_Gtm_AtomChEndisCtrlUpdate
    * [/cover] */
   Mcal_GetSpinlock(LockAddr, GTM_SPINLOCK_TIMEOUT);
 
-  RegMaskVal = GTM_OUTEN_ENDIS_CTRL_MSK ^ (GTM_ENDIS_OUTEN_BIT_INDEX << BitPos);
-  EndisCtrlVal = ((uint32)(TimerEnDis) << BitPos);
   /* [cover parentID={AC000277-A341-4c63-8A7E-2B8401BFD91F}]
    * Update ATOM channel Enable/Disable control register
    * [/cover] */
-  AtomAgcRegPtr->ENDIS_CTRL.U = RegMaskVal | EndisCtrlVal;
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->ENDIS_CTRL.U), BitPos, \
+                    GTM_ATOM_AGC_ENDIS_CTRL_ENDIS_CTRL_LEN, TimerEnDis);
 
   /* Release Spinlock */
   /* [cover parentID={3162B581-0C30-4b9c-85AC-7B51F80136BE}]
@@ -3069,6 +3367,15 @@ void Mcu_17_Gtm_AtomChEndisCtrlUpdate
   SchM_Exit_Mcu_AtomAgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
+  /* MISRA2012_RULE_2_7_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -3105,12 +3412,15 @@ void Mcu_17_Gtm_AtomChEndisStatUpdate
   const Mcu_17_Gtm_TimerEnableType TimerEnDis
 )
 {
-  Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
+  const Ifx_GTM_ATOM_AGC * AtomAgcRegPtr;     /* Ptr to ATOM AGC Reg */
   uint32* LockAddr;
-  uint8 BitPos = (((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_STAT0_LEN) *
+  uint8 BitPos = (((uint8)IFX_GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL0_LEN) * \
                   Channel);
   uint8 EnDisVal = GTM_BIT_SET << TimerEnDis;
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different ATOM
+   * modules. Since the Module values are
+   * validated by the user, no side effects are foreseen */
   AtomAgcRegPtr =  GTM_ATOM_AGC_POINTER(Module);
 
   /* Get the Lock address */
@@ -3135,7 +3445,8 @@ void Mcu_17_Gtm_AtomChEndisStatUpdate
   /* [cover parentID={058AAD85-CA98-4220-8966-60A767118B0B}]
    * Update ATOM channel Enable/Disable status register
    * [/cover] */
-  AtomAgcRegPtr->ENDIS_STAT.U = ((uint32)EnDisVal << BitPos);
+  Mcal_SetBitAtomic(&(AtomAgcRegPtr->ENDIS_STAT.U), BitPos, \
+                    GTM_ATOM_AGC_ENDIS_STAT_ENDIS_CTRL_LEN, EnDisVal);
 
   /* Release Spinlock */
   /* [cover parentID={DE42E442-5276-4d4b-B4BC-89096C395C2D}]
@@ -3150,6 +3461,11 @@ void Mcu_17_Gtm_AtomChEndisStatUpdate
   SchM_Exit_Mcu_AtomAgcReg();
   /*[cover parentID={C8410B61-0BFF-49d6-9BBD-817EA33BF71D}]Interrupt Control
   Registers[/cover]*/
+
+  /* MISRA2012_RULE_2_2_JUSTIFICATION: All parameters used in Mcal_SetBitAtomic
+   * are used in IMASKLDMST.
+   * No other dead code persist is verified by code review.
+   * No side effects foreseen by violating this MISRA rule. */
 }
 
 /*******************************************************************************
@@ -3200,14 +3516,10 @@ void Mcu_17_Gtm_TimChannelInit
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TIM
+   * channels. Since the Module and channel values are
+   * validated by the user, no side effects are foreseen */
   TimChannelRegPtr = GTM_TIM_CH_POINTER(Module, Channel);
-
-  /* Disable the TIM channel by resetting the TIM_EN bit in TIM_CTRL 
-     before configuring the channel registers*/
-  Mcal_SetBitAtomic(&(TimChannelRegPtr->CTRL.U), \
-                    IFX_GTM_TIM_CH_CTRL_TIM_EN_OFF, \
-                    GTM_TIM_CH_CTRL_TIM_EN_LEN, \
-                    GTM_TIM_CH_DISABLE);
 
   /* Clear any pending interrupts associated with TIM channel register */
   TimChannelRegPtr->IRQ.NOTIFY.U = GTM_TIM_CLR_PENDING_IRQ;
@@ -3226,9 +3538,6 @@ void Mcu_17_Gtm_TimChannelInit
   /* Enable the interrupts associated with TIM Channel register */
   TimChannelRegPtr->IRQ.EN.U = \
       ((uint32)ConfigPtr->TimChIntEnMode & (uint32)GTM_TIM_IRQ_EN_REG_MSK);
-
-  /* Configure the Timeout detection control(TDUV) register*/
-  TimChannelRegPtr->TDUV.U = ConfigPtr->TimChTduvReg;
 
   /* Configure the TIM Channel extended control register */
   TimChannelRegPtr->ECTRL.U = ConfigPtr->TimChExtendedCtrlReg;
@@ -3278,6 +3587,9 @@ void Mcu_17_Gtm_TimChannelDeInit
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TIM
+   * channels. Since the Module and channel values are
+   * validated by the user, no side effects are foreseen */
   TimChannelRegPtr = GTM_TIM_CH_POINTER(Module, Channel);
 
   /* Clear any pending interrupts associated with TIM channel register */
@@ -3334,6 +3646,9 @@ void Mcu_17_Gtm_TimChannelEnable
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TIM
+   * channels. Since the Module and channel values are
+   * validated by the user, no side effects are foreseen */
   TimChannelRegPtr = GTM_TIM_CH_POINTER(Module, Channel);
   /* Enable the TIM channel by setting the TIM_EN bit in TIM_CTRL */
   Mcal_SetBitAtomic(&(TimChannelRegPtr->CTRL.U), \
@@ -3390,6 +3705,9 @@ void Mcu_17_Gtm_TimChannelDisable
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TIM
+   * channels. Since the Module and channel values are
+   * validated by the user, no side effects are foreseen */
   TimChannelRegPtr = GTM_TIM_CH_POINTER(Module, Channel);
 
   /* Disable the TIM channel by resetting the TIM_EN bit in TIM_CTRL */
@@ -3454,6 +3772,9 @@ Mcu_17_Gtm_TimerStatusType Mcu_17_Gtm_IsTimChannelEnabled
    * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TIM
+   * channels. Since the Module and channel values are
+   * validated by the user, no side effects are foreseen */
   TimChannelRegPtr = GTM_TIM_CH_POINTER(Module, Channel);
 
   /* Obtain the channel enabled status from TIM_CH_CTRL register
@@ -3518,7 +3839,7 @@ void Mcu_17_Gtm_ConnectPortPinToTim
 }
 
 /*******************************************************************************
-** Traceability     : [cover parentID={C53315D9-D9BC-4866-9F40-6A980782C10B}] **
+** Traceability     : [cover parentID={295EEA91-45A9-40dc-B731-DFAF4188FE3C}] **
 **                                                                            **
 ** Syntax           : void  Mcu_17_Gtm_ConnectTimerOutToPortPin               **
 **                    (                                                       **
@@ -3533,7 +3854,7 @@ void Mcu_17_Gtm_ConnectPortPinToTim
 **                    TimerOutColumnSelect parameterThis API is used to       **
 **                    connect a port pin to an input                          **
 **                                                                            **
-** Service ID       : 0xA0                                                    **
+** Service ID       : 0x71                                                    **
 **                                                                            **
 ** Sync/Async       : Synchronous                                             **
 **                                                                            **
@@ -3590,7 +3911,7 @@ void Mcu_17_Gtm_ConnectTimerOutToPortPin
 **                                                                            **
 ** Sync/Async       : Synchronous                                             **
 **                                                                            **
-** Reentrancy       : Reentrant for different channels                        **
+** Reentrancy       : Reentrant for other channels                            **
 **                                                                            **
 ** Parameters(in)   : ConfigPtr - Pointer to configuration data of a TIM      **
 **                    channel                                                 **
@@ -3627,35 +3948,40 @@ Std_ReturnType Mcu_17_Gtm_TimChInitCheck
   * it is getting cast into is a known type . */
   /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
   * by violating this MISRA rule. */
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TIM
+  * channels. Since the Module and channel values are
+  * validated by the user, no side effects are foreseen */
   TimChannelRegPtr = GTM_TIM_CH_POINTER(Module, Channel);
 
+  /* Clear any pending interrupts associated with TIM channel register */
   SfrVal = (uint32)TimChannelRegPtr->FLT_RE.U;
   ConfigVal = (ConfigPtr->TimChFltRisingEdge);
   CmpVal &= ~(SfrVal ^ ConfigVal);
 
+  /* Configure the falling Edge filter register */
   SfrVal = (uint32)TimChannelRegPtr->FLT_FE.U;
   ConfigVal = (ConfigPtr->TimChFltFallingEdge);
   CmpVal &= ~(SfrVal ^ ConfigVal);
 
+  /* Configure the Interrupt mode of  TIM Channel register */
   SfrVal = (uint32)TimChannelRegPtr->IRQ.MODE.U;
   ConfigVal = (((uint32)
                 ConfigPtr->TimChIntEnMode >> GTM_TIM_IRQ_MODE_POS) & \
                (uint32)IFX_GTM_TIM_CH_IRQ_MODE_IRQ_MODE_MSK);
   CmpVal &= ~(SfrVal ^ ConfigVal);
 
+  /* Enable the interrupts associated with TIM Channel register */
   SfrVal = (uint32)TimChannelRegPtr->IRQ.EN.U;
   ConfigVal = ((uint32)ConfigPtr->TimChIntEnMode & \
                (uint32)GTM_TIM_IRQ_EN_REG_MSK);
   CmpVal &= ~(SfrVal ^ ConfigVal);
 
-  SfrVal = (uint32)TimChannelRegPtr->TDUV.U;
-  ConfigVal = (ConfigPtr->TimChTduvReg);
-  CmpVal &= ~(SfrVal ^ ConfigVal);
-
+  /* Configure the TIM Channel extended control register */
   SfrVal = (uint32)TimChannelRegPtr->ECTRL.U;
   ConfigVal = (ConfigPtr->TimChExtendedCtrlReg) ;
   CmpVal &= ~(SfrVal ^ ConfigVal);
 
+  /* Configure the TIM Channel control register */
   SfrVal = ((uint32)TimChannelRegPtr->CTRL.U & TIM_CTRL_RST_VAL);
   ConfigVal = (ConfigPtr->TimChCtrlReg & TIM_CTRL_RST_VAL);
   CmpVal &= ~(SfrVal ^ ConfigVal);
@@ -3703,9 +4029,9 @@ void Mcu_17_Ccu6_TimerInit
   const Mcu_17_Ccu6_TimerConfigType * const ConfigPtr
 )
 {
-  Mcu_17_Ccu6_KernelIdentifierType Ccu6Kernel;
-  Mcu_17_Ccu6_TimerType Ccu6Timer;
-  Mcu_17_Ccu6_ComparatorType Ccu6Comparator;
+  uint8 Ccu6Kernel;
+  uint8 Ccu6Timer;
+  uint8 Ccu6Comparator;
 
   Ccu6Kernel = (uint8)((ConfigPtr->TimerId) & CCU6_KERNEL_MSK);
   Ccu6Timer = (uint8)((ConfigPtr->TimerId >> CCU6_TIMER_POS) & CCU6_TIMER_MSK);
@@ -3716,16 +4042,16 @@ void Mcu_17_Ccu6_TimerInit
   {
     /* TCTR0.T12CLK */
     Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR0.U), \
-                    IFX_CCU6_TCTR0_T12CLK_OFF, \
-                    CCU6_TCTR0_T12CLK_LEN, \
-                    ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T12CLK_OFF) & \
+                      IFX_CCU6_TCTR0_T12CLK_OFF, \
+                      CCU6_TCTR0_T12CLK_LEN, \
+                      ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T12CLK_OFF) & \
                        IFX_CCU6_TCTR0_T12CLK_MSK));
 
     /* TCTR0.T12PRE */
     Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR0.U), \
-                    IFX_CCU6_TCTR0_T12PRE_OFF, \
-                    CCU6_TCTR0_T12PRE_LEN, \
-                    ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T12PRE_OFF) & \
+                      IFX_CCU6_TCTR0_T12PRE_OFF, \
+                      CCU6_TCTR0_T12PRE_LEN, \
+                      ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T12PRE_OFF) & \
                        IFX_CCU6_TCTR0_T12PRE_MSK));
 
     /* TCTR0.CTM */
@@ -3770,43 +4096,6 @@ void Mcu_17_Ccu6_TimerInit
                       CCU6_IEN_ENCC6xRF_LEN, \
                       ((ConfigPtr->IntEnReg >> CCU6_IEN_ENCC6xRF_POS) & \
                        CCU6_IEN_ENCC6xRF_MSK));
-
-    /* IEN.ENT12OM register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENT12OM_OFF, \
-                      CCU6_IEN_ENT12OM_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* IEN.ENTRPF register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENTRPF_OFF, \
-                      CCU6_IEN_ENTRPF_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* IEN.ENCHE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENCHE_OFF, \
-                      CCU6_IEN_ENCHE_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* IEN.ENWHE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENWHE_OFF, \
-                      CCU6_IEN_ENWHE_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* IEN.ENIDLE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENIDLE_OFF, \
-                      CCU6_IEN_ENIDLE_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* IEN.ENSTR register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENSTR_OFF, \
-                      CCU6_IEN_ENSTR_LEN, \
-                      CCU6_BIT_CLEAR);
-
     /* INP.INPT12 register*/
     Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->INP.U), \
                       IFX_CCU6_INP_INPT12_OFF, \
@@ -3832,49 +4121,6 @@ void Mcu_17_Ccu6_TimerInit
                       CCU6_T12MSEL_MSEL60_LEN, \
                       ConfigPtr->TimerModeSelectReg & CCU6_T12MSEL_MSEL60_MSK);
 
-    /* TCTR2.T12SSC */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR2.U), \
-                      IFX_CCU6_TCTR2_T12SSC_OFF, \
-                      CCU6_TCTR2_T12SSC_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* TCTR2.T12RSEL */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR2.U), \
-                      IFX_CCU6_TCTR2_T12RSEL_OFF, \
-                      CCU6_TCTR2_T12RSEL_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* PISEL2.ISCNT12 */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U), \
-                      IFX_CCU6_PISEL2_ISCNT12_OFF, \
-                      CCU6_PISEL2_ISCNT12_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* PISEL2.T12EXT */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U), \
-                      IFX_CCU6_PISEL2_T12EXT_OFF, \
-                      CCU6_PISEL2_T12EXT_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* CMPSTAT.CC6xPS, COUT6xPS */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPSTAT.U), \
-                      ((Ccu6Comparator * CCU6_CMPSTAT_PS_BITS_LEN) \
-                      + IFX_CCU6_CMPSTAT_CC60PS_OFF), \
-                      CCU6_CMPSTAT_PS_BITS_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* CMPMODIF.MCC6xS */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPMODIF.U), \
-                      (Ccu6Comparator * CCU6_CMPMODIF_MCC60S_LEN), \
-                      CCU6_CMPMODIF_MCC60S_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* CMPMODIF.MCC6xR */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPMODIF.U), \
-                      ((Ccu6Comparator * CCU6_CMPMODIF_MCC60R_LEN) \
-                      + IFX_CCU6_CMPMODIF_MCC60R_OFF), \
-                      CCU6_CMPMODIF_MCC60R_LEN, \
-                      CCU6_BIT_SET);
 
     /* T1xPR register */
     Mcu_17_Ccu6_Kernel[Ccu6Kernel]->T12PR.U = ConfigPtr->TimerPeriodReg & \
@@ -3888,17 +4134,17 @@ void Mcu_17_Ccu6_TimerInit
   {
     /* TCTR0.T13CLK */
     Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR0.U), \
-                    IFX_CCU6_TCTR0_T13CLK_OFF, \
-                    CCU6_TCTR0_T13CLK_LEN, \
-                    ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T13CLK_OFF) & \
-                    IFX_CCU6_TCTR0_T13CLK_MSK));
+                      IFX_CCU6_TCTR0_T13CLK_OFF, \
+                      CCU6_TCTR0_T13CLK_LEN, \
+                      ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T13CLK_OFF) & \
+                       IFX_CCU6_TCTR0_T13CLK_MSK));
 
     /* TCTR0.T13PRE */
     Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR0.U), \
-                    IFX_CCU6_TCTR0_T13PRE_OFF, \
-                    CCU6_TCTR0_T13PRE_LEN, \
-                    ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T13PRE_OFF) & \
-                    IFX_CCU6_TCTR0_T13PRE_MSK));
+                      IFX_CCU6_TCTR0_T13PRE_OFF, \
+                      CCU6_TCTR0_T13PRE_LEN, \
+                      ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T13PRE_OFF) & \
+                       IFX_CCU6_TCTR0_T13PRE_MSK));
 
     /* MODCTR.ECT13O */
     Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->MODCTR.U), \
@@ -3938,84 +4184,12 @@ void Mcu_17_Ccu6_TimerInit
                       ((ConfigPtr->IntEnReg >> CCU6_IEN_ENT13CM_POS) & \
                        CCU6_IEN_ENT13CM_MSK));
 
-    /* IEN.ENTRPF register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENTRPF_OFF, \
-                      CCU6_IEN_ENTRPF_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* IEN.ENCHE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENCHE_OFF, \
-                      CCU6_IEN_ENCHE_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* IEN.ENWHE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENWHE_OFF, \
-                      CCU6_IEN_ENWHE_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* IEN.ENIDLE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENIDLE_OFF, \
-                      CCU6_IEN_ENIDLE_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* IEN.ENSTR register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENSTR_OFF, \
-                      CCU6_IEN_ENSTR_LEN, \
-                      CCU6_BIT_CLEAR);
-
     /* INP.T13 register*/
     Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->INP.U), \
                       IFX_CCU6_INP_INPT13_OFF, \
                       CCU6_INP_INPT13_LEN, \
                       ((ConfigPtr->IntNodePointerReg >> CCU6_INP_INPT13_POS) & \
                        CCU6_INP_INPT13_MSK));
-
-    /* PISEL2.ISCNT13 */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U), \
-                      IFX_CCU6_PISEL2_ISCNT13_OFF, \
-                      CCU6_PISEL2_ISCNT13_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* PISEL2.T13EXT */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U), \
-                      IFX_CCU6_PISEL2_T13EXT_OFF, \
-                      CCU6_PISEL2_T13EXT_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* PISEL2.IST13HR */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U), \
-                      IFX_CCU6_PISEL2_IST13HR_OFF, \
-                      CCU6_PISEL2_IST13HR_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* CMPSTAT.COUT63PS */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPSTAT.U), \
-                      IFX_CCU6_CMPSTAT_COUT63PS_OFF, \
-                      CCU6_CMPSTAT_COUT63PS_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* CMPSTAT.T13IM */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPSTAT.U), \
-                      IFX_CCU6_CMPSTAT_T13IM_OFF, \
-                      CCU6_CMPSTAT_T13IM_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* CMPMODIF.MCC63S */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPMODIF.U), \
-                      IFX_CCU6_CMPMODIF_MCC63S_OFF, \
-                      CCU6_CMPMODIF_MCC63S_LEN, \
-                      CCU6_BIT_CLEAR);
-
-    /* CMPMODIF.MCC63R */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPMODIF.U), \
-                      IFX_CCU6_CMPMODIF_MCC63R_OFF, \
-                      CCU6_CMPMODIF_MCC63R_LEN, \
-                      CCU6_BIT_SET);
 
     /* T1xPR register */
     Mcu_17_Ccu6_Kernel[Ccu6Kernel]->T13PR.U = ConfigPtr->TimerPeriodReg;
@@ -4054,9 +4228,9 @@ void Mcu_17_Ccu6_TimerDeInit
   const Mcu_17_Ccu6_TimerChIdentifierType TimerId
 )
 {
-  Mcu_17_Ccu6_KernelIdentifierType Ccu6Kernel;
-  Mcu_17_Ccu6_TimerType Ccu6Timer;
-  Mcu_17_Ccu6_ComparatorType Ccu6Comparator;
+  uint8 Ccu6Kernel;
+  uint8 Ccu6Timer;
+  uint8 Ccu6Comparator;
 
   Ccu6Kernel = (uint8)(TimerId & CCU6_KERNEL_MSK) ;
   Ccu6Timer = (uint8)((TimerId >> CCU6_TIMER_POS) & CCU6_TIMER_MSK) ;
@@ -4095,43 +4269,6 @@ void Mcu_17_Ccu6_TimerDeInit
                       (Ccu6Comparator * CCU6_IEN_ENCC6xRF_LEN), \
                       CCU6_IEN_ENCC6xRF_LEN, \
                       CCU6_IEN_CC6_DEINIT_VAL);
-
-    /* IEN.ENT12OM register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENT12OM_OFF, \
-                      CCU6_IEN_ENT12OM_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
-    /* IEN.ENTRPF register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENTRPF_OFF, \
-                      CCU6_IEN_ENTRPF_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
-    /* IEN.ENCHE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENCHE_OFF, \
-                      CCU6_IEN_ENCHE_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
-    /* IEN.ENWHE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENWHE_OFF, \
-                      CCU6_IEN_ENWHE_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
-    /* IEN.ENIDLE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENIDLE_OFF, \
-                      CCU6_IEN_ENIDLE_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
-    /* IEN.ENSTR register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENSTR_OFF, \
-                      CCU6_IEN_ENSTR_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
     /* INP.INPT12 register*/
     Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->INP.U), \
                       IFX_CCU6_INP_INPT12_OFF, \
@@ -4157,49 +4294,6 @@ void Mcu_17_Ccu6_TimerDeInit
                       CCU6_T12MSEL_MSEL60_LEN, \
                       CCU6_T12MSEL_MSEL6x_DEINIT_VAL);
 
-    /* TCTR2.T12SSC */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR2.U), \
-                      IFX_CCU6_TCTR2_T12SSC_OFF, \
-                      CCU6_TCTR2_T12SSC_LEN, \
-                      CCU6_TCTR2_T12_DEINIT_VAL);
-
-    /* TCTR2.T12RSEL */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR2.U), \
-                      IFX_CCU6_TCTR2_T12RSEL_OFF, \
-                      CCU6_TCTR2_T12RSEL_LEN, \
-                      CCU6_TCTR2_T12_DEINIT_VAL);
-
-    /* PISEL2.ISCNT12 */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U), \
-                      IFX_CCU6_PISEL2_ISCNT12_OFF, \
-                      CCU6_PISEL2_ISCNT12_LEN, \
-                      CCU6_PISEL2_ISCNTx_DEINIT_VAL);
-
-    /* PISEL2.T12EXT */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U), \
-                      IFX_CCU6_PISEL2_T12EXT_OFF, \
-                      CCU6_PISEL2_T12EXT_LEN, \
-                      CCU6_PISEL2_TxEXT_DEINIT_VAL);
-
-    /* CMPSTAT.CC6xPS, COUT6xPS */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPSTAT.U), \
-                      ((Ccu6Comparator * CCU6_CMPSTAT_PS_BITS_LEN) \
-                      + IFX_CCU6_CMPSTAT_CC60PS_OFF), \
-                      CCU6_CMPSTAT_PS_BITS_LEN, \
-                      CCU6_CMPSTAT_PS_BITS_DEINIT_VAL);
-
-    /* CMPMODIF.MCC6xS */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPMODIF.U), \
-                      (Ccu6Comparator * CCU6_CMPMODIF_MCC60S_LEN), \
-                      CCU6_CMPMODIF_MCC60S_LEN, \
-                      CCU6_CMPMODIF_MCC6xS_DEINIT_VAL);
-
-    /* CMPMODIF.MCC6xR */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPMODIF.U), \
-                      ((Ccu6Comparator * CCU6_CMPMODIF_MCC60R_LEN) \
-                      + IFX_CCU6_CMPMODIF_MCC60R_OFF), \
-                      CCU6_CMPMODIF_MCC60R_LEN, \
-                      CCU6_CMPMODIF_MCC6xR_DEINIT_VAL);
 
     /* T1xPR register */
     Mcu_17_Ccu6_Kernel[Ccu6Kernel]->T12PR.U = CCU6_T12PR_CC6_DEINIT_VAL;
@@ -4241,83 +4335,11 @@ void Mcu_17_Ccu6_TimerDeInit
                       CCU6_IEN_ENT13CM_LEN, \
                       CCU6_IEN_T13_DEINIT_VAL);
 
-    /* IEN.ENTRPF register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENTRPF_OFF, \
-                      CCU6_IEN_ENTRPF_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
-    /* IEN.ENCHE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENCHE_OFF, \
-                      CCU6_IEN_ENCHE_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
-    /* IEN.ENWHE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENWHE_OFF, \
-                      CCU6_IEN_ENWHE_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
-    /* IEN.ENIDLE register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENIDLE_OFF, \
-                      CCU6_IEN_ENIDLE_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
-    /* IEN.ENSTR register*/
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U), \
-                      IFX_CCU6_IEN_ENSTR_OFF, \
-                      CCU6_IEN_ENSTR_LEN, \
-                      CCU6_IEN_CC6_DEINIT_VAL);
-
     /* INP.T13 register*/
     Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->INP.U), \
                       IFX_CCU6_INP_INPT13_OFF, \
                       CCU6_INP_INPT13_LEN, \
                       CCU6_INP_T13_DEINIT_VAL);
-
-    /* PISEL2.ISCNT13 */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U), \
-                      IFX_CCU6_PISEL2_ISCNT13_OFF, \
-                      CCU6_PISEL2_ISCNT13_LEN, \
-                      CCU6_PISEL2_ISCNTx_DEINIT_VAL);
-
-    /* PISEL2.T13EXT */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U), \
-                      IFX_CCU6_PISEL2_T13EXT_OFF, \
-                      CCU6_PISEL2_T13EXT_LEN, \
-                      CCU6_PISEL2_TxEXT_DEINIT_VAL);
-
-    /* PISEL2.IST13HR */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U), \
-                      IFX_CCU6_PISEL2_IST13HR_OFF, \
-                      CCU6_PISEL2_IST13HR_LEN, \
-                      CCU6_PISEL2_IST13HR_DEINIT_VAL);
-
-    /* CMPSTAT.COUT63PS */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPSTAT.U), \
-                      IFX_CCU6_CMPSTAT_COUT63PS_OFF, \
-                      CCU6_CMPSTAT_COUT63PS_LEN, \
-                      CCU6_CMPSTAT_COUT6xPS_DEINIT_VAL);
-
-    /* CMPSTAT.T13IM */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPSTAT.U), \
-                      IFX_CCU6_CMPSTAT_T13IM_OFF, \
-                      CCU6_CMPSTAT_T13IM_LEN, \
-                      CCU6_CMPSTAT_T13IM_DEINIT_VAL);
-
-    /* CMPMODIF.MCC63S */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPMODIF.U), \
-                      IFX_CCU6_CMPMODIF_MCC63S_OFF, \
-                      CCU6_CMPMODIF_MCC63S_LEN, \
-                      CCU6_CMPMODIF_MCC6xS_DEINIT_VAL);
-
-    /* CMPMODIF.MCC63R */
-    Mcal_SetBitAtomic(&(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPMODIF.U), \
-                      IFX_CCU6_CMPMODIF_MCC63R_OFF, \
-                      CCU6_CMPMODIF_MCC63R_LEN, \
-                      CCU6_CMPMODIF_MCC6xR_DEINIT_VAL);
 
     /* T1xPR register */
     Mcu_17_Ccu6_Kernel[Ccu6Kernel]->T13PR.U = CCU6_T13PR_CC6_DEINIT_VAL;
@@ -4356,9 +4378,9 @@ void Mcu_17_Ccu6_TimerStart
   const Mcu_17_Ccu6_TimerChIdentifierType TimerId
 )
 {
-  Mcu_17_Ccu6_KernelIdentifierType Ccu6Kernel;
-  Mcu_17_Ccu6_TimerType Ccu6Timer;
-  Mcu_17_Ccu6_ComparatorType Ccu6Comparator;
+  uint8 Ccu6Kernel;
+  uint8 Ccu6Timer;
+  uint8 Ccu6Comparator;
 
   Ccu6Kernel = (uint8)(TimerId & CCU6_KERNEL_MSK) ;
   Ccu6Timer = (uint8)((TimerId >> CCU6_TIMER_POS) & CCU6_TIMER_MSK) ;
@@ -4440,8 +4462,8 @@ void Mcu_17_Ccu6_TimerStop
   const Mcu_17_Ccu6_TimerChIdentifierType TimerId
 )
 {
-  Mcu_17_Ccu6_KernelIdentifierType Ccu6Kernel;
-  Mcu_17_Ccu6_TimerType Ccu6Timer;
+  uint8 Ccu6Kernel;
+  uint8 Ccu6Timer;
 
   Ccu6Kernel = (uint8)(TimerId & CCU6_KERNEL_MSK) ;
   Ccu6Timer = (uint8)((TimerId >> CCU6_TIMER_POS) & CCU6_TIMER_MSK) ;
@@ -4498,8 +4520,8 @@ void Mcu_17_Ccu6_TimerShadowTransfer
   const Mcu_17_Ccu6_TimerChIdentifierType TimerId
 )
 {
-  Mcu_17_Ccu6_KernelIdentifierType Ccu6Kernel;
-  Mcu_17_Ccu6_TimerType Ccu6Timer;
+  uint8 Ccu6Kernel;
+  uint8 Ccu6Timer;
 
   Ccu6Kernel = (uint8)(TimerId & CCU6_KERNEL_MSK) ;
   Ccu6Timer = (uint8)((TimerId >> CCU6_TIMER_POS) & CCU6_TIMER_MSK) ;
@@ -4557,8 +4579,7 @@ void Mcu_17_Ccu6_TimerIntEnDis
   const Mcu_17_Ccu6_TimerChIntType * const Ccu6IntConfig
 )
 {
-  Mcu_17_Ccu6_KernelIdentifierType Ccu6Kernel = (uint8)(Ccu6IntConfig->TimerId
-                                                             & CCU6_KERNEL_MSK);
+  uint8 Ccu6Kernel = (uint8)(Ccu6IntConfig->TimerId & CCU6_KERNEL_MSK);
 
   if (Ccu6IntConfig->IEnLen == (uint8)CCU6_IEN_SINGLE_EDGE)
   {
@@ -4613,9 +4634,9 @@ Std_ReturnType Mcu_17_Ccu6_TimerInitCheck
   uint32 ConfigVal;
   uint32 CmpVal = 0xFFFFFFFFU;
   Std_ReturnType RetVal = E_NOT_OK;
-  Mcu_17_Ccu6_KernelIdentifierType Ccu6Kernel;
-  Mcu_17_Ccu6_TimerType Ccu6Timer;
-  Mcu_17_Ccu6_ComparatorType Ccu6Comparator;
+  uint8 Ccu6Kernel;
+  uint8 Ccu6Timer;
+  uint8 Ccu6Comparator;
 
   Ccu6Kernel = (uint8)((ConfigPtr->TimerId) & CCU6_KERNEL_MSK);
   Ccu6Timer = (uint8)((ConfigPtr->TimerId >> CCU6_TIMER_POS) & CCU6_TIMER_MSK);
@@ -4634,14 +4655,14 @@ Std_ReturnType Mcu_17_Ccu6_TimerInitCheck
     {
       /* TCTR0.T12CLK */
       SfrVal = ((uint32)((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR0.U) >> \
-                        IFX_CCU6_TCTR0_T12CLK_OFF) & IFX_CCU6_TCTR0_T12CLK_MSK);
+                         IFX_CCU6_TCTR0_T12CLK_OFF) & IFX_CCU6_TCTR0_T12CLK_MSK);
       ConfigVal = ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T12CLK_OFF) & \
                    IFX_CCU6_TCTR0_T12CLK_MSK);
       CmpVal &= ~(SfrVal ^ ConfigVal);
 
       /* TCTR0.T12PRE */
       SfrVal = ((uint32)((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR0.U) >> \
-                        IFX_CCU6_TCTR0_T12PRE_OFF) & IFX_CCU6_TCTR0_T12PRE_MSK);
+                         IFX_CCU6_TCTR0_T12PRE_OFF) & IFX_CCU6_TCTR0_T12PRE_MSK);
       ConfigVal = ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T12PRE_OFF) & \
                    IFX_CCU6_TCTR0_T12PRE_MSK);
       CmpVal &= ~(SfrVal ^ ConfigVal);
@@ -4681,36 +4702,6 @@ Std_ReturnType Mcu_17_Ccu6_TimerInitCheck
                    CCU6_IEN_ENCC6xRF_MSK);
       CmpVal &= ~(SfrVal ^ ConfigVal);
 
-      /* IEN.ENT12OM/F register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENT12OM_OFF) & CCU6_IEN_ENT12OM_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* IEN.ENTRPF/F register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENTRPF_OFF) & CCU6_IEN_ENTRPF_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* IEN.ENCHE/F register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENCHE_OFF) & CCU6_IEN_ENCHE_MSK);
-      CmpVal &= ~(SfrVal);
-
-     /* IEN.ENWHE register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENWHE_OFF) & CCU6_IEN_ENWHE_MSK);
-      CmpVal &= ~(SfrVal);
-
-       /* IEN.ENIDLE register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENIDLE_OFF) & CCU6_IEN_ENIDLE_MSK);
-      CmpVal &= ~(SfrVal);
-
-       /* IEN.ENSTR register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENSTR_OFF) & CCU6_IEN_ENSTR_MSK);
-      CmpVal &= ~(SfrVal);
-
       /* INP.INPT12 register*/
       SfrVal = ((uint32)((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->INP.U) >> \
                          IFX_CCU6_INP_INPT12_OFF)& CCU6_INP_INPT12_MSK);
@@ -4741,37 +4732,6 @@ Std_ReturnType Mcu_17_Ccu6_TimerInitCheck
                    CCU6_T12MSEL_MSEL60_MSK);
       CmpVal &= ~(SfrVal ^ ConfigVal);
 
-      /* TCTR2.T12SSC */
-      SfrVal = (uint32)(((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR2.U) >> \
-                         IFX_CCU6_TCTR2_T12SSC_OFF)& \
-                         CCU6_TCTR2_T12SSC_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* TCTR2.T12RSEL */
-      SfrVal = (uint32)(((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR2.U) >> \
-                         IFX_CCU6_TCTR2_T12RSEL_OFF)& \
-                         CCU6_TCTR2_T12RSEL_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* PISEL2.ISCNT12 */
-      SfrVal = (uint32)(((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U) >> \
-                         IFX_CCU6_PISEL2_ISCNT12_OFF)& \
-                         CCU6_PISEL2_ISCNT12_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* PISEL2.T12EXT */
-      SfrVal = (uint32)(((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U) >> \
-                         IFX_CCU6_PISEL2_T12EXT_OFF)& \
-                         CCU6_PISEL2_T12EXT_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* CMPSTAT.CC6xPS, COUT6xPS */
-      SfrVal = (uint32)(((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPSTAT.U) >> \
-                        ((Ccu6Comparator * (uint32)CCU6_CMPSTAT_PS_BITS_LEN) \
-                         + IFX_CCU6_CMPSTAT_CC60PS_OFF))& \
-                         CCU6_CMPSTAT_PS_BITS_MSK);
-      CmpVal &= ~(SfrVal);
-
       /* T1xPR register */
       SfrVal = Mcu_17_Ccu6_Kernel[Ccu6Kernel]->T12PR.U;
       ConfigVal = (ConfigPtr->TimerPeriodReg & CCU6_T12_MSK);
@@ -4786,7 +4746,7 @@ Std_ReturnType Mcu_17_Ccu6_TimerInitCheck
     {
       /* TCTR0.T13CLK */
       SfrVal = (uint32)(((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->TCTR0.U) >> \
-                        IFX_CCU6_TCTR0_T13CLK_OFF) & IFX_CCU6_TCTR0_T13CLK_MSK);
+                         IFX_CCU6_TCTR0_T13CLK_OFF) & IFX_CCU6_TCTR0_T13CLK_MSK);
       ConfigVal = ((ConfigPtr->TimerCtrlReg0 >> IFX_CCU6_TCTR0_T13CLK_OFF) & \
                    IFX_CCU6_TCTR0_T13CLK_MSK);
       CmpVal &= ~(SfrVal ^ ConfigVal);
@@ -4800,7 +4760,7 @@ Std_ReturnType Mcu_17_Ccu6_TimerInitCheck
 
       /* MODCTR.ECT13O */
       SfrVal = (uint32)(((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->MODCTR.U) >> \
-                      IFX_CCU6_MODCTR_ECT13O_OFF) & IFX_CCU6_MODCTR_ECT13O_MSK);
+                         IFX_CCU6_MODCTR_ECT13O_OFF) & IFX_CCU6_MODCTR_ECT13O_MSK);
       ConfigVal = ((ConfigPtr->ModCtrlReg >> CCU6_MODCTR_ECT13O_OFF) & \
                    IFX_CCU6_MODCTR_ECT13O_MSK);
       CmpVal &= ~(SfrVal ^ ConfigVal);
@@ -4825,31 +4785,6 @@ Std_ReturnType Mcu_17_Ccu6_TimerInitCheck
                    CCU6_IEN_ENT13CM_MSK);
       CmpVal &= ~(SfrVal ^ ConfigVal);
 
-      /* IEN.ENTRPF/F register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENTRPF_OFF) & CCU6_IEN_ENTRPF_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* IEN.ENCHE/F register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENCHE_OFF) & CCU6_IEN_ENCHE_MSK);
-      CmpVal &= ~(SfrVal);
-
-     /* IEN.ENWHE register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENWHE_OFF) & CCU6_IEN_ENWHE_MSK);
-      CmpVal &= ~(SfrVal);
-
-       /* IEN.ENIDLE register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENIDLE_OFF) & CCU6_IEN_ENIDLE_MSK);
-      CmpVal &= ~(SfrVal);
-
-       /* IEN.ENSTR register*/
-      SfrVal = (((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->IEN.U) >> \
-                 IFX_CCU6_IEN_ENSTR_OFF) & CCU6_IEN_ENSTR_MSK);
-      CmpVal &= ~(SfrVal);
-
       /* INP.T13 register*/
       SfrVal = ((uint32)(((Mcu_17_Ccu6_Kernel[Ccu6Kernel]->INP.U) >> \
                           IFX_CCU6_INP_INPT13_OFF) & IFX_CCU6_INP_INPT13_MSK));
@@ -4859,36 +4794,6 @@ Std_ReturnType Mcu_17_Ccu6_TimerInitCheck
 
       SfrVal = (uint32)(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CC63SR.U);
       ConfigVal = (ConfigPtr->Ccu6ShadowReg & CCU6_T12_MSK);
-      CmpVal &= ~(SfrVal ^ ConfigVal);
-
-      /* PISEL2.ISCNT13 */
-      SfrVal = ((uint32)(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U >> \
-                   IFX_CCU6_PISEL2_ISCNT13_OFF) & IFX_CCU6_PISEL2_ISCNT13_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* PISEL2.T13EXT */
-      SfrVal = ((uint32)(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U >> \
-                     IFX_CCU6_PISEL2_T13EXT_OFF) & IFX_CCU6_PISEL2_T13EXT_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* PISEL2.IST13HR */
-      SfrVal = ((uint32)(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->PISEL2.U >> \
-                   IFX_CCU6_PISEL2_IST13HR_OFF) & IFX_CCU6_PISEL2_IST13HR_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* CMPSTAT.T13IM */
-      SfrVal = ((uint32)(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPSTAT.U >> \
-                     IFX_CCU6_CMPSTAT_T13IM_OFF) & IFX_CCU6_CMPSTAT_T13IM_MSK);
-      CmpVal &= ~(SfrVal);
-
-      /* CMPSTAT.COUT63PS */
-      SfrVal = ((uint32)(Mcu_17_Ccu6_Kernel[Ccu6Kernel]->CMPSTAT.U >> \
-               IFX_CCU6_CMPSTAT_COUT63PS_OFF) & IFX_CCU6_CMPSTAT_COUT63PS_MSK);
-      CmpVal &= ~(SfrVal);
-
-    /* T1xPR register */
-      SfrVal = Mcu_17_Ccu6_Kernel[Ccu6Kernel]->T13PR.U;
-      ConfigVal = (ConfigPtr->TimerPeriodReg & CCU6_T12_MSK);
       CmpVal &= ~(SfrVal ^ ConfigVal);
     }
     else
@@ -4950,7 +4855,7 @@ void Mcu_17_Gpt12_TimerInit
       - Configure the timer channel's port selection configuration
       - Configure the timer counter
    */
-   Mcu_17_Gpt12_TimerChIdentifierType TimerId;
+   uint8 TimerId;
    TimerId = ConfigPtr->TimerId;
    if ((TimerId == MCU_GPT12_TIMER3) || (TimerId == MCU_GPT12_TIMER6))
    {
@@ -5093,7 +4998,7 @@ Std_ReturnType Mcu_17_Gpt12_TimerInitCheck
   volatile uint32 CmpVal = 0xFFFFFFFFU;
   uint32 SfrVal;
   uint32 ConfigVal;
-  Mcu_17_Gpt12_TimerChIdentifierType TimerId;
+  uint8 TimerId;
   Std_ReturnType RetVal = E_NOT_OK;
 
   TimerId = ConfigPtr->TimerId;
@@ -5570,7 +5475,7 @@ void Mcu_17_Stm_SetupComparator
 **                                                                            **
 ** Sync/Async       : Synchronous                                             **
 **                                                                            **
-** Reentrancy       : Non-Reentrant                                           **
+** Reentrancy       : Reentrant for other STM Timers                          **
 **                                                                            **
 ** Parameters(in)   : ConfigPtr - STM Timer channel initialization contents   **
 **                                                                            **
@@ -5784,11 +5689,20 @@ LOCAL_INLINE uint8 Mcu_17_Gtm_lGetTimIrqStatus
 
   /* Identify the ICM register corresponding to the Module number */
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: Different TIM modules are associated
+   * with different ICM registers. To effectively calculate to which ICM
+   * register the module belongs to, the base ICM register address for
+   * TIM module is taken the , according to module number, the subsequent
+   * ICM register is accessed. Since the Module and Channel values are
+   * validated by the user, no side effects are foreseen */
+
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule, as the pointer to the object type
    * it is getting cast into is a known type . */
-  RegVal = (((volatile uint32*)GTM_TIM_ICM_BASE_ADDRESS) \
-             [((uint32)Module / (uint32)GTM_TIM_MODULES_IN_ICM_REG)]);
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
+  RegVal = *(((volatile uint32*)(volatile void *)GTM_TIM_ICM_BASE_ADDRESS) + \
+             ((uint32)Module / (uint32)GTM_TIM_MODULES_IN_ICM_REG));
 
   /* Retrieve the IRQ status of the channel number */
   IrqStatus = (uint8)((RegVal >> RegPos) & (uint32)GTM_GET_TIM_INT_STATUS);
@@ -5842,11 +5756,20 @@ LOCAL_INLINE uint8 Mcu_17_Gtm_lGetTomIrqStatus
 
   /* Identify the ICM register corresponding to the Module number */
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: Different TOM modules are associated
+   * with different ICM registers. To effectively calculate to which ICM
+   * register the module belongs to, the base ICM register address for
+   * TOM module is taken the , according to module number, the subsequent
+   * ICM register is accessed. Since the Module and Channel values are
+   * validated by the user, no side effects are foreseen */
+
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule, as the pointer to the object type
    * it is getting cast into is a known type . */
-  RegVal = (((volatile uint32*)GTM_TOM_ICM_BASE_ADDRESS) \
-             [((uint32)Module / (uint32)GTM_TOM_MODULES_IN_ICM_REG)]);
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
+  RegVal = *(((volatile uint32*)(volatile void *)GTM_TOM_ICM_BASE_ADDRESS) + \
+             ((uint32)Module / (uint32)GTM_TOM_MODULES_IN_ICM_REG));
 
 
   /* Retrieve the IRQ status of the channel number and the next channel */
@@ -5901,11 +5824,20 @@ LOCAL_INLINE uint8 Mcu_17_Gtm_lGetAtomIrqStatus
 
   /* Identify the ICM register corresponding to the Module number */
 
+  /* MISRA2012_RULE_18_4_JUSTIFICATION: Different ATOM modules are associated
+   * with different ICM registers. To effectively calculate to which ICM
+   * register the module belongs to, the base ICM register address for
+   * ATOM module is taken the , according to module number, the subsequent
+   * ICM register is accessed. Since the Module and Channel values are
+   * validated by the user, no side effects are foreseen */
+
   /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects foreseen
    * by violating this MISRA rule, as the pointer to the object type
    * it is getting cast into is a known type . */
-  RegVal = (((volatile uint32*)GTM_ATOM_ICM_BASE_ADDRESS) \
-             [((uint32)Module / (uint32)GTM_ATOM_MODULES_IN_ICM_REG)]);
+  /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
+   * by violating this MISRA rule. */
+  RegVal = *(((volatile uint32*)(volatile void *)GTM_ATOM_ICM_BASE_ADDRESS) + \
+             ((uint32)Module / (uint32)GTM_ATOM_MODULES_IN_ICM_REG));
 
 
   /* Retrieve the IRQ status of the channel number and the next channel */
@@ -5962,8 +5894,9 @@ LOCAL_INLINE uint32* Mcu_17_lGetLockAddress
 /* End of #if (MCU_GTM_USED == STD_ON) */
 
 #define MCU_17_TIMERIP_STOP_SEC_CODE_ASIL_B_GLOBAL
-/* MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header is repeatedly included
-   without safeguard. It complies to Autosar guidelines. */
+/* MISRA2012_RULE_4_10_JUSTIFICATION: 'Mcu_MemMap.h' is header file which
+ * contains the memory sections for MCU_17_TIMERIP. It should not be guarded by
+ * standard include. No side effects foreseen by violating this MISRA rule. */
 /* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header included as per Autosar
   guidelines. */
 #include "Mcu_MemMap.h"
@@ -6023,7 +5956,7 @@ void Mcu_17_Gtm_TomChannelIsr
   uint32 IcmStatus;
   uint32 IrqStatus;
   uint8  UserId;
-  uint32  LogChId;
+  uint8  LogChId;
   uint8  BitPos;
   uint8  ChanIndex;
 
@@ -6066,6 +5999,9 @@ void Mcu_17_Gtm_TomChannelIsr
          * object type it is getting cast into is a known type . */
         /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects
          * foreseen by violating this MISRA rule. */
+        /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different
+         * TOM modules. Since the Module values are
+         * validated by the user, no side effects are foreseen */
         TomChannelRegPtr = GTM_TOM_CH_POINTER(Module, (Channel + ChanIndex));
 
         TomChannelNotifySts = TomChannelRegPtr->IRQ.NOTIFY.U;
@@ -6094,7 +6030,7 @@ void Mcu_17_Gtm_TomChannelIsr
           /* Retrieve the user information from TOM channel user data table */
           UserData = Mcu_17_Gtm_TomChUserData[Module][Channel + ChanIndex];
           UserId =  (uint8)(UserData & (uint32)GTM_USER_ID_MSK);
-          LogChId = ((UserData >> (uint32)GTM_LOG_CH_ID_BITPOS) & \
+          LogChId = (uint8)((UserData >> (uint32)GTM_LOG_CH_ID_BITPOS) & \
                             (uint32)GTM_LOG_CH_ID_MSK);
 
           /* Is UserId information a valid one */
@@ -6196,7 +6132,7 @@ void Mcu_17_Gtm_AtomChannelIsr
   uint32 IcmStatus;
   uint32 IrqStatus;
   uint8  UserId;
-  uint32 LogChId;
+  uint8  LogChId;
   uint8  BitPos;
   uint8  ChanIndex;
 
@@ -6240,6 +6176,9 @@ void Mcu_17_Gtm_AtomChannelIsr
          * object type it is getting cast into is a known type . */
         /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects
          * foreseen by violating this MISRA rule. */
+        /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different
+         * ATOM modules. Since the Module values are
+         * validated by the user, no side effects are foreseen */
         AtomChannelRegPtr = GTM_ATOM_CH_POINTER(Module, (Channel + ChanIndex));
 
         AtomChannelNotifySts = AtomChannelRegPtr->IRQ.NOTIFY.U;
@@ -6268,7 +6207,7 @@ void Mcu_17_Gtm_AtomChannelIsr
           /* Retrieve the user information from ATOM channel user data table */
           UserData = Mcu_17_Gtm_AtomChUserData[Module][Channel + ChanIndex];
           UserId =   (uint8)(UserData & (uint32)GTM_USER_ID_MSK);
-          LogChId =  ((UserData >> (uint32)GTM_LOG_CH_ID_BITPOS) & \
+          LogChId =  (uint8)((UserData >> (uint32)GTM_LOG_CH_ID_BITPOS) & \
                              (uint32)GTM_LOG_CH_ID_MSK);
 
           /* Is UserId information a valid one */
@@ -6364,7 +6303,7 @@ void Mcu_17_Gtm_TimChannelIsr
   Ifx_GTM_TIM_CH *TimChannelRegPtr;
   uint32 UserData;
   uint32 IrqStatus;
-  uint32  LogChId;
+  uint8  LogChId;
   uint8  UserId;
 
   /* Did the input TIM channel trigger the interrupt */
@@ -6380,6 +6319,9 @@ void Mcu_17_Gtm_TimChannelIsr
      * it is getting cast into is a known type . */
     /* MISRA2012_RULE_11_5_JUSTIFICATION: SFR access. No side effects foreseen
      * by violating this MISRA rule. */
+    /* MISRA2012_RULE_18_4_JUSTIFICATION: To effectively access different TIM
+     * modules. Since the Module and channel values are
+     * validated by the user, no side effects are foreseen */
     TimChannelRegPtr = GTM_TIM_CH_POINTER(Module, Channel);
 
     /* Save the interrupt status, to be used by TIM user */
@@ -6399,7 +6341,7 @@ void Mcu_17_Gtm_TimChannelIsr
       /* Retrieve the user information from TIM channel user data table */
       UserData = Mcu_17_Gtm_TimChUserData[Module][Channel];
       UserId   = (uint8)(UserData & (uint32)GTM_USER_ID_MSK);
-      LogChId  = ((UserData >> (uint32)GTM_LOG_CH_ID_BITPOS) & \
+      LogChId  = (uint8)((UserData >> (uint32)GTM_LOG_CH_ID_BITPOS) & \
                          (uint32)GTM_LOG_CH_ID_MSK);
 
       /* Is UserId information a valid one */
@@ -6495,7 +6437,7 @@ void Mcu_17_Ccu6_ChannelIsr
   uint32 KernelIntStat = CCU6_BIT_CLEAR;
   uint32 IrqStatus     = CCU6_BIT_CLEAR;
   uint32 StatusFlags   = CCU6_BIT_CLEAR;
-  uint32 LogChId;
+  uint8  LogChId;
   uint8  UserId;
 
   /* Based on the comparator type, clear the interrupt status flags */
@@ -6513,7 +6455,7 @@ void Mcu_17_Ccu6_ChannelIsr
   {
     KernelIntEn =  ((Mcu_17_Ccu6_Kernel[Kernel]->IEN.U) &
                     (CCU6_T12_INT_PM_MSK | ((uint32)CCU6_T12_INT_CC6x_MSK << \
-                    ((uint32)Comparator * CCU6_COMPARATOR_BITLEN))));
+                                            ((uint32)Comparator * CCU6_COMPARATOR_BITLEN))));
 
     KernelIntStat = ((Mcu_17_Ccu6_Kernel[Kernel]->IS.U) &
                      (CCU6_T12_INT_PM_MSK | ((uint32)CCU6_T12_INT_CC6x_MSK << \
@@ -6544,7 +6486,7 @@ void Mcu_17_Ccu6_ChannelIsr
     /* Retrieve the user information from CCU6 channel user data table */
     UserData = Mcu_17_Ccu6_ChUserData[Kernel][Comparator];
     UserId   = (uint8)(UserData & (uint32)CCU6_USER_ID_MSK);
-    LogChId  = ((UserData >> (uint32)CCU6_LOG_CH_ID_BITPOS) & \
+    LogChId  = (uint8)((UserData >> (uint32)CCU6_LOG_CH_ID_BITPOS) & \
                        (uint32)CCU6_LOG_CH_ID_MSK);
 
     /* Is UserId information a valid one */
@@ -6618,12 +6560,12 @@ void Mcu_17_Gpt12_ChannelIsr
 {
   uint32 UserData;
   uint8  UserId;
-  uint32 LogChId;
+  uint8  LogChId;
 
   /* Retrieve the user information from GPT12 channel user data table */
   UserData = Mcu_17_Gpt12_ChUserData[Timer];
   UserId   = (uint8)(UserData & (uint32)GPT12_USER_ID_MSK);
-  LogChId  = ((UserData >> (uint32)GPT12_LOG_CH_ID_BITPOS) & \
+  LogChId  = (uint8)((UserData >> (uint32)GPT12_LOG_CH_ID_BITPOS) & \
                      (uint32)GPT12_LOG_CH_ID_MSK);
 
   /* Is UserId information a valid one */
@@ -6811,12 +6753,12 @@ void Mcu_17_Eru_GatingIsr
   const Mcu_17_Eru_SrcIdentifierType EruSrcId
 )
 {
-  uint32 EruIgpVal;
+  const uint32* EruIgpPtr;
   uint32 UserData;
   uint32 IrqStatus;
   uint32 EruEifrMask;
   uint32 EruPdrStatus;
-  uint32 LogChId;
+  uint8  LogChId;
   uint8  UserId, UserId1, UserId2;
   #if (MCU_SAFETY_ENABLE == STD_ON)
   uint8  IrqServiceFlag;
@@ -6869,9 +6811,8 @@ void Mcu_17_Eru_GatingIsr
       UserId   = (uint8)((UserData & ERU_USER_ID_MSK) >> ERU_USER_ID_POS);
 
       /* Retrieve the user information from ERU channel user data table */
-      LogChId  = ((UserData & ERU_LOG_CH_ID_MSK) >> \
+      LogChId  = (uint8)((UserData & ERU_LOG_CH_ID_MSK) >> \
                                                    (uint32)ERU_LOG_CH_ID_POS);
-      LogChId = (0x1UL << LogChId);
 
       /* Does the valid User ID have a callback function */
       /* [cover parentID={90C7924A-77DF-4a55-B6C5-BDC1D0F39FD3}]
@@ -6926,20 +6867,26 @@ void Mcu_17_Eru_GatingIsr
             EruChOutputUnit = EruSrcId + ERU_OGU_OFFSET;
           }
 
-          EruIgpVal = MODULE_SCU.IGCR[EruChOutputUnit / 2U].U;
+          /* MISRA2012_RULE_11_3_JUSTIFICATION: SFR access. No side effects
+          * foreseen by violating this MISRA rule, as the pointer to the object
+          * type it is getting cast into is a known type . */
+          /* MISRA2012_RULE_11_8_JUSTIFICATION: SFR access. Since the input
+          * argument for the API discards volatile keyword. No side effects
+          * foreseen by violating this MISRA rule*/
+          EruIgpPtr = (uint32*)(&(MODULE_SCU.IGCR[EruChOutputUnit / 2U].U));
 
           /* Check if the interrupts are enabled */
           /* [cover parentID={5ECF4832-2D8C-4a9e-910A-DFD2CB2CFE4A}]
           * Are interrupts enabled
           * [/cover] */
-          if (0U != Mcal_GetBitAtomic(EruIgpVal, EruIgpPos, ERU_IGP_LEN))
+          if (0U != Mcal_GetBitAtomic(*EruIgpPtr, EruIgpPos, ERU_IGP_LEN))
           {
             /* Fetch the User data, User Id and Logical channel Id*/
             UserData = Mcu_17_Eru_ChUserData[EruChOutputUnit];
             UserId   = (uint8)((UserData & ERU_USER_ID_MSK) >> ERU_USER_ID_POS);
 
             /* Retrieve the user information from ERU channel user data table */
-            LogChId  = ((UserData & ERU_LOG_CH_ID_MSK) >> \
+            LogChId  = (uint8)((UserData & ERU_LOG_CH_ID_MSK) >> \
                               (uint32)ERU_LOG_CH_ID_POS);
 
             EruChInputUnit = (uint8)(UserData & ERU_IN_CH_ID_MSK);
@@ -7013,6 +6960,14 @@ void Mcu_17_Eru_GatingIsr
   }
 }
 
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
+  in generated code due to Autosar Naming constraints.*/
 #define MCU_17_TIMERIP_STOP_SEC_CODE_FAST_ASIL_B_GLOBAL
 /* MISRA2012_RULE_20_1_JUSTIFICATION: Memmap header usage as per Autosar
    guideline. */

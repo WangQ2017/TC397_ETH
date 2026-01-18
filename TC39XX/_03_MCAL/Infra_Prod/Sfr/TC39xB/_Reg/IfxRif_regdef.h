@@ -1,11 +1,11 @@
 /**
  * \file IfxRif_regdef.h
  * \brief
- * \copyright Copyright (c) 2021 Infineon Technologies AG. All rights reserved.
+ * \copyright Copyright (c) 2020 Infineon Technologies AG. All rights reserved.
  *
  *
- * Version: TC39XB_UM_V2.0.0.R0
- * Specification: TC3xx User Manual V2.0.0
+ * Version: TC39XB_UM_V1.4.0.R0
+ * Specification: TC3xx User Manual V1.4.0
  * MAY BE CHANGED BY USER [yes/no]: No
  *
  *                                 IMPORTANT NOTICE
@@ -114,7 +114,7 @@ typedef struct _Ifx_RIF_CLC_Bits
 {
     Ifx_UReg_32Bit DISR:1;            /**< \brief [0:0] Module Disable Request Bit - DISR (rw) */
     Ifx_UReg_32Bit DISS:1;            /**< \brief [1:1] Module Disable Status Bit - DISS (rh) */
-    Ifx_UReg_32Bit FDIS:1;            /**< \brief [2:2] Freeze Disable - FDIS (rw) */
+    Ifx_UReg_32Bit reserved_2:1;      /**< \brief [2:2] \internal Reserved */
     Ifx_UReg_32Bit EDIS:1;            /**< \brief [3:3] Sleep Mode Enable Control - EDIS (rw) */
     Ifx_UReg_32Bit reserved_4:28;     /**< \brief [31:4] \internal Reserved */
 } Ifx_RIF_CLC_Bits;
@@ -213,13 +213,13 @@ typedef struct _Ifx_RIF_FLAGSCL_Bits
     Ifx_UReg_32Bit CALC:1;            /**< \brief [16:16] Calibration End Flag Clear - CALC (w) */
     Ifx_UReg_32Bit FWC:1;             /**< \brief [17:17] Frame Watchdog Flag Clear - FWC (w) */
     Ifx_UReg_32Bit REC:1;             /**< \brief [18:18] Ramp End Clear - REC (w) */
-    Ifx_UReg_32Bit SWE0C:1;           /**< \brief [19:19] Software Event 0 Flag Clear - SWE0C (w) */
+    Ifx_UReg_32Bit reserved_19:1;     /**< \brief [19:19] \internal Reserved */
     Ifx_UReg_32Bit CRCC0:1;           /**< \brief [20:20] CRC Error Flag Clear 0 - CRCC0 (w) */
     Ifx_UReg_32Bit CRCC1:1;           /**< \brief [21:21] CRC Error Flag Clear 1 - CRCC1 (w) */
     Ifx_UReg_32Bit CRCC2:1;           /**< \brief [22:22] CRC Error Flag Clear 2 - CRCC2 (w) */
     Ifx_UReg_32Bit CRCC3:1;           /**< \brief [23:23] CRC Error Flag Clear 3 - CRCC3 (w) */
     Ifx_UReg_32Bit R1EC:1;            /**< \brief [24:24] RAMP1 Error Flag Clear - R1EC (w) */
-    Ifx_UReg_32Bit SWE1C:1;           /**< \brief [25:25] Software Event 1 Flag Clear - SWE1C (w) */
+    Ifx_UReg_32Bit U1EC:1;            /**< \brief [25:25] Unimplemented Error Flag Clear - U1EC (w) */
     Ifx_UReg_32Bit R1SC:1;            /**< \brief [26:26] RAMP1 Start Flag Clear - R1SC (w) */
     Ifx_UReg_32Bit reserved_27:2;     /**< \brief [28:27] \internal Reserved */
     Ifx_UReg_32Bit SMCC:1;            /**< \brief [29:29] SMCF Alarm Flag Clear (w) */
@@ -234,13 +234,13 @@ typedef struct _Ifx_RIF_FLAGSSET_Bits
     Ifx_UReg_32Bit CALS:1;            /**< \brief [16:16] Calibration End Flag Set - CALS (w) */
     Ifx_UReg_32Bit FWS:1;             /**< \brief [17:17] Frame Watchdog Flag Set - FWS (w) */
     Ifx_UReg_32Bit RES:1;             /**< \brief [18:18] Ramp End Set - RES (w) */
-    Ifx_UReg_32Bit SWE0S:1;           /**< \brief [19:19] Software Event 0 Flag Set - SWE0S (w) */
+    Ifx_UReg_32Bit UES:1;             /**< \brief [19:19] Unimplemented Event Set - CES (w) */
     Ifx_UReg_32Bit CRCS0:1;           /**< \brief [20:20] CRC Error Flag Set 0 - CRCS0 (w) */
     Ifx_UReg_32Bit CRCS1:1;           /**< \brief [21:21] CRC Error Flag Set 1 - CRCS1 (w) */
     Ifx_UReg_32Bit CRCS2:1;           /**< \brief [22:22] CRC Error Flag Set 2 - CRCS2 (w) */
     Ifx_UReg_32Bit CRCS3:1;           /**< \brief [23:23] CRC Error Flag Set 3 - CRCS3 (w) */
     Ifx_UReg_32Bit R1ES:1;            /**< \brief [24:24] RAMP1 Error Flag Set 3 - R1ES (w) */
-    Ifx_UReg_32Bit SWE1S:1;           /**< \brief [25:25] Software Event 1 Flag Set - SWE1S (w) */
+    Ifx_UReg_32Bit U1ES:1;            /**< \brief [25:25] Unimplemented Error Flag Set - U1ES (w) */
     Ifx_UReg_32Bit R1SS:1;            /**< \brief [26:26] RAMP1 Start Set - R1SS (w) */
     Ifx_UReg_32Bit reserved_27:5;     /**< \brief [31:27] \internal Reserved */
 } Ifx_RIF_FLAGSSET_Bits;
@@ -282,25 +282,25 @@ typedef struct _Ifx_RIF_INTCON_Bits
     Ifx_UReg_32Bit CALE:1;            /**< \brief [0:0] Calibration End Interrupt Enable - CALE (rw) */
     Ifx_UReg_32Bit FWE:1;             /**< \brief [1:1] Frame Watchdog Enable - FWE (rw) */
     Ifx_UReg_32Bit REE:1;             /**< \brief [2:2] Ramp End Enable - REE (rw) */
-    Ifx_UReg_32Bit SWE0E:1;           /**< \brief [3:3] Software Event 0 Interrupt Enable - SWE0E (rw) */
+    Ifx_UReg_32Bit UEE:1;             /**< \brief [3:3] Unimplemented Event Enable - CEE (rw) */
     Ifx_UReg_32Bit CRCE0:1;           /**< \brief [4:4] CRC Error Flag Enable 0 - CRCE0 (rw) */
     Ifx_UReg_32Bit CRCE1:1;           /**< \brief [5:5] CRC Error Flag Enable 1 - CRCE1 (rw) */
     Ifx_UReg_32Bit CRCE2:1;           /**< \brief [6:6] CRC Error Flag Enable 2 - CRCE2 (rw) */
     Ifx_UReg_32Bit CRCE3:1;           /**< \brief [7:7] CRC Error Flag Enable 3 - CRCE3 (rw) */
     Ifx_UReg_32Bit R1EE:1;            /**< \brief [8:8] RAMP1 Error Enable - R1EE (rw) */
-    Ifx_UReg_32Bit SWE1E:1;           /**< \brief [9:9] Software Event 1 Interrupt Enable - SWE1E (rw) */
+    Ifx_UReg_32Bit U1EE:1;            /**< \brief [9:9] Unimplmented Error Enable - U1EE (rw) */
     Ifx_UReg_32Bit R1SE:1;            /**< \brief [10:10] RAMP1 Start Enable - R1SE (rw) */
     Ifx_UReg_32Bit reserved_11:5;     /**< \brief [15:11] \internal Reserved */
     Ifx_UReg_32Bit CALF:1;            /**< \brief [16:16] Calibration End Interrupt Flag - CALF (rh) */
     Ifx_UReg_32Bit FWF:1;             /**< \brief [17:17] Frame Watchdog Interrupt Flag - FWF (rh) */
     Ifx_UReg_32Bit REF:1;             /**< \brief [18:18] Ramp End Flag - REF (rh) */
-    Ifx_UReg_32Bit SWE0F:1;           /**< \brief [19:19] Software Event 0 Interrupt Flag - SWE0F (rh) */
+    Ifx_UReg_32Bit UEF:1;             /**< \brief [19:19] Unimplemented Event Flag - UEF (rh) */
     Ifx_UReg_32Bit CRCF0:1;           /**< \brief [20:20] CRC Error Flag 0 - CRCF0 (rh) */
     Ifx_UReg_32Bit CRCF1:1;           /**< \brief [21:21] CRC Error Flag 1 - CRCF1 (rh) */
     Ifx_UReg_32Bit CRCF2:1;           /**< \brief [22:22] CRC Error Flag 2 - CRCF2 (rh) */
     Ifx_UReg_32Bit CRCF3:1;           /**< \brief [23:23] CRC Error Flag 3 - CRCF3 (rh) */
     Ifx_UReg_32Bit R1EF:1;            /**< \brief [24:24] RAMP1 Error Flag - R1EF (rh) */
-    Ifx_UReg_32Bit SWE1F:1;           /**< \brief [25:25] Software Event 1 Interrupt Flag - SWE1F (rh) */
+    Ifx_UReg_32Bit U1EF:1;            /**< \brief [25:25] Unimplemented Error Flag - U1EF (rh) */
     Ifx_UReg_32Bit R1SF:1;            /**< \brief [26:26] RAMP1 Start Flag - R1SF (rh) */
     Ifx_UReg_32Bit reserved_27:2;     /**< \brief [28:27] \internal Reserved */
     Ifx_UReg_32Bit SMCF:1;            /**< \brief [29:29] Safety Mechanism Control Flag (rh) */

@@ -1,11 +1,11 @@
 /**
  * \file IfxMtu_regdef.h
  * \brief
- * \copyright Copyright (c) 2021 Infineon Technologies AG. All rights reserved.
+ * \copyright Copyright (c) 2020 Infineon Technologies AG. All rights reserved.
  *
  *
- * Version: TC39XB_UM_V2.0.0.R0
- * Specification: TC3xx User Manual V2.0.0
+ * Version: TC39XB_UM_V1.4.0.R0
+ * Specification: TC3xx User Manual V1.4.0
  * MAY BE CHANGED BY USER [yes/no]: No
  *
  *                                 IMPORTANT NOTICE
@@ -580,9 +580,7 @@ typedef struct _Ifx_MTU_MEMSTAT2_Bits
     Ifx_UReg_32Bit reserved_10:1;     /**< \brief [10:10] \internal Reserved */
     Ifx_UReg_32Bit reserved_11:1;     /**< \brief [11:11] \internal Reserved */
     Ifx_UReg_32Bit reserved_12:1;     /**< \brief [12:12] \internal Reserved */
-    Ifx_UReg_32Bit reserved_13:4;     /**< \brief [16:13] \internal Reserved */
-    Ifx_UReg_32Bit reserved_17:1;     /**< \brief [17:17] \internal Reserved */
-    Ifx_UReg_32Bit reserved_18:14;    /**< \brief [31:18] \internal Reserved */
+    Ifx_UReg_32Bit reserved_13:19;    /**< \brief [31:13] \internal Reserved */
 } Ifx_MTU_MEMSTAT2_Bits;
 
 /** \brief Memory MBIST Enable Register 0 */

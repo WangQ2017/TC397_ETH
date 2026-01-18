@@ -55,6 +55,7 @@
 #include "SchM_BswM.h"
 #include "SchM_Com.h"
 #include "SchM_ComM.h"
+#include "SchM_Crc.h"
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
 #include "SchM_EcuM.h"

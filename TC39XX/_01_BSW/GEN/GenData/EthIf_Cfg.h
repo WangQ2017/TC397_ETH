@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthIf_Cfg.h
- *   Generation Time: 2025-12-20 10:35:11
+ *   Generation Time: 2026-01-18 22:42:50
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -88,10 +88,10 @@
 /**********************************************************************************************************************
  *  SNVS (SYMBOLIC NAME DEFINES)
  *********************************************************************************************************************/
-#define EthIfConf_EthIfController_EthIfController_Vlan10 (0uL)
+#define EthIfConf_EthIfController_EthIfController_Untagged (0uL)
 #define EthIfConf_EthIfFrameOwnerConfig_TcpIp_IPv4 (0uL)
-#define EthIfConf_EthIfFrameOwnerConfig_TcpIp_ARP (1uL)
-#define EthIfConf_EthIfFrameOwnerConfig_EthTSyn (2uL)
+#define EthIfConf_EthIfFrameOwnerConfig_EthIfFrameOwnerConfig_ARP (1uL)
+#define EthIfConf_EthIfFrameOwnerConfig_EthTSyn_EthTSyn (2uL)
 
 /**********************************************************************************************************************
  *  FEATURE SWITCHES

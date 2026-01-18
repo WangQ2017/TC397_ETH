@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthSM_Cfg.h
- *   Generation Time: 2025-12-14 17:03:56
+ *   Generation Time: 2026-01-18 22:57:24
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -265,7 +265,7 @@
 */ 
 #define ETHSM_EQ2_COMMNETWORKHANDLEOFCHANNELCONFIG                    ComMConf_ComMChannel_ComMChannel_Vlan10
 #define ETHSM_EQ2_CONFIRMATIONTIMEOUTOFCHANNELCONFIG                  20u
-#define ETHSM_EQ2_ETHIFCONTROLLEROFCHANNELCONFIG                      ((EthSM_EthIfControllerOfChannelConfigType)EthIfConf_EthIfController_EthIfController_Vlan10)
+#define ETHSM_EQ2_ETHIFCONTROLLEROFCHANNELCONFIG                      ((EthSM_EthIfControllerOfChannelConfigType)EthIfConf_EthIfController_EthIfController_Untagged)
 #define ETHSM_EQ2_MAXRETRIESOFCHANNELCONFIG                           0u
 #define ETHSM_EQ2_STACKTYPEOFCHANNELCONFIG                            ETHSM_STACK_TYPE_TCPIP
 #define ETHSM_EQ2_NETIDXBYCOMMNETWHND                                 0u
@@ -399,7 +399,7 @@
 */ 
 #define EthSM_GetComMNetworkHandleOfChannelConfig(Index)              ComMConf_ComMChannel_ComMChannel_Vlan10
 #define EthSM_GetConfirmationTimeoutOfChannelConfig(Index)            20u
-#define EthSM_GetEthIfControllerOfChannelConfig(Index)                ((EthSM_EthIfControllerOfChannelConfigType)EthIfConf_EthIfController_EthIfController_Vlan10)
+#define EthSM_GetEthIfControllerOfChannelConfig(Index)                ((EthSM_EthIfControllerOfChannelConfigType)EthIfConf_EthIfController_EthIfController_Untagged)
 #define EthSM_GetMaxRetriesOfChannelConfig(Index)                     0u
 #define EthSM_GetStackTypeOfChannelConfig(Index)                      ETHSM_STACK_TYPE_TCPIP
 #define EthSM_GetNetIdxByComMNetwHnd(Index)                           0u

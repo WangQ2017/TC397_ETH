@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2023)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -12,11 +12,11 @@
 **                                                                            **
 **  FILENAME  : Mcu_PBcfg.c                                                   **
 **                                                                            **
-**  VERSION   : 33.0.0                                                        **
+**  VERSION   : 1.40.0_25.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2025-12-21, 16:51:38       !!!IGNORE-LINE!!!                  **
+**  DATE, TIME: 2026-01-18, 20:16:31       !!!IGNORE-LINE!!!                  **
 **                                                                            **
-**  GENERATOR : Build b191017-0938           !!!IGNORE-LINE!!!                **
+**  GENERATOR : Build b170330-0431           !!!IGNORE-LINE!!!                **
 **                                                                            **
 **  BSW MODULE DECRIPTION : Mcu.bmd                                           **
 **                                                                            **
@@ -31,7 +31,6 @@
 **  DESCRIPTION  : Mcu configuration generated out of ECUC file               **
 **                                                                            **
 **  SPECIFICATION(S) : Specification of Mcu Driver, AUTOSAR Release 4.2.2     **
-**                     and 4.4.0                                              **
 **                                                                            **
 **  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
@@ -58,24 +57,24 @@
   PLL Distribution configuration structure(s)
   for each clock setting configurations
 */
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers going beyond 32 chars.
-   in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers going beyond 32 chars.
-   in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers going beyond 32 chars.
-   in generated code due to Autosar Naming constraints.*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers going beyond 32 chars.
-   in generated code due to Autosar Naming constraints.*/
+/* MISRA2012_RULE_5_1_JUSTIFICATION:Compiler supports macro names going beyond
+   32 chars and this macro is used only inside the MCU module*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION:Compiler supports macro names going beyond
+   32 chars and this macro is used only inside the MCU module*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION:Compiler supports macro names going beyond
+   32 chars and this macro is used only inside the MCU module*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION:Compiler supports macro names going beyond
+   32 chars and this macro is used only inside the MCU module*/
 static const Mcu_PllDistributionConfigType Mcu_kPllDistributionConfiguration_Config_0 =
 {
   /* CCUCON0 value */
-  0x17230113U,
+  0x17230133U,
   /* CCUCON1 value */
-  0x00000294U,
+  0x120002a0U,
   /* CCUCON2 value */
-  0x05000001U,
+  0x03001202U,
   /* CCUCON5 value */
-  0x00000033U,
+  0x00000133U,
   /* CCUCON6...CCUCON11 value */
   {
     0x00000000U,
@@ -109,11 +108,11 @@ static const Mcu_ClockConfigType Mcu_kClockConfiguration_Config[1] =
     },
     /* Peripheral PLL configuration value */
     {
-      31U,
+      39U,
       0U,
-      3U,
+      4U,
       1U,
-      0U,
+      1U,
       0U
     },
     /* System PLL K2 divider increment step change delay */
@@ -133,7 +132,7 @@ static const Mcu_ClockConfigType Mcu_kClockConfiguration_Config[1] =
     /* External Clock configuration */
     0x00000000U,
     /* Backup frequency K Divider value for both PLLs */
-    0x0355U,
+    0x0375U,
     /* Converter Control Phase Synchronization configuration */
     0x00U,
   },/*McuClockReferencePointConfig*/
@@ -166,10 +165,6 @@ static const Mcu_LowPowerModeType  Mcu_kLowPowerModeConfiguration_Config =
   /* PMSWCR4Value  */
   0x00000000U,
   /* PMSWCR5Value  */
-  0x00000000U,
-  /* EVRUVMONValue  */
-  0x00000000U,
-  /* EVRMONCTRLValue  */
   0x00000000U
 };
 /*Generate configuration structure for GTM Clock config*/
@@ -341,73 +336,73 @@ static const Mcu_GtmConfigType Mcu_kGtmConfiguration_Config =
         /*GtmTomGlobalConf_0*/
         {
           /*TomTgcIntTrigRstCn0 value for group0*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group0*/
           0x00000001U
         },
         {
           /*TomTgcIntTrigRstCn1 value for group1*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group1*/
           0x00000001U
         },        /*GtmTomGlobalConf_1*/
         {
           /*TomTgcIntTrigRstCn0 value for group0*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group0*/
           0x00000001U
         },
         {
           /*TomTgcIntTrigRstCn1 value for group1*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group1*/
           0x00000001U
         },        /*GtmTomGlobalConf_2*/
         {
           /*TomTgcIntTrigRstCn0 value for group0*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group0*/
           0x00000001U
         },
         {
           /*TomTgcIntTrigRstCn1 value for group1*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group1*/
           0x00000001U
         },        /*GtmTomGlobalConf_3*/
         {
           /*TomTgcIntTrigRstCn0 value for group0*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group0*/
           0x00000001U
         },
         {
           /*TomTgcIntTrigRstCn1 value for group1*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group1*/
           0x00000001U
         },        /*GtmTomGlobalConf_4*/
         {
           /*TomTgcIntTrigRstCn0 value for group0*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group0*/
           0x00000001U
         },
         {
           /*TomTgcIntTrigRstCn1 value for group1*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group1*/
           0x00000001U
         },        /*GtmTomGlobalConf_5*/
         {
           /*TomTgcIntTrigRstCn0 value for group0*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group0*/
           0x00000001U
         },
         {
           /*TomTgcIntTrigRstCn1 value for group1*/
-          0x55555555U,
+          0x00000000U,
           /*TomTgcActTb value for group1*/
           0x00000001U
         }
@@ -419,84 +414,84 @@ static const Mcu_GtmConfigType Mcu_kGtmConfiguration_Config =
         /*GtmAtomGlobalConf_0*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_1*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_2*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_3*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_4*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_5*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_6*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_7*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_8*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_9*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_10*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         },
         /*GtmAtomGlobalConf_11*/
         {
           /*AtomTgcIntTrigRstCn0 value*/
-          0x55555555U,
+          0x00000000U,
           /*AtomTgcActTb value */
           0x00000001U
         }
@@ -706,26 +701,6 @@ static const Mcu_GtmConfigType Mcu_kGtmConfiguration_Config =
     /*Toutsel 33 mask value*/
     0x00000000U    
   },
-  /*Configuration for Port to Timer Connections*/
-  {
-    /*Configuration of TimInSel*/   
-    /*TimInsel 0 value*/
-    0x00000000U,
-    /*TimInsel 1 value*/
-    0x00000000U,
-    /*TimInsel 2 value*/
-    0x00000000U,
-    /*TimInsel 3 value*/
-    0x00000000U,
-    /*TimInsel 4 value*/
-    0x00000000U,
-    /*TimInsel 5 value*/
-    0x00000000U,
-    /*TimInsel 6 value*/
-    0x00000000U,
-    /*TimInsel 7 value*/
-    0x00000000U    
-  },
   /*Configuration for TBU channel - GtmTbuCfg (GtmTbuChannelConf)*/
   0x00000000U,
   /* TOM modules used configuration */
@@ -749,6 +724,10 @@ static const Mcu_Gpt12ConfigType Mcu_kGpt12PrescalerConfiguration_Config =
 };
 #endif
 /* Main MCU Configuration Structure */
+/* MISRA2012_RULE_8_7_JUSTIFICATION: Module configuration data structure
+   declaration as per Autosar guidelines. This data structure may be needed
+   by SW units using Mcu Driver APIs */
+/* MISRA2012_RULE_8_4_JUSTIFICATION: Definition is as per Autosar guidelines */
 const Mcu_ConfigType Mcu_Config =
 {
   /*McuModuleConfiguration*/
@@ -767,7 +746,7 @@ const Mcu_ConfigType Mcu_Config =
   /* Ptr to Standby Mode in config structure */
   &Mcu_kLowPowerModeConfiguration_Config,
   /* Reset configuration */
-  0x00000140U,
+  0x00000000U,
   /* Application Reset Disable configuration */
   0x00000000U,
   /* Trap configuration */

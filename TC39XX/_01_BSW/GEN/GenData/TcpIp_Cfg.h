@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Cfg.h
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2026-01-18 22:46:16
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -59,7 +59,7 @@
 #define TCPIP_SUPPORT_IPV6                         STD_OFF
 #define TCPIP_SUPPORT_SOAD                         STD_ON
 #define TCPIP_SUPPORT_TLS                          STD_OFF
-#define TCPIP_SUPPORT_ICMPV4                       STD_OFF
+#define TCPIP_SUPPORT_ICMPV4                       STD_ON
 #define TCPIP_SUPPORT_DHCPV4SERVER                 STD_OFF
 #define TCPIP_SUPPORT_DIAG_ACCESS_EXTENSIONS       STD_OFF
 #define TCPIP_SUPPORT_MEASUREMENT_DATA             STD_OFF
@@ -71,7 +71,7 @@
 #define TCPIP_SUPPORT_IP_ETHIF_ADDR_FILTER_API     STD_ON
 #define TCPIP_SUPPORT_IP_ADDR_NVM_STORAGE          STD_OFF
 
-#define TCPIP_SUPPORT_ICMPV4_DST_UNREACHABLE_MSG   STD_OFF
+#define TCPIP_SUPPORT_ICMPV4_DST_UNREACHABLE_MSG   STD_ON
 
 #define TCPIP_SUPPORT_ARP_DISCARDED_ENTRY_HANDLING STD_OFF
 
@@ -87,7 +87,7 @@
 /**********************************************************************************************************************
  *  SYMBOLIC NAME DEFINES: LOCAL ADRESSES
  *********************************************************************************************************************/
-#define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Fixed_10_10_7_33 (0uL)
+#define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Fixed_10_10_0_33 (0uL)
 #define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_TcpIpCtrl_Vlan10_Broadcast (2uL)
 #define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_10_0_1 (1uL)
 

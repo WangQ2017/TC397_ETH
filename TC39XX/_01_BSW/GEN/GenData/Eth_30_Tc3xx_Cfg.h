@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Eth_30_Tc3xx_Cfg.h
- *   Generation Time: 2025-12-21 11:52:17
+ *   Generation Time: 2026-01-18 22:51:16
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -109,13 +109,13 @@
 # define ETH_30_TC3XX_ENABLE_UPDATE_PHYS_ADDR_FILTER       (STD_ON)
 # define ETH_30_TC3XX_ENABLE_MAC_WRITE_ACCESS              (STD_OFF)
 # define ETH_30_TC3XX_DYNAMIC_TRAFFIC_SHAPING_SUPPORT      (STD_OFF)
-# define ETH_30_TC3XX_ENABLE_CHECKSUM_OFFLOADING           (STD_ON)
+# define ETH_30_TC3XX_ENABLE_CHECKSUM_OFFLOADING           (STD_OFF)
 # define ETH_30_TC3XX_ENABLE_QOS                           (STD_OFF)
 # define ETH_30_TC3XX_ENABLE_TIMESYNC                      (STD_ON)
 # define ETH_30_TC3XX_ZERO_COPY_EXTENSIONS_SUPPORT         (STD_OFF)
 # define ETH_30_TC3XX_HEADER_ACCESS_API_SUPPORT            (STD_OFF)
 # define ETH_30_TC3XX_USE_PERIPHERAL_ACCESS_API            (STD_OFF)
-# define ETH_30_TC3XX_ENABLE_GET_ETHER_STATS_API           (STD_OFF)
+# define ETH_30_TC3XX_ENABLE_GET_ETHER_STATS_API           (STD_ON)
 # define ETH_30_TC3XX_ENABLE_HOST_CTRL_INTERFACE           (STD_OFF)
 # define ETH_30_TC3XX_GET_AND_RESET_MEASUREMENT_DATA_API   (STD_ON)
 # define ETH_30_TC3XX_ENABLE_VLANID_BASED_FRAME_QUEUING    (STD_OFF)

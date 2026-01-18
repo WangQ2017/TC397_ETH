@@ -1,7 +1,7 @@
 
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2020)                                 **
+** Copyright (C) Infineon Technologies (2019)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -13,11 +13,11 @@
 **                                                                            **
 **  FILENAME  : Dio_Cfg.h                                                     **
 **                                                                            **
-**  VERSION   : 8.0.0                                                         **
+**  VERSION   : 1.30.0_7.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2025-12-20, 17:52:54         !!!IGNORE-LINE!!!                **
+**  DATE, TIME: 2026-01-18, 19:23:29         !!!IGNORE-LINE!!!                **
 **                                                                            **
-**  GENERATOR : Build b191017-0938             !!!IGNORE-LINE!!!              **
+**  GENERATOR : Build b170330-0431             !!!IGNORE-LINE!!!              **
 **                                                                            **
 **  BSW MODULE DECRIPTION : Dio.bmd                                           **
 **                                                                            **
@@ -32,9 +32,8 @@
 **  DESCRIPTION  : Dio configuration generated out of ECUC file               **
 **                                                                            **
 **  SPECIFICATION(S) : Specification of Dio Driver, AUTOSAR Release 4.2.2     **
-**                     and AUTOSAR Release 4.4.0                              **
 **                                                                            **
-** MAY BE CHANGED BY USER : no                                                **
+**  MAY BE CHANGED BY USER : no                                               **
 **                                                                            **
 *******************************************************************************/
 #ifndef DIO_CFG_H
@@ -49,12 +48,12 @@ the microcontroller and ECU.
 
 /*Version check macros */
 #define DIO_AR_RELEASE_MAJOR_VERSION     (4U)
-#define DIO_AR_RELEASE_MINOR_VERSION     (4U)
-#define DIO_AR_RELEASE_REVISION_VERSION  (0U)
+#define DIO_AR_RELEASE_MINOR_VERSION     (2U)
+#define DIO_AR_RELEASE_REVISION_VERSION  (2U)
 
 
-#define DIO_SW_MAJOR_VERSION  (20U)
-#define DIO_SW_MINOR_VERSION  (25U)
+#define DIO_SW_MAJOR_VERSION  (10U)
+#define DIO_SW_MINOR_VERSION  (40U)
 #define DIO_SW_PATCH_VERSION  (0U)
 
 /*******************************************************************************
@@ -88,7 +87,6 @@ Pre-Compiler switch to include the API Dio_FlipChannel()
 */
 #define DIO_FLIP_CHANNEL_API                (STD_ON)
 
-#define DIO_MASKED_WRITE_PORT_API           (STD_OFF)
 /*
 Pre-Compiler switch to include the Safety Check
 */
@@ -352,6 +350,52 @@ Symbolic names for DIO ports
 User Defined Symbolic Names for the DIO Ports, Channels & Channel Groups
 */
 /*
+DIO PORT : (DioPort_0)
+*/
+#ifndef DioConf_DioPort_DioPort_0
+#define DioConf_DioPort_DioPort_0 (DIO_PORT_0)
+#endif
+/* DIO Channel : (DioChannel_PHY_RESET) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_PHY_RESET
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_PHY_RESET (DIO_CHANNEL_0_0)
+#endif
+/* DIO Channel : (DioChannel_PHY_WAKE) */
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#ifndef DioConf_DioChannel_DioChannel_PHY_WAKE
+/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
+according to requirement ecuc_sws_2108*/
+#define DioConf_DioChannel_DioChannel_PHY_WAKE (DIO_CHANNEL_0_1)
+#endif
+/*
 DIO PORT : (DioPort_33)
 */
 #ifndef DioConf_DioPort_DioPort_33
@@ -437,52 +481,6 @@ according to requirement ecuc_sws_2108*/
 according to requirement ecuc_sws_2108*/
 #define DioConf_DioChannel_DioChannel_LED3 (DIO_CHANNEL_33_4)
 #endif
-/*
-DIO PORT : (DioPort_0)
-*/
-#ifndef DioConf_DioPort_DioPort_0
-#define DioConf_DioPort_DioPort_0 (DIO_PORT_0)
-#endif
-/* DIO Channel : (DioChannel_PHY_RESET) */
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-#ifndef DioConf_DioChannel_DioChannel_PHY_RESET
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-#define DioConf_DioChannel_DioChannel_PHY_RESET (DIO_CHANNEL_0_0)
-#endif
-/* DIO Channel : (DioChannel_PHY_WAKE) */
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-#ifndef DioConf_DioChannel_DioChannel_PHY_WAKE
-/* MISRA2012_RULE_5_1_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_2_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_4_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-/* MISRA2012_RULE_5_5_JUSTIFICATION: External identifiers are defined
-according to requirement ecuc_sws_2108*/
-#define DioConf_DioChannel_DioChannel_PHY_WAKE (DIO_CHANNEL_0_1)
-#endif
 
 
 
@@ -502,4 +500,3 @@ Dio_Memmap.h header is included without safegaurd.*/
 *******************************************************************************/
 /* End of DIO_CFG_H */
 #endif
-

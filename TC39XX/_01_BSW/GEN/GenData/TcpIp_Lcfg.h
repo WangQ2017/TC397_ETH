@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Lcfg.h
- *   Generation Time: 2025-12-21 17:40:32
+ *   Generation Time: 2026-01-18 22:50:29
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -216,10 +216,10 @@
 #define TCPIP_GRATUITOUSARP                                                                         STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_NEXTTRANSMISSIONMSOFGRATUITOUSARP                                                     STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_TRANSMISSIONCNTOFGRATUITOUSARP                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
-#define TCPIP_ICMPCONFIG                                                                            STD_OFF  /**< Deactivateable: 'TcpIp_IcmpConfig' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define TCPIP_TIMETOLIVEOFICMPCONFIG                                                                STD_OFF  /**< Deactivateable: 'TcpIp_IcmpConfig.TimeToLive' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_ICMPDESTUNREACHABLEMSG                                                                STD_OFF  /**< Deactivateable: 'TcpIp_IcmpDestUnreachableMsg' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_ICMPECHOREPLYDATA                                                                     STD_OFF  /**< Deactivateable: 'TcpIp_IcmpEchoReplyData' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
+#define TCPIP_ICMPCONFIG                                                                            STD_ON
+#define TCPIP_TIMETOLIVEOFICMPCONFIG                                                                STD_ON
+#define TCPIP_ICMPDESTUNREACHABLEMSG                                                                STD_ON
+#define TCPIP_ICMPECHOREPLYDATA                                                                     STD_ON
 #define TCPIP_ICMPMSGHANDLERCBKFCTPTR                                                               STD_ON
 #define TCPIP_INITDATAHASHCODE                                                                      STD_OFF  /**< Deactivateable: 'TcpIp_InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
 #define TCPIP_INTEGRITYALGORITHM                                                                    STD_OFF  /**< Deactivateable: 'TcpIp_IntegrityAlgorithm' Reason: 'the struct is deactivated because all elements are deactivated.' */
@@ -414,6 +414,9 @@
 #define TCPIP_SIZEOFETHIFCTRL                                                                       STD_ON
 #define TCPIP_SIZEOFFRAGMENTATIONCONFIG                                                             STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFGRATUITOUSARP                                                                   STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_SIZEOFICMPCONFIG                                                                      STD_ON
+#define TCPIP_SIZEOFICMPDESTUNREACHABLEMSG                                                          STD_ON
+#define TCPIP_SIZEOFICMPECHOREPLYDATA                                                               STD_ON
 #define TCPIP_SIZEOFIPV4CTRL                                                                        STD_ON
 #define TCPIP_SIZEOFIPV4CTRLDYN                                                                     STD_ON
 #define TCPIP_SIZEOFIPV4GENERAL                                                                     STD_ON
@@ -617,6 +620,9 @@
 #define TCPIP_FINALMAGICNUMBEROFPCCONFIG                                                            STD_OFF  /**< Deactivateable: 'TcpIp_PCConfig.FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define TCPIP_FRAGMENTATIONCONFIGOFPCCONFIG                                                         STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_GRATUITOUSARPOFPCCONFIG                                                               STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_ICMPCONFIGOFPCCONFIG                                                                  STD_ON
+#define TCPIP_ICMPDESTUNREACHABLEMSGOFPCCONFIG                                                      STD_ON
+#define TCPIP_ICMPECHOREPLYDATAOFPCCONFIG                                                           STD_ON
 #define TCPIP_ICMPMSGHANDLERCBKFCTPTROFPCCONFIG                                                     STD_ON
 #define TCPIP_INITDATAHASHCODEOFPCCONFIG                                                            STD_OFF  /**< Deactivateable: 'TcpIp_PCConfig.InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
 #define TCPIP_IPV4CTRLDYNOFPCCONFIG                                                                 STD_ON
@@ -646,6 +652,9 @@
 #define TCPIP_SIZEOFETHIFCTRLOFPCCONFIG                                                             STD_ON
 #define TCPIP_SIZEOFFRAGMENTATIONCONFIGOFPCCONFIG                                                   STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFGRATUITOUSARPOFPCCONFIG                                                         STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_SIZEOFICMPCONFIGOFPCCONFIG                                                            STD_ON
+#define TCPIP_SIZEOFICMPDESTUNREACHABLEMSGOFPCCONFIG                                                STD_ON
+#define TCPIP_SIZEOFICMPECHOREPLYDATAOFPCCONFIG                                                     STD_ON
 #define TCPIP_SIZEOFIPV4CTRLDYNOFPCCONFIG                                                           STD_ON
 #define TCPIP_SIZEOFIPV4CTRLOFPCCONFIG                                                              STD_ON
 #define TCPIP_SIZEOFIPV4GENERALOFPCCONFIG                                                           STD_ON
@@ -705,6 +714,8 @@
 #define TCPIP_MIN_LENGTHOFDHCPUSEROPTIONDYN                                                         0u
 #define TCPIP_MIN_NEXTTRANSMISSIONMSOFGRATUITOUSARP                                                 0u
 #define TCPIP_MIN_TRANSMISSIONCNTOFGRATUITOUSARP                                                    0u
+#define TCPIP_MIN_ICMPDESTUNREACHABLEMSG                                                            0u
+#define TCPIP_MIN_ICMPECHOREPLYDATA                                                                 0u
 #define TCPIP_MIN_ACTIVEADDRASSIGNMENTMETHODOFIPV4CTRLDYN                                           0u
 #define TCPIP_MIN_ADDRASSIGNMENTTRIGGEREDFLAGSOFIPV4CTRLDYN                                         0u
 #define TCPIP_MIN_STATEOFIPV4CTRLDYN                                                                0u
@@ -759,6 +770,8 @@
 #define TCPIP_MAX_LENGTHOFDHCPUSEROPTIONDYN                                                         65535u
 #define TCPIP_MAX_NEXTTRANSMISSIONMSOFGRATUITOUSARP                                                 4294967295u
 #define TCPIP_MAX_TRANSMISSIONCNTOFGRATUITOUSARP                                                    255u
+#define TCPIP_MAX_ICMPDESTUNREACHABLEMSG                                                            255u
+#define TCPIP_MAX_ICMPECHOREPLYDATA                                                                 255u
 #define TCPIP_MAX_ACTIVEADDRASSIGNMENTMETHODOFIPV4CTRLDYN                                           255u
 #define TCPIP_MAX_ADDRASSIGNMENTTRIGGEREDFLAGSOFIPV4CTRLDYN                                         255u
 #define TCPIP_MAX_STATEOFIPV4CTRLDYN                                                                255u
@@ -881,6 +894,7 @@
 #define TCPIP_ISDEF_REASSEMBLYBUFFERDESCSTARTIDXOFFRAGMENTATIONCONFIG                               STD_OFF
 #define TCPIP_ISDEF_REASSEMBLYBUFFERDESCUSEDOFFRAGMENTATIONCONFIG                                   STD_OFF
 #define TCPIP_ISDEF_REASSEMBLYTIMEOUTMSOFFRAGMENTATIONCONFIG                                        STD_OFF
+#define TCPIP_ISDEF_TIMETOLIVEOFICMPCONFIG                                                          STD_OFF
 #define TCPIP_ISDEF_ADDRASSIGNMENTCFGBYPRIOENDIDXOFIPV4CTRL                                         STD_OFF
 #define TCPIP_ISDEF_ADDRASSIGNMENTCFGBYPRIOSTARTIDXOFIPV4CTRL                                       STD_OFF
 #define TCPIP_ISDEF_ADDRASSIGNMENTPRIOBYTYPEOFIPV4CTRL                                              STD_OFF
@@ -979,6 +993,9 @@
 #define TCPIP_ISDEF_ETHIFCTRLOFPCCONFIG                                                             STD_ON
 #define TCPIP_ISDEF_FRAGMENTATIONCONFIGOFPCCONFIG                                                   STD_OFF
 #define TCPIP_ISDEF_GRATUITOUSARPOFPCCONFIG                                                         STD_OFF
+#define TCPIP_ISDEF_ICMPCONFIGOFPCCONFIG                                                            STD_ON
+#define TCPIP_ISDEF_ICMPDESTUNREACHABLEMSGOFPCCONFIG                                                STD_ON
+#define TCPIP_ISDEF_ICMPECHOREPLYDATAOFPCCONFIG                                                     STD_ON
 #define TCPIP_ISDEF_ICMPMSGHANDLERCBKFCTPTROFPCCONFIG                                               STD_ON
 #define TCPIP_ISDEF_IPV4CTRLDYNOFPCCONFIG                                                           STD_ON
 #define TCPIP_ISDEF_IPV4CTRLOFPCCONFIG                                                              STD_ON
@@ -1077,6 +1094,7 @@
 #define TCPIP_EQ2_REASSEMBLYBUFFERDESCSTARTIDXOFFRAGMENTATIONCONFIG                                 
 #define TCPIP_EQ2_REASSEMBLYBUFFERDESCUSEDOFFRAGMENTATIONCONFIG                                     
 #define TCPIP_EQ2_REASSEMBLYTIMEOUTMSOFFRAGMENTATIONCONFIG                                          
+#define TCPIP_EQ2_TIMETOLIVEOFICMPCONFIG                                                            
 #define TCPIP_EQ2_ADDRASSIGNMENTCFGBYPRIOENDIDXOFIPV4CTRL                                           
 #define TCPIP_EQ2_ADDRASSIGNMENTCFGBYPRIOSTARTIDXOFIPV4CTRL                                         
 #define TCPIP_EQ2_ADDRASSIGNMENTPRIOBYTYPEOFIPV4CTRL                                                
@@ -1175,6 +1193,9 @@
 #define TCPIP_EQ2_ETHIFCTRLOFPCCONFIG                                                               TcpIp_EthIfCtrl
 #define TCPIP_EQ2_FRAGMENTATIONCONFIGOFPCCONFIG                                                     
 #define TCPIP_EQ2_GRATUITOUSARPOFPCCONFIG                                                           
+#define TCPIP_EQ2_ICMPCONFIGOFPCCONFIG                                                              TcpIp_IcmpConfig
+#define TCPIP_EQ2_ICMPDESTUNREACHABLEMSGOFPCCONFIG                                                  TcpIp_IcmpDestUnreachableMsg
+#define TCPIP_EQ2_ICMPECHOREPLYDATAOFPCCONFIG                                                       TcpIp_IcmpEchoReplyData
 #define TCPIP_EQ2_ICMPMSGHANDLERCBKFCTPTROFPCCONFIG                                                 (&(TcpIp_IcmpMsgHandlerCbkFctPtr))
 #define TCPIP_EQ2_IPV4CTRLDYNOFPCCONFIG                                                             TcpIp_IpV4CtrlDyn.raw
 #define TCPIP_EQ2_IPV4CTRLOFPCCONFIG                                                                TcpIp_IpV4Ctrl
@@ -1351,6 +1372,9 @@
 #define TcpIp_GetBuf2TxReqMapOfPCConfig()                                                           TcpIp_Buf2TxReqMap.raw  /**< the pointer to TcpIp_Buf2TxReqMap */
 #define TcpIp_GetDuplicateAddrDetectionFctPtrOfPCConfig()                                           (&(TcpIp_DuplicateAddrDetectionFctPtr))  /**< the pointer to TcpIp_DuplicateAddrDetectionFctPtr */
 #define TcpIp_GetEthIfCtrlOfPCConfig()                                                              TcpIp_EthIfCtrl  /**< the pointer to TcpIp_EthIfCtrl */
+#define TcpIp_GetIcmpConfigOfPCConfig()                                                             TcpIp_IcmpConfig  /**< the pointer to TcpIp_IcmpConfig */
+#define TcpIp_GetIcmpDestUnreachableMsgOfPCConfig()                                                 TcpIp_IcmpDestUnreachableMsg  /**< the pointer to TcpIp_IcmpDestUnreachableMsg */
+#define TcpIp_GetIcmpEchoReplyDataOfPCConfig()                                                      TcpIp_IcmpEchoReplyData  /**< the pointer to TcpIp_IcmpEchoReplyData */
 #define TcpIp_GetIcmpMsgHandlerCbkFctPtrOfPCConfig()                                                (&(TcpIp_IcmpMsgHandlerCbkFctPtr))  /**< the pointer to TcpIp_IcmpMsgHandlerCbkFctPtr */
 #define TcpIp_GetIpV4CtrlDynOfPCConfig()                                                            TcpIp_IpV4CtrlDyn.raw  /**< the pointer to TcpIp_IpV4CtrlDyn */
 #define TcpIp_GetIpV4CtrlOfPCConfig()                                                               TcpIp_IpV4Ctrl  /**< the pointer to TcpIp_IpV4Ctrl */
@@ -1360,11 +1384,14 @@
 #define TcpIp_GetLocalAddrV4OfPCConfig()                                                            TcpIp_LocalAddrV4  /**< the pointer to TcpIp_LocalAddrV4 */
 #define TcpIp_GetRandomNumberFctPtrOfPCConfig()                                                     (&(TcpIp_RandomNumberFctPtr))  /**< the pointer to TcpIp_RandomNumberFctPtr */
 #define TcpIp_GetSizeOfAddrAssignmentCfgByPrioOfPCConfig()                                          1u  /**< the number of accomplishable value elements in TcpIp_AddrAssignmentCfgByPrio */
-#define TcpIp_GetSizeOfBuf2TxReqMapOfPCConfig()                                                     4u  /**< the number of accomplishable value elements in TcpIp_Buf2TxReqMap */
+#define TcpIp_GetSizeOfBuf2TxReqMapOfPCConfig()                                                     10u  /**< the number of accomplishable value elements in TcpIp_Buf2TxReqMap */
 #define TcpIp_GetSizeOfEthIfCtrlOfPCConfig()                                                        1u  /**< the number of accomplishable value elements in TcpIp_EthIfCtrl */
+#define TcpIp_GetSizeOfIcmpConfigOfPCConfig()                                                       1u  /**< the number of accomplishable value elements in TcpIp_IcmpConfig */
+#define TcpIp_GetSizeOfIcmpDestUnreachableMsgOfPCConfig()                                           24u  /**< the number of accomplishable value elements in TcpIp_IcmpDestUnreachableMsg */
+#define TcpIp_GetSizeOfIcmpEchoReplyDataOfPCConfig()                                                32u  /**< the number of accomplishable value elements in TcpIp_IcmpEchoReplyData */
 #define TcpIp_GetSizeOfIpV4CtrlOfPCConfig()                                                         1u  /**< the number of accomplishable value elements in TcpIp_IpV4Ctrl */
 #define TcpIp_GetSizeOfIpV4GeneralOfPCConfig()                                                      1u  /**< the number of accomplishable value elements in TcpIp_IpV4General */
-#define TcpIp_GetSizeOfIpV4SocketDynOfPCConfig()                                                    2u  /**< the number of accomplishable value elements in TcpIp_IpV4SocketDyn */
+#define TcpIp_GetSizeOfIpV4SocketDynOfPCConfig()                                                    3u  /**< the number of accomplishable value elements in TcpIp_IpV4SocketDyn */
 #define TcpIp_GetSizeOfLocalAddrOfPCConfig()                                                        3u  /**< the number of accomplishable value elements in TcpIp_LocalAddr */
 #define TcpIp_GetSizeOfLocalAddrV4OfPCConfig()                                                      3u  /**< the number of accomplishable value elements in TcpIp_LocalAddrV4 */
 #define TcpIp_GetSizeOfSocketDynOfPCConfig()                                                        2u  /**< the number of accomplishable value elements in TcpIp_SocketDyn */
@@ -1452,6 +1479,15 @@ typedef uint8_least TcpIp_FragmentationConfigIterType;
 
 /**   \brief  type used to iterate TcpIp_GratuitousArp */
 typedef uint8_least TcpIp_GratuitousArpIterType;
+
+/**   \brief  type used to iterate TcpIp_IcmpConfig */
+typedef uint8_least TcpIp_IcmpConfigIterType;
+
+/**   \brief  type used to iterate TcpIp_IcmpDestUnreachableMsg */
+typedef uint8_least TcpIp_IcmpDestUnreachableMsgIterType;
+
+/**   \brief  type used to iterate TcpIp_IcmpEchoReplyData */
+typedef uint8_least TcpIp_IcmpEchoReplyDataIterType;
 
 /**   \brief  type used to iterate TcpIp_IpV4Ctrl */
 typedef uint8_least TcpIp_IpV4CtrlIterType;
@@ -1680,6 +1716,15 @@ typedef uint32 TcpIp_NextTransmissionMsOfGratuitousArpType;
 
 /**   \brief  value based type definition for TcpIp_TransmissionCntOfGratuitousArp */
 typedef uint8 TcpIp_TransmissionCntOfGratuitousArpType;
+
+/**   \brief  value based type definition for TcpIp_TimeToLiveOfIcmpConfig */
+typedef uint8 TcpIp_TimeToLiveOfIcmpConfigType;
+
+/**   \brief  value based type definition for TcpIp_IcmpDestUnreachableMsg */
+typedef uint8 TcpIp_IcmpDestUnreachableMsgType;
+
+/**   \brief  value based type definition for TcpIp_IcmpEchoReplyData */
+typedef uint8 TcpIp_IcmpEchoReplyDataType;
 
 /**   \brief  value based type definition for TcpIp_AddrAssignmentCfgByPrioEndIdxOfIpV4Ctrl */
 typedef uint8 TcpIp_AddrAssignmentCfgByPrioEndIdxOfIpV4CtrlType;
@@ -1980,6 +2025,15 @@ typedef uint8 TcpIp_SizeOfFragmentationConfigType;
 
 /**   \brief  value based type definition for TcpIp_SizeOfGratuitousArp */
 typedef uint8 TcpIp_SizeOfGratuitousArpType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfIcmpConfig */
+typedef uint8 TcpIp_SizeOfIcmpConfigType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfIcmpDestUnreachableMsg */
+typedef uint8 TcpIp_SizeOfIcmpDestUnreachableMsgType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfIcmpEchoReplyData */
+typedef uint8 TcpIp_SizeOfIcmpEchoReplyDataType;
 
 /**   \brief  value based type definition for TcpIp_SizeOfIpV4Ctrl */
 typedef uint8 TcpIp_SizeOfIpV4CtrlType;
@@ -2356,6 +2410,12 @@ typedef struct sTcpIp_GratuitousArpType
   TcpIp_TransmissionCntOfGratuitousArpType TransmissionCntOfGratuitousArp;  /**< Number of transmitted gratuitous ARPs. */
 } TcpIp_GratuitousArpType;
 
+/**   \brief  type used in TcpIp_IcmpConfig */
+typedef struct sTcpIp_IcmpConfigType
+{
+  TcpIp_TimeToLiveOfIcmpConfigType TimeToLiveOfIcmpConfig;  /**< Time-To-Live (TTL) - Value of configuration parameter TcpIpIcmpTtl */
+} TcpIp_IcmpConfigType;
+
 /**   \brief  type used in TcpIp_IpV4Ctrl */
 /*! \spec weak type invariant () { 
  * (self.UnicastAddrV4IdxOfIpV4Ctrl < TcpIp_GetSizeOfUnicastAddrV4()) &&
@@ -2369,21 +2429,21 @@ typedef struct sTcpIp_GratuitousArpType
  * (!((!(self.AutoIpConfigUsedOfIpV4Ctrl))) || (self.ArpTableEntryStartIdxOfIpV4Ctrl < TcpIp_GetSizeOfArpTableEntry())) &&
  * (!((!(self.AutoIpConfigUsedOfIpV4Ctrl))) || (self.ArpTableEntryEndIdxOfIpV4Ctrl < TcpIp_GetSizeOfArpTableEntry())) &&
  * (!(self.AutoIpConfigUsedOfIpV4Ctrl) || (self.AutoIpConfigIdxOfIpV4Ctrl < TcpIp_GetSizeOfAutoIpConfig())) &&
- * (!((!(self.HwChecksumIcmpOfIpV4Ctrl))) || (self.GratuitousArpIdxOfIpV4Ctrl < TcpIp_GetSizeOfGratuitousArp())) &&
- * (!((!(self.HwChecksumIcmpOfIpV4Ctrl))) || (self.FragmentationConfigIdxOfIpV4Ctrl < TcpIp_GetSizeOfFragmentationConfig())) &&
- * (!((!(self.HwChecksumIcmpOfIpV4Ctrl))) || (self.StaticArpTableIdxOfIpV4Ctrl < TcpIp_GetSizeOfStaticArpTable())) &&
- * (!((!(self.AutoIpConfigUsedOfIpV4Ctrl))) || (self.MulticastAddrV4StartIdxOfIpV4Ctrl < TcpIp_GetSizeOfMulticastAddrV4())) &&
- * (!((!(self.AutoIpConfigUsedOfIpV4Ctrl))) || (self.MulticastAddrV4EndIdxOfIpV4Ctrl < TcpIp_GetSizeOfMulticastAddrV4())) &&
- * (!((!(self.HwChecksumIcmpOfIpV4Ctrl))) || (self.LlAddrStateIdxOfIpV4Ctrl < TcpIp_GetSizeOfLlAddrState())) &&
- * (!((!(self.HwChecksumIcmpOfIpV4Ctrl))) || (self.DhcpUserOptionStartIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpUserOption())) &&
- * (!((!(self.HwChecksumIcmpOfIpV4Ctrl))) || (self.DhcpUserOptionEndIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpUserOption()))
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.GratuitousArpIdxOfIpV4Ctrl < TcpIp_GetSizeOfGratuitousArp())) &&
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.FragmentationConfigIdxOfIpV4Ctrl < TcpIp_GetSizeOfFragmentationConfig())) &&
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.StaticArpTableIdxOfIpV4Ctrl < TcpIp_GetSizeOfStaticArpTable())) &&
+ * (!(self.MulticastAddrV4UsedOfIpV4Ctrl) || (self.MulticastAddrV4StartIdxOfIpV4Ctrl < TcpIp_GetSizeOfMulticastAddrV4())) &&
+ * (!(self.MulticastAddrV4UsedOfIpV4Ctrl) || (self.MulticastAddrV4EndIdxOfIpV4Ctrl < TcpIp_GetSizeOfMulticastAddrV4())) &&
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.LlAddrStateIdxOfIpV4Ctrl < TcpIp_GetSizeOfLlAddrState())) &&
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.DhcpUserOptionStartIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpUserOption())) &&
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.DhcpUserOptionEndIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpUserOption()))
  * } */
 typedef struct sTcpIp_IpV4CtrlType
 {
   TcpIp_MaxTxMsgSizeOfIpV4CtrlType MaxTxMsgSizeOfIpV4Ctrl;  /**< - */
   TcpIp_MtuTxOfIpV4CtrlType MtuTxOfIpV4Ctrl;  /**< Value of configuration parameter EthIfCtrlMtu */
   TcpIp_AutoIpConfigUsedOfIpV4CtrlType AutoIpConfigUsedOfIpV4Ctrl;  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_AutoIpConfig */
-  TcpIp_HwChecksumIcmpOfIpV4CtrlType HwChecksumIcmpOfIpV4Ctrl;  /**< Defines if harware supports calculation of IPv4 ICMP checksum. */
+  TcpIp_MulticastAddrV4UsedOfIpV4CtrlType MulticastAddrV4UsedOfIpV4Ctrl;  /**< TRUE, if the 0:n relation has 1 relation pointing to TcpIp_MulticastAddrV4 */
   TcpIp_AddrAssignmentCfgByPrioEndIdxOfIpV4CtrlType AddrAssignmentCfgByPrioEndIdxOfIpV4Ctrl;  /**< the end index of the 1:n relation pointing to TcpIp_AddrAssignmentCfgByPrio */
   TcpIp_AddrAssignmentCfgByPrioStartIdxOfIpV4CtrlType AddrAssignmentCfgByPrioStartIdxOfIpV4Ctrl;  /**< the start index of the 1:n relation pointing to TcpIp_AddrAssignmentCfgByPrio */
   TcpIp_AddrAssignmentPrioByTypeOfIpV4CtrlType AddrAssignmentPrioByTypeOfIpV4Ctrl;  /**< - */
@@ -2428,13 +2488,14 @@ typedef struct sTcpIp_IpV4CtrlDynType
 
 /**   \brief  type used in TcpIp_IpV4General */
 /*! \spec weak type invariant () { 
- * (!((self.IpV4CtrlDefaultIdxOfIpV4General != TCPIP_NO_IPV4CTRLDEFAULTIDXOFIPV4GENERAL)) || (self.IpV4CtrlDefaultIdxOfIpV4General < TcpIp_GetSizeOfIpV4Ctrl())) &&
- * (!((self.IpV4SocketDynTcpRstIdxOfIpV4General != TCPIP_NO_IPV4SOCKETDYNTCPRSTIDXOFIPV4GENERAL)) || (self.IpV4SocketDynTcpRstIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
- * (!((self.IpV4SocketDynIcmpIdxOfIpV4General != TCPIP_NO_IPV4SOCKETDYNICMPIDXOFIPV4GENERAL)) || (self.IpV4SocketDynIcmpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
- * (!((self.IpV4SocketDynDhcpIdxOfIpV4General != TCPIP_NO_IPV4SOCKETDYNDHCPIDXOFIPV4GENERAL)) || (self.IpV4SocketDynDhcpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn()))
+ * (!((!(self.IpV4SocketDynIcmpUsedOfIpV4General))) || (self.IpV4CtrlDefaultIdxOfIpV4General < TcpIp_GetSizeOfIpV4Ctrl())) &&
+ * (!((!(self.IpV4SocketDynIcmpUsedOfIpV4General))) || (self.IpV4SocketDynTcpRstIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
+ * (!(self.IpV4SocketDynIcmpUsedOfIpV4General) || (self.IpV4SocketDynIcmpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
+ * (!((!(self.IpV4SocketDynIcmpUsedOfIpV4General))) || (self.IpV4SocketDynDhcpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn()))
  * } */
 typedef struct sTcpIp_IpV4GeneralType
 {
+  TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType IpV4SocketDynIcmpUsedOfIpV4General;  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_IpV4SocketDyn */
   TcpIp_IpV4CtrlDefaultIdxOfIpV4GeneralType IpV4CtrlDefaultIdxOfIpV4General;  /**< the index of the 0:1 relation pointing to TcpIp_IpV4Ctrl */
   TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType IpV4SocketDynDhcpIdxOfIpV4General;  /**< the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn */
   TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType IpV4SocketDynIcmpIdxOfIpV4General;  /**< the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn */
@@ -2649,7 +2710,7 @@ typedef struct TcpIp_ArpTableEntryStructSTag
 /**   \brief  type to be used as symbolic data element access to TcpIp_Buf2TxReqMap */
 typedef struct TcpIp_Buf2TxReqMapStructSTag
 {
-  TcpIp_Buf2TxReqMapType EthCtrlConfig_MAIN[4];
+  TcpIp_Buf2TxReqMapType EthCtrlConfig_MAIN[10];
 } TcpIp_Buf2TxReqMapStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_IpV4CtrlDyn */
@@ -2662,12 +2723,13 @@ typedef struct TcpIp_IpV4CtrlDynStructSTag
 typedef struct TcpIp_IpV4SocketDynStructSTag
 {
   TcpIp_IpV4SocketDynType UDP[2];
+  TcpIp_IpV4SocketDynType ICMPv4;
 } TcpIp_IpV4SocketDynStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_LocalAddr */
 typedef struct TcpIp_LocalAddrStructSTag
 {
-  TcpIp_LocalAddrType TcpIpLocalAddr_NE_Fixed_10_10_7_33;
+  TcpIp_LocalAddrType TcpIpLocalAddr_NE_Fixed_10_10_0_33;
   TcpIp_LocalAddrType TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_10_0_1;
   TcpIp_LocalAddrType TcpIpLocalAddr_TcpIpCtrl_Vlan10_Broadcast;
 } TcpIp_LocalAddrStructSType;
@@ -2681,7 +2743,7 @@ typedef struct TcpIp_SocketDynStructSTag
 /**   \brief  type to be used as symbolic data element access to TcpIp_StaticUnicastAddrV4Requested */
 typedef struct TcpIp_StaticUnicastAddrV4RequestedStructSTag
 {
-  TcpIp_StaticUnicastAddrV4RequestedType TcpIpLocalAddr_NE_Fixed_10_10_7_33;
+  TcpIp_StaticUnicastAddrV4RequestedType TcpIpLocalAddr_NE_Fixed_10_10_0_33;
 } TcpIp_StaticUnicastAddrV4RequestedStructSType;
 
 /** 
@@ -2703,7 +2765,7 @@ typedef union TcpIp_ArpTableEntryUTag
 /**   \brief  type to access TcpIp_Buf2TxReqMap in an index and symbol based style. */
 typedef union TcpIp_Buf2TxReqMapUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_Buf2TxReqMapType raw[4];
+  TcpIp_Buf2TxReqMapType raw[10];
   TcpIp_Buf2TxReqMapStructSType str;
 } TcpIp_Buf2TxReqMapUType;
 
@@ -2717,7 +2779,7 @@ typedef union TcpIp_IpV4CtrlDynUTag
 /**   \brief  type to access TcpIp_IpV4SocketDyn in an index and symbol based style. */
 typedef union TcpIp_IpV4SocketDynUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_IpV4SocketDynType raw[2];
+  TcpIp_IpV4SocketDynType raw[3];
   TcpIp_IpV4SocketDynStructSType str;
 } TcpIp_IpV4SocketDynUType;
 
@@ -2795,6 +2857,15 @@ typedef P2CONST(TcpIp_FragmentationConfigType, TYPEDEF, TCPIP_CONST) TcpIp_Fragm
 
 /**   \brief  type used to point to TcpIp_GratuitousArp */
 typedef P2VAR(TcpIp_GratuitousArpType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_GratuitousArpPtrType;
+
+/**   \brief  type used to point to TcpIp_IcmpConfig */
+typedef P2CONST(TcpIp_IcmpConfigType, TYPEDEF, TCPIP_CONST) TcpIp_IcmpConfigPtrType;
+
+/**   \brief  type used to point to TcpIp_IcmpDestUnreachableMsg */
+typedef P2VAR(TcpIp_IcmpDestUnreachableMsgType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_IcmpDestUnreachableMsgPtrType;
+
+/**   \brief  type used to point to TcpIp_IcmpEchoReplyData */
+typedef P2VAR(TcpIp_IcmpEchoReplyDataType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_IcmpEchoReplyDataPtrType;
 
 /**   \brief  type used to point to TcpIp_IcmpMsgHandlerCbkFctPtr */
 typedef P2CONST(TcpIp_IcmpMsgHandlerCbkType, TYPEDEF, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFctPtrPtrType;
@@ -3112,6 +3183,25 @@ extern CONST(TcpIp_EthIfCtrlType, TCPIP_CONST) TcpIp_EthIfCtrl[1];
 /*lint -restore */
 
 /**********************************************************************************************************************
+  TcpIp_IcmpConfig
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_IcmpConfig
+  \details
+  Element       Description
+  TimeToLive    Time-To-Live (TTL) - Value of configuration parameter TcpIpIcmpTtl
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(TcpIp_IcmpConfigType, TCPIP_CONST) TcpIp_IcmpConfig[1];
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   TcpIp_IcmpMsgHandlerCbkFctPtr
 **********************************************************************************************************************/
 #define TCPIP_START_SEC_CONST_UNSPECIFIED
@@ -3134,7 +3224,7 @@ extern CONST(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFc
   MaxTxMsgSize                       -
   MtuTx                              Value of configuration parameter EthIfCtrlMtu
   AutoIpConfigUsed                   TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_AutoIpConfig
-  HwChecksumIcmp                     Defines if harware supports calculation of IPv4 ICMP checksum.
+  MulticastAddrV4Used                TRUE, if the 0:n relation has 1 relation pointing to TcpIp_MulticastAddrV4
   AddrAssignmentCfgByPrioEndIdx      the end index of the 1:n relation pointing to TcpIp_AddrAssignmentCfgByPrio
   AddrAssignmentCfgByPrioStartIdx    the start index of the 1:n relation pointing to TcpIp_AddrAssignmentCfgByPrio
   AddrAssignmentPrioByType           -
@@ -3179,6 +3269,7 @@ extern CONST(TcpIp_IpV4CtrlType, TCPIP_CONST) TcpIp_IpV4Ctrl[1];
   \var    TcpIp_IpV4General
   \details
   Element                   Description
+  IpV4SocketDynIcmpUsed     TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_IpV4SocketDyn
   IpV4CtrlDefaultIdx        the index of the 0:1 relation pointing to TcpIp_IpV4Ctrl
   IpV4SocketDynDhcpIdx      the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn
   IpV4SocketDynIcmpIdx      the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn
@@ -3344,6 +3435,40 @@ extern VAR(TcpIp_ArpTableEntryUType, TCPIP_VAR_NOINIT) TcpIp_ArpTableEntry;  /* 
 /*lint -restore */
 extern VAR(TcpIp_Buf2TxReqMapUType, TCPIP_VAR_NOINIT) TcpIp_Buf2TxReqMap;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_IcmpDestUnreachableMsg
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_IcmpDestUnreachableMsg
+  \brief  Buffer for ICMPv4 destination unreachable message.
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_IcmpDestUnreachableMsgType, TCPIP_VAR_NOINIT) TcpIp_IcmpDestUnreachableMsg[24];
+#define TCPIP_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_IcmpEchoReplyData
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_IcmpEchoReplyData
+  \brief  -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_IcmpEchoReplyDataType, TCPIP_VAR_NOINIT) TcpIp_IcmpEchoReplyData[32];
+#define TCPIP_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -3712,6 +3837,9 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_ReassemblyBufferDescUsedOfFragmentationConfigType,
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ReassemblyTimeoutMsOfFragmentationConfigType, TCPIP_CODE) TcpIp_GetReassemblyTimeoutMsOfFragmentationConfig(TcpIp_FragmentationConfigIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_NextTransmissionMsOfGratuitousArpType, TCPIP_CODE) TcpIp_GetNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_TransmissionCntOfGratuitousArpType, TCPIP_CODE) TcpIp_GetTransmissionCntOfGratuitousArp(TcpIp_GratuitousArpIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TimeToLiveOfIcmpConfigType, TCPIP_CODE) TcpIp_GetTimeToLiveOfIcmpConfig(TcpIp_IcmpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpDestUnreachableMsgType, TCPIP_CODE) TcpIp_GetIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpEchoReplyDataType, TCPIP_CODE) TcpIp_GetIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CODE) TcpIp_GetIcmpMsgHandlerCbkFctPtr(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_AddrAssignmentCfgByPrioEndIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetAddrAssignmentCfgByPrioEndIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_AddrAssignmentCfgByPrioStartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetAddrAssignmentCfgByPrioStartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
@@ -3732,7 +3860,6 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_EthIfCtrlIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetE
 TCPIP_LOCAL_INLINE FUNC(TcpIp_FragmentationConfigIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetFragmentationConfigIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_FramePrioDefaultOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetFramePrioDefaultOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_GratuitousArpIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetGratuitousArpIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIcmpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLlAddrStateIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4BroadcastIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4UnicastIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4UnicastIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
@@ -3740,6 +3867,7 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_MaxTxMsgSizeOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetM
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MtuTxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetMtuTxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4EndIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetMulticastAddrV4EndIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4StartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetMulticastAddrV4StartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpTableIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetStaticArpTableIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_TypeOfServiceDefaultOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetTypeOfServiceDefaultOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_UnicastAddrV4IdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetUnicastAddrV4IdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
@@ -3755,6 +3883,7 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_StateOfIpV4CtrlDynType, TCPIP_CODE) TcpIp_GetState
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4CtrlDefaultIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4CtrlDefaultIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynDhcpIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynIcmpIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynTcpRstIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ArpTableEntryIdxOfIpV4SocketDynType, TCPIP_CODE) TcpIp_GetArpTableEntryIdxOfIpV4SocketDyn(TcpIp_IpV4SocketDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_EthIfFramePrioOfIpV4SocketDynType, TCPIP_CODE) TcpIp_GetEthIfFramePrioOfIpV4SocketDyn(TcpIp_IpV4SocketDynIterType Index);
@@ -3865,16 +3994,15 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpStatusUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_Is
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpUserOptionUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_FragmentationConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsFragmentationConfigUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_GratuitousArpUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsGratuitousArpUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIcmpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumTcpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumTcpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumUdpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumUdpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsLlAddrStateUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ReceiveAllMulticastsOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsReceiveAllMulticastsOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpTableUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsStaticArpTableUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4CtrlDefaultUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynTcpRstUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfLocalAddrV4Type, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfLocalAddrV4(TcpIp_LocalAddrV4IterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_UnicastAddrV4UsedOfLocalAddrV4Type, TCPIP_CODE) TcpIp_IsUnicastAddrV4UsedOfLocalAddrV4(TcpIp_LocalAddrV4IterType Index);
@@ -3891,6 +4019,9 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpUserOptionDynType, TCPIP_CODE) TcpIp_Get
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfEthIfCtrlType, TCPIP_CODE) TcpIp_GetSizeOfEthIfCtrl(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfFragmentationConfigType, TCPIP_CODE) TcpIp_GetSizeOfFragmentationConfig(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfGratuitousArpType, TCPIP_CODE) TcpIp_GetSizeOfGratuitousArp(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfIcmpConfigType, TCPIP_CODE) TcpIp_GetSizeOfIcmpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfIcmpDestUnreachableMsgType, TCPIP_CODE) TcpIp_GetSizeOfIcmpDestUnreachableMsg(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfIcmpEchoReplyDataType, TCPIP_CODE) TcpIp_GetSizeOfIcmpEchoReplyData(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetSizeOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfIpV4CtrlDynType, TCPIP_CODE) TcpIp_GetSizeOfIpV4CtrlDyn(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetSizeOfIpV4General(void);
@@ -3952,6 +4083,8 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDhcpUserOptionBuffer(TcpIp_Dh
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index, TcpIp_LengthOfDhcpUserOptionDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_NextTransmissionMsOfGratuitousArpType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTransmissionCntOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_TransmissionCntOfGratuitousArpType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index, TcpIp_IcmpDestUnreachableMsgType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index, TcpIp_IcmpEchoReplyDataType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetActiveAddrAssignmentMethodOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, TcpIp_ActiveAddrAssignmentMethodOfIpV4CtrlDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetActiveDefGwAddrOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, IpBase_AddrInType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetActiveNetAddrOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, IpBase_AddrInType Value);
@@ -4034,6 +4167,8 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetUdpTxRetryQueuePoolDesc(TcpIp
 */ 
 TCPIP_LOCAL_INLINE FUNC(TcpIp_PhysAddrOfArpTableEntryPtrType, TCPIP_CODE) TcpIp_GetAddrPhysAddrOfArpTableEntry(TcpIp_ArpTableEntryIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionBufferPtrType, TCPIP_CODE) TcpIp_GetAddrDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpDestUnreachableMsgPtrType, TCPIP_CODE) TcpIp_GetAddrIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpEchoReplyDataPtrType, TCPIP_CODE) TcpIp_GetAddrIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocSockOfIpV4SocketDynPtrType, TCPIP_CODE) TcpIp_GetAddrLocSockOfIpV4SocketDyn(TcpIp_IpV4SocketDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_TransferBlockOfIpV4SocketDynPtrType, TCPIP_CODE) TcpIp_GetAddrTransferBlockOfIpV4SocketDyn(TcpIp_IpV4SocketDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ReassemblyBufferPtrType, TCPIP_CODE) TcpIp_GetAddrReassemblyBuffer(TcpIp_ReassemblyBufferIterType Index);
@@ -4129,6 +4264,10 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasReassemblyTimeoutMsOfFragm
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasGratuitousArp(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNextTransmissionMsOfGratuitousArp(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTransmissionCntOfGratuitousArp(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTimeToLiveOfIcmpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpDestUnreachableMsg(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpEchoReplyData(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpMsgHandlerCbkFctPtr(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasAddrAssignmentCfgByPrioEndIdxOfIpV4Ctrl(void);
@@ -4255,6 +4394,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionDyn(vo
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfEthIfCtrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfFragmentationConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfGratuitousArp(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpDestUnreachableMsg(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpEchoReplyData(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIpV4CtrlDyn(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIpV4General(void);
@@ -4351,6 +4493,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDuplicateAddrDetectionFctP
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasEthIfCtrlOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasFragmentationConfigOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasGratuitousArpOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpConfigOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpDestUnreachableMsgOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpEchoReplyDataOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpMsgHandlerCbkFctPtrOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIpV4CtrlDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIpV4CtrlOfPCConfig(void);
@@ -4379,6 +4524,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionOfPCCo
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfEthIfCtrlOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfFragmentationConfigOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfGratuitousArpOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpConfigOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpDestUnreachableMsgOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpEchoReplyDataOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIpV4CtrlDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIpV4CtrlOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIpV4GeneralOfPCConfig(void);
@@ -4448,6 +4596,8 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncDhcpUserOptionBuffer(TcpIp_Dh
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTransmissionCntOfGratuitousArp(TcpIp_GratuitousArpIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncActiveAddrAssignmentMethodOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncAddrAssignmentTriggeredFlagsOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncStateOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index);
@@ -4512,6 +4662,8 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecDhcpUserOptionBuffer(TcpIp_Dh
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTransmissionCntOfGratuitousArp(TcpIp_GratuitousArpIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecActiveAddrAssignmentMethodOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecAddrAssignmentTriggeredFlagsOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecStateOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index);
@@ -4576,6 +4728,8 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddDhcpUserOptionBuffer(TcpIp_Dh
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index, TcpIp_LengthOfDhcpUserOptionDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_NextTransmissionMsOfGratuitousArpType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTransmissionCntOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_TransmissionCntOfGratuitousArpType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index, TcpIp_IcmpDestUnreachableMsgType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index, TcpIp_IcmpEchoReplyDataType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddActiveAddrAssignmentMethodOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, TcpIp_ActiveAddrAssignmentMethodOfIpV4CtrlDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddAddrAssignmentTriggeredFlagsOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, TcpIp_AddrAssignmentTriggeredFlagsOfIpV4CtrlDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddStateOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, TcpIp_StateOfIpV4CtrlDynType Value);
@@ -4640,6 +4794,8 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubDhcpUserOptionBuffer(TcpIp_Dh
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index, TcpIp_LengthOfDhcpUserOptionDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_NextTransmissionMsOfGratuitousArpType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTransmissionCntOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_TransmissionCntOfGratuitousArpType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index, TcpIp_IcmpDestUnreachableMsgType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index, TcpIp_IcmpEchoReplyDataType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubActiveAddrAssignmentMethodOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, TcpIp_ActiveAddrAssignmentMethodOfIpV4CtrlDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubAddrAssignmentTriggeredFlagsOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, TcpIp_AddrAssignmentTriggeredFlagsOfIpV4CtrlDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubStateOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, TcpIp_StateOfIpV4CtrlDynType Value);
@@ -4904,6 +5060,18 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_TransmissionCntOfGratuitousArpType, TCPIP_CODE) Tc
 {
   return (TcpIp_TransmissionCntOfGratuitousArpType) (TcpIp_GetGratuitousArpOfPCConfig()[(Index)].TransmissionCntOfGratuitousArp);
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TimeToLiveOfIcmpConfigType, TCPIP_CODE) TcpIp_GetTimeToLiveOfIcmpConfig(TcpIp_IcmpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TimeToLiveOfIcmpConfigType) (TcpIp_GetIcmpConfigOfPCConfig()[(Index)].TimeToLiveOfIcmpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpDestUnreachableMsgType, TCPIP_CODE) TcpIp_GetIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_IcmpDestUnreachableMsgType) (TcpIp_GetIcmpDestUnreachableMsgOfPCConfig()[(Index)]);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpEchoReplyDataType, TCPIP_CODE) TcpIp_GetIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_IcmpEchoReplyDataType) (TcpIp_GetIcmpEchoReplyDataOfPCConfig()[(Index)]);
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CODE) TcpIp_GetIcmpMsgHandlerCbkFctPtr(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_IcmpMsgHandlerCbkType) ((*(TcpIp_GetIcmpMsgHandlerCbkFctPtrOfPCConfig())));
@@ -4984,10 +5152,6 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_GratuitousArpIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_
 {
   return (TcpIp_GratuitousArpIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].GratuitousArpIdxOfIpV4Ctrl);
 }
-TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIcmpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
-{
-  return (TcpIp_HwChecksumIcmpOfIpV4CtrlType) ((TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].HwChecksumIcmpOfIpV4Ctrl) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
-}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLlAddrStateIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_LlAddrStateIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].LlAddrStateIdxOfIpV4Ctrl);
@@ -5015,6 +5179,10 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4EndIdxOfIpV4CtrlType, TCPIP_CODE) T
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4StartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetMulticastAddrV4StartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_MulticastAddrV4StartIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].MulticastAddrV4StartIdxOfIpV4Ctrl);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_MulticastAddrV4UsedOfIpV4CtrlType) ((TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].MulticastAddrV4UsedOfIpV4Ctrl) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpTableIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetStaticArpTableIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5075,6 +5243,10 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType, TCPIP_CODE)
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynIcmpIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType) (TcpIp_GetIpV4GeneralOfPCConfig()[(Index)].IpV4SocketDynIcmpIdxOfIpV4General);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType) ((TcpIp_GetIpV4GeneralOfPCConfig()[(Index)].IpV4SocketDynIcmpUsedOfIpV4General) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynTcpRstIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5441,67 +5613,63 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_ArpTableEntryUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpConfigUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_DhcpConfigUsedOfIpV4CtrlType) (((!(TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_DhcpConfigUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpStatusUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpStatusUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_DhcpStatusUsedOfIpV4CtrlType) (((!(TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_DhcpStatusUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpUserOptionUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_DhcpUserOptionUsedOfIpV4CtrlType) (((!(TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_DhcpUserOptionUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_FragmentationConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsFragmentationConfigUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_FragmentationConfigUsedOfIpV4CtrlType) (((!(TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_FragmentationConfigUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_GratuitousArpUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsGratuitousArpUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_GratuitousArpUsedOfIpV4CtrlType) (((!(TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_GratuitousArpUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIcmpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_HwChecksumIcmpOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_HwChecksumIpOfIpV4CtrlType) (((!(TcpIp_IsAutoIpConfigUsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_HwChecksumIpOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumTcpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumTcpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_HwChecksumTcpOfIpV4CtrlType) (((!(TcpIp_IsAutoIpConfigUsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_HwChecksumTcpOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumUdpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumUdpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_HwChecksumUdpOfIpV4CtrlType) (((!(TcpIp_IsAutoIpConfigUsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_HwChecksumUdpOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsLlAddrStateUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_LlAddrStateUsedOfIpV4CtrlType) (((!(TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
-}
-TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
-{
-  return (TcpIp_MulticastAddrV4UsedOfIpV4CtrlType) (((!(TcpIp_IsAutoIpConfigUsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_LlAddrStateUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ReceiveAllMulticastsOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsReceiveAllMulticastsOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_ReceiveAllMulticastsOfIpV4CtrlType) (((!(TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_ReceiveAllMulticastsOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpTableUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsStaticArpTableUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_StaticArpTableUsedOfIpV4CtrlType) (((!(TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_StaticArpTableUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4CtrlDefaultUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType) (((boolean)(TcpIp_GetIpV4CtrlDefaultIdxOfIpV4General(Index) != TCPIP_NO_IPV4CTRLDEFAULTIDXOFIPV4GENERAL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType) (((!(TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType) (((boolean)(TcpIp_GetIpV4SocketDynDhcpIdxOfIpV4General(Index) != TCPIP_NO_IPV4SOCKETDYNDHCPIDXOFIPV4GENERAL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
-}
-TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
-{
-  return (TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType) (((boolean)(TcpIp_GetIpV4SocketDynIcmpIdxOfIpV4General(Index) != TCPIP_NO_IPV4SOCKETDYNICMPIDXOFIPV4GENERAL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType) (((!(TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynTcpRstUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_IpV4SocketDynTcpRstUsedOfIpV4GeneralType) (((boolean)(TcpIp_GetIpV4SocketDynTcpRstIdxOfIpV4General(Index) != TCPIP_NO_IPV4SOCKETDYNTCPRSTIDXOFIPV4GENERAL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_IpV4SocketDynTcpRstUsedOfIpV4GeneralType) (((!(TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfLocalAddrV4Type, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfLocalAddrV4(TcpIp_LocalAddrV4IterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5562,6 +5730,18 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfFragmentationConfigType, TCPIP_CODE) TcpIp_G
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfGratuitousArpType, TCPIP_CODE) TcpIp_GetSizeOfGratuitousArp(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_SizeOfGratuitousArpType) TcpIp_GetSizeOfGratuitousArpOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfIcmpConfigType, TCPIP_CODE) TcpIp_GetSizeOfIcmpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfIcmpConfigType) TcpIp_GetSizeOfIcmpConfigOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfIcmpDestUnreachableMsgType, TCPIP_CODE) TcpIp_GetSizeOfIcmpDestUnreachableMsg(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfIcmpDestUnreachableMsgType) TcpIp_GetSizeOfIcmpDestUnreachableMsgOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfIcmpEchoReplyDataType, TCPIP_CODE) TcpIp_GetSizeOfIcmpEchoReplyData(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfIcmpEchoReplyDataType) TcpIp_GetSizeOfIcmpEchoReplyDataOfPCConfig();
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetSizeOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5749,6 +5929,14 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetNextTransmissionMsOfGratuitou
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTransmissionCntOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_TransmissionCntOfGratuitousArpType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetGratuitousArpOfPCConfig()[(Index)].TransmissionCntOfGratuitousArp = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index, TcpIp_IcmpDestUnreachableMsgType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetIcmpDestUnreachableMsgOfPCConfig()[(Index)] = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index, TcpIp_IcmpEchoReplyDataType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetIcmpEchoReplyDataOfPCConfig()[(Index)] = (Value);
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetActiveAddrAssignmentMethodOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, TcpIp_ActiveAddrAssignmentMethodOfIpV4CtrlDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -6020,6 +6208,14 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_PhysAddrOfArpTableEntryPtrType, TCPIP_CODE) TcpIp_
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionBufferPtrType, TCPIP_CODE) TcpIp_GetAddrDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_DhcpUserOptionBufferPtrType) (&(TcpIp_GetDhcpUserOptionBufferOfPCConfig()[(Index)]));
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpDestUnreachableMsgPtrType, TCPIP_CODE) TcpIp_GetAddrIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_IcmpDestUnreachableMsgPtrType) (&(TcpIp_GetIcmpDestUnreachableMsgOfPCConfig()[(Index)]));
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpEchoReplyDataPtrType, TCPIP_CODE) TcpIp_GetAddrIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_IcmpEchoReplyDataPtrType) (&(TcpIp_GetIcmpEchoReplyDataOfPCConfig()[(Index)]));
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocSockOfIpV4SocketDynPtrType, TCPIP_CODE) TcpIp_GetAddrLocSockOfIpV4SocketDyn(TcpIp_IpV4SocketDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -6341,6 +6537,22 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNextTransmissionMsOfGratui
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTransmissionCntOfGratuitousArp(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTimeToLiveOfIcmpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpDestUnreachableMsg(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpEchoReplyData(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -6848,6 +7060,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfGratuitousArp(void) 
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpDestUnreachableMsg(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpEchoReplyData(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -7232,6 +7456,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasGratuitousArpOfPCConfig(vo
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpConfigOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpDestUnreachableMsgOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpEchoReplyDataOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIcmpMsgHandlerCbkFctPtrOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -7341,6 +7577,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfFragmentationConfigO
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfGratuitousArpOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpConfigOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpDestUnreachableMsgOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfIcmpEchoReplyDataOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -7563,6 +7811,14 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTransmissionCntOfGratuitousAr
 {
   TcpIp_GetGratuitousArpOfPCConfig()[(Index)].TransmissionCntOfGratuitousArp++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
 }
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetIcmpDestUnreachableMsgOfPCConfig()[(Index)]++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetIcmpEchoReplyDataOfPCConfig()[(Index)]++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncActiveAddrAssignmentMethodOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetIpV4CtrlDynOfPCConfig()[(Index)].ActiveAddrAssignmentMethodOfIpV4CtrlDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
@@ -7761,6 +8017,14 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecNextTransmissionMsOfGratuitou
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTransmissionCntOfGratuitousArp(TcpIp_GratuitousArpIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetGratuitousArpOfPCConfig()[(Index)].TransmissionCntOfGratuitousArp--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetIcmpDestUnreachableMsgOfPCConfig()[(Index)]--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetIcmpEchoReplyDataOfPCConfig()[(Index)]--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecActiveAddrAssignmentMethodOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -7961,6 +8225,14 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTransmissionCntOfGratuitousAr
 {
   TcpIp_SetTransmissionCntOfGratuitousArp(Index, (TcpIp_GetGratuitousArpOfPCConfig()[(Index)].TransmissionCntOfGratuitousArp + Value));
 }
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index, TcpIp_IcmpDestUnreachableMsgType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetIcmpDestUnreachableMsg(Index, (TcpIp_GetIcmpDestUnreachableMsgOfPCConfig()[(Index)] + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index, TcpIp_IcmpEchoReplyDataType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetIcmpEchoReplyData(Index, (TcpIp_GetIcmpEchoReplyDataOfPCConfig()[(Index)] + Value));
+}
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddActiveAddrAssignmentMethodOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, TcpIp_ActiveAddrAssignmentMethodOfIpV4CtrlDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_SetActiveAddrAssignmentMethodOfIpV4CtrlDyn(Index, (TcpIp_GetIpV4CtrlDynOfPCConfig()[(Index)].ActiveAddrAssignmentMethodOfIpV4CtrlDyn + Value));
@@ -8159,6 +8431,14 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubNextTransmissionMsOfGratuitou
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTransmissionCntOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_TransmissionCntOfGratuitousArpType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_SetTransmissionCntOfGratuitousArp(Index, (TcpIp_GetGratuitousArpOfPCConfig()[(Index)].TransmissionCntOfGratuitousArp - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index, TcpIp_IcmpDestUnreachableMsgType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetIcmpDestUnreachableMsg(Index, (TcpIp_GetIcmpDestUnreachableMsgOfPCConfig()[(Index)] - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index, TcpIp_IcmpEchoReplyDataType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetIcmpEchoReplyData(Index, (TcpIp_GetIcmpEchoReplyDataOfPCConfig()[(Index)] - Value));
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubActiveAddrAssignmentMethodOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index, TcpIp_ActiveAddrAssignmentMethodOfIpV4CtrlDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {

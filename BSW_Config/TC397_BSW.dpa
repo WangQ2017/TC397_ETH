@@ -56,24 +56,6 @@
     </References>
     <EcucSplitter>
         <Configuration>.\Config\ECUC\TC397_BSW.ecuc.arxml</Configuration>
-        <Splitter File=".\Config\ECUC\TC397_BSW_ResourceM_ResourceM_ecuc.arxml">
-            <Module Name="ResourceM"/>
-        </Splitter>
-        <Splitter File=".\Config\ECUC\TC397_BSW_Dio_Dio_ecuc.arxml">
-            <Module Name="Dio"/>
-        </Splitter>
-        <Splitter File=".\Config\ECUC\TC397_BSW_McalLib_McalLib_ecuc.arxml">
-            <Module Name="McalLib"/>
-        </Splitter>
-        <Splitter File=".\Config\ECUC\TC397_BSW_Port_Port_ecuc.arxml">
-            <Module Name="Port"/>
-        </Splitter>
-        <Splitter File=".\Config\ECUC\TC397_BSW_Mcu_Mcu_ecuc.arxml">
-            <Module Name="Mcu"/>
-        </Splitter>
-        <Splitter File=".\Config\ECUC\TC397_BSW_Irq_Irq_ecuc.arxml">
-            <Module Name="Irq"/>
-        </Splitter>
         <Splitter File=".\Config\ECUC\TC397_BSW_vSet_vSet_ecuc.arxml">
             <Module Name="vSet"/>
         </Splitter>
@@ -104,15 +86,6 @@
         <Splitter File=".\Config\ECUC\TC397_BSW_EcuC_EcuC_ecuc.arxml">
             <Module Name="EcuC"/>
         </Splitter>
-        <Splitter File=".\Config\ECUC\TC397_BSW_EthTrcv_EthTrcv_ecuc.arxml">
-            <Module Name="EthTrcv"/>
-        </Splitter>
-        <Splitter File=".\Config\ECUC\TC397_BSW_EthIf_EthIf_ecuc.arxml">
-            <Module Name="EthIf"/>
-        </Splitter>
-        <Splitter File=".\Config\ECUC\TC397_BSW_Eth_Eth_ecuc.arxml">
-            <Module Name="Eth"/>
-        </Splitter>
         <Splitter File=".\Config\ECUC\TC397_BSW_UdpNm_UdpNm_ecuc.arxml">
             <Module Name="UdpNm"/>
         </Splitter>
@@ -139,12 +112,43 @@
         </Splitter>
         <Splitter File=".\Config\ECUC\TC397_BSW_Uart_Uart_ecuc.arxml">
             <Module Name="Uart"/>
+            <Module Name="Uart"/>
         </Splitter>
         <Splitter File=".\Config\ECUC\TC397_BSW_Nm_Nm_ecuc.arxml">
             <Module Name="Nm"/>
         </Splitter>
         <Splitter File=".\Config\ECUC\TC397_BSW_Com_Com_ecuc.arxml">
             <Module Name="Com"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_EthIf_EthIf_ecuc.arxml">
+            <Module Name="EthIf"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_EthTrcv_EthTrcv_ecuc.arxml">
+            <Module Name="EthTrcv"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Eth_Eth_ecuc.arxml">
+            <Module Name="Eth"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_ResourceM_ResourceM_ecuc.arxml">
+            <Module Name="ResourceM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_McalLib_McalLib_ecuc.arxml">
+            <Module Name="McalLib"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Dio_Dio_ecuc.arxml">
+            <Module Name="Dio"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Crc_Crc_ecuc.arxml">
+            <Module Name="Crc"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Irq_Irq_ecuc.arxml">
+            <Module Name="Irq"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Port_Port_ecuc.arxml">
+            <Module Name="Port"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Mcu_Mcu_ecuc.arxml">
+            <Module Name="Mcu"/>
         </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
@@ -178,7 +182,6 @@
                 <Setting Value="false" Name="Irq"/>
                 <Setting Value="false" Name="McalLib"/>
                 <Setting Value="false" Name="Mcu"/>
-                <Setting Value="false" Name="Port"/>
                 <Setting Value="false" Name="Uart"/>
             </Settings>
             <Settings Name="com.vector.cfg.gui.core.generators.GenerationTarget">
@@ -418,7 +421,7 @@
                 </Settings>
             </Settings>
             <Settings Name="com.vector.cfg.gen.core.gencore.internal.aov.AutomaticOnDemandValidationConfigurationService">
-                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAHc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQABFBvcnR0ABEvQVVSSVgyRy9FY3VjRGVm&#xA;c3NxAH4ACHQAB01jYWxMaWJxAH4ADHNxAH4ACHQAA0lycXEAfgAMc3EAfgAIdAAFRTJFUFd0AAkv&#xA;TUlDUk9TQVJzcQB+AAh0AANEaW9xAH4ADHNxAH4ACHQAA01jdXEAfgAMc3EAfgAIdAAEVWFydHEA&#xA;fgAM" Name="Data"/>
+                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAFc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQAA0lycXQAES9BVVJJWDJHL0VjdWNEZWZz&#xA;c3EAfgAIdAAHTWNhbExpYnEAfgAMc3EAfgAIdAAEVWFydHEAfgAMc3EAfgAIdAAFRTJFUFd0AAkv&#xA;TUlDUk9TQVJzcQB+AAh0AANEaW9xAH4ADA==" Name="Data"/>
             </Settings>
             <Settings Name="com.vector.cfg.gui.pse.pages.generators">
                 <Settings Name="BuildVipProject"/>

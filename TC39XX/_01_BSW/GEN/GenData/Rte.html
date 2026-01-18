@@ -201,6 +201,7 @@ Rte_rules.mak<br>
 SchM_BswM.h<br>
 SchM_Com.h<br>
 SchM_ComM.h<br>
+SchM_Crc.h<br>
 SchM_Det.h<br>
 SchM_Dio.h<br>
 SchM_EcuM.h<br>
@@ -223,6 +224,7 @@ SchM_UdpNm.h<br>
 SchM_BswM_Type.h<br>
 SchM_Com_Type.h<br>
 SchM_ComM_Type.h<br>
+SchM_Crc_Type.h<br>
 SchM_Det_Type.h<br>
 SchM_Dio_Type.h<br>
 SchM_EcuM_Type.h<br>
@@ -302,7 +304,7 @@ CONST Size: 0 Bytes<br>
 </TR>
 <TR>
 <TD>OsTask_Bsw_10ms_Core0</TD>
-<TD>Extended</TD>
+<TD>Basic</TD>
 <TD>FULL</TD>
 <TD>30</TD>
 </TR>
@@ -320,7 +322,7 @@ CONST Size: 0 Bytes<br>
 </TR>
 <TR>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>Basic</TD>
+<TD>Extended</TD>
 <TD>FULL</TD>
 <TD>40</TD>
 </TR>
@@ -419,7 +421,7 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>BswM_MainFunction</TD>
 <TD>OsTask_Bsw_10ms_Core0</TD>
-<TD>Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
+<TD>n/a</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
 </TR>
 <TR>
@@ -531,7 +533,7 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>ComM_MainFunction_0</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
@@ -650,7 +652,7 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
 <TD>OsTask_Bsw_10ms_Core0</TD>
-<TD>Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
+<TD>n/a</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
 </TR>
 <TR>
@@ -818,7 +820,7 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>StbM_MainFunction</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
@@ -863,7 +865,7 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>BswM_MainFunction</TD>
 <TD>OsTask_Bsw_10ms_Core0</TD>
-<TD>Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
+<TD>n/a</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
 </TR>
 <TR>
@@ -884,14 +886,14 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>ComM_MainFunction_0</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
 <TD>OsTask_Bsw_10ms_Core0</TD>
-<TD>Rte_Ev_Cyclic2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
+<TD>n/a</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms</TD>
 </TR>
 <TR>
@@ -933,13 +935,13 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>EthIf_MainFunctionRx</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 25ms</TD>
 <TD>EthIf_MainFunctionState</TD>
-<TD>OsTask_Bsw_10ms_Core0</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
 <TD>Rte_Ev_Run_EthIf_EthIf_MainFunctionState</TD>
 <TD>Rte_Al_TE_EthIf_EthIf_MainFunctionState</TD>
 </TR>
@@ -947,35 +949,35 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>EthIf_MainFunctionTx</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>EthSM_MainFunction</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>EthTSyn_MainFunction</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
-<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
 <TD>EthTrcv_30_Tja1100_MainFunction</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
-<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+<TD>Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction</TD>
+<TD>Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>EthTrcv_30_Tja1100_MainFunctionLinkHandling</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
@@ -996,21 +998,21 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>SoAd_MainFunction</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>StbM_MainFunction</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>TcpIp_MainFunction</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
@@ -1031,7 +1033,7 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>UdpNm_MainFunction_0</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
-<TD>n/a</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 </TABLE>

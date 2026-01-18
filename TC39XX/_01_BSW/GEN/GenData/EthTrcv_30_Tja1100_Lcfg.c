@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTrcv_30_Tja1100_Lcfg.c
- *   Generation Time: 2026-01-16 10:59:14
+ *   Generation Time: 2026-01-18 22:53:01
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -41,7 +41,6 @@
 
 #include "Eth_30_Tc3xx.h"
 
-#include "EthTrcv_Callout.h"
 
 /**********************************************************************************************************************
   CONFIGURATION CLASS: PRE_COMPILE
@@ -76,7 +75,7 @@
 /*lint -restore */
 CONST(EthTrcv_30_Tja1100_AccessEntityFctsType, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja1100_AccessEntityFcts[1] = {
     /* Index    ReadTrcvReg           WriteTrcvReg                 Referable Keys */
-  { /*     0 */ Eth_30_Tc3xx_ReadMii, Eth_30_Tc3xx_WriteMii }   /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig] */
+  { /*     0 */ Eth_30_Tc3xx_ReadMii, Eth_30_Tc3xx_WriteMii }   /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
 };
 #define ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -91,6 +90,7 @@ CONST(EthTrcv_30_Tja1100_AccessEntityFctsType, ETHTRCV_30_TJA1100_CONST) EthTrcv
   \brief  Ethernet transceivers managed by the driver.
   \details
   Element                   Description
+  SoftResetWaitCycles       Soft reset wait cycles
   AutoNegEnabled            Auto negotiation configuration
   SoftResetOnInitEnabled    Soft reset on initialization configuraiton
   AccessEntityFctsIdx       the index of the 1:1 relation pointing to EthTrcv_30_Tja1100_AccessEntityFcts
@@ -102,7 +102,6 @@ CONST(EthTrcv_30_Tja1100_AccessEntityFctsType, ETHTRCV_30_TJA1100_CONST) EthTrcv
   MiiMode                   Mii interface
   PhySignalQualityMean      Mean value of phyisical signal quality
   SoCBaseRegAddr            Base register address within memory space of SoC in case PHY is integrated as module into SoC.
-  SoftResetWaitCycles       Soft reset wait cycles
   Speed                     Transceiver speed
   WakeupIdx                 the index of the 0:1 relation pointing to EthTrcv_30_Tja1100_Wakeup
 */ 
@@ -111,8 +110,8 @@ CONST(EthTrcv_30_Tja1100_AccessEntityFctsType, ETHTRCV_30_TJA1100_CONST) EthTrcv
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_19.1 */
 /*lint -restore */
 CONST(EthTrcv_30_Tja1100_EthTrcvType, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja1100_EthTrcv[1] = {
-    /* Index    AutoNegEnabled  SoftResetOnInitEnabled  AccessEntityFctsIdx                                                            AccessEntitySnv                           AddressingIdx  BasicCtrlRegVal  ConnectionNeg                                             DemEAccessEventId                                 MiiMode                                       PhySignalQualityMean  SoCBaseRegAddr                                 SoftResetWaitCycles  Speed                                             WakeupIdx                                                                                          */
-  { /*     0 */          FALSE,                   TRUE,                  0u  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig */, EthConf_EthCtrlConfig_EthCtrlConfig_MAIN,            0u,           0x60u, ETHTRCV_30_TJA1100_CONN_NEG_SLAVE_CONNECTIONNEGOFETHTRCV, ETHTRCV_30_TJA1100_NO_DEMEACCESSEVENTIDOFETHTRCV, ETHTRCV_30_TJA1100_MII_MODE_MIIMODEOFETHTRCV,                 100u, ETHTRCV_30_TJA1100_NO_SOCBASEREGADDROFETHTRCV,                100u, ETHTRCV_30_TJA1100_TRCV_SPEED_100_SPEEDOFETHTRCV, ETHTRCV_30_TJA1100_NO_WAKEUPIDXOFETHTRCV  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig */ }
+    /* Index    SoftResetWaitCycles  AutoNegEnabled  SoftResetOnInitEnabled  AccessEntityFctsIdx                                                                 AccessEntitySnv                           AddressingIdx  BasicCtrlRegVal  ConnectionNeg                                             DemEAccessEventId                                 MiiMode                                       PhySignalQualityMean  SoCBaseRegAddr                                 Speed                                             WakeupIdx                                                                                               */
+  { /*     0 */               1000u,          FALSE,                   TRUE,                  0u  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN */, EthConf_EthCtrlConfig_EthCtrlConfig_MAIN,            0u,           0xE0u, ETHTRCV_30_TJA1100_CONN_NEG_SLAVE_CONNECTIONNEGOFETHTRCV, ETHTRCV_30_TJA1100_NO_DEMEACCESSEVENTIDOFETHTRCV, ETHTRCV_30_TJA1100_MII_MODE_MIIMODEOFETHTRCV,                 100u, ETHTRCV_30_TJA1100_NO_SOCBASEREGADDROFETHTRCV, ETHTRCV_30_TJA1100_TRCV_SPEED_100_SPEEDOFETHTRCV, ETHTRCV_30_TJA1100_NO_WAKEUPIDXOFETHTRCV  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN */ }
 };
 #define ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -145,7 +144,7 @@ CONST(EthTrcv_30_Tja1100_EthTrcvType, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja11
 /*lint -restore */
 CONST(EthTrcv_30_Tja1100_EthTrcvTja1100Type, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja1100_EthTrcvTja1100[1] = {
     /* Index    ExtLinkStateCheckEnabled  ClkMode                                                                  Derivative                                             IntRevMii                                                         LdoMode                                                 LinkFailCounterResetVal  LinkStartupDelay  P0MiiAddress  P0PortSnv                                        P0SwitchSnv                                        PhyEnable                                                   */
-  { /*     0 */                    FALSE, ETHTRCV_30_TJA1100_ETHTRCV_25_MHZ_XTAL_NO_CLOCK_CLKMODEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_TJA1101_DERIVATIVEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_INT_REV_MII_INVALID_INTREVMIIOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_LDO_INVALID_LDOMODEOFETHTRCVTJA1100,                     40u,              20u,           0u, ETHTRCV_30_TJA1100_NO_P0PORTSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_NO_P0SWITCHSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_PHY_EN_INVALID_PHYENABLEOFETHTRCVTJA1100 }
+  { /*     0 */                     TRUE, ETHTRCV_30_TJA1100_ETHTRCV_25_MHZ_XTAL_NO_CLOCK_CLKMODEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_TJA1101_DERIVATIVEOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_INT_REV_MII_INVALID_INTREVMIIOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_LDO_INVALID_LDOMODEOFETHTRCVTJA1100,                     40u,               5u,           0u, ETHTRCV_30_TJA1100_NO_P0PORTSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_NO_P0SWITCHSNVOFETHTRCVTJA1100, ETHTRCV_30_TJA1100_PHY_EN_INVALID_PHYENABLEOFETHTRCVTJA1100 }
 };
 #define ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -165,7 +164,7 @@ CONST(EthTrcv_30_Tja1100_EthTrcvTja1100Type, ETHTRCV_30_TJA1100_CONST) EthTrcv_3
 /*lint -restore */
 CONST(EthTrcv_30_Tja1100_UserHwAccessMonitorFailureCalloutFctPtrType, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja1100_HwAccessMonitorFailureCallout[1] = {
   /* Index     HwAccessMonitorFailureCallout      Referable Keys */
-  /*     0 */ NULL_PTR                         /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig] */
+  /*     0 */ NULL_PTR                         /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
 };
 #define ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -212,8 +211,8 @@ CONST(EthTrcv_30_Tja1100_UserAccessCalloutsType, ETHTRCV_30_TJA1100_CONST) EthTr
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_19.1 */
 /*lint -restore */
 CONST(EthTrcv_30_Tja1100_UserInitCalloutsType, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja1100_UserInitCallouts[1] = {
-    /* Index    PostInitUserCallout          PreInitUserCallout         */
-  { /*     0 */ EthTrcv_PostTrcvInitCallout, EthTrcv_PreTrcvInitCallout }
+    /* Index    PostInitUserCallout  PreInitUserCallout */
+  { /*     0 */ NULL_PTR           , NULL_PTR           }
 };
 #define ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
