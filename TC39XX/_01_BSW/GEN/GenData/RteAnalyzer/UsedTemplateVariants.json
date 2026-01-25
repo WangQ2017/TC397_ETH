@@ -1579,6 +1579,14 @@
             "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
          }
       },
+      "SchM_Sd.h" : {
+         "SchM_Enter_Sd_SD_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_Sd_SD_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
       "SchM_SoAd.h" : {
          "SchM_Enter_SoAd_SOAD_EXCLUSIVE_AREA_0" : {
             "d04949d119d50064b356ac78c5423a4b" : {}

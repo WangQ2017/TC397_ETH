@@ -65,11 +65,13 @@
 #include "SchM_EthTrcv_30_Tja1100.h"
 #include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Irq.h"
+#include "SchM_LdCom.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
 #include "SchM_Nm.h"
 #include "SchM_PduR.h"
 #include "SchM_Port.h"
+#include "SchM_Sd.h"
 #include "SchM_SoAd.h"
 #include "SchM_StbM.h"
 #include "SchM_TcpIp.h"
@@ -543,6 +545,12 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
 
       /* call runnable */
       ComM_MainFunction_0(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call runnable */
+      ComM_MainFunction_1(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call schedulable entity */
+      Sd_MainFunction();
 
       /* call schedulable entity */
       EthSM_MainFunction();

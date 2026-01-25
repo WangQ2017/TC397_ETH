@@ -70,6 +70,8 @@
  *  Rte_Runnable_Cdd_Nm_Cdd_Nm_Runnable10ms_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_0_Return
  *  Rte_Runnable_ComM_ComM_MainFunction_0_Start
+ *  Rte_Runnable_ComM_ComM_MainFunction_1_Return
+ *  Rte_Runnable_ComM_ComM_MainFunction_1_Start
  *  Rte_Runnable_ComM_GetCurrentComMode_Return
  *  Rte_Runnable_ComM_GetCurrentComMode_Start
  *  Rte_Runnable_ComM_GetInhibitionStatus_Return
@@ -227,6 +229,8 @@
  *  SchM_EnterHook_Nm_NM_EXCLUSIVE_AREA_1_Start
  *  SchM_EnterHook_PduR_PDUR_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_PduR_PDUR_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_Sd_SD_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_Sd_SD_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_SoAd_SOAD_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_SoAd_SOAD_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_SoAd_SOAD_EXCLUSIVE_AREA_1_Return
@@ -315,6 +319,8 @@
  *  SchM_ExitHook_Nm_NM_EXCLUSIVE_AREA_1_Start
  *  SchM_ExitHook_PduR_PDUR_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_PduR_PDUR_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_Sd_SD_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_Sd_SD_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_SoAd_SOAD_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_SoAd_SOAD_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_SoAd_SOAD_EXCLUSIVE_AREA_1_Return
@@ -341,6 +347,8 @@
  *  SchM_Schedulable_BswM_BswM_MainFunction_Start
  *  SchM_Schedulable_ComM_ComM_MainFunction_0_Return
  *  SchM_Schedulable_ComM_ComM_MainFunction_0_Start
+ *  SchM_Schedulable_ComM_ComM_MainFunction_1_Return
+ *  SchM_Schedulable_ComM_ComM_MainFunction_1_Start
  *  SchM_Schedulable_Com_Com_MainFunctionRx_Return
  *  SchM_Schedulable_Com_Com_MainFunctionRx_Start
  *  SchM_Schedulable_Com_Com_MainFunctionTx_Return
@@ -365,6 +373,8 @@
  *  SchM_Schedulable_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction_Start
  *  SchM_Schedulable_Rte_Rte_ComSendSignalProxyPeriodic_Return
  *  SchM_Schedulable_Rte_Rte_ComSendSignalProxyPeriodic_Start
+ *  SchM_Schedulable_Sd_Sd_MainFunction_Return
+ *  SchM_Schedulable_Sd_Sd_MainFunction_Start
  *  SchM_Schedulable_SoAd_SoAd_MainFunction_Return
  *  SchM_Schedulable_SoAd_SoAd_MainFunction_Start
  *  SchM_Schedulable_StbM_StbM_MainFunction_Return

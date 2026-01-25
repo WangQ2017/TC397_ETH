@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthSM_Cfg.h
- *   Generation Time: 2026-01-18 22:57:24
+ *   Generation Time: 2026-01-25 14:17:48
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -236,13 +236,13 @@
   \brief  If all values in a CONST array or an element in a CONST array of structs are equal, the define is STD_ON else STD_OFF.
   \{
 */ 
-#define ETHSM_ISDEF_COMMNETWORKHANDLEOFCHANNELCONFIG                  STD_ON
+#define ETHSM_ISDEF_COMMNETWORKHANDLEOFCHANNELCONFIG                  STD_OFF
 #define ETHSM_ISDEF_CONFIRMATIONTIMEOUTOFCHANNELCONFIG                STD_ON
-#define ETHSM_ISDEF_ETHIFCONTROLLEROFCHANNELCONFIG                    STD_ON
+#define ETHSM_ISDEF_ETHIFCONTROLLEROFCHANNELCONFIG                    STD_OFF
 #define ETHSM_ISDEF_MAXRETRIESOFCHANNELCONFIG                         STD_ON
 #define ETHSM_ISDEF_STACKTYPEOFCHANNELCONFIG                          STD_ON
-#define ETHSM_ISDEF_NETIDXBYCOMMNETWHND                               STD_ON
-#define ETHSM_ISDEF_NETIDXBYETHIFCTRLIDX                              STD_ON
+#define ETHSM_ISDEF_NETIDXBYCOMMNETWHND                               STD_OFF
+#define ETHSM_ISDEF_NETIDXBYETHIFCTRLIDX                              STD_OFF
 #define ETHSM_ISDEF_ACTIVEIPVXCNTOFPCCONFIG                           STD_ON
 #define ETHSM_ISDEF_CHANNELCONFIGOFPCCONFIG                           STD_ON
 #define ETHSM_ISDEF_INITIALIZEDOFPCCONFIG                             STD_ON
@@ -263,13 +263,13 @@
   \brief  If all values in a CONST array or an element in a CONST array of structs are equal, the define contains the always equals value.
   \{
 */ 
-#define ETHSM_EQ2_COMMNETWORKHANDLEOFCHANNELCONFIG                    ComMConf_ComMChannel_ComMChannel_Vlan10
+#define ETHSM_EQ2_COMMNETWORKHANDLEOFCHANNELCONFIG                    
 #define ETHSM_EQ2_CONFIRMATIONTIMEOUTOFCHANNELCONFIG                  20u
-#define ETHSM_EQ2_ETHIFCONTROLLEROFCHANNELCONFIG                      ((EthSM_EthIfControllerOfChannelConfigType)EthIfConf_EthIfController_EthIfController_Untagged)
+#define ETHSM_EQ2_ETHIFCONTROLLEROFCHANNELCONFIG                      
 #define ETHSM_EQ2_MAXRETRIESOFCHANNELCONFIG                           0u
 #define ETHSM_EQ2_STACKTYPEOFCHANNELCONFIG                            ETHSM_STACK_TYPE_TCPIP
-#define ETHSM_EQ2_NETIDXBYCOMMNETWHND                                 0u
-#define ETHSM_EQ2_NETIDXBYETHIFCTRLIDX                                0u
+#define ETHSM_EQ2_NETIDXBYCOMMNETWHND                                 
+#define ETHSM_EQ2_NETIDXBYETHIFCTRLIDX                                
 #define ETHSM_EQ2_ACTIVEIPVXCNTOFPCCONFIG                             EthSM_ActiveIpVxCnt.raw
 #define ETHSM_EQ2_CHANNELCONFIGOFPCCONFIG                             EthSM_ChannelConfig
 #define ETHSM_EQ2_INITIALIZEDOFPCCONFIG                               (&(EthSM_Initialized))
@@ -349,9 +349,9 @@
 #define EthSM_GetNetIdxByComMNetwHndOfPCConfig()                      EthSM_NetIdxByComMNetwHnd  /**< the pointer to EthSM_NetIdxByComMNetwHnd */
 #define EthSM_GetNetIdxByEthIfCtrlIdxOfPCConfig()                     EthSM_NetIdxByEthIfCtrlIdx  /**< the pointer to EthSM_NetIdxByEthIfCtrlIdx */
 #define EthSM_GetRequestedModeOfPCConfig()                            EthSM_RequestedMode.raw  /**< the pointer to EthSM_RequestedMode */
-#define EthSM_GetSizeOfChannelConfigOfPCConfig()                      1u  /**< the number of accomplishable value elements in EthSM_ChannelConfig */
-#define EthSM_GetSizeOfNetIdxByComMNetwHndOfPCConfig()                1u  /**< the number of accomplishable value elements in EthSM_NetIdxByComMNetwHnd */
-#define EthSM_GetSizeOfNetIdxByEthIfCtrlIdxOfPCConfig()               1u  /**< the number of accomplishable value elements in EthSM_NetIdxByEthIfCtrlIdx */
+#define EthSM_GetSizeOfChannelConfigOfPCConfig()                      2u  /**< the number of accomplishable value elements in EthSM_ChannelConfig */
+#define EthSM_GetSizeOfNetIdxByComMNetwHndOfPCConfig()                2u  /**< the number of accomplishable value elements in EthSM_NetIdxByComMNetwHnd */
+#define EthSM_GetSizeOfNetIdxByEthIfCtrlIdxOfPCConfig()               2u  /**< the number of accomplishable value elements in EthSM_NetIdxByEthIfCtrlIdx */
 #define EthSM_GetStateOfPCConfig()                                    EthSM_State.raw  /**< the pointer to EthSM_State */
 #define EthSM_GetTcpIpStateOfPCConfig()                               EthSM_TcpIpState.raw  /**< the pointer to EthSM_TcpIpState */
 #define EthSM_GetTrcvLinkStateOfPCConfig()                            EthSM_TrcvLinkState.raw  /**< the pointer to EthSM_TrcvLinkState */
@@ -397,13 +397,13 @@
   \brief  These macros can be used to read deduplicated data elements.
   \{
 */ 
-#define EthSM_GetComMNetworkHandleOfChannelConfig(Index)              ComMConf_ComMChannel_ComMChannel_Vlan10
+#define EthSM_GetComMNetworkHandleOfChannelConfig(Index)              ((EthSM_ComMNetworkHandleOfChannelConfigType)((Index)))
 #define EthSM_GetConfirmationTimeoutOfChannelConfig(Index)            20u
-#define EthSM_GetEthIfControllerOfChannelConfig(Index)                ((EthSM_EthIfControllerOfChannelConfigType)EthIfConf_EthIfController_EthIfController_Untagged)
+#define EthSM_GetEthIfControllerOfChannelConfig(Index)                ((EthSM_EthIfControllerOfChannelConfigType)((Index)))
 #define EthSM_GetMaxRetriesOfChannelConfig(Index)                     0u
 #define EthSM_GetStackTypeOfChannelConfig(Index)                      ETHSM_STACK_TYPE_TCPIP
-#define EthSM_GetNetIdxByComMNetwHnd(Index)                           0u
-#define EthSM_GetNetIdxByEthIfCtrlIdx(Index)                          0u
+#define EthSM_GetNetIdxByComMNetwHnd(Index)                           ((EthSM_NetIdxByComMNetwHndType)((Index)))
+#define EthSM_GetNetIdxByEthIfCtrlIdx(Index)                          ((EthSM_NetIdxByEthIfCtrlIdxType)((Index)))
 #define EthSM_GetSizeOfActiveIpVxCnt()                                EthSM_GetSizeOfActiveIpVxCntOfPCConfig()
 #define EthSM_GetSizeOfChannelConfig()                                EthSM_GetSizeOfChannelConfigOfPCConfig()
 #define EthSM_GetSizeOfLastReportedState()                            EthSM_GetSizeOfLastReportedStateOfPCConfig()
@@ -702,42 +702,49 @@ typedef struct sEthSM_ChannelConfigType
 typedef struct EthSM_ActiveIpVxCntStructSTag
 {
   EthSM_ActiveIpVxCntType EthSMNetwork_Vlan10;
+  EthSM_ActiveIpVxCntType EthSMNetwork_Vlan23;
 } EthSM_ActiveIpVxCntStructSType;
 
 /**   \brief  type to be used as symbolic data element access to EthSM_LastReportedState */
 typedef struct EthSM_LastReportedStateStructSTag
 {
   EthSM_LastReportedStateType EthSMNetwork_Vlan10;
+  EthSM_LastReportedStateType EthSMNetwork_Vlan23;
 } EthSM_LastReportedStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to EthSM_Mode */
 typedef struct EthSM_ModeStructSTag
 {
   EthSM_ModeType EthSMNetwork_Vlan10;
+  EthSM_ModeType EthSMNetwork_Vlan23;
 } EthSM_ModeStructSType;
 
 /**   \brief  type to be used as symbolic data element access to EthSM_RequestedMode */
 typedef struct EthSM_RequestedModeStructSTag
 {
   EthSM_RequestedModeType EthSMNetwork_Vlan10;
+  EthSM_RequestedModeType EthSMNetwork_Vlan23;
 } EthSM_RequestedModeStructSType;
 
 /**   \brief  type to be used as symbolic data element access to EthSM_State */
 typedef struct EthSM_StateStructSTag
 {
   EthSM_StateType EthSMNetwork_Vlan10;
+  EthSM_StateType EthSMNetwork_Vlan23;
 } EthSM_StateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to EthSM_TcpIpState */
 typedef struct EthSM_TcpIpStateStructSTag
 {
   EthSM_TcpIpStateType EthSMNetwork_Vlan10;
+  EthSM_TcpIpStateType EthSMNetwork_Vlan23;
 } EthSM_TcpIpStateStructSType;
 
 /**   \brief  type to be used as symbolic data element access to EthSM_TrcvLinkState */
 typedef struct EthSM_TrcvLinkStateStructSTag
 {
   EthSM_TrcvLinkStateType EthSMNetwork_Vlan10;
+  EthSM_TrcvLinkStateType EthSMNetwork_Vlan23;
 } EthSM_TrcvLinkStateStructSType;
 
 /** 
@@ -752,49 +759,49 @@ typedef struct EthSM_TrcvLinkStateStructSTag
 /**   \brief  type to access EthSM_ActiveIpVxCnt in an index and symbol based style. */
 typedef union EthSM_ActiveIpVxCntUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  EthSM_ActiveIpVxCntType raw[1];
+  EthSM_ActiveIpVxCntType raw[2];
   EthSM_ActiveIpVxCntStructSType str;
 } EthSM_ActiveIpVxCntUType;
 
 /**   \brief  type to access EthSM_LastReportedState in an index and symbol based style. */
 typedef union EthSM_LastReportedStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  EthSM_LastReportedStateType raw[1];
+  EthSM_LastReportedStateType raw[2];
   EthSM_LastReportedStateStructSType str;
 } EthSM_LastReportedStateUType;
 
 /**   \brief  type to access EthSM_Mode in an index and symbol based style. */
 typedef union EthSM_ModeUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  EthSM_ModeType raw[1];
+  EthSM_ModeType raw[2];
   EthSM_ModeStructSType str;
 } EthSM_ModeUType;
 
 /**   \brief  type to access EthSM_RequestedMode in an index and symbol based style. */
 typedef union EthSM_RequestedModeUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  EthSM_RequestedModeType raw[1];
+  EthSM_RequestedModeType raw[2];
   EthSM_RequestedModeStructSType str;
 } EthSM_RequestedModeUType;
 
 /**   \brief  type to access EthSM_State in an index and symbol based style. */
 typedef union EthSM_StateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  EthSM_StateType raw[1];
+  EthSM_StateType raw[2];
   EthSM_StateStructSType str;
 } EthSM_StateUType;
 
 /**   \brief  type to access EthSM_TcpIpState in an index and symbol based style. */
 typedef union EthSM_TcpIpStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  EthSM_TcpIpStateType raw[1];
+  EthSM_TcpIpStateType raw[2];
   EthSM_TcpIpStateStructSType str;
 } EthSM_TcpIpStateUType;
 
 /**   \brief  type to access EthSM_TrcvLinkState in an index and symbol based style. */
 typedef union EthSM_TrcvLinkStateUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  EthSM_TrcvLinkStateType raw[1];
+  EthSM_TrcvLinkStateType raw[2];
   EthSM_TrcvLinkStateStructSType str;
 } EthSM_TrcvLinkStateUType;
 

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: SoAd_Lcfg.c
- *   Generation Time: 2026-01-18 22:49:54
+ *   Generation Time: 2026-01-25 10:33:47
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -37,6 +37,8 @@
 #include "SoAd.h"
 #include "TcpIp.h"
 #include "UdpNm_Cbk.h" 
+#include "Sd_Cbk.h" 
+#include "PduR_SoAd.h" 
 
 
 /**********************************************************************************************************************
@@ -80,8 +82,8 @@
 /*lint -restore */
 CONST(SoAd_EventQueueType, SOAD_CONST) SoAd_EventQueue[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Limit  BitPattern                                           Referable Keys */
-  { /*     0 */    2u, SOAD_EVENT_QUEUE_BIT_PATTERN_STATE_SO_CON     },  /* [SoAdEventQueueStateSoCon] */
-  { /*     1 */    1u, SOAD_EVENT_QUEUE_BIT_PATTERN_IF_UDP_PDU_ROUTE }   /* [SoAdEventQueueIfUdpPduRoute] */
+  { /*     0 */   10u, SOAD_EVENT_QUEUE_BIT_PATTERN_STATE_SO_CON     },  /* [SoAdEventQueueStateSoCon] */
+  { /*     1 */    4u, SOAD_EVENT_QUEUE_BIT_PATTERN_IF_UDP_PDU_ROUTE }   /* [SoAdEventQueueIfUdpPduRoute] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -137,11 +139,15 @@ CONST(SoAd_EventQueueIdentType, SOAD_CONST) SoAd_EventQueueIdent[1] = {  /* PRQA
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_LocalAddrType, SOAD_CONST) SoAd_LocalAddr[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_LocalAddrType, SOAD_CONST) SoAd_LocalAddr[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TcpIpCtrlIdx  AddressType                  AssignTrigger                  Domain        AssignType                     AddrId                                                                          Referable Keys */
   { /*     0 */           0u, SOAD_ADDRESS_TYPE_UNICAST  , SOAD_ASSIGN_TRIGGER_AUTOMATIC, SOAD_AF_INET, SOAD_IPADDR_ASSIGNMENT_STATIC, TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Fixed_10_10_0_33              },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_10_0_33, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10] */
   { /*     1 */           0u, SOAD_ADDRESS_TYPE_MULTICAST, SOAD_ASSIGN_TRIGGER_AUTOMATIC, SOAD_AF_INET, SOAD_IPADDR_ASSIGNMENT_STATIC, TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_10_0_1 },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_10_0_1] */
-  { /*     2 */           0u, SOAD_ADDRESS_TYPE_MULTICAST, SOAD_ASSIGN_TRIGGER_AUTOMATIC, SOAD_AF_INET, SOAD_IPADDR_ASSIGNMENT_STATIC, TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_TcpIpCtrl_Vlan10_Broadcast       }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_TcpIpCtrl_Vlan10_Broadcast] */
+  { /*     2 */           0u, SOAD_ADDRESS_TYPE_MULTICAST, SOAD_ASSIGN_TRIGGER_AUTOMATIC, SOAD_AF_INET, SOAD_IPADDR_ASSIGNMENT_STATIC, TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_TcpIpCtrl_Vlan10_Broadcast       },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_TcpIpCtrl_Vlan10_Broadcast] */
+  { /*     3 */           1u, SOAD_ADDRESS_TYPE_UNICAST  , SOAD_ASSIGN_TRIGGER_AUTOMATIC, SOAD_AF_INET, SOAD_IPADDR_ASSIGNMENT_STATIC, TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Fixed_10_23_0_33              },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan23] */
+  { /*     4 */           1u, SOAD_ADDRESS_TYPE_MULTICAST, SOAD_ASSIGN_TRIGGER_AUTOMATIC, SOAD_AF_INET, SOAD_IPADDR_ASSIGNMENT_STATIC, TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_23_0_2 },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_23_0_2] */
+  { /*     5 */           1u, SOAD_ADDRESS_TYPE_MULTICAST, SOAD_ASSIGN_TRIGGER_MANUAL   , SOAD_AF_INET, SOAD_IPADDR_ASSIGNMENT_STATIC, TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_Multicast_Any_vlan23             },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_Multicast_Any_vlan23] */
+  { /*     6 */           1u, SOAD_ADDRESS_TYPE_MULTICAST, SOAD_ASSIGN_TRIGGER_AUTOMATIC, SOAD_AF_INET, SOAD_IPADDR_ASSIGNMENT_STATIC, TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_TcpIpCtrl_Vlan23_Broadcast       }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_TcpIpCtrl_Vlan23_Broadcast] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -159,9 +165,10 @@ CONST(SoAd_LocalAddrType, SOAD_CONST) SoAd_LocalAddr[3] = {  /* PRQA S 1514, 153
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_LocalAddrByTcpIpCtrlIndType, SOAD_CONST) SoAd_LocalAddrByTcpIpCtrlInd[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_LocalAddrByTcpIpCtrlIndType, SOAD_CONST) SoAd_LocalAddrByTcpIpCtrlInd[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     LocalAddrByTcpIpCtrlInd      Referable Keys */
-  /*     0 */                       0u   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10] */
+  /*     0 */                       0u,  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10] */
+  /*     1 */                       3u   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan23] */
 };
 #define SOAD_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -183,11 +190,90 @@ CONST(SoAd_LocalAddrByTcpIpCtrlIndType, SOAD_CONST) SoAd_LocalAddrByTcpIpCtrlInd
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_LocalAddrIdMapType, SOAD_CONST) SoAd_LocalAddrIdMap[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_LocalAddrIdMapType, SOAD_CONST) SoAd_LocalAddrIdMap[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InvalidHnd  LocalAddrIdx        Referable Keys */
   { /*     0 */      FALSE,           0u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_10_0_33] */
   { /*     1 */      FALSE,           1u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_10_0_1] */
-  { /*     2 */      FALSE,           2u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_TcpIpCtrl_Vlan10_Broadcast] */
+  { /*     2 */      FALSE,           2u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_TcpIpCtrl_Vlan10_Broadcast] */
+  { /*     3 */      FALSE,           3u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
+  { /*     4 */      FALSE,           4u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_23_0_2] */
+  { /*     5 */      FALSE,           5u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_Multicast_Any_vlan23] */
+  { /*     6 */      FALSE,           6u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_TcpIpCtrl_Vlan23_Broadcast] */
+};
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_LocalIpAddrAssignmentChgCbk
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_LocalIpAddrAssignmentChgCbk
+  \brief  the callback Up_LocalIpAddrAssignmentChg
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_LocalIpAddrAssignmentChgCbkType, SOAD_CONST) SoAd_LocalIpAddrAssignmentChgCbk[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     LocalIpAddrAssignmentChgCbk      Referable Keys */
+  /*     0 */ Sd_LocalIpAddrAssignmentChg    /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001] */
+};
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_LocalIpAddrAssignmentChgCbkInd
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_LocalIpAddrAssignmentChgCbkInd
+  \brief  the indexes of the 1:1 sorted relation pointing to SoAd_LocalIpAddrAssignmentChgCbk
+*/ 
+#define SOAD_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_LocalIpAddrAssignmentChgCbkIndType, SOAD_CONST) SoAd_LocalIpAddrAssignmentChgCbkInd[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     LocalIpAddrAssignmentChgCbkInd      Referable Keys */
+  /*     0 */                              0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     1 */                              0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     2 */                              0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     3 */                              0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  /*     4 */                              0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001] */
+  /*     5 */                              0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  /*     6 */                              0u   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+};
+#define SOAD_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_NPduUdpTx
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_NPduUdpTx
+  \brief  the nPdu configurations
+  \details
+  Element                    Description
+  NPduUdpTxBufferEndIdx      the end index of the 0:n relation pointing to SoAd_NPduUdpTxBuffer
+  NPduUdpTxBufferStartIdx    the start index of the 0:n relation pointing to SoAd_NPduUdpTxBuffer
+  NPduUdpTxQueueEndIdx       the end index of the 0:n relation pointing to SoAd_NPduUdpTxQueue
+  NPduUdpTxQueueStartIdx     the start index of the 0:n relation pointing to SoAd_NPduUdpTxQueue
+  SoConIdx                   the index of the 1:1 relation pointing to SoAd_SoCon
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_NPduUdpTxType, SOAD_CONST) SoAd_NPduUdpTx[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    NPduUdpTxBufferEndIdx  NPduUdpTxBufferStartIdx  NPduUdpTxQueueEndIdx                     NPduUdpTxQueueStartIdx                     SoConIdx        Referable Keys */
+  { /*     0 */                 1472u,                      0u, SOAD_NO_NPDUUDPTXQUEUEENDIDXOFNPDUUDPTX, SOAD_NO_NPDUUDPTXQUEUESTARTIDXOFNPDUUDPTX,       2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*     1 */                 2944u,                   1472u, SOAD_NO_NPDUUDPTXQUEUEENDIDXOFNPDUUDPTX, SOAD_NO_NPDUUDPTXQUEUESTARTIDXOFNPDUUDPTX,       3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*     2 */                 4416u,                   2944u, SOAD_NO_NPDUUDPTXQUEUEENDIDXOFNPDUUDPTX, SOAD_NO_NPDUUDPTXQUEUESTARTIDXOFNPDUUDPTX,       4u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -217,9 +303,13 @@ CONST(SoAd_LocalAddrIdMapType, SOAD_CONST) SoAd_LocalAddrIdMap[3] = {  /* PRQA S
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_PduRouteType, SOAD_CONST) SoAd_PduRoute[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    TxConfPduId                      AllPduRouteDestWithPduHdr  MetaDataTxEnabled  TxConfEnabled  TxOptimized  PduRouteDestEndIdx  PduRouteDestStartIdx  UpperLayerIdx  IfTriggerTransmitMode               UpperLayerApi         Referable Keys */
-  { /*     0 */ UdpNmConf_UdpNmTxPdu_UdpNmTxPdu,                     FALSE,             FALSE,          TRUE,       FALSE,                 1u,                   0u,            0u, SOAD_IF_TRIGGER_TRANSMIT_MODE_NONE, SOAD_UL_API_IF }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_NM_Tx] */
+CONST(SoAd_PduRouteType, SOAD_CONST) SoAd_PduRoute[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TxConfPduId                                   AllPduRouteDestWithPduHdr  MetaDataTxEnabled  TxConfEnabled  TxOptimized  PduRouteDestEndIdx  PduRouteDestStartIdx  UpperLayerIdx  IfTriggerTransmitMode               UpperLayerApi         Referable Keys */
+  { /*     0 */ 0u                                          ,                      TRUE,             FALSE,         FALSE,       FALSE,                 1u,                   0u,            2u, SOAD_IF_TRIGGER_TRANSMIT_MODE_NONE, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_EcuStateTx] */
+  { /*     1 */ PduRConf_PduRDestPdu_PduRDestPdu_FalutInfoTx,                      TRUE,             FALSE,          TRUE,       FALSE,                 4u,                   1u,            2u, SOAD_IF_TRIGGER_TRANSMIT_MODE_NONE, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx] */
+  { /*     2 */ UdpNmConf_UdpNmTxPdu_UdpNmTxPdu             ,                     FALSE,             FALSE,          TRUE,       FALSE,                 5u,                   4u,            0u, SOAD_IF_TRIGGER_TRANSMIT_MODE_NONE, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_NM_Tx] */
+  { /*     3 */ 0u                                          ,                      TRUE,             FALSE,         FALSE,       FALSE,                 6u,                   5u,            1u, SOAD_IF_TRIGGER_TRANSMIT_MODE_NONE, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SD_Ctrl_Tx] */
+  { /*     4 */ PduRConf_PduRDestPdu_PduRDestPdu_SenStateTx ,                      TRUE,             FALSE,          TRUE,       FALSE,                 9u,                   6u,            2u, SOAD_IF_TRIGGER_TRANSMIT_MODE_NONE, SOAD_UL_API_IF }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -234,11 +324,11 @@ CONST(SoAd_PduRouteType, SOAD_CONST) SoAd_PduRoute[1] = {  /* PRQA S 1514, 1533 
   \brief  the PduRouteDests configuraion
   \details
   Element                                   Description
+  TxPduHdrId                                the PDU header ID
   PduRouteIdx                               the index of the 1:1 relation pointing to SoAd_PduRoute
   RouteGrpSoConByPduRouteDestIndEndIdx      the end index of the 0:n relation pointing to SoAd_RouteGrpSoConByPduRouteDestInd
   RouteGrpSoConByPduRouteDestIndStartIdx    the start index of the 0:n relation pointing to SoAd_RouteGrpSoConByPduRouteDestInd
   SoConIdx                                  the index of the 1:1 relation pointing to SoAd_SoCon
-  TxPduHdrId                                the PDU header ID
   UdpTriggerTimeout                         the PduRouteDest specific timeout to send a nPdu
   TxUdpTriggerMode                          indicates if nPdu shall be sent on transmission request always or never
 */ 
@@ -246,9 +336,17 @@ CONST(SoAd_PduRouteType, SOAD_CONST) SoAd_PduRoute[1] = {  /* PRQA S 1514, 1533 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_PduRouteDestType, SOAD_CONST) SoAd_PduRouteDest[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    PduRouteIdx  RouteGrpSoConByPduRouteDestIndEndIdx                        RouteGrpSoConByPduRouteDestIndStartIdx                        SoConIdx  TxPduHdrId                        UdpTriggerTimeout  TxUdpTriggerMode                Referable Keys */
-  { /*     0 */          0u, SOAD_NO_ROUTEGRPSOCONBYPDUROUTEDESTINDENDIDXOFPDUROUTEDEST, SOAD_NO_ROUTEGRPSOCONBYPDUROUTEDESTINDSTARTIDXOFPDUROUTEDEST,       0u, SOAD_NO_TXPDUHDRIDOFPDUROUTEDEST,                0u, SOAD_TX_UDP_TRIGGER_NONE }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_NM_Tx, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
+CONST(SoAd_PduRouteDestType, SOAD_CONST) SoAd_PduRouteDest[9] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TxPduHdrId                        PduRouteIdx  RouteGrpSoConByPduRouteDestIndEndIdx                        RouteGrpSoConByPduRouteDestIndStartIdx                        SoConIdx  UdpTriggerTimeout  TxUdpTriggerMode                 Referable Keys */
+  { /*     0 */                      0xC3C28001u,          0u,                                                         1u,                                                           0u,       8u,                0u, SOAD_TX_UDP_TRIGGER_NONE  },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_EcuStateTx, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_EcuState_AC] */
+  { /*     1 */                      0xC3C18001u,          1u,                                                         3u,                                                           1u,       2u,                2u, SOAD_TX_UDP_TRIGGER_NEVER },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC] */
+  { /*     2 */                      0xC3C18001u,          1u,                                                         5u,                                                           3u,       3u,                2u, SOAD_TX_UDP_TRIGGER_NEVER },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC] */
+  { /*     3 */                      0xC3C18001u,          1u,                                                         7u,                                                           5u,       4u,                2u, SOAD_TX_UDP_TRIGGER_NEVER },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC] */
+  { /*     4 */ SOAD_NO_TXPDUHDRIDOFPDUROUTEDEST,          2u, SOAD_NO_ROUTEGRPSOCONBYPDUROUTEDESTINDENDIDXOFPDUROUTEDEST, SOAD_NO_ROUTEGRPSOCONBYPDUROUTEDESTINDSTARTIDXOFPDUROUTEDEST,       0u,                0u, SOAD_TX_UDP_TRIGGER_NONE  },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_NM_Tx, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
+  { /*     5 */                      0xFFFF8100u,          3u, SOAD_NO_ROUTEGRPSOCONBYPDUROUTEDESTINDENDIDXOFPDUROUTEDEST, SOAD_NO_ROUTEGRPSOCONBYPDUROUTEDESTINDSTARTIDXOFPDUROUTEDEST,       5u,                0u, SOAD_TX_UDP_TRIGGER_NONE  },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SD_Ctrl_Tx, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  { /*     6 */                      0xC3C18001u,          4u,                                                         9u,                                                           7u,       2u,                2u, SOAD_TX_UDP_TRIGGER_NEVER },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC] */
+  { /*     7 */                      0xC3C18001u,          4u,                                                        11u,                                                           9u,       3u,                2u, SOAD_TX_UDP_TRIGGER_NEVER },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC] */
+  { /*     8 */                      0xC3C18001u,          4u,                                                        13u,                                                          11u,       4u,                2u, SOAD_TX_UDP_TRIGGER_NEVER }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -266,9 +364,49 @@ CONST(SoAd_PduRouteDestType, SOAD_CONST) SoAd_PduRouteDest[1] = {  /* PRQA S 151
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_PduRouteDestBySoConIndType, SOAD_CONST) SoAd_PduRouteDestBySoConInd[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_PduRouteDestBySoConIndType, SOAD_CONST) SoAd_PduRouteDestBySoConInd[9] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     PduRouteDestBySoConInd      Referable Keys */
-  /*     0 */                      0u   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
+  /*     0 */                      4u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
+  /*     1 */                      1u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     2 */                      6u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     3 */                      2u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     4 */                      7u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     5 */                      3u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     6 */                      8u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     7 */                      5u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  /*     8 */                      0u   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+};
+#define SOAD_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_PduRouteDestInd
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_PduRouteDestInd
+  \brief  the indexes of the 1:1 sorted relation pointing to SoAd_PduRouteDest
+*/ 
+#define SOAD_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_PduRouteDestIndType, SOAD_CONST) SoAd_PduRouteDestInd[13] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     PduRouteDestInd      Referable Keys */
+  /*     0 */               0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_EcuState_AC] */
+  /*     1 */               1u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC] */
+  /*     2 */               2u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC] */
+  /*     3 */               3u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC] */
+  /*     4 */               1u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM] */
+  /*     5 */               2u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM] */
+  /*     6 */               3u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM] */
+  /*     7 */               6u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC] */
+  /*     8 */               7u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC] */
+  /*     9 */               8u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC] */
+  /*    10 */               6u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM] */
+  /*    11 */               7u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM] */
+  /*    12 */               8u   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM] */
 };
 #define SOAD_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -290,10 +428,234 @@ CONST(SoAd_PduRouteDestBySoConIndType, SOAD_CONST) SoAd_PduRouteDestBySoConInd[1
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_RemAddrIpV4Type, SOAD_CONST) SoAd_RemAddrIpV4[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_RemAddrIpV4Type, SOAD_CONST) SoAd_RemAddrIpV4[10] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Addr                                            Port           Referable Keys */
-  { /*     0 */ 0x01000AEFuL /*  239.10.0.1 LITTLE_ENDIAN  */ , 0x3075U },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
-  { /*     1 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */    , 0x0000U }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote] */
+  { /*     0 */ 0x01000AEFuL /*  239.10.0.1 LITTLE_ENDIAN  */ , 0x3075U },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
+  { /*     1 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */    , 0x0000U },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote] */
+  { /*     2 */ 0x010017EFuL /*  239.23.0.1 LITTLE_ENDIAN  */ , 0x409CU },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*     3 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */    , 0x0000U },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*     4 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */    , 0x0000U },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*     5 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */    , 0x0000U },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  { /*     6 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */    , 0x0000U },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001] */
+  { /*     7 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */    , 0x0000U },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+  { /*     8 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */    , 0x0000U },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  { /*     9 */ 0x00000000uL /*  0.0.0.0 LITTLE_ENDIAN  */    , 0x0000U }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+};
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrp
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrp
+  \brief  the routing group configuration
+  \details
+  Element                    Description
+  EnabledAtInit              indicates if RoutingGroup is initially enabled
+  MultiInstanceOnGrp         indicates if RoutingGroup is used for the multi service instance use case on socket connection groups
+  TxTriggerable              indicates if RoutingGroup can be sent
+  PduRouteDestIndEndIdx      the end index of the 0:n relation pointing to SoAd_PduRouteDestInd
+  PduRouteDestIndStartIdx    the start index of the 0:n relation pointing to SoAd_PduRouteDestInd
+  RouteGrpSoConEndIdx        the end index of the 0:n relation pointing to SoAd_RouteGrpSoCon
+  RouteGrpSoConStartIdx      the start index of the 0:n relation pointing to SoAd_RouteGrpSoCon
+  SocketRouteIndEndIdx       the end index of the 0:n relation pointing to SoAd_SocketRouteInd
+  SocketRouteIndStartIdx     the start index of the 0:n relation pointing to SoAd_SocketRouteInd
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_RouteGrpType, SOAD_CONST) SoAd_RouteGrp[10] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    EnabledAtInit  MultiInstanceOnGrp  TxTriggerable  PduRouteDestIndEndIdx                    PduRouteDestIndStartIdx                    RouteGrpSoConEndIdx  RouteGrpSoConStartIdx  SocketRouteIndEndIdx                    SocketRouteIndStartIdx                          Referable Keys */
+  { /*     0 */         FALSE,              FALSE,         FALSE, SOAD_NO_PDUROUTEDESTINDENDIDXOFROUTEGRP, SOAD_NO_PDUROUTEDESTINDSTARTIDXOFROUTEGRP,                  1u,                    0u,                                     1u,                                       0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleStatus_AC] */
+  { /*     1 */         FALSE,              FALSE,         FALSE,                                      1u,                                        0u,                  2u,                    1u, SOAD_NO_SOCKETROUTEINDENDIDXOFROUTEGRP, SOAD_NO_SOCKETROUTEINDSTARTIDXOFROUTEGRP },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_EcuState_AC] */
+  { /*     2 */         FALSE,              FALSE,         FALSE,                                      4u,                                        1u,                  5u,                    2u, SOAD_NO_SOCKETROUTEINDENDIDXOFROUTEGRP, SOAD_NO_SOCKETROUTEINDSTARTIDXOFROUTEGRP },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC] */
+  { /*     3 */         FALSE,              FALSE,         FALSE,                                      7u,                                        4u,                  8u,                    5u, SOAD_NO_SOCKETROUTEINDENDIDXOFROUTEGRP, SOAD_NO_SOCKETROUTEINDSTARTIDXOFROUTEGRP },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM] */
+  { /*     4 */         FALSE,              FALSE,         FALSE,                                     10u,                                        7u,                 11u,                    8u, SOAD_NO_SOCKETROUTEINDENDIDXOFROUTEGRP, SOAD_NO_SOCKETROUTEINDSTARTIDXOFROUTEGRP },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC] */
+  { /*     5 */         FALSE,              FALSE,         FALSE,                                     13u,                                       10u,                 14u,                   11u, SOAD_NO_SOCKETROUTEINDENDIDXOFROUTEGRP, SOAD_NO_SOCKETROUTEINDSTARTIDXOFROUTEGRP },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM] */
+  { /*     6 */         FALSE,              FALSE,         FALSE, SOAD_NO_PDUROUTEDESTINDENDIDXOFROUTEGRP, SOAD_NO_PDUROUTEDESTINDSTARTIDXOFROUTEGRP,                 17u,                   14u,                                     4u,                                       1u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC] */
+  { /*     7 */         FALSE,              FALSE,         FALSE, SOAD_NO_PDUROUTEDESTINDENDIDXOFROUTEGRP, SOAD_NO_PDUROUTEDESTINDSTARTIDXOFROUTEGRP,                 21u,                   17u,                                     8u,                                       4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM] */
+  { /*     8 */         FALSE,              FALSE,         FALSE, SOAD_NO_PDUROUTEDESTINDENDIDXOFROUTEGRP, SOAD_NO_PDUROUTEDESTINDSTARTIDXOFROUTEGRP,                 24u,                   21u,                                    11u,                                       8u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC] */
+  { /*     9 */         FALSE,              FALSE,         FALSE, SOAD_NO_PDUROUTEDESTINDENDIDXOFROUTEGRP, SOAD_NO_PDUROUTEDESTINDSTARTIDXOFROUTEGRP,                 28u,                   24u,                                    15u,                                      11u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM] */
+};
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrpIdMap
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrpIdMap
+  \brief  the handle ID map for SoAdRoutingGroupId
+  \details
+  Element        Description
+  InvalidHnd     FALSE, if the handle of SoAd_RouteGrpIdMap is valid and can be used in the embedded code for further processing in the embedded code.
+  RouteGrpIdx    the index of the 1:1 relation pointing to SoAd_RouteGrp
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_RouteGrpIdMapType, SOAD_CONST) SoAd_RouteGrpIdMap[10] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    InvalidHnd  RouteGrpIdx        Referable Keys */
+  { /*     0 */      FALSE,          0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleStatus_AC] */
+  { /*     1 */      FALSE,          1u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_EcuState_AC] */
+  { /*     2 */      FALSE,          2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC] */
+  { /*     3 */      FALSE,          3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM] */
+  { /*     4 */      FALSE,          4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC] */
+  { /*     5 */      FALSE,          5u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM] */
+  { /*     6 */      FALSE,          6u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC] */
+  { /*     7 */      FALSE,          7u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM] */
+  { /*     8 */      FALSE,          8u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC] */
+  { /*     9 */      FALSE,          9u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM] */
+};
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrpSoCon
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrpSoCon
+  \brief  the routing groups on the socket connections
+  \details
+  Element        Description
+  RouteGrpIdx    the index of the 1:1 relation pointing to SoAd_RouteGrp
+  SoConIdx       the index of the 1:1 relation pointing to SoAd_SoCon
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_RouteGrpSoConType, SOAD_CONST) SoAd_RouteGrpSoCon[28] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    RouteGrpIdx  SoConIdx        Referable Keys */
+  { /*     0 */          0u,       9u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleStatus_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_TCP_RX_fixed_10_23_0_33_47842/SoAdSocketRouteDest_VechicleStatus>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+  { /*     1 */          1u,       8u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_EcuState_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_EcuStateTx/SoAdPduRouteDest_EcuStateTx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  { /*     2 */          2u,       2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*     3 */          2u,       3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*     4 */          2u,       4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*     5 */          3u,       2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*     6 */          3u,       3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*     7 */          3u,       4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*     8 */          4u,       2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*     9 */          4u,       3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*    10 */          4u,       4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*    11 */          5u,       2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*    12 */          5u,       3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*    13 */          5u,       4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*    14 */          6u,       2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*    15 */          6u,       3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*    16 */          6u,       4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*    17 */          7u,       2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*    18 */          7u,       3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*    19 */          7u,       4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*    20 */          7u,       7u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_1/SoAdSocketRouteDest_VechicleInfo_multi>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+  { /*    21 */          8u,       2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*    22 */          8u,       3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*    23 */          8u,       4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*    24 */          9u,       2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*    25 */          9u,       3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*    26 */          9u,       4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*    27 */          9u,       7u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_0/SoAdSocketRouteDest_VechicleSpeed_Multi>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+};
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrpSoConByPduRouteDestInd
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrpSoConByPduRouteDestInd
+  \brief  the indexes of the 1:1 sorted relation pointing to SoAd_RouteGrpSoCon
+*/ 
+#define SOAD_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_RouteGrpSoConByPduRouteDestIndType, SOAD_CONST) SoAd_RouteGrpSoConByPduRouteDestInd[13] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     RouteGrpSoConByPduRouteDestInd      Referable Keys */
+  /*     0 */                              1u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_EcuStateTx/SoAdPduRouteDest_EcuStateTx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  /*     1 */                              2u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     2 */                              5u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     3 */                              3u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     4 */                              6u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     5 */                              4u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     6 */                              7u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     7 */                              8u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     8 */                             11u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     9 */                              9u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*    10 */                             12u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*    11 */                             10u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*    12 */                             13u   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+};
+#define SOAD_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrpSoConBySocketRouteDestInd
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrpSoConBySocketRouteDestInd
+  \brief  the indexes of the 1:1 sorted relation pointing to SoAd_RouteGrpSoCon
+*/ 
+#define SOAD_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_RouteGrpSoConBySocketRouteDestIndType, SOAD_CONST) SoAd_RouteGrpSoConBySocketRouteDestInd[15] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     RouteGrpSoConBySocketRouteDestInd      Referable Keys */
+  /*     0 */                                21u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     1 */                                24u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     2 */                                14u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     3 */                                17u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     4 */                                22u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     5 */                                25u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     6 */                                15u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     7 */                                18u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     8 */                                23u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     9 */                                26u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*    10 */                                16u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*    11 */                                19u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*    12 */                                27u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_0/SoAdSocketRouteDest_VechicleSpeed_Multi>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+  /*    13 */                                20u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_1/SoAdSocketRouteDest_VechicleInfo_multi>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+  /*    14 */                                 0u   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_TCP_RX_fixed_10_23_0_33_47842/SoAdSocketRouteDest_VechicleStatus>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+};
+#define SOAD_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RxBufferConfig
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RxBufferConfig
+  \brief  the reception buffer configurations
+  \details
+  Element               Description
+  IfRxBufferEndIdx      the end index of the 0:n relation pointing to SoAd_IfRxBuffer
+  IfRxBufferStartIdx    the start index of the 0:n relation pointing to SoAd_IfRxBuffer
+  TpRxBufferEndIdx      the end index of the 0:n relation pointing to SoAd_TpRxBuffer
+  TpRxBufferStartIdx    the start index of the 0:n relation pointing to SoAd_TpRxBuffer
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_RxBufferConfigType, SOAD_CONST) SoAd_RxBufferConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    IfRxBufferEndIdx  IfRxBufferStartIdx  TpRxBufferEndIdx                          TpRxBufferStartIdx                                Referable Keys */
+  { /*     0 */              16u,                 0u, SOAD_NO_TPRXBUFFERENDIDXOFRXBUFFERCONFIG, SOAD_NO_TPRXBUFFERSTARTIDXOFRXBUFFERCONFIG }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -315,9 +677,16 @@ CONST(SoAd_RemAddrIpV4Type, SOAD_CONST) SoAd_RemAddrIpV4[2] = {  /* PRQA S 1514,
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_RxPduIdIdMapType, SOAD_CONST) SoAd_RxPduIdIdMap[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_RxPduIdIdMapType, SOAD_CONST) SoAd_RxPduIdIdMap[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InvalidHnd  SocketRouteDestIdx        Referable Keys */
-  { /*     0 */      FALSE,                 0u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_NM_Rx] */
+  { /*     0 */      FALSE,                 0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_NM_Rx] */
+  { /*     1 */      FALSE,                 7u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_Ctrl_Rx] */
+  { /*     2 */      FALSE,                 8u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_Ctrl_Rx_Multicast] */
+  { /*     3 */      FALSE,                11u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_TCP_RX_fixed_10_23_0_33_47842] */
+  { /*     4 */      FALSE,                 9u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_0] */
+  { /*     5 */      FALSE,                10u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_1] */
+  { /*     6 */      FALSE,                 5u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0] */
+  { /*     7 */      FALSE,                 6u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -363,10 +732,18 @@ CONST(SoAd_RxPduIdIdMapType, SOAD_CONST) SoAd_RxPduIdIdMap[1] = {  /* PRQA S 151
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_SoConType, SOAD_CONST) SoAd_SoCon[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_SoConType, SOAD_CONST) SoAd_SoCon[10] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    IpFragMgtIdx                 LocalIpAddrAssignmentChgCbkIndEndIdx                 LocalIpAddrAssignmentChgCbkIndStartIdx                 NPduUdpTxIdx                 PduRouteDestBySoConIndEndIdx                 PduRouteDestBySoConIndStartIdx                 RcvRemAddrIdx                 RemAddrIpV4Idx  RemAddrIpV6Idx                 RxBufStructMgtIdx                 RxBufStructSegEndIdx                 RxBufStructSegStartIdx                 RxBufferConfigIdx                 RxMgtIdx                 SoConGrpIdx  SoConId  SoConModeChgCbkIndEndIdx                 SoConModeChgCbkIndStartIdx                 SocketIdx  SocketRouteEndIdx                 SocketRouteStartIdx                 TcpTxQueueIdx                 TlsConfigIdx                 TpTxBufferConfigIdx                 TxMgtIdx                 RemAddrState                      Referable Keys */
-  { /*     0 */ SOAD_NO_IPFRAGMGTIDXOFSOCON, SOAD_NO_LOCALIPADDRASSIGNMENTCHGCBKINDENDIDXOFSOCON, SOAD_NO_LOCALIPADDRASSIGNMENTCHGCBKINDSTARTIDXOFSOCON, SOAD_NO_NPDUUDPTXIDXOFSOCON,                                          1u,                                            0u, SOAD_NO_RCVREMADDRIDXOFSOCON,             0u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON, SOAD_NO_RXMGTIDXOFSOCON,          0u,      0u, SOAD_NO_SOCONMODECHGCBKINDENDIDXOFSOCON, SOAD_NO_SOCONMODECHGCBKINDSTARTIDXOFSOCON,        0u, SOAD_NO_SOCKETROUTEENDIDXOFSOCON, SOAD_NO_SOCKETROUTESTARTIDXOFSOCON, SOAD_NO_TCPTXQUEUEIDXOFSOCON, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON,                      0u, SOAD_SOCON_IP_SET_PORT_SET },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000] */
-  { /*     1 */ SOAD_NO_IPFRAGMGTIDXOFSOCON, SOAD_NO_LOCALIPADDRASSIGNMENTCHGCBKINDENDIDXOFSOCON, SOAD_NO_LOCALIPADDRASSIGNMENTCHGCBKINDSTARTIDXOFSOCON, SOAD_NO_NPDUUDPTXIDXOFSOCON, SOAD_NO_PDUROUTEDESTBYSOCONINDENDIDXOFSOCON, SOAD_NO_PDUROUTEDESTBYSOCONINDSTARTIDXOFSOCON, SOAD_NO_RCVREMADDRIDXOFSOCON,             1u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON,                      0u,          1u,      1u, SOAD_NO_SOCONMODECHGCBKINDENDIDXOFSOCON, SOAD_NO_SOCONMODECHGCBKINDSTARTIDXOFSOCON,        1u,                               1u,                                 0u, SOAD_NO_TCPTXQUEUEIDXOFSOCON, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON, SOAD_NO_TXMGTIDXOFSOCON, SOAD_SOCON_IP_ANY_PORT_ANY }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000] */
+  { /*     0 */ SOAD_NO_IPFRAGMGTIDXOFSOCON, SOAD_NO_LOCALIPADDRASSIGNMENTCHGCBKINDENDIDXOFSOCON, SOAD_NO_LOCALIPADDRASSIGNMENTCHGCBKINDSTARTIDXOFSOCON, SOAD_NO_NPDUUDPTXIDXOFSOCON,                                          1u,                                            0u, SOAD_NO_RCVREMADDRIDXOFSOCON,             0u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON, SOAD_NO_RXMGTIDXOFSOCON,          0u,      9u, SOAD_NO_SOCONMODECHGCBKINDENDIDXOFSOCON, SOAD_NO_SOCONMODECHGCBKINDSTARTIDXOFSOCON,        0u, SOAD_NO_SOCKETROUTEENDIDXOFSOCON, SOAD_NO_SOCKETROUTESTARTIDXOFSOCON, SOAD_NO_TCPTXQUEUEIDXOFSOCON, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON,                      0u, SOAD_SOCON_IP_SET_PORT_SET },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000] */
+  { /*     1 */ SOAD_NO_IPFRAGMGTIDXOFSOCON, SOAD_NO_LOCALIPADDRASSIGNMENTCHGCBKINDENDIDXOFSOCON, SOAD_NO_LOCALIPADDRASSIGNMENTCHGCBKINDSTARTIDXOFSOCON, SOAD_NO_NPDUUDPTXIDXOFSOCON, SOAD_NO_PDUROUTEDESTBYSOCONINDENDIDXOFSOCON, SOAD_NO_PDUROUTEDESTBYSOCONINDSTARTIDXOFSOCON, SOAD_NO_RCVREMADDRIDXOFSOCON,             1u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON,                      0u,          1u,      8u, SOAD_NO_SOCONMODECHGCBKINDENDIDXOFSOCON, SOAD_NO_SOCONMODECHGCBKINDSTARTIDXOFSOCON,        1u,                               1u,                                 0u, SOAD_NO_TCPTXQUEUEIDXOFSOCON, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON, SOAD_NO_TXMGTIDXOFSOCON, SOAD_SOCON_IP_ANY_PORT_ANY },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000] */
+  { /*     2 */ SOAD_NO_IPFRAGMGTIDXOFSOCON,                                                  1u,                                                    0u,                          0u,                                          3u,                                            1u, SOAD_NO_RCVREMADDRIDXOFSOCON,             2u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON,                      1u,          2u,      7u,                                      1u,                                        0u,        2u,                               3u,                                 1u, SOAD_NO_TCPTXQUEUEIDXOFSOCON, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON,                      1u, SOAD_SOCON_IP_SET_PORT_SET },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  { /*     3 */ SOAD_NO_IPFRAGMGTIDXOFSOCON,                                                  2u,                                                    1u,                          1u,                                          5u,                                            3u, SOAD_NO_RCVREMADDRIDXOFSOCON,             3u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON,                      2u,          2u,      5u,                                      2u,                                        1u,        2u,                               5u,                                 3u, SOAD_NO_TCPTXQUEUEIDXOFSOCON, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON,                      2u, SOAD_SOCON_IP_ANY_PORT_ANY },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  { /*     4 */ SOAD_NO_IPFRAGMGTIDXOFSOCON,                                                  3u,                                                    2u,                          2u,                                          7u,                                            5u, SOAD_NO_RCVREMADDRIDXOFSOCON,             4u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON,                      3u,          2u,      6u,                                      3u,                                        2u,        2u,                               7u,                                 5u, SOAD_NO_TCPTXQUEUEIDXOFSOCON, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON,                      3u, SOAD_SOCON_IP_ANY_PORT_ANY },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  { /*     5 */ SOAD_NO_IPFRAGMGTIDXOFSOCON,                                                  4u,                                                    3u, SOAD_NO_NPDUUDPTXIDXOFSOCON,                                          8u,                                            7u,                           0u,             5u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON,                      4u,          3u,      1u,                                      4u,                                        3u,        3u,                               8u,                                 7u, SOAD_NO_TCPTXQUEUEIDXOFSOCON, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON,                      4u, SOAD_SOCON_IP_ANY_PORT_ANY },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490] */
+  { /*     6 */ SOAD_NO_IPFRAGMGTIDXOFSOCON,                                                  5u,                                                    4u, SOAD_NO_NPDUUDPTXIDXOFSOCON, SOAD_NO_PDUROUTEDESTBYSOCONINDENDIDXOFSOCON, SOAD_NO_PDUROUTEDESTBYSOCONINDSTARTIDXOFSOCON,                           1u,             6u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON,                      5u,          4u,      0u,                                      5u,                                        4u,        4u,                               9u,                                 8u, SOAD_NO_TCPTXQUEUEIDXOFSOCON, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON, SOAD_NO_TXMGTIDXOFSOCON, SOAD_SOCON_IP_ANY_PORT_ANY },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490] */
+  { /*     7 */ SOAD_NO_IPFRAGMGTIDXOFSOCON, SOAD_NO_LOCALIPADDRASSIGNMENTCHGCBKINDENDIDXOFSOCON, SOAD_NO_LOCALIPADDRASSIGNMENTCHGCBKINDSTARTIDXOFSOCON, SOAD_NO_NPDUUDPTXIDXOFSOCON, SOAD_NO_PDUROUTEDESTBYSOCONINDENDIDXOFSOCON, SOAD_NO_PDUROUTEDESTBYSOCONINDSTARTIDXOFSOCON, SOAD_NO_RCVREMADDRIDXOFSOCON,             7u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON,                      6u,          5u,      4u, SOAD_NO_SOCONMODECHGCBKINDENDIDXOFSOCON, SOAD_NO_SOCONMODECHGCBKINDSTARTIDXOFSOCON,        5u,                              11u,                                 9u, SOAD_NO_TCPTXQUEUEIDXOFSOCON, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON, SOAD_NO_TXMGTIDXOFSOCON, SOAD_SOCON_IP_ANY_PORT_ANY },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000] */
+  { /*     8 */ SOAD_NO_IPFRAGMGTIDXOFSOCON,                                                  6u,                                                    5u, SOAD_NO_NPDUUDPTXIDXOFSOCON,                                          9u,                                            8u, SOAD_NO_RCVREMADDRIDXOFSOCON,             8u, SOAD_NO_REMADDRIPV6IDXOFSOCON, SOAD_NO_RXBUFSTRUCTMGTIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGENDIDXOFSOCON, SOAD_NO_RXBUFSTRUCTSEGSTARTIDXOFSOCON, SOAD_NO_RXBUFFERCONFIGIDXOFSOCON, SOAD_NO_RXMGTIDXOFSOCON,          6u,      2u,                                      6u,                                        5u,        7u, SOAD_NO_SOCKETROUTEENDIDXOFSOCON, SOAD_NO_SOCKETROUTESTARTIDXOFSOCON,                           0u, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON,                      5u, SOAD_SOCON_IP_ANY_PORT_ANY },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843>>DATA] */
+  { /*     9 */ SOAD_NO_IPFRAGMGTIDXOFSOCON,                                                  7u,                                                    6u, SOAD_NO_NPDUUDPTXIDXOFSOCON, SOAD_NO_PDUROUTEDESTBYSOCONINDENDIDXOFSOCON, SOAD_NO_PDUROUTEDESTBYSOCONINDSTARTIDXOFSOCON, SOAD_NO_RCVREMADDRIDXOFSOCON,             9u, SOAD_NO_REMADDRIPV6IDXOFSOCON,                               0u,                                  2u,                                    0u,                               0u,                      7u,          7u,      3u,                                      7u,                                        6u,        8u,                              12u,                                11u,                           1u, SOAD_NO_TLSCONFIGIDXOFSOCON, SOAD_NO_TPTXBUFFERCONFIGIDXOFSOCON, SOAD_NO_TXMGTIDXOFSOCON, SOAD_SOCON_IP_ANY_PORT_ANY }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -400,10 +777,16 @@ CONST(SoAd_SoConType, SOAD_CONST) SoAd_SoCon[2] = {  /* PRQA S 1514, 1533 */  /*
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_SoConGrpType, SOAD_CONST) SoAd_SoConGrp[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    BestMatchWithPduHeaderEnabled  BestMatchWithSockRouteEnabled  MsgAcceptFilterEnabled  PduHdrEnabled  SockAutoSoConSetup  SockAutoSoConSetupKeepOnline  FramePriority                    LocalAddrIdx  SoConEndIdx  SoConStartIdx  SocketIdx  SocketTcpIdx                    SocketUdpIdx  LocalPort        Referable Keys */
-  { /*     0 */                         FALSE,                         FALSE,                   TRUE,         FALSE,               TRUE,                        FALSE, SOAD_NO_FRAMEPRIORITYOFSOCONGRP,           0u,          1u,            0u,        0u, SOAD_NO_SOCKETTCPIDXOFSOCONGRP,           0u, 0x3075U   },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
-  { /*     1 */                         FALSE,                         FALSE,                   TRUE,         FALSE,               TRUE,                        FALSE, SOAD_NO_FRAMEPRIORITYOFSOCONGRP,           1u,          2u,            1u,        1u, SOAD_NO_SOCKETTCPIDXOFSOCONGRP,           1u, 0x3075U   }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote] */
+CONST(SoAd_SoConGrpType, SOAD_CONST) SoAd_SoConGrp[8] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    BestMatchWithPduHeaderEnabled  BestMatchWithSockRouteEnabled  MsgAcceptFilterEnabled  PduHdrEnabled  SockAutoSoConSetup  SockAutoSoConSetupKeepOnline  FramePriority                    LocalAddrIdx  SoConEndIdx  SoConStartIdx  SocketIdx                    SocketTcpIdx                    SocketUdpIdx                    LocalPort        Referable Keys */
+  { /*     0 */                         FALSE,                         FALSE,                   TRUE,         FALSE,               TRUE,                        FALSE, SOAD_NO_FRAMEPRIORITYOFSOCONGRP,           0u,          1u,            0u,                          0u, SOAD_NO_SOCKETTCPIDXOFSOCONGRP,                             0u, 0x3075U   },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
+  { /*     1 */                         FALSE,                         FALSE,                   TRUE,          TRUE,               TRUE,                        FALSE, SOAD_NO_FRAMEPRIORITYOFSOCONGRP,           1u,          2u,            1u,                          1u, SOAD_NO_SOCKETTCPIDXOFSOCONGRP,                             1u, 0x3075U   },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote] */
+  { /*     2 */                         FALSE,                         FALSE,                   TRUE,          TRUE,              FALSE,                        FALSE, SOAD_NO_FRAMEPRIORITYOFSOCONGRP,           3u,          5u,            2u,                          2u, SOAD_NO_SOCKETTCPIDXOFSOCONGRP,                             2u, 0x409CU   },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*     3 */                         FALSE,                         FALSE,                  FALSE,          TRUE,              FALSE,                        FALSE, SOAD_NO_FRAMEPRIORITYOFSOCONGRP,           3u,          6u,            5u,                          3u, SOAD_NO_SOCKETTCPIDXOFSOCONGRP,                             3u, 0x1A77U   },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  { /*     4 */                         FALSE,                         FALSE,                  FALSE,          TRUE,              FALSE,                        FALSE, SOAD_NO_FRAMEPRIORITYOFSOCONGRP,           4u,          7u,            6u,                          4u, SOAD_NO_SOCKETTCPIDXOFSOCONGRP,                             4u, 0x1A77U   },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001] */
+  { /*     5 */                         FALSE,                         FALSE,                   TRUE,         FALSE,              FALSE,                        FALSE, SOAD_NO_FRAMEPRIORITYOFSOCONGRP,           5u,          8u,            7u,                          5u, SOAD_NO_SOCKETTCPIDXOFSOCONGRP,                             5u, 0x409CU   },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+  { /*     6 */                         FALSE,                         FALSE,                   TRUE,          TRUE,              FALSE,                        FALSE, SOAD_NO_FRAMEPRIORITYOFSOCONGRP,           3u,          9u,            8u,                          6u,                             0u, SOAD_NO_SOCKETUDPIDXOFSOCONGRP, 0xE3BAU   },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  { /*     7 */                         FALSE,                         FALSE,                   TRUE,          TRUE,              FALSE,                        FALSE, SOAD_NO_FRAMEPRIORITYOFSOCONGRP,           3u,         10u,            9u, SOAD_NO_SOCKETIDXOFSOCONGRP,                             1u, SOAD_NO_SOCKETUDPIDXOFSOCONGRP, 0xE2BAU   }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -425,12 +808,66 @@ CONST(SoAd_SoConGrpType, SOAD_CONST) SoAd_SoConGrp[2] = {  /* PRQA S 1514, 1533 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_SoConMapType, SOAD_CONST) SoAd_SoConMap[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_SoConMapType, SOAD_CONST) SoAd_SoConMap[10] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InvalidHnd  SoConIdx        Referable Keys */
-  { /*     0 */      FALSE,       0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
-  { /*     1 */      FALSE,       1u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote] */
+  { /*     0 */      FALSE,       6u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001] */
+  { /*     1 */      FALSE,       5u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  { /*     2 */      FALSE,       8u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  { /*     3 */      FALSE,       9u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+  { /*     4 */      FALSE,       7u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+  { /*     5 */      FALSE,       3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*     6 */      FALSE,       4u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*     7 */      FALSE,       2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*     8 */      FALSE,       1u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote] */
+  { /*     9 */      FALSE,       0u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_SoConModeChgCbk
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_SoConModeChgCbk
+  \brief  the callback Up_SoConModeChg
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_SoConModeChgCbkType, SOAD_CONST) SoAd_SoConModeChgCbk[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     SoConModeChgCbk      Referable Keys */
+  /*     0 */ Sd_SoConModeChg    /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001] */
+};
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_SoConModeChgCbkInd
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_SoConModeChgCbkInd
+  \brief  the indexes of the 1:1 sorted relation pointing to SoAd_SoConModeChgCbk
+*/ 
+#define SOAD_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_SoConModeChgCbkIndType, SOAD_CONST) SoAd_SoConModeChgCbkInd[7] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     SoConModeChgCbkInd      Referable Keys */
+  /*     0 */                  0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     1 */                  0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     2 */                  0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     3 */                  0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  /*     4 */                  0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001] */
+  /*     5 */                  0u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  /*     6 */                  0u   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+};
+#define SOAD_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -450,10 +887,17 @@ CONST(SoAd_SoConMapType, SOAD_CONST) SoAd_SoConMap[2] = {  /* PRQA S 1514, 1533 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_SocketType, SOAD_CONST) SoAd_Socket[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_SocketType, SOAD_CONST) SoAd_Socket[9] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    SoConEndIdx  SoConStartIdx        Referable Keys */
-  { /*     0 */          1u,            0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_10_0_33] */
-  { /*     1 */          2u,            1u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_10_0_1] */
+  { /*     0 */          1u,            0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_10_0_33] */
+  { /*     1 */          2u,            1u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_10_0_1] */
+  { /*     2 */          5u,            2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
+  { /*     3 */          6u,            5u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
+  { /*     4 */          7u,            6u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_23_0_2] */
+  { /*     5 */          8u,            7u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_Multicast_Any_vlan23] */
+  { /*     6 */          9u,            8u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
+  { /*     7 */          9u,            8u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843>>DATA, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
+  { /*     8 */         10u,            9u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -468,8 +912,8 @@ CONST(SoAd_SocketType, SOAD_CONST) SoAd_Socket[2] = {  /* PRQA S 1514, 1533 */  
   \brief  the socket route configuration
   \details
   Element                    Description
-  MetaDataRxEnabled          indicates if SoConId is forwarded as meta data on reception
   RxPduHdrId                 the PDU header ID
+  MetaDataRxEnabled          indicates if SoConId is forwarded as meta data on reception
   SoConIdx                   the index of the 1:1 relation pointing to SoAd_SoCon
   SocketRouteDestEndIdx      the end index of the 1:n relation pointing to SoAd_SocketRouteDest
   SocketRouteDestStartIdx    the start index of the 1:n relation pointing to SoAd_SocketRouteDest
@@ -479,9 +923,20 @@ CONST(SoAd_SocketType, SOAD_CONST) SoAd_Socket[2] = {  /* PRQA S 1514, 1533 */  
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_SocketRouteType, SOAD_CONST) SoAd_SocketRoute[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    MetaDataRxEnabled  RxPduHdrId                       SoConIdx  SocketRouteDestEndIdx  SocketRouteDestStartIdx  UpperLayerApi         Referable Keys */
-  { /*     0 */             FALSE, SOAD_NO_RXPDUHDRIDOFSOCKETROUTE,       1u,                    1u,                      0u, SOAD_UL_API_IF }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_NM_Rx] */
+CONST(SoAd_SocketRouteType, SOAD_CONST) SoAd_SocketRoute[12] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    RxPduHdrId                       MetaDataRxEnabled  SoConIdx  SocketRouteDestEndIdx  SocketRouteDestStartIdx  UpperLayerApi         Referable Keys */
+  { /*     0 */                     0x00000000u,             FALSE,       1u,                    1u,                      0u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_NM_Rx] */
+  { /*     1 */                     0xC3CB8001u,             FALSE,       2u,                    2u,                      1u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC] */
+  { /*     2 */                     0xC3CD8001u,             FALSE,       2u,                    3u,                      2u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC] */
+  { /*     3 */                     0xC3CB8001u,             FALSE,       3u,                    4u,                      3u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC] */
+  { /*     4 */                     0xC3CD8001u,             FALSE,       3u,                    5u,                      4u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC] */
+  { /*     5 */                     0xC3CB8001u,             FALSE,       4u,                    6u,                      5u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC] */
+  { /*     6 */                     0xC3CD8001u,             FALSE,       4u,                    7u,                      6u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC] */
+  { /*     7 */                     0xFFFF8100u,             FALSE,       5u,                    8u,                      7u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_Ctrl_Rx] */
+  { /*     8 */                     0xFFFF8100u,             FALSE,       6u,                    9u,                      8u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_Ctrl_Rx_Multicast] */
+  { /*     9 */ SOAD_NO_RXPDUHDRIDOFSOCKETROUTE,             FALSE,       7u,                   10u,                      9u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM] */
+  { /*    10 */ SOAD_NO_RXPDUHDRIDOFSOCKETROUTE,             FALSE,       7u,                   11u,                     10u, SOAD_UL_API_IF },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM] */
+  { /*    11 */                     0xC3CC8001u,             FALSE,       9u,                   12u,                     11u, SOAD_UL_API_IF }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_TCP_RX_fixed_10_23_0_33_47842, /ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleStatus_AC] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -506,9 +961,86 @@ CONST(SoAd_SocketRouteType, SOAD_CONST) SoAd_SocketRoute[1] = {  /* PRQA S 1514,
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_SocketRouteDestType, SOAD_CONST) SoAd_SocketRouteDest[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    RxPduId                          RouteGrpSoConBySocketRouteDestIndEndIdx                           RouteGrpSoConBySocketRouteDestIndStartIdx                           SocketRouteIdx  UpperLayerIdx        Referable Keys */
-  { /*     0 */ UdpNmConf_UdpNmRxPdu_UdpNmRxPdu, SOAD_NO_ROUTEGRPSOCONBYSOCKETROUTEDESTINDENDIDXOFSOCKETROUTEDEST, SOAD_NO_ROUTEGRPSOCONBYSOCKETROUTEDESTINDSTARTIDXOFSOCKETROUTEDEST,             0u,            0u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_NM_Rx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_NM_Rx/SoAdSocketRouteDest>>/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote] */
+CONST(SoAd_SocketRouteDestType, SOAD_CONST) SoAd_SocketRouteDest[12] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    RxPduId                                                   RouteGrpSoConBySocketRouteDestIndEndIdx                           RouteGrpSoConBySocketRouteDestIndStartIdx                           SocketRouteIdx  UpperLayerIdx        Referable Keys */
+  { /*     0 */ UdpNmConf_UdpNmRxPdu_UdpNmRxPdu                         , SOAD_NO_ROUTEGRPSOCONBYSOCKETROUTEDESTINDENDIDXOFSOCKETROUTEDEST, SOAD_NO_ROUTEGRPSOCONBYSOCKETROUTEDESTINDSTARTIDXOFSOCKETROUTEDEST,             0u,            0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_NM_Rx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_NM_Rx/SoAdSocketRouteDest>>/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote] */
+  { /*     1 */ PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleSpeedRx          ,                                                               2u,                                                                 0u,             1u,            2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*     2 */ PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleInfoRx           ,                                                               4u,                                                                 2u,             2u,            2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  { /*     3 */ PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleSpeedRx          ,                                                               6u,                                                                 4u,             1u,            2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*     4 */ PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleInfoRx           ,                                                               8u,                                                                 6u,             2u,            2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  { /*     5 */ PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleSpeedRx          ,                                                              10u,                                                                 8u,             1u,            2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*     6 */ PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleInfoRx           ,                                                              12u,                                                                10u,             2u,            2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  { /*     7 */ SdConf_SdInstanceUnicastRxPdu_SdInstanceUnicastRxPdu    , SOAD_NO_ROUTEGRPSOCONBYSOCKETROUTEDESTINDENDIDXOFSOCKETROUTEDEST, SOAD_NO_ROUTEGRPSOCONBYSOCKETROUTEDESTINDSTARTIDXOFSOCKETROUTEDEST,             7u,            1u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_Ctrl_Rx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_Ctrl_Rx/SoAdSocketRouteDest_002>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  { /*     8 */ SdConf_SdInstanceMulticastRxPdu_SdInstanceMulticastRxPdu, SOAD_NO_ROUTEGRPSOCONBYSOCKETROUTEDESTINDENDIDXOFSOCKETROUTEDEST, SOAD_NO_ROUTEGRPSOCONBYSOCKETROUTEDESTINDSTARTIDXOFSOCKETROUTEDEST,             8u,            1u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_Ctrl_Rx_Multicast>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_Ctrl_Rx_Multicast/SoAdSocketRouteDest_004>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001] */
+  { /*     9 */ PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleSpeedRx          ,                                                              13u,                                                                12u,             9u,            2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_0>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_0/SoAdSocketRouteDest_VechicleSpeed_Multi>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+  { /*    10 */ PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleInfoRx           ,                                                              14u,                                                                13u,            10u,            2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_1>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_1/SoAdSocketRouteDest_VechicleInfo_multi>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+  { /*    11 */ PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleStatusRx         ,                                                              15u,                                                                14u,            11u,            2u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_TCP_RX_fixed_10_23_0_33_47842>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_TCP_RX_fixed_10_23_0_33_47842/SoAdSocketRouteDest_VechicleStatus>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+};
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_SocketRouteInd
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_SocketRouteInd
+  \brief  the indexes of the 1:1 sorted relation pointing to SoAd_SocketRoute
+*/ 
+#define SOAD_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_SocketRouteIndType, SOAD_CONST) SoAd_SocketRouteInd[15] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     SocketRouteInd      Referable Keys */
+  /*     0 */             11u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleStatus_AC] */
+  /*     1 */              2u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC] */
+  /*     2 */              4u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC] */
+  /*     3 */              6u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC] */
+  /*     4 */              2u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM] */
+  /*     5 */              4u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM] */
+  /*     6 */              6u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM] */
+  /*     7 */             10u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM] */
+  /*     8 */              1u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC] */
+  /*     9 */              3u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC] */
+  /*    10 */              5u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC] */
+  /*    11 */              1u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM] */
+  /*    12 */              3u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM] */
+  /*    13 */              5u,  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM] */
+  /*    14 */              9u   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM] */
+};
+#define SOAD_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_SocketTcp
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_SocketTcp
+  \brief  the TCP socket configuration
+  \details
+  Element                  Description
+  TcpRxBufMin              the size of TCP reception buffer
+  TcpTxBufMin              the size of TCP transmission buffer
+  ImmedTpTxConf            indicates if TP immediate TxConfirmation is used
+  TcpInitiate              indicates if TCP connection is initiated by SoAd
+  TcpKeepAlive             indicates if keepalive mechanism is used
+  TcpKeepAliveInterval     the interval time between keepalive probes
+  TcpKeepAliveProbesMax    the maximum number of keepalive probes
+  TcpKeepAliveTime         the time between the last data packet sent and the first keepalive probe
+  TcpNoDelay               indicates not to use the congestion control mechanism
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_SocketTcpType, SOAD_CONST) SoAd_SocketTcp[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TcpRxBufMin  TcpTxBufMin  ImmedTpTxConf  TcpInitiate  TcpKeepAlive  TcpKeepAliveInterval                     TcpKeepAliveProbesMax                     TcpKeepAliveTime                     TcpNoDelay                             Referable Keys */
+  { /*     0 */        512u,        512u,         FALSE,       FALSE,        FALSE, SOAD_NO_TCPKEEPALIVEINTERVALOFSOCKETTCP, SOAD_NO_TCPKEEPALIVEPROBESMAXOFSOCKETTCP, SOAD_NO_TCPKEEPALIVETIMEOFSOCKETTCP, SOAD_TCP_NO_DELAY_NOT_SPECIFIED },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843] */
+  { /*     1 */        512u,        512u,         FALSE,        TRUE,        FALSE, SOAD_NO_TCPKEEPALIVEINTERVALOFSOCKETTCP, SOAD_NO_TCPKEEPALIVEPROBESMAXOFSOCKETTCP, SOAD_NO_TCPKEEPALIVETIMEOFSOCKETTCP, SOAD_TCP_NO_DELAY_NOT_SPECIFIED }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -523,12 +1055,12 @@ CONST(SoAd_SocketRouteDestType, SOAD_CONST) SoAd_SocketRouteDest[1] = {  /* PRQA
   \brief  the UDP socket configuration
   \details
   Element                        Description
+  NPduUdpTxBufferMin         
   ImmedIfTxConf              
   UdpListenOnly              
   UdpStrictHdrLenCheckEnabled
   AliveTimeoutMaxCnt         
   ImmedIfTxConfListSize      
-  NPduUdpTxBufferMin         
   NPduUdpTxQueueSize         
   RetryQueueLimit            
   UdpTriggerTimeout          
@@ -537,10 +1069,14 @@ CONST(SoAd_SocketRouteDestType, SOAD_CONST) SoAd_SocketRouteDest[1] = {  /* PRQA
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_SocketUdpType, SOAD_CONST) SoAd_SocketUdp[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    ImmedIfTxConf  UdpListenOnly  UdpStrictHdrLenCheckEnabled  AliveTimeoutMaxCnt  ImmedIfTxConfListSize  NPduUdpTxBufferMin  NPduUdpTxQueueSize  RetryQueueLimit  UdpTriggerTimeout        Referable Keys */
-  { /*     0 */         FALSE,         FALSE,                       FALSE,                 0u,                    0u,                 0u,                 0u,              2u,                0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000] */
-  { /*     1 */         FALSE,         FALSE,                       FALSE,                 0u,                    0u,                 0u,                 0u,              2u,                0u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000] */
+CONST(SoAd_SocketUdpType, SOAD_CONST) SoAd_SocketUdp[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    NPduUdpTxBufferMin  ImmedIfTxConf  UdpListenOnly  UdpStrictHdrLenCheckEnabled  AliveTimeoutMaxCnt  ImmedIfTxConfListSize  NPduUdpTxQueueSize  RetryQueueLimit  UdpTriggerTimeout        Referable Keys */
+  { /*     0 */                 0u,         FALSE,         FALSE,                       FALSE,                 0u,                    0u,                 0u,              2u,                0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000] */
+  { /*     1 */                 0u,         FALSE,         FALSE,                       FALSE,                 0u,                    0u,                 0u,              2u,                0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000] */
+  { /*     2 */              1472u,         FALSE,         FALSE,                       FALSE,               200u,                    0u,                 0u,              2u,                1u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  { /*     3 */                 0u,         FALSE,         FALSE,                       FALSE,                 0u,                    0u,                 0u,              2u,                0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490] */
+  { /*     4 */                 0u,         FALSE,         FALSE,                       FALSE,                 0u,                    0u,                 0u,              1u,                0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490] */
+  { /*     5 */                 0u,         FALSE,          TRUE,                       FALSE,               200u,                    0u,                 0u,              1u,                0u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -563,9 +1099,10 @@ CONST(SoAd_SocketUdpType, SOAD_CONST) SoAd_SocketUdp[2] = {  /* PRQA S 1514, 153
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_TcpIpCtrlType, SOAD_CONST) SoAd_TcpIpCtrl[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_TcpIpCtrlType, SOAD_CONST) SoAd_TcpIpCtrl[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    RetryEnabled  LocalAddrByTcpIpCtrlIndEndIdx  LocalAddrByTcpIpCtrlIndStartIdx        Referable Keys */
-  { /*     0 */         TRUE,                            1u,                              0u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10] */
+  { /*     0 */         TRUE,                            1u,                              0u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10] */
+  { /*     1 */         TRUE,                            2u,                              1u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan23] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -593,6 +1130,31 @@ CONST(SoAd_TcpKeepAliveGloballyEnabledType, SOAD_CONST) SoAd_TcpKeepAliveGloball
 /*lint -restore */
 
 /**********************************************************************************************************************
+  SoAd_TcpTxQueue
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TcpTxQueue
+  \brief  the Tx TCP queues configuration
+  \details
+  Element                   Description
+  TcpTxQueueDataEndIdx      the end index of the 1:n relation pointing to SoAd_TcpTxQueueData
+  TcpTxQueueDataStartIdx    the start index of the 1:n relation pointing to SoAd_TcpTxQueueData
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(SoAd_TcpTxQueueType, SOAD_CONST) SoAd_TcpTxQueue[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TcpTxQueueDataEndIdx  TcpTxQueueDataStartIdx        Referable Keys */
+  { /*     0 */                   1u,                     0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  { /*     1 */                   2u,                     1u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+};
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   SoAd_TimeoutListIdent
 **********************************************************************************************************************/
 /** 
@@ -608,8 +1170,8 @@ CONST(SoAd_TcpKeepAliveGloballyEnabledType, SOAD_CONST) SoAd_TcpKeepAliveGloball
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(SoAd_TimeoutListIdentType, SOAD_CONST) SoAd_TimeoutListIdent[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    TimeoutListDynNPduUdpTxIdx                            TimeoutListDynUdpAliveIdx                           */
-  { /*     0 */ SOAD_NO_TIMEOUTLISTDYNNPDUUDPTXIDXOFTIMEOUTLISTIDENT, SOAD_NO_TIMEOUTLISTDYNUDPALIVEIDXOFTIMEOUTLISTIDENT }
+    /* Index    TimeoutListDynNPduUdpTxIdx  TimeoutListDynUdpAliveIdx */
+  { /*     0 */                         1u,                        0u }
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -631,9 +1193,13 @@ CONST(SoAd_TimeoutListIdentType, SOAD_CONST) SoAd_TimeoutListIdent[1] = {  /* PR
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_TxPduIdMapType, SOAD_CONST) SoAd_TxPduIdMap[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_TxPduIdMapType, SOAD_CONST) SoAd_TxPduIdMap[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InvalidHnd  PduRouteIdx        Referable Keys */
-  { /*     0 */      FALSE,          0u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_NM_Tx] */
+  { /*     0 */      FALSE,          0u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_EcuStateTx] */
+  { /*     1 */      FALSE,          1u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx] */
+  { /*     2 */      FALSE,          2u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_NM_Tx] */
+  { /*     3 */      FALSE,          3u },  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SD_Ctrl_Tx] */
+  { /*     4 */      FALSE,          4u }   /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -664,9 +1230,11 @@ CONST(SoAd_TxPduIdMapType, SOAD_CONST) SoAd_TxPduIdMap[1] = {  /* PRQA S 1514, 1
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(SoAd_UpperLayerType, SOAD_CONST) SoAd_UpperLayer[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(SoAd_UpperLayerType, SOAD_CONST) SoAd_UpperLayer[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    IfRxIndicationCbk         IfTriggerTransmitCbk  IfTxConfirmationCbk         TpCopyRxDataCbk  TpCopyRxDataConstCbk  TpCopyTxDataCbk  TpCopyTxDataConstCbk  TpRxIndicationCbk  TpStartOfReceptionCbk  TpStartOfReceptionConstCbk  TpTxConfirmationCbk        Referable Keys */
-  { /*     0 */ UdpNm_SoAdIfRxIndication, NULL_PTR            , UdpNm_SoAdIfTxConfirmation, NULL_PTR       , NULL_PTR            , NULL_PTR       , NULL_PTR            , NULL_PTR         , NULL_PTR             , NULL_PTR                  , NULL_PTR            }   /* [/ActiveEcuC/SoAd/UdpNm] */
+  { /*     0 */ UdpNm_SoAdIfRxIndication, NULL_PTR            , UdpNm_SoAdIfTxConfirmation, NULL_PTR       , NULL_PTR            , NULL_PTR       , NULL_PTR            , NULL_PTR         , NULL_PTR             , NULL_PTR                  , NULL_PTR            },  /* [/ActiveEcuC/SoAd/UdpNm] */
+  { /*     1 */ Sd_RxIndication         , NULL_PTR            , NULL_PTR                  , NULL_PTR       , NULL_PTR            , NULL_PTR       , NULL_PTR            , NULL_PTR         , NULL_PTR             , NULL_PTR                  , NULL_PTR            },  /* [/ActiveEcuC/SoAd/Sd] */
+  { /*     2 */ PduR_SoAdIfRxIndication , NULL_PTR            , PduR_SoAdIfTxConfirmation , NULL_PTR       , NULL_PTR            , NULL_PTR       , NULL_PTR            , NULL_PTR         , NULL_PTR             , NULL_PTR                  , NULL_PTR            }   /* [/ActiveEcuC/SoAd/PduR] */
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -687,7 +1255,7 @@ CONST(SoAd_UpperLayerType, SOAD_CONST) SoAd_UpperLayer[1] = {  /* PRQA S 1514, 1
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(SoAd_BestMatchSoConIdxListType, SOAD_VAR_NOINIT) SoAd_BestMatchSoConIdxList[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(SoAd_BestMatchSoConIdxListType, SOAD_VAR_NOINIT) SoAd_BestMatchSoConIdxList[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -729,7 +1297,7 @@ VAR(SoAd_EventQueueDynUType, SOAD_VAR_NOINIT) SoAd_EventQueueDyn;  /* PRQA S 075
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(SoAd_EventQueueFlagType, SOAD_VAR_NOINIT) SoAd_EventQueueFlag[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(SoAd_EventQueueFlagType, SOAD_VAR_NOINIT) SoAd_EventQueueFlag[10];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -752,6 +1320,8 @@ VAR(SoAd_EventQueueFlagType, SOAD_VAR_NOINIT) SoAd_EventQueueFlag[2];  /* PRQA S
 VAR(SoAd_EventQueueIfUdpPduRouteUType, SOAD_VAR_NOINIT) SoAd_EventQueueIfUdpPduRoute;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/SoAd] */
+  /*   ... */  /* [/ActiveEcuC/SoAd] */
+  /*     3 */  /* [/ActiveEcuC/SoAd] */
 
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -775,9 +1345,32 @@ VAR(SoAd_EventQueueIfUdpPduRouteUType, SOAD_VAR_NOINIT) SoAd_EventQueueIfUdpPduR
 VAR(SoAd_EventQueueStateSoConUType, SOAD_VAR_NOINIT) SoAd_EventQueueStateSoCon;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/SoAd] */
-  /*     1 */  /* [/ActiveEcuC/SoAd] */
+  /*   ... */  /* [/ActiveEcuC/SoAd] */
+  /*     9 */  /* [/ActiveEcuC/SoAd] */
 
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_IfRxBuffer
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_IfRxBuffer
+  \brief  the reception buffer for IF-API
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_IfRxBufferUType, SOAD_VAR_NOINIT) SoAd_IfRxBuffer;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+  /*   ... */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+  /*    15 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -795,11 +1388,61 @@ VAR(SoAd_EventQueueStateSoConUType, SOAD_VAR_NOINIT) SoAd_EventQueueStateSoCon; 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(SoAd_LocalAddrDynType, SOAD_VAR_NOINIT) SoAd_LocalAddrDyn[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(SoAd_LocalAddrDynType, SOAD_VAR_NOINIT) SoAd_LocalAddrDyn[7];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_10_0_33, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10] */
   /*     1 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_10_0_1] */
   /*     2 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_TcpIpCtrl_Vlan10_Broadcast] */
+  /*     3 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan23] */
+  /*     4 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_23_0_2] */
+  /*     5 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_Multicast_Any_vlan23] */
+  /*     6 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_TcpIpCtrl_Vlan23_Broadcast] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_NPduUdpTxBuffer
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_NPduUdpTxBuffer
+  \brief  the nPdu buffer
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_NPduUdpTxBufferUType, SOAD_VAR_NOINIT) SoAd_NPduUdpTxBuffer;  /* PRQA S 0759, 1514, 1533, 0612 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_BigStructure */
+#define SOAD_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_NPduUdpTxDyn
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_NPduUdpTxDyn
+  \brief  the management struct for each nPdu
+  \details
+  Element               Description
+  TotalLen              the total length of nPdu
+  BufLen                the total length of PDUs stored in buffer if queue is used
+  RetryCnt              the retry counter for queue retransmission
+  Lvl                   the level of PDUs in nPdu
+  TransmissionActive    indicates if transmission is active
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_NPduUdpTxDynUType, SOAD_VAR_NOINIT) SoAd_NPduUdpTxDyn;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     2 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
 
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -823,7 +1466,157 @@ VAR(SoAd_LocalAddrDynType, SOAD_VAR_NOINIT) SoAd_LocalAddrDyn[3];  /* PRQA S 151
 /*lint -restore */
 VAR(SoAd_PduRouteDynUType, SOAD_VAR_NOINIT) SoAd_PduRouteDyn;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_NM_Tx] */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_EcuStateTx] */
+  /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx] */
+  /*     2 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_NM_Tx] */
+  /*     3 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SD_Ctrl_Tx] */
+  /*     4 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RcvRemAddr
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RcvRemAddr
+  \brief  stores remote address on reception
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_RcvRemAddrUType, SOAD_VAR_NOINIT) SoAd_RcvRemAddr;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrpSoConDyn
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrpSoConDyn
+  \brief  the routing groups on the socket connections management struct
+  \details
+  Element    Description
+  Enabled    the routing group state on the socket connection
+  Sent       the state which indicates if a routing group transmission is done for the socket connection
+  Trigger    the state which indicates if a routing group transmission is triggered for the socket connection
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_RouteGrpSoConDynType, SOAD_VAR_NOINIT) SoAd_RouteGrpSoConDyn[28];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleStatus_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_TCP_RX_fixed_10_23_0_33_47842/SoAdSocketRouteDest_VechicleStatus>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+  /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_EcuState_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_EcuStateTx/SoAdPduRouteDest_EcuStateTx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  /*     2 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     3 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     4 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     5 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     6 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     7 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_FaultInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_FaultInfo_Tx/SoAdPduRouteDest_FaultInfo_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     8 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     9 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*    10 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*    11 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*    12 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*    13 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_SenState_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdPduRoute_SenState_Tx/SoAdPduRouteDest_SenState_Tx>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*    14 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*    15 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*    16 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*    17 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*    18 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*    19 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_1/SoAdSocketRouteDest_VechicleInfo>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*    20 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleInfo_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_1/SoAdSocketRouteDest_VechicleInfo_multi>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+  /*    21 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*    22 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*    23 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AC, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*    24 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*    25 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*    26 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_fixed_10_23_0_33_40000_0/SoAdSocketRouteDest_VechicleSpeed>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*    27 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SoAdRoutingGroup_VechicleSpeed_AM, /ActiveEcuC/SoAd/SoAdConfig/SoAdSocketRoute_SD_UDP_Multicast_Rx_Any_40000_0/SoAdSocketRouteDest_VechicleSpeed_Multi>>/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RxBufStructMgt
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RxBufStructMgt
+  \brief  the Rx buffer struct management struct
+  \details
+  Element              Description
+  RxBufStructSegIdx    the index of the 1:1 relation pointing to SoAd_RxBufStructSeg
+  RxBufStructSegLvl    the lvl of used SoAd_RxBufStructSegs
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_RxBufStructMgtUType, SOAD_VAR_NOINIT) SoAd_RxBufStructMgt;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RxBufStructSeg
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RxBufStructSeg
+  \brief  the Rx buffer struct segment struct to store data segment
+  \details
+  Element    Description
+  Len        the length of segment
+  DataPtr    the pointer to segment data
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_RxBufStructSegUType, SOAD_VAR_NOINIT) SoAd_RxBufStructSeg;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+  /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RxBufferConfigDyn
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RxBufferConfigDyn
+  \brief  the management structs to handle reception buffer
+  \details
+  Element          Description
+  IfRxBufferIdx    the index of the 0:1 relation pointing to SoAd_IfRxBuffer
+  TpRxBufferIdx    the index of the 0:1 relation pointing to SoAd_TpRxBuffer
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_RxBufferConfigDynUType, SOAD_VAR_NOINIT) SoAd_RxBufferConfigDyn;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
 
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -838,8 +1631,8 @@ VAR(SoAd_PduRouteDynUType, SOAD_VAR_NOINIT) SoAd_PduRouteDyn;  /* PRQA S 0759, 1
   \brief  the Rx management structs
   \details
   Element               Description
-  CancelRequested       indicates if reception cancellation is requested
   RxBytesPending        the length of pending data to be received
+  CancelRequested       indicates if reception cancellation is requested
   SocketRouteDestIdx    the index of the 1:1 relation pointing to SoAd_SocketRouteDest
 */ 
 #define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
@@ -849,6 +1642,13 @@ VAR(SoAd_PduRouteDynUType, SOAD_VAR_NOINIT) SoAd_PduRouteDyn;  /* PRQA S 0759, 1
 VAR(SoAd_RxMgtUType, SOAD_VAR_NOINIT) SoAd_RxMgt;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote] */
+  /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     2 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     3 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     4 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  /*     5 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001] */
+  /*     6 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000] */
+  /*     7 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
 
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -874,10 +1674,18 @@ VAR(SoAd_RxMgtUType, SOAD_VAR_NOINIT) SoAd_RxMgt;  /* PRQA S 0759, 1514, 1533 */
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(SoAd_SoConDynType, SOAD_VAR_NOINIT) SoAd_SoConDyn[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(SoAd_SoConDynType, SOAD_VAR_NOINIT) SoAd_SoConDyn[10];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000] */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000] */
   /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000/SC_UDP_ANY_DynPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000] */
+  /*     2 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  /*     3 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  /*     4 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  /*     5 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490] */
+  /*     6 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490] */
+  /*     7 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000/SC_UDP_Multicast_Rx_Any_40000, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000] */
+  /*     8 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843>>DATA] */
+  /*     9 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842] */
 
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -902,12 +1710,218 @@ VAR(SoAd_SoConDynType, SOAD_VAR_NOINIT) SoAd_SoConDyn[2];  /* PRQA S 1514, 1533 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(SoAd_SocketDynType, SOAD_VAR_NOINIT) SoAd_SocketDyn[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(SoAd_SocketDynType, SOAD_VAR_NOINIT) SoAd_SocketDyn[9];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_10_0_33] */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_10_0_33] */
   /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_Multicast_Rx_Fixed_239_10_1_30000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_10_0_1] */
+  /*     2 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
+  /*     3 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
+  /*     4 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_Multicast_Rx_fixed_239_23_0_2_30490, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_23_0_2] */
+  /*     5 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_Multicast_Rx_Any_40000, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_Multicast_Any_vlan23] */
+  /*     6 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
+  /*     7 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843>>DATA, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
+  /*     8 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842, /ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_Fixed_10_23_0_33] */
 
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TcpTxQueueData
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TcpTxQueueData
+  \brief  the Tx TCP queue elements
+  \details
+  Element        Description
+  Len            the length of the queue element
+  PduRouteIdx    the index of the 1:1 relation pointing to SoAd_PduRoute
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_TcpTxQueueDataUType, SOAD_VAR_NOINIT) SoAd_TcpTxQueueData;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TcpTxQueueMgt
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TcpTxQueueMgt
+  \brief  the Tx TCP queue management structs
+  \details
+  Element              Description
+  TotLen               the total length of all used elements
+  Lvl                  the level of used elements
+  TcpTxQueueDataIdx    the index of the 1:1 relation pointing to SoAd_TcpTxQueueData
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_TcpTxQueueMgtUType, SOAD_VAR_NOINIT) SoAd_TcpTxQueueMgt;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
+  /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TimeoutListDyn
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TimeoutListDyn
+  \brief  the management struct of all timeout lists
+  \details
+  Element    Description
+  Lvl        the level of pending timeouts
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_TimeoutListDynUType, SOAD_VAR_NOINIT) SoAd_TimeoutListDyn;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [SoAdTimeoutListUdpAlive] */
+  /*     1 */  /* [SoAdTimeoutListNPduUdpTx] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TimeoutListNPduUdpTx
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TimeoutListNPduUdpTx
+  \brief  the timeout list for nPdu timeout
+  \details
+  Element         Description
+  Timeout         the timeout value
+  NPduUdpTxIdx    the index of the 0:1 relation pointing to SoAd_NPduUdpTx
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_TimeoutListNPduUdpTxUType, SOAD_VAR_NOINIT) SoAd_TimeoutListNPduUdpTx;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd] */
+  /*   ... */  /* [/ActiveEcuC/SoAd] */
+  /*     2 */  /* [/ActiveEcuC/SoAd] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TimeoutListNPduUdpTxMap
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TimeoutListNPduUdpTxMap
+  \brief  maps all nPdu indexes to the timeout list index for nPdu timeout if timeout is running
+  \details
+  Element                    Description
+  TimeoutListNPduUdpTxIdx    the index of the 0:1 relation pointing to SoAd_TimeoutListNPduUdpTx
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_TimeoutListNPduUdpTxMapUType, SOAD_VAR_NOINIT) SoAd_TimeoutListNPduUdpTxMap;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd] */
+  /*   ... */  /* [/ActiveEcuC/SoAd] */
+  /*     2 */  /* [/ActiveEcuC/SoAd] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TimeoutListUdpAlive
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TimeoutListUdpAlive
+  \brief  the timeout list for UDP Alive supervision timeout
+  \details
+  Element     Description
+  Timeout     the timeout value
+  SoConIdx    the index of the 0:1 relation pointing to SoAd_SoCon
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_TimeoutListUdpAliveUType, SOAD_VAR_NOINIT) SoAd_TimeoutListUdpAlive;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd] */
+  /*   ... */  /* [/ActiveEcuC/SoAd] */
+  /*     3 */  /* [/ActiveEcuC/SoAd] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TimeoutListUdpAliveMap
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TimeoutListUdpAliveMap
+  \brief  maps all socket connections to the timeout list index for UDP Alive supervision timeout if timeout is running
+  \details
+  Element                   Description
+  TimeoutListUdpAliveIdx    the index of the 0:1 relation pointing to SoAd_TimeoutListUdpAlive
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_TimeoutListUdpAliveMapUType, SOAD_VAR_NOINIT) SoAd_TimeoutListUdpAliveMap;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd] */
+  /*   ... */  /* [/ActiveEcuC/SoAd] */
+  /*     9 */  /* [/ActiveEcuC/SoAd] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TpRxBuffer
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TpRxBuffer
+  \brief  the reception buffer for TP-API
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(SoAd_TpRxBufferUType, SOAD_VAR_NOINIT) SoAd_TpRxBuffer;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+  /*   ... */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+  /*     7 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842/SC_TCP_TX_fixed_10_23_0_33_47842] */
+
+#define SOAD_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -920,10 +1934,10 @@ VAR(SoAd_SocketDynType, SOAD_VAR_NOINIT) SoAd_SocketDyn[2];  /* PRQA S 1514, 153
   \brief  the Tx management structs
   \details
   Element            Description
-  CancelRequested    indicates if transmission cancellation is requested
-  PduRouteDestIdx    the index of the 1:1 relation pointing to SoAd_PduRouteDest
   TxBytesLen         the length of data to be transmitted
   TxBytesPending     the length of pending data to be transmitted
+  CancelRequested    indicates if transmission cancellation is requested
+  PduRouteDestIdx    the index of the 1:1 relation pointing to SoAd_PduRouteDest
   TxBufPtr           the pointer to transmission data buffer
 */ 
 #define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
@@ -932,7 +1946,12 @@ VAR(SoAd_SocketDynType, SOAD_VAR_NOINIT) SoAd_SocketDyn[2];  /* PRQA S 1514, 153
 /*lint -restore */
 VAR(SoAd_TxMgtUType, SOAD_VAR_NOINIT) SoAd_TxMgt;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_7_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
+  /*     0 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_UDP_fixed_10_10_0_33_30000/SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote] */
+  /*     1 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote] */
+  /*     2 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_0] */
+  /*     3 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000/SC_UDP_Fixed_10_23_0_33_40000_1] */
+  /*     4 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_Ctrl_UDP_fixed_10_23_0_33_30490/SC_SD_CTRL_UDP_Any_DynamicPort_Remote] */
+  /*     5 */  /* [/ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843/SC_TCP_TX_fixed_10_23_0_33_47843] */
 
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1034,6 +2053,7 @@ VAR(SoAd_TxMgtUType, SOAD_VAR_NOINIT) SoAd_TxMgt;  /* PRQA S 0759, 1514, 1533 */
   TxMgt                                       the pointer to SoAd_TxMgt
   TxPduIdMap                                  the pointer to SoAd_TxPduIdMap
   UpperLayer                                  the pointer to SoAd_UpperLayer
+  SizeOfNPduUdpTxBuffer                       the number of accomplishable value elements in SoAd_NPduUdpTxBuffer
   MaxIfRouteGrpTransmitPduSize                the maximum length of all PDUs which can be sent via routing group transmit
   SizeOfBestMatchSoConIdxList                 the number of accomplishable value elements in SoAd_BestMatchSoConIdxList
   SizeOfDhcpEventCbk                          the number of accomplishable value elements in SoAd_DhcpEventCbk
@@ -1059,7 +2079,6 @@ VAR(SoAd_TxMgtUType, SOAD_VAR_NOINIT) SoAd_TxMgt;  /* PRQA S 0759, 1514, 1533 */
   SizeOfLocalIpAddrAssignmentChgCbkInd        the number of accomplishable value elements in SoAd_LocalIpAddrAssignmentChgCbkInd
   SizeOfMetaDataRxBuf                         the number of accomplishable value elements in SoAd_MetaDataRxBuf
   SizeOfNPduUdpTx                             the number of accomplishable value elements in SoAd_NPduUdpTx
-  SizeOfNPduUdpTxBuffer                       the number of accomplishable value elements in SoAd_NPduUdpTxBuffer
   SizeOfNPduUdpTxQueue                        the number of accomplishable value elements in SoAd_NPduUdpTxQueue
   SizeOfPduRoute                              the number of accomplishable value elements in SoAd_PduRoute
   SizeOfPduRouteDest                          the number of accomplishable value elements in SoAd_PduRouteDest
@@ -1132,7 +2151,7 @@ CONST(SoAd_PCConfigsType, SOAD_CONST) SoAd_PCConfig = {  /* PRQA S 1514, 1533 */
     , NULL_PTR                                  /**< the pointer to SoAd_EventQueueTcpTxSoCon */
     , NULL_PTR                                  /**< the pointer to SoAd_EventQueueTpRxSoCon */
     , NULL_PTR                                  /**< the pointer to SoAd_EventQueueTpTxSoCon */
-    , NULL_PTR                                  /**< the pointer to SoAd_IfRxBuffer */
+    , SoAd_IfRxBuffer.raw                       /**< the pointer to SoAd_IfRxBuffer */
     , NULL_PTR                                  /**< the pointer to SoAd_IpFragBuf */
     , NULL_PTR                                  /**< the pointer to SoAd_IpFragBufConfig */
     , NULL_PTR                                  /**< the pointer to SoAd_IpFragBufConfigDyn */
@@ -1141,31 +2160,31 @@ CONST(SoAd_PCConfigsType, SOAD_CONST) SoAd_PCConfig = {  /* PRQA S 1514, 1533 */
     , SoAd_LocalAddrByTcpIpCtrlInd              /**< the pointer to SoAd_LocalAddrByTcpIpCtrlInd */
     , SoAd_LocalAddrDyn                         /**< the pointer to SoAd_LocalAddrDyn */
     , SoAd_LocalAddrIdMap                       /**< the pointer to SoAd_LocalAddrIdMap */
-    , NULL_PTR                                  /**< the pointer to SoAd_LocalIpAddrAssignmentChgCbk */
-    , NULL_PTR                                  /**< the pointer to SoAd_LocalIpAddrAssignmentChgCbkInd */
+    , SoAd_LocalIpAddrAssignmentChgCbk          /**< the pointer to SoAd_LocalIpAddrAssignmentChgCbk */
+    , SoAd_LocalIpAddrAssignmentChgCbkInd       /**< the pointer to SoAd_LocalIpAddrAssignmentChgCbkInd */
     , NULL_PTR                                  /**< the pointer to SoAd_MetaDataRxBuf */
-    , NULL_PTR                                  /**< the pointer to SoAd_NPduUdpTx */
-    , NULL_PTR                                  /**< the pointer to SoAd_NPduUdpTxBuffer */
-    , NULL_PTR                                  /**< the pointer to SoAd_NPduUdpTxDyn */
+    , SoAd_NPduUdpTx                            /**< the pointer to SoAd_NPduUdpTx */
+    , SoAd_NPduUdpTxBuffer.raw                  /**< the pointer to SoAd_NPduUdpTxBuffer */
+    , SoAd_NPduUdpTxDyn.raw                     /**< the pointer to SoAd_NPduUdpTxDyn */
     , NULL_PTR                                  /**< the pointer to SoAd_NPduUdpTxQueue */
     , SoAd_PduRoute                             /**< the pointer to SoAd_PduRoute */
     , SoAd_PduRouteDest                         /**< the pointer to SoAd_PduRouteDest */
     , SoAd_PduRouteDestBySoConInd               /**< the pointer to SoAd_PduRouteDestBySoConInd */
-    , NULL_PTR                                  /**< the pointer to SoAd_PduRouteDestInd */
+    , SoAd_PduRouteDestInd                      /**< the pointer to SoAd_PduRouteDestInd */
     , SoAd_PduRouteDyn.raw                      /**< the pointer to SoAd_PduRouteDyn */
-    , NULL_PTR                                  /**< the pointer to SoAd_RcvRemAddr */
+    , SoAd_RcvRemAddr.raw                       /**< the pointer to SoAd_RcvRemAddr */
     , SoAd_RemAddrIpV4                          /**< the pointer to SoAd_RemAddrIpV4 */
     , NULL_PTR                                  /**< the pointer to SoAd_RemAddrIpV6 */
-    , NULL_PTR                                  /**< the pointer to SoAd_RouteGrp */
-    , NULL_PTR                                  /**< the pointer to SoAd_RouteGrpIdMap */
-    , NULL_PTR                                  /**< the pointer to SoAd_RouteGrpSoCon */
-    , NULL_PTR                                  /**< the pointer to SoAd_RouteGrpSoConByPduRouteDestInd */
-    , NULL_PTR                                  /**< the pointer to SoAd_RouteGrpSoConBySocketRouteDestInd */
-    , NULL_PTR                                  /**< the pointer to SoAd_RouteGrpSoConDyn */
-    , NULL_PTR                                  /**< the pointer to SoAd_RxBufStructMgt */
-    , NULL_PTR                                  /**< the pointer to SoAd_RxBufStructSeg */
-    , NULL_PTR                                  /**< the pointer to SoAd_RxBufferConfig */
-    , NULL_PTR                                  /**< the pointer to SoAd_RxBufferConfigDyn */
+    , SoAd_RouteGrp                             /**< the pointer to SoAd_RouteGrp */
+    , SoAd_RouteGrpIdMap                        /**< the pointer to SoAd_RouteGrpIdMap */
+    , SoAd_RouteGrpSoCon                        /**< the pointer to SoAd_RouteGrpSoCon */
+    , SoAd_RouteGrpSoConByPduRouteDestInd       /**< the pointer to SoAd_RouteGrpSoConByPduRouteDestInd */
+    , SoAd_RouteGrpSoConBySocketRouteDestInd    /**< the pointer to SoAd_RouteGrpSoConBySocketRouteDestInd */
+    , SoAd_RouteGrpSoConDyn                     /**< the pointer to SoAd_RouteGrpSoConDyn */
+    , SoAd_RxBufStructMgt.raw                   /**< the pointer to SoAd_RxBufStructMgt */
+    , SoAd_RxBufStructSeg.raw                   /**< the pointer to SoAd_RxBufStructSeg */
+    , SoAd_RxBufferConfig                       /**< the pointer to SoAd_RxBufferConfig */
+    , SoAd_RxBufferConfigDyn.raw                /**< the pointer to SoAd_RxBufferConfigDyn */
     , SoAd_RxMgt.raw                            /**< the pointer to SoAd_RxMgt */
     , SoAd_RxPduIdIdMap                         /**< the pointer to SoAd_RxPduIdIdMap */
     , NULL_PTR                                  /**< the pointer to SoAd_ShutdownFinishedCbk */
@@ -1173,30 +2192,30 @@ CONST(SoAd_PCConfigsType, SOAD_CONST) SoAd_PCConfig = {  /* PRQA S 1514, 1533 */
     , SoAd_SoConDyn                             /**< the pointer to SoAd_SoConDyn */
     , SoAd_SoConGrp                             /**< the pointer to SoAd_SoConGrp */
     , SoAd_SoConMap                             /**< the pointer to SoAd_SoConMap */
-    , NULL_PTR                                  /**< the pointer to SoAd_SoConModeChgCbk */
-    , NULL_PTR                                  /**< the pointer to SoAd_SoConModeChgCbkInd */
+    , SoAd_SoConModeChgCbk                      /**< the pointer to SoAd_SoConModeChgCbk */
+    , SoAd_SoConModeChgCbkInd                   /**< the pointer to SoAd_SoConModeChgCbkInd */
     , SoAd_Socket                               /**< the pointer to SoAd_Socket */
     , SoAd_SocketDyn                            /**< the pointer to SoAd_SocketDyn */
     , NULL_PTR                                  /**< the pointer to SoAd_SocketReportErrorCbk */
     , SoAd_SocketRoute                          /**< the pointer to SoAd_SocketRoute */
     , SoAd_SocketRouteDest                      /**< the pointer to SoAd_SocketRouteDest */
-    , NULL_PTR                                  /**< the pointer to SoAd_SocketRouteInd */
-    , NULL_PTR                                  /**< the pointer to SoAd_SocketTcp */
+    , SoAd_SocketRouteInd                       /**< the pointer to SoAd_SocketRouteInd */
+    , SoAd_SocketTcp                            /**< the pointer to SoAd_SocketTcp */
     , SoAd_SocketUdp                            /**< the pointer to SoAd_SocketUdp */
     , SoAd_TcpIpCtrl                            /**< the pointer to SoAd_TcpIpCtrl */
     , SoAd_TcpKeepAliveGloballyEnabled          /**< the pointer to SoAd_TcpKeepAliveGloballyEnabled */
     , NULL_PTR                                  /**< the pointer to SoAd_TcpTlsSocketCreatedNotificationCbk */
-    , NULL_PTR                                  /**< the pointer to SoAd_TcpTxQueue */
-    , NULL_PTR                                  /**< the pointer to SoAd_TcpTxQueueData */
-    , NULL_PTR                                  /**< the pointer to SoAd_TcpTxQueueMgt */
-    , NULL_PTR                                  /**< the pointer to SoAd_TimeoutListDyn */
+    , SoAd_TcpTxQueue                           /**< the pointer to SoAd_TcpTxQueue */
+    , SoAd_TcpTxQueueData.raw                   /**< the pointer to SoAd_TcpTxQueueData */
+    , SoAd_TcpTxQueueMgt.raw                    /**< the pointer to SoAd_TcpTxQueueMgt */
+    , SoAd_TimeoutListDyn.raw                   /**< the pointer to SoAd_TimeoutListDyn */
     , SoAd_TimeoutListIdent                     /**< the pointer to SoAd_TimeoutListIdent */
-    , NULL_PTR                                  /**< the pointer to SoAd_TimeoutListNPduUdpTx */
-    , NULL_PTR                                  /**< the pointer to SoAd_TimeoutListNPduUdpTxMap */
-    , NULL_PTR                                  /**< the pointer to SoAd_TimeoutListUdpAlive */
-    , NULL_PTR                                  /**< the pointer to SoAd_TimeoutListUdpAliveMap */
+    , SoAd_TimeoutListNPduUdpTx.raw             /**< the pointer to SoAd_TimeoutListNPduUdpTx */
+    , SoAd_TimeoutListNPduUdpTxMap.raw          /**< the pointer to SoAd_TimeoutListNPduUdpTxMap */
+    , SoAd_TimeoutListUdpAlive.raw              /**< the pointer to SoAd_TimeoutListUdpAlive */
+    , SoAd_TimeoutListUdpAliveMap.raw           /**< the pointer to SoAd_TimeoutListUdpAliveMap */
     , NULL_PTR                                  /**< the pointer to SoAd_TlsConfig */
-    , NULL_PTR                                  /**< the pointer to SoAd_TpRxBuffer */
+    , SoAd_TpRxBuffer.raw                       /**< the pointer to SoAd_TpRxBuffer */
     , NULL_PTR                                  /**< the pointer to SoAd_TpTxBuffer */
     , NULL_PTR                                  /**< the pointer to SoAd_TpTxBufferConfig */
     , NULL_PTR                                  /**< the pointer to SoAd_TpTxBufferConfigDyn */
@@ -1206,83 +2225,83 @@ CONST(SoAd_PCConfigsType, SOAD_CONST) SoAd_PCConfig = {  /* PRQA S 1514, 1533 */
     , SoAd_TxMgt.raw                            /**< the pointer to SoAd_TxMgt */
     , SoAd_TxPduIdMap                           /**< the pointer to SoAd_TxPduIdMap */
     , SoAd_UpperLayer                           /**< the pointer to SoAd_UpperLayer */
+    , 4416u                                     /**< the number of elements in SoAd_NPduUdpTxBuffer */
     , 0u
-    , 1u                                        /**< the number of elements in SoAd_BestMatchSoConIdxList */
+    , 3u                                        /**< the number of elements in SoAd_BestMatchSoConIdxList */
     , 0u                                        /**< the number of elements in SoAd_DhcpEventCbk */
     , 2u                                        /**< the number of elements in SoAd_EventQueue */
-    , 2u                                        /**< the number of elements in SoAd_EventQueueFlag */
+    , 10u                                       /**< the number of elements in SoAd_EventQueueFlag */
     , 1u                                        /**< the number of elements in SoAd_EventQueueIdent */
     , 0u                                        /**< the number of elements in SoAd_EventQueueIfTxRouteGrp */
-    , 1u                                        /**< the number of elements in SoAd_EventQueueIfUdpPduRoute */
+    , 4u                                        /**< the number of elements in SoAd_EventQueueIfUdpPduRoute */
     , 0u                                        /**< the number of elements in SoAd_EventQueueLocalAddr */
     , 0u                                        /**< the number of elements in SoAd_EventQueueSocketIdx */
-    , 2u                                        /**< the number of elements in SoAd_EventQueueStateSoCon */
+    , 10u                                       /**< the number of elements in SoAd_EventQueueStateSoCon */
     , 0u                                        /**< the number of elements in SoAd_EventQueueTcpTxSoCon */
     , 0u                                        /**< the number of elements in SoAd_EventQueueTpRxSoCon */
     , 0u                                        /**< the number of elements in SoAd_EventQueueTpTxSoCon */
-    , 0u                                        /**< the number of elements in SoAd_IfRxBuffer */
+    , 16u                                       /**< the number of elements in SoAd_IfRxBuffer */
     , 0u                                        /**< the number of elements in SoAd_IpFragBuf */
     , 0u                                        /**< the number of elements in SoAd_IpFragBufConfig */
     , 0u                                        /**< the number of elements in SoAd_IpFragMgt */
-    , 3u                                        /**< the number of elements in SoAd_LocalAddr */
-    , 1u                                        /**< the number of elements in SoAd_LocalAddrByTcpIpCtrlInd */
-    , 3u                                        /**< the number of elements in SoAd_LocalAddrIdMap */
-    , 0u                                        /**< the number of elements in SoAd_LocalIpAddrAssignmentChgCbk */
-    , 0u                                        /**< the number of elements in SoAd_LocalIpAddrAssignmentChgCbkInd */
+    , 7u                                        /**< the number of elements in SoAd_LocalAddr */
+    , 2u                                        /**< the number of elements in SoAd_LocalAddrByTcpIpCtrlInd */
+    , 7u                                        /**< the number of elements in SoAd_LocalAddrIdMap */
+    , 1u                                        /**< the number of elements in SoAd_LocalIpAddrAssignmentChgCbk */
+    , 7u                                        /**< the number of elements in SoAd_LocalIpAddrAssignmentChgCbkInd */
     , 0u                                        /**< the number of elements in SoAd_MetaDataRxBuf */
-    , 0u                                        /**< the number of elements in SoAd_NPduUdpTx */
-    , 0u                                        /**< the number of elements in SoAd_NPduUdpTxBuffer */
+    , 3u                                        /**< the number of elements in SoAd_NPduUdpTx */
     , 0u                                        /**< the number of elements in SoAd_NPduUdpTxQueue */
-    , 1u                                        /**< the number of elements in SoAd_PduRoute */
-    , 1u                                        /**< the number of elements in SoAd_PduRouteDest */
-    , 1u                                        /**< the number of elements in SoAd_PduRouteDestBySoConInd */
-    , 0u                                        /**< the number of elements in SoAd_PduRouteDestInd */
-    , 0u                                        /**< the number of elements in SoAd_RcvRemAddr */
-    , 2u                                        /**< the number of elements in SoAd_RemAddrIpV4 */
+    , 5u                                        /**< the number of elements in SoAd_PduRoute */
+    , 9u                                        /**< the number of elements in SoAd_PduRouteDest */
+    , 9u                                        /**< the number of elements in SoAd_PduRouteDestBySoConInd */
+    , 13u                                       /**< the number of elements in SoAd_PduRouteDestInd */
+    , 2u                                        /**< the number of elements in SoAd_RcvRemAddr */
+    , 10u                                       /**< the number of elements in SoAd_RemAddrIpV4 */
     , 0u                                        /**< the number of elements in SoAd_RemAddrIpV6 */
-    , 0u                                        /**< the number of elements in SoAd_RouteGrp */
-    , 0u                                        /**< the number of elements in SoAd_RouteGrpIdMap */
-    , 0u                                        /**< the number of elements in SoAd_RouteGrpSoCon */
-    , 0u                                        /**< the number of elements in SoAd_RouteGrpSoConByPduRouteDestInd */
-    , 0u                                        /**< the number of elements in SoAd_RouteGrpSoConBySocketRouteDestInd */
-    , 0u                                        /**< the number of elements in SoAd_RxBufStructMgt */
-    , 0u                                        /**< the number of elements in SoAd_RxBufStructSeg */
-    , 0u                                        /**< the number of elements in SoAd_RxBufferConfig */
-    , 1u                                        /**< the number of elements in SoAd_RxMgt */
-    , 1u                                        /**< the number of elements in SoAd_RxPduIdIdMap */
+    , 10u                                       /**< the number of elements in SoAd_RouteGrp */
+    , 10u                                       /**< the number of elements in SoAd_RouteGrpIdMap */
+    , 28u                                       /**< the number of elements in SoAd_RouteGrpSoCon */
+    , 13u                                       /**< the number of elements in SoAd_RouteGrpSoConByPduRouteDestInd */
+    , 15u                                       /**< the number of elements in SoAd_RouteGrpSoConBySocketRouteDestInd */
+    , 1u                                        /**< the number of elements in SoAd_RxBufStructMgt */
+    , 2u                                        /**< the number of elements in SoAd_RxBufStructSeg */
+    , 1u                                        /**< the number of elements in SoAd_RxBufferConfig */
+    , 8u                                        /**< the number of elements in SoAd_RxMgt */
+    , 8u                                        /**< the number of elements in SoAd_RxPduIdIdMap */
     , 0u                                        /**< the number of elements in SoAd_ShutdownFinishedCbk */
-    , 2u                                        /**< the number of elements in SoAd_SoCon */
-    , 2u                                        /**< the number of elements in SoAd_SoConGrp */
-    , 2u                                        /**< the number of elements in SoAd_SoConMap */
-    , 0u                                        /**< the number of elements in SoAd_SoConModeChgCbk */
-    , 0u                                        /**< the number of elements in SoAd_SoConModeChgCbkInd */
-    , 2u                                        /**< the number of elements in SoAd_Socket */
+    , 10u                                       /**< the number of elements in SoAd_SoCon */
+    , 8u                                        /**< the number of elements in SoAd_SoConGrp */
+    , 10u                                       /**< the number of elements in SoAd_SoConMap */
+    , 1u                                        /**< the number of elements in SoAd_SoConModeChgCbk */
+    , 7u                                        /**< the number of elements in SoAd_SoConModeChgCbkInd */
+    , 9u                                        /**< the number of elements in SoAd_Socket */
     , 0u                                        /**< the number of elements in SoAd_SocketReportErrorCbk */
-    , 1u                                        /**< the number of elements in SoAd_SocketRoute */
-    , 1u                                        /**< the number of elements in SoAd_SocketRouteDest */
-    , 0u                                        /**< the number of elements in SoAd_SocketRouteInd */
-    , 0u                                        /**< the number of elements in SoAd_SocketTcp */
-    , 2u                                        /**< the number of elements in SoAd_SocketUdp */
-    , 1u                                        /**< the number of elements in SoAd_TcpIpCtrl */
+    , 12u                                       /**< the number of elements in SoAd_SocketRoute */
+    , 12u                                       /**< the number of elements in SoAd_SocketRouteDest */
+    , 15u                                       /**< the number of elements in SoAd_SocketRouteInd */
+    , 2u                                        /**< the number of elements in SoAd_SocketTcp */
+    , 6u                                        /**< the number of elements in SoAd_SocketUdp */
+    , 2u                                        /**< the number of elements in SoAd_TcpIpCtrl */
     , 1u                                        /**< the number of elements in SoAd_TcpKeepAliveGloballyEnabled */
     , 0u                                        /**< the number of elements in SoAd_TcpTlsSocketCreatedNotificationCbk */
-    , 0u                                        /**< the number of elements in SoAd_TcpTxQueue */
-    , 0u                                        /**< the number of elements in SoAd_TcpTxQueueData */
-    , 0u                                        /**< the number of elements in SoAd_TimeoutListDyn */
+    , 2u                                        /**< the number of elements in SoAd_TcpTxQueue */
+    , 2u                                        /**< the number of elements in SoAd_TcpTxQueueData */
+    , 2u                                        /**< the number of elements in SoAd_TimeoutListDyn */
     , 1u                                        /**< the number of elements in SoAd_TimeoutListIdent */
-    , 0u                                        /**< the number of elements in SoAd_TimeoutListNPduUdpTx */
-    , 0u                                        /**< the number of elements in SoAd_TimeoutListNPduUdpTxMap */
-    , 0u                                        /**< the number of elements in SoAd_TimeoutListUdpAlive */
-    , 0u                                        /**< the number of elements in SoAd_TimeoutListUdpAliveMap */
+    , 3u                                        /**< the number of elements in SoAd_TimeoutListNPduUdpTx */
+    , 3u                                        /**< the number of elements in SoAd_TimeoutListNPduUdpTxMap */
+    , 4u                                        /**< the number of elements in SoAd_TimeoutListUdpAlive */
+    , 10u                                       /**< the number of elements in SoAd_TimeoutListUdpAliveMap */
     , 0u                                        /**< the number of elements in SoAd_TlsConfig */
-    , 0u                                        /**< the number of elements in SoAd_TpRxBuffer */
+    , 8u                                        /**< the number of elements in SoAd_TpRxBuffer */
     , 0u                                        /**< the number of elements in SoAd_TpTxBuffer */
     , 0u                                        /**< the number of elements in SoAd_TpTxBufferConfig */
     , 0u                                        /**< the number of elements in SoAd_TriggerBuf */
     , 0u                                        /**< the number of elements in SoAd_TriggerBufConfig */
-    , 1u                                        /**< the number of elements in SoAd_TxMgt */
-    , 1u                                        /**< the number of elements in SoAd_TxPduIdMap */
-    , 1u                                        /**< the number of elements in SoAd_UpperLayer */
+    , 6u                                        /**< the number of elements in SoAd_TxMgt */
+    , 5u                                        /**< the number of elements in SoAd_TxPduIdMap */
+    , 3u                                        /**< the number of elements in SoAd_UpperLayer */
   }
 };
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED

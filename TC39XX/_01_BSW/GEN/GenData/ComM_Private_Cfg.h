@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Private_Cfg.h
- *   Generation Time: 2025-12-17 23:58:57
+ *   Generation Time: 2026-01-25 14:30:28
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -61,6 +61,8 @@
 #define ComM_GetBusPncComModeReqOfPCConfig()                          ComM_BusPncComModeReq  /**< the pointer to ComM_BusPncComModeReq */
 #define ComM_GetChannelOfPCConfig()                                   ComM_Channel  /**< the pointer to ComM_Channel */
 #define ComM_GetChannelPbOfPCConfig()                                 ComM_ChannelPb  /**< the pointer to ComM_ChannelPb */
+#define ComM_GetMinFullComModeTimerOfPCConfig()                       ComM_MinFullComModeTimer.raw  /**< the pointer to ComM_MinFullComModeTimer */
+#define ComM_GetNmLightTimerOfPCConfig()                              ComM_NmLightTimer.raw  /**< the pointer to ComM_NmLightTimer */
 #define ComM_GetPncChannelMappingOfPCConfig()                         ComM_PncChannelMapping  /**< the pointer to ComM_PncChannelMapping */
 #define ComM_GetPncOfPCConfig()                                       ComM_Pnc  /**< the pointer to ComM_Pnc */
 #define ComM_GetPncPSleepTimerOfPCConfig()                            ComM_PncPSleepTimer  /**< the pointer to ComM_PncPSleepTimer */
@@ -69,8 +71,8 @@
 #define ComM_GetPncSignalIndOfPCConfig()                              ComM_PncSignalInd  /**< the pointer to ComM_PncSignalInd */
 #define ComM_GetPncSignalOfPCConfig()                                 ComM_PncSignal  /**< the pointer to ComM_PncSignal */
 #define ComM_GetPncSignalValuesOfPCConfig()                           ComM_PncSignalValues.raw  /**< the pointer to ComM_PncSignalValues */
-#define ComM_GetSizeOfChannelOfPCConfig()                             1u  /**< the number of accomplishable value elements in ComM_Channel */
-#define ComM_GetSizeOfChannelPbOfPCConfig()                           1u  /**< the number of accomplishable value elements in ComM_ChannelPb */
+#define ComM_GetSizeOfChannelOfPCConfig()                             2u  /**< the number of accomplishable value elements in ComM_Channel */
+#define ComM_GetSizeOfChannelPbOfPCConfig()                           2u  /**< the number of accomplishable value elements in ComM_ChannelPb */
 #define ComM_GetSizeOfPncChannelMappingOfPCConfig()                   1u  /**< the number of accomplishable value elements in ComM_PncChannelMapping */
 #define ComM_GetSizeOfPncOfPCConfig()                                 1u  /**< the number of accomplishable value elements in ComM_Pnc */
 #define ComM_GetSizeOfPncPbIndOfPCConfig()                            1u  /**< the number of accomplishable value elements in ComM_PncPbInd */
@@ -78,10 +80,10 @@
 #define ComM_GetSizeOfPncSignalIndOfPCConfig()                        1u  /**< the number of accomplishable value elements in ComM_PncSignalInd */
 #define ComM_GetSizeOfPncSignalOfPCConfig()                           2u  /**< the number of accomplishable value elements in ComM_PncSignal */
 #define ComM_GetSizeOfPncSignalValuesOfPCConfig()                     14u  /**< the number of accomplishable value elements in ComM_PncSignalValues */
-#define ComM_GetSizeOfUserByteMaskOfPCConfig()                        2u  /**< the number of accomplishable value elements in ComM_UserByteMask */
-#define ComM_GetSizeOfUserOfPCConfig()                                2u  /**< the number of accomplishable value elements in ComM_User */
+#define ComM_GetSizeOfUserByteMaskOfPCConfig()                        3u  /**< the number of accomplishable value elements in ComM_UserByteMask */
+#define ComM_GetSizeOfUserOfPCConfig()                                3u  /**< the number of accomplishable value elements in ComM_User */
 #define ComM_GetSizeOfUserPncByteMaskOfPCConfig()                     1u  /**< the number of accomplishable value elements in ComM_UserPncByteMask */
-#define ComM_GetSizeOfUserReqFullComOfPCConfig()                      1u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
+#define ComM_GetSizeOfUserReqFullComOfPCConfig()                      2u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
 #define ComM_GetSizeOfUserReqPncFullComOfPCConfig()                   1u  /**< the number of accomplishable value elements in ComM_UserReqPncFullCom */
 #define ComM_GetUserByteMaskOfPCConfig()                              ComM_UserByteMask  /**< the pointer to ComM_UserByteMask */
 #define ComM_GetUserOfPCConfig()                                      ComM_User  /**< the pointer to ComM_User */
@@ -99,6 +101,8 @@
 */ 
 #define ComM_GetSizeOfActivePncComModeOfPCConfig()                    ComM_GetSizeOfPncOfPCConfig()  /**< the number of accomplishable value elements in ComM_ActivePncComMode */
 #define ComM_GetSizeOfBusPncComModeReqOfPCConfig()                    ComM_GetSizeOfPncOfPCConfig()  /**< the number of accomplishable value elements in ComM_BusPncComModeReq */
+#define ComM_GetSizeOfMinFullComModeTimerOfPCConfig()                 ComM_GetSizeOfChannelOfPCConfig()  /**< the number of accomplishable value elements in ComM_MinFullComModeTimer */
+#define ComM_GetSizeOfNmLightTimerOfPCConfig()                        ComM_GetSizeOfChannelOfPCConfig()  /**< the number of accomplishable value elements in ComM_NmLightTimer */
 #define ComM_GetSizeOfPncPSleepTimerOfPCConfig()                      ComM_GetSizeOfPncOfPCConfig()  /**< the number of accomplishable value elements in ComM_PncPSleepTimer */
 /** 
   \}
@@ -111,6 +115,19 @@
 */ 
 #define ComM_GetActivePncComMode(Index)                               (ComM_GetActivePncComModeOfPCConfig()[(Index)])
 #define ComM_GetBusPncComModeReq(Index)                               (ComM_GetBusPncComModeReqOfPCConfig()[(Index)])
+#define ComM_GetMinFullComTimeOfChannel(Index)                        (ComM_GetChannelOfPCConfig()[(Index)].MinFullComTimeOfChannel)
+#define ComM_GetNmLightDurationOfChannel(Index)                       (ComM_GetChannelOfPCConfig()[(Index)].NmLightDurationOfChannel)
+#define ComM_IsNmSupportOfChannel(Index)                              ((ComM_GetChannelOfPCConfig()[(Index)].NmSupportOfChannel) != FALSE)
+#define ComM_GetNmTypeOfChannel(Index)                                (ComM_GetChannelOfPCConfig()[(Index)].NmTypeOfChannel)
+#define ComM_IsPncNmRequestOfChannel(Index)                           ((ComM_GetChannelOfPCConfig()[(Index)].PncNmRequestOfChannel) != FALSE)
+#define ComM_IsSilentSupportOfChannel(Index)                          ((ComM_GetChannelOfPCConfig()[(Index)].SilentSupportOfChannel) != FALSE)
+#define ComM_GetWakeupStateOfChannel(Index)                           (ComM_GetChannelOfPCConfig()[(Index)].WakeupStateOfChannel)
+#define ComM_GetPncPbIndEndIdxOfChannelPb(Index)                      (ComM_GetChannelPbOfPCConfig()[(Index)].PncPbIndEndIdxOfChannelPb)
+#define ComM_GetPncPbIndStartIdxOfChannelPb(Index)                    (ComM_GetChannelPbOfPCConfig()[(Index)].PncPbIndStartIdxOfChannelPb)
+#define ComM_GetUserReqFullComEndIdxOfChannelPb(Index)                (ComM_GetChannelPbOfPCConfig()[(Index)].UserReqFullComEndIdxOfChannelPb)
+#define ComM_GetUserReqFullComStartIdxOfChannelPb(Index)              (ComM_GetChannelPbOfPCConfig()[(Index)].UserReqFullComStartIdxOfChannelPb)
+#define ComM_GetMinFullComModeTimer(Index)                            (ComM_GetMinFullComModeTimerOfPCConfig()[(Index)])
+#define ComM_GetNmLightTimer(Index)                                   (ComM_GetNmLightTimerOfPCConfig()[(Index)])
 #define ComM_GetPncPSleepTimer(Index)                                 (ComM_GetPncPSleepTimerOfPCConfig()[(Index)])
 #define ComM_GetChannelIdxOfPncSignal(Index)                          (ComM_GetPncSignalOfPCConfig()[(Index)].ChannelIdxOfPncSignal)
 #define ComM_GetPncSignalValuesEndIdxOfPncSignal(Index)               (ComM_GetPncSignalOfPCConfig()[(Index)].PncSignalValuesEndIdxOfPncSignal)
@@ -122,8 +139,10 @@
 #define ComM_GetUserByteMaskStartIdxOfUser(Index)                     (ComM_GetUserOfPCConfig()[(Index)].UserByteMaskStartIdxOfUser)
 #define ComM_GetUserPncByteMaskEndIdxOfUser(Index)                    (ComM_GetUserOfPCConfig()[(Index)].UserPncByteMaskEndIdxOfUser)
 #define ComM_GetUserPncByteMaskStartIdxOfUser(Index)                  (ComM_GetUserOfPCConfig()[(Index)].UserPncByteMaskStartIdxOfUser)
+#define ComM_GetChannelOfUserByteMask(Index)                          ((NetworkHandleType)ComM_GetUserByteMaskOfPCConfig()[(Index)].ChannelOfUserByteMask)
 #define ComM_GetClearMaskOfUserByteMask(Index)                        (ComM_GetUserByteMaskOfPCConfig()[(Index)].ClearMaskOfUserByteMask)
 #define ComM_GetSetMaskOfUserByteMask(Index)                          (ComM_GetUserByteMaskOfPCConfig()[(Index)].SetMaskOfUserByteMask)
+#define ComM_GetUserReqFullComIdxOfUserByteMask(Index)                (ComM_GetUserByteMaskOfPCConfig()[(Index)].UserReqFullComIdxOfUserByteMask)
 #define ComM_GetUserReqFullCom(Index)                                 (ComM_GetUserReqFullComOfPCConfig()[(Index)])
 #define ComM_GetUserReqPncFullCom(Index)                              (ComM_GetUserReqPncFullComOfPCConfig()[(Index)])
 /** 
@@ -138,16 +157,7 @@
 #define ComM_GetBusTypeOfChannel(Index)                               COMM_BUS_TYPE_ETH  /**< The channel bus type */
 #define ComM_GetGwTypeOfChannel(Index)                                COMM_GATEWAY_TYPE_NONE  /**< The partial network gateway type, relevant for channels attached to coordinated partial networks */
 #define ComM_GetInhibitionInitValueOfChannel(Index)                   0x00u  /**< Initial value of the inhibition status of the channel */
-#define ComM_IsNmSupportOfChannel(Index)                              (((TRUE)) != FALSE)  /**< Decides if the channel has NmType FULL or PASSIVE */
-#define ComM_GetNmTypeOfChannel(Index)                                COMM_FULL_NMTYPEOFCHANNEL  /**< The Network Management type of the channel */
-#define ComM_IsPncNmRequestOfChannel(Index)                           (((TRUE)) != FALSE)  /**< Decides if a Nm message shall be sent immediately after partial network state changes */
-#define ComM_IsSilentSupportOfChannel(Index)                          (((TRUE)) != FALSE)  /**< Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration) */
-#define ComM_GetWakeupStateOfChannel(Index)                           COMM_FULL_COM_READY_SLEEP  /**< Target channel state after a Passive Wake-up */
-#define ComM_GetPncPbIndEndIdxOfChannelPb(Index)                      1u  /**< the end index of the 0:n relation pointing to ComM_PncPbInd */
-#define ComM_GetPncPbIndStartIdxOfChannelPb(Index)                    0u  /**< the start index of the 0:n relation pointing to ComM_PncPbInd */
-#define ComM_IsPncPbIndUsedOfChannelPb(Index)                         (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_PncPbInd */
-#define ComM_GetUserReqFullComEndIdxOfChannelPb(Index)                1u  /**< the end index of the 0:n relation pointing to ComM_UserReqFullCom */
-#define ComM_GetUserReqFullComStartIdxOfChannelPb(Index)              0u  /**< the start index of the 0:n relation pointing to ComM_UserReqFullCom */
+#define ComM_IsPncPbIndUsedOfChannelPb(Index)                         (((boolean)(ComM_GetPncPbIndStartIdxOfChannelPb(Index) != COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_PncPbInd */
 #define ComM_IsUserReqFullComUsedOfChannelPb(Index)                   (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_UserReqFullCom */
 #define ComM_GetClearMaskOfPnc(Index)                                 0xFEu  /**< Clear mask for the partial network related signals (EIRA, ERA) */
 #define ComM_GetPncIdOfPnc(Index)                                     0u  /**< System ID of the partial network */
@@ -171,6 +181,8 @@
 #define ComM_GetSizeOfBusPncComModeReq()                              ComM_GetSizeOfBusPncComModeReqOfPCConfig()
 #define ComM_GetSizeOfChannel()                                       ComM_GetSizeOfChannelOfPCConfig()
 #define ComM_GetSizeOfChannelPb()                                     ComM_GetSizeOfChannelPbOfPCConfig()
+#define ComM_GetSizeOfMinFullComModeTimer()                           ComM_GetSizeOfMinFullComModeTimerOfPCConfig()
+#define ComM_GetSizeOfNmLightTimer()                                  ComM_GetSizeOfNmLightTimerOfPCConfig()
 #define ComM_GetSizeOfPnc()                                           ComM_GetSizeOfPncOfPCConfig()
 #define ComM_GetSizeOfPncChannelMapping()                             ComM_GetSizeOfPncChannelMappingOfPCConfig()
 #define ComM_GetSizeOfPncPSleepTimer()                                ComM_GetSizeOfPncPSleepTimerOfPCConfig()
@@ -186,8 +198,6 @@
 #define ComM_GetSizeOfUserReqPncFullCom()                             ComM_GetSizeOfUserReqPncFullComOfPCConfig()
 #define ComM_IsUserByteMaskUsedOfUser(Index)                          (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_UserByteMask */
 #define ComM_IsUserPncByteMaskUsedOfUser(Index)                       (((boolean)(ComM_GetUserPncByteMaskStartIdxOfUser(Index) != COMM_NO_USERPNCBYTEMASKSTARTIDXOFUSER)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_UserPncByteMask */
-#define ComM_GetChannelOfUserByteMask(Index)                          0u  /**< ID of the channel which is requested by this entry. */
-#define ComM_GetUserReqFullComIdxOfUserByteMask(Index)                0u  /**< the index of the 1:1 relation pointing to ComM_UserReqFullCom */
 #define ComM_GetClearMaskOfUserPncByteMask(Index)                     0xFEu  /**< Clear-mask for clearing the bit which corresponds to this user */
 #define ComM_GetPncIDOfUserPncByteMask(Index)                         0u  /**< System Id of the partial network which is requested by this entry */
 #define ComM_GetSetMaskOfUserPncByteMask(Index)                       0x01u  /**< Set-mask for setting the bit which corresponds to this user */
@@ -203,6 +213,8 @@
 */ 
 #define ComM_SetActivePncComMode(Index, Value)                        ComM_GetActivePncComModeOfPCConfig()[(Index)] = (Value)
 #define ComM_SetBusPncComModeReq(Index, Value)                        ComM_GetBusPncComModeReqOfPCConfig()[(Index)] = (Value)
+#define ComM_SetMinFullComModeTimer(Index, Value)                     ComM_GetMinFullComModeTimerOfPCConfig()[(Index)] = (Value)
+#define ComM_SetNmLightTimer(Index, Value)                            ComM_GetNmLightTimerOfPCConfig()[(Index)] = (Value)
 #define ComM_SetPncPSleepTimer(Index, Value)                          ComM_GetPncPSleepTimerOfPCConfig()[(Index)] = (Value)
 #define ComM_SetPncSignalValues(Index, Value)                         ComM_GetPncSignalValuesOfPCConfig()[(Index)] = (Value)
 #define ComM_SetUserReqFullCom(Index, Value)                          ComM_GetUserReqFullComOfPCConfig()[(Index)] = (Value)
@@ -232,6 +244,8 @@
 #define ComM_HasBusTypeOfChannel()                                    (TRUE != FALSE)
 #define ComM_HasGwTypeOfChannel()                                     (TRUE != FALSE)
 #define ComM_HasInhibitionInitValueOfChannel()                        (TRUE != FALSE)
+#define ComM_HasMinFullComTimeOfChannel()                             (TRUE != FALSE)
+#define ComM_HasNmLightDurationOfChannel()                            (TRUE != FALSE)
 #define ComM_HasNmSupportOfChannel()                                  (TRUE != FALSE)
 #define ComM_HasNmTypeOfChannel()                                     (TRUE != FALSE)
 #define ComM_HasPncNmRequestOfChannel()                               (TRUE != FALSE)
@@ -244,6 +258,8 @@
 #define ComM_HasUserReqFullComEndIdxOfChannelPb()                     (TRUE != FALSE)
 #define ComM_HasUserReqFullComStartIdxOfChannelPb()                   (TRUE != FALSE)
 #define ComM_HasUserReqFullComUsedOfChannelPb()                       (TRUE != FALSE)
+#define ComM_HasMinFullComModeTimer()                                 (TRUE != FALSE)
+#define ComM_HasNmLightTimer()                                        (TRUE != FALSE)
 #define ComM_HasPnc()                                                 (TRUE != FALSE)
 #define ComM_HasClearMaskOfPnc()                                      (TRUE != FALSE)
 #define ComM_HasPncIdOfPnc()                                          (TRUE != FALSE)
@@ -275,6 +291,8 @@
 #define ComM_HasSizeOfBusPncComModeReq()                              (TRUE != FALSE)
 #define ComM_HasSizeOfChannel()                                       (TRUE != FALSE)
 #define ComM_HasSizeOfChannelPb()                                     (TRUE != FALSE)
+#define ComM_HasSizeOfMinFullComModeTimer()                           (TRUE != FALSE)
+#define ComM_HasSizeOfNmLightTimer()                                  (TRUE != FALSE)
 #define ComM_HasSizeOfPnc()                                           (TRUE != FALSE)
 #define ComM_HasSizeOfPncChannelMapping()                             (TRUE != FALSE)
 #define ComM_HasSizeOfPncPSleepTimer()                                (TRUE != FALSE)
@@ -313,6 +331,8 @@
 #define ComM_HasBusPncComModeReqOfPCConfig()                          (TRUE != FALSE)
 #define ComM_HasChannelOfPCConfig()                                   (TRUE != FALSE)
 #define ComM_HasChannelPbOfPCConfig()                                 (TRUE != FALSE)
+#define ComM_HasMinFullComModeTimerOfPCConfig()                       (TRUE != FALSE)
+#define ComM_HasNmLightTimerOfPCConfig()                              (TRUE != FALSE)
 #define ComM_HasPncChannelMappingOfPCConfig()                         (TRUE != FALSE)
 #define ComM_HasPncOfPCConfig()                                       (TRUE != FALSE)
 #define ComM_HasPncPSleepTimerOfPCConfig()                            (TRUE != FALSE)
@@ -325,6 +345,8 @@
 #define ComM_HasSizeOfBusPncComModeReqOfPCConfig()                    (TRUE != FALSE)
 #define ComM_HasSizeOfChannelOfPCConfig()                             (TRUE != FALSE)
 #define ComM_HasSizeOfChannelPbOfPCConfig()                           (TRUE != FALSE)
+#define ComM_HasSizeOfMinFullComModeTimerOfPCConfig()                 (TRUE != FALSE)
+#define ComM_HasSizeOfNmLightTimerOfPCConfig()                        (TRUE != FALSE)
 #define ComM_HasSizeOfPncChannelMappingOfPCConfig()                   (TRUE != FALSE)
 #define ComM_HasSizeOfPncOfPCConfig()                                 (TRUE != FALSE)
 #define ComM_HasSizeOfPncPSleepTimerOfPCConfig()                      (TRUE != FALSE)
@@ -354,6 +376,8 @@
 */ 
 #define ComM_IncActivePncComMode(Index)                               ComM_GetActivePncComMode(Index)++
 #define ComM_IncBusPncComModeReq(Index)                               ComM_GetBusPncComModeReq(Index)++
+#define ComM_IncMinFullComModeTimer(Index)                            ComM_GetMinFullComModeTimer(Index)++
+#define ComM_IncNmLightTimer(Index)                                   ComM_GetNmLightTimer(Index)++
 #define ComM_IncPncPSleepTimer(Index)                                 ComM_GetPncPSleepTimer(Index)++
 #define ComM_IncPncSignalValues(Index)                                ComM_GetPncSignalValues(Index)++
 #define ComM_IncUserReqFullCom(Index)                                 ComM_GetUserReqFullCom(Index)++
@@ -369,6 +393,8 @@
 */ 
 #define ComM_DecActivePncComMode(Index)                               ComM_GetActivePncComMode(Index)--
 #define ComM_DecBusPncComModeReq(Index)                               ComM_GetBusPncComModeReq(Index)--
+#define ComM_DecMinFullComModeTimer(Index)                            ComM_GetMinFullComModeTimer(Index)--
+#define ComM_DecNmLightTimer(Index)                                   ComM_GetNmLightTimer(Index)--
 #define ComM_DecPncPSleepTimer(Index)                                 ComM_GetPncPSleepTimer(Index)--
 #define ComM_DecPncSignalValues(Index)                                ComM_GetPncSignalValues(Index)--
 #define ComM_DecUserReqFullCom(Index)                                 ComM_GetUserReqFullCom(Index)--
@@ -426,6 +452,55 @@
   SECTION: GLOBAL DATA PROTOTYPES
 **********************************************************************************************************************/
 /**********************************************************************************************************************
+  ComM_Channel
+**********************************************************************************************************************/
+/** 
+  \var    ComM_Channel
+  \brief  Contains PreCompile configuration parameters of channels
+  \details
+  Element            Description
+  MinFullComTime     Minimal full communication time for the channel, relevant for NmTypes LIGHT and FULL
+  NmLightDuration    Nm Light Timeout
+  NmSupport          Decides if the channel has NmType FULL or PASSIVE
+  PncNmRequest       Decides if a Nm message shall be sent immediately after partial network state changes
+  SilentSupport      Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
+  NmType             The Network Management type of the channel
+  WakeupState        Target channel state after a Passive Wake-up
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_ChannelPb
+**********************************************************************************************************************/
+/** 
+  \var    ComM_ChannelPb
+  \brief  Contains PostBuild configuration parameters of channels
+  \details
+  Element                   Description
+  PncPbIndEndIdx            the end index of the 0:n relation pointing to ComM_PncPbInd
+  PncPbIndStartIdx          the start index of the 0:n relation pointing to ComM_PncPbInd
+  UserReqFullComEndIdx      the end index of the 0:n relation pointing to ComM_UserReqFullCom
+  UserReqFullComStartIdx    the start index of the 0:n relation pointing to ComM_UserReqFullCom
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   ComM_PncSignal
 **********************************************************************************************************************/
 /** 
@@ -466,7 +541,7 @@ extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[2];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -479,15 +554,17 @@ extern CONST(ComM_UserType, COMM_CONST) ComM_User[2];
   \var    ComM_UserByteMask
   \brief  Each user has N entries in this array (N = # channels attached to this user, directly or through PNC). Each entry describes a Byte Position and a Mask for storing/clearing the user request in UserReqFullCom
   \details
-  Element      Description
-  ClearMask    Clear-mask for clearing the bit which corresponds to this user
-  SetMask      Set-mask for setting the bit which corresponds to this user
+  Element              Description
+  Channel              ID of the channel which is requested by this entry.
+  ClearMask            Clear-mask for clearing the bit which corresponds to this user
+  SetMask              Set-mask for setting the bit which corresponds to this user
+  UserReqFullComIdx    the index of the 1:1 relation pointing to ComM_UserReqFullCom
 */ 
 #define COMM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[2];
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -523,6 +600,40 @@ extern VAR(ComM_PncModeType, COMM_VAR_NOINIT) ComM_ActivePncComMode[1];
 /*lint -restore */
 extern VAR(ComM_PncModeType, COMM_VAR_NOINIT) ComM_BusPncComModeReq[1];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_MinFullComModeTimer
+**********************************************************************************************************************/
+/** 
+  \var    ComM_MinFullComModeTimer
+  \brief  The current value of Min Full Com Mode timer
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_MinFullComModeTimerUType, COMM_VAR_NOINIT) ComM_MinFullComModeTimer;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_NmLightTimer
+**********************************************************************************************************************/
+/** 
+  \var    ComM_NmLightTimer
+  \brief  The current value of Nm Light or Nm Light Silent timer
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_NmLightTimerUType, COMM_VAR_NOINIT) ComM_NmLightTimer;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -568,7 +679,7 @@ extern VAR(ComM_PncSignalValuesUType, COMM_VAR_NOINIT) ComM_PncSignalValues;  /*
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[1];
+extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[2];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

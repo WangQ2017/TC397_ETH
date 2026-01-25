@@ -25,6 +25,9 @@
 #ifndef RTE_CBK_H
 # define RTE_CBK_H
 
+# include "Rte.h"
+#include "LdCom.h"
+
 # define RTE_START_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -33,6 +36,9 @@
  *********************************************************************************************************************/
 
 FUNC(void, RTE_CODE) Rte_ComSendSignalProxyPeriodic(void);
+FUNC(void, RTE_CODE) Rte_LdComCbkRxIndication_VechicleSpeedRx(P2CONST(PduInfoType, AUTOMATIC, COM_APPL_DATA) PduInfoPtr);
+FUNC(void, RTE_CODE) Rte_LdComCbkRxIndication_VechicleStatusRx(P2CONST(PduInfoType, AUTOMATIC, COM_APPL_DATA) PduInfoPtr);
+
 
 # define RTE_STOP_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

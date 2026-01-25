@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Lcfg.h
- *   Generation Time: 2025-12-20 09:29:02
+ *   Generation Time: 2026-01-25 10:15:42
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -50,6 +50,8 @@
 
 #include "Com_Cbk.h"
 #include "UdpNm.h"
+#include "SoAd.h"
+#include "LdCom_Cbk.h"
 
 
 /**********************************************************************************************************************
@@ -184,7 +186,7 @@
 #define PDUR_UPIFOFMMROM                                                                            STD_ON
 #define PDUR_UPIFRXINDICATIONFCTPTROFMMROM                                                          STD_ON
 #define PDUR_UPIFTRIGGERTRANSMITFCTPTROFMMROM                                                       STD_ON
-#define PDUR_UPIFTXCONFIRMATIONFCTPTROFMMROM                                                        STD_OFF  /**< Deactivateable: 'PduR_MmRom.UpIfTxConfirmationFctPtr' Reason: 'the value of PduR_UpIfTxConfirmationFctPtrOfMmRom is always 'NULL_PTR' due to this, the array is deactivated.' */
+#define PDUR_UPIFTXCONFIRMATIONFCTPTROFMMROM                                                        STD_ON
 #define PDUR_UPTPCOPYRXDATAFCTPTROFMMROM                                                            STD_OFF  /**< Deactivateable: 'PduR_MmRom.UpTpCopyRxDataFctPtr' Reason: 'the value of PduR_UpTpCopyRxDataFctPtrOfMmRom is always 'NULL_PTR' due to this, the array is deactivated.' */
 #define PDUR_UPTPCOPYTXDATAFCTPTROFMMROM                                                            STD_OFF  /**< Deactivateable: 'PduR_MmRom.UpTpCopyTxDataFctPtr' Reason: 'the value of PduR_UpTpCopyTxDataFctPtrOfMmRom is always 'NULL_PTR' due to this, the array is deactivated.' */
 #define PDUR_UPTPOFMMROM                                                                            STD_OFF  /**< Deactivateable: 'PduR_MmRom.UpTp' Reason: 'the value of PduR_UpTpOfMmRom is always 'false' due to this, the array is deactivated.' */
@@ -266,6 +268,7 @@
 #define PDUR_TPTXINSTSMSTATEOFRMGDESTTPTXSTATERAM                                                   STD_OFF  /**< Deactivateable: 'PduR_RmGDestTpTxStateRam.TpTxInstSmState' Reason: 'No TransportProtocol BswModule active.' */
 #define PDUR_RMSRCROM                                                                               STD_ON
 #define PDUR_LOCKROMIDXOFRMSRCROM                                                                   STD_ON
+#define PDUR_MASKEDBITSOFRMSRCROM                                                                   STD_ON
 #define PDUR_MMROMIDXOFRMSRCROM                                                                     STD_ON
 #define PDUR_PARTITIONINDEXOFCSLOFRMSRCROM                                                          STD_ON
 #define PDUR_RMBUFFEREDTPPROPERTIESROMIDXOFRMSRCROM                                                 STD_OFF  /**< Deactivateable: 'PduR_RmSrcRom.RmBufferedTpPropertiesRomIdx' Reason: 'No TransportProtocol BswModule active.' */
@@ -277,7 +280,7 @@
 #define PDUR_SMSRCROMUSEDOFRMSRCROM                                                                 STD_OFF  /**< Deactivateable: 'PduR_RmSrcRom.SmSrcRomUsed' Reason: '/ActiveEcuC/PduR/PduRGeneral[0:PduRSwitching] is configured to 'false'' */
 #define PDUR_SRCHNDOFRMSRCROM                                                                       STD_ON
 #define PDUR_TRIGGERTRANSMITSUPPORTEDOFRMSRCROM                                                     STD_ON
-#define PDUR_TXCONFIRMATIONSUPPORTEDOFRMSRCROM                                                      STD_OFF  /**< Deactivateable: 'PduR_RmSrcRom.TxConfirmationSupported' Reason: 'No BswModule with TxConfirmation active.' */
+#define PDUR_TXCONFIRMATIONSUPPORTEDOFRMSRCROM                                                      STD_ON
 #define PDUR_RMTRANSMITFCTPTR                                                                       STD_ON
 #define PDUR_RPGEXTIDROM                                                                            STD_ON
 #define PDUR_INVALIDHNDOFRPGEXTIDROM                                                                STD_OFF  /**< Deactivateable: 'PduR_RpgExtIdRom.InvalidHnd' Reason: 'the value of PduR_InvalidHndOfRpgExtIdRom is always 'false' due to this, the array is deactivated.' and Deactivateable: 'PduR_RpgExtIdRom.InvalidHnd' Reason: 'the value of PduR_InvalidHndOfRpgExtIdRom is always 'false' due to this, the array is deactivated.' */
@@ -395,7 +398,7 @@
 #define PDUR_INVALIDHNDOFTXIF2UP                                                                    STD_OFF  /**< Deactivateable: 'PduR_TxIf2Up.InvalidHnd' Reason: 'the value of PduR_InvalidHndOfTxIf2Up is always 'false' due to this, the array is deactivated.' and Deactivateable: 'PduR_TxIf2Up.InvalidHnd' Reason: 'the value of PduR_InvalidHndOfTxIf2Up is always 'false' due to this, the array is deactivated.' */
 #define PDUR_PARTITIONINDEXOFCSLOFTXIF2UP                                                           STD_ON
 #define PDUR_RMGDESTROMIDXOFTXIF2UP                                                                 STD_ON
-#define PDUR_TXCONFIRMATIONUSEDOFTXIF2UP                                                            STD_OFF  /**< Deactivateable: 'PduR_TxIf2Up.TxConfirmationUsed' Reason: 'No tx confirmation PduRBswModule configured. Evaluated DefinitionRef: /MICROSAR/PduR/PduRBswModules/PduRTxConfirmation' */
+#define PDUR_TXCONFIRMATIONUSEDOFTXIF2UP                                                            STD_ON
 #define PDUR_TXTP2SRC                                                                               STD_OFF  /**< Deactivateable: 'PduR_TxTp2Src' Reason: 'No transport protocol PduRBswModule configured. Evaluated DefinitionRef: /MICROSAR/PduR/PduRBswModules/PduRTransportProtocol' */
 #define PDUR_BSWMPDURTPTXCONFIRMATIONCALLBACKOFTXTP2SRC                                             STD_OFF  /**< Deactivateable: 'PduR_TxTp2Src.BswMPduRTpTxConfirmationCallback' Reason: 'No transport protocol PduRBswModule configured. Evaluated DefinitionRef: /MICROSAR/PduR/PduRBswModules/PduRTransportProtocol' */
 #define PDUR_INVALIDHNDOFTXTP2SRC                                                                   STD_OFF  /**< Deactivateable: 'PduR_TxTp2Src.InvalidHnd' Reason: 'No transport protocol PduRBswModule configured. Evaluated DefinitionRef: /MICROSAR/PduR/PduRBswModules/PduRTransportProtocol' and Deactivateable: 'PduR_TxTp2Src.InvalidHnd' Reason: 'No transport protocol PduRBswModule configured. Evaluated DefinitionRef: /MICROSAR/PduR/PduRBswModules/PduRTransportProtocol' */
@@ -559,6 +562,8 @@
 #define PDUR_LOIFOFMMROM_MASK                                                                       0x04u
 #define PDUR_RMGDESTROMUSEDOFMMROM_MASK                                                             0x02u
 #define PDUR_UPIFOFMMROM_MASK                                                                       0x01u
+#define PDUR_TRIGGERTRANSMITSUPPORTEDOFRMSRCROM_MASK                                                0x02u
+#define PDUR_TXCONFIRMATIONSUPPORTEDOFRMSRCROM_MASK                                                 0x01u
 #define PDUR_ENABLEDATINITOFRPGROM_MASK                                                             0x02u
 #define PDUR_RMDESTRPGROMINDUSEDOFRPGROM_MASK                                                       0x01u
 /** 
@@ -590,6 +595,7 @@
 #define PDUR_ISDEF_UPIFOFMMROM                                                                      STD_OFF
 #define PDUR_ISDEF_UPIFRXINDICATIONFCTPTROFMMROM                                                    STD_OFF
 #define PDUR_ISDEF_UPIFTRIGGERTRANSMITFCTPTROFMMROM                                                 STD_OFF
+#define PDUR_ISDEF_UPIFTXCONFIRMATIONFCTPTROFMMROM                                                  STD_OFF
 #define PDUR_ISDEF_MMROMIND                                                                         STD_OFF
 #define PDUR_ISDEF_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                       STD_OFF
 #define PDUR_ISDEF_PARTITIONSNVOFPARTITIONIDENTIFIERS                                               STD_OFF
@@ -614,6 +620,7 @@
 #define PDUR_ISDEF_RMDESTROMIDXOFRMGDESTROM                                                         STD_OFF
 #define PDUR_ISDEF_TXIF2UPIDXOFRMGDESTROM                                                           STD_OFF
 #define PDUR_ISDEF_LOCKROMIDXOFRMSRCROM                                                             STD_OFF
+#define PDUR_ISDEF_MASKEDBITSOFRMSRCROM                                                             STD_OFF
 #define PDUR_ISDEF_MMROMIDXOFRMSRCROM                                                               STD_OFF
 #define PDUR_ISDEF_PARTITIONINDEXOFCSLOFRMSRCROM                                                    STD_OFF
 #define PDUR_ISDEF_RMDESTROMENDIDXOFRMSRCROM                                                        STD_OFF
@@ -621,6 +628,7 @@
 #define PDUR_ISDEF_RMDESTROMSTARTIDXOFRMSRCROM                                                      STD_OFF
 #define PDUR_ISDEF_SRCHNDOFRMSRCROM                                                                 STD_OFF
 #define PDUR_ISDEF_TRIGGERTRANSMITSUPPORTEDOFRMSRCROM                                               STD_OFF
+#define PDUR_ISDEF_TXCONFIRMATIONSUPPORTEDOFRMSRCROM                                                STD_OFF
 #define PDUR_ISDEF_RMTRANSMITFCTPTR                                                                 STD_OFF
 #define PDUR_ISDEF_PARTITIONINDEXOFCSLOFRPGEXTIDROM                                                 STD_OFF
 #define PDUR_ISDEF_RPGROMIDXOFRPGEXTIDROM                                                           STD_OFF
@@ -639,6 +647,7 @@
 #define PDUR_ISDEF_RMTRANSMITFCTPTRIDXOFTX2LO                                                       STD_OFF
 #define PDUR_ISDEF_PARTITIONINDEXOFCSLOFTXIF2UP                                                     STD_OFF
 #define PDUR_ISDEF_RMGDESTROMIDXOFTXIF2UP                                                           STD_OFF
+#define PDUR_ISDEF_TXCONFIRMATIONUSEDOFTXIF2UP                                                      STD_OFF
 #define PDUR_ISDEF_PCPARTITIONCONFIGOFPCCONFIG                                                      STD_ON
 #define PDUR_ISDEF_PARTITIONIDENTIFIERSOFPCCONFIG                                                   STD_ON
 #define PDUR_ISDEF_DESTAPPLICATIONMANAGERROMOFPCPARTITIONCONFIG                                     STD_ON
@@ -691,6 +700,7 @@
 #define PDUR_EQ2_UPIFOFMMROM                                                                        
 #define PDUR_EQ2_UPIFRXINDICATIONFCTPTROFMMROM                                                      
 #define PDUR_EQ2_UPIFTRIGGERTRANSMITFCTPTROFMMROM                                                   
+#define PDUR_EQ2_UPIFTXCONFIRMATIONFCTPTROFMMROM                                                    
 #define PDUR_EQ2_MMROMIND                                                                           
 #define PDUR_EQ2_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                         
 #define PDUR_EQ2_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                 
@@ -715,6 +725,7 @@
 #define PDUR_EQ2_RMDESTROMIDXOFRMGDESTROM                                                           
 #define PDUR_EQ2_TXIF2UPIDXOFRMGDESTROM                                                             
 #define PDUR_EQ2_LOCKROMIDXOFRMSRCROM                                                               
+#define PDUR_EQ2_MASKEDBITSOFRMSRCROM                                                               
 #define PDUR_EQ2_MMROMIDXOFRMSRCROM                                                                 
 #define PDUR_EQ2_PARTITIONINDEXOFCSLOFRMSRCROM                                                      
 #define PDUR_EQ2_RMDESTROMENDIDXOFRMSRCROM                                                          
@@ -722,6 +733,7 @@
 #define PDUR_EQ2_RMDESTROMSTARTIDXOFRMSRCROM                                                        
 #define PDUR_EQ2_SRCHNDOFRMSRCROM                                                                   
 #define PDUR_EQ2_TRIGGERTRANSMITSUPPORTEDOFRMSRCROM                                                 
+#define PDUR_EQ2_TXCONFIRMATIONSUPPORTEDOFRMSRCROM                                                  
 #define PDUR_EQ2_RMTRANSMITFCTPTR                                                                   
 #define PDUR_EQ2_PARTITIONINDEXOFCSLOFRPGEXTIDROM                                                   
 #define PDUR_EQ2_RPGROMIDXOFRPGEXTIDROM                                                             
@@ -740,6 +752,7 @@
 #define PDUR_EQ2_RMTRANSMITFCTPTRIDXOFTX2LO                                                         
 #define PDUR_EQ2_PARTITIONINDEXOFCSLOFTXIF2UP                                                       
 #define PDUR_EQ2_RMGDESTROMIDXOFTXIF2UP                                                             
+#define PDUR_EQ2_TXCONFIRMATIONUSEDOFTXIF2UP                                                        
 #define PDUR_EQ2_PCPARTITIONCONFIGOFPCCONFIG                                                        PduR_PCPartitionConfig
 #define PDUR_EQ2_PARTITIONIDENTIFIERSOFPCCONFIG                                                     PduR_PartitionIdentifiers
 #define PDUR_EQ2_DESTAPPLICATIONMANAGERROMOFPCPARTITIONCONFIG                                       PduR_DestApplicationManagerRom
@@ -775,10 +788,7 @@
 #define PduR_DestApplicationManagerRom                                                              ((PduR_DestApplicationManagerRomPtrType)(&(PduR_PCPartitionConfig)))  /**< Non derefenciateable valid pointer */
 #define PduR_LockRom                                                                                ((PduR_LockRomPtrType)(&(PduR_PCPartitionConfig)))  /**< Non derefenciateable valid pointer */
 #define PduR_MmRomInd                                                                               ((PduR_MmRomIndPtrType)(&(PduR_PCPartitionConfig)))  /**< Non derefenciateable valid pointer */
-#define PduR_RxIf2Dest                                                                              ((PduR_RxIf2DestPtrType)(&(PduR_PCPartitionConfig)))  /**< Non derefenciateable valid pointer */
 #define PduR_SrcApplicationRom                                                                      ((PduR_SrcApplicationRomPtrType)(&(PduR_PCPartitionConfig)))  /**< Non derefenciateable valid pointer */
-#define PduR_Tx2Lo                                                                                  ((PduR_Tx2LoPtrType)(&(PduR_PCPartitionConfig)))  /**< Non derefenciateable valid pointer */
-#define PduR_TxIf2Up                                                                                ((PduR_TxIf2UpPtrType)(&(PduR_PCPartitionConfig)))  /**< Non derefenciateable valid pointer */
 /** 
   \}
 */ 
@@ -896,20 +906,20 @@
 #define PduR_GetSizeOfExclusiveAreaRomOfPCPartitionConfig()                                         1u  /**< the number of accomplishable value elements in PduR_ExclusiveAreaRom */
 #define PduR_GetSizeOfGeneralPropertiesRomOfPCPartitionConfig()                                     1u  /**< the number of accomplishable value elements in PduR_GeneralPropertiesRom */
 #define PduR_GetSizeOfLockRomOfPCPartitionConfig()                                                  1u  /**< the number of accomplishable value elements in PduR_LockRom */
-#define PduR_GetSizeOfMmRomIndOfPCPartitionConfig()                                                 2u  /**< the number of accomplishable value elements in PduR_MmRomInd */
-#define PduR_GetSizeOfMmRomOfPCPartitionConfig()                                                    2u  /**< the number of accomplishable value elements in PduR_MmRom */
-#define PduR_GetSizeOfRmDestRomOfPCPartitionConfig()                                                2u  /**< the number of accomplishable value elements in PduR_RmDestRom */
+#define PduR_GetSizeOfMmRomIndOfPCPartitionConfig()                                                 4u  /**< the number of accomplishable value elements in PduR_MmRomInd */
+#define PduR_GetSizeOfMmRomOfPCPartitionConfig()                                                    4u  /**< the number of accomplishable value elements in PduR_MmRom */
+#define PduR_GetSizeOfRmDestRomOfPCPartitionConfig()                                                8u  /**< the number of accomplishable value elements in PduR_RmDestRom */
 #define PduR_GetSizeOfRmDestRpgRomIndOfPCPartitionConfig(partitionIndex)                            2u  /**< the number of accomplishable value elements in PduR_RmDestRpgRomInd */
 #define PduR_GetSizeOfRmDestRpgRomOfPCPartitionConfig(partitionIndex)                               2u  /**< the number of accomplishable value elements in PduR_RmDestRpgRom */
-#define PduR_GetSizeOfRmGDestRomOfPCPartitionConfig()                                               2u  /**< the number of accomplishable value elements in PduR_RmGDestRom */
-#define PduR_GetSizeOfRmSrcRomOfPCPartitionConfig()                                                 2u  /**< the number of accomplishable value elements in PduR_RmSrcRom */
+#define PduR_GetSizeOfRmGDestRomOfPCPartitionConfig()                                               8u  /**< the number of accomplishable value elements in PduR_RmGDestRom */
+#define PduR_GetSizeOfRmSrcRomOfPCPartitionConfig()                                                 8u  /**< the number of accomplishable value elements in PduR_RmSrcRom */
 #define PduR_GetSizeOfRmTransmitFctPtrOfPCPartitionConfig()                                         1u  /**< the number of accomplishable value elements in PduR_RmTransmitFctPtr */
 #define PduR_GetSizeOfRpgExtIdRomOfPCPartitionConfig()                                              2u  /**< the number of accomplishable value elements in PduR_RpgExtIdRom */
 #define PduR_GetSizeOfRpgRomOfPCPartitionConfig(partitionIndex)                                     2u  /**< the number of accomplishable value elements in PduR_RpgRom */
-#define PduR_GetSizeOfRxIf2DestOfPCPartitionConfig()                                                1u  /**< the number of accomplishable value elements in PduR_RxIf2Dest */
+#define PduR_GetSizeOfRxIf2DestOfPCPartitionConfig()                                                4u  /**< the number of accomplishable value elements in PduR_RxIf2Dest */
 #define PduR_GetSizeOfSrcApplicationRomOfPCPartitionConfig()                                        1u  /**< the number of accomplishable value elements in PduR_SrcApplicationRom */
-#define PduR_GetSizeOfTx2LoOfPCPartitionConfig()                                                    1u  /**< the number of accomplishable value elements in PduR_Tx2Lo */
-#define PduR_GetSizeOfTxIf2UpOfPCPartitionConfig()                                                  1u  /**< the number of accomplishable value elements in PduR_TxIf2Up */
+#define PduR_GetSizeOfTx2LoOfPCPartitionConfig()                                                    4u  /**< the number of accomplishable value elements in PduR_Tx2Lo */
+#define PduR_GetSizeOfTxIf2UpOfPCPartitionConfig()                                                  4u  /**< the number of accomplishable value elements in PduR_TxIf2Up */
 #define PduR_GetSrcApplicationRomOfPCPartitionConfig()                                              PduR_SrcApplicationRom  /**< the pointer to PduR_SrcApplicationRom */
 #define PduR_GetTx2LoOfPCPartitionConfig()                                                          PduR_Tx2Lo  /**< the pointer to PduR_Tx2Lo */
 #define PduR_GetTxIf2UpOfPCPartitionConfig()                                                        PduR_TxIf2Up  /**< the pointer to PduR_TxIf2Up */
@@ -940,21 +950,40 @@
 #define PduR_GetDestApplicationManagerRomIdxOfMmRom(Index)                                          (PduR_GetMmRomOfPCPartitionConfig()[(Index)].DestApplicationManagerRomIdxOfMmRom)
 #define PduR_GetLoIfTransmitFctPtrOfMmRom(Index)                                                    (PduR_GetMmRomOfPCPartitionConfig()[(Index)].LoIfTransmitFctPtrOfMmRom)
 #define PduR_GetMaskedBitsOfMmRom(Index)                                                            (PduR_GetMmRomOfPCPartitionConfig()[(Index)].MaskedBitsOfMmRom)
+#define PduR_GetRmGDestRomEndIdxOfMmRom(Index)                                                      (PduR_GetMmRomOfPCPartitionConfig()[(Index)].RmGDestRomEndIdxOfMmRom)
+#define PduR_GetRmGDestRomStartIdxOfMmRom(Index)                                                    (PduR_GetMmRomOfPCPartitionConfig()[(Index)].RmGDestRomStartIdxOfMmRom)
 #define PduR_GetUpIfRxIndicationFctPtrOfMmRom(Index)                                                (PduR_GetMmRomOfPCPartitionConfig()[(Index)].UpIfRxIndicationFctPtrOfMmRom)
 #define PduR_GetUpIfTriggerTransmitFctPtrOfMmRom(Index)                                             (PduR_GetMmRomOfPCPartitionConfig()[(Index)].UpIfTriggerTransmitFctPtrOfMmRom)
+#define PduR_GetUpIfTxConfirmationFctPtrOfMmRom(Index)                                              (PduR_GetMmRomOfPCPartitionConfig()[(Index)].UpIfTxConfirmationFctPtrOfMmRom)
 #define PduR_GetPartitionSNVOfPartitionIdentifiers(Index)                                           (PduR_GetPartitionIdentifiersOfPCConfig()[(Index)].PartitionSNVOfPartitionIdentifiers)
 #define PduR_GetPduLengthHandlingStrategyOfRmDestRom(Index)                                         (PduR_GetRmDestRomOfPCPartitionConfig()[(Index)].PduLengthHandlingStrategyOfRmDestRom)
+#define PduR_GetRmDestRpgRomIdxOfRmDestRom(Index)                                                   (PduR_GetRmDestRomOfPCPartitionConfig()[(Index)].RmDestRpgRomIdxOfRmDestRom)
+#define PduR_GetRmGDestRomIdxOfRmDestRom(Index)                                                     (PduR_GetRmDestRomOfPCPartitionConfig()[(Index)].RmGDestRomIdxOfRmDestRom)
+#define PduR_GetRmSrcRomIdxOfRmDestRom(Index)                                                       (PduR_GetRmDestRomOfPCPartitionConfig()[(Index)].RmSrcRomIdxOfRmDestRom)
+#define PduR_GetRoutingTypeOfRmDestRom(Index)                                                       (PduR_GetRmDestRomOfPCPartitionConfig()[(Index)].RoutingTypeOfRmDestRom)
 #define PduR_GetEnabledCntOfRmDestRpgRam(Index, partitionIndex)                                     (PduR_GetRmDestRpgRamOfPCPartitionConfig(partitionIndex)[(Index)].EnabledCntOfRmDestRpgRam)
 #define PduR_GetInitialEnabledCntOfRmDestRpgRom(Index, partitionIndex)                              (PduR_GetRmDestRpgRomOfPCPartitionConfig(partitionIndex)[(Index)].InitialEnabledCntOfRmDestRpgRom)
 #define PduR_GetRmDestRpgRomInd(Index, partitionIndex)                                              (PduR_GetRmDestRpgRomIndOfPCPartitionConfig(partitionIndex)[(Index)])
-#define PduR_GetLockRomIdxOfRmGDestRom(Index)                                                       (PduR_GetRmGDestRomOfPCPartitionConfig()[(Index)].LockRomIdxOfRmGDestRom)
+#define PduR_GetDestHndOfRmGDestRom(Index)                                                          (PduR_GetRmGDestRomOfPCPartitionConfig()[(Index)].DestHndOfRmGDestRom)
+#define PduR_GetDirectionOfRmGDestRom(Index)                                                        (PduR_GetRmGDestRomOfPCPartitionConfig()[(Index)].DirectionOfRmGDestRom)
+#define PduR_GetMaxPduLengthOfRmGDestRom(Index)                                                     (PduR_GetRmGDestRomOfPCPartitionConfig()[(Index)].MaxPduLengthOfRmGDestRom)
+#define PduR_GetMmRomIdxOfRmGDestRom(Index)                                                         (PduR_GetRmGDestRomOfPCPartitionConfig()[(Index)].MmRomIdxOfRmGDestRom)
+#define PduR_GetPartitionIndexOfCslOfRmGDestRom(Index)                                              (PduR_GetRmGDestRomOfPCPartitionConfig()[(Index)].PartitionIndexOfCslOfRmGDestRom)
+#define PduR_GetRmDestRomIdxOfRmGDestRom(Index)                                                     (PduR_GetRmGDestRomOfPCPartitionConfig()[(Index)].RmDestRomIdxOfRmGDestRom)
+#define PduR_GetMaskedBitsOfRmSrcRom(Index)                                                         (PduR_GetRmSrcRomOfPCPartitionConfig()[(Index)].MaskedBitsOfRmSrcRom)
 #define PduR_GetMmRomIdxOfRmSrcRom(Index)                                                           (PduR_GetRmSrcRomOfPCPartitionConfig()[(Index)].MmRomIdxOfRmSrcRom)
 #define PduR_GetPartitionIndexOfCslOfRmSrcRom(Index)                                                (PduR_GetRmSrcRomOfPCPartitionConfig()[(Index)].PartitionIndexOfCslOfRmSrcRom)
+#define PduR_GetRmDestRomStartIdxOfRmSrcRom(Index)                                                  (PduR_GetRmSrcRomOfPCPartitionConfig()[(Index)].RmDestRomStartIdxOfRmSrcRom)
 #define PduR_GetSrcHndOfRmSrcRom(Index)                                                             (PduR_GetRmSrcRomOfPCPartitionConfig()[(Index)].SrcHndOfRmSrcRom)
 #define PduR_GetRmTransmitFctPtr(Index)                                                             (PduR_GetRmTransmitFctPtrOfPCPartitionConfig()[(Index)])
 #define PduR_GetPartitionIndexOfCslOfRpgExtIdRom(Index)                                             (PduR_GetRpgExtIdRomOfPCPartitionConfig()[(Index)].PartitionIndexOfCslOfRpgExtIdRom)
 #define PduR_IsEnabledOfRpgRam(Index, partitionIndex)                                               ((PduR_GetRpgRamOfPCPartitionConfig(partitionIndex)[(Index)].EnabledOfRpgRam) != FALSE)
 #define PduR_GetMaskedBitsOfRpgRom(Index, partitionIndex)                                           (PduR_GetRpgRomOfPCPartitionConfig(partitionIndex)[(Index)].MaskedBitsOfRpgRom)
+#define PduR_GetPartitionIndexOfCslOfRxIf2Dest(Index)                                               (PduR_GetRxIf2DestOfPCPartitionConfig()[(Index)].PartitionIndexOfCslOfRxIf2Dest)
+#define PduR_GetRmTransmitFctPtrIdxOfTx2Lo(Index)                                                   (PduR_GetTx2LoOfPCPartitionConfig()[(Index)].RmTransmitFctPtrIdxOfTx2Lo)
+#define PduR_GetPartitionIndexOfCslOfTxIf2Up(Index)                                                 (PduR_GetTxIf2UpOfPCPartitionConfig()[(Index)].PartitionIndexOfCslOfTxIf2Up)
+#define PduR_GetRmGDestRomIdxOfTxIf2Up(Index)                                                       (PduR_GetTxIf2UpOfPCPartitionConfig()[(Index)].RmGDestRomIdxOfTxIf2Up)
+#define PduR_IsTxConfirmationUsedOfTxIf2Up(Index)                                                   ((PduR_GetTxIf2UpOfPCPartitionConfig()[(Index)].TxConfirmationUsedOfTxIf2Up) != FALSE)
 /** 
   \}
 */ 
@@ -976,7 +1005,7 @@
   \{
 */ 
 #define PduR_GetConfigId(partitionIndex)                                                            PduR_GetConfigIdOfPCPartitionConfig(partitionIndex)
-#define PduR_GetMmRomIndEndIdxOfDestApplicationManagerRom(Index)                                    ((PduR_MmRomIndEndIdxOfDestApplicationManagerRomType)((((PduR_MmRomIndEndIdxOfDestApplicationManagerRomType)(Index)) + 2u)))  /**< the end index of the 0:n relation pointing to PduR_MmRomInd */
+#define PduR_GetMmRomIndEndIdxOfDestApplicationManagerRom(Index)                                    ((PduR_MmRomIndEndIdxOfDestApplicationManagerRomType)((((PduR_MmRomIndEndIdxOfDestApplicationManagerRomType)(Index)) + 4u)))  /**< the end index of the 0:n relation pointing to PduR_MmRomInd */
 #define PduR_GetMmRomIndStartIdxOfDestApplicationManagerRom(Index)                                  ((PduR_MmRomIndStartIdxOfDestApplicationManagerRomType)((Index)))  /**< the start index of the 0:n relation pointing to PduR_MmRomInd */
 #define PduR_IsMmRomIndUsedOfDestApplicationManagerRom(Index)                                       (((boolean)(PduR_GetMmRomIndStartIdxOfDestApplicationManagerRom(Index) != PDUR_NO_MMROMINDSTARTIDXOFDESTAPPLICATIONMANAGERROM)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to PduR_MmRomInd */
 #define PduR_GetSrcApplicationRomEndIdxOfDestApplicationManagerRom(Index)                           ((PduR_SrcApplicationRomEndIdxOfDestApplicationManagerRomType)((((PduR_SrcApplicationRomEndIdxOfDestApplicationManagerRomType)(Index)) + 1u)))  /**< the end index of the 1:n relation pointing to PduR_SrcApplicationRom */
@@ -984,38 +1013,26 @@
 #define PduR_GetExclusiveAreaRomIdxOfLockRom(Index)                                                 ((PduR_ExclusiveAreaRomIdxOfLockRomType)((Index)))  /**< the index of the 0:1 relation pointing to PduR_ExclusiveAreaRom */
 #define PduR_IsExclusiveAreaRomUsedOfLockRom(Index)                                                 (((boolean)(PduR_GetExclusiveAreaRomIdxOfLockRom(Index) != PDUR_NO_EXCLUSIVEAREAROMIDXOFLOCKROM)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to PduR_ExclusiveAreaRom */
 #define PduR_IsLoIfOfMmRom(Index)                                                                   (((!(PduR_IsUpIfOfMmRom(Index)))) != FALSE)  /**< Is the module a lower communication interface module. */
-#define PduR_GetRmGDestRomEndIdxOfMmRom(Index)                                                      ((PduR_RmGDestRomEndIdxOfMmRomType)((((PduR_RmGDestRomEndIdxOfMmRomType)(Index)) + 1u)))  /**< the end index of the 0:n relation pointing to PduR_RmGDestRom */
-#define PduR_GetRmGDestRomStartIdxOfMmRom(Index)                                                    ((PduR_RmGDestRomStartIdxOfMmRomType)((Index)))  /**< the start index of the 0:n relation pointing to PduR_RmGDestRom */
 #define PduR_IsRmGDestRomUsedOfMmRom(Index)                                                         (((boolean)(PduR_GetRmGDestRomStartIdxOfMmRom(Index) != PDUR_NO_RMGDESTROMSTARTIDXOFMMROM)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to PduR_RmGDestRom */
 #define PduR_GetMmRomInd(Index)                                                                     ((PduR_MmRomIndType)((Index)))  /**< the indexes of the 1:1 sorted relation pointing to PduR_MmRom */
 #define PduR_GetPCPartitionConfigIdxOfPartitionIdentifiers(Index)                                   ((PduR_PCPartitionConfigIdxOfPartitionIdentifiersType)((Index)))  /**< the index of the 1:1 relation pointing to PduR_PCPartitionConfig */
 #define PduR_GetPartitionIndexOfCslOfRmDestRom(Index)                                               ((PduR_PartitionIndexOfCslOfRmDestRomType)((PduR_GetPduLengthHandlingStrategyOfRmDestRom(Index) - 0x02u)))
-#define PduR_GetRmDestRpgRomIdxOfRmDestRom(Index)                                                   ((PduR_RmDestRpgRomIdxOfRmDestRomType)((Index)))  /**< the index of the 0:1 relation pointing to PduR_RmDestRpgRom */
 #define PduR_IsRmDestRpgRomUsedOfRmDestRom(Index)                                                   (((boolean)(PduR_GetRmDestRpgRomIdxOfRmDestRom(Index) != PDUR_NO_RMDESTRPGROMIDXOFRMDESTROM)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to PduR_RmDestRpgRom */
-#define PduR_GetRmGDestRomIdxOfRmDestRom(Index)                                                     ((PduR_RmGDestRomIdxOfRmDestRomType)((Index)))  /**< the index of the 1:1 relation pointing to PduR_RmGDestRom */
-#define PduR_GetRmSrcRomIdxOfRmDestRom(Index)                                                       ((PduR_RmSrcRomIdxOfRmDestRomType)((Index)))  /**< the index of the 1:1 relation pointing to PduR_RmSrcRom */
-#define PduR_GetRoutingTypeOfRmDestRom(Index)                                                       ((PduR_RoutingTypeOfRmDestRomType)((Index)))  /**< Type of the Routing (API Forwarding, Gateway). */
-#define PduR_GetRmDestRomIdxOfRmDestRpgRom(Index, partitionIndex)                                   ((PduR_RmDestRomIdxOfRmDestRpgRomType)((Index)))  /**< the index of the 0:1 relation pointing to PduR_RmDestRom */
+#define PduR_GetRmDestRomIdxOfRmDestRpgRom(Index, partitionIndex)                                   ((PduR_RmDestRomIdxOfRmDestRpgRomType)((((PduR_RmDestRomIdxOfRmDestRpgRomType)(Index)) + 1u)))  /**< the index of the 0:1 relation pointing to PduR_RmDestRom */
 #define PduR_IsRmDestRomUsedOfRmDestRpgRom(Index, partitionIndex)                                   (((boolean)(PduR_GetRmDestRomIdxOfRmDestRpgRom(((Index)), (partitionIndex)) != PDUR_NO_RMDESTROMIDXOFRMDESTRPGROM)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to PduR_RmDestRom */
-#define PduR_GetDestHndOfRmGDestRom(Index)                                                          PduR_GetLockRomIdxOfRmGDestRom(Index)  /**< handle to be used as parameter for the StartOfReception, CopyRxData, Transmit or RxIndication function call. */
-#define PduR_GetDirectionOfRmGDestRom(Index)                                                        ((PduR_DirectionOfRmGDestRomType)((Index)))  /**< Direction of this Pdu: Rx or Tx */
-#define PduR_GetMaxPduLengthOfRmGDestRom(Index)                                                     ((PduR_MaxPduLengthOfRmGDestRomType)((PduR_GetLockRomIdxOfRmGDestRom(Index) + 7u)))  /**< Configured PduLength + metadata length. */
-#define PduR_GetMmRomIdxOfRmGDestRom(Index)                                                         ((PduR_MmRomIdxOfRmGDestRomType)((Index)))  /**< the index of the 1:1 relation pointing to PduR_MmRom */
-#define PduR_GetPartitionIndexOfCslOfRmGDestRom(Index)                                              PduR_GetLockRomIdxOfRmGDestRom(Index)
-#define PduR_GetPduRDestPduProcessingOfRmGDestRom(Index)                                            ((PduR_PduRDestPduProcessingOfRmGDestRomType)((PduR_GetLockRomIdxOfRmGDestRom(Index) + 1u)))  /**< Is Processing Type of destination PDU. */
-#define PduR_GetRmDestRomIdxOfRmGDestRom(Index)                                                     ((PduR_RmDestRomIdxOfRmGDestRomType)((Index)))  /**< the index of the 1:1 relation pointing to PduR_RmDestRom */
-#define PduR_GetTxIf2UpIdxOfRmGDestRom(Index)                                                       PduR_GetLockRomIdxOfRmGDestRom(Index)  /**< TxIf2Up index. */
+#define PduR_GetLockRomIdxOfRmGDestRom(Index)                                                       PduR_GetPartitionIndexOfCslOfRmGDestRom(Index)  /**< the index of the 1:1 relation pointing to PduR_LockRom */
+#define PduR_GetPduRDestPduProcessingOfRmGDestRom(Index)                                            ((PduR_PduRDestPduProcessingOfRmGDestRomType)((PduR_GetPartitionIndexOfCslOfRmGDestRom(Index) + 1u)))  /**< Is Processing Type of destination PDU. */
+#define PduR_GetTxIf2UpIdxOfRmGDestRom(Index)                                                       PduR_GetPartitionIndexOfCslOfRmGDestRom(Index)  /**< TxIf2Up index. */
 #define PduR_GetLockRomIdxOfRmSrcRom(Index)                                                         PduR_GetPartitionIndexOfCslOfRmSrcRom(Index)  /**< the index of the 1:1 relation pointing to PduR_LockRom */
-#define PduR_GetRmDestRomEndIdxOfRmSrcRom(Index)                                                    ((PduR_RmDestRomEndIdxOfRmSrcRomType)((((PduR_RmDestRomEndIdxOfRmSrcRomType)(Index)) + 1u)))  /**< the end index of the 1:n relation pointing to PduR_RmDestRom */
+#define PduR_GetRmDestRomEndIdxOfRmSrcRom(Index)                                                    ((PduR_RmDestRomEndIdxOfRmSrcRomType)((PduR_GetRmDestRomStartIdxOfRmSrcRom(Index) + 1u)))  /**< the end index of the 1:n relation pointing to PduR_RmDestRom */
 #define PduR_GetRmDestRomLengthOfRmSrcRom(Index)                                                    ((PduR_RmDestRomLengthOfRmSrcRomType)((PduR_GetPartitionIndexOfCslOfRmSrcRom(Index) + 1u)))  /**< the number of relations pointing to PduR_RmDestRom */
-#define PduR_GetRmDestRomStartIdxOfRmSrcRom(Index)                                                  ((PduR_RmDestRomStartIdxOfRmSrcRomType)((Index)))  /**< the start index of the 1:n relation pointing to PduR_RmDestRom */
-#define PduR_IsTriggerTransmitSupportedOfRmSrcRom(Index)                                            (((boolean)(PduR_GetMmRomIdxOfRmSrcRom(Index) == 0u)) != FALSE)
+#define PduR_IsTriggerTransmitSupportedOfRmSrcRom(Index)                                            (((boolean)(PduR_GetMaskedBitsOfRmSrcRom(Index) == 0x02u)) != FALSE)
+#define PduR_IsTxConfirmationSupportedOfRmSrcRom(Index)                                             (((boolean)(PduR_GetMaskedBitsOfRmSrcRom(Index) == 0x01u)) != FALSE)
 #define PduR_GetRpgRomIdxOfRpgExtIdRom(Index)                                                       ((PduR_RpgRomIdxOfRpgExtIdRomType)((Index)))  /**< the index of the 0:1 relation pointing to PduR_RpgRom */
 #define PduR_IsRpgRomUsedOfRpgExtIdRom(Index)                                                       (((boolean)(PduR_GetRpgRomIdxOfRpgExtIdRom(Index) != PDUR_NO_RPGROMIDXOFRPGEXTIDROM)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to PduR_RpgRom */
 #define PduR_IsEnabledAtInitOfRpgRom(Index, partitionIndex)                                         (((!(PduR_IsRmDestRpgRomIndUsedOfRpgRom(((Index)), (partitionIndex))))) != FALSE)  /**< TRUE, if the PduRRoutingPathGroup is enabled after PduR_Init() is called. */
 #define PduR_GetRmDestRpgRomIndEndIdxOfRpgRom(Index, partitionIndex)                                ((PduR_RmDestRpgRomIndEndIdxOfRpgRomType)((((PduR_RmDestRpgRomIndEndIdxOfRpgRomType)(Index)) + 1u)))  /**< the end index of the 0:n relation pointing to PduR_RmDestRpgRomInd */
 #define PduR_GetRmDestRpgRomIndStartIdxOfRpgRom(Index, partitionIndex)                              ((PduR_RmDestRpgRomIndStartIdxOfRpgRomType)((Index)))  /**< the start index of the 0:n relation pointing to PduR_RmDestRpgRomInd */
-#define PduR_GetPartitionIndexOfCslOfRxIf2Dest(Index)                                               ((PduR_PartitionIndexOfCslOfRxIf2DestType)((Index)))
 #define PduR_GetRmSrcRomIdxOfRxIf2Dest(Index)                                                       ((PduR_RmSrcRomIdxOfRxIf2DestType)((Index)))  /**< the index of the 1:1 relation pointing to PduR_RmSrcRom */
 #define PduR_GetSizeOfDestApplicationManagerRom()                                                   PduR_GetSizeOfDestApplicationManagerRomOfPCPartitionConfig()
 #define PduR_GetSizeOfExclusiveAreaRom()                                                            PduR_GetSizeOfExclusiveAreaRomOfPCPartitionConfig()
@@ -1039,12 +1056,9 @@
 #define PduR_GetSizeOfTx2Lo()                                                                       PduR_GetSizeOfTx2LoOfPCPartitionConfig()
 #define PduR_GetSizeOfTxIf2Up()                                                                     PduR_GetSizeOfTxIf2UpOfPCPartitionConfig()
 #define PduR_GetPartitionIndexOfCslOfSrcApplicationRom(Index)                                       ((PduR_PartitionIndexOfCslOfSrcApplicationRomType)((Index)))
-#define PduR_GetPartitionIndexOfCslOfTx2Lo(Index)                                                   ((PduR_PartitionIndexOfCslOfTx2LoType)((Index)))
-#define PduR_GetRmSrcRomIdxOfTx2Lo(Index)                                                           ((PduR_RmSrcRomIdxOfTx2LoType)((((PduR_RmSrcRomIdxOfTx2LoType)(Index)) + 1u)))  /**< the index of the 0:1 relation pointing to PduR_RmSrcRom */
+#define PduR_GetPartitionIndexOfCslOfTx2Lo(Index)                                                   PduR_GetRmTransmitFctPtrIdxOfTx2Lo(Index)
+#define PduR_GetRmSrcRomIdxOfTx2Lo(Index)                                                           ((PduR_RmSrcRomIdxOfTx2LoType)((((PduR_RmSrcRomIdxOfTx2LoType)(Index)) + 4u)))  /**< the index of the 0:1 relation pointing to PduR_RmSrcRom */
 #define PduR_IsRmSrcRomUsedOfTx2Lo(Index)                                                           (((boolean)(PduR_GetRmSrcRomIdxOfTx2Lo(Index) != PDUR_NO_RMSRCROMIDXOFTX2LO)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to PduR_RmSrcRom */
-#define PduR_GetRmTransmitFctPtrIdxOfTx2Lo(Index)                                                   ((PduR_RmTransmitFctPtrIdxOfTx2LoType)((Index)))  /**< the index of the 1:1 relation pointing to PduR_RmTransmitFctPtr */
-#define PduR_GetPartitionIndexOfCslOfTxIf2Up(Index)                                                 ((PduR_PartitionIndexOfCslOfTxIf2UpType)((Index)))
-#define PduR_GetRmGDestRomIdxOfTxIf2Up(Index)                                                       ((PduR_RmGDestRomIdxOfTxIf2UpType)((((PduR_RmGDestRomIdxOfTxIf2UpType)(Index)) + 1u)))  /**< the index of the 1:1 relation pointing to PduR_RmGDestRom */
 /** 
   \}
 */ 
@@ -1093,6 +1107,7 @@
 #define PduR_HasUpIfOfMmRom()                                                                       (TRUE != FALSE)
 #define PduR_HasUpIfRxIndicationFctPtrOfMmRom()                                                     (TRUE != FALSE)
 #define PduR_HasUpIfTriggerTransmitFctPtrOfMmRom()                                                  (TRUE != FALSE)
+#define PduR_HasUpIfTxConfirmationFctPtrOfMmRom()                                                   (TRUE != FALSE)
 #define PduR_HasMmRomInd()                                                                          (TRUE != FALSE)
 #define PduR_HasPartitionIdentifiers()                                                              (TRUE != FALSE)
 #define PduR_HasPCPartitionConfigIdxOfPartitionIdentifiers()                                        (TRUE != FALSE)
@@ -1124,6 +1139,7 @@
 #define PduR_HasTxIf2UpIdxOfRmGDestRom()                                                            (TRUE != FALSE)
 #define PduR_HasRmSrcRom()                                                                          (TRUE != FALSE)
 #define PduR_HasLockRomIdxOfRmSrcRom()                                                              (TRUE != FALSE)
+#define PduR_HasMaskedBitsOfRmSrcRom()                                                              (TRUE != FALSE)
 #define PduR_HasMmRomIdxOfRmSrcRom()                                                                (TRUE != FALSE)
 #define PduR_HasPartitionIndexOfCslOfRmSrcRom()                                                     (TRUE != FALSE)
 #define PduR_HasRmDestRomEndIdxOfRmSrcRom()                                                         (TRUE != FALSE)
@@ -1131,6 +1147,7 @@
 #define PduR_HasRmDestRomStartIdxOfRmSrcRom()                                                       (TRUE != FALSE)
 #define PduR_HasSrcHndOfRmSrcRom()                                                                  (TRUE != FALSE)
 #define PduR_HasTriggerTransmitSupportedOfRmSrcRom()                                                (TRUE != FALSE)
+#define PduR_HasTxConfirmationSupportedOfRmSrcRom()                                                 (TRUE != FALSE)
 #define PduR_HasRmTransmitFctPtr()                                                                  (TRUE != FALSE)
 #define PduR_HasRpgExtIdRom()                                                                       (TRUE != FALSE)
 #define PduR_HasPartitionIndexOfCslOfRpgExtIdRom()                                                  (TRUE != FALSE)
@@ -1178,6 +1195,7 @@
 #define PduR_HasTxIf2Up()                                                                           (TRUE != FALSE)
 #define PduR_HasPartitionIndexOfCslOfTxIf2Up()                                                      (TRUE != FALSE)
 #define PduR_HasRmGDestRomIdxOfTxIf2Up()                                                            (TRUE != FALSE)
+#define PduR_HasTxConfirmationUsedOfTxIf2Up()                                                       (TRUE != FALSE)
 #define PduR_HasPCConfig()                                                                          (TRUE != FALSE)
 #define PduR_HasPCPartitionConfigOfPCConfig()                                                       (TRUE != FALSE)
 #define PduR_HasPartitionIdentifiersOfPCConfig()                                                    (TRUE != FALSE)
@@ -1560,6 +1578,9 @@ typedef uint8 PduR_TxIf2UpIdxOfRmGDestRomType;
 /**   \brief  value based type definition for PduR_LockRomIdxOfRmSrcRom */
 typedef uint8 PduR_LockRomIdxOfRmSrcRomType;
 
+/**   \brief  value based type definition for PduR_MaskedBitsOfRmSrcRom */
+typedef uint8 PduR_MaskedBitsOfRmSrcRomType;
+
 /**   \brief  value based type definition for PduR_MmRomIdxOfRmSrcRom */
 typedef uint8 PduR_MmRomIdxOfRmSrcRomType;
 
@@ -1580,6 +1601,9 @@ typedef uint8 PduR_SrcHndOfRmSrcRomType;
 
 /**   \brief  value based type definition for PduR_TriggerTransmitSupportedOfRmSrcRom */
 typedef boolean PduR_TriggerTransmitSupportedOfRmSrcRomType;
+
+/**   \brief  value based type definition for PduR_TxConfirmationSupportedOfRmSrcRom */
+typedef boolean PduR_TxConfirmationSupportedOfRmSrcRomType;
 
 /**   \brief  value based type definition for PduR_PartitionIndexOfCslOfRpgExtIdRom */
 typedef uint8 PduR_PartitionIndexOfCslOfRpgExtIdRomType;
@@ -1698,6 +1722,9 @@ typedef uint8 PduR_PartitionIndexOfCslOfTxIf2UpType;
 /**   \brief  value based type definition for PduR_RmGDestRomIdxOfTxIf2Up */
 typedef uint8 PduR_RmGDestRomIdxOfTxIf2UpType;
 
+/**   \brief  value based type definition for PduR_TxConfirmationUsedOfTxIf2Up */
+typedef boolean PduR_TxConfirmationUsedOfTxIf2UpType;
+
 /** 
   \}
 */ 
@@ -1776,7 +1803,10 @@ typedef struct sPduR_MmRomType
 {
   PduR_DestApplicationManagerRomIdxOfMmRomType DestApplicationManagerRomIdxOfMmRom;  /**< the index of the 1:1 relation pointing to PduR_DestApplicationManagerRom */
   PduR_MaskedBitsOfMmRomType MaskedBitsOfMmRom;  /**< contains bitcoded the boolean data of PduR_LoIfOfMmRom, PduR_RmGDestRomUsedOfMmRom, PduR_UpIfOfMmRom */
+  PduR_RmGDestRomEndIdxOfMmRomType RmGDestRomEndIdxOfMmRom;  /**< the end index of the 0:n relation pointing to PduR_RmGDestRom */
+  PduR_RmGDestRomStartIdxOfMmRomType RmGDestRomStartIdxOfMmRom;  /**< the start index of the 0:n relation pointing to PduR_RmGDestRom */
   PduR_IfRxIndicationType UpIfRxIndicationFctPtrOfMmRom;  /**< Upper layer communication interface Rx indication function pointers. */
+  PduR_IfTxConfirmationFctPtrType UpIfTxConfirmationFctPtrOfMmRom;  /**< Upper layer communication interface Tx confimation function pointers */
   PduR_TransmitFctPtrType LoIfTransmitFctPtrOfMmRom;  /**< Lower layer If transmit function pointers */
   PduR_TriggerTransmitFctPtrType UpIfTriggerTransmitFctPtrOfMmRom;  /**< Upper layer trigger transmit function pointers */
 } PduR_MmRomType;
@@ -1791,6 +1821,10 @@ typedef struct sPduR_PartitionIdentifiersType
 typedef struct sPduR_RmDestRomType
 {
   PduR_PduLengthHandlingStrategyOfRmDestRomType PduLengthHandlingStrategyOfRmDestRom;  /**< The strategy how larger than configured If Pdus are handled. */
+  PduR_RmDestRpgRomIdxOfRmDestRomType RmDestRpgRomIdxOfRmDestRom;  /**< the index of the 0:1 relation pointing to PduR_RmDestRpgRom */
+  PduR_RmGDestRomIdxOfRmDestRomType RmGDestRomIdxOfRmDestRom;  /**< the index of the 1:1 relation pointing to PduR_RmGDestRom */
+  PduR_RmSrcRomIdxOfRmDestRomType RmSrcRomIdxOfRmDestRom;  /**< the index of the 1:1 relation pointing to PduR_RmSrcRom */
+  PduR_RoutingTypeOfRmDestRomType RoutingTypeOfRmDestRom;  /**< Type of the Routing (API Forwarding, Gateway). */
 } PduR_RmDestRomType;
 
 /**   \brief  type used in PduR_RmDestRpgRam */
@@ -1808,14 +1842,21 @@ typedef struct sPduR_RmDestRpgRomType
 /**   \brief  type used in PduR_RmGDestRom */
 typedef struct sPduR_RmGDestRomType
 {
-  PduR_LockRomIdxOfRmGDestRomType LockRomIdxOfRmGDestRom;  /**< the index of the 1:1 relation pointing to PduR_LockRom */
+  PduR_DestHndOfRmGDestRomType DestHndOfRmGDestRom;  /**< handle to be used as parameter for the StartOfReception, CopyRxData, Transmit or RxIndication function call. */
+  PduR_DirectionOfRmGDestRomType DirectionOfRmGDestRom;  /**< Direction of this Pdu: Rx or Tx */
+  PduR_MaxPduLengthOfRmGDestRomType MaxPduLengthOfRmGDestRom;  /**< Configured PduLength + metadata length. */
+  PduR_MmRomIdxOfRmGDestRomType MmRomIdxOfRmGDestRom;  /**< the index of the 1:1 relation pointing to PduR_MmRom */
+  PduR_PartitionIndexOfCslOfRmGDestRomType PartitionIndexOfCslOfRmGDestRom;
+  PduR_RmDestRomIdxOfRmGDestRomType RmDestRomIdxOfRmGDestRom;  /**< the index of the 1:1 relation pointing to PduR_RmDestRom */
 } PduR_RmGDestRomType;
 
 /**   \brief  type used in PduR_RmSrcRom */
 typedef struct sPduR_RmSrcRomType
 {
+  PduR_MaskedBitsOfRmSrcRomType MaskedBitsOfRmSrcRom;  /**< contains bitcoded the boolean data of PduR_TriggerTransmitSupportedOfRmSrcRom, PduR_TxConfirmationSupportedOfRmSrcRom */
   PduR_MmRomIdxOfRmSrcRomType MmRomIdxOfRmSrcRom;  /**< the index of the 1:1 relation pointing to PduR_MmRom */
   PduR_PartitionIndexOfCslOfRmSrcRomType PartitionIndexOfCslOfRmSrcRom;
+  PduR_RmDestRomStartIdxOfRmSrcRomType RmDestRomStartIdxOfRmSrcRom;  /**< the start index of the 1:n relation pointing to PduR_RmDestRom */
   PduR_SrcHndOfRmSrcRomType SrcHndOfRmSrcRom;  /**< handle to be used as parameter for the TxConfirmation or TriggerTransmit function call. */
 } PduR_RmSrcRomType;
 
@@ -1840,7 +1881,7 @@ typedef struct sPduR_RpgRomType
 /**   \brief  type used in PduR_RxIf2Dest */
 typedef struct sPduR_RxIf2DestType
 {
-  uint8 PduR_RxIf2DestNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  PduR_PartitionIndexOfCslOfRxIf2DestType PartitionIndexOfCslOfRxIf2Dest;
 } PduR_RxIf2DestType;
 
 /**   \brief  type used in PduR_SrcApplicationRom */
@@ -1852,13 +1893,15 @@ typedef struct sPduR_SrcApplicationRomType
 /**   \brief  type used in PduR_Tx2Lo */
 typedef struct sPduR_Tx2LoType
 {
-  uint8 PduR_Tx2LoNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  PduR_RmTransmitFctPtrIdxOfTx2LoType RmTransmitFctPtrIdxOfTx2Lo;  /**< the index of the 1:1 relation pointing to PduR_RmTransmitFctPtr */
 } PduR_Tx2LoType;
 
 /**   \brief  type used in PduR_TxIf2Up */
 typedef struct sPduR_TxIf2UpType
 {
-  uint8 PduR_TxIf2UpNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  PduR_TxConfirmationUsedOfTxIf2UpType TxConfirmationUsedOfTxIf2Up;  /**< True, if any of the source PduRDestPdus uses a TxConfirmation. */
+  PduR_PartitionIndexOfCslOfTxIf2UpType PartitionIndexOfCslOfTxIf2Up;
+  PduR_RmGDestRomIdxOfTxIf2UpType RmGDestRomIdxOfTxIf2Up;  /**< the index of the 1:1 relation pointing to PduR_RmGDestRom */
 } PduR_TxIf2UpType;
 
 /** 
@@ -2077,7 +2120,10 @@ extern CONST(PduR_GeneralPropertiesRomType, PDUR_CONST) PduR_GeneralPropertiesRo
   Element                         Description
   DestApplicationManagerRomIdx    the index of the 1:1 relation pointing to PduR_DestApplicationManagerRom
   MaskedBits                      contains bitcoded the boolean data of PduR_LoIfOfMmRom, PduR_RmGDestRomUsedOfMmRom, PduR_UpIfOfMmRom
+  RmGDestRomEndIdx                the end index of the 0:n relation pointing to PduR_RmGDestRom
+  RmGDestRomStartIdx              the start index of the 0:n relation pointing to PduR_RmGDestRom
   UpIfRxIndicationFctPtr          Upper layer communication interface Rx indication function pointers.
+  UpIfTxConfirmationFctPtr        Upper layer communication interface Tx confimation function pointers
   LoIfTransmitFctPtr              Lower layer If transmit function pointers
   UpIfTriggerTransmitFctPtr       Upper layer trigger transmit function pointers
 */ 
@@ -2085,7 +2131,7 @@ extern CONST(PduR_GeneralPropertiesRomType, PDUR_CONST) PduR_GeneralPropertiesRo
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_MmRomType, PDUR_CONST) PduR_MmRom[2];
+extern CONST(PduR_MmRomType, PDUR_CONST) PduR_MmRom[4];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2120,12 +2166,16 @@ extern CONST(PduR_PartitionIdentifiersType, PDUR_CONST) PduR_PartitionIdentifier
   \details
   Element                      Description
   PduLengthHandlingStrategy    The strategy how larger than configured If Pdus are handled.
+  RmDestRpgRomIdx              the index of the 0:1 relation pointing to PduR_RmDestRpgRom
+  RmGDestRomIdx                the index of the 1:1 relation pointing to PduR_RmGDestRom
+  RmSrcRomIdx                  the index of the 1:1 relation pointing to PduR_RmSrcRom
+  RoutingType                  Type of the Routing (API Forwarding, Gateway).
 */ 
 #define PDUR_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[2];
+extern CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[8];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2175,14 +2225,19 @@ extern CONST(PduR_RmDestRpgRomIndType, PDUR_CONST) PduR_RmDestRpgRomInd[2];
   \var    PduR_RmGDestRom
   \brief  PduR RoutingPathManager global destPdu Table
   \details
-  Element       Description
-  LockRomIdx    the index of the 1:1 relation pointing to PduR_LockRom
+  Element                Description
+  DestHnd                handle to be used as parameter for the StartOfReception, CopyRxData, Transmit or RxIndication function call.
+  Direction              Direction of this Pdu: Rx or Tx
+  MaxPduLength           Configured PduLength + metadata length.
+  MmRomIdx               the index of the 1:1 relation pointing to PduR_MmRom
+  PartitionIndexOfCsl
+  RmDestRomIdx           the index of the 1:1 relation pointing to PduR_RmDestRom
 */ 
 #define PDUR_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[2];
+extern CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[8];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2196,15 +2251,17 @@ extern CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[2];
   \brief  PduR RoutiongManager SrcPdu Table
   \details
   Element                Description
+  MaskedBits             contains bitcoded the boolean data of PduR_TriggerTransmitSupportedOfRmSrcRom, PduR_TxConfirmationSupportedOfRmSrcRom
   MmRomIdx               the index of the 1:1 relation pointing to PduR_MmRom
   PartitionIndexOfCsl
+  RmDestRomStartIdx      the start index of the 1:n relation pointing to PduR_RmDestRom
   SrcHnd                 handle to be used as parameter for the TxConfirmation or TriggerTransmit function call.
 */ 
 #define PDUR_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(PduR_RmSrcRomType, PDUR_CONST) PduR_RmSrcRom[2];
+extern CONST(PduR_RmSrcRomType, PDUR_CONST) PduR_RmSrcRom[8];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2262,6 +2319,68 @@ extern CONST(PduR_RpgExtIdRomType, PDUR_CONST) PduR_RpgExtIdRom[2];
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern CONST(PduR_RpgRomType, PDUR_CONST) PduR_RpgRom[2];
+#define PDUR_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  PduR_RxIf2Dest
+**********************************************************************************************************************/
+/** 
+  \var    PduR_RxIf2Dest
+  \brief  This table contains all routing information to perform the Rx handling of an interface routing. Used in the &lt;LLIf&gt;_RxIndication
+  \details
+  Element                Description
+  PartitionIndexOfCsl
+*/ 
+#define PDUR_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(PduR_RxIf2DestType, PDUR_CONST) PduR_RxIf2Dest[4];
+#define PDUR_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  PduR_Tx2Lo
+**********************************************************************************************************************/
+/** 
+  \var    PduR_Tx2Lo
+  \brief  Contains all information to route a Pdu from a upper layer to a lower layer module, or to cancel a transmission
+  \details
+  Element                Description
+  RmTransmitFctPtrIdx    the index of the 1:1 relation pointing to PduR_RmTransmitFctPtr
+*/ 
+#define PDUR_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(PduR_Tx2LoType, PDUR_CONST) PduR_Tx2Lo[4];
+#define PDUR_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  PduR_TxIf2Up
+**********************************************************************************************************************/
+/** 
+  \var    PduR_TxIf2Up
+  \brief  This table contains all routing information to perform the Tx handling of an interface routing. Used in the &lt;LLIf&gt;_TriggerTransmit and &lt;LLIf&gt;_TxConfirmation
+  \details
+  Element                Description
+  TxConfirmationUsed     True, if any of the source PduRDestPdus uses a TxConfirmation.
+  PartitionIndexOfCsl
+  RmGDestRomIdx          the index of the 1:1 relation pointing to PduR_RmGDestRom
+*/ 
+#define PDUR_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(PduR_TxIf2UpType, PDUR_CONST) PduR_TxIf2Up[4];
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

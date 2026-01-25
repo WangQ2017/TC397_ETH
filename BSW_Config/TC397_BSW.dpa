@@ -150,6 +150,12 @@
         <Splitter File=".\Config\ECUC\TC397_BSW_Mcu_Mcu_ecuc.arxml">
             <Module Name="Mcu"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Sd_Sd_ecuc.arxml">
+            <Module Name="Sd"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_LdCom_LdCom_ecuc.arxml">
+            <Module Name="LdCom"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
@@ -332,6 +338,9 @@
                 <Settings Name="|MICROSAR|KeyM">
                     <Setting Value="3.0.0" Name="BswImplSwVersion"/>
                 </Settings>
+                <Settings Name="|MICROSAR|LdCom">
+                    <Setting Value="3.1.0" Name="BswImplSwVersion"/>
+                </Settings>
                 <Settings Name="|MICROSAR|LinIf">
                     <Setting Value="9.0.0" Name="BswImplSwVersion"/>
                 </Settings>
@@ -367,6 +376,9 @@
                 </Settings>
                 <Settings Name="|MICROSAR|Rte">
                     <Setting Value="4.23.0" Name="BswImplSwVersion"/>
+                </Settings>
+                <Settings Name="|MICROSAR|Sd">
+                    <Setting Value="9.3.0" Name="BswImplSwVersion"/>
                 </Settings>
                 <Settings Name="|MICROSAR|SecOC">
                     <Setting Value="10.3.1" Name="BswImplSwVersion"/>
@@ -421,7 +433,7 @@
                 </Settings>
             </Settings>
             <Settings Name="com.vector.cfg.gen.core.gencore.internal.aov.AutomaticOnDemandValidationConfigurationService">
-                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAFc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQAA0lycXQAES9BVVJJWDJHL0VjdWNEZWZz&#xA;c3EAfgAIdAAHTWNhbExpYnEAfgAMc3EAfgAIdAAEVWFydHEAfgAMc3EAfgAIdAAFRTJFUFd0AAkv&#xA;TUlDUk9TQVJzcQB+AAh0AANEaW9xAH4ADA==" Name="Data"/>
+                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAGc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQAB01jYWxMaWJ0ABEvQVVSSVgyRy9FY3Vj&#xA;RGVmc3NxAH4ACHQABFVhcnRxAH4ADHNxAH4ACHQAA0Rpb3EAfgAMc3EAfgAIdAADSXJxcQB+AAxz&#xA;cQB+AAh0AANNY3VxAH4ADHNxAH4ACHQABUUyRVBXdAAJL01JQ1JPU0FS" Name="Data"/>
             </Settings>
             <Settings Name="com.vector.cfg.gui.pse.pages.generators">
                 <Settings Name="BuildVipProject"/>

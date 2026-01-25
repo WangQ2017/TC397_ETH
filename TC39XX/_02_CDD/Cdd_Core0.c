@@ -78,8 +78,8 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Init
  *********************************************************************************************************************/
-    ComM_RequestComMode(ComMConf_ComMChannel_ComMChannel_Vlan10, COMM_FULL_COMMUNICATION);
-
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Channel_Vlan10, COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Channel_Vlan23, COMM_FULL_COMMUNICATION);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

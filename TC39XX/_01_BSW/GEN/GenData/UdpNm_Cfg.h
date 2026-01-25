@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: UdpNm_Cfg.h
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2026-01-24 23:52:00
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -704,7 +704,7 @@
 #define UdpNm_GetPnClusterReqOfPCConfig()                                                           UdpNm_PnClusterReq.raw  /**< the pointer to UdpNm_PnClusterReq */
 #define UdpNm_GetPnClusterResetTimerOfPCConfig()                                                    UdpNm_PnClusterResetTimer.raw  /**< the pointer to UdpNm_PnClusterResetTimer */
 #define UdpNm_IsPnEiraCalcEnabledOfPCConfig()                                                       (((TRUE)) != FALSE)  /**< Determines if PN EIRA Calculation is active or not */
-#define UdpNm_GetPnEiraRxPduIdOfPCConfig()                                                          PduRConf_PduRSrcPdu_PduRSrcPdu  /**< I-PDU handle of Com PDU for EIRA */
+#define UdpNm_GetPnEiraRxPduIdOfPCConfig()                                                          PduRConf_PduRSrcPdu_PduRSrcPdu_Eira_ETH_Rx  /**< I-PDU handle of Com PDU for EIRA */
 #define UdpNm_IsPnEnabledInVariantOfPCConfig()                                                      (((TRUE)) != FALSE)  /**< Partial Networking Enabled in this variant */
 #define UdpNm_GetPnInfoByteConfigOfPCConfig()                                                       UdpNm_PnInfoByteConfig  /**< the pointer to UdpNm_PnInfoByteConfig */
 #define UdpNm_GetPnInfoLengthOfPCConfig()                                                           7u  /**< PnInfoLength value */

@@ -211,11 +211,13 @@ SchM_EthTSyn.h<br>
 SchM_EthTrcv_30_Tja1100.h<br>
 SchM_Eth_30_Tc3xx.h<br>
 SchM_Irq.h<br>
+SchM_LdCom.h<br>
 SchM_McalLib.h<br>
 SchM_Mcu.h<br>
 SchM_Nm.h<br>
 SchM_PduR.h<br>
 SchM_Port.h<br>
+SchM_Sd.h<br>
 SchM_SoAd.h<br>
 SchM_StbM.h<br>
 SchM_TcpIp.h<br>
@@ -234,11 +236,13 @@ SchM_EthTSyn_Type.h<br>
 SchM_EthTrcv_30_Tja1100_Type.h<br>
 SchM_Eth_30_Tc3xx_Type.h<br>
 SchM_Irq_Type.h<br>
+SchM_LdCom_Type.h<br>
 SchM_McalLib_Type.h<br>
 SchM_Mcu_Type.h<br>
 SchM_Nm_Type.h<br>
 SchM_PduR_Type.h<br>
 SchM_Port_Type.h<br>
+SchM_Sd_Type.h<br>
 SchM_SoAd_Type.h<br>
 SchM_StbM_Type.h<br>
 SchM_TcpIp_Type.h<br>
@@ -537,7 +541,21 @@ CONST Size: 0 Bytes<br>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>ComM_MainFunction_1</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan10::GetCurrentComMode</TD>
+<TD>GetCurrentComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan23::GetCurrentComMode</TD>
 <TD>GetCurrentComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -558,6 +576,13 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_Vlan23::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_Vlan10::GetInhibitionStatus</TD>
 <TD>GetInhibitionStatus</TD>
 <TD>n/a</TD>
@@ -565,7 +590,21 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_Vlan23::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan10::GetMaxComMode</TD>
+<TD>GetMaxComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan23::GetMaxComMode</TD>
 <TD>GetMaxComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -586,6 +625,13 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan23::GetRequestedComMode</TD>
+<TD>GetRequestedComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Pnc00::GetRequestedComMode</TD>
 <TD>GetRequestedComMode</TD>
 <TD>n/a</TD>
@@ -594,6 +640,13 @@ CONST Size: 0 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_Vlan10::LimitChannelToNoComMode</TD>
+<TD>LimitChannelToNoComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_Vlan23::LimitChannelToNoComMode</TD>
 <TD>LimitChannelToNoComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -614,6 +667,13 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_Vlan23::PreventWakeUp</TD>
+<TD>PreventWakeUp</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::modeLimitation::ReadInhibitCounter</TD>
 <TD>ReadInhibitCounter</TD>
 <TD>n/a</TD>
@@ -622,6 +682,13 @@ CONST Size: 0 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan10::RequestComMode</TD>
+<TD>RequestComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Channel_Vlan23::RequestComMode</TD>
 <TD>RequestComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -890,6 +957,13 @@ CONST Size: 0 Bytes<br>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>ComM_MainFunction_1</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+</TR>
+<TR>
 <TD><B>TimingEvent</B> Cyclic 10ms</TD>
 <TD>EcuM_MainFunction</TD>
 <TD>OsTask_Bsw_10ms_Core0</TD>
@@ -993,6 +1067,13 @@ CONST Size: 0 Bytes<br>
 <TD>OsTask_Bsw_1ms_Core0</TD>
 <TD>n/a</TD>
 <TD>Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>Sd_MainFunction</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>

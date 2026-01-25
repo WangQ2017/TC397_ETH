@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2025-12-20 16:10:33
+ *   Generation Time: 2026-01-25 14:32:44
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -42,6 +42,7 @@
 #include "BswM_EthIf.h"
 #include "BswM_EthSM.h"
 #include "BswM_EcuM.h"
+#include "BswM_Sd.h"
 #include "BswM_Nm.h"
 #include "Rte_BswM_Type.h"
 #include "EthTrcv_30_Tja1100_Hw_Int.h" 
@@ -128,7 +129,7 @@
 #define BSWM_ENABLE_COMM                     STD_ON
 #define BSWM_ENABLE_J1939DCM                 STD_OFF
 #define BSWM_ENABLE_J1939NM                  STD_OFF
-#define BSWM_ENABLE_SD                       STD_OFF
+#define BSWM_ENABLE_SD                       STD_ON
 #define BSWM_ENABLE_NM                       STD_ON
 #define BSWM_ENABLE_PDUR                     STD_OFF
 #define BSWM_ENABLE_WDGM                     STD_OFF
@@ -136,7 +137,7 @@
 #define BSWM_VERSION_INFO_API                STD_OFF
 #define BSWM_COMM_PNC_SUPPORT                STD_ON
 #define BSWM_COMM_INITIATE_RESET             STD_OFF
-#define BSWM_CHANNEL_COUNT                   1u
+#define BSWM_CHANNEL_COUNT                   2u
 #define BSWM_WAKEUP_SOURCE_COUNT             5u
 #define BSWM_IPDU_GROUP_CONTROL              STD_OFF
 #define BSWM_ECUM_MODE_HANDLING              STD_OFF

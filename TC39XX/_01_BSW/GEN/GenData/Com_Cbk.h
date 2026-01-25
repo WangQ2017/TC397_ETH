@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cbk.h
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2026-01-24 23:51:59
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -57,6 +57,7 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define ComConf_ComIPdu_ComIPduPnc_EIRA_ETH_Rx                        0u
+#define ComConf_ComIPdu_ComIPdu_VechicleInfoRx                        1u
 /**\} */
 
 /**
@@ -68,6 +69,7 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define ComConf_ComIPdu_ComIPduPnc_EIRA_ETH_Tx                        0u
+#define ComConf_ComIPdu_ComIPdu_FalutInfoTx                           1u
 /**\} */
 
 /**********************************************************************************************************************
@@ -103,6 +105,21 @@
 **********************************************************************************************************************/
 FUNC(void, COM_CODE) Com_RxIndication(PduIdType RxPduId, P2CONST(PduInfoType, AUTOMATIC, COM_APPL_DATA) PduInfoPtr);
 
+/**********************************************************************************************************************
+  Com_TxConfirmation
+**********************************************************************************************************************/
+/** \brief        This function is called by the lower layer after the PDU has been transmitted on the network.
+                  A confirmation that is received for an I-PDU that does not require a confirmation is silently discarded.
+    \param[in]    TxPduId   ID of AUTOSAR COM I-PDU that has been transmitted.
+                            Range: 0..(maximum number of I-PDU IDs transmitted by AUTOSAR COM) - 1
+    \return       none
+    \context      The function can be called on interrupt and task level. It is not allowed to use CAT1 interrupts with Rte (BSW00326]). Due to this, the interrupt context shall be configured to a CAT2 interrupt if an Rte is used.
+    \synchronous  TRUE
+    \reentrant    TRUE, for different Handles
+    \trace        SPEC-2737028
+    \note         The function is called by the lower layer.
+**********************************************************************************************************************/
+FUNC(void, COM_CODE) Com_TxConfirmation(PduIdType TxPduId);
 
 /**********************************************************************************************************************
   Com_TriggerTransmit

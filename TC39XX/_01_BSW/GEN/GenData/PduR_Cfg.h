@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2025-12-20 09:29:01
+ *   Generation Time: 2026-01-25 10:15:41
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -112,7 +112,11 @@
 #define PDUR_FCT_UDPNMTX 0xE9u 
 #define PDUR_FCT_UDPNMTXCFM 0xE2u 
 #define PDUR_FCT_UDPNMTT 0xE3u 
- /*   PduR_ComTransmit  PduR_UdpNmIfRxIndication  PduR_UdpNmTransmit  PduR_UdpNmTxConfirmation  PduR_UdpNmTriggerTransmit  */ 
+#define PDUR_FCT_SOADIFRXIND 0x61u 
+#define PDUR_FCT_SOADIFTX 0x69u 
+#define PDUR_FCT_SOADIFTXCFM 0x62u 
+#define PDUR_FCT_LDCOMTX 0xE9u 
+ /*   PduR_ComTransmit  PduR_UdpNmIfRxIndication  PduR_UdpNmTransmit  PduR_UdpNmTxConfirmation  PduR_UdpNmTriggerTransmit  PduR_SoAdIfIfRxIndication  PduR_SoAdIfTransmit  PduR_SoAdIfTxConfirmation  PduR_LdComTransmit  */ 
 
 
 
@@ -124,7 +128,10 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRDestPdu_PduRDestPdu                              0u
+#define PduRConf_PduRDestPdu_PduRDestPdu_Eira_ETH_Rx                  0u
+#define PduRConf_PduRDestPdu_PduRDestPdu_VechicleInfoRx               1u
+#define PduRConf_PduRDestPdu_PduRDestPdu_VechicleSpeedRx              2u
+#define PduRConf_PduRDestPdu_PduRDestPdu_VechicleStatusRx             3u
 /**\} */
 
 /**
@@ -135,7 +142,10 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu                                0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_Eira_ETH_Rx                    0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleInfoRx                 1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleSpeedRx                2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_VechicleStatusRx               3u
 /**\} */
 
 /**
@@ -146,7 +156,10 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu                                0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_EcuStateTx                     0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_Eira_ETH_Tx                    1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_FalutInfoTx                    2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_SenStateTx                     3u
 /**\} */
 
 /**
@@ -157,7 +170,10 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRDestPdu_PduRDestPdu                              0u
+#define PduRConf_PduRDestPdu_PduRDestPdu_EcuStateTx                   1u
+#define PduRConf_PduRDestPdu_PduRDestPdu_Eira_ETH_Tx                  0u
+#define PduRConf_PduRDestPdu_PduRDestPdu_FalutInfoTx                  2u
+#define PduRConf_PduRDestPdu_PduRDestPdu_SenStateTx                   3u
 /**\} */
 
 

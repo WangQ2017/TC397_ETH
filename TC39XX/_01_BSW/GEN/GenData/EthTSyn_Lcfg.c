@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTSyn_Lcfg.c
- *   Generation Time: 2026-01-18 22:57:28
+ *   Generation Time: 2026-01-24 23:52:03
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -80,8 +80,8 @@
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(EthTSyn_CtrlType, ETHTSYN_CONST) EthTSyn_Ctrl[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    EthIfCtrlIdx                                        PortIndEndIdx                                                                   PortIndStartIdx                                                                         Referable Keys */
-  { /*     0 */ EthIfConf_EthIfController_EthIfController_Untagged,            1u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Untagged */,              0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Untagged */ }   /* [/ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig, Dummy] */
+    /* Index    EthIfCtrlIdx                                      PortIndEndIdx                                                                 PortIndStartIdx                                                                       Referable Keys */
+  { /*     0 */ EthIfConf_EthIfController_EthIfController_Vlan10,            1u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */,              0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */ }   /* [/ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig, Dummy] */
 };
 #define ETHTSYN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -241,7 +241,7 @@ CONST(EthTSyn_PhysPortCfgType, ETHTSYN_CONST) EthTSyn_PhysPortCfg[1] = {  /* PRQ
 /*lint -restore */
 CONST(EthTSyn_PortType, ETHTSYN_CONST) EthTSyn_Port[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    StbMTimeSrcEqual  CtrlIdx                                                                       FramePrio  MasterPortIdx                                                                                        Number  PdelayConfigIdx                                                                                           PhysPortCfgIdx                                                                       SlavePortIdx                                                                       SwitchPortMgmtIdx                                                                                        TimeDomainIdx                                                           Referable Keys */
-  { /*     0 */             TRUE,      0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig */,        0u, ETHTSYN_NO_MASTERPORTIDXOFPORT  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig */,     1u,              0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig/EthTSynPdelayConfig */,             0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig */,           0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig */, ETHTSYN_NO_SWITCHPORTMGMTIDXOFPORT  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig */,            0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain */ }   /* [/ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Untagged] */
+  { /*     0 */             TRUE,      0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig */,        7u, ETHTSYN_NO_MASTERPORTIDXOFPORT  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig */,     1u,              0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig/EthTSynPdelayConfig */,             0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig */,           0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig */, ETHTSYN_NO_SWITCHPORTMGMTIDXOFPORT  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig */,            0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain */ }   /* [/ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain/EthTSynPortConfig, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10] */
 };
 #define ETHTSYN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -261,7 +261,7 @@ CONST(EthTSyn_PortType, ETHTSYN_CONST) EthTSyn_Port[1] = {  /* PRQA S 1514, 1533
 /*lint -restore */
 CONST(EthTSyn_PortIndType, ETHTSYN_CONST) EthTSyn_PortInd[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     PortInd      Referable Keys */
-  /*     0 */       0u   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Untagged] */
+  /*     0 */       0u   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10] */
 };
 #define ETHTSYN_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */

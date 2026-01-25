@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.c
- *   Generation Time: 2026-01-18 21:41:11
+ *   Generation Time: 2026-01-25 14:30:28
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -81,6 +81,63 @@
   SECTION: GLOBAL DATA
 **********************************************************************************************************************/
 /**********************************************************************************************************************
+  ComM_Channel
+**********************************************************************************************************************/
+/** 
+  \var    ComM_Channel
+  \brief  Contains PreCompile configuration parameters of channels
+  \details
+  Element            Description
+  MinFullComTime     Minimal full communication time for the channel, relevant for NmTypes LIGHT and FULL
+  NmLightDuration    Nm Light Timeout
+  NmSupport          Decides if the channel has NmType FULL or PASSIVE
+  PncNmRequest       Decides if a Nm message shall be sent immediately after partial network state changes
+  SilentSupport      Decides if the channel supports Silent mode (TRUE if ETH or CAN without J1939NM and Nm or NmLightSilentDuration)
+  NmType             The Network Management type of the channel
+  WakeupState        Target channel state after a Passive Wake-up
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    MinFullComTime  NmLightDuration  NmSupport  PncNmRequest  SilentSupport  NmType                      WakeupState                            Referable Keys */
+  { /*     0 */             0u,              0u,      TRUE,         TRUE,          TRUE,  COMM_FULL_NMTYPEOFCHANNEL, COMM_FULL_COM_READY_SLEEP       },  /* [ComMChannel_0] */
+  { /*     1 */          1000u,           1000u,     FALSE,        FALSE,         FALSE, COMM_LIGHT_NMTYPEOFCHANNEL, COMM_FULL_COM_NETWORK_REQUESTED }   /* [ComMChannel_1] */
+};
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_ChannelPb
+**********************************************************************************************************************/
+/** 
+  \var    ComM_ChannelPb
+  \brief  Contains PostBuild configuration parameters of channels
+  \details
+  Element                   Description
+  PncPbIndEndIdx            the end index of the 0:n relation pointing to ComM_PncPbInd
+  PncPbIndStartIdx          the start index of the 0:n relation pointing to ComM_PncPbInd
+  UserReqFullComEndIdx      the end index of the 0:n relation pointing to ComM_UserReqFullCom
+  UserReqFullComStartIdx    the start index of the 0:n relation pointing to ComM_UserReqFullCom
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    PncPbIndEndIdx                     PncPbIndStartIdx                     UserReqFullComEndIdx  UserReqFullComStartIdx */
+  { /*     0 */                                1u,                                  0u,                   1u,                     0u },
+  { /*     1 */ COMM_NO_PNCPBINDENDIDXOFCHANNELPB, COMM_NO_PNCPBINDSTARTIDXOFCHANNELPB,                   2u,                     1u }
+};
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   ComM_PncSignal
 **********************************************************************************************************************/
 /** 
@@ -125,10 +182,11 @@ CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[2] = {  /* PRQA S 1514, 153
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_UserType, COMM_CONST) ComM_User[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_UserType, COMM_CONST) ComM_User[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PncUser  UserByteMaskEndIdx  UserByteMaskStartIdx  UserPncByteMaskEndIdx                UserPncByteMaskStartIdx                      Comment */
   { /*     0 */   FALSE,                 1u,                   0u, COMM_NO_USERPNCBYTEMASKENDIDXOFUSER, COMM_NO_USERPNCBYTEMASKSTARTIDXOFUSER },  /* [ComMUser_Channel_Vlan10] */
-  { /*     1 */    TRUE,                 2u,                   1u,                                  1u,                                    0u }   /* [ComMUser_Pnc00] */
+  { /*     1 */    TRUE,                 2u,                   1u,                                  1u,                                    0u },  /* [ComMUser_Pnc00] */
+  { /*     2 */   FALSE,                 3u,                   2u, COMM_NO_USERPNCBYTEMASKENDIDXOFUSER, COMM_NO_USERPNCBYTEMASKSTARTIDXOFUSER }   /* [ComMUser_Channel_Vlan23] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -142,18 +200,21 @@ CONST(ComM_UserType, COMM_CONST) ComM_User[2] = {  /* PRQA S 1514, 1533 */  /* M
   \var    ComM_UserByteMask
   \brief  Each user has N entries in this array (N = # channels attached to this user, directly or through PNC). Each entry describes a Byte Position and a Mask for storing/clearing the user request in UserReqFullCom
   \details
-  Element      Description
-  ClearMask    Clear-mask for clearing the bit which corresponds to this user
-  SetMask      Set-mask for setting the bit which corresponds to this user
+  Element              Description
+  Channel              ID of the channel which is requested by this entry.
+  ClearMask            Clear-mask for clearing the bit which corresponds to this user
+  SetMask              Set-mask for setting the bit which corresponds to this user
+  UserReqFullComIdx    the index of the 1:1 relation pointing to ComM_UserReqFullCom
 */ 
 #define COMM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    ClearMask  SetMask        Referable Keys */
-  { /*     0 */     0xFEu,   0x01u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_Channel_Vlan10] */
-  { /*     1 */     0xFDu,   0x02u }   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_Pnc00] */
+CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    Channel  ClearMask  SetMask  UserReqFullComIdx        Referable Keys */
+  { /*     0 */      0u,     0xFEu,   0x01u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_Channel_Vlan10] */
+  { /*     1 */      0u,     0xFDu,   0x02u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_Pnc00] */
+  { /*     2 */      1u,     0xFEu,   0x01u,                1u }   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_Channel_Vlan23] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -190,6 +251,48 @@ VAR(ComM_PncModeType, COMM_VAR_NOINIT) ComM_ActivePncComMode[1];  /* PRQA S 1514
 /*lint -restore */
 VAR(ComM_PncModeType, COMM_VAR_NOINIT) ComM_BusPncComModeReq[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_MinFullComModeTimer
+**********************************************************************************************************************/
+/** 
+  \var    ComM_MinFullComModeTimer
+  \brief  The current value of Min Full Com Mode timer
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(ComM_MinFullComModeTimerUType, COMM_VAR_NOINIT) ComM_MinFullComModeTimer;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [ComMChannel_0] */
+  /*     1 */  /* [ComMChannel_1] */
+
+#define COMM_STOP_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_NmLightTimer
+**********************************************************************************************************************/
+/** 
+  \var    ComM_NmLightTimer
+  \brief  The current value of Nm Light or Nm Light Silent timer
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(ComM_NmLightTimerUType, COMM_VAR_NOINIT) ComM_NmLightTimer;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [ComMChannel_0] */
+  /*     1 */  /* [ComMChannel_1] */
+
+#define COMM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -243,9 +346,10 @@ VAR(ComM_PncSignalValuesUType, COMM_VAR_NOINIT) ComM_PncSignalValues;  /* PRQA S
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [ComMChannel_0, Channel0_To_User0, Channel0_To_User1] */
+  /*     1 */  /* [ComMChannel_1, Channel1_To_User2] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -324,6 +428,24 @@ FUNC(void, COMM_CODE) ComM_MainFunction_0(void)
   ComM_MainFunction((NetworkHandleType)0 );
 }
 
+/*********************************************************************************************************************
+FUNCTION: ComM_MainFunction_1
+*********************************************************************************************************************/
+/*!
+ * \internal
+ * - #10 Call the ComM_MainFunction() for the corresponding channel.
+ * \endinternal
+ */
+FUNC(void, COMM_CODE) ComM_MainFunction_1(void)
+{
+  /* ----- Development Error Checks ------------------------------------- */
+  /* Not needed, ComM_MainFunction() performs an initialization check. */
+
+  /* ----- Implementation ----------------------------------------------- */
+  /* #10 Call the ComM_MainFunction() for the corresponding channel. */
+  ComM_MainFunction((NetworkHandleType)1 );
+}
+
 
 
 /*********************************************************************************************************************
@@ -341,7 +463,18 @@ FUNC(void, COMM_CODE) ComM_RequestBusSMMode(NetworkHandleType Channel, ComM_Mode
 
   /* ----- Implementation ----------------------------------------------- */
   /* #10 Request the communication mode from the corresponding BusSM. */
-  retVal = EthSM_RequestComMode(Channel, ComMode);
+  switch(Channel)
+  {
+    case 0:
+      retVal = EthSM_RequestComMode(Channel, ComMode);
+      break;
+    case 1:
+      retVal = EthSM_RequestComMode(Channel, ComMode);
+      break;
+    default: /* PRQA S 2016 */ /* MD_MSR_EmptyClause */
+      retVal = E_NOT_OK;
+      break;
+  }
   
   /* ----- Development Error Report --------------------------------------- */
   if (retVal != E_OK)
@@ -366,7 +499,18 @@ FUNC(void, COMM_CODE) ComM_GetCurrentBusSMMode(NetworkHandleType Channel, P2VAR(
 
   /* ----- Implementation ----------------------------------------------- */
   /* #10 Query the current communication mode from the corresponding BusSM. */
-  retVal = EthSM_GetCurrentComMode(Channel, ComMode); /* SBSW_COMM_CALL_BUSSM_GET_CURRENT_COMMODE */
+  switch(Channel)
+  {
+    case 0:
+      retVal = EthSM_GetCurrentComMode(Channel, ComMode); /* SBSW_COMM_CALL_BUSSM_GET_CURRENT_COMMODE */
+      break;
+    case 1:
+      retVal = EthSM_GetCurrentComMode(Channel, ComMode); /* SBSW_COMM_CALL_BUSSM_GET_CURRENT_COMMODE */
+      break;
+    default: /* PRQA S 2016 */ /* MD_MSR_EmptyClause */
+      retVal = E_NOT_OK;
+      break;
+  }
 
   /* ----- Development Error Report --------------------------------------- */
   if (retVal != E_OK)

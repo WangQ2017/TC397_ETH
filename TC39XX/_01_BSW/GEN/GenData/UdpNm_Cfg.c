@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: UdpNm_Cfg.c
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2026-01-24 23:52:00
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -140,8 +140,8 @@ CONST(UdpNm_ChannelConfigType, UDPNM_CONST) UdpNm_ChannelConfig[1] = {  /* PRQA 
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(UdpNm_PbChannelConfigType, UDPNM_CONST) UdpNm_PbChannelConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    PnEnabled  MsgCycleOffset  PnResetTime  TxMessageDataEndIdx  TxMessageDataLength  TxMessageDataStartIdx  TxMessageData_CBVIdx  TxMessageData_PnFilterMaskEndIdx  TxMessageData_PnFilterMaskStartIdx  TxMessageData_UserDataEndIdx  TxMessageData_UserDataLength  TxMessageData_UserDataStartIdx  TxPduId                                   TxUserDataPduId                         Referable Keys */
-  { /*     0 */      TRUE,             0u,        200u,                  8u,                  8u,                    0u,                   0u,                               8u,                                 1u,                           8u,                           7u,                             1u, SoAdConf_SoAdPduRoute_SoAdPduRoute_NM_Tx, PduRConf_PduRDestPdu_PduRDestPdu }   /* [/ActiveEcuC/UdpNm/UdpNmGlobalConfig/UdpNmChannelConfig_Vlan10] */
+    /* Index    PnEnabled  MsgCycleOffset  PnResetTime  TxMessageDataEndIdx  TxMessageDataLength  TxMessageDataStartIdx  TxMessageData_CBVIdx  TxMessageData_PnFilterMaskEndIdx  TxMessageData_PnFilterMaskStartIdx  TxMessageData_UserDataEndIdx  TxMessageData_UserDataLength  TxMessageData_UserDataStartIdx  TxPduId                                   TxUserDataPduId                                     Referable Keys */
+  { /*     0 */      TRUE,             0u,        200u,                  8u,                  8u,                    0u,                   0u,                               8u,                                 1u,                           8u,                           7u,                             1u, SoAdConf_SoAdPduRoute_SoAdPduRoute_NM_Tx, PduRConf_PduRDestPdu_PduRDestPdu_Eira_ETH_Tx }   /* [/ActiveEcuC/UdpNm/UdpNmGlobalConfig/UdpNmChannelConfig_Vlan10] */
 };
 #define UDPNM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
