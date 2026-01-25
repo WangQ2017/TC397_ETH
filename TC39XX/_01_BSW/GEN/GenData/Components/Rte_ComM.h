@@ -56,6 +56,7 @@ extern "C"
 # ifndef RTE_CORE
 #  define RTE_RUNNABLE_ComM_MainFunction_0 ComM_MainFunction_0
 #  define RTE_RUNNABLE_ComM_MainFunction_1 ComM_MainFunction_1
+#  define RTE_RUNNABLE_ComM_MainFunction_2 ComM_MainFunction_2
 #  define RTE_RUNNABLE_GetCurrentComMode ComM_GetCurrentComMode
 #  define RTE_RUNNABLE_GetInhibitionStatus ComM_GetInhibitionStatus
 #  define RTE_RUNNABLE_GetMaxComMode ComM_GetMaxComMode
@@ -71,6 +72,7 @@ extern "C"
 
 FUNC(void, ComM_CODE) ComM_MainFunction_0(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, ComM_CODE) ComM_MainFunction_1(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(void, ComM_CODE) ComM_MainFunction_2(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(Std_ReturnType, ComM_CODE) ComM_GetCurrentComMode(ComM_UserHandleType parg0, P2VAR(ComM_ModeType, AUTOMATIC, RTE_COMM_APPL_VAR) ComMode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, ComM_CODE) ComM_GetInhibitionStatus(NetworkHandleType parg0, P2VAR(ComM_InhibitionStatusType, AUTOMATIC, RTE_COMM_APPL_VAR) Status); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, ComM_CODE) ComM_GetMaxComMode(ComM_UserHandleType parg0, P2VAR(ComM_ModeType, AUTOMATIC, RTE_COMM_APPL_VAR) ComMode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */

@@ -549,6 +549,9 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
       /* call runnable */
       ComM_MainFunction_1(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
+      /* call runnable */
+      ComM_MainFunction_2(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
       /* call schedulable entity */
       Sd_MainFunction();
 

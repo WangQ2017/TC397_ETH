@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthIf_Lcfg.c
- *   Generation Time: 2026-01-24 23:52:03
+ *   Generation Time: 2026-01-25 23:19:09
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -91,7 +91,7 @@
 /*lint -restore */
 CONST(EthIf_EthCtrlType, ETHIF_CONST) EthIf_EthCtrl[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Snv                                       EthDrvApiIdx                      TxContextEndIdx                                                         TxContextStartIdx                                                               Referable Keys */
-  { /*     0 */ EthConf_EthCtrlConfig_EthCtrlConfig_MAIN,           0u  /* Eth_30_Tc3xx */,             10u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  { /*     0 */ EthConf_EthCtrlConfig_EthCtrlConfig_MAIN,           0u  /* Eth_30_Tc3xx */,             10u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
 };
 #define ETHIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -168,10 +168,11 @@ CONST(EthIf_EthDrvApiType, ETHIF_CONST) EthIf_EthDrvApi[1] = {  /* PRQA S 1514, 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(EthIf_EthIfCtrlType, ETHIF_CONST) EthIf_EthIfCtrl[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(EthIf_EthIfCtrlType, ETHIF_CONST) EthIf_EthIfCtrl[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Snv                                               Type                                                Mtu    EthCtrlIdx                                                         EthSwtDrvApiIdx                                                                                     GatewayDestEthIfCtrlIdxIdx                                     LinkAggrThreshold  MirrorRxDestIdxIdx                                                                                     MirrorTxDestIdxIdx                                                                                     PhysLayerInitElemsIdx                                                                 PhysLayerModeElemsIdx                                                                 VlanId        Referable Keys */
   { /*     0 */ EthIfConf_EthIfController_EthIfController_Vlan10, ETHIF_ETHIFCTRL_TYPE_Q_TAGGED_VLAN_TYPEOFETHIFCTRL, 1500u,         0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */, ETHIF_NO_ETHSWTDRVAPIIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */, ETHIF_NO_GATEWAYDESTETHIFCTRLIDXIDXOFETHIFCTRL  /* No_Dest */,                1u, ETHIF_NO_MIRRORRXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */, ETHIF_NO_MIRRORTXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */,                    0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */,                    0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */,    10u },  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
-  { /*     1 */ EthIfConf_EthIfController_EthIfController_Vlan23, ETHIF_ETHIFCTRL_TYPE_Q_TAGGED_VLAN_TYPEOFETHIFCTRL, 1500u,         0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */, ETHIF_NO_ETHSWTDRVAPIIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */, ETHIF_NO_GATEWAYDESTETHIFCTRLIDXIDXOFETHIFCTRL  /* No_Dest */,                1u, ETHIF_NO_MIRRORRXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */, ETHIF_NO_MIRRORTXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */,                    1u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */,                    1u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */,    23u }   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
+  { /*     1 */ EthIfConf_EthIfController_EthIfController_Vlan23, ETHIF_ETHIFCTRL_TYPE_Q_TAGGED_VLAN_TYPEOFETHIFCTRL, 1500u,         0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */, ETHIF_NO_ETHSWTDRVAPIIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */, ETHIF_NO_GATEWAYDESTETHIFCTRLIDXIDXOFETHIFCTRL  /* No_Dest */,                1u, ETHIF_NO_MIRRORRXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */, ETHIF_NO_MIRRORTXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */,                    1u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */,                    1u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */,    23u },  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
+  { /*     2 */ EthIfConf_EthIfController_EthIfController_Vlan1 , ETHIF_ETHIFCTRL_TYPE_Q_TAGGED_VLAN_TYPEOFETHIFCTRL, 1500u,         0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */, ETHIF_NO_ETHSWTDRVAPIIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1 */ , ETHIF_NO_GATEWAYDESTETHIFCTRLIDXIDXOFETHIFCTRL  /* No_Dest */,                1u, ETHIF_NO_MIRRORRXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1 */ , ETHIF_NO_MIRRORTXDESTIDXIDXOFETHIFCTRL  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1 */ ,                    2u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1 */ ,                    2u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1 */ ,     1u }   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
 };
 #define ETHIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -189,10 +190,11 @@ CONST(EthIf_EthIfCtrlType, ETHIF_CONST) EthIf_EthIfCtrl[2] = {  /* PRQA S 1514, 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(EthIf_EthIfCtrlOfEthTrcvIndType, ETHIF_CONST) EthIf_EthIfCtrlOfEthTrcvInd[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(EthIf_EthIfCtrlOfEthTrcvIndType, ETHIF_CONST) EthIf_EthIfCtrlOfEthTrcvInd[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     EthIfCtrlOfEthTrcvInd      Referable Keys */
   /*     0 */                     0u,  /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
-  /*     1 */                     1u   /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
+  /*     1 */                     1u,  /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
+  /*     2 */                     2u   /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
 };
 #define ETHIF_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -218,7 +220,7 @@ CONST(EthIf_EthIfCtrlOfEthTrcvIndType, ETHIF_CONST) EthIf_EthIfCtrlOfEthTrcvInd[
 /*lint -restore */
 CONST(EthIf_EthTrcvType, ETHIF_CONST) EthIf_EthTrcv[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Snv                                           EthIfCtrlOfEthTrcvIndEndIdx                                                                 EthIfCtrlOfEthTrcvIndStartIdx                                                                 EthTrcvDrvApiIdx                                  Referable Keys */
-  { /*     0 */ EthTrcvConf_EthTrcvConfig_EthTrcvConfig_MAIN,                          2u  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN */,                            0u  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN */,               0u  /* EthTrcv_30_Tja1100 */ }   /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  { /*     0 */ EthTrcvConf_EthTrcvConfig_EthTrcvConfig_MAIN,                          3u  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN */,                            0u  /* /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN */,               0u  /* EthTrcv_30_Tja1100 */ }   /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
 };
 #define ETHIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -297,10 +299,11 @@ CONST(EthIf_LinkStateChgIndFctPtrType, ETHIF_CONST) EthIf_LinkStateChgIndication
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(EthIf_PhysLayerInitElemsType, ETHIF_CONST) EthIf_PhysLayerInitElems[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(EthIf_PhysLayerInitElemsType, ETHIF_CONST) EthIf_PhysLayerInitElems[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    EthSwtIndEndIdx                                                                                              EthSwtIndStartIdx                                                                                              EthTrcvIdx                                                                       Referable Keys */
   { /*     0 */ ETHIF_NO_ETHSWTINDENDIDXOFPHYSLAYERINITELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */, ETHIF_NO_ETHSWTINDSTARTIDXOFPHYSLAYERINITELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */,         0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */ },  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10] */
-  { /*     1 */ ETHIF_NO_ETHSWTINDENDIDXOFPHYSLAYERINITELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */, ETHIF_NO_ETHSWTINDSTARTIDXOFPHYSLAYERINITELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */,         0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */ }   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  { /*     1 */ ETHIF_NO_ETHSWTINDENDIDXOFPHYSLAYERINITELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */, ETHIF_NO_ETHSWTINDSTARTIDXOFPHYSLAYERINITELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */,         0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */ },  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  { /*     2 */ ETHIF_NO_ETHSWTINDENDIDXOFPHYSLAYERINITELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1 */ , ETHIF_NO_ETHSWTINDSTARTIDXOFPHYSLAYERINITELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1 */ ,         0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1 */  }   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1] */
 };
 #define ETHIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -322,10 +325,11 @@ CONST(EthIf_PhysLayerInitElemsType, ETHIF_CONST) EthIf_PhysLayerInitElems[2] = {
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(EthIf_PhysLayerModeElemsType, ETHIF_CONST) EthIf_PhysLayerModeElems[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(EthIf_PhysLayerModeElemsType, ETHIF_CONST) EthIf_PhysLayerModeElems[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    EthTrcvIdx                                                                 PortGroupIdx                                                                                                    Referable Keys */
   { /*     0 */         0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */, ETHIF_NO_PORTGROUPIDXOFPHYSLAYERMODEELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10 */ },  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10] */
-  { /*     1 */         0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */, ETHIF_NO_PORTGROUPIDXOFPHYSLAYERMODEELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */ }   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  { /*     1 */         0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */, ETHIF_NO_PORTGROUPIDXOFPHYSLAYERMODEELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23 */ },  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  { /*     2 */         0u  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1 */ , ETHIF_NO_PORTGROUPIDXOFPHYSLAYERMODEELEMS  /* /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1 */  }   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1] */
 };
 #define ETHIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -460,7 +464,7 @@ CONST(EthIf_UserType, ETHIF_CONST) EthIf_User[3] = {  /* PRQA S 1514, 1533 */  /
 /*lint -restore */
 VAR(EthIf_EthCtrlInitCntType, ETHIF_VAR_NOINIT) EthIf_EthCtrlInitCnt[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -480,7 +484,7 @@ VAR(EthIf_EthCtrlInitCntType, ETHIF_VAR_NOINIT) EthIf_EthCtrlInitCnt[1];  /* PRQ
 /*lint -restore */
 VAR(EthIf_EthCtrlModeCntType, ETHIF_VAR_NOINIT) EthIf_EthCtrlModeCnt[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -500,7 +504,7 @@ VAR(EthIf_EthCtrlModeCntType, ETHIF_VAR_NOINIT) EthIf_EthCtrlModeCnt[1];  /* PRQ
 /*lint -restore */
 VAR(EthIf_EthCtrlRxFrameCntType, ETHIF_VAR_NOINIT) EthIf_EthCtrlRxFrameCnt[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -518,10 +522,11 @@ VAR(EthIf_EthCtrlRxFrameCntType, ETHIF_VAR_NOINIT) EthIf_EthCtrlRxFrameCnt[1];  
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(EthIf_EthIfCtrlInitStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlInitState[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(EthIf_EthIfCtrlInitStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlInitState[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
   /*     1 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
+  /*     2 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -539,10 +544,11 @@ VAR(EthIf_EthIfCtrlInitStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlInitState[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(EthIf_EthIfCtrlLinkCountType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkCount[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(EthIf_EthIfCtrlLinkCountType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkCount[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
   /*     1 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
+  /*     2 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -560,10 +566,11 @@ VAR(EthIf_EthIfCtrlLinkCountType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkCount[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(EthIf_EthIfCtrlLinkStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkState[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(EthIf_EthIfCtrlLinkStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkState[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
   /*     1 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
+  /*     2 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -581,10 +588,11 @@ VAR(EthIf_EthIfCtrlLinkStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkState[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Eth_ModeType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlMode[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Eth_ModeType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlMode[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
   /*     1 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
+  /*     2 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -606,10 +614,11 @@ VAR(Eth_ModeType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlMode[2];  /* PRQA S 1514, 153
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(EthIf_EthIfCtrlRxStatsType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlRxStats[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(EthIf_EthIfCtrlRxStatsType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlRxStats[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
   /*     1 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
+  /*     2 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -631,10 +640,11 @@ VAR(EthIf_EthIfCtrlRxStatsType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlRxStats[2];  /*
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(EthIf_EthIfCtrlTxStatsType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlTxStats[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(EthIf_EthIfCtrlTxStatsType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlTxStats[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
   /*     1 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
+  /*     2 */  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -676,7 +686,7 @@ VAR(EthIf_EthIfMeasurementDataType, ETHIF_VAR_NOINIT) EthIf_EthIfMeasurementData
 /*lint -restore */
 VAR(EthIf_EthTrcvInitCntType, ETHIF_VAR_NOINIT) EthIf_EthTrcvInitCnt[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  /*     0 */  /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -696,7 +706,7 @@ VAR(EthIf_EthTrcvInitCntType, ETHIF_VAR_NOINIT) EthIf_EthTrcvInitCnt[1];  /* PRQ
 /*lint -restore */
 VAR(EthIf_EthTrcvModeCntType, ETHIF_VAR_NOINIT) EthIf_EthTrcvModeCnt[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  /*     0 */  /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -784,7 +794,7 @@ VAR(EthIf_SignalQualityDecoupleFreqCntType, ETHIF_VAR_NOINIT) EthIf_SignalQualit
 /*lint -restore */
 VAR(EthIf_SignalQualityResultType, ETHIF_VAR_NOINIT) EthIf_SignalQualityResult[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  /*     0 */  /* [/ActiveEcuC/EthTrcv/EthTrcvConfigSet/EthTrcvConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -808,7 +818,7 @@ VAR(EthIf_SignalQualityResultType, ETHIF_VAR_NOINIT) EthIf_SignalQualityResult[1
 /*lint -restore */
 VAR(EthIf_SrcMacAddrBufferType, ETHIF_VAR_NOINIT) EthIf_SrcMacAddrBuffer[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1006,8 +1016,8 @@ CONST(EthIf_PCConfigsType, ETHIF_CONST) EthIf_PCConfig = {  /* PRQA S 1514, 1533
     , 0u
     , 1u                                       /**< the number of elements in EthIf_EthCtrl */
     , 1u                                       /**< the number of elements in EthIf_EthDrvApi */
-    , 2u                                       /**< the number of elements in EthIf_EthIfCtrl */
-    , 2u                                       /**< the number of elements in EthIf_EthIfCtrlOfEthTrcvInd */
+    , 3u                                       /**< the number of elements in EthIf_EthIfCtrl */
+    , 3u                                       /**< the number of elements in EthIf_EthIfCtrlOfEthTrcvInd */
     , 0u                                       /**< the number of elements in EthIf_EthIfCtrlOfPortGroupInd */
     , 1u                                       /**< the number of elements in EthIf_EthIfMeasurementData */
     , 0u                                       /**< the number of elements in EthIf_EthSwt */
@@ -1023,8 +1033,8 @@ CONST(EthIf_PCConfigsType, ETHIF_CONST) EthIf_PCConfig = {  /* PRQA S 1514, 1533
     , 1u                                       /**< the number of elements in EthIf_LinkStateChgIndications */
     , 0u                                       /**< the number of elements in EthIf_MirrorDest */
     , 0u                                       /**< the number of elements in EthIf_MirrorTxInfo */
-    , 2u                                       /**< the number of elements in EthIf_PhysLayerInitElems */
-    , 2u                                       /**< the number of elements in EthIf_PhysLayerModeElems */
+    , 3u                                       /**< the number of elements in EthIf_PhysLayerInitElems */
+    , 3u                                       /**< the number of elements in EthIf_PhysLayerModeElems */
     , 0u                                       /**< the number of elements in EthIf_PortGroup */
     , 0u                                       /**< the number of elements in EthIf_PortGroupInd */
     , 3u                                       /**< the number of elements in EthIf_RxIndications */

@@ -14,7 +14,7 @@
     "FileName": "",
     "WorkspacePath": "",
     "GeneratorBasePath": "H:\\class\\Tricore_TC397_SIP\\Components\\Rte\\Generator\\",
-    "OutputDirectory": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\1769322751686-0\\"
+    "OutputDirectory": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\1769354536066-0\\"
   },
   "ECUName": "EcuInstance",
   "EnableVFBTracing": false,
@@ -4676,6 +4676,46 @@
           },
           {
             "$id": "312",
+            "RunnableName": "ComM_MainFunction_2",
+            "Description": "",
+            "Symbol": "ComM_MainFunction_2",
+            "Reentrant": true,
+            "IsInitRunnable": false,
+            "DataLayerLinkList": [
+              null
+            ],
+            "TriggerList": [
+              {
+                "$id": "313",
+                "CycleTime": 5,
+                "CycleTimeUnit": 1,
+                "CyclicTriggerOffset": 0,
+                "CyclicTriggerOffsetUnit": 0,
+                "CyclicTriggerImplementation": 0,
+                "TriggerType": "TimingEvent",
+                "RTEEventList": [
+                  "Timer_ComM_MainFunction_2"
+                ],
+                "PositionInTask": 0,
+                "UsesSchedule": 0,
+                "BitPosition": 0
+              }
+            ],
+            "DataSendPointList": [],
+            "DataReceivePointList": [],
+            "DataWriteAccessList": [],
+            "DataReadAccessList": [],
+            "ModeSwitchPointList": [],
+            "ModeAccessPointList": [],
+            "ServerCallPointList": [],
+            "ServerReturnPointList": [],
+            "ExclusiveAreaAccessList": [],
+            "InterRunnableVariableAccessList": [],
+            "ExternalTriggeringPointList": [],
+            "InternalTriggeringPointList": []
+          },
+          {
+            "$id": "314",
             "RunnableName": "GetCurrentComMode",
             "Description": "",
             "Symbol": "ComM_GetCurrentComMode",
@@ -4686,9 +4726,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "313",
+                "$id": "315",
                 "PortOperationRef": {
-                  "$id": "314",
+                  "$id": "316",
                   "PortPrototypeName": "UR_ComMUser_Channel_Vlan10",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -4700,7 +4740,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "315",
+                      "$id": "317",
                       "ID": "UR_ComMUser_Channel_Vlan10_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -4710,14 +4750,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "316",
+                      "$id": "318",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "317",
+                      "$id": "319",
                       "ArgumentName": "ComMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -4742,9 +4782,65 @@
                 "BitPosition": 0
               },
               {
-                "$id": "318",
+                "$id": "320",
                 "PortOperationRef": {
-                  "$id": "319",
+                  "$id": "321",
+                  "PortPrototypeName": "UR_ComMUser_Channel_Vlan1",
+                  "PortPrototypeDescription": "",
+                  "PortInterfaceName": "ComM_UserRequest",
+                  "IsService": true,
+                  "UseIndirectAPI": false,
+                  "EnableTakeAddress": true,
+                  "OperationPrototypeName": "GetCurrentComMode",
+                  "Description": "",
+                  "ErrorHandling": 0,
+                  "PortDefinedArgumentList": [
+                    {
+                      "$id": "322",
+                      "ID": "UR_ComMUser_Channel_Vlan1_0",
+                      "Value": "3",
+                      "DataTypeRef": {
+                        "$ref": "37"
+                      }
+                    }
+                  ],
+                  "AppErrorList": [
+                    {
+                      "$id": "323",
+                      "ErrorName": "E_NOT_OK",
+                      "ErrorCode": 1
+                    }
+                  ],
+                  "ArgumentList": [
+                    {
+                      "$id": "324",
+                      "ArgumentName": "ComMode",
+                      "Direction": 2,
+                      "ServerArgumentImplPolicy": 0,
+                      "DataTypeRef": {
+                        "$ref": "33"
+                      }
+                    }
+                  ],
+                  "DataLayerLinkList": [
+                    null,
+                    null
+                  ],
+                  "ServerCallPointList": [],
+                  "ServerReturnPointList": []
+                },
+                "TriggerType": "OperationInvokedEvent",
+                "RTEEventList": [
+                  "OpEventGetCurrentComMode_GetCurrentComMode_UR_ComMUser_Channel_Vlan1"
+                ],
+                "PositionInTask": 0,
+                "UsesSchedule": 0,
+                "BitPosition": 0
+              },
+              {
+                "$id": "325",
+                "PortOperationRef": {
+                  "$id": "326",
                   "PortPrototypeName": "UR_ComMUser_Channel_Vlan23",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -4756,7 +4852,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "320",
+                      "$id": "327",
                       "ID": "UR_ComMUser_Channel_Vlan23_0",
                       "Value": "2",
                       "DataTypeRef": {
@@ -4766,14 +4862,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "321",
+                      "$id": "328",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "322",
+                      "$id": "329",
                       "ArgumentName": "ComMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -4798,9 +4894,9 @@
                 "BitPosition": 0
               },
               {
-                "$id": "323",
+                "$id": "330",
                 "PortOperationRef": {
-                  "$id": "324",
+                  "$id": "331",
                   "PortPrototypeName": "UR_ComMUser_Pnc00",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -4812,7 +4908,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "325",
+                      "$id": "332",
                       "ID": "UR_ComMUser_Pnc00_0",
                       "Value": "1",
                       "DataTypeRef": {
@@ -4822,14 +4918,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "326",
+                      "$id": "333",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "327",
+                      "$id": "334",
                       "ArgumentName": "ComMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -4868,7 +4964,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "328",
+            "$id": "335",
             "RunnableName": "GetInhibitionStatus",
             "Description": "",
             "Symbol": "ComM_GetInhibitionStatus",
@@ -4879,9 +4975,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "329",
+                "$id": "336",
                 "PortOperationRef": {
-                  "$id": "330",
+                  "$id": "337",
                   "PortPrototypeName": "CL_ComMChannel_Vlan10",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ChannelLimitation",
@@ -4893,7 +4989,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "331",
+                      "$id": "338",
                       "ID": "CL_ComMChannel_Vlan10_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -4903,14 +4999,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "332",
+                      "$id": "339",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "333",
+                      "$id": "340",
                       "ArgumentName": "Status",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -4935,9 +5031,65 @@
                 "BitPosition": 0
               },
               {
-                "$id": "334",
+                "$id": "341",
                 "PortOperationRef": {
-                  "$id": "335",
+                  "$id": "342",
+                  "PortPrototypeName": "CL_ComMChannel_Vlan1",
+                  "PortPrototypeDescription": "",
+                  "PortInterfaceName": "ComM_ChannelLimitation",
+                  "IsService": true,
+                  "UseIndirectAPI": false,
+                  "EnableTakeAddress": true,
+                  "OperationPrototypeName": "GetInhibitionStatus",
+                  "Description": "",
+                  "ErrorHandling": 0,
+                  "PortDefinedArgumentList": [
+                    {
+                      "$id": "343",
+                      "ID": "CL_ComMChannel_Vlan1_0",
+                      "Value": "2",
+                      "DataTypeRef": {
+                        "$ref": "38"
+                      }
+                    }
+                  ],
+                  "AppErrorList": [
+                    {
+                      "$id": "344",
+                      "ErrorName": "E_NOT_OK",
+                      "ErrorCode": 1
+                    }
+                  ],
+                  "ArgumentList": [
+                    {
+                      "$id": "345",
+                      "ArgumentName": "Status",
+                      "Direction": 2,
+                      "ServerArgumentImplPolicy": 0,
+                      "DataTypeRef": {
+                        "$ref": "32"
+                      }
+                    }
+                  ],
+                  "DataLayerLinkList": [
+                    null,
+                    null
+                  ],
+                  "ServerCallPointList": [],
+                  "ServerReturnPointList": []
+                },
+                "TriggerType": "OperationInvokedEvent",
+                "RTEEventList": [
+                  "OpEventGetInhibitionStatus_GetInhibitionStatus_CL_ComMChannel_Vlan1"
+                ],
+                "PositionInTask": 0,
+                "UsesSchedule": 0,
+                "BitPosition": 0
+              },
+              {
+                "$id": "346",
+                "PortOperationRef": {
+                  "$id": "347",
                   "PortPrototypeName": "CL_ComMChannel_Vlan23",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ChannelLimitation",
@@ -4949,7 +5101,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "336",
+                      "$id": "348",
                       "ID": "CL_ComMChannel_Vlan23_0",
                       "Value": "1",
                       "DataTypeRef": {
@@ -4959,14 +5111,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "337",
+                      "$id": "349",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "338",
+                      "$id": "350",
                       "ArgumentName": "Status",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -4991,9 +5143,9 @@
                 "BitPosition": 0
               },
               {
-                "$id": "339",
+                "$id": "351",
                 "PortOperationRef": {
-                  "$id": "340",
+                  "$id": "352",
                   "PortPrototypeName": "CW_ComMChannel_Vlan10",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ChannelWakeUp",
@@ -5005,7 +5157,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "341",
+                      "$id": "353",
                       "ID": "CW_ComMChannel_Vlan10_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -5015,14 +5167,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "342",
+                      "$id": "354",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "343",
+                      "$id": "355",
                       "ArgumentName": "Status",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -5047,9 +5199,65 @@
                 "BitPosition": 0
               },
               {
-                "$id": "344",
+                "$id": "356",
                 "PortOperationRef": {
-                  "$id": "345",
+                  "$id": "357",
+                  "PortPrototypeName": "CW_ComMChannel_Vlan1",
+                  "PortPrototypeDescription": "",
+                  "PortInterfaceName": "ComM_ChannelWakeUp",
+                  "IsService": true,
+                  "UseIndirectAPI": false,
+                  "EnableTakeAddress": true,
+                  "OperationPrototypeName": "GetInhibitionStatus",
+                  "Description": "",
+                  "ErrorHandling": 0,
+                  "PortDefinedArgumentList": [
+                    {
+                      "$id": "358",
+                      "ID": "CW_ComMChannel_Vlan1_0",
+                      "Value": "2",
+                      "DataTypeRef": {
+                        "$ref": "38"
+                      }
+                    }
+                  ],
+                  "AppErrorList": [
+                    {
+                      "$id": "359",
+                      "ErrorName": "E_NOT_OK",
+                      "ErrorCode": 1
+                    }
+                  ],
+                  "ArgumentList": [
+                    {
+                      "$id": "360",
+                      "ArgumentName": "Status",
+                      "Direction": 2,
+                      "ServerArgumentImplPolicy": 0,
+                      "DataTypeRef": {
+                        "$ref": "32"
+                      }
+                    }
+                  ],
+                  "DataLayerLinkList": [
+                    null,
+                    null
+                  ],
+                  "ServerCallPointList": [],
+                  "ServerReturnPointList": []
+                },
+                "TriggerType": "OperationInvokedEvent",
+                "RTEEventList": [
+                  "OpEventGetInhibitionStatus_GetInhibitionStatus_CW_ComMChannel_Vlan1"
+                ],
+                "PositionInTask": 0,
+                "UsesSchedule": 0,
+                "BitPosition": 0
+              },
+              {
+                "$id": "361",
+                "PortOperationRef": {
+                  "$id": "362",
                   "PortPrototypeName": "CW_ComMChannel_Vlan23",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ChannelWakeUp",
@@ -5061,7 +5269,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "346",
+                      "$id": "363",
                       "ID": "CW_ComMChannel_Vlan23_0",
                       "Value": "1",
                       "DataTypeRef": {
@@ -5071,14 +5279,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "347",
+                      "$id": "364",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "348",
+                      "$id": "365",
                       "ArgumentName": "Status",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -5117,7 +5325,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "349",
+            "$id": "366",
             "RunnableName": "GetMaxComMode",
             "Description": "",
             "Symbol": "ComM_GetMaxComMode",
@@ -5128,9 +5336,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "350",
+                "$id": "367",
                 "PortOperationRef": {
-                  "$id": "351",
+                  "$id": "368",
                   "PortPrototypeName": "UR_ComMUser_Channel_Vlan10",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -5142,7 +5350,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "352",
+                      "$id": "369",
                       "ID": "UR_ComMUser_Channel_Vlan10_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -5152,14 +5360,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "353",
+                      "$id": "370",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "354",
+                      "$id": "371",
                       "ArgumentName": "ComMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -5184,9 +5392,65 @@
                 "BitPosition": 0
               },
               {
-                "$id": "355",
+                "$id": "372",
                 "PortOperationRef": {
-                  "$id": "356",
+                  "$id": "373",
+                  "PortPrototypeName": "UR_ComMUser_Channel_Vlan1",
+                  "PortPrototypeDescription": "",
+                  "PortInterfaceName": "ComM_UserRequest",
+                  "IsService": true,
+                  "UseIndirectAPI": false,
+                  "EnableTakeAddress": true,
+                  "OperationPrototypeName": "GetMaxComMode",
+                  "Description": "",
+                  "ErrorHandling": 0,
+                  "PortDefinedArgumentList": [
+                    {
+                      "$id": "374",
+                      "ID": "UR_ComMUser_Channel_Vlan1_0",
+                      "Value": "3",
+                      "DataTypeRef": {
+                        "$ref": "37"
+                      }
+                    }
+                  ],
+                  "AppErrorList": [
+                    {
+                      "$id": "375",
+                      "ErrorName": "E_NOT_OK",
+                      "ErrorCode": 1
+                    }
+                  ],
+                  "ArgumentList": [
+                    {
+                      "$id": "376",
+                      "ArgumentName": "ComMode",
+                      "Direction": 2,
+                      "ServerArgumentImplPolicy": 0,
+                      "DataTypeRef": {
+                        "$ref": "33"
+                      }
+                    }
+                  ],
+                  "DataLayerLinkList": [
+                    null,
+                    null
+                  ],
+                  "ServerCallPointList": [],
+                  "ServerReturnPointList": []
+                },
+                "TriggerType": "OperationInvokedEvent",
+                "RTEEventList": [
+                  "OpEventGetMaxComMode_GetMaxComMode_UR_ComMUser_Channel_Vlan1"
+                ],
+                "PositionInTask": 0,
+                "UsesSchedule": 0,
+                "BitPosition": 0
+              },
+              {
+                "$id": "377",
+                "PortOperationRef": {
+                  "$id": "378",
                   "PortPrototypeName": "UR_ComMUser_Channel_Vlan23",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -5198,7 +5462,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "357",
+                      "$id": "379",
                       "ID": "UR_ComMUser_Channel_Vlan23_0",
                       "Value": "2",
                       "DataTypeRef": {
@@ -5208,14 +5472,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "358",
+                      "$id": "380",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "359",
+                      "$id": "381",
                       "ArgumentName": "ComMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -5240,9 +5504,9 @@
                 "BitPosition": 0
               },
               {
-                "$id": "360",
+                "$id": "382",
                 "PortOperationRef": {
-                  "$id": "361",
+                  "$id": "383",
                   "PortPrototypeName": "UR_ComMUser_Pnc00",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -5254,7 +5518,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "362",
+                      "$id": "384",
                       "ID": "UR_ComMUser_Pnc00_0",
                       "Value": "1",
                       "DataTypeRef": {
@@ -5264,14 +5528,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "363",
+                      "$id": "385",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "364",
+                      "$id": "386",
                       "ArgumentName": "ComMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -5310,7 +5574,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "365",
+            "$id": "387",
             "RunnableName": "GetRequestedComMode",
             "Description": "",
             "Symbol": "ComM_GetRequestedComMode",
@@ -5321,9 +5585,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "366",
+                "$id": "388",
                 "PortOperationRef": {
-                  "$id": "367",
+                  "$id": "389",
                   "PortPrototypeName": "UR_ComMUser_Channel_Vlan10",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -5335,7 +5599,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "368",
+                      "$id": "390",
                       "ID": "UR_ComMUser_Channel_Vlan10_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -5345,14 +5609,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "369",
+                      "$id": "391",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "370",
+                      "$id": "392",
                       "ArgumentName": "ComMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -5377,9 +5641,65 @@
                 "BitPosition": 0
               },
               {
-                "$id": "371",
+                "$id": "393",
                 "PortOperationRef": {
-                  "$id": "372",
+                  "$id": "394",
+                  "PortPrototypeName": "UR_ComMUser_Channel_Vlan1",
+                  "PortPrototypeDescription": "",
+                  "PortInterfaceName": "ComM_UserRequest",
+                  "IsService": true,
+                  "UseIndirectAPI": false,
+                  "EnableTakeAddress": true,
+                  "OperationPrototypeName": "GetRequestedComMode",
+                  "Description": "",
+                  "ErrorHandling": 0,
+                  "PortDefinedArgumentList": [
+                    {
+                      "$id": "395",
+                      "ID": "UR_ComMUser_Channel_Vlan1_0",
+                      "Value": "3",
+                      "DataTypeRef": {
+                        "$ref": "37"
+                      }
+                    }
+                  ],
+                  "AppErrorList": [
+                    {
+                      "$id": "396",
+                      "ErrorName": "E_NOT_OK",
+                      "ErrorCode": 1
+                    }
+                  ],
+                  "ArgumentList": [
+                    {
+                      "$id": "397",
+                      "ArgumentName": "ComMode",
+                      "Direction": 2,
+                      "ServerArgumentImplPolicy": 0,
+                      "DataTypeRef": {
+                        "$ref": "33"
+                      }
+                    }
+                  ],
+                  "DataLayerLinkList": [
+                    null,
+                    null
+                  ],
+                  "ServerCallPointList": [],
+                  "ServerReturnPointList": []
+                },
+                "TriggerType": "OperationInvokedEvent",
+                "RTEEventList": [
+                  "OpEventGetRequestedComMode_GetRequestedComMode_UR_ComMUser_Channel_Vlan1"
+                ],
+                "PositionInTask": 0,
+                "UsesSchedule": 0,
+                "BitPosition": 0
+              },
+              {
+                "$id": "398",
+                "PortOperationRef": {
+                  "$id": "399",
                   "PortPrototypeName": "UR_ComMUser_Channel_Vlan23",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -5391,7 +5711,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "373",
+                      "$id": "400",
                       "ID": "UR_ComMUser_Channel_Vlan23_0",
                       "Value": "2",
                       "DataTypeRef": {
@@ -5401,14 +5721,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "374",
+                      "$id": "401",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "375",
+                      "$id": "402",
                       "ArgumentName": "ComMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -5433,9 +5753,9 @@
                 "BitPosition": 0
               },
               {
-                "$id": "376",
+                "$id": "403",
                 "PortOperationRef": {
-                  "$id": "377",
+                  "$id": "404",
                   "PortPrototypeName": "UR_ComMUser_Pnc00",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -5447,7 +5767,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "378",
+                      "$id": "405",
                       "ID": "UR_ComMUser_Pnc00_0",
                       "Value": "1",
                       "DataTypeRef": {
@@ -5457,14 +5777,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "379",
+                      "$id": "406",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "380",
+                      "$id": "407",
                       "ArgumentName": "ComMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -5503,7 +5823,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "381",
+            "$id": "408",
             "RunnableName": "LimitChannelToNoComMode",
             "Description": "",
             "Symbol": "ComM_LimitChannelToNoComMode",
@@ -5514,9 +5834,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "382",
+                "$id": "409",
                 "PortOperationRef": {
-                  "$id": "383",
+                  "$id": "410",
                   "PortPrototypeName": "CL_ComMChannel_Vlan10",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ChannelLimitation",
@@ -5528,7 +5848,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "384",
+                      "$id": "411",
                       "ID": "CL_ComMChannel_Vlan10_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -5538,14 +5858,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "385",
+                      "$id": "412",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "386",
+                      "$id": "413",
                       "ArgumentName": "Status",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -5570,9 +5890,65 @@
                 "BitPosition": 0
               },
               {
-                "$id": "387",
+                "$id": "414",
                 "PortOperationRef": {
-                  "$id": "388",
+                  "$id": "415",
+                  "PortPrototypeName": "CL_ComMChannel_Vlan1",
+                  "PortPrototypeDescription": "",
+                  "PortInterfaceName": "ComM_ChannelLimitation",
+                  "IsService": true,
+                  "UseIndirectAPI": false,
+                  "EnableTakeAddress": true,
+                  "OperationPrototypeName": "LimitChannelToNoComMode",
+                  "Description": "",
+                  "ErrorHandling": 0,
+                  "PortDefinedArgumentList": [
+                    {
+                      "$id": "416",
+                      "ID": "CL_ComMChannel_Vlan1_0",
+                      "Value": "2",
+                      "DataTypeRef": {
+                        "$ref": "38"
+                      }
+                    }
+                  ],
+                  "AppErrorList": [
+                    {
+                      "$id": "417",
+                      "ErrorName": "E_NOT_OK",
+                      "ErrorCode": 1
+                    }
+                  ],
+                  "ArgumentList": [
+                    {
+                      "$id": "418",
+                      "ArgumentName": "Status",
+                      "Direction": 0,
+                      "ServerArgumentImplPolicy": 0,
+                      "DataTypeRef": {
+                        "$ref": "4"
+                      }
+                    }
+                  ],
+                  "DataLayerLinkList": [
+                    null,
+                    null
+                  ],
+                  "ServerCallPointList": [],
+                  "ServerReturnPointList": []
+                },
+                "TriggerType": "OperationInvokedEvent",
+                "RTEEventList": [
+                  "OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_ComMChannel_Vlan1"
+                ],
+                "PositionInTask": 0,
+                "UsesSchedule": 0,
+                "BitPosition": 0
+              },
+              {
+                "$id": "419",
+                "PortOperationRef": {
+                  "$id": "420",
                   "PortPrototypeName": "CL_ComMChannel_Vlan23",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ChannelLimitation",
@@ -5584,7 +5960,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "389",
+                      "$id": "421",
                       "ID": "CL_ComMChannel_Vlan23_0",
                       "Value": "1",
                       "DataTypeRef": {
@@ -5594,14 +5970,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "390",
+                      "$id": "422",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "391",
+                      "$id": "423",
                       "ArgumentName": "Status",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -5640,7 +6016,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "392",
+            "$id": "424",
             "RunnableName": "LimitECUToNoComMode",
             "Description": "",
             "Symbol": "ComM_LimitECUToNoComMode",
@@ -5651,9 +6027,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "393",
+                "$id": "425",
                 "PortOperationRef": {
-                  "$id": "394",
+                  "$id": "426",
                   "PortPrototypeName": "modeLimitation",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ECUModeLimitation",
@@ -5666,14 +6042,14 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "395",
+                      "$id": "427",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "396",
+                      "$id": "428",
                       "ArgumentName": "Status",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -5712,7 +6088,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "397",
+            "$id": "429",
             "RunnableName": "PreventWakeUp",
             "Description": "",
             "Symbol": "ComM_PreventWakeUp",
@@ -5723,9 +6099,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "398",
+                "$id": "430",
                 "PortOperationRef": {
-                  "$id": "399",
+                  "$id": "431",
                   "PortPrototypeName": "CW_ComMChannel_Vlan10",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ChannelWakeUp",
@@ -5737,7 +6113,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "400",
+                      "$id": "432",
                       "ID": "CW_ComMChannel_Vlan10_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -5747,14 +6123,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "401",
+                      "$id": "433",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "402",
+                      "$id": "434",
                       "ArgumentName": "Status",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -5779,9 +6155,65 @@
                 "BitPosition": 0
               },
               {
-                "$id": "403",
+                "$id": "435",
                 "PortOperationRef": {
-                  "$id": "404",
+                  "$id": "436",
+                  "PortPrototypeName": "CW_ComMChannel_Vlan1",
+                  "PortPrototypeDescription": "",
+                  "PortInterfaceName": "ComM_ChannelWakeUp",
+                  "IsService": true,
+                  "UseIndirectAPI": false,
+                  "EnableTakeAddress": true,
+                  "OperationPrototypeName": "PreventWakeUp",
+                  "Description": "",
+                  "ErrorHandling": 0,
+                  "PortDefinedArgumentList": [
+                    {
+                      "$id": "437",
+                      "ID": "CW_ComMChannel_Vlan1_0",
+                      "Value": "2",
+                      "DataTypeRef": {
+                        "$ref": "38"
+                      }
+                    }
+                  ],
+                  "AppErrorList": [
+                    {
+                      "$id": "438",
+                      "ErrorName": "E_NOT_OK",
+                      "ErrorCode": 1
+                    }
+                  ],
+                  "ArgumentList": [
+                    {
+                      "$id": "439",
+                      "ArgumentName": "Status",
+                      "Direction": 0,
+                      "ServerArgumentImplPolicy": 0,
+                      "DataTypeRef": {
+                        "$ref": "4"
+                      }
+                    }
+                  ],
+                  "DataLayerLinkList": [
+                    null,
+                    null
+                  ],
+                  "ServerCallPointList": [],
+                  "ServerReturnPointList": []
+                },
+                "TriggerType": "OperationInvokedEvent",
+                "RTEEventList": [
+                  "OpEventPreventWakeUp_PreventWakeUp_CW_ComMChannel_Vlan1"
+                ],
+                "PositionInTask": 0,
+                "UsesSchedule": 0,
+                "BitPosition": 0
+              },
+              {
+                "$id": "440",
+                "PortOperationRef": {
+                  "$id": "441",
                   "PortPrototypeName": "CW_ComMChannel_Vlan23",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ChannelWakeUp",
@@ -5793,7 +6225,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "405",
+                      "$id": "442",
                       "ID": "CW_ComMChannel_Vlan23_0",
                       "Value": "1",
                       "DataTypeRef": {
@@ -5803,14 +6235,14 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "406",
+                      "$id": "443",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "407",
+                      "$id": "444",
                       "ArgumentName": "Status",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -5849,7 +6281,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "408",
+            "$id": "445",
             "RunnableName": "ReadInhibitCounter",
             "Description": "",
             "Symbol": "ComM_ReadInhibitCounter",
@@ -5860,9 +6292,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "409",
+                "$id": "446",
                 "PortOperationRef": {
-                  "$id": "410",
+                  "$id": "447",
                   "PortPrototypeName": "modeLimitation",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ECUModeLimitation",
@@ -5875,14 +6307,14 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "411",
+                      "$id": "448",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "412",
+                      "$id": "449",
                       "ArgumentName": "CounterValue",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -5921,7 +6353,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "413",
+            "$id": "450",
             "RunnableName": "RequestComMode",
             "Description": "",
             "Symbol": "ComM_RequestComMode",
@@ -5932,9 +6364,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "414",
+                "$id": "451",
                 "PortOperationRef": {
-                  "$id": "415",
+                  "$id": "452",
                   "PortPrototypeName": "UR_ComMUser_Channel_Vlan10",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -5946,7 +6378,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "416",
+                      "$id": "453",
                       "ID": "UR_ComMUser_Channel_Vlan10_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -5956,19 +6388,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "417",
+                      "$id": "454",
                       "ErrorName": "E_MODE_LIMITATION",
                       "ErrorCode": 2
                     },
                     {
-                      "$id": "418",
+                      "$id": "455",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "419",
+                      "$id": "456",
                       "ArgumentName": "ComMode",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -5993,9 +6425,70 @@
                 "BitPosition": 0
               },
               {
-                "$id": "420",
+                "$id": "457",
                 "PortOperationRef": {
-                  "$id": "421",
+                  "$id": "458",
+                  "PortPrototypeName": "UR_ComMUser_Channel_Vlan1",
+                  "PortPrototypeDescription": "",
+                  "PortInterfaceName": "ComM_UserRequest",
+                  "IsService": true,
+                  "UseIndirectAPI": false,
+                  "EnableTakeAddress": true,
+                  "OperationPrototypeName": "RequestComMode",
+                  "Description": "",
+                  "ErrorHandling": 0,
+                  "PortDefinedArgumentList": [
+                    {
+                      "$id": "459",
+                      "ID": "UR_ComMUser_Channel_Vlan1_0",
+                      "Value": "3",
+                      "DataTypeRef": {
+                        "$ref": "37"
+                      }
+                    }
+                  ],
+                  "AppErrorList": [
+                    {
+                      "$id": "460",
+                      "ErrorName": "E_MODE_LIMITATION",
+                      "ErrorCode": 2
+                    },
+                    {
+                      "$id": "461",
+                      "ErrorName": "E_NOT_OK",
+                      "ErrorCode": 1
+                    }
+                  ],
+                  "ArgumentList": [
+                    {
+                      "$id": "462",
+                      "ArgumentName": "ComMode",
+                      "Direction": 0,
+                      "ServerArgumentImplPolicy": 0,
+                      "DataTypeRef": {
+                        "$ref": "33"
+                      }
+                    }
+                  ],
+                  "DataLayerLinkList": [
+                    null,
+                    null
+                  ],
+                  "ServerCallPointList": [],
+                  "ServerReturnPointList": []
+                },
+                "TriggerType": "OperationInvokedEvent",
+                "RTEEventList": [
+                  "OpEventRequestComMode_RequestComMode_UR_ComMUser_Channel_Vlan1"
+                ],
+                "PositionInTask": 0,
+                "UsesSchedule": 0,
+                "BitPosition": 0
+              },
+              {
+                "$id": "463",
+                "PortOperationRef": {
+                  "$id": "464",
                   "PortPrototypeName": "UR_ComMUser_Channel_Vlan23",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -6007,7 +6500,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "422",
+                      "$id": "465",
                       "ID": "UR_ComMUser_Channel_Vlan23_0",
                       "Value": "2",
                       "DataTypeRef": {
@@ -6017,19 +6510,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "423",
+                      "$id": "466",
                       "ErrorName": "E_MODE_LIMITATION",
                       "ErrorCode": 2
                     },
                     {
-                      "$id": "424",
+                      "$id": "467",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "425",
+                      "$id": "468",
                       "ArgumentName": "ComMode",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -6054,9 +6547,9 @@
                 "BitPosition": 0
               },
               {
-                "$id": "426",
+                "$id": "469",
                 "PortOperationRef": {
-                  "$id": "427",
+                  "$id": "470",
                   "PortPrototypeName": "UR_ComMUser_Pnc00",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_UserRequest",
@@ -6068,7 +6561,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "428",
+                      "$id": "471",
                       "ID": "UR_ComMUser_Pnc00_0",
                       "Value": "1",
                       "DataTypeRef": {
@@ -6078,19 +6571,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "429",
+                      "$id": "472",
                       "ErrorName": "E_MODE_LIMITATION",
                       "ErrorCode": 2
                     },
                     {
-                      "$id": "430",
+                      "$id": "473",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "431",
+                      "$id": "474",
                       "ArgumentName": "ComMode",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -6129,7 +6622,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "432",
+            "$id": "475",
             "RunnableName": "ResetInhibitCounter",
             "Description": "",
             "Symbol": "ComM_ResetInhibitCounter",
@@ -6140,9 +6633,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "433",
+                "$id": "476",
                 "PortOperationRef": {
-                  "$id": "434",
+                  "$id": "477",
                   "PortPrototypeName": "modeLimitation",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ECUModeLimitation",
@@ -6155,7 +6648,7 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "435",
+                      "$id": "478",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
@@ -6191,7 +6684,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "436",
+            "$id": "479",
             "RunnableName": "SetECUGroupClassification",
             "Description": "",
             "Symbol": "ComM_SetECUGroupClassification",
@@ -6202,9 +6695,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "437",
+                "$id": "480",
                 "PortOperationRef": {
-                  "$id": "438",
+                  "$id": "481",
                   "PortPrototypeName": "modeLimitation",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "ComM_ECUModeLimitation",
@@ -6217,14 +6710,14 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "439",
+                      "$id": "482",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "440",
+                      "$id": "483",
                       "ArgumentName": "Status",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -6271,7 +6764,7 @@
       "CTCalibrationSupport": false,
       "OperationPorts": [
         {
-          "$id": "441",
+          "$id": "484",
           "PortPrototypeName": "modeLimitation",
           "OperationPrototypeName": "SetECUGroupClassification",
           "ClientPortCount": 0,
@@ -6279,7 +6772,7 @@
           "IsClient": false
         },
         {
-          "$id": "442",
+          "$id": "485",
           "PortPrototypeName": "modeLimitation",
           "OperationPrototypeName": "ResetInhibitCounter",
           "ClientPortCount": 0,
@@ -6287,7 +6780,7 @@
           "IsClient": false
         },
         {
-          "$id": "443",
+          "$id": "486",
           "PortPrototypeName": "modeLimitation",
           "OperationPrototypeName": "ReadInhibitCounter",
           "ClientPortCount": 0,
@@ -6295,7 +6788,7 @@
           "IsClient": false
         },
         {
-          "$id": "444",
+          "$id": "487",
           "PortPrototypeName": "modeLimitation",
           "OperationPrototypeName": "LimitECUToNoComMode",
           "ClientPortCount": 0,
@@ -6303,7 +6796,7 @@
           "IsClient": false
         },
         {
-          "$id": "445",
+          "$id": "488",
           "PortPrototypeName": "UR_ComMUser_Pnc00",
           "OperationPrototypeName": "RequestComMode",
           "ClientPortCount": 0,
@@ -6311,7 +6804,7 @@
           "IsClient": false
         },
         {
-          "$id": "446",
+          "$id": "489",
           "PortPrototypeName": "UR_ComMUser_Pnc00",
           "OperationPrototypeName": "GetRequestedComMode",
           "ClientPortCount": 0,
@@ -6319,7 +6812,7 @@
           "IsClient": false
         },
         {
-          "$id": "447",
+          "$id": "490",
           "PortPrototypeName": "UR_ComMUser_Pnc00",
           "OperationPrototypeName": "GetMaxComMode",
           "ClientPortCount": 0,
@@ -6327,7 +6820,7 @@
           "IsClient": false
         },
         {
-          "$id": "448",
+          "$id": "491",
           "PortPrototypeName": "UR_ComMUser_Pnc00",
           "OperationPrototypeName": "GetCurrentComMode",
           "ClientPortCount": 0,
@@ -6335,7 +6828,7 @@
           "IsClient": false
         },
         {
-          "$id": "449",
+          "$id": "492",
           "PortPrototypeName": "UR_ComMUser_Channel_Vlan23",
           "OperationPrototypeName": "RequestComMode",
           "ClientPortCount": 0,
@@ -6343,7 +6836,7 @@
           "IsClient": false
         },
         {
-          "$id": "450",
+          "$id": "493",
           "PortPrototypeName": "UR_ComMUser_Channel_Vlan23",
           "OperationPrototypeName": "GetRequestedComMode",
           "ClientPortCount": 0,
@@ -6351,7 +6844,7 @@
           "IsClient": false
         },
         {
-          "$id": "451",
+          "$id": "494",
           "PortPrototypeName": "UR_ComMUser_Channel_Vlan23",
           "OperationPrototypeName": "GetMaxComMode",
           "ClientPortCount": 0,
@@ -6359,7 +6852,7 @@
           "IsClient": false
         },
         {
-          "$id": "452",
+          "$id": "495",
           "PortPrototypeName": "UR_ComMUser_Channel_Vlan23",
           "OperationPrototypeName": "GetCurrentComMode",
           "ClientPortCount": 0,
@@ -6367,7 +6860,7 @@
           "IsClient": false
         },
         {
-          "$id": "453",
+          "$id": "496",
           "PortPrototypeName": "UR_ComMUser_Channel_Vlan10",
           "OperationPrototypeName": "RequestComMode",
           "ClientPortCount": 0,
@@ -6375,7 +6868,7 @@
           "IsClient": false
         },
         {
-          "$id": "454",
+          "$id": "497",
           "PortPrototypeName": "UR_ComMUser_Channel_Vlan10",
           "OperationPrototypeName": "GetRequestedComMode",
           "ClientPortCount": 0,
@@ -6383,7 +6876,7 @@
           "IsClient": false
         },
         {
-          "$id": "455",
+          "$id": "498",
           "PortPrototypeName": "UR_ComMUser_Channel_Vlan10",
           "OperationPrototypeName": "GetMaxComMode",
           "ClientPortCount": 0,
@@ -6391,7 +6884,7 @@
           "IsClient": false
         },
         {
-          "$id": "456",
+          "$id": "499",
           "PortPrototypeName": "UR_ComMUser_Channel_Vlan10",
           "OperationPrototypeName": "GetCurrentComMode",
           "ClientPortCount": 0,
@@ -6399,7 +6892,39 @@
           "IsClient": false
         },
         {
-          "$id": "457",
+          "$id": "500",
+          "PortPrototypeName": "UR_ComMUser_Channel_Vlan1",
+          "OperationPrototypeName": "RequestComMode",
+          "ClientPortCount": 0,
+          "QueueLength": 1,
+          "IsClient": false
+        },
+        {
+          "$id": "501",
+          "PortPrototypeName": "UR_ComMUser_Channel_Vlan1",
+          "OperationPrototypeName": "GetRequestedComMode",
+          "ClientPortCount": 0,
+          "QueueLength": 1,
+          "IsClient": false
+        },
+        {
+          "$id": "502",
+          "PortPrototypeName": "UR_ComMUser_Channel_Vlan1",
+          "OperationPrototypeName": "GetMaxComMode",
+          "ClientPortCount": 0,
+          "QueueLength": 1,
+          "IsClient": false
+        },
+        {
+          "$id": "503",
+          "PortPrototypeName": "UR_ComMUser_Channel_Vlan1",
+          "OperationPrototypeName": "GetCurrentComMode",
+          "ClientPortCount": 0,
+          "QueueLength": 1,
+          "IsClient": false
+        },
+        {
+          "$id": "504",
           "PortPrototypeName": "CW_ComMChannel_Vlan23",
           "OperationPrototypeName": "PreventWakeUp",
           "ClientPortCount": 0,
@@ -6407,7 +6932,7 @@
           "IsClient": false
         },
         {
-          "$id": "458",
+          "$id": "505",
           "PortPrototypeName": "CW_ComMChannel_Vlan23",
           "OperationPrototypeName": "GetInhibitionStatus",
           "ClientPortCount": 0,
@@ -6415,7 +6940,7 @@
           "IsClient": false
         },
         {
-          "$id": "459",
+          "$id": "506",
           "PortPrototypeName": "CW_ComMChannel_Vlan10",
           "OperationPrototypeName": "PreventWakeUp",
           "ClientPortCount": 0,
@@ -6423,7 +6948,7 @@
           "IsClient": false
         },
         {
-          "$id": "460",
+          "$id": "507",
           "PortPrototypeName": "CW_ComMChannel_Vlan10",
           "OperationPrototypeName": "GetInhibitionStatus",
           "ClientPortCount": 0,
@@ -6431,7 +6956,23 @@
           "IsClient": false
         },
         {
-          "$id": "461",
+          "$id": "508",
+          "PortPrototypeName": "CW_ComMChannel_Vlan1",
+          "OperationPrototypeName": "PreventWakeUp",
+          "ClientPortCount": 0,
+          "QueueLength": 1,
+          "IsClient": false
+        },
+        {
+          "$id": "509",
+          "PortPrototypeName": "CW_ComMChannel_Vlan1",
+          "OperationPrototypeName": "GetInhibitionStatus",
+          "ClientPortCount": 0,
+          "QueueLength": 1,
+          "IsClient": false
+        },
+        {
+          "$id": "510",
           "PortPrototypeName": "CL_ComMChannel_Vlan23",
           "OperationPrototypeName": "LimitChannelToNoComMode",
           "ClientPortCount": 0,
@@ -6439,7 +6980,7 @@
           "IsClient": false
         },
         {
-          "$id": "462",
+          "$id": "511",
           "PortPrototypeName": "CL_ComMChannel_Vlan23",
           "OperationPrototypeName": "GetInhibitionStatus",
           "ClientPortCount": 0,
@@ -6447,7 +6988,7 @@
           "IsClient": false
         },
         {
-          "$id": "463",
+          "$id": "512",
           "PortPrototypeName": "CL_ComMChannel_Vlan10",
           "OperationPrototypeName": "LimitChannelToNoComMode",
           "ClientPortCount": 0,
@@ -6455,8 +6996,24 @@
           "IsClient": false
         },
         {
-          "$id": "464",
+          "$id": "513",
           "PortPrototypeName": "CL_ComMChannel_Vlan10",
+          "OperationPrototypeName": "GetInhibitionStatus",
+          "ClientPortCount": 0,
+          "QueueLength": 1,
+          "IsClient": false
+        },
+        {
+          "$id": "514",
+          "PortPrototypeName": "CL_ComMChannel_Vlan1",
+          "OperationPrototypeName": "LimitChannelToNoComMode",
+          "ClientPortCount": 0,
+          "QueueLength": 1,
+          "IsClient": false
+        },
+        {
+          "$id": "515",
+          "PortPrototypeName": "CL_ComMChannel_Vlan1",
           "OperationPrototypeName": "GetInhibitionStatus",
           "ClientPortCount": 0,
           "QueueLength": 1,
@@ -6469,10 +7026,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "465",
+      "$id": "516",
       "ComponentInstanceName": "Det",
       "ComponentType": {
-        "$id": "466",
+        "$id": "517",
         "ComponentTypeName": "Det",
         "RealizationType": 4,
         "SupportsMultipleInstances": false,
@@ -6497,10 +7054,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "467",
+      "$id": "518",
       "ComponentInstanceName": "EcuM",
       "ComponentType": {
-        "$id": "468",
+        "$id": "519",
         "ComponentTypeName": "EcuM",
         "RealizationType": 4,
         "SupportsMultipleInstances": false,
@@ -6513,7 +7070,7 @@
         "PerInstanceMemories": [],
         "Runnables": [
           {
-            "$id": "469",
+            "$id": "520",
             "RunnableName": "EcuM_MainFunction",
             "Description": "",
             "Symbol": "EcuM_MainFunction",
@@ -6524,7 +7081,7 @@
             ],
             "TriggerList": [
               {
-                "$id": "470",
+                "$id": "521",
                 "CycleTime": 10,
                 "CycleTimeUnit": 1,
                 "CyclicTriggerOffset": 0,
@@ -6553,7 +7110,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "471",
+            "$id": "522",
             "RunnableName": "GetBootTarget",
             "Description": "",
             "Symbol": "EcuM_GetBootTarget",
@@ -6564,9 +7121,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "472",
+                "$id": "523",
                 "PortOperationRef": {
-                  "$id": "473",
+                  "$id": "524",
                   "PortPrototypeName": "EcuM_BootTarget",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "EcuM_BootTarget",
@@ -6579,14 +7136,14 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "474",
+                      "$id": "525",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "475",
+                      "$id": "526",
                       "ArgumentName": "BootTarget",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -6625,7 +7182,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "476",
+            "$id": "527",
             "RunnableName": "GetLastShutdownTarget",
             "Description": "",
             "Symbol": "EcuM_GetLastShutdownTarget",
@@ -6636,9 +7193,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "477",
+                "$id": "528",
                 "PortOperationRef": {
-                  "$id": "478",
+                  "$id": "529",
                   "PortPrototypeName": "EcuM_ShutdownTarget",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "EcuM_ShutdownTarget",
@@ -6651,14 +7208,14 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "479",
+                      "$id": "530",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "480",
+                      "$id": "531",
                       "ArgumentName": "target",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -6667,7 +7224,7 @@
                       }
                     },
                     {
-                      "$id": "481",
+                      "$id": "532",
                       "ArgumentName": "resetSleepMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -6706,7 +7263,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "482",
+            "$id": "533",
             "RunnableName": "GetShutdownCause",
             "Description": "",
             "Symbol": "EcuM_GetShutdownCause",
@@ -6717,9 +7274,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "483",
+                "$id": "534",
                 "PortOperationRef": {
-                  "$id": "484",
+                  "$id": "535",
                   "PortPrototypeName": "EcuM_ShutdownTarget",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "EcuM_ShutdownTarget",
@@ -6732,14 +7289,14 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "485",
+                      "$id": "536",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "486",
+                      "$id": "537",
                       "ArgumentName": "shutdownCause",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -6778,7 +7335,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "487",
+            "$id": "538",
             "RunnableName": "GetShutdownTarget",
             "Description": "",
             "Symbol": "EcuM_GetShutdownTarget",
@@ -6789,9 +7346,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "488",
+                "$id": "539",
                 "PortOperationRef": {
-                  "$id": "489",
+                  "$id": "540",
                   "PortPrototypeName": "EcuM_ShutdownTarget",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "EcuM_ShutdownTarget",
@@ -6804,14 +7361,14 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "490",
+                      "$id": "541",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "491",
+                      "$id": "542",
                       "ArgumentName": "target",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -6820,7 +7377,7 @@
                       }
                     },
                     {
-                      "$id": "492",
+                      "$id": "543",
                       "ArgumentName": "resetSleepMode",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -6859,7 +7416,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "493",
+            "$id": "544",
             "RunnableName": "SelectBootTarget",
             "Description": "",
             "Symbol": "EcuM_SelectBootTarget",
@@ -6870,9 +7427,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "494",
+                "$id": "545",
                 "PortOperationRef": {
-                  "$id": "495",
+                  "$id": "546",
                   "PortPrototypeName": "EcuM_BootTarget",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "EcuM_BootTarget",
@@ -6885,14 +7442,14 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "496",
+                      "$id": "547",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "497",
+                      "$id": "548",
                       "ArgumentName": "BootTarget",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -6931,7 +7488,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "498",
+            "$id": "549",
             "RunnableName": "SelectShutdownCause",
             "Description": "",
             "Symbol": "EcuM_SelectShutdownCause",
@@ -6942,9 +7499,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "499",
+                "$id": "550",
                 "PortOperationRef": {
-                  "$id": "500",
+                  "$id": "551",
                   "PortPrototypeName": "EcuM_ShutdownTarget",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "EcuM_ShutdownTarget",
@@ -6957,14 +7514,14 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "501",
+                      "$id": "552",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "502",
+                      "$id": "553",
                       "ArgumentName": "shutdownCause",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -7003,7 +7560,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "503",
+            "$id": "554",
             "RunnableName": "SelectShutdownTarget",
             "Description": "",
             "Symbol": "EcuM_SelectShutdownTarget",
@@ -7014,9 +7571,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "504",
+                "$id": "555",
                 "PortOperationRef": {
-                  "$id": "505",
+                  "$id": "556",
                   "PortPrototypeName": "EcuM_ShutdownTarget",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "EcuM_ShutdownTarget",
@@ -7029,14 +7586,14 @@
                   "PortDefinedArgumentList": [],
                   "AppErrorList": [
                     {
-                      "$id": "506",
+                      "$id": "557",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "507",
+                      "$id": "558",
                       "ArgumentName": "targetState",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -7045,7 +7602,7 @@
                       }
                     },
                     {
-                      "$id": "508",
+                      "$id": "559",
                       "ArgumentName": "resetSleepMode",
                       "Direction": 0,
                       "ServerArgumentImplPolicy": 0,
@@ -7092,7 +7649,7 @@
       "CTCalibrationSupport": false,
       "OperationPorts": [
         {
-          "$id": "509",
+          "$id": "560",
           "PortPrototypeName": "EcuM_ShutdownTarget",
           "OperationPrototypeName": "SelectShutdownTarget",
           "ClientPortCount": 0,
@@ -7100,7 +7657,7 @@
           "IsClient": false
         },
         {
-          "$id": "510",
+          "$id": "561",
           "PortPrototypeName": "EcuM_ShutdownTarget",
           "OperationPrototypeName": "SelectShutdownCause",
           "ClientPortCount": 0,
@@ -7108,7 +7665,7 @@
           "IsClient": false
         },
         {
-          "$id": "511",
+          "$id": "562",
           "PortPrototypeName": "EcuM_ShutdownTarget",
           "OperationPrototypeName": "GetShutdownTarget",
           "ClientPortCount": 0,
@@ -7116,7 +7673,7 @@
           "IsClient": false
         },
         {
-          "$id": "512",
+          "$id": "563",
           "PortPrototypeName": "EcuM_ShutdownTarget",
           "OperationPrototypeName": "GetShutdownCause",
           "ClientPortCount": 0,
@@ -7124,7 +7681,7 @@
           "IsClient": false
         },
         {
-          "$id": "513",
+          "$id": "564",
           "PortPrototypeName": "EcuM_ShutdownTarget",
           "OperationPrototypeName": "GetLastShutdownTarget",
           "ClientPortCount": 0,
@@ -7132,7 +7689,7 @@
           "IsClient": false
         },
         {
-          "$id": "514",
+          "$id": "565",
           "PortPrototypeName": "EcuM_BootTarget",
           "OperationPrototypeName": "SelectBootTarget",
           "ClientPortCount": 0,
@@ -7140,7 +7697,7 @@
           "IsClient": false
         },
         {
-          "$id": "515",
+          "$id": "566",
           "PortPrototypeName": "EcuM_BootTarget",
           "OperationPrototypeName": "GetBootTarget",
           "ClientPortCount": 0,
@@ -7154,10 +7711,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "516",
+      "$id": "567",
       "ComponentInstanceName": "Os_OsCore0_swc",
       "ComponentType": {
-        "$id": "517",
+        "$id": "568",
         "ComponentTypeName": "Os_OsCore0_swc",
         "RealizationType": 4,
         "SupportsMultipleInstances": false,
@@ -7170,7 +7727,7 @@
         "PerInstanceMemories": [],
         "Runnables": [
           {
-            "$id": "518",
+            "$id": "569",
             "RunnableName": "GetCounterValue",
             "Description": "",
             "Symbol": "GetCounterValue",
@@ -7181,9 +7738,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "519",
+                "$id": "570",
                 "PortOperationRef": {
-                  "$id": "520",
+                  "$id": "571",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore0",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -7195,7 +7752,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "521",
+                      "$id": "572",
                       "ID": "OsService_SystemTimer_OsCore0_0",
                       "Value": "SystemTimer_OsCore0",
                       "DataTypeRef": {
@@ -7205,19 +7762,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "522",
+                      "$id": "573",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "523",
+                      "$id": "574",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "524",
+                      "$id": "575",
                       "ArgumentName": "Value",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -7256,7 +7813,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "525",
+            "$id": "576",
             "RunnableName": "GetElapsedValue",
             "Description": "",
             "Symbol": "GetElapsedValue",
@@ -7267,9 +7824,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "526",
+                "$id": "577",
                 "PortOperationRef": {
-                  "$id": "527",
+                  "$id": "578",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore0",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -7281,7 +7838,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "528",
+                      "$id": "579",
                       "ID": "OsService_SystemTimer_OsCore0_0",
                       "Value": "SystemTimer_OsCore0",
                       "DataTypeRef": {
@@ -7291,24 +7848,24 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "529",
+                      "$id": "580",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "530",
+                      "$id": "581",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     },
                     {
-                      "$id": "531",
+                      "$id": "582",
                       "ErrorName": "E_OS_VALUE",
                       "ErrorCode": 8
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "532",
+                      "$id": "583",
                       "ArgumentName": "Value",
                       "Direction": 1,
                       "ServerArgumentImplPolicy": 0,
@@ -7317,7 +7874,7 @@
                       }
                     },
                     {
-                      "$id": "533",
+                      "$id": "584",
                       "ArgumentName": "ElapsedValue",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -7364,7 +7921,7 @@
       "CTCalibrationSupport": false,
       "OperationPorts": [
         {
-          "$id": "534",
+          "$id": "585",
           "PortPrototypeName": "OsService_SystemTimer_OsCore0",
           "OperationPrototypeName": "GetElapsedValue",
           "ClientPortCount": 0,
@@ -7372,7 +7929,7 @@
           "IsClient": false
         },
         {
-          "$id": "535",
+          "$id": "586",
           "PortPrototypeName": "OsService_SystemTimer_OsCore0",
           "OperationPrototypeName": "GetCounterValue",
           "ClientPortCount": 0,
@@ -7386,10 +7943,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "536",
+      "$id": "587",
       "ComponentInstanceName": "Os_OsCore1_swc",
       "ComponentType": {
-        "$id": "537",
+        "$id": "588",
         "ComponentTypeName": "Os_OsCore1_swc",
         "RealizationType": 4,
         "SupportsMultipleInstances": false,
@@ -7402,7 +7959,7 @@
         "PerInstanceMemories": [],
         "Runnables": [
           {
-            "$id": "538",
+            "$id": "589",
             "RunnableName": "GetCounterValue",
             "Description": "",
             "Symbol": "GetCounterValue",
@@ -7413,9 +7970,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "539",
+                "$id": "590",
                 "PortOperationRef": {
-                  "$id": "540",
+                  "$id": "591",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore1",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -7427,7 +7984,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "541",
+                      "$id": "592",
                       "ID": "OsService_SystemTimer_OsCore1_0",
                       "Value": "SystemTimer_OsCore1",
                       "DataTypeRef": {
@@ -7437,19 +7994,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "542",
+                      "$id": "593",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "543",
+                      "$id": "594",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "544",
+                      "$id": "595",
                       "ArgumentName": "Value",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -7488,7 +8045,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "545",
+            "$id": "596",
             "RunnableName": "GetElapsedValue",
             "Description": "",
             "Symbol": "GetElapsedValue",
@@ -7499,9 +8056,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "546",
+                "$id": "597",
                 "PortOperationRef": {
-                  "$id": "547",
+                  "$id": "598",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore1",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -7513,7 +8070,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "548",
+                      "$id": "599",
                       "ID": "OsService_SystemTimer_OsCore1_0",
                       "Value": "SystemTimer_OsCore1",
                       "DataTypeRef": {
@@ -7523,24 +8080,24 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "549",
+                      "$id": "600",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "550",
+                      "$id": "601",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     },
                     {
-                      "$id": "551",
+                      "$id": "602",
                       "ErrorName": "E_OS_VALUE",
                       "ErrorCode": 8
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "552",
+                      "$id": "603",
                       "ArgumentName": "Value",
                       "Direction": 1,
                       "ServerArgumentImplPolicy": 0,
@@ -7549,7 +8106,7 @@
                       }
                     },
                     {
-                      "$id": "553",
+                      "$id": "604",
                       "ArgumentName": "ElapsedValue",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -7596,7 +8153,7 @@
       "CTCalibrationSupport": false,
       "OperationPorts": [
         {
-          "$id": "554",
+          "$id": "605",
           "PortPrototypeName": "OsService_SystemTimer_OsCore1",
           "OperationPrototypeName": "GetElapsedValue",
           "ClientPortCount": 0,
@@ -7604,7 +8161,7 @@
           "IsClient": false
         },
         {
-          "$id": "555",
+          "$id": "606",
           "PortPrototypeName": "OsService_SystemTimer_OsCore1",
           "OperationPrototypeName": "GetCounterValue",
           "ClientPortCount": 0,
@@ -7618,10 +8175,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "556",
+      "$id": "607",
       "ComponentInstanceName": "Os_OsCore2_swc",
       "ComponentType": {
-        "$id": "557",
+        "$id": "608",
         "ComponentTypeName": "Os_OsCore2_swc",
         "RealizationType": 4,
         "SupportsMultipleInstances": false,
@@ -7634,7 +8191,7 @@
         "PerInstanceMemories": [],
         "Runnables": [
           {
-            "$id": "558",
+            "$id": "609",
             "RunnableName": "GetCounterValue",
             "Description": "",
             "Symbol": "GetCounterValue",
@@ -7645,9 +8202,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "559",
+                "$id": "610",
                 "PortOperationRef": {
-                  "$id": "560",
+                  "$id": "611",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore2",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -7659,7 +8216,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "561",
+                      "$id": "612",
                       "ID": "OsService_SystemTimer_OsCore2_0",
                       "Value": "SystemTimer_OsCore2",
                       "DataTypeRef": {
@@ -7669,19 +8226,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "562",
+                      "$id": "613",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "563",
+                      "$id": "614",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "564",
+                      "$id": "615",
                       "ArgumentName": "Value",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -7720,7 +8277,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "565",
+            "$id": "616",
             "RunnableName": "GetElapsedValue",
             "Description": "",
             "Symbol": "GetElapsedValue",
@@ -7731,9 +8288,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "566",
+                "$id": "617",
                 "PortOperationRef": {
-                  "$id": "567",
+                  "$id": "618",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore2",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -7745,7 +8302,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "568",
+                      "$id": "619",
                       "ID": "OsService_SystemTimer_OsCore2_0",
                       "Value": "SystemTimer_OsCore2",
                       "DataTypeRef": {
@@ -7755,24 +8312,24 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "569",
+                      "$id": "620",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "570",
+                      "$id": "621",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     },
                     {
-                      "$id": "571",
+                      "$id": "622",
                       "ErrorName": "E_OS_VALUE",
                       "ErrorCode": 8
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "572",
+                      "$id": "623",
                       "ArgumentName": "Value",
                       "Direction": 1,
                       "ServerArgumentImplPolicy": 0,
@@ -7781,7 +8338,7 @@
                       }
                     },
                     {
-                      "$id": "573",
+                      "$id": "624",
                       "ArgumentName": "ElapsedValue",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -7828,7 +8385,7 @@
       "CTCalibrationSupport": false,
       "OperationPorts": [
         {
-          "$id": "574",
+          "$id": "625",
           "PortPrototypeName": "OsService_SystemTimer_OsCore2",
           "OperationPrototypeName": "GetElapsedValue",
           "ClientPortCount": 0,
@@ -7836,7 +8393,7 @@
           "IsClient": false
         },
         {
-          "$id": "575",
+          "$id": "626",
           "PortPrototypeName": "OsService_SystemTimer_OsCore2",
           "OperationPrototypeName": "GetCounterValue",
           "ClientPortCount": 0,
@@ -7850,10 +8407,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "576",
+      "$id": "627",
       "ComponentInstanceName": "Os_OsCore3_swc",
       "ComponentType": {
-        "$id": "577",
+        "$id": "628",
         "ComponentTypeName": "Os_OsCore3_swc",
         "RealizationType": 4,
         "SupportsMultipleInstances": false,
@@ -7866,7 +8423,7 @@
         "PerInstanceMemories": [],
         "Runnables": [
           {
-            "$id": "578",
+            "$id": "629",
             "RunnableName": "GetCounterValue",
             "Description": "",
             "Symbol": "GetCounterValue",
@@ -7877,9 +8434,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "579",
+                "$id": "630",
                 "PortOperationRef": {
-                  "$id": "580",
+                  "$id": "631",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore3",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -7891,7 +8448,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "581",
+                      "$id": "632",
                       "ID": "OsService_SystemTimer_OsCore3_0",
                       "Value": "SystemTimer_OsCore3",
                       "DataTypeRef": {
@@ -7901,19 +8458,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "582",
+                      "$id": "633",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "583",
+                      "$id": "634",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "584",
+                      "$id": "635",
                       "ArgumentName": "Value",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -7952,7 +8509,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "585",
+            "$id": "636",
             "RunnableName": "GetElapsedValue",
             "Description": "",
             "Symbol": "GetElapsedValue",
@@ -7963,9 +8520,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "586",
+                "$id": "637",
                 "PortOperationRef": {
-                  "$id": "587",
+                  "$id": "638",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore3",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -7977,7 +8534,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "588",
+                      "$id": "639",
                       "ID": "OsService_SystemTimer_OsCore3_0",
                       "Value": "SystemTimer_OsCore3",
                       "DataTypeRef": {
@@ -7987,24 +8544,24 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "589",
+                      "$id": "640",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "590",
+                      "$id": "641",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     },
                     {
-                      "$id": "591",
+                      "$id": "642",
                       "ErrorName": "E_OS_VALUE",
                       "ErrorCode": 8
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "592",
+                      "$id": "643",
                       "ArgumentName": "Value",
                       "Direction": 1,
                       "ServerArgumentImplPolicy": 0,
@@ -8013,7 +8570,7 @@
                       }
                     },
                     {
-                      "$id": "593",
+                      "$id": "644",
                       "ArgumentName": "ElapsedValue",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8060,7 +8617,7 @@
       "CTCalibrationSupport": false,
       "OperationPorts": [
         {
-          "$id": "594",
+          "$id": "645",
           "PortPrototypeName": "OsService_SystemTimer_OsCore3",
           "OperationPrototypeName": "GetElapsedValue",
           "ClientPortCount": 0,
@@ -8068,7 +8625,7 @@
           "IsClient": false
         },
         {
-          "$id": "595",
+          "$id": "646",
           "PortPrototypeName": "OsService_SystemTimer_OsCore3",
           "OperationPrototypeName": "GetCounterValue",
           "ClientPortCount": 0,
@@ -8082,10 +8639,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "596",
+      "$id": "647",
       "ComponentInstanceName": "Os_OsCore4_swc",
       "ComponentType": {
-        "$id": "597",
+        "$id": "648",
         "ComponentTypeName": "Os_OsCore4_swc",
         "RealizationType": 4,
         "SupportsMultipleInstances": false,
@@ -8098,7 +8655,7 @@
         "PerInstanceMemories": [],
         "Runnables": [
           {
-            "$id": "598",
+            "$id": "649",
             "RunnableName": "GetCounterValue",
             "Description": "",
             "Symbol": "GetCounterValue",
@@ -8109,9 +8666,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "599",
+                "$id": "650",
                 "PortOperationRef": {
-                  "$id": "600",
+                  "$id": "651",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore4",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -8123,7 +8680,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "601",
+                      "$id": "652",
                       "ID": "OsService_SystemTimer_OsCore4_0",
                       "Value": "SystemTimer_OsCore4",
                       "DataTypeRef": {
@@ -8133,19 +8690,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "602",
+                      "$id": "653",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "603",
+                      "$id": "654",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "604",
+                      "$id": "655",
                       "ArgumentName": "Value",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8184,7 +8741,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "605",
+            "$id": "656",
             "RunnableName": "GetElapsedValue",
             "Description": "",
             "Symbol": "GetElapsedValue",
@@ -8195,9 +8752,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "606",
+                "$id": "657",
                 "PortOperationRef": {
-                  "$id": "607",
+                  "$id": "658",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore4",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -8209,7 +8766,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "608",
+                      "$id": "659",
                       "ID": "OsService_SystemTimer_OsCore4_0",
                       "Value": "SystemTimer_OsCore4",
                       "DataTypeRef": {
@@ -8219,24 +8776,24 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "609",
+                      "$id": "660",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "610",
+                      "$id": "661",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     },
                     {
-                      "$id": "611",
+                      "$id": "662",
                       "ErrorName": "E_OS_VALUE",
                       "ErrorCode": 8
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "612",
+                      "$id": "663",
                       "ArgumentName": "Value",
                       "Direction": 1,
                       "ServerArgumentImplPolicy": 0,
@@ -8245,7 +8802,7 @@
                       }
                     },
                     {
-                      "$id": "613",
+                      "$id": "664",
                       "ArgumentName": "ElapsedValue",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8292,7 +8849,7 @@
       "CTCalibrationSupport": false,
       "OperationPorts": [
         {
-          "$id": "614",
+          "$id": "665",
           "PortPrototypeName": "OsService_SystemTimer_OsCore4",
           "OperationPrototypeName": "GetElapsedValue",
           "ClientPortCount": 0,
@@ -8300,7 +8857,7 @@
           "IsClient": false
         },
         {
-          "$id": "615",
+          "$id": "666",
           "PortPrototypeName": "OsService_SystemTimer_OsCore4",
           "OperationPrototypeName": "GetCounterValue",
           "ClientPortCount": 0,
@@ -8314,10 +8871,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "616",
+      "$id": "667",
       "ComponentInstanceName": "Os_OsCore5_swc",
       "ComponentType": {
-        "$id": "617",
+        "$id": "668",
         "ComponentTypeName": "Os_OsCore5_swc",
         "RealizationType": 4,
         "SupportsMultipleInstances": false,
@@ -8330,7 +8887,7 @@
         "PerInstanceMemories": [],
         "Runnables": [
           {
-            "$id": "618",
+            "$id": "669",
             "RunnableName": "GetCounterValue",
             "Description": "",
             "Symbol": "GetCounterValue",
@@ -8341,9 +8898,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "619",
+                "$id": "670",
                 "PortOperationRef": {
-                  "$id": "620",
+                  "$id": "671",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore5",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -8355,7 +8912,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "621",
+                      "$id": "672",
                       "ID": "OsService_SystemTimer_OsCore5_0",
                       "Value": "SystemTimer_OsCore5",
                       "DataTypeRef": {
@@ -8365,19 +8922,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "622",
+                      "$id": "673",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "623",
+                      "$id": "674",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "624",
+                      "$id": "675",
                       "ArgumentName": "Value",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8416,7 +8973,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "625",
+            "$id": "676",
             "RunnableName": "GetElapsedValue",
             "Description": "",
             "Symbol": "GetElapsedValue",
@@ -8427,9 +8984,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "626",
+                "$id": "677",
                 "PortOperationRef": {
-                  "$id": "627",
+                  "$id": "678",
                   "PortPrototypeName": "OsService_SystemTimer_OsCore5",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "Os_Service",
@@ -8441,7 +8998,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "628",
+                      "$id": "679",
                       "ID": "OsService_SystemTimer_OsCore5_0",
                       "Value": "SystemTimer_OsCore5",
                       "DataTypeRef": {
@@ -8451,24 +9008,24 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "629",
+                      "$id": "680",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     },
                     {
-                      "$id": "630",
+                      "$id": "681",
                       "ErrorName": "E_OS_ID",
                       "ErrorCode": 3
                     },
                     {
-                      "$id": "631",
+                      "$id": "682",
                       "ErrorName": "E_OS_VALUE",
                       "ErrorCode": 8
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "632",
+                      "$id": "683",
                       "ArgumentName": "Value",
                       "Direction": 1,
                       "ServerArgumentImplPolicy": 0,
@@ -8477,7 +9034,7 @@
                       }
                     },
                     {
-                      "$id": "633",
+                      "$id": "684",
                       "ArgumentName": "ElapsedValue",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8524,7 +9081,7 @@
       "CTCalibrationSupport": false,
       "OperationPorts": [
         {
-          "$id": "634",
+          "$id": "685",
           "PortPrototypeName": "OsService_SystemTimer_OsCore5",
           "OperationPrototypeName": "GetElapsedValue",
           "ClientPortCount": 0,
@@ -8532,7 +9089,7 @@
           "IsClient": false
         },
         {
-          "$id": "635",
+          "$id": "686",
           "PortPrototypeName": "OsService_SystemTimer_OsCore5",
           "OperationPrototypeName": "GetCounterValue",
           "ClientPortCount": 0,
@@ -8546,10 +9103,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "636",
+      "$id": "687",
       "ComponentInstanceName": "StbM",
       "ComponentType": {
-        "$id": "637",
+        "$id": "688",
         "ComponentTypeName": "StbM",
         "RealizationType": 4,
         "SupportsMultipleInstances": false,
@@ -8562,7 +9119,7 @@
         "PerInstanceMemories": [],
         "Runnables": [
           {
-            "$id": "638",
+            "$id": "689",
             "RunnableName": "GetCurrentTime",
             "Description": "",
             "Symbol": "StbM_GetCurrentTime",
@@ -8573,9 +9130,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "639",
+                "$id": "690",
                 "PortOperationRef": {
-                  "$id": "640",
+                  "$id": "691",
                   "PortPrototypeName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
@@ -8587,7 +9144,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "641",
+                      "$id": "692",
                       "ID": "GlobalTime_Slave_StbMSynchronizedTimeBase_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -8597,19 +9154,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "642",
+                      "$id": "693",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     },
                     {
-                      "$id": "643",
+                      "$id": "694",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "644",
+                      "$id": "695",
                       "ArgumentName": "timeStampPtr",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8618,7 +9175,7 @@
                       }
                     },
                     {
-                      "$id": "645",
+                      "$id": "696",
                       "ArgumentName": "userDataPtr",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8657,7 +9214,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "646",
+            "$id": "697",
             "RunnableName": "GetRateDeviation",
             "Description": "",
             "Symbol": "StbM_GetRateDeviation",
@@ -8668,9 +9225,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "647",
+                "$id": "698",
                 "PortOperationRef": {
-                  "$id": "648",
+                  "$id": "699",
                   "PortPrototypeName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
@@ -8682,7 +9239,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "649",
+                      "$id": "700",
                       "ID": "GlobalTime_Slave_StbMSynchronizedTimeBase_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -8692,19 +9249,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "650",
+                      "$id": "701",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     },
                     {
-                      "$id": "651",
+                      "$id": "702",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "652",
+                      "$id": "703",
                       "ArgumentName": "rateDeviation",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8743,7 +9300,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "653",
+            "$id": "704",
             "RunnableName": "GetTimeBaseStatus",
             "Description": "",
             "Symbol": "StbM_GetTimeBaseStatus",
@@ -8754,9 +9311,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "654",
+                "$id": "705",
                 "PortOperationRef": {
-                  "$id": "655",
+                  "$id": "706",
                   "PortPrototypeName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
@@ -8768,7 +9325,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "656",
+                      "$id": "707",
                       "ID": "GlobalTime_Slave_StbMSynchronizedTimeBase_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -8778,19 +9335,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "657",
+                      "$id": "708",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     },
                     {
-                      "$id": "658",
+                      "$id": "709",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "659",
+                      "$id": "710",
                       "ArgumentName": "syncTimeBaseStatus",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8799,7 +9356,7 @@
                       }
                     },
                     {
-                      "$id": "660",
+                      "$id": "711",
                       "ArgumentName": "offsetTimeBaseStatus",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8838,7 +9395,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "661",
+            "$id": "712",
             "RunnableName": "GetTimeLeap",
             "Description": "",
             "Symbol": "StbM_GetTimeLeap",
@@ -8849,9 +9406,9 @@
             ],
             "TriggerList": [
               {
-                "$id": "662",
+                "$id": "713",
                 "PortOperationRef": {
-                  "$id": "663",
+                  "$id": "714",
                   "PortPrototypeName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
                   "PortPrototypeDescription": "",
                   "PortInterfaceName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
@@ -8863,7 +9420,7 @@
                   "ErrorHandling": 0,
                   "PortDefinedArgumentList": [
                     {
-                      "$id": "664",
+                      "$id": "715",
                       "ID": "GlobalTime_Slave_StbMSynchronizedTimeBase_0",
                       "Value": "0",
                       "DataTypeRef": {
@@ -8873,19 +9430,19 @@
                   ],
                   "AppErrorList": [
                     {
-                      "$id": "665",
+                      "$id": "716",
                       "ErrorName": "E_NOT_OK",
                       "ErrorCode": 1
                     },
                     {
-                      "$id": "666",
+                      "$id": "717",
                       "ErrorName": "E_OK",
                       "ErrorCode": 0
                     }
                   ],
                   "ArgumentList": [
                     {
-                      "$id": "667",
+                      "$id": "718",
                       "ArgumentName": "timeJump",
                       "Direction": 2,
                       "ServerArgumentImplPolicy": 0,
@@ -8924,7 +9481,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "668",
+            "$id": "719",
             "RunnableName": "StbM_MainFunction",
             "Description": "",
             "Symbol": "StbM_MainFunction",
@@ -8935,7 +9492,7 @@
             ],
             "TriggerList": [
               {
-                "$id": "669",
+                "$id": "720",
                 "CycleTime": 5,
                 "CycleTimeUnit": 1,
                 "CyclicTriggerOffset": 0,
@@ -8972,7 +9529,7 @@
       "CTCalibrationSupport": false,
       "OperationPorts": [
         {
-          "$id": "670",
+          "$id": "721",
           "PortPrototypeName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
           "OperationPrototypeName": "GetTimeLeap",
           "ClientPortCount": 0,
@@ -8980,7 +9537,7 @@
           "IsClient": false
         },
         {
-          "$id": "671",
+          "$id": "722",
           "PortPrototypeName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
           "OperationPrototypeName": "GetTimeBaseStatus",
           "ClientPortCount": 0,
@@ -8988,7 +9545,7 @@
           "IsClient": false
         },
         {
-          "$id": "672",
+          "$id": "723",
           "PortPrototypeName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
           "OperationPrototypeName": "GetRateDeviation",
           "ClientPortCount": 0,
@@ -8996,7 +9553,7 @@
           "IsClient": false
         },
         {
-          "$id": "673",
+          "$id": "724",
           "PortPrototypeName": "GlobalTime_Slave_StbMSynchronizedTimeBase",
           "OperationPrototypeName": "GetCurrentTime",
           "ClientPortCount": 0,
@@ -9010,10 +9567,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "674",
+      "$id": "725",
       "ComponentInstanceName": "swc_lock",
       "ComponentType": {
-        "$id": "675",
+        "$id": "726",
         "ComponentTypeName": "lock_control",
         "RealizationType": 2,
         "SupportsMultipleInstances": false,
@@ -9026,7 +9583,7 @@
         "PerInstanceMemories": [],
         "Runnables": [
           {
-            "$id": "676",
+            "$id": "727",
             "RunnableName": "lock_control_Init",
             "Description": "",
             "Symbol": "",
@@ -9037,7 +9594,7 @@
             ],
             "TriggerList": [
               {
-                "$id": "677",
+                "$id": "728",
                 "TriggerType": "InitEvent",
                 "RTEEventList": [
                   "lock_control_InitEvent"
@@ -9061,7 +9618,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "678",
+            "$id": "729",
             "RunnableName": "Runnable_2ms",
             "Description": "",
             "Symbol": "",
@@ -9071,13 +9628,13 @@
               null
             ],
             "MinimumStartInterval": {
-              "$id": "679",
+              "$id": "730",
               "Time": 2,
               "Unit": 1
             },
             "TriggerList": [
               {
-                "$id": "680",
+                "$id": "731",
                 "CycleTime": 2,
                 "CycleTimeUnit": 1,
                 "CyclicTriggerOffset": 0,
@@ -9119,10 +9676,10 @@
       "TriggerPorts": []
     },
     {
-      "$id": "681",
+      "$id": "732",
       "ComponentInstanceName": "window_core1",
       "ComponentType": {
-        "$id": "682",
+        "$id": "733",
         "ComponentTypeName": "window_core1",
         "RealizationType": 2,
         "SupportsMultipleInstances": false,
@@ -9135,7 +9692,7 @@
         "PerInstanceMemories": [],
         "Runnables": [
           {
-            "$id": "683",
+            "$id": "734",
             "RunnableName": "Runnable_windows_2ms",
             "Description": "",
             "Symbol": "",
@@ -9146,7 +9703,7 @@
             ],
             "TriggerList": [
               {
-                "$id": "684",
+                "$id": "735",
                 "CycleTime": 2,
                 "CycleTimeUnit": 1,
                 "CyclicTriggerOffset": 0,
@@ -9175,7 +9732,7 @@
             "InternalTriggeringPointList": []
           },
           {
-            "$id": "685",
+            "$id": "736",
             "RunnableName": "window_core1_Init",
             "Description": "",
             "Symbol": "",
@@ -9186,7 +9743,7 @@
             ],
             "TriggerList": [
               {
-                "$id": "686",
+                "$id": "737",
                 "TriggerType": "InitEvent",
                 "RTEEventList": [
                   "window_core1_InitEvent"
@@ -9224,7 +9781,7 @@
     }
   ],
   "LdComPduTable": {
-    "$id": "687"
+    "$id": "738"
   },
   "IsAUTOSAR3Rte": false,
   "Type": 8,

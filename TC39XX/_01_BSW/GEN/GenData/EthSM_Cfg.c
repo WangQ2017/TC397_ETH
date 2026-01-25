@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthSM_Cfg.c
- *   Generation Time: 2026-01-25 14:17:48
+ *   Generation Time: 2026-01-25 23:19:09
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -77,6 +77,7 @@ VAR(EthSM_ActiveIpVxCntUType, ETHSM_VAR_NOINIT) EthSM_ActiveIpVxCnt;  /* PRQA S 
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan10] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -107,6 +108,7 @@ VAR(EthSM_LastReportedStateUType, ETHSM_VAR_NOINIT) EthSM_LastReportedState;  /*
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan10] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -124,6 +126,7 @@ VAR(EthSM_ModeUType, ETHSM_VAR_NOINIT) EthSM_Mode;  /* PRQA S 0759, 1514, 1533 *
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan10] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -141,6 +144,7 @@ VAR(EthSM_RequestedModeUType, ETHSM_VAR_NOINIT) EthSM_RequestedMode;  /* PRQA S 
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan10] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -158,6 +162,7 @@ VAR(EthSM_StateUType, ETHSM_VAR_NOINIT) EthSM_State;  /* PRQA S 0759, 1514, 1533
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan10] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -175,6 +180,7 @@ VAR(EthSM_TcpIpStateUType, ETHSM_VAR_NOINIT) EthSM_TcpIpState;  /* PRQA S 0759, 
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan10] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -192,6 +198,7 @@ VAR(EthSM_TrcvLinkStateUType, ETHSM_VAR_NOINIT) EthSM_TrcvLinkState;  /* PRQA S 
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan10] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */

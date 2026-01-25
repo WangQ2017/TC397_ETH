@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2026-01-25 14:32:44
+ *   Generation Time: 2026-01-25 23:19:09
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -137,7 +137,7 @@
 #define BSWM_VERSION_INFO_API                STD_OFF
 #define BSWM_COMM_PNC_SUPPORT                STD_ON
 #define BSWM_COMM_INITIATE_RESET             STD_OFF
-#define BSWM_CHANNEL_COUNT                   2u
+#define BSWM_CHANNEL_COUNT                   3u
 #define BSWM_WAKEUP_SOURCE_COUNT             5u
 #define BSWM_IPDU_GROUP_CONTROL              STD_OFF
 #define BSWM_ECUM_MODE_HANDLING              STD_OFF

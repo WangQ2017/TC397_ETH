@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2026-01-25 14:30:28
+ *   Generation Time: 2026-01-25 23:19:09
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -121,14 +121,14 @@
 #define COMM_EXISTS_ONLY_NONE_NMTYPEOFCHANNEL           STD_OFF
 
 #define COMM_FULL_COMM_REQUEST_NOTIF                    STD_OFF
-#define COMM_MAX_NUMBER_OF_USERS                        3u
+#define COMM_MAX_NUMBER_OF_USERS                        4u
 #define COMM_DCM_INDICATION                             STD_OFF
 #define COMM_USERMODENOTIFUNC_PNC_USER_ONLY             STD_ON
 
 #define COMM_SYNCHRONOUS_WAKE_UP                        STD_ON
 #define COMM_EXTENDED_RAM_CHECK                         STD_OFF
 
-#define COMM_ACTIVE_CHANNEL                             2u
+#define COMM_ACTIVE_CHANNEL                             3u
 #define COMM_NVM_SUPPORT                                STD_OFF
 
 
@@ -137,6 +137,7 @@
     &&&~ USER HANDLES
  ----------------------------------------------------------------------------- */
 
+#define ComMConf_ComMUser_ComMUser_Channel_Vlan1  3u 
 #define ComMConf_ComMUser_ComMUser_Channel_Vlan10 0u 
 #define ComMConf_ComMUser_ComMUser_Channel_Vlan23 2u 
 #define ComMConf_ComMUser_ComMUser_Pnc00          1u 
@@ -148,6 +149,7 @@
  
 #define ComMConf_ComMChannel_ComMChannel_Vlan10 0u 
 #define ComMConf_ComMChannel_ComMChannel_Vlan23 1u 
+#define ComMConf_ComMChannel_ComMChannel_Vlan1  2u 
 
 
 /* -----------------------------------------------------------------------------
@@ -1016,6 +1018,7 @@ typedef struct ComM_MinFullComModeTimerStructSTag
 {
   ComM_MinFullComModeTimerType ComMChannel_0;
   ComM_MinFullComModeTimerType ComMChannel_1;
+  ComM_MinFullComModeTimerType ComMChannel_2;
 } ComM_MinFullComModeTimerStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_NmLightTimer */
@@ -1023,6 +1026,7 @@ typedef struct ComM_NmLightTimerStructSTag
 {
   ComM_NmLightTimerType ComMChannel_0;
   ComM_NmLightTimerType ComMChannel_1;
+  ComM_NmLightTimerType ComMChannel_2;
 } ComM_NmLightTimerStructSType;
 
 /**   \brief  type to be used as symbolic data element access to ComM_PncSignalValues */
@@ -1044,14 +1048,14 @@ typedef struct ComM_PncSignalValuesStructSTag
 /**   \brief  type to access ComM_MinFullComModeTimer in an index and symbol based style. */
 typedef union ComM_MinFullComModeTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_MinFullComModeTimerType raw[2];
+  ComM_MinFullComModeTimerType raw[3];
   ComM_MinFullComModeTimerStructSType str;
 } ComM_MinFullComModeTimerUType;
 
 /**   \brief  type to access ComM_NmLightTimer in an index and symbol based style. */
 typedef union ComM_NmLightTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_NmLightTimerType raw[2];
+  ComM_NmLightTimerType raw[3];
   ComM_NmLightTimerStructSType str;
 } ComM_NmLightTimerUType;
 

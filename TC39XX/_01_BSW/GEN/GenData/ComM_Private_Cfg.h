@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Private_Cfg.h
- *   Generation Time: 2026-01-25 14:30:28
+ *   Generation Time: 2026-01-25 23:19:09
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -71,8 +71,8 @@
 #define ComM_GetPncSignalIndOfPCConfig()                              ComM_PncSignalInd  /**< the pointer to ComM_PncSignalInd */
 #define ComM_GetPncSignalOfPCConfig()                                 ComM_PncSignal  /**< the pointer to ComM_PncSignal */
 #define ComM_GetPncSignalValuesOfPCConfig()                           ComM_PncSignalValues.raw  /**< the pointer to ComM_PncSignalValues */
-#define ComM_GetSizeOfChannelOfPCConfig()                             2u  /**< the number of accomplishable value elements in ComM_Channel */
-#define ComM_GetSizeOfChannelPbOfPCConfig()                           2u  /**< the number of accomplishable value elements in ComM_ChannelPb */
+#define ComM_GetSizeOfChannelOfPCConfig()                             3u  /**< the number of accomplishable value elements in ComM_Channel */
+#define ComM_GetSizeOfChannelPbOfPCConfig()                           3u  /**< the number of accomplishable value elements in ComM_ChannelPb */
 #define ComM_GetSizeOfPncChannelMappingOfPCConfig()                   1u  /**< the number of accomplishable value elements in ComM_PncChannelMapping */
 #define ComM_GetSizeOfPncOfPCConfig()                                 1u  /**< the number of accomplishable value elements in ComM_Pnc */
 #define ComM_GetSizeOfPncPbIndOfPCConfig()                            1u  /**< the number of accomplishable value elements in ComM_PncPbInd */
@@ -80,10 +80,10 @@
 #define ComM_GetSizeOfPncSignalIndOfPCConfig()                        1u  /**< the number of accomplishable value elements in ComM_PncSignalInd */
 #define ComM_GetSizeOfPncSignalOfPCConfig()                           2u  /**< the number of accomplishable value elements in ComM_PncSignal */
 #define ComM_GetSizeOfPncSignalValuesOfPCConfig()                     14u  /**< the number of accomplishable value elements in ComM_PncSignalValues */
-#define ComM_GetSizeOfUserByteMaskOfPCConfig()                        3u  /**< the number of accomplishable value elements in ComM_UserByteMask */
-#define ComM_GetSizeOfUserOfPCConfig()                                3u  /**< the number of accomplishable value elements in ComM_User */
+#define ComM_GetSizeOfUserByteMaskOfPCConfig()                        4u  /**< the number of accomplishable value elements in ComM_UserByteMask */
+#define ComM_GetSizeOfUserOfPCConfig()                                4u  /**< the number of accomplishable value elements in ComM_User */
 #define ComM_GetSizeOfUserPncByteMaskOfPCConfig()                     1u  /**< the number of accomplishable value elements in ComM_UserPncByteMask */
-#define ComM_GetSizeOfUserReqFullComOfPCConfig()                      2u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
+#define ComM_GetSizeOfUserReqFullComOfPCConfig()                      3u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
 #define ComM_GetSizeOfUserReqPncFullComOfPCConfig()                   1u  /**< the number of accomplishable value elements in ComM_UserReqPncFullCom */
 #define ComM_GetUserByteMaskOfPCConfig()                              ComM_UserByteMask  /**< the pointer to ComM_UserByteMask */
 #define ComM_GetUserOfPCConfig()                                      ComM_User  /**< the pointer to ComM_User */
@@ -471,7 +471,7 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2];
+extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -494,7 +494,7 @@ extern CONST(ComM_ChannelType, COMM_CONST) ComM_Channel[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2];
+extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -541,7 +541,7 @@ extern CONST(ComM_PncSignalType, COMM_CONST) ComM_PncSignal[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[3];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[4];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -564,7 +564,7 @@ extern CONST(ComM_UserType, COMM_CONST) ComM_User[3];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[3];
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[4];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -679,7 +679,7 @@ extern VAR(ComM_PncSignalValuesUType, COMM_VAR_NOINIT) ComM_PncSignalValues;  /*
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[2];
+extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[3];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

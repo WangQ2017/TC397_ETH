@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthIf_Cfg.h
- *   Generation Time: 2026-01-24 23:52:02
+ *   Generation Time: 2026-01-25 23:19:09
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -90,6 +90,7 @@
  *********************************************************************************************************************/
 #define EthIfConf_EthIfController_EthIfController_Vlan10 (0uL)
 #define EthIfConf_EthIfController_EthIfController_Vlan23 (1uL)
+#define EthIfConf_EthIfController_EthIfController_Vlan1 (2uL)
 #define EthIfConf_EthIfFrameOwnerConfig_TcpIp_IPv4 (0uL)
 #define EthIfConf_EthIfFrameOwnerConfig_EthIfFrameOwnerConfig_ARP (1uL)
 #define EthIfConf_EthIfFrameOwnerConfig_EthTSyn_EthTSyn (2uL)

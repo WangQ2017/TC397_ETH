@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Lcfg.c
- *   Generation Time: 2026-01-25 22:50:48
+ *   Generation Time: 2026-01-25 23:19:09
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -808,6 +808,7 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_RunToPostRun(B
   /*lint -restore */
   ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan10, FALSE);
   ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan23, FALSE);
+  ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan1, FALSE);
   BswM_ESH_OnEnterPostRun();
   BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_POSTRUN;
   BswM_RequestMode(BSWM_GENERIC_ESH_State, BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN);
@@ -860,6 +861,7 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_WakeupToRun(Bs
   BswM_UpdateTimer(partitionIdx, BSWM_TMR_ESH_SelfRunRequestTimer, 10uL);
   ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan10, TRUE);
   ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan23, TRUE);
+  ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan1, TRUE);
   BswM_ESH_OnEnterRun();
   BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_RUN;
   BswM_RequestMode(BSWM_GENERIC_ESH_State, BSWM_GENERICVALUE_ESH_State_ESH_RUN);

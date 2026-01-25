@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Lcfg.h
- *   Generation Time: 2026-01-24 23:52:03
+ *   Generation Time: 2026-01-25 23:19:10
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -137,34 +137,34 @@
 #define TCPIP_DEFGWADDROFDEFAULTUNICASTADDRV4                                                       STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_NETADDROFDEFAULTUNICASTADDRV4                                                         STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_NETMASKOFDEFAULTUNICASTADDRV4                                                         STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
-#define TCPIP_DHCPCONFIG                                                                            STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define TCPIP_DISCOVERINTERVALMAXOFDHCPCONFIG                                                       STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.DiscoverIntervalMax' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_DISCOVERINTERVALMINOFDHCPCONFIG                                                       STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.DiscoverIntervalMin' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_DISCOVERMAXNUMOFDHCPCONFIG                                                            STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.DiscoverMaxNum' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_HOSTNAMELENMAXOFDHCPCONFIG                                                            STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.HostNameLenMax' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_INITWAITMAXOFDHCPCONFIG                                                               STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.InitWaitMax' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_INITWAITMINOFDHCPCONFIG                                                               STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.InitWaitMin' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_REBINDINTERVALMINOFDHCPCONFIG                                                         STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RebindIntervalMin' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_RENEWINTERVALMINOFDHCPCONFIG                                                          STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RenewIntervalMin' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_REQADDRCALLOUTFUNCOFDHCPCONFIG                                                        STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.ReqAddrCalloutFunc' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_REQUESTINTERVALOFDHCPCONFIG                                                           STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RequestInterval' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_REQUESTMAXNUMOFDHCPCONFIG                                                             STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RequestMaxNum' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_RESTARTONFAILOFDHCPCONFIG                                                             STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RestartOnFail' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_RXREQOPTIONCNTOFDHCPCONFIG                                                            STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RxReqOptionCnt' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_DHCPHOSTNAME                                                                          STD_OFF  /**< Deactivateable: 'TcpIp_DhcpHostname' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_DHCPSTATUS                                                                            STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_CTRLSTATEOFDHCPSTATUS                                                                 STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.CtrlState' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_DATASTRUCTOFDHCPSTATUS                                                                STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.DataStruct' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_HOSTNAMELENOFDHCPSTATUS                                                               STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.HostNameLen' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_LASTDISCOVERSECSOFDHCPSTATUS                                                          STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.LastDiscoverSecs' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_MSTIMEROFDHCPSTATUS                                                                   STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.MsTimer' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_REQIPADDROFDHCPSTATUS                                                                 STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.ReqIpAddr' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_RETRYCOUNTEROFDHCPSTATUS                                                              STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.RetryCounter' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SECELAPSEDOFDHCPSTATUS                                                                STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.SecElapsed' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SECNEXTEVENTOFDHCPSTATUS                                                              STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.SecNextEvent' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SECNEXTINTERVALOFDHCPSTATUS                                                           STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.SecNextInterval' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SECTIMEROFDHCPSTATUS                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.SecTimer' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TIMEOUTOCCURREDOFDHCPSTATUS                                                           STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.TimeoutOccurred' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
+#define TCPIP_DHCPCONFIG                                                                            STD_ON
+#define TCPIP_DISCOVERINTERVALMAXOFDHCPCONFIG                                                       STD_ON
+#define TCPIP_DISCOVERINTERVALMINOFDHCPCONFIG                                                       STD_ON
+#define TCPIP_DISCOVERMAXNUMOFDHCPCONFIG                                                            STD_ON
+#define TCPIP_HOSTNAMELENMAXOFDHCPCONFIG                                                            STD_ON
+#define TCPIP_INITWAITMAXOFDHCPCONFIG                                                               STD_ON
+#define TCPIP_INITWAITMINOFDHCPCONFIG                                                               STD_ON
+#define TCPIP_REBINDINTERVALMINOFDHCPCONFIG                                                         STD_ON
+#define TCPIP_RENEWINTERVALMINOFDHCPCONFIG                                                          STD_ON
+#define TCPIP_REQADDRCALLOUTFUNCOFDHCPCONFIG                                                        STD_ON
+#define TCPIP_REQUESTINTERVALOFDHCPCONFIG                                                           STD_ON
+#define TCPIP_REQUESTMAXNUMOFDHCPCONFIG                                                             STD_ON
+#define TCPIP_RESTARTONFAILOFDHCPCONFIG                                                             STD_ON
+#define TCPIP_RXREQOPTIONCNTOFDHCPCONFIG                                                            STD_ON
+#define TCPIP_DHCPHOSTNAME                                                                          STD_ON
+#define TCPIP_DHCPSTATUS                                                                            STD_ON
+#define TCPIP_CTRLSTATEOFDHCPSTATUS                                                                 STD_ON
+#define TCPIP_DATASTRUCTOFDHCPSTATUS                                                                STD_ON
+#define TCPIP_HOSTNAMELENOFDHCPSTATUS                                                               STD_ON
+#define TCPIP_LASTDISCOVERSECSOFDHCPSTATUS                                                          STD_ON
+#define TCPIP_MSTIMEROFDHCPSTATUS                                                                   STD_ON
+#define TCPIP_REQIPADDROFDHCPSTATUS                                                                 STD_ON
+#define TCPIP_RETRYCOUNTEROFDHCPSTATUS                                                              STD_ON
+#define TCPIP_SECELAPSEDOFDHCPSTATUS                                                                STD_ON
+#define TCPIP_SECNEXTEVENTOFDHCPSTATUS                                                              STD_ON
+#define TCPIP_SECNEXTINTERVALOFDHCPSTATUS                                                           STD_ON
+#define TCPIP_SECTIMEROFDHCPSTATUS                                                                  STD_ON
+#define TCPIP_TIMEOUTOCCURREDOFDHCPSTATUS                                                           STD_ON
 #define TCPIP_DHCPUSEROPTION                                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_CODEOFDHCPUSEROPTION                                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_DHCPUSEROPTIONBUFFERENDIDXOFDHCPUSEROPTION                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -258,9 +258,9 @@
 #define TCPIP_DEFAULTTTLOFIPV4CTRL                                                                  STD_ON
 #define TCPIP_DHCPCONFIGIDXOFIPV4CTRL                                                               STD_ON
 #define TCPIP_DHCPCONFIGUSEDOFIPV4CTRL                                                              STD_ON
-#define TCPIP_DHCPHOSTNAMEENDIDXOFIPV4CTRL                                                          STD_OFF  /**< Deactivateable: 'TcpIp_IpV4Ctrl.DhcpHostnameEndIdx' Reason: 'the optional indirection is deactivated because DhcpHostnameUsedOfIpV4Ctrl is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define TCPIP_DHCPHOSTNAMESTARTIDXOFIPV4CTRL                                                        STD_OFF  /**< Deactivateable: 'TcpIp_IpV4Ctrl.DhcpHostnameStartIdx' Reason: 'the optional indirection is deactivated because DhcpHostnameUsedOfIpV4Ctrl is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define TCPIP_DHCPHOSTNAMEUSEDOFIPV4CTRL                                                            STD_OFF  /**< Deactivateable: 'TcpIp_IpV4Ctrl.DhcpHostnameUsed' Reason: 'the optional indirection is deactivated because DhcpHostnameUsedOfIpV4Ctrl is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define TCPIP_DHCPHOSTNAMEENDIDXOFIPV4CTRL                                                          STD_ON
+#define TCPIP_DHCPHOSTNAMESTARTIDXOFIPV4CTRL                                                        STD_ON
+#define TCPIP_DHCPHOSTNAMEUSEDOFIPV4CTRL                                                            STD_ON
 #define TCPIP_DHCPSTATUSIDXOFIPV4CTRL                                                               STD_ON
 #define TCPIP_DHCPSTATUSUSEDOFIPV4CTRL                                                              STD_ON
 #define TCPIP_DHCPUSEROPTIONENDIDXOFIPV4CTRL                                                        STD_ON
@@ -281,8 +281,8 @@
 #define TCPIP_LLADDRSTATEIDXOFIPV4CTRL                                                              STD_ON
 #define TCPIP_LLADDRSTATEUSEDOFIPV4CTRL                                                             STD_ON
 #define TCPIP_LOCALADDRV4BROADCASTIDXOFIPV4CTRL                                                     STD_ON
-#define TCPIP_LOCALADDRV4DHCPIDXOFIPV4CTRL                                                          STD_OFF  /**< Deactivateable: 'TcpIp_IpV4Ctrl.LocalAddrV4DhcpIdx' Reason: 'the optional indirection is deactivated because LocalAddrV4DhcpUsedOfIpV4Ctrl is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define TCPIP_LOCALADDRV4DHCPUSEDOFIPV4CTRL                                                         STD_OFF  /**< Deactivateable: 'TcpIp_IpV4Ctrl.LocalAddrV4DhcpUsed' Reason: 'the optional indirection is deactivated because LocalAddrV4DhcpUsedOfIpV4Ctrl is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define TCPIP_LOCALADDRV4DHCPIDXOFIPV4CTRL                                                          STD_ON
+#define TCPIP_LOCALADDRV4DHCPUSEDOFIPV4CTRL                                                         STD_ON
 #define TCPIP_LOCALADDRV4UNICASTIDXOFIPV4CTRL                                                       STD_ON
 #define TCPIP_MAXTXMSGSIZEOFIPV4CTRL                                                                STD_ON
 #define TCPIP_MTUTXOFIPV4CTRL                                                                       STD_ON
@@ -408,6 +408,9 @@
 #define TCPIP_SIZEOFBUF2TXREQMAP                                                                    STD_ON
 #define TCPIP_SIZEOFDEFAULTMULTICASTADDRV4                                                          STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDEFAULTUNICASTADDRV4                                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_SIZEOFDHCPCONFIG                                                                      STD_ON
+#define TCPIP_SIZEOFDHCPHOSTNAME                                                                    STD_ON
+#define TCPIP_SIZEOFDHCPSTATUS                                                                      STD_ON
 #define TCPIP_SIZEOFDHCPUSEROPTION                                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDHCPUSEROPTIONBUFFER                                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDHCPUSEROPTIONDYN                                                               STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -630,6 +633,9 @@
 #define TCPIP_BUF2TXREQMAPOFPCCONFIG                                                                STD_ON
 #define TCPIP_DEFAULTMULTICASTADDRV4OFPCCONFIG                                                      STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_DEFAULTUNICASTADDRV4OFPCCONFIG                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_DHCPCONFIGOFPCCONFIG                                                                  STD_ON
+#define TCPIP_DHCPHOSTNAMEOFPCCONFIG                                                                STD_ON
+#define TCPIP_DHCPSTATUSOFPCCONFIG                                                                  STD_ON
 #define TCPIP_DHCPUSEROPTIONBUFFEROFPCCONFIG                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_DHCPUSEROPTIONDYNOFPCCONFIG                                                           STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_DHCPUSEROPTIONOFPCCONFIG                                                              STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -664,6 +670,9 @@
 #define TCPIP_SIZEOFBUF2TXREQMAPOFPCCONFIG                                                          STD_ON
 #define TCPIP_SIZEOFDEFAULTMULTICASTADDRV4OFPCCONFIG                                                STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDEFAULTUNICASTADDRV4OFPCCONFIG                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_SIZEOFDHCPCONFIGOFPCCONFIG                                                            STD_ON
+#define TCPIP_SIZEOFDHCPHOSTNAMEOFPCCONFIG                                                          STD_ON
+#define TCPIP_SIZEOFDHCPSTATUSOFPCCONFIG                                                            STD_ON
 #define TCPIP_SIZEOFDHCPUSEROPTIONBUFFEROFPCCONFIG                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDHCPUSEROPTIONDYNOFPCCONFIG                                                     STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDHCPUSEROPTIONOFPCCONFIG                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -754,6 +763,16 @@
 #define TCPIP_MIN_ETHBUFLENOFBUF2TXREQMAP                                                           0u
 #define TCPIP_MIN_SOCKETDYNIDXOFBUF2TXREQMAP                                                        0u
 #define TCPIP_MIN_ULTXREQIDXOFBUF2TXREQMAP                                                          0u
+#define TCPIP_MIN_DHCPHOSTNAME                                                                      0u
+#define TCPIP_MIN_CTRLSTATEOFDHCPSTATUS                                                             0u
+#define TCPIP_MIN_HOSTNAMELENOFDHCPSTATUS                                                           0u
+#define TCPIP_MIN_LASTDISCOVERSECSOFDHCPSTATUS                                                      0u
+#define TCPIP_MIN_MSTIMEROFDHCPSTATUS                                                               0u
+#define TCPIP_MIN_RETRYCOUNTEROFDHCPSTATUS                                                          0u
+#define TCPIP_MIN_SECELAPSEDOFDHCPSTATUS                                                            0u
+#define TCPIP_MIN_SECNEXTEVENTOFDHCPSTATUS                                                          0u
+#define TCPIP_MIN_SECNEXTINTERVALOFDHCPSTATUS                                                       0u
+#define TCPIP_MIN_SECTIMEROFDHCPSTATUS                                                              0u
 #define TCPIP_MIN_DHCPUSEROPTIONBUFFER                                                              0u
 #define TCPIP_MIN_LENGTHOFDHCPUSEROPTIONDYN                                                         0u
 #define TCPIP_MIN_NEXTTRANSMISSIONMSOFGRATUITOUSARP                                                 0u
@@ -851,6 +870,16 @@
 #define TCPIP_MAX_ETHBUFLENOFBUF2TXREQMAP                                                           65535u
 #define TCPIP_MAX_SOCKETDYNIDXOFBUF2TXREQMAP                                                        255u
 #define TCPIP_MAX_ULTXREQIDXOFBUF2TXREQMAP                                                          255u
+#define TCPIP_MAX_DHCPHOSTNAME                                                                      255u
+#define TCPIP_MAX_CTRLSTATEOFDHCPSTATUS                                                             255u
+#define TCPIP_MAX_HOSTNAMELENOFDHCPSTATUS                                                           255u
+#define TCPIP_MAX_LASTDISCOVERSECSOFDHCPSTATUS                                                      65535u
+#define TCPIP_MAX_MSTIMEROFDHCPSTATUS                                                               65535u
+#define TCPIP_MAX_RETRYCOUNTEROFDHCPSTATUS                                                          255u
+#define TCPIP_MAX_SECELAPSEDOFDHCPSTATUS                                                            65535u
+#define TCPIP_MAX_SECNEXTEVENTOFDHCPSTATUS                                                          4294967295u
+#define TCPIP_MAX_SECNEXTINTERVALOFDHCPSTATUS                                                       4294967295u
+#define TCPIP_MAX_SECTIMEROFDHCPSTATUS                                                              4294967295u
 #define TCPIP_MAX_DHCPUSEROPTIONBUFFER                                                              255u
 #define TCPIP_MAX_LENGTHOFDHCPUSEROPTIONDYN                                                         65535u
 #define TCPIP_MAX_NEXTTRANSMISSIONMSOFGRATUITOUSARP                                                 4294967295u
@@ -950,12 +979,15 @@
 #define TCPIP_NO_ARPTABLEENTRYSTARTIDXOFIPV4CTRL                                                    255u
 #define TCPIP_NO_AUTOIPCONFIGIDXOFIPV4CTRL                                                          255u
 #define TCPIP_NO_DHCPCONFIGIDXOFIPV4CTRL                                                            255u
+#define TCPIP_NO_DHCPHOSTNAMEENDIDXOFIPV4CTRL                                                       255u
+#define TCPIP_NO_DHCPHOSTNAMESTARTIDXOFIPV4CTRL                                                     255u
 #define TCPIP_NO_DHCPSTATUSIDXOFIPV4CTRL                                                            255u
 #define TCPIP_NO_DHCPUSEROPTIONENDIDXOFIPV4CTRL                                                     255u
 #define TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL                                                   255u
 #define TCPIP_NO_FRAGMENTATIONCONFIGIDXOFIPV4CTRL                                                   255u
 #define TCPIP_NO_GRATUITOUSARPIDXOFIPV4CTRL                                                         255u
 #define TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL                                                           255u
+#define TCPIP_NO_LOCALADDRV4DHCPIDXOFIPV4CTRL                                                       255u
 #define TCPIP_NO_MULTICASTADDRV4ENDIDXOFIPV4CTRL                                                    255u
 #define TCPIP_NO_MULTICASTADDRV4STARTIDXOFIPV4CTRL                                                  255u
 #define TCPIP_NO_STATICARPTABLEIDXOFIPV4CTRL                                                        255u
@@ -1017,6 +1049,19 @@
 #define TCPIP_ISDEF_DEFGWADDROFDEFAULTUNICASTADDRV4                                                 STD_OFF
 #define TCPIP_ISDEF_NETADDROFDEFAULTUNICASTADDRV4                                                   STD_OFF
 #define TCPIP_ISDEF_NETMASKOFDEFAULTUNICASTADDRV4                                                   STD_OFF
+#define TCPIP_ISDEF_DISCOVERINTERVALMAXOFDHCPCONFIG                                                 STD_OFF
+#define TCPIP_ISDEF_DISCOVERINTERVALMINOFDHCPCONFIG                                                 STD_OFF
+#define TCPIP_ISDEF_DISCOVERMAXNUMOFDHCPCONFIG                                                      STD_OFF
+#define TCPIP_ISDEF_HOSTNAMELENMAXOFDHCPCONFIG                                                      STD_OFF
+#define TCPIP_ISDEF_INITWAITMAXOFDHCPCONFIG                                                         STD_OFF
+#define TCPIP_ISDEF_INITWAITMINOFDHCPCONFIG                                                         STD_OFF
+#define TCPIP_ISDEF_REBINDINTERVALMINOFDHCPCONFIG                                                   STD_OFF
+#define TCPIP_ISDEF_RENEWINTERVALMINOFDHCPCONFIG                                                    STD_OFF
+#define TCPIP_ISDEF_REQADDRCALLOUTFUNCOFDHCPCONFIG                                                  STD_OFF
+#define TCPIP_ISDEF_REQUESTINTERVALOFDHCPCONFIG                                                     STD_OFF
+#define TCPIP_ISDEF_REQUESTMAXNUMOFDHCPCONFIG                                                       STD_OFF
+#define TCPIP_ISDEF_RESTARTONFAILOFDHCPCONFIG                                                       STD_OFF
+#define TCPIP_ISDEF_RXREQOPTIONCNTOFDHCPCONFIG                                                      STD_OFF
 #define TCPIP_ISDEF_CODEOFDHCPUSEROPTION                                                            STD_OFF
 #define TCPIP_ISDEF_DHCPUSEROPTIONBUFFERENDIDXOFDHCPUSEROPTION                                      STD_OFF
 #define TCPIP_ISDEF_DHCPUSEROPTIONBUFFERLENGTHOFDHCPUSEROPTION                                      STD_OFF
@@ -1047,6 +1092,9 @@
 #define TCPIP_ISDEF_DEFAULTTTLOFIPV4CTRL                                                            STD_OFF
 #define TCPIP_ISDEF_DHCPCONFIGIDXOFIPV4CTRL                                                         STD_OFF
 #define TCPIP_ISDEF_DHCPCONFIGUSEDOFIPV4CTRL                                                        STD_OFF
+#define TCPIP_ISDEF_DHCPHOSTNAMEENDIDXOFIPV4CTRL                                                    STD_OFF
+#define TCPIP_ISDEF_DHCPHOSTNAMESTARTIDXOFIPV4CTRL                                                  STD_OFF
+#define TCPIP_ISDEF_DHCPHOSTNAMEUSEDOFIPV4CTRL                                                      STD_OFF
 #define TCPIP_ISDEF_DHCPSTATUSIDXOFIPV4CTRL                                                         STD_OFF
 #define TCPIP_ISDEF_DHCPSTATUSUSEDOFIPV4CTRL                                                        STD_OFF
 #define TCPIP_ISDEF_DHCPUSEROPTIONENDIDXOFIPV4CTRL                                                  STD_OFF
@@ -1065,6 +1113,8 @@
 #define TCPIP_ISDEF_LLADDRSTATEIDXOFIPV4CTRL                                                        STD_OFF
 #define TCPIP_ISDEF_LLADDRSTATEUSEDOFIPV4CTRL                                                       STD_OFF
 #define TCPIP_ISDEF_LOCALADDRV4BROADCASTIDXOFIPV4CTRL                                               STD_OFF
+#define TCPIP_ISDEF_LOCALADDRV4DHCPIDXOFIPV4CTRL                                                    STD_OFF
+#define TCPIP_ISDEF_LOCALADDRV4DHCPUSEDOFIPV4CTRL                                                   STD_OFF
 #define TCPIP_ISDEF_LOCALADDRV4UNICASTIDXOFIPV4CTRL                                                 STD_OFF
 #define TCPIP_ISDEF_MAXTXMSGSIZEOFIPV4CTRL                                                          STD_OFF
 #define TCPIP_ISDEF_MTUTXOFIPV4CTRL                                                                 STD_OFF
@@ -1146,6 +1196,9 @@
 #define TCPIP_ISDEF_BUF2TXREQMAPOFPCCONFIG                                                          STD_ON
 #define TCPIP_ISDEF_DEFAULTMULTICASTADDRV4OFPCCONFIG                                                STD_OFF
 #define TCPIP_ISDEF_DEFAULTUNICASTADDRV4OFPCCONFIG                                                  STD_OFF
+#define TCPIP_ISDEF_DHCPCONFIGOFPCCONFIG                                                            STD_ON
+#define TCPIP_ISDEF_DHCPHOSTNAMEOFPCCONFIG                                                          STD_ON
+#define TCPIP_ISDEF_DHCPSTATUSOFPCCONFIG                                                            STD_ON
 #define TCPIP_ISDEF_DHCPUSEROPTIONBUFFEROFPCCONFIG                                                  STD_OFF
 #define TCPIP_ISDEF_DHCPUSEROPTIONDYNOFPCCONFIG                                                     STD_OFF
 #define TCPIP_ISDEF_DHCPUSEROPTIONOFPCCONFIG                                                        STD_OFF
@@ -1254,6 +1307,19 @@
 #define TCPIP_EQ2_DEFGWADDROFDEFAULTUNICASTADDRV4                                                   
 #define TCPIP_EQ2_NETADDROFDEFAULTUNICASTADDRV4                                                     
 #define TCPIP_EQ2_NETMASKOFDEFAULTUNICASTADDRV4                                                     
+#define TCPIP_EQ2_DISCOVERINTERVALMAXOFDHCPCONFIG                                                   
+#define TCPIP_EQ2_DISCOVERINTERVALMINOFDHCPCONFIG                                                   
+#define TCPIP_EQ2_DISCOVERMAXNUMOFDHCPCONFIG                                                        
+#define TCPIP_EQ2_HOSTNAMELENMAXOFDHCPCONFIG                                                        
+#define TCPIP_EQ2_INITWAITMAXOFDHCPCONFIG                                                           
+#define TCPIP_EQ2_INITWAITMINOFDHCPCONFIG                                                           
+#define TCPIP_EQ2_REBINDINTERVALMINOFDHCPCONFIG                                                     
+#define TCPIP_EQ2_RENEWINTERVALMINOFDHCPCONFIG                                                      
+#define TCPIP_EQ2_REQADDRCALLOUTFUNCOFDHCPCONFIG                                                    
+#define TCPIP_EQ2_REQUESTINTERVALOFDHCPCONFIG                                                       
+#define TCPIP_EQ2_REQUESTMAXNUMOFDHCPCONFIG                                                         
+#define TCPIP_EQ2_RESTARTONFAILOFDHCPCONFIG                                                         
+#define TCPIP_EQ2_RXREQOPTIONCNTOFDHCPCONFIG                                                        
 #define TCPIP_EQ2_CODEOFDHCPUSEROPTION                                                              
 #define TCPIP_EQ2_DHCPUSEROPTIONBUFFERENDIDXOFDHCPUSEROPTION                                        
 #define TCPIP_EQ2_DHCPUSEROPTIONBUFFERLENGTHOFDHCPUSEROPTION                                        
@@ -1284,6 +1350,9 @@
 #define TCPIP_EQ2_DEFAULTTTLOFIPV4CTRL                                                              
 #define TCPIP_EQ2_DHCPCONFIGIDXOFIPV4CTRL                                                           
 #define TCPIP_EQ2_DHCPCONFIGUSEDOFIPV4CTRL                                                          
+#define TCPIP_EQ2_DHCPHOSTNAMEENDIDXOFIPV4CTRL                                                      
+#define TCPIP_EQ2_DHCPHOSTNAMESTARTIDXOFIPV4CTRL                                                    
+#define TCPIP_EQ2_DHCPHOSTNAMEUSEDOFIPV4CTRL                                                        
 #define TCPIP_EQ2_DHCPSTATUSIDXOFIPV4CTRL                                                           
 #define TCPIP_EQ2_DHCPSTATUSUSEDOFIPV4CTRL                                                          
 #define TCPIP_EQ2_DHCPUSEROPTIONENDIDXOFIPV4CTRL                                                    
@@ -1302,6 +1371,8 @@
 #define TCPIP_EQ2_LLADDRSTATEIDXOFIPV4CTRL                                                          
 #define TCPIP_EQ2_LLADDRSTATEUSEDOFIPV4CTRL                                                         
 #define TCPIP_EQ2_LOCALADDRV4BROADCASTIDXOFIPV4CTRL                                                 
+#define TCPIP_EQ2_LOCALADDRV4DHCPIDXOFIPV4CTRL                                                      
+#define TCPIP_EQ2_LOCALADDRV4DHCPUSEDOFIPV4CTRL                                                     
 #define TCPIP_EQ2_LOCALADDRV4UNICASTIDXOFIPV4CTRL                                                   
 #define TCPIP_EQ2_MAXTXMSGSIZEOFIPV4CTRL                                                            
 #define TCPIP_EQ2_MTUTXOFIPV4CTRL                                                                   
@@ -1383,6 +1454,9 @@
 #define TCPIP_EQ2_BUF2TXREQMAPOFPCCONFIG                                                            TcpIp_Buf2TxReqMap.raw
 #define TCPIP_EQ2_DEFAULTMULTICASTADDRV4OFPCCONFIG                                                  
 #define TCPIP_EQ2_DEFAULTUNICASTADDRV4OFPCCONFIG                                                    
+#define TCPIP_EQ2_DHCPCONFIGOFPCCONFIG                                                              TcpIp_DhcpConfig
+#define TCPIP_EQ2_DHCPHOSTNAMEOFPCCONFIG                                                            TcpIp_DhcpHostname.raw
+#define TCPIP_EQ2_DHCPSTATUSOFPCCONFIG                                                              TcpIp_DhcpStatus.raw
 #define TCPIP_EQ2_DHCPUSEROPTIONBUFFEROFPCCONFIG                                                    
 #define TCPIP_EQ2_DHCPUSEROPTIONDYNOFPCCONFIG                                                       
 #define TCPIP_EQ2_DHCPUSEROPTIONOFPCCONFIG                                                          
@@ -1583,6 +1657,9 @@
 */ 
 #define TcpIp_GetAddrAssignmentCfgByPrioOfPCConfig()                                                TcpIp_AddrAssignmentCfgByPrio  /**< the pointer to TcpIp_AddrAssignmentCfgByPrio */
 #define TcpIp_GetBuf2TxReqMapOfPCConfig()                                                           TcpIp_Buf2TxReqMap.raw  /**< the pointer to TcpIp_Buf2TxReqMap */
+#define TcpIp_GetDhcpConfigOfPCConfig()                                                             TcpIp_DhcpConfig  /**< the pointer to TcpIp_DhcpConfig */
+#define TcpIp_GetDhcpHostnameOfPCConfig()                                                           TcpIp_DhcpHostname.raw  /**< the pointer to TcpIp_DhcpHostname */
+#define TcpIp_GetDhcpStatusOfPCConfig()                                                             TcpIp_DhcpStatus.raw  /**< the pointer to TcpIp_DhcpStatus */
 #define TcpIp_GetDuplicateAddrDetectionFctPtrOfPCConfig()                                           (&(TcpIp_DuplicateAddrDetectionFctPtr))  /**< the pointer to TcpIp_DuplicateAddrDetectionFctPtr */
 #define TcpIp_GetEthIfCtrlOfPCConfig()                                                              TcpIp_EthIfCtrl  /**< the pointer to TcpIp_EthIfCtrl */
 #define TcpIp_GetIcmpConfigOfPCConfig()                                                             TcpIp_IcmpConfig  /**< the pointer to TcpIp_IcmpConfig */
@@ -1596,17 +1673,20 @@
 #define TcpIp_GetLocalAddrOfPCConfig()                                                              TcpIp_LocalAddr.raw  /**< the pointer to TcpIp_LocalAddr */
 #define TcpIp_GetLocalAddrV4OfPCConfig()                                                            TcpIp_LocalAddrV4  /**< the pointer to TcpIp_LocalAddrV4 */
 #define TcpIp_GetRandomNumberFctPtrOfPCConfig()                                                     (&(TcpIp_RandomNumberFctPtr))  /**< the pointer to TcpIp_RandomNumberFctPtr */
-#define TcpIp_GetSizeOfAddrAssignmentCfgByPrioOfPCConfig()                                          1u  /**< the number of accomplishable value elements in TcpIp_AddrAssignmentCfgByPrio */
+#define TcpIp_GetSizeOfAddrAssignmentCfgByPrioOfPCConfig()                                          2u  /**< the number of accomplishable value elements in TcpIp_AddrAssignmentCfgByPrio */
 #define TcpIp_GetSizeOfBuf2TxReqMapOfPCConfig()                                                     10u  /**< the number of accomplishable value elements in TcpIp_Buf2TxReqMap */
-#define TcpIp_GetSizeOfEthIfCtrlOfPCConfig()                                                        2u  /**< the number of accomplishable value elements in TcpIp_EthIfCtrl */
+#define TcpIp_GetSizeOfDhcpConfigOfPCConfig()                                                       1u  /**< the number of accomplishable value elements in TcpIp_DhcpConfig */
+#define TcpIp_GetSizeOfDhcpHostnameOfPCConfig()                                                     30u  /**< the number of accomplishable value elements in TcpIp_DhcpHostname */
+#define TcpIp_GetSizeOfDhcpStatusOfPCConfig()                                                       1u  /**< the number of accomplishable value elements in TcpIp_DhcpStatus */
+#define TcpIp_GetSizeOfEthIfCtrlOfPCConfig()                                                        3u  /**< the number of accomplishable value elements in TcpIp_EthIfCtrl */
 #define TcpIp_GetSizeOfIcmpConfigOfPCConfig()                                                       1u  /**< the number of accomplishable value elements in TcpIp_IcmpConfig */
 #define TcpIp_GetSizeOfIcmpDestUnreachableMsgOfPCConfig()                                           24u  /**< the number of accomplishable value elements in TcpIp_IcmpDestUnreachableMsg */
 #define TcpIp_GetSizeOfIcmpEchoReplyDataOfPCConfig()                                                32u  /**< the number of accomplishable value elements in TcpIp_IcmpEchoReplyData */
-#define TcpIp_GetSizeOfIpV4CtrlOfPCConfig()                                                         2u  /**< the number of accomplishable value elements in TcpIp_IpV4Ctrl */
+#define TcpIp_GetSizeOfIpV4CtrlOfPCConfig()                                                         3u  /**< the number of accomplishable value elements in TcpIp_IpV4Ctrl */
 #define TcpIp_GetSizeOfIpV4GeneralOfPCConfig()                                                      1u  /**< the number of accomplishable value elements in TcpIp_IpV4General */
-#define TcpIp_GetSizeOfIpV4SocketDynOfPCConfig()                                                    11u  /**< the number of accomplishable value elements in TcpIp_IpV4SocketDyn */
-#define TcpIp_GetSizeOfLocalAddrOfPCConfig()                                                        7u  /**< the number of accomplishable value elements in TcpIp_LocalAddr */
-#define TcpIp_GetSizeOfLocalAddrV4OfPCConfig()                                                      7u  /**< the number of accomplishable value elements in TcpIp_LocalAddrV4 */
+#define TcpIp_GetSizeOfIpV4SocketDynOfPCConfig()                                                    12u  /**< the number of accomplishable value elements in TcpIp_IpV4SocketDyn */
+#define TcpIp_GetSizeOfLocalAddrOfPCConfig()                                                        9u  /**< the number of accomplishable value elements in TcpIp_LocalAddr */
+#define TcpIp_GetSizeOfLocalAddrV4OfPCConfig()                                                      9u  /**< the number of accomplishable value elements in TcpIp_LocalAddrV4 */
 #define TcpIp_GetSizeOfSocketDynOfPCConfig()                                                        9u  /**< the number of accomplishable value elements in TcpIp_SocketDyn */
 #define TcpIp_GetSizeOfSocketOwnerConfigOfPCConfig()                                                1u  /**< the number of accomplishable value elements in TcpIp_SocketOwnerConfig */
 #define TcpIp_GetSizeOfSocketTcpDynOfPCConfig()                                                     3u  /**< the number of accomplishable value elements in TcpIp_SocketTcpDyn */
@@ -1701,6 +1781,15 @@ typedef uint8_least TcpIp_DefaultMulticastAddrV4IterType;
 
 /**   \brief  type used to iterate TcpIp_DefaultUnicastAddrV4 */
 typedef uint8_least TcpIp_DefaultUnicastAddrV4IterType;
+
+/**   \brief  type used to iterate TcpIp_DhcpConfig */
+typedef uint8_least TcpIp_DhcpConfigIterType;
+
+/**   \brief  type used to iterate TcpIp_DhcpHostname */
+typedef uint8_least TcpIp_DhcpHostnameIterType;
+
+/**   \brief  type used to iterate TcpIp_DhcpStatus */
+typedef uint8_least TcpIp_DhcpStatusIterType;
 
 /**   \brief  type used to iterate TcpIp_DhcpUserOption */
 typedef uint8_least TcpIp_DhcpUserOptionIterType;
@@ -1942,6 +2031,75 @@ typedef uint8 TcpIp_SocketDynIdxOfBuf2TxReqMapType;
 /**   \brief  value based type definition for TcpIp_UlTxReqIdxOfBuf2TxReqMap */
 typedef uint8 TcpIp_UlTxReqIdxOfBuf2TxReqMapType;
 
+/**   \brief  value based type definition for TcpIp_DiscoverIntervalMaxOfDhcpConfig */
+typedef uint8 TcpIp_DiscoverIntervalMaxOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_DiscoverIntervalMinOfDhcpConfig */
+typedef uint8 TcpIp_DiscoverIntervalMinOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_DiscoverMaxNumOfDhcpConfig */
+typedef uint8 TcpIp_DiscoverMaxNumOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_HostNameLenMaxOfDhcpConfig */
+typedef uint8 TcpIp_HostNameLenMaxOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_InitWaitMaxOfDhcpConfig */
+typedef uint16 TcpIp_InitWaitMaxOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_InitWaitMinOfDhcpConfig */
+typedef uint8 TcpIp_InitWaitMinOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RebindIntervalMinOfDhcpConfig */
+typedef uint8 TcpIp_RebindIntervalMinOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RenewIntervalMinOfDhcpConfig */
+typedef uint8 TcpIp_RenewIntervalMinOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RequestIntervalOfDhcpConfig */
+typedef uint8 TcpIp_RequestIntervalOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RequestMaxNumOfDhcpConfig */
+typedef uint8 TcpIp_RequestMaxNumOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RestartOnFailOfDhcpConfig */
+typedef boolean TcpIp_RestartOnFailOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RxReqOptionCntOfDhcpConfig */
+typedef uint8 TcpIp_RxReqOptionCntOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_DhcpHostname */
+typedef uint8 TcpIp_DhcpHostnameType;
+
+/**   \brief  value based type definition for TcpIp_CtrlStateOfDhcpStatus */
+typedef uint8 TcpIp_CtrlStateOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_HostNameLenOfDhcpStatus */
+typedef uint8 TcpIp_HostNameLenOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_LastDiscoverSecsOfDhcpStatus */
+typedef uint16 TcpIp_LastDiscoverSecsOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_MsTimerOfDhcpStatus */
+typedef uint16 TcpIp_MsTimerOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_RetryCounterOfDhcpStatus */
+typedef uint8 TcpIp_RetryCounterOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_SecElapsedOfDhcpStatus */
+typedef uint16 TcpIp_SecElapsedOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_SecNextEventOfDhcpStatus */
+typedef uint32 TcpIp_SecNextEventOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_SecNextIntervalOfDhcpStatus */
+typedef uint32 TcpIp_SecNextIntervalOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_SecTimerOfDhcpStatus */
+typedef uint32 TcpIp_SecTimerOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_TimeoutOccurredOfDhcpStatus */
+typedef boolean TcpIp_TimeoutOccurredOfDhcpStatusType;
+
 /**   \brief  value based type definition for TcpIp_CodeOfDhcpUserOption */
 typedef uint8 TcpIp_CodeOfDhcpUserOptionType;
 
@@ -2047,6 +2205,15 @@ typedef uint8 TcpIp_DhcpConfigIdxOfIpV4CtrlType;
 /**   \brief  value based type definition for TcpIp_DhcpConfigUsedOfIpV4Ctrl */
 typedef boolean TcpIp_DhcpConfigUsedOfIpV4CtrlType;
 
+/**   \brief  value based type definition for TcpIp_DhcpHostnameEndIdxOfIpV4Ctrl */
+typedef uint8 TcpIp_DhcpHostnameEndIdxOfIpV4CtrlType;
+
+/**   \brief  value based type definition for TcpIp_DhcpHostnameStartIdxOfIpV4Ctrl */
+typedef uint8 TcpIp_DhcpHostnameStartIdxOfIpV4CtrlType;
+
+/**   \brief  value based type definition for TcpIp_DhcpHostnameUsedOfIpV4Ctrl */
+typedef boolean TcpIp_DhcpHostnameUsedOfIpV4CtrlType;
+
 /**   \brief  value based type definition for TcpIp_DhcpStatusIdxOfIpV4Ctrl */
 typedef uint8 TcpIp_DhcpStatusIdxOfIpV4CtrlType;
 
@@ -2100,6 +2267,12 @@ typedef boolean TcpIp_LlAddrStateUsedOfIpV4CtrlType;
 
 /**   \brief  value based type definition for TcpIp_LocalAddrV4BroadcastIdxOfIpV4Ctrl */
 typedef uint8 TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType;
+
+/**   \brief  value based type definition for TcpIp_LocalAddrV4DhcpIdxOfIpV4Ctrl */
+typedef uint8 TcpIp_LocalAddrV4DhcpIdxOfIpV4CtrlType;
+
+/**   \brief  value based type definition for TcpIp_LocalAddrV4DhcpUsedOfIpV4Ctrl */
+typedef boolean TcpIp_LocalAddrV4DhcpUsedOfIpV4CtrlType;
 
 /**   \brief  value based type definition for TcpIp_LocalAddrV4UnicastIdxOfIpV4Ctrl */
 typedef uint8 TcpIp_LocalAddrV4UnicastIdxOfIpV4CtrlType;
@@ -2283,6 +2456,15 @@ typedef uint8 TcpIp_SizeOfDefaultMulticastAddrV4Type;
 
 /**   \brief  value based type definition for TcpIp_SizeOfDefaultUnicastAddrV4 */
 typedef uint8 TcpIp_SizeOfDefaultUnicastAddrV4Type;
+
+/**   \brief  value based type definition for TcpIp_SizeOfDhcpConfig */
+typedef uint8 TcpIp_SizeOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfDhcpHostname */
+typedef uint8 TcpIp_SizeOfDhcpHostnameType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfDhcpStatus */
+typedef uint8 TcpIp_SizeOfDhcpStatusType;
 
 /**   \brief  value based type definition for TcpIp_SizeOfDhcpUserOption */
 typedef uint8 TcpIp_SizeOfDhcpUserOptionType;
@@ -2934,6 +3116,41 @@ typedef struct sTcpIp_DefaultUnicastAddrV4Type
   IpBase_AddrInType NetMaskOfDefaultUnicastAddrV4;  /**< - */
 } TcpIp_DefaultUnicastAddrV4Type;
 
+/**   \brief  type used in TcpIp_DhcpConfig */
+typedef struct sTcpIp_DhcpConfigType
+{
+  TcpIp_InitWaitMaxOfDhcpConfigType InitWaitMaxOfDhcpConfig;  /**< Init Wait Max - Value of configuration parameter TcpIpDhcpV4InitWaitMax [MILLISECONDS] */
+  TcpIp_RestartOnFailOfDhcpConfigType RestartOnFailOfDhcpConfig;  /**< Restart On Failure - Value of configuration parameter TcpIpDhcpV4RestartOnFail [BOOLEAN] */
+  TcpIp_DiscoverIntervalMaxOfDhcpConfigType DiscoverIntervalMaxOfDhcpConfig;  /**< Discover Interval Max - Value of configuration parameter TcpIpDhcpV4DiscoverIntervalMax [SECONDS] */
+  TcpIp_DiscoverIntervalMinOfDhcpConfigType DiscoverIntervalMinOfDhcpConfig;  /**< Discover Interval Min - Value of configuration parameter TcpIpDhcpV4DiscoverIntervalMin [SECONDS] */
+  TcpIp_DiscoverMaxNumOfDhcpConfigType DiscoverMaxNumOfDhcpConfig;  /**< Discover Max Num - Value of configuration parameter TcpIpDhcpV4DiscoverMaxNum */
+  TcpIp_HostNameLenMaxOfDhcpConfigType HostNameLenMaxOfDhcpConfig;  /**< Host Name Length Max - Value of configuration parameter TcpIpDhcpV4HostNameLenMax */
+  TcpIp_InitWaitMinOfDhcpConfigType InitWaitMinOfDhcpConfig;  /**< Init Wait Min - Value of configuration parameter TcpIpDhcpV4InitWaitMin [MILLISECONDS] */
+  TcpIp_RebindIntervalMinOfDhcpConfigType RebindIntervalMinOfDhcpConfig;  /**< Rebind Interval Min - Value of configuration parameter TcpIpDhcpV4RebindIntervalMin [SECONDS] */
+  TcpIp_RenewIntervalMinOfDhcpConfigType RenewIntervalMinOfDhcpConfig;  /**< Renew Interval Min - Value of configuration parameter TcpIpDhcpV4RenewIntervalMin [SECONDS] */
+  TcpIp_RequestIntervalOfDhcpConfigType RequestIntervalOfDhcpConfig;  /**< Request Interval - Value of configuration parameter TcpIpDhcpV4RequestInterval [SECONDS] */
+  TcpIp_RequestMaxNumOfDhcpConfigType RequestMaxNumOfDhcpConfig;  /**< Request Max Num - Value of configuration parameter TcpIpDhcpV4RequestMaxNum */
+  TcpIp_RxReqOptionCntOfDhcpConfigType RxReqOptionCntOfDhcpConfig;  /**< Amount of configured DHCP user options of type TCPIP_DHCP_USER_OPTION_RX_REQUESTED. */
+  IpV4_DhcpV4RequestedAddrCalloutFuncType ReqAddrCalloutFuncOfDhcpConfig;  /**< Callout for IP address that shall be requested in DHCPDISCOVER */
+} TcpIp_DhcpConfigType;
+
+/**   \brief  type used in TcpIp_DhcpStatus */
+typedef struct sTcpIp_DhcpStatusType
+{
+  TcpIp_SecNextEventOfDhcpStatusType SecNextEventOfDhcpStatus;  /**< - */
+  TcpIp_SecNextIntervalOfDhcpStatusType SecNextIntervalOfDhcpStatus;  /**< - */
+  TcpIp_SecTimerOfDhcpStatusType SecTimerOfDhcpStatus;  /**< - */
+  TcpIp_LastDiscoverSecsOfDhcpStatusType LastDiscoverSecsOfDhcpStatus;  /**< SECS-field used in last DISCOVER message. */
+  TcpIp_MsTimerOfDhcpStatusType MsTimerOfDhcpStatus;  /**< - */
+  TcpIp_SecElapsedOfDhcpStatusType SecElapsedOfDhcpStatus;  /**< - */
+  TcpIp_CtrlStateOfDhcpStatusType CtrlStateOfDhcpStatus;  /**< - */
+  TcpIp_HostNameLenOfDhcpStatusType HostNameLenOfDhcpStatus;  /**< - */
+  TcpIp_RetryCounterOfDhcpStatusType RetryCounterOfDhcpStatus;  /**< - */
+  TcpIp_TimeoutOccurredOfDhcpStatusType TimeoutOccurredOfDhcpStatus;  /**< - */
+  TcpIp_DhcpV4_DataStructType DataStructOfDhcpStatus;  /**< - */
+  IpBase_AddrInType ReqIpAddrOfDhcpStatus;  /**< IP address that shall be requested in DHCPDISCOVER */
+} TcpIp_DhcpStatusType;
+
 /**   \brief  type used in TcpIp_DhcpUserOption */
 /*! \spec weak type invariant () { 
  * (self.DhcpUserOptionBufferStartIdxOfDhcpUserOption < TcpIp_GetSizeOfDhcpUserOptionBuffer()) &&
@@ -3004,21 +3221,31 @@ typedef struct sTcpIp_IcmpConfigType
  * (!((!(self.AutoIpConfigUsedOfIpV4Ctrl))) || (self.ArpTableEntryStartIdxOfIpV4Ctrl < TcpIp_GetSizeOfArpTableEntry())) &&
  * (!((!(self.AutoIpConfigUsedOfIpV4Ctrl))) || (self.ArpTableEntryEndIdxOfIpV4Ctrl < TcpIp_GetSizeOfArpTableEntry())) &&
  * (!(self.AutoIpConfigUsedOfIpV4Ctrl) || (self.AutoIpConfigIdxOfIpV4Ctrl < TcpIp_GetSizeOfAutoIpConfig())) &&
- * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.GratuitousArpIdxOfIpV4Ctrl < TcpIp_GetSizeOfGratuitousArp())) &&
- * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.FragmentationConfigIdxOfIpV4Ctrl < TcpIp_GetSizeOfFragmentationConfig())) &&
- * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.StaticArpTableIdxOfIpV4Ctrl < TcpIp_GetSizeOfStaticArpTable())) &&
+ * (!((self.GratuitousArpIdxOfIpV4Ctrl != TCPIP_NO_GRATUITOUSARPIDXOFIPV4CTRL)) || (self.GratuitousArpIdxOfIpV4Ctrl < TcpIp_GetSizeOfGratuitousArp())) &&
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.DhcpConfigIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpConfig())) &&
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.DhcpHostnameStartIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpHostname())) &&
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.DhcpHostnameEndIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpHostname())) &&
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.DhcpStatusIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpStatus())) &&
+ * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.LocalAddrV4DhcpIdxOfIpV4Ctrl < TcpIp_GetSizeOfLocalAddrV4())) &&
+ * (!((self.FragmentationConfigIdxOfIpV4Ctrl != TCPIP_NO_FRAGMENTATIONCONFIGIDXOFIPV4CTRL)) || (self.FragmentationConfigIdxOfIpV4Ctrl < TcpIp_GetSizeOfFragmentationConfig())) &&
+ * (!((self.StaticArpTableIdxOfIpV4Ctrl != TCPIP_NO_STATICARPTABLEIDXOFIPV4CTRL)) || (self.StaticArpTableIdxOfIpV4Ctrl < TcpIp_GetSizeOfStaticArpTable())) &&
  * (!(self.MulticastAddrV4UsedOfIpV4Ctrl) || (self.MulticastAddrV4StartIdxOfIpV4Ctrl < TcpIp_GetSizeOfMulticastAddrV4())) &&
  * (!(self.MulticastAddrV4UsedOfIpV4Ctrl) || (self.MulticastAddrV4EndIdxOfIpV4Ctrl < TcpIp_GetSizeOfMulticastAddrV4())) &&
- * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.LlAddrStateIdxOfIpV4Ctrl < TcpIp_GetSizeOfLlAddrState())) &&
- * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.DhcpUserOptionStartIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpUserOption())) &&
- * (!((!(self.MulticastAddrV4UsedOfIpV4Ctrl))) || (self.DhcpUserOptionEndIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpUserOption()))
+ * (!((self.LlAddrStateIdxOfIpV4Ctrl != TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL)) || (self.LlAddrStateIdxOfIpV4Ctrl < TcpIp_GetSizeOfLlAddrState())) &&
+ * (!((self.DhcpUserOptionStartIdxOfIpV4Ctrl != TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL)) || (self.DhcpUserOptionStartIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpUserOption())) &&
+ * (!((self.DhcpUserOptionStartIdxOfIpV4Ctrl != TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL)) || (self.DhcpUserOptionEndIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpUserOption()))
  * } */
 typedef struct sTcpIp_IpV4CtrlType
 {
   TcpIp_MaxTxMsgSizeOfIpV4CtrlType MaxTxMsgSizeOfIpV4Ctrl;  /**< - */
   TcpIp_MtuTxOfIpV4CtrlType MtuTxOfIpV4Ctrl;  /**< Value of configuration parameter EthIfCtrlMtu */
   TcpIp_AutoIpConfigUsedOfIpV4CtrlType AutoIpConfigUsedOfIpV4Ctrl;  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_AutoIpConfig */
+  TcpIp_HwChecksumIcmpOfIpV4CtrlType HwChecksumIcmpOfIpV4Ctrl;  /**< Defines if harware supports calculation of IPv4 ICMP checksum. */
+  TcpIp_HwChecksumIpOfIpV4CtrlType HwChecksumIpOfIpV4Ctrl;  /**< Defines if harware supports calculation of IPv4 checksum. */
+  TcpIp_HwChecksumTcpOfIpV4CtrlType HwChecksumTcpOfIpV4Ctrl;  /**< Defines if harware supports calculation of IPv4 TCP checksum. */
+  TcpIp_HwChecksumUdpOfIpV4CtrlType HwChecksumUdpOfIpV4Ctrl;  /**< Defines if harware supports calculation of IPv4 UDP checksum. */
   TcpIp_MulticastAddrV4UsedOfIpV4CtrlType MulticastAddrV4UsedOfIpV4Ctrl;  /**< TRUE, if the 0:n relation has 1 relation pointing to TcpIp_MulticastAddrV4 */
+  TcpIp_ReceiveAllMulticastsOfIpV4CtrlType ReceiveAllMulticastsOfIpV4Ctrl;  /**< - */
   TcpIp_AddrAssignmentCfgByPrioEndIdxOfIpV4CtrlType AddrAssignmentCfgByPrioEndIdxOfIpV4Ctrl;  /**< the end index of the 1:n relation pointing to TcpIp_AddrAssignmentCfgByPrio */
   TcpIp_AddrAssignmentCfgByPrioStartIdxOfIpV4CtrlType AddrAssignmentCfgByPrioStartIdxOfIpV4Ctrl;  /**< the start index of the 1:n relation pointing to TcpIp_AddrAssignmentCfgByPrio */
   TcpIp_AddrAssignmentPrioByTypeOfIpV4CtrlType AddrAssignmentPrioByTypeOfIpV4Ctrl;  /**< - */
@@ -3030,6 +3257,8 @@ typedef struct sTcpIp_IpV4CtrlType
   TcpIp_Buf2TxReqMapStartIdxOfIpV4CtrlType Buf2TxReqMapStartIdxOfIpV4Ctrl;  /**< the start index of the 1:n relation pointing to TcpIp_Buf2TxReqMap */
   TcpIp_DefaultTtlOfIpV4CtrlType DefaultTtlOfIpV4Ctrl;  /**< Default Time To Live - Value of configuration parameter TcpIpIpDefaultTtl */
   TcpIp_DhcpConfigIdxOfIpV4CtrlType DhcpConfigIdxOfIpV4Ctrl;  /**< the index of the 0:1 relation pointing to TcpIp_DhcpConfig */
+  TcpIp_DhcpHostnameEndIdxOfIpV4CtrlType DhcpHostnameEndIdxOfIpV4Ctrl;  /**< the end index of the 0:n relation pointing to TcpIp_DhcpHostname */
+  TcpIp_DhcpHostnameStartIdxOfIpV4CtrlType DhcpHostnameStartIdxOfIpV4Ctrl;  /**< the start index of the 0:n relation pointing to TcpIp_DhcpHostname */
   TcpIp_DhcpStatusIdxOfIpV4CtrlType DhcpStatusIdxOfIpV4Ctrl;  /**< the index of the 0:1 relation pointing to TcpIp_DhcpStatus */
   TcpIp_DhcpUserOptionEndIdxOfIpV4CtrlType DhcpUserOptionEndIdxOfIpV4Ctrl;  /**< the end index of the 0:n relation pointing to TcpIp_DhcpUserOption */
   TcpIp_DhcpUserOptionStartIdxOfIpV4CtrlType DhcpUserOptionStartIdxOfIpV4Ctrl;  /**< the start index of the 0:n relation pointing to TcpIp_DhcpUserOption */
@@ -3039,6 +3268,7 @@ typedef struct sTcpIp_IpV4CtrlType
   TcpIp_GratuitousArpIdxOfIpV4CtrlType GratuitousArpIdxOfIpV4Ctrl;  /**< the index of the 0:1 relation pointing to TcpIp_GratuitousArp */
   TcpIp_LlAddrStateIdxOfIpV4CtrlType LlAddrStateIdxOfIpV4Ctrl;  /**< the index of the 0:1 relation pointing to TcpIp_LlAddrState */
   TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType LocalAddrV4BroadcastIdxOfIpV4Ctrl;  /**< the index of the 1:1 relation pointing to TcpIp_LocalAddrV4 */
+  TcpIp_LocalAddrV4DhcpIdxOfIpV4CtrlType LocalAddrV4DhcpIdxOfIpV4Ctrl;  /**< the index of the 0:1 relation pointing to TcpIp_LocalAddrV4 */
   TcpIp_LocalAddrV4UnicastIdxOfIpV4CtrlType LocalAddrV4UnicastIdxOfIpV4Ctrl;  /**< the index of the 1:1 relation pointing to TcpIp_LocalAddrV4 */
   TcpIp_MulticastAddrV4EndIdxOfIpV4CtrlType MulticastAddrV4EndIdxOfIpV4Ctrl;  /**< the end index of the 0:n relation pointing to TcpIp_MulticastAddrV4 */
   TcpIp_MulticastAddrV4StartIdxOfIpV4CtrlType MulticastAddrV4StartIdxOfIpV4Ctrl;  /**< the start index of the 0:n relation pointing to TcpIp_MulticastAddrV4 */
@@ -3063,14 +3293,14 @@ typedef struct sTcpIp_IpV4CtrlDynType
 
 /**   \brief  type used in TcpIp_IpV4General */
 /*! \spec weak type invariant () { 
- * (!((!(self.IpV4SocketDynIcmpUsedOfIpV4General))) || (self.IpV4CtrlDefaultIdxOfIpV4General < TcpIp_GetSizeOfIpV4Ctrl())) &&
+ * (!((!(self.IpV4SocketDynDhcpUsedOfIpV4General))) || (self.IpV4CtrlDefaultIdxOfIpV4General < TcpIp_GetSizeOfIpV4Ctrl())) &&
  * (!((self.IpV4SocketDynTcpRstIdxOfIpV4General != TCPIP_NO_IPV4SOCKETDYNTCPRSTIDXOFIPV4GENERAL)) || (self.IpV4SocketDynTcpRstIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
- * (!(self.IpV4SocketDynIcmpUsedOfIpV4General) || (self.IpV4SocketDynIcmpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
- * (!((!(self.IpV4SocketDynIcmpUsedOfIpV4General))) || (self.IpV4SocketDynDhcpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn()))
+ * (!((self.IpV4SocketDynIcmpIdxOfIpV4General != TCPIP_NO_IPV4SOCKETDYNICMPIDXOFIPV4GENERAL)) || (self.IpV4SocketDynIcmpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
+ * (!(self.IpV4SocketDynDhcpUsedOfIpV4General) || (self.IpV4SocketDynDhcpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn()))
  * } */
 typedef struct sTcpIp_IpV4GeneralType
 {
-  TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType IpV4SocketDynIcmpUsedOfIpV4General;  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_IpV4SocketDyn */
+  TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType IpV4SocketDynDhcpUsedOfIpV4General;  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_IpV4SocketDyn */
   TcpIp_IpV4CtrlDefaultIdxOfIpV4GeneralType IpV4CtrlDefaultIdxOfIpV4General;  /**< the index of the 0:1 relation pointing to TcpIp_IpV4Ctrl */
   TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType IpV4SocketDynDhcpIdxOfIpV4General;  /**< the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn */
   TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType IpV4SocketDynIcmpIdxOfIpV4General;  /**< the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn */
@@ -3407,6 +3637,7 @@ typedef struct TcpIp_ArpTableEntryStructSTag
 {
   TcpIp_ArpTableEntryType TcpIpCtrl_Vlan10[10];
   TcpIp_ArpTableEntryType TcpIpCtrl_Vlan23[10];
+  TcpIp_ArpTableEntryType TcpIpCtrl_Vlan1[10];
 } TcpIp_ArpTableEntryStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_Buf2TxReqMap */
@@ -3415,11 +3646,24 @@ typedef struct TcpIp_Buf2TxReqMapStructSTag
   TcpIp_Buf2TxReqMapType EthCtrlConfig_MAIN[10];
 } TcpIp_Buf2TxReqMapStructSType;
 
+/**   \brief  type to be used as symbolic data element access to TcpIp_DhcpHostname */
+typedef struct TcpIp_DhcpHostnameStructSTag
+{
+  TcpIp_DhcpHostnameType TcpIpCtrl_Vlan1[30];
+} TcpIp_DhcpHostnameStructSType;
+
+/**   \brief  type to be used as symbolic data element access to TcpIp_DhcpStatus */
+typedef struct TcpIp_DhcpStatusStructSTag
+{
+  TcpIp_DhcpStatusType TcpIpCtrl_Vlan1;
+} TcpIp_DhcpStatusStructSType;
+
 /**   \brief  type to be used as symbolic data element access to TcpIp_IpV4CtrlDyn */
 typedef struct TcpIp_IpV4CtrlDynStructSTag
 {
   TcpIp_IpV4CtrlDynType TcpIpCtrl_Vlan10;
   TcpIp_IpV4CtrlDynType TcpIpCtrl_Vlan23;
+  TcpIp_IpV4CtrlDynType TcpIpCtrl_Vlan1;
 } TcpIp_IpV4CtrlDynStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_LocalAddr */
@@ -3432,6 +3676,8 @@ typedef struct TcpIp_LocalAddrStructSTag
   TcpIp_LocalAddrType TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_23_0_2;
   TcpIp_LocalAddrType TcpIpLocalAddr_Multicast_Any_vlan23;
   TcpIp_LocalAddrType TcpIpLocalAddr_TcpIpCtrl_Vlan23_Broadcast;
+  TcpIp_LocalAddrType TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33;
+  TcpIp_LocalAddrType TcpIpV4LocalAddr_TcpIpCtrl_Vlan1_Broadcast;
 } TcpIp_LocalAddrStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_SocketDyn */
@@ -3446,6 +3692,7 @@ typedef struct TcpIp_StaticUnicastAddrV4RequestedStructSTag
 {
   TcpIp_StaticUnicastAddrV4RequestedType TcpIpLocalAddr_NE_Fixed_10_10_0_33;
   TcpIp_StaticUnicastAddrV4RequestedType TcpIpLocalAddr_NE_Fixed_10_23_0_33;
+  TcpIp_StaticUnicastAddrV4RequestedType TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33;
 } TcpIp_StaticUnicastAddrV4RequestedStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_TcpRxBuffer */
@@ -3474,7 +3721,7 @@ typedef struct TcpIp_TcpTxBufferStructSTag
 /**   \brief  type to access TcpIp_ArpTableEntry in an index and symbol based style. */
 typedef union TcpIp_ArpTableEntryUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_ArpTableEntryType raw[20];
+  TcpIp_ArpTableEntryType raw[30];
   TcpIp_ArpTableEntryStructSType str;
 } TcpIp_ArpTableEntryUType;
 
@@ -3485,17 +3732,31 @@ typedef union TcpIp_Buf2TxReqMapUTag
   TcpIp_Buf2TxReqMapStructSType str;
 } TcpIp_Buf2TxReqMapUType;
 
+/**   \brief  type to access TcpIp_DhcpHostname in an index and symbol based style. */
+typedef union TcpIp_DhcpHostnameUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  TcpIp_DhcpHostnameType raw[30];
+  TcpIp_DhcpHostnameStructSType str;
+} TcpIp_DhcpHostnameUType;
+
+/**   \brief  type to access TcpIp_DhcpStatus in an index and symbol based style. */
+typedef union TcpIp_DhcpStatusUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  TcpIp_DhcpStatusType raw[1];
+  TcpIp_DhcpStatusStructSType str;
+} TcpIp_DhcpStatusUType;
+
 /**   \brief  type to access TcpIp_IpV4CtrlDyn in an index and symbol based style. */
 typedef union TcpIp_IpV4CtrlDynUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_IpV4CtrlDynType raw[2];
+  TcpIp_IpV4CtrlDynType raw[3];
   TcpIp_IpV4CtrlDynStructSType str;
 } TcpIp_IpV4CtrlDynUType;
 
 /**   \brief  type to access TcpIp_LocalAddr in an index and symbol based style. */
 typedef union TcpIp_LocalAddrUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_LocalAddrType raw[7];
+  TcpIp_LocalAddrType raw[9];
   TcpIp_LocalAddrStructSType str;
 } TcpIp_LocalAddrUType;
 
@@ -3509,7 +3770,7 @@ typedef union TcpIp_SocketDynUTag
 /**   \brief  type to access TcpIp_StaticUnicastAddrV4Requested in an index and symbol based style. */
 typedef union TcpIp_StaticUnicastAddrV4RequestedUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_StaticUnicastAddrV4RequestedType raw[2];
+  TcpIp_StaticUnicastAddrV4RequestedType raw[3];
   TcpIp_StaticUnicastAddrV4RequestedStructSType str;
 } TcpIp_StaticUnicastAddrV4RequestedUType;
 
@@ -3559,6 +3820,18 @@ typedef P2CONST(TcpIp_DefaultMulticastAddrV4Type, TYPEDEF, TCPIP_CONST) TcpIp_De
 
 /**   \brief  type used to point to TcpIp_DefaultUnicastAddrV4 */
 typedef P2CONST(TcpIp_DefaultUnicastAddrV4Type, TYPEDEF, TCPIP_CONST) TcpIp_DefaultUnicastAddrV4PtrType;
+
+/**   \brief  type used to point to TcpIp_DhcpConfig */
+typedef P2CONST(TcpIp_DhcpConfigType, TYPEDEF, TCPIP_CONST) TcpIp_DhcpConfigPtrType;
+
+/**   \brief  type used to point to TcpIp_DhcpHostname */
+typedef P2VAR(TcpIp_DhcpHostnameType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_DhcpHostnamePtrType;
+
+/**   \brief  type used to point to TcpIp_DhcpStatus */
+typedef P2VAR(TcpIp_DhcpStatusType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_DhcpStatusPtrType;
+
+/**   \brief  type used to point to TcpIp_DataStructOfDhcpStatus */
+typedef P2VAR(TcpIp_DhcpV4_DataStructType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_DataStructOfDhcpStatusPtrType;
 
 /**   \brief  type used to point to TcpIp_DhcpUserOption */
 typedef P2CONST(TcpIp_DhcpUserOptionType, TYPEDEF, TCPIP_CONST) TcpIp_DhcpUserOptionPtrType;
@@ -3840,7 +4113,7 @@ extern TCPIP_P2C(TcpIp_ConfigType) TcpIp_ConfigDataPtr;
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_AddrAssignmentCfgByPrioType, TCPIP_CONST) TcpIp_AddrAssignmentCfgByPrio[1];
+extern CONST(TcpIp_AddrAssignmentCfgByPrioType, TCPIP_CONST) TcpIp_AddrAssignmentCfgByPrio[2];
 #define TCPIP_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3907,7 +4180,38 @@ extern CONST(TcpIp_DefaultMulticastAddrV4Type, TCPIP_CONST) TcpIp_DefaultMultica
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_DefaultUnicastAddrV4Type, TCPIP_CONST) TcpIp_DefaultUnicastAddrV4[2];
+extern CONST(TcpIp_DefaultUnicastAddrV4Type, TCPIP_CONST) TcpIp_DefaultUnicastAddrV4[3];
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_DhcpConfig
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_DhcpConfig
+  \details
+  Element                Description
+  InitWaitMax            Init Wait Max - Value of configuration parameter TcpIpDhcpV4InitWaitMax [MILLISECONDS]
+  RestartOnFail          Restart On Failure - Value of configuration parameter TcpIpDhcpV4RestartOnFail [BOOLEAN]
+  DiscoverIntervalMax    Discover Interval Max - Value of configuration parameter TcpIpDhcpV4DiscoverIntervalMax [SECONDS]
+  DiscoverIntervalMin    Discover Interval Min - Value of configuration parameter TcpIpDhcpV4DiscoverIntervalMin [SECONDS]
+  DiscoverMaxNum         Discover Max Num - Value of configuration parameter TcpIpDhcpV4DiscoverMaxNum
+  HostNameLenMax         Host Name Length Max - Value of configuration parameter TcpIpDhcpV4HostNameLenMax
+  InitWaitMin            Init Wait Min - Value of configuration parameter TcpIpDhcpV4InitWaitMin [MILLISECONDS]
+  RebindIntervalMin      Rebind Interval Min - Value of configuration parameter TcpIpDhcpV4RebindIntervalMin [SECONDS]
+  RenewIntervalMin       Renew Interval Min - Value of configuration parameter TcpIpDhcpV4RenewIntervalMin [SECONDS]
+  RequestInterval        Request Interval - Value of configuration parameter TcpIpDhcpV4RequestInterval [SECONDS]
+  RequestMaxNum          Request Max Num - Value of configuration parameter TcpIpDhcpV4RequestMaxNum
+  RxReqOptionCnt         Amount of configured DHCP user options of type TCPIP_DHCP_USER_OPTION_RX_REQUESTED.
+  ReqAddrCalloutFunc     Callout for IP address that shall be requested in DHCPDISCOVER
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(TcpIp_DhcpConfigType, TCPIP_CONST) TcpIp_DhcpConfig[1];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3940,7 +4244,7 @@ extern CONST(TcpIp_DuplicateAddrDetectionCbkType, TCPIP_CONST) TcpIp_DuplicateAd
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_EthIfCtrlType, TCPIP_CONST) TcpIp_EthIfCtrl[2];
+extern CONST(TcpIp_EthIfCtrlType, TCPIP_CONST) TcpIp_EthIfCtrl[3];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3988,7 +4292,12 @@ extern CONST(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFc
   MaxTxMsgSize                       -
   MtuTx                              Value of configuration parameter EthIfCtrlMtu
   AutoIpConfigUsed                   TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_AutoIpConfig
+  HwChecksumIcmp                     Defines if harware supports calculation of IPv4 ICMP checksum.
+  HwChecksumIp                       Defines if harware supports calculation of IPv4 checksum.
+  HwChecksumTcp                      Defines if harware supports calculation of IPv4 TCP checksum.
+  HwChecksumUdp                      Defines if harware supports calculation of IPv4 UDP checksum.
   MulticastAddrV4Used                TRUE, if the 0:n relation has 1 relation pointing to TcpIp_MulticastAddrV4
+  ReceiveAllMulticasts               -
   AddrAssignmentCfgByPrioEndIdx      the end index of the 1:n relation pointing to TcpIp_AddrAssignmentCfgByPrio
   AddrAssignmentCfgByPrioStartIdx    the start index of the 1:n relation pointing to TcpIp_AddrAssignmentCfgByPrio
   AddrAssignmentPrioByType           -
@@ -4000,6 +4309,8 @@ extern CONST(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFc
   Buf2TxReqMapStartIdx               the start index of the 1:n relation pointing to TcpIp_Buf2TxReqMap
   DefaultTtl                         Default Time To Live - Value of configuration parameter TcpIpIpDefaultTtl
   DhcpConfigIdx                      the index of the 0:1 relation pointing to TcpIp_DhcpConfig
+  DhcpHostnameEndIdx                 the end index of the 0:n relation pointing to TcpIp_DhcpHostname
+  DhcpHostnameStartIdx               the start index of the 0:n relation pointing to TcpIp_DhcpHostname
   DhcpStatusIdx                      the index of the 0:1 relation pointing to TcpIp_DhcpStatus
   DhcpUserOptionEndIdx               the end index of the 0:n relation pointing to TcpIp_DhcpUserOption
   DhcpUserOptionStartIdx             the start index of the 0:n relation pointing to TcpIp_DhcpUserOption
@@ -4009,6 +4320,7 @@ extern CONST(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFc
   GratuitousArpIdx                   the index of the 0:1 relation pointing to TcpIp_GratuitousArp
   LlAddrStateIdx                     the index of the 0:1 relation pointing to TcpIp_LlAddrState
   LocalAddrV4BroadcastIdx            the index of the 1:1 relation pointing to TcpIp_LocalAddrV4
+  LocalAddrV4DhcpIdx                 the index of the 0:1 relation pointing to TcpIp_LocalAddrV4
   LocalAddrV4UnicastIdx              the index of the 1:1 relation pointing to TcpIp_LocalAddrV4
   MulticastAddrV4EndIdx              the end index of the 0:n relation pointing to TcpIp_MulticastAddrV4
   MulticastAddrV4StartIdx            the start index of the 0:n relation pointing to TcpIp_MulticastAddrV4
@@ -4020,7 +4332,7 @@ extern CONST(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFc
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_IpV4CtrlType, TCPIP_CONST) TcpIp_IpV4Ctrl[2];
+extern CONST(TcpIp_IpV4CtrlType, TCPIP_CONST) TcpIp_IpV4Ctrl[3];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4033,7 +4345,7 @@ extern CONST(TcpIp_IpV4CtrlType, TCPIP_CONST) TcpIp_IpV4Ctrl[2];
   \var    TcpIp_IpV4General
   \details
   Element                   Description
-  IpV4SocketDynIcmpUsed     TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_IpV4SocketDyn
+  IpV4SocketDynDhcpUsed     TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_IpV4SocketDyn
   IpV4CtrlDefaultIdx        the index of the 0:1 relation pointing to TcpIp_IpV4Ctrl
   IpV4SocketDynDhcpIdx      the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn
   IpV4SocketDynIcmpIdx      the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn
@@ -4065,7 +4377,7 @@ extern CONST(TcpIp_IpV4GeneralType, TCPIP_CONST) TcpIp_IpV4General[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_LocalAddrV4Type, TCPIP_CONST) TcpIp_LocalAddrV4[7];
+extern CONST(TcpIp_LocalAddrV4Type, TCPIP_CONST) TcpIp_LocalAddrV4[9];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4226,7 +4538,7 @@ extern CONST(TcpIp_TcpTxBufferDescType, TCPIP_CONST) TcpIp_TcpTxBufferDesc[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_UnicastAddrV4Type, TCPIP_CONST) TcpIp_UnicastAddrV4[2];
+extern CONST(TcpIp_UnicastAddrV4Type, TCPIP_CONST) TcpIp_UnicastAddrV4[3];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4275,6 +4587,54 @@ extern VAR(TcpIp_ArpTableEntryUType, TCPIP_VAR_NOINIT) TcpIp_ArpTableEntry;  /* 
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(TcpIp_Buf2TxReqMapUType, TCPIP_VAR_NOINIT) TcpIp_Buf2TxReqMap;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_DhcpHostname
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_DhcpHostname
+  \brief  -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_DhcpHostnameUType, TCPIP_VAR_NOINIT) TcpIp_DhcpHostname;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define TCPIP_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_DhcpStatus
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_DhcpStatus
+  \brief  -
+  \details
+  Element             Description
+  SecNextEvent        -
+  SecNextInterval     -
+  SecTimer            -
+  LastDiscoverSecs    SECS-field used in last DISCOVER message.
+  MsTimer             -
+  SecElapsed          -
+  CtrlState           -
+  HostNameLen         -
+  RetryCounter        -
+  TimeoutOccurred     -
+  DataStruct          -
+  ReqIpAddr           IP address that shall be requested in DHCPDISCOVER
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_DhcpStatusUType, TCPIP_VAR_NOINIT) TcpIp_DhcpStatus;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4366,7 +4726,7 @@ extern VAR(TcpIp_IpV4CtrlDynUType, TCPIP_VAR_NOINIT) TcpIp_IpV4CtrlDyn;  /* PRQA
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_IpV4SocketDynType, TCPIP_VAR_NOINIT) TcpIp_IpV4SocketDyn[11];
+extern VAR(TcpIp_IpV4SocketDynType, TCPIP_VAR_NOINIT) TcpIp_IpV4SocketDyn[12];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4886,6 +5246,32 @@ TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetAddrOfDefault
 TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetDefGwAddrOfDefaultUnicastAddrV4(TcpIp_DefaultUnicastAddrV4IterType Index);
 TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetAddrOfDefaultUnicastAddrV4(TcpIp_DefaultUnicastAddrV4IterType Index);
 TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetMaskOfDefaultUnicastAddrV4(TcpIp_DefaultUnicastAddrV4IterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverIntervalMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverIntervalMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverMaxNumOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverMaxNumOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HostNameLenMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetHostNameLenMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_InitWaitMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetInitWaitMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_InitWaitMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetInitWaitMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RebindIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRebindIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RenewIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRenewIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(IpV4_DhcpV4RequestedAddrCalloutFuncType, TCPIP_CODE) TcpIp_GetReqAddrCalloutFuncOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RequestIntervalOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRequestIntervalOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RequestMaxNumOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRequestMaxNumOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RestartOnFailOfDhcpConfigType, TCPIP_CODE) TcpIp_IsRestartOnFailOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RxReqOptionCntOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRxReqOptionCntOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameType, TCPIP_CODE) TcpIp_GetDhcpHostname(TcpIp_DhcpHostnameIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_CtrlStateOfDhcpStatusType, TCPIP_CODE) TcpIp_GetCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpV4_DataStructType, TCPIP_CODE) TcpIp_GetDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HostNameLenOfDhcpStatusType, TCPIP_CODE) TcpIp_GetHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LastDiscoverSecsOfDhcpStatusType, TCPIP_CODE) TcpIp_GetLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MsTimerOfDhcpStatusType, TCPIP_CODE) TcpIp_GetMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetReqIpAddrOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetryCounterOfDhcpStatusType, TCPIP_CODE) TcpIp_GetRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecElapsedOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecNextEventOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecNextIntervalOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecTimerOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TimeoutOccurredOfDhcpStatusType, TCPIP_CODE) TcpIp_IsTimeoutOccurredOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_CodeOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetCodeOfDhcpUserOption(TcpIp_DhcpUserOptionIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionBufferEndIdxOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetDhcpUserOptionBufferEndIdxOfDhcpUserOption(TcpIp_DhcpUserOptionIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionBufferLengthOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetDhcpUserOptionBufferLengthOfDhcpUserOption(TcpIp_DhcpUserOptionIterType Index);
@@ -4919,6 +5305,8 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_Buf2TxReqMapEndIdxOfIpV4CtrlType, TCPIP_CODE) TcpI
 TCPIP_LOCAL_INLINE FUNC(TcpIp_Buf2TxReqMapStartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetBuf2TxReqMapStartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DefaultTtlOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDefaultTtlOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpConfigIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpConfigIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameEndIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpHostnameEndIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameStartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpHostnameStartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpStatusIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpStatusIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionEndIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpUserOptionEndIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionStartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpUserOptionStartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
@@ -4926,14 +5314,20 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_EthIfCtrlIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetE
 TCPIP_LOCAL_INLINE FUNC(TcpIp_FragmentationConfigIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetFragmentationConfigIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_FramePrioDefaultOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetFramePrioDefaultOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_GratuitousArpIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetGratuitousArpIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIcmpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumTcpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumTcpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumUdpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumUdpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLlAddrStateIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4BroadcastIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4DhcpIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4DhcpIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4UnicastIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4UnicastIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MaxTxMsgSizeOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetMaxTxMsgSizeOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MtuTxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetMtuTxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4EndIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetMulticastAddrV4EndIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4StartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetMulticastAddrV4StartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_ReceiveAllMulticastsOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsReceiveAllMulticastsOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpTableIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetStaticArpTableIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_TypeOfServiceDefaultOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetTypeOfServiceDefaultOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_UnicastAddrV4IdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetUnicastAddrV4IdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
@@ -4948,8 +5342,8 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_PhysLinkActiveOfIpV4CtrlDynType, TCPIP_CODE) TcpIp
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StateOfIpV4CtrlDynType, TCPIP_CODE) TcpIp_GetStateOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4CtrlDefaultIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4CtrlDefaultIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynDhcpIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynIcmpIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynTcpRstIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ArpTableEntryIdxOfIpV4SocketDynType, TCPIP_CODE) TcpIp_GetArpTableEntryIdxOfIpV4SocketDyn(TcpIp_IpV4SocketDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_EthIfFramePrioOfIpV4SocketDynType, TCPIP_CODE) TcpIp_GetEthIfFramePrioOfIpV4SocketDyn(TcpIp_IpV4SocketDynIterType Index);
@@ -5139,19 +5533,16 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_InOrderReassemblyOfFragmentationConfigType, TCPIP_
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ArpConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsArpConfigUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ArpTableEntryUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsArpTableEntryUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpConfigUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpHostnameUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpStatusUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpStatusUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpUserOptionUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_FragmentationConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsFragmentationConfigUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_GratuitousArpUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsGratuitousArpUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIcmpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumTcpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumTcpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumUdpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumUdpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsLlAddrStateUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_ReceiveAllMulticastsOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsReceiveAllMulticastsOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4DhcpUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsLocalAddrV4DhcpUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpTableUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsStaticArpTableUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4CtrlDefaultUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynTcpRstUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfLocalAddrV4Type, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfLocalAddrV4(TcpIp_LocalAddrV4IterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_UnicastAddrV4UsedOfLocalAddrV4Type, TCPIP_CODE) TcpIp_IsUnicastAddrV4UsedOfLocalAddrV4(TcpIp_LocalAddrV4IterType Index);
@@ -5162,6 +5553,9 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfAutoIpConfigType, TCPIP_CODE) TcpIp_GetSizeO
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfBuf2TxReqMapType, TCPIP_CODE) TcpIp_GetSizeOfBuf2TxReqMap(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDefaultMulticastAddrV4Type, TCPIP_CODE) TcpIp_GetSizeOfDefaultMulticastAddrV4(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDefaultUnicastAddrV4Type, TCPIP_CODE) TcpIp_GetSizeOfDefaultUnicastAddrV4(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpConfigType, TCPIP_CODE) TcpIp_GetSizeOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpHostnameType, TCPIP_CODE) TcpIp_GetSizeOfDhcpHostname(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSizeOfDhcpStatus(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetSizeOfDhcpUserOption(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpUserOptionBufferType, TCPIP_CODE) TcpIp_GetSizeOfDhcpUserOptionBuffer(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpUserOptionDynType, TCPIP_CODE) TcpIp_GetSizeOfDhcpUserOptionDyn(void);
@@ -5243,6 +5637,19 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetEthBufLenOfBuf2TxReqMap(TcpIp
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetEthBufPtrOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, P2VAR(uint8, AUTOMATIC, IPV4_APPL_VAR) Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketDynIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_SocketDynIdxOfBuf2TxReqMapType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_DhcpV4_DataStructType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetReqIpAddrOfDhcpStatus(TcpIp_DhcpStatusIterType Index, IpBase_AddrInType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTimeoutOccurredOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_TimeoutOccurredOfDhcpStatusType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index, TcpIp_LengthOfDhcpUserOptionDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_NextTransmissionMsOfGratuitousArpType Value);
@@ -5392,6 +5799,8 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetUdpTxRetryQueuePoolDesc(TcpIp
   \{
 */ 
 TCPIP_LOCAL_INLINE FUNC(TcpIp_PhysAddrOfArpTableEntryPtrType, TCPIP_CODE) TcpIp_GetAddrPhysAddrOfArpTableEntry(TcpIp_ArpTableEntryIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnamePtrType, TCPIP_CODE) TcpIp_GetAddrDhcpHostname(TcpIp_DhcpHostnameIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DataStructOfDhcpStatusPtrType, TCPIP_CODE) TcpIp_GetAddrDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionBufferPtrType, TCPIP_CODE) TcpIp_GetAddrDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpDestUnreachableMsgPtrType, TCPIP_CODE) TcpIp_GetAddrIcmpDestUnreachableMsg(TcpIp_IcmpDestUnreachableMsgIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpEchoReplyDataPtrType, TCPIP_CODE) TcpIp_GetAddrIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index);
@@ -5471,6 +5880,34 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultUnicastAddrV4(void)
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefGwAddrOfDefaultUnicastAddrV4(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNetAddrOfDefaultUnicastAddrV4(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNetMaskOfDefaultUnicastAddrV4(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverIntervalMaxOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverIntervalMinOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverMaxNumOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasHostNameLenMaxOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasInitWaitMaxOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasInitWaitMinOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRebindIntervalMinOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRenewIntervalMinOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasReqAddrCalloutFuncOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestIntervalOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestMaxNumOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRestartOnFailOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRxReqOptionCntOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostname(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasCtrlStateOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDataStructOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasHostNameLenOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLastDiscoverSecsOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMsTimerOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasReqIpAddrOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetryCounterOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecElapsedOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecNextEventOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecNextIntervalOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecTimerOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTimeoutOccurredOfDhcpStatus(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOption(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasCodeOfDhcpUserOption(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionBufferEndIdxOfDhcpUserOption(void);
@@ -5516,6 +5953,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasBuf2TxReqMapStartIdxOfIpV4
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultTtlOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfigIdxOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfigUsedOfIpV4Ctrl(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameEndIdxOfIpV4Ctrl(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameStartIdxOfIpV4Ctrl(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameUsedOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatusIdxOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatusUsedOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionEndIdxOfIpV4Ctrl(void);
@@ -5534,6 +5974,8 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasHwChecksumUdpOfIpV4Ctrl(vo
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLlAddrStateIdxOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLlAddrStateUsedOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4BroadcastIdxOfIpV4Ctrl(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4DhcpIdxOfIpV4Ctrl(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4DhcpUsedOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4UnicastIdxOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMaxTxMsgSizeOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMtuTxOfIpV4Ctrl(void);
@@ -5619,6 +6061,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfAutoIpConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfBuf2TxReqMap(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultMulticastAddrV4(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultUnicastAddrV4(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpHostname(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpStatus(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOption(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionBuffer(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionDyn(void);
@@ -5823,6 +6268,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasAutoIpConfigOfPCConfig(voi
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasBuf2TxReqMapOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultMulticastAddrV4OfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultUnicastAddrV4OfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfigOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatusOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionBufferOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionOfPCConfig(void);
@@ -5855,6 +6303,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfAutoIpConfigOfPCConf
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfBuf2TxReqMapOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultMulticastAddrV4OfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultUnicastAddrV4OfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpConfigOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpHostnameOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpStatusOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionBufferOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionOfPCConfig(void);
@@ -5955,6 +6406,16 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncEthBufIdxNextOfBuf2TxReqMap(T
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncEthBufLenOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketDynIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncDhcpHostname(TcpIp_DhcpHostnameIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index);
@@ -6073,6 +6534,16 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecEthBufIdxNextOfBuf2TxReqMap(T
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecEthBufLenOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSocketDynIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecDhcpHostname(TcpIp_DhcpHostnameIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index);
@@ -6191,6 +6662,16 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddEthBufIdxNextOfBuf2TxReqMap(T
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddEthBufLenOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_EthBufLenOfBuf2TxReqMapType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSocketDynIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_SocketDynIdxOfBuf2TxReqMapType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index, TcpIp_LengthOfDhcpUserOptionDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_NextTransmissionMsOfGratuitousArpType Value);
@@ -6309,6 +6790,16 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubEthBufIdxNextOfBuf2TxReqMap(T
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubEthBufLenOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_EthBufLenOfBuf2TxReqMapType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketDynIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_SocketDynIdxOfBuf2TxReqMapType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index, TcpIp_LengthOfDhcpUserOptionDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_NextTransmissionMsOfGratuitousArpType Value);
@@ -6563,6 +7054,110 @@ TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetMaskOfDefault
 {
   return (TcpIp_GetDefaultUnicastAddrV4OfPCConfig()[(Index)].NetMaskOfDefaultUnicastAddrV4);
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverIntervalMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverIntervalMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DiscoverIntervalMaxOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].DiscoverIntervalMaxOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DiscoverIntervalMinOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].DiscoverIntervalMinOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverMaxNumOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverMaxNumOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DiscoverMaxNumOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].DiscoverMaxNumOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HostNameLenMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetHostNameLenMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_HostNameLenMaxOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].HostNameLenMaxOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_InitWaitMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetInitWaitMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_InitWaitMaxOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].InitWaitMaxOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_InitWaitMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetInitWaitMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_InitWaitMinOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].InitWaitMinOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RebindIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRebindIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RebindIntervalMinOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RebindIntervalMinOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RenewIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRenewIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RenewIntervalMinOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RenewIntervalMinOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(IpV4_DhcpV4RequestedAddrCalloutFuncType, TCPIP_CODE) TcpIp_GetReqAddrCalloutFuncOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (IpV4_DhcpV4RequestedAddrCalloutFuncType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].ReqAddrCalloutFuncOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RequestIntervalOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRequestIntervalOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RequestIntervalOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RequestIntervalOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RequestMaxNumOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRequestMaxNumOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RequestMaxNumOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RequestMaxNumOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RestartOnFailOfDhcpConfigType, TCPIP_CODE) TcpIp_IsRestartOnFailOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RestartOnFailOfDhcpConfigType) ((TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RestartOnFailOfDhcpConfig) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RxReqOptionCntOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRxReqOptionCntOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RxReqOptionCntOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RxReqOptionCntOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameType, TCPIP_CODE) TcpIp_GetDhcpHostname(TcpIp_DhcpHostnameIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DhcpHostnameType) (TcpIp_GetDhcpHostnameOfPCConfig()[(Index)]);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_CtrlStateOfDhcpStatusType, TCPIP_CODE) TcpIp_GetCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_CtrlStateOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpV4_DataStructType, TCPIP_CODE) TcpIp_GetDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].DataStructOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HostNameLenOfDhcpStatusType, TCPIP_CODE) TcpIp_GetHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_HostNameLenOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LastDiscoverSecsOfDhcpStatusType, TCPIP_CODE) TcpIp_GetLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_LastDiscoverSecsOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MsTimerOfDhcpStatusType, TCPIP_CODE) TcpIp_GetMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_MsTimerOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetReqIpAddrOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].ReqIpAddrOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetryCounterOfDhcpStatusType, TCPIP_CODE) TcpIp_GetRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RetryCounterOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecElapsedOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SecElapsedOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecNextEventOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SecNextEventOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecNextIntervalOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SecNextIntervalOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecTimerOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SecTimerOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TimeoutOccurredOfDhcpStatusType, TCPIP_CODE) TcpIp_IsTimeoutOccurredOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TimeoutOccurredOfDhcpStatusType) ((TcpIp_GetDhcpStatusOfPCConfig()[(Index)].TimeoutOccurredOfDhcpStatus) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_CodeOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetCodeOfDhcpUserOption(TcpIp_DhcpUserOptionIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_CodeOfDhcpUserOptionType) (TcpIp_GetDhcpUserOptionOfPCConfig()[(Index)].CodeOfDhcpUserOption);
@@ -6695,6 +7290,14 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpConfigIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_Get
 {
   return (TcpIp_DhcpConfigIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].DhcpConfigIdxOfIpV4Ctrl);
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameEndIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpHostnameEndIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DhcpHostnameEndIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].DhcpHostnameEndIdxOfIpV4Ctrl);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameStartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpHostnameStartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DhcpHostnameStartIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].DhcpHostnameStartIdxOfIpV4Ctrl);
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpStatusIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpStatusIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_DhcpStatusIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].DhcpStatusIdxOfIpV4Ctrl);
@@ -6723,6 +7326,22 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_GratuitousArpIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_
 {
   return (TcpIp_GratuitousArpIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].GratuitousArpIdxOfIpV4Ctrl);
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIcmpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_HwChecksumIcmpOfIpV4CtrlType) ((TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].HwChecksumIcmpOfIpV4Ctrl) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_HwChecksumIpOfIpV4CtrlType) ((TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].HwChecksumIpOfIpV4Ctrl) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumTcpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumTcpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_HwChecksumTcpOfIpV4CtrlType) ((TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].HwChecksumTcpOfIpV4Ctrl) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumUdpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumUdpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_HwChecksumUdpOfIpV4CtrlType) ((TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].HwChecksumUdpOfIpV4Ctrl) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLlAddrStateIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_LlAddrStateIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].LlAddrStateIdxOfIpV4Ctrl);
@@ -6730,6 +7349,10 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_Ge
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4BroadcastIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].LocalAddrV4BroadcastIdxOfIpV4Ctrl);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4DhcpIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4DhcpIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_LocalAddrV4DhcpIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].LocalAddrV4DhcpIdxOfIpV4Ctrl);
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4UnicastIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4UnicastIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -6754,6 +7377,10 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4StartIdxOfIpV4CtrlType, TCPIP_CODE)
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_MulticastAddrV4UsedOfIpV4CtrlType) ((TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].MulticastAddrV4UsedOfIpV4Ctrl) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_ReceiveAllMulticastsOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsReceiveAllMulticastsOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_ReceiveAllMulticastsOfIpV4CtrlType) ((TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].ReceiveAllMulticastsOfIpV4Ctrl) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpTableIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetStaticArpTableIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -6811,13 +7438,13 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType, TCPIP_CODE)
 {
   return (TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType) (TcpIp_GetIpV4GeneralOfPCConfig()[(Index)].IpV4SocketDynDhcpIdxOfIpV4General);
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType) ((TcpIp_GetIpV4GeneralOfPCConfig()[(Index)].IpV4SocketDynDhcpUsedOfIpV4General) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynIcmpIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType) (TcpIp_GetIpV4GeneralOfPCConfig()[(Index)].IpV4SocketDynIcmpIdxOfIpV4General);
-}
-TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
-{
-  return (TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType) ((TcpIp_GetIpV4GeneralOfPCConfig()[(Index)].IpV4SocketDynIcmpUsedOfIpV4General) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynTcpRstIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -7518,57 +8145,45 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_Is
 {
   return (TcpIp_DhcpConfigUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpHostnameUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DhcpHostnameUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpStatusUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpStatusUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_DhcpStatusUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpUserOptionUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_DhcpUserOptionUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_DhcpUserOptionUsedOfIpV4CtrlType) (((boolean)(TcpIp_GetDhcpUserOptionStartIdxOfIpV4Ctrl(Index) != TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_FragmentationConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsFragmentationConfigUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_FragmentationConfigUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_FragmentationConfigUsedOfIpV4CtrlType) (((boolean)(TcpIp_GetFragmentationConfigIdxOfIpV4Ctrl(Index) != TCPIP_NO_FRAGMENTATIONCONFIGIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_GratuitousArpUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsGratuitousArpUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_GratuitousArpUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
-}
-TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIcmpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIcmpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
-{
-  return (TcpIp_HwChecksumIcmpOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
-}
-TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumIpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumIpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
-{
-  return (TcpIp_HwChecksumIpOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
-}
-TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumTcpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumTcpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
-{
-  return (TcpIp_HwChecksumTcpOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
-}
-TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumUdpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumUdpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
-{
-  return (TcpIp_HwChecksumUdpOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_GratuitousArpUsedOfIpV4CtrlType) (((boolean)(TcpIp_GetGratuitousArpIdxOfIpV4Ctrl(Index) != TCPIP_NO_GRATUITOUSARPIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsLlAddrStateUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_LlAddrStateUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_LlAddrStateUsedOfIpV4CtrlType) (((boolean)(TcpIp_GetLlAddrStateIdxOfIpV4Ctrl(Index) != TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
-TCPIP_LOCAL_INLINE FUNC(TcpIp_ReceiveAllMulticastsOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsReceiveAllMulticastsOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4DhcpUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsLocalAddrV4DhcpUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_ReceiveAllMulticastsOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_LocalAddrV4DhcpUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpTableUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsStaticArpTableUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_StaticArpTableUsedOfIpV4CtrlType) (((!(TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_StaticArpTableUsedOfIpV4CtrlType) (((boolean)(TcpIp_GetStaticArpTableIdxOfIpV4Ctrl(Index) != TCPIP_NO_STATICARPTABLEIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4CtrlDefaultUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType) (((!(TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType) (((!(TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
-TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType) (((!(TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType) (((boolean)(TcpIp_GetIpV4SocketDynIcmpIdxOfIpV4General(Index) != TCPIP_NO_IPV4SOCKETDYNICMPIDXOFIPV4GENERAL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynTcpRstUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -7609,6 +8224,18 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDefaultMulticastAddrV4Type, TCPIP_CODE) TcpI
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDefaultUnicastAddrV4Type, TCPIP_CODE) TcpIp_GetSizeOfDefaultUnicastAddrV4(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_SizeOfDefaultUnicastAddrV4Type) TcpIp_GetSizeOfDefaultUnicastAddrV4OfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpConfigType, TCPIP_CODE) TcpIp_GetSizeOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfDhcpConfigType) TcpIp_GetSizeOfDhcpConfigOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpHostnameType, TCPIP_CODE) TcpIp_GetSizeOfDhcpHostname(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfDhcpHostnameType) TcpIp_GetSizeOfDhcpHostnameOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSizeOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfDhcpStatusType) TcpIp_GetSizeOfDhcpStatusOfPCConfig();
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetSizeOfDhcpUserOption(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -7876,6 +8503,58 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketDynIdxOfBuf2TxReqMap(Tc
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetBuf2TxReqMapOfPCConfig()[(Index)].UlTxReqIdxOfBuf2TxReqMap = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpHostnameOfPCConfig()[(Index)] = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_DhcpV4_DataStructType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].DataStructOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetReqIpAddrOfDhcpStatus(TcpIp_DhcpStatusIterType Index, IpBase_AddrInType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].ReqIpAddrOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTimeoutOccurredOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_TimeoutOccurredOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].TimeoutOccurredOfDhcpStatus = (Value);
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -8416,6 +9095,14 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_PhysAddrOfArpTableEntryPtrType, TCPIP_CODE) TcpIp_
 {
   return (&(TcpIp_GetArpTableEntryOfPCConfig()[(Index)].PhysAddrOfArpTableEntry));
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnamePtrType, TCPIP_CODE) TcpIp_GetAddrDhcpHostname(TcpIp_DhcpHostnameIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DhcpHostnamePtrType) (&(TcpIp_GetDhcpHostnameOfPCConfig()[(Index)]));
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DataStructOfDhcpStatusPtrType, TCPIP_CODE) TcpIp_GetAddrDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (&(TcpIp_GetDhcpStatusOfPCConfig()[(Index)].DataStructOfDhcpStatus));
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionBufferPtrType, TCPIP_CODE) TcpIp_GetAddrDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_DhcpUserOptionBufferPtrType) (&(TcpIp_GetDhcpUserOptionBufferOfPCConfig()[(Index)]));
@@ -8675,6 +9362,118 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNetMaskOfDefaultUnicastAdd
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverIntervalMaxOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverIntervalMinOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverMaxNumOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasHostNameLenMaxOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasInitWaitMaxOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasInitWaitMinOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRebindIntervalMinOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRenewIntervalMinOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasReqAddrCalloutFuncOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestIntervalOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestMaxNumOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRestartOnFailOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRxReqOptionCntOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostname(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasCtrlStateOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDataStructOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasHostNameLenOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLastDiscoverSecsOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMsTimerOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasReqIpAddrOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetryCounterOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecElapsedOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecNextEventOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecNextIntervalOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecTimerOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTimeoutOccurredOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOption(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TcpIp_GetDhcpUserOptionOfPCConfig() != NULL_PTR);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -8855,6 +9654,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfigUsedOfIpV4Ctrl(v
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameEndIdxOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameStartIdxOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameUsedOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatusIdxOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -8924,6 +9735,14 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLlAddrStateUsedOfIpV4Ctrl(
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4BroadcastIdxOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4DhcpIdxOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4DhcpUsedOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -9264,6 +10083,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultMulticastAddr
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultUnicastAddrV4(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpHostname(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -10083,6 +10914,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultUnicastAddrV4OfPCCo
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfigOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatusOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionBufferOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -10208,6 +11051,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultMulticastAddr
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultUnicastAddrV4OfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpConfigOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpHostnameOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpStatusOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -10553,6 +11408,46 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketDynIdxOfBuf2TxReqMap(Tc
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetBuf2TxReqMapOfPCConfig()[(Index)].UlTxReqIdxOfBuf2TxReqMap++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncDhcpHostname(TcpIp_DhcpHostnameIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpHostnameOfPCConfig()[(Index)]++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -10969,6 +11864,46 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecUlTxReqIdxOfBuf2TxReqMap(TcpI
 {
   TcpIp_GetBuf2TxReqMapOfPCConfig()[(Index)].UlTxReqIdxOfBuf2TxReqMap--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
 }
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecDhcpHostname(TcpIp_DhcpHostnameIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpHostnameOfPCConfig()[(Index)]--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetDhcpUserOptionBufferOfPCConfig()[(Index)]--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
@@ -11384,6 +12319,46 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddUlTxReqIdxOfBuf2TxReqMap(TcpI
 {
   TcpIp_SetUlTxReqIdxOfBuf2TxReqMap(Index, (TcpIp_GetBuf2TxReqMapOfPCConfig()[(Index)].UlTxReqIdxOfBuf2TxReqMap + Value));
 }
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetDhcpHostname(Index, (TcpIp_GetDhcpHostnameOfPCConfig()[(Index)] + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetCtrlStateOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetHostNameLenOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetLastDiscoverSecsOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetMsTimerOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRetryCounterOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecElapsedOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecNextEventOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecNextIntervalOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecTimerOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus + Value));
+}
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_SetDhcpUserOptionBuffer(Index, (TcpIp_GetDhcpUserOptionBufferOfPCConfig()[(Index)] + Value));
@@ -11798,6 +12773,46 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketDynIdxOfBuf2TxReqMap(Tc
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_SetUlTxReqIdxOfBuf2TxReqMap(Index, (TcpIp_GetBuf2TxReqMapOfPCConfig()[(Index)].UlTxReqIdxOfBuf2TxReqMap - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetDhcpHostname(Index, (TcpIp_GetDhcpHostnameOfPCConfig()[(Index)] - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetCtrlStateOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetHostNameLenOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetLastDiscoverSecsOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetMsTimerOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRetryCounterOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecElapsedOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecNextEventOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecNextIntervalOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecTimerOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus - Value));
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {

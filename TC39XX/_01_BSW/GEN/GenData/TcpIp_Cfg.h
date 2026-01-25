@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Cfg.h
- *   Generation Time: 2026-01-24 23:52:01
+ *   Generation Time: 2026-01-25 23:19:09
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -47,7 +47,7 @@
 #define TCPIP_DEV_ERROR_DETECT                     STD_ON
 #define TCPIP_DEV_ERROR_REPORT                     STD_ON
 
-#define TCPIP_SUPPORT_DHCPV4                       STD_OFF
+#define TCPIP_SUPPORT_DHCPV4                       STD_ON
 
 #define TCPIP_SUPPORT_DHCPV6                       STD_OFF
 #define TCPIP_SUPPORT_DHCPV6_OPTIONS               STD_OFF
@@ -101,6 +101,8 @@
 #define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_TcpIpCtrl_Vlan23_Broadcast (6uL)
 #define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Multicast_Rx_fixed_239_23_0_2 (4uL)
 #define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_Multicast_Any_vlan23 (5uL)
+#define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33 (7uL)
+#define TcpIpConf_TcpIpLocalAddr_TcpIpV4LocalAddr_TcpIpCtrl_Vlan1_Broadcast (8uL)
 
 /**********************************************************************************************************************
  *  SYMBOLIC NAME DEFINES: SOCKET USERS
