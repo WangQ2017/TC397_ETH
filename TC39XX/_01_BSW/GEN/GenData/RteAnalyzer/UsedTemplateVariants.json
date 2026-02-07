@@ -1,7 +1,7 @@
 {
    "description" : "RTE Analyzer used templates",
    "version" : "1.23.0",
-   "RTEOutputDirectory" : "H:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/",
+   "RTEOutputDirectory" : "G:/class/TC397_ETH/TC39XX/_01_BSW/GEN/GenData/",
    "Templates" : {
       "Components/Rte_BswM.h" : {
          "Rte_InitValue_Request_ESH_PostRunRequest_0_requestedMode" : {
@@ -14,6 +14,33 @@
             "1b53a558b31c63acea001c0c155b637a" : {}
          },
          "Rte_InitValue_Request_ESH_RunRequest_1_requestedMode" : {
+            "1b53a558b31c63acea001c0c155b637a" : {}
+         },
+         "Rte_InitValue_Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_requestedMode" : {
+            "1b53a558b31c63acea001c0c155b637a" : {}
+         },
+         "Rte_InitValue_Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_requestedMode" : {
+            "1b53a558b31c63acea001c0c155b637a" : {}
+         },
+         "Rte_InitValue_Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_requestedMode" : {
+            "1b53a558b31c63acea001c0c155b637a" : {}
+         },
+         "Rte_InitValue_Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_requestedMode" : {
+            "1b53a558b31c63acea001c0c155b637a" : {}
+         },
+         "Rte_InitValue_Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_requestedMode" : {
+            "1b53a558b31c63acea001c0c155b637a" : {}
+         },
+         "Rte_InitValue_Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_requestedMode" : {
+            "1b53a558b31c63acea001c0c155b637a" : {}
+         },
+         "Rte_InitValue_Request_SDC_S_SdServerService_0xC3C0_FaultInfo_requestedMode" : {
+            "1b53a558b31c63acea001c0c155b637a" : {}
+         },
+         "Rte_InitValue_Request_SDC_S_SdServerService_0xC3C1_SenState_requestedMode" : {
+            "1b53a558b31c63acea001c0c155b637a" : {}
+         },
+         "Rte_InitValue_Request_SDC_S_SdServerService_0xC3C2_EcuState_requestedMode" : {
             "1b53a558b31c63acea001c0c155b637a" : {}
          },
          "Rte_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode" : {
@@ -31,7 +58,61 @@
          "Rte_Read_Request_ESH_RunRequest_1_requestedMode" : {
             "b7ea013bbea5bf53f5a96b6b26f1b3da" : {}
          },
+         "Rte_Read_Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_requestedMode" : {
+            "b7ea013bbea5bf53f5a96b6b26f1b3da" : {}
+         },
+         "Rte_Read_Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_requestedMode" : {
+            "b7ea013bbea5bf53f5a96b6b26f1b3da" : {}
+         },
+         "Rte_Read_Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_requestedMode" : {
+            "b7ea013bbea5bf53f5a96b6b26f1b3da" : {}
+         },
+         "Rte_Read_Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_requestedMode" : {
+            "b7ea013bbea5bf53f5a96b6b26f1b3da" : {}
+         },
+         "Rte_Read_Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_requestedMode" : {
+            "b7ea013bbea5bf53f5a96b6b26f1b3da" : {}
+         },
+         "Rte_Read_Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_requestedMode" : {
+            "b7ea013bbea5bf53f5a96b6b26f1b3da" : {}
+         },
+         "Rte_Read_Request_SDC_S_SdServerService_0xC3C0_FaultInfo_requestedMode" : {
+            "b7ea013bbea5bf53f5a96b6b26f1b3da" : {}
+         },
+         "Rte_Read_Request_SDC_S_SdServerService_0xC3C1_SenState_requestedMode" : {
+            "b7ea013bbea5bf53f5a96b6b26f1b3da" : {}
+         },
+         "Rte_Read_Request_SDC_S_SdServerService_0xC3C2_EcuState_requestedMode" : {
+            "b7ea013bbea5bf53f5a96b6b26f1b3da" : {}
+         },
          "Rte_Switch_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode" : {
+            "0358927cd464cfc8fae36eb470a3d433" : {}
+         },
+         "Rte_Switch_Switch_SDC_Mode_C_SdCLientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState" : {
+            "0358927cd464cfc8fae36eb470a3d433" : {}
+         },
+         "Rte_Switch_Switch_SDC_Mode_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdConsumedEventGroupState" : {
+            "0358927cd464cfc8fae36eb470a3d433" : {}
+         },
+         "Rte_Switch_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState" : {
+            "0358927cd464cfc8fae36eb470a3d433" : {}
+         },
+         "Rte_Switch_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState" : {
+            "0358927cd464cfc8fae36eb470a3d433" : {}
+         },
+         "Rte_Switch_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState" : {
+            "0358927cd464cfc8fae36eb470a3d433" : {}
+         },
+         "Rte_Switch_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState" : {
+            "0358927cd464cfc8fae36eb470a3d433" : {}
+         },
+         "Rte_Switch_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState" : {
+            "0358927cd464cfc8fae36eb470a3d433" : {}
+         },
+         "Rte_Switch_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState" : {
+            "0358927cd464cfc8fae36eb470a3d433" : {}
+         },
+         "Rte_Switch_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState" : {
             "0358927cd464cfc8fae36eb470a3d433" : {}
          }
       },
@@ -352,6 +433,114 @@
             "d392e90df888cf731e00dbc3ef8d65b3" : {},
             "dae947e79eddcb17155dd73ca50ac786" : {}
          },
+         "Rte_Read_BswM_Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_requestedMode" : {
+            "1e10b8cdceaaed5c6eeedc392882b2fb" : {},
+            "2eb428974462ee9191b4a748c0e8d5c3" : {},
+            "4e5915abe9a6b6e3e7723ce54c5c7551" : {},
+            "5f6362582826307ffa3a68cf2950709a" : {},
+            "637427f3905599916d3540ab09b552e0" : {},
+            "7ec3b1ad68ad55abbf424ffc4cc5bc40" : {},
+            "ad0f74a2a08d3353b3033f15357e655b" : {},
+            "b0108760a1ae31f824e6a10600e34a7f" : {},
+            "d392e90df888cf731e00dbc3ef8d65b3" : {},
+            "dae947e79eddcb17155dd73ca50ac786" : {}
+         },
+         "Rte_Read_BswM_Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_requestedMode" : {
+            "1e10b8cdceaaed5c6eeedc392882b2fb" : {},
+            "2eb428974462ee9191b4a748c0e8d5c3" : {},
+            "4e5915abe9a6b6e3e7723ce54c5c7551" : {},
+            "5f6362582826307ffa3a68cf2950709a" : {},
+            "637427f3905599916d3540ab09b552e0" : {},
+            "7ec3b1ad68ad55abbf424ffc4cc5bc40" : {},
+            "ad0f74a2a08d3353b3033f15357e655b" : {},
+            "b0108760a1ae31f824e6a10600e34a7f" : {},
+            "d392e90df888cf731e00dbc3ef8d65b3" : {},
+            "dae947e79eddcb17155dd73ca50ac786" : {}
+         },
+         "Rte_Read_BswM_Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_requestedMode" : {
+            "1e10b8cdceaaed5c6eeedc392882b2fb" : {},
+            "2eb428974462ee9191b4a748c0e8d5c3" : {},
+            "4e5915abe9a6b6e3e7723ce54c5c7551" : {},
+            "5f6362582826307ffa3a68cf2950709a" : {},
+            "637427f3905599916d3540ab09b552e0" : {},
+            "7ec3b1ad68ad55abbf424ffc4cc5bc40" : {},
+            "ad0f74a2a08d3353b3033f15357e655b" : {},
+            "b0108760a1ae31f824e6a10600e34a7f" : {},
+            "d392e90df888cf731e00dbc3ef8d65b3" : {},
+            "dae947e79eddcb17155dd73ca50ac786" : {}
+         },
+         "Rte_Read_BswM_Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_requestedMode" : {
+            "1e10b8cdceaaed5c6eeedc392882b2fb" : {},
+            "2eb428974462ee9191b4a748c0e8d5c3" : {},
+            "4e5915abe9a6b6e3e7723ce54c5c7551" : {},
+            "5f6362582826307ffa3a68cf2950709a" : {},
+            "637427f3905599916d3540ab09b552e0" : {},
+            "7ec3b1ad68ad55abbf424ffc4cc5bc40" : {},
+            "ad0f74a2a08d3353b3033f15357e655b" : {},
+            "b0108760a1ae31f824e6a10600e34a7f" : {},
+            "d392e90df888cf731e00dbc3ef8d65b3" : {},
+            "dae947e79eddcb17155dd73ca50ac786" : {}
+         },
+         "Rte_Read_BswM_Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_requestedMode" : {
+            "1e10b8cdceaaed5c6eeedc392882b2fb" : {},
+            "2eb428974462ee9191b4a748c0e8d5c3" : {},
+            "4e5915abe9a6b6e3e7723ce54c5c7551" : {},
+            "5f6362582826307ffa3a68cf2950709a" : {},
+            "637427f3905599916d3540ab09b552e0" : {},
+            "7ec3b1ad68ad55abbf424ffc4cc5bc40" : {},
+            "ad0f74a2a08d3353b3033f15357e655b" : {},
+            "b0108760a1ae31f824e6a10600e34a7f" : {},
+            "d392e90df888cf731e00dbc3ef8d65b3" : {},
+            "dae947e79eddcb17155dd73ca50ac786" : {}
+         },
+         "Rte_Read_BswM_Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_requestedMode" : {
+            "1e10b8cdceaaed5c6eeedc392882b2fb" : {},
+            "2eb428974462ee9191b4a748c0e8d5c3" : {},
+            "4e5915abe9a6b6e3e7723ce54c5c7551" : {},
+            "5f6362582826307ffa3a68cf2950709a" : {},
+            "637427f3905599916d3540ab09b552e0" : {},
+            "7ec3b1ad68ad55abbf424ffc4cc5bc40" : {},
+            "ad0f74a2a08d3353b3033f15357e655b" : {},
+            "b0108760a1ae31f824e6a10600e34a7f" : {},
+            "d392e90df888cf731e00dbc3ef8d65b3" : {},
+            "dae947e79eddcb17155dd73ca50ac786" : {}
+         },
+         "Rte_Read_BswM_Request_SDC_S_SdServerService_0xC3C0_FaultInfo_requestedMode" : {
+            "1e10b8cdceaaed5c6eeedc392882b2fb" : {},
+            "2eb428974462ee9191b4a748c0e8d5c3" : {},
+            "4e5915abe9a6b6e3e7723ce54c5c7551" : {},
+            "5f6362582826307ffa3a68cf2950709a" : {},
+            "637427f3905599916d3540ab09b552e0" : {},
+            "7ec3b1ad68ad55abbf424ffc4cc5bc40" : {},
+            "ad0f74a2a08d3353b3033f15357e655b" : {},
+            "b0108760a1ae31f824e6a10600e34a7f" : {},
+            "d392e90df888cf731e00dbc3ef8d65b3" : {},
+            "dae947e79eddcb17155dd73ca50ac786" : {}
+         },
+         "Rte_Read_BswM_Request_SDC_S_SdServerService_0xC3C1_SenState_requestedMode" : {
+            "1e10b8cdceaaed5c6eeedc392882b2fb" : {},
+            "2eb428974462ee9191b4a748c0e8d5c3" : {},
+            "4e5915abe9a6b6e3e7723ce54c5c7551" : {},
+            "5f6362582826307ffa3a68cf2950709a" : {},
+            "637427f3905599916d3540ab09b552e0" : {},
+            "7ec3b1ad68ad55abbf424ffc4cc5bc40" : {},
+            "ad0f74a2a08d3353b3033f15357e655b" : {},
+            "b0108760a1ae31f824e6a10600e34a7f" : {},
+            "d392e90df888cf731e00dbc3ef8d65b3" : {},
+            "dae947e79eddcb17155dd73ca50ac786" : {}
+         },
+         "Rte_Read_BswM_Request_SDC_S_SdServerService_0xC3C2_EcuState_requestedMode" : {
+            "1e10b8cdceaaed5c6eeedc392882b2fb" : {},
+            "2eb428974462ee9191b4a748c0e8d5c3" : {},
+            "4e5915abe9a6b6e3e7723ce54c5c7551" : {},
+            "5f6362582826307ffa3a68cf2950709a" : {},
+            "637427f3905599916d3540ab09b552e0" : {},
+            "7ec3b1ad68ad55abbf424ffc4cc5bc40" : {},
+            "ad0f74a2a08d3353b3033f15357e655b" : {},
+            "b0108760a1ae31f824e6a10600e34a7f" : {},
+            "d392e90df888cf731e00dbc3ef8d65b3" : {},
+            "dae947e79eddcb17155dd73ca50ac786" : {}
+         },
          "Rte_Switch_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode" : {
             "179aeabd6e617c673073ccec54bf018c" : {},
             "1e10b8cdceaaed5c6eeedc392882b2fb" : {},
@@ -370,6 +559,69 @@
             "f55c5f57e3641076923b901fe773f6fc" : {},
             "fcb9a2cf87a2e6026f46065c8971a9bb" : {},
             "fe11907a078bd58907d8beee99557a8c" : {}
+         },
+         "Rte_Switch_BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState" : {
+            "179aeabd6e617c673073ccec54bf018c" : {},
+            "23cde970de0dbf4a6e96252aa3d0818f" : {},
+            "8ffb905c8707df82f047182377a2e483" : {},
+            "9e4e1b2789008e1ef255809033315f7c" : {},
+            "ee70797868c7e79d637957a01d59154c" : {}
+         },
+         "Rte_Switch_BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdConsumedEventGroupState" : {
+            "179aeabd6e617c673073ccec54bf018c" : {},
+            "23cde970de0dbf4a6e96252aa3d0818f" : {},
+            "8ffb905c8707df82f047182377a2e483" : {},
+            "9e4e1b2789008e1ef255809033315f7c" : {},
+            "ee70797868c7e79d637957a01d59154c" : {}
+         },
+         "Rte_Switch_BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState" : {
+            "179aeabd6e617c673073ccec54bf018c" : {},
+            "23cde970de0dbf4a6e96252aa3d0818f" : {},
+            "8ffb905c8707df82f047182377a2e483" : {},
+            "9e4e1b2789008e1ef255809033315f7c" : {},
+            "ee70797868c7e79d637957a01d59154c" : {}
+         },
+         "Rte_Switch_BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState" : {
+            "179aeabd6e617c673073ccec54bf018c" : {},
+            "23cde970de0dbf4a6e96252aa3d0818f" : {},
+            "8ffb905c8707df82f047182377a2e483" : {},
+            "9e4e1b2789008e1ef255809033315f7c" : {},
+            "ee70797868c7e79d637957a01d59154c" : {}
+         },
+         "Rte_Switch_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState" : {
+            "179aeabd6e617c673073ccec54bf018c" : {},
+            "23cde970de0dbf4a6e96252aa3d0818f" : {},
+            "8ffb905c8707df82f047182377a2e483" : {},
+            "9e4e1b2789008e1ef255809033315f7c" : {},
+            "ee70797868c7e79d637957a01d59154c" : {}
+         },
+         "Rte_Switch_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState" : {
+            "179aeabd6e617c673073ccec54bf018c" : {},
+            "23cde970de0dbf4a6e96252aa3d0818f" : {},
+            "8ffb905c8707df82f047182377a2e483" : {},
+            "9e4e1b2789008e1ef255809033315f7c" : {},
+            "ee70797868c7e79d637957a01d59154c" : {}
+         },
+         "Rte_Switch_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState" : {
+            "179aeabd6e617c673073ccec54bf018c" : {},
+            "23cde970de0dbf4a6e96252aa3d0818f" : {},
+            "8ffb905c8707df82f047182377a2e483" : {},
+            "9e4e1b2789008e1ef255809033315f7c" : {},
+            "ee70797868c7e79d637957a01d59154c" : {}
+         },
+         "Rte_Switch_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState" : {
+            "179aeabd6e617c673073ccec54bf018c" : {},
+            "23cde970de0dbf4a6e96252aa3d0818f" : {},
+            "8ffb905c8707df82f047182377a2e483" : {},
+            "9e4e1b2789008e1ef255809033315f7c" : {},
+            "ee70797868c7e79d637957a01d59154c" : {}
+         },
+         "Rte_Switch_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState" : {
+            "179aeabd6e617c673073ccec54bf018c" : {},
+            "23cde970de0dbf4a6e96252aa3d0818f" : {},
+            "8ffb905c8707df82f047182377a2e483" : {},
+            "9e4e1b2789008e1ef255809033315f7c" : {},
+            "ee70797868c7e79d637957a01d59154c" : {}
          },
          "TASK(OsTask_Asw_OsCore0)" : {
             "001a3efbfe49b7d5be906b5d15d108f6" : {},

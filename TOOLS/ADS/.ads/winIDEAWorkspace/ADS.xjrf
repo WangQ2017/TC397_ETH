@@ -135,7 +135,7 @@
            <Area></Area>
            <Load>true</Load>
            <OverrideMemArea>false</OverrideMemArea>
-           <Path>H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/tc39x.elf</Path>
+           <Path>G:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/tc39x.elf</Path>
            <UseDefaultMSID>true</UseDefaultMSID>
            <MSID>
             <App>0x0</App>
@@ -227,7 +227,7 @@
            <Area></Area>
            <Load>true</Load>
            <OverrideMemArea>false</OverrideMemArea>
-           <Path>H:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/tc39x.elf</Path>
+           <Path>G:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/tc39x.elf</Path>
            <UseDefaultMSID>true</UseDefaultMSID>
            <MSID>
             <App>0x0</App>
@@ -370,7 +370,7 @@
          <Condition></Condition>
          <Condition_Count>0</Condition_Count>
          <ConditionEnabled>False</ConditionEnabled>
-         <Name>&quot;..\..\..\..\TC39XX\_02_CDD\Cdd_Core0.c&quot;::81</Name>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\Sd\Implementation\Sd.c&quot;::7711</Name>
         </__>
        </BP.0>
        <BP.1>
@@ -383,9 +383,35 @@
          <Condition></Condition>
          <Condition_Count>0</Condition_Count>
          <ConditionEnabled>False</ConditionEnabled>
-         <Name>&quot;..\..\..\..\TC39XX\_02_CDD\Cdd_Core0.c&quot;::82</Name>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_SoCon.c&quot;::1546</Name>
         </__>
        </BP.1>
+       <BP.10>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>False</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_Rx.c&quot;::1746</Name>
+        </__>
+       </BP.10>
+       <BP.11>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>False</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\Sd\Implementation\Sd.c&quot;::4009</Name>
+        </__>
+       </BP.11>
        <BP.2>
         <__>
          <ActionEnabled>False</ActionEnabled>
@@ -396,9 +422,100 @@
          <Condition></Condition>
          <Condition_Count>0</Condition_Count>
          <ConditionEnabled>False</ConditionEnabled>
-         <Name>&quot;..\..\..\..\TC39XX\_02_CDD\Cdd_Core0.c&quot;::86</Name>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_TcpIp.c&quot;::7274</Name>
         </__>
        </BP.2>
+       <BP.3>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>False</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_TcpIp.c&quot;::7243</Name>
+        </__>
+       </BP.3>
+       <BP.4>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>False</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_TcpIp.c&quot;::7233</Name>
+        </__>
+       </BP.4>
+       <BP.5>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>False</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd.c&quot;::2177</Name>
+        </__>
+       </BP.5>
+       <BP.6>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>False</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\Sd\Implementation\Sd.c&quot;::7502</Name>
+        </__>
+       </BP.6>
+       <BP.7>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>False</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd.c&quot;::2865</Name>
+        </__>
+       </BP.7>
+       <BP.8>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>False</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd.c&quot;::2905</Name>
+        </__>
+       </BP.8>
+       <BP.9>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>False</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_Rx.c&quot;::5586</Name>
+        </__>
+       </BP.9>
       </Fetch>
      </Breakpoints>
      <Debug>
@@ -608,7 +725,7 @@
         <Count>0</Count>
         <Enabled>false</Enabled>
         <Expression></Expression>
-        <Location>&quot;..\..\..\..\TC39XX\_02_CDD\Cdd_Core0.c&quot;::81</Location>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\Sd\Implementation\Sd.c&quot;::7711</Location>
         <ProcessFilter></ProcessFilter>
        </__.0>
        <__.1>
@@ -620,9 +737,33 @@
         <Count>0</Count>
         <Enabled>false</Enabled>
         <Expression></Expression>
-        <Location>&quot;..\..\..\..\TC39XX\_02_CDD\Cdd_Core0.c&quot;::82</Location>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_SoCon.c&quot;::1546</Location>
         <ProcessFilter></ProcessFilter>
        </__.1>
+       <__.10>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>false</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_Rx.c&quot;::1746</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.10>
+       <__.11>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>false</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\Sd\Implementation\Sd.c&quot;::4009</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.11>
        <__.2>
         <ActionEnabled>false</ActionEnabled>
         <ActionParams></ActionParams>
@@ -632,9 +773,93 @@
         <Count>0</Count>
         <Enabled>false</Enabled>
         <Expression></Expression>
-        <Location>&quot;..\..\..\..\TC39XX\_02_CDD\Cdd_Core0.c&quot;::86</Location>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_TcpIp.c&quot;::7274</Location>
         <ProcessFilter></ProcessFilter>
        </__.2>
+       <__.3>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>false</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_TcpIp.c&quot;::7243</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.3>
+       <__.4>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>false</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_TcpIp.c&quot;::7233</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.4>
+       <__.5>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>false</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd.c&quot;::2177</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.5>
+       <__.6>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>false</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\Sd\Implementation\Sd.c&quot;::7502</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.6>
+       <__.7>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>false</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd.c&quot;::2865</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.7>
+       <__.8>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>false</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd.c&quot;::2905</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.8>
+       <__.9>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>false</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd_Rx.c&quot;::5586</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.9>
       </BPs>
       <Processes>
        <__.0>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Sd_Lcfg.h
- *   Generation Time: 2026-01-24 23:52:01
+ *   Generation Time: 2026-02-07 22:15:18
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -4267,7 +4267,7 @@ typedef struct Sd_ClientListStructSTag
 {
   Sd_ClientListType SdEventHandler_0xC3C0_FaultInfo[2];
   Sd_ClientListType SdEventHandler_0xC3C1_SenState[2];
-  Sd_ClientListType SdEventHandler_0xC3C1_EcuState;
+  Sd_ClientListType SdEventHandler_0xC3C2_EcuState;
 } Sd_ClientListStructSType;
 
 /**   \brief  type to be used as symbolic data element access to Sd_EndpointStorage */
@@ -4327,7 +4327,7 @@ typedef struct Sd_SoConActivationMapStructSTag
 {
   Sd_SoConActivationMapType SdEventHandler_0xC3C0_FaultInfo[2];
   Sd_SoConActivationMapType SdEventHandler_0xC3C1_SenState[2];
-  Sd_SoConActivationMapType SdEventHandler_0xC3C1_EcuState;
+  Sd_SoConActivationMapType SdEventHandler_0xC3C2_EcuState;
 } Sd_SoConActivationMapStructSType;
 
 /** 
@@ -5289,6 +5289,23 @@ extern VAR(Sd_ClientDynType, SD_VAR_NOINIT) Sd_ClientDyn[3];
 /*lint -restore */
 extern VAR(Sd_ClientListUType, SD_VAR_NOINIT) Sd_ClientList;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define SD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Sd_CommonInitialDelay
+**********************************************************************************************************************/
+/** 
+  \var    Sd_CommonInitialDelay
+  \brief  Common Initial Offer/Find delay
+*/ 
+#define SD_START_SEC_VAR_NOINIT_32BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(Sd_CommonInitialDelayType, SD_VAR_NOINIT) Sd_CommonInitialDelay[2];
+#define SD_STOP_SEC_VAR_NOINIT_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Sd_Lcfg.c
- *   Generation Time: 2026-01-24 23:52:00
+ *   Generation Time: 2026-02-07 22:15:18
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -105,10 +105,10 @@
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Sd_ClientType, SD_CONST) Sd_Client[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    ServiceId  AutoRequire  MinorVersionWildcard  ServiceGroupMember  CapabilityRecordEndIdx                CapabilityRecordFunctionCalloutPtrIdx                CapabilityRecordStartIdx                ClientTimerIdx  CommonInitialDelayIdx                ConsumedEventgroupEndIdx  ConsumedEventgroupStartIdx  HandleId  InstanceId  InstanceIdx  MajorVersion  MethodIdx                MinorVersion  TcpSoConIdEndIdx                TcpSoConIdStartIdx                UdpSoConEndIdx                UdpSoConStartIdx                      Referable Keys */
-  { /*     0 */    50123u,       FALSE,                FALSE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFCLIENT, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFCLIENT, SD_NO_CAPABILITYRECORDSTARTIDXOFCLIENT,             0u, SD_NO_COMMONINITIALDELAYIDXOFCLIENT,                       1u,                         0u,       0u,         1u,          0u,           1u, SD_NO_METHODIDXOFCLIENT,           0u, SD_NO_TCPSOCONIDENDIDXOFCLIENT, SD_NO_TCPSOCONIDSTARTIDXOFCLIENT,                           3u,                             0u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
-  { /*     1 */    50124u,       FALSE,                FALSE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFCLIENT, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFCLIENT, SD_NO_CAPABILITYRECORDSTARTIDXOFCLIENT,             0u, SD_NO_COMMONINITIALDELAYIDXOFCLIENT,                       3u,                         2u,       2u,         1u,          0u,           1u, SD_NO_METHODIDXOFCLIENT,           0u,                             2u,                               1u, SD_NO_UDPSOCONENDIDXOFCLIENT, SD_NO_UDPSOCONSTARTIDXOFCLIENT },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842] */
-  { /*     2 */    50125u,       FALSE,                FALSE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFCLIENT, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFCLIENT, SD_NO_CAPABILITYRECORDSTARTIDXOFCLIENT,             0u, SD_NO_COMMONINITIALDELAYIDXOFCLIENT,                       2u,                         1u,       1u,         1u,          0u,           1u, SD_NO_METHODIDXOFCLIENT,           0u, SD_NO_TCPSOCONIDENDIDXOFCLIENT, SD_NO_TCPSOCONIDSTARTIDXOFCLIENT,                           3u,                             0u }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+    /* Index    ServiceId  AutoRequire  MinorVersionWildcard  ServiceGroupMember  CapabilityRecordEndIdx                CapabilityRecordFunctionCalloutPtrIdx                CapabilityRecordStartIdx                ClientTimerIdx  CommonInitialDelayIdx  ConsumedEventgroupEndIdx  ConsumedEventgroupStartIdx  HandleId  InstanceId  InstanceIdx  MajorVersion  MethodIdx                MinorVersion  TcpSoConIdEndIdx                TcpSoConIdStartIdx                UdpSoConEndIdx                UdpSoConStartIdx                      Referable Keys */
+  { /*     0 */    50123u,        TRUE,                FALSE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFCLIENT, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFCLIENT, SD_NO_CAPABILITYRECORDSTARTIDXOFCLIENT,             0u,                    1u,                       1u,                         0u,       0u,        23u,          0u,           1u, SD_NO_METHODIDXOFCLIENT,           0u, SD_NO_TCPSOCONIDENDIDXOFCLIENT, SD_NO_TCPSOCONIDSTARTIDXOFCLIENT,                           3u,                             0u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  { /*     1 */    50124u,        TRUE,                FALSE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFCLIENT, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFCLIENT, SD_NO_CAPABILITYRECORDSTARTIDXOFCLIENT,             0u,                    1u,                       3u,                         2u,       2u,        23u,          0u,           1u, SD_NO_METHODIDXOFCLIENT,           0u,                             2u,                               1u, SD_NO_UDPSOCONENDIDXOFCLIENT, SD_NO_UDPSOCONSTARTIDXOFCLIENT },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_RX_fixed_10_23_0_33_47842] */
+  { /*     2 */    50125u,        TRUE,                FALSE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFCLIENT, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFCLIENT, SD_NO_CAPABILITYRECORDSTARTIDXOFCLIENT,             0u,                    1u,                       2u,                         1u,       1u,        23u,          0u,           1u, SD_NO_METHODIDXOFCLIENT,           0u, SD_NO_TCPSOCONIDENDIDXOFCLIENT, SD_NO_TCPSOCONIDSTARTIDXOFCLIENT,                           3u,                             0u }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
 };
 #define SD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -197,9 +197,9 @@ CONST(Sd_ClientTimerType, SD_CONST) Sd_ClientTimer[2] = {  /* PRQA S 1514, 1533 
 /*lint -restore */
 CONST(Sd_ConsumedEventgroupType, SD_CONST) Sd_ConsumedEventgroup[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    AutoRequire  ClientIdx  ClientTimerIdx  EventGroupId  HandleId  MulticastEndpointAddrIdx                            MulticastSoConIdEndIdx                            MulticastSoConIdStartIdx                            RoutingGroupMulticastActRefIdx                            RoutingGroupTcpActRefIdx                            RoutingGroupUdpActRefIdx                                  Referable Keys */
-  { /*     0 */       FALSE,        0u,             1u,           1u,       0u,                                                 0u,                                               1u,                                                 0u,                                                       5u, SD_NO_ROUTINGGROUPTCPACTREFIDXOFCONSUMEDEVENTGROUP,                                                 6u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed/SdConsumedEventGroup_0xC3CB_VechicleSpeed, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed] */
-  { /*     1 */       FALSE,        2u,             1u,           1u,       1u,                                                 1u,                                               2u,                                                 1u,                                                       7u, SD_NO_ROUTINGGROUPTCPACTREFIDXOFCONSUMEDEVENTGROUP,                                                 8u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo/SdConsumedEventGroup_0xC3CD_VechicleInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo] */
-  { /*     2 */       FALSE,        1u,             1u,           1u,       2u, SD_NO_MULTICASTENDPOINTADDRIDXOFCONSUMEDEVENTGROUP, SD_NO_MULTICASTSOCONIDENDIDXOFCONSUMEDEVENTGROUP, SD_NO_MULTICASTSOCONIDSTARTIDXOFCONSUMEDEVENTGROUP, SD_NO_ROUTINGGROUPMULTICASTACTREFIDXOFCONSUMEDEVENTGROUP,                                                 9u, SD_NO_ROUTINGGROUPUDPACTREFIDXOFCONSUMEDEVENTGROUP }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus/SdConsumedEventGroup_0xC3CC_VechicleStatus, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus] */
+  { /*     0 */        TRUE,        0u,             1u,           1u,       0u,                                                 0u,                                               1u,                                                 0u,                                                       5u, SD_NO_ROUTINGGROUPTCPACTREFIDXOFCONSUMEDEVENTGROUP,                                                 6u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed/SdConsumedEventGroup_0xC3CB_VechicleSpeed, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed] */
+  { /*     1 */        TRUE,        2u,             1u,           1u,       1u,                                                 1u,                                               2u,                                                 1u,                                                       7u, SD_NO_ROUTINGGROUPTCPACTREFIDXOFCONSUMEDEVENTGROUP,                                                 8u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo/SdConsumedEventGroup_0xC3CD_VechicleInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo] */
+  { /*     2 */        TRUE,        1u,             1u,           1u,       2u, SD_NO_MULTICASTENDPOINTADDRIDXOFCONSUMEDEVENTGROUP, SD_NO_MULTICASTSOCONIDENDIDXOFCONSUMEDEVENTGROUP, SD_NO_MULTICASTSOCONIDSTARTIDXOFCONSUMEDEVENTGROUP, SD_NO_ROUTINGGROUPMULTICASTACTREFIDXOFCONSUMEDEVENTGROUP,                                                 9u, SD_NO_ROUTINGGROUPUDPACTREFIDXOFCONSUMEDEVENTGROUP }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus/SdConsumedEventGroup_0xC3CC_VechicleStatus, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus] */
 };
 #define SD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -260,8 +260,8 @@ CONST(Sd_ConsumedEventgroupMapType, SD_CONST) Sd_ConsumedEventgroupMap[3] = {  /
 CONST(Sd_EventHandlerType, SD_CONST) Sd_EventHandler[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ClientListEndIdx  ClientListStartIdx  EventGroupId  EventHandlerMulticastIdx                      EventHandlerTcpIdx                      EventHandlerUdpIdx                      HandleId  MulticastThreshold  ServerIdx  ServerTimerIdx  SoConActivationMapEndIdx  SoConActivationMapStartIdx        Referable Keys */
   { /*     0 */               2u,                 0u,           1u,                                           0u, SD_NO_EVENTHANDLERTCPIDXOFEVENTHANDLER,                                     0u,       0u,                 2u,        0u,             0u,                       2u,                         0u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo/SdEventHandler_0xC3C0_FaultInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo] */
-  { /*     1 */               4u,                 2u,           1u,                                           1u, SD_NO_EVENTHANDLERTCPIDXOFEVENTHANDLER,                                     1u,       2u,                 2u,        2u,             0u,                       4u,                         2u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState/SdEventHandler_0xC3C1_SenState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState] */
-  { /*     2 */               5u,                 4u,           1u, SD_NO_EVENTHANDLERMULTICASTIDXOFEVENTHANDLER,                                     0u, SD_NO_EVENTHANDLERUDPIDXOFEVENTHANDLER,       1u,                 0u,        1u,             0u,                       5u,                         4u }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState/SdEventHandler_0xC3C1_EcuState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState] */
+  { /*     1 */               4u,                 2u,           1u,                                           1u, SD_NO_EVENTHANDLERTCPIDXOFEVENTHANDLER,                                     1u,       2u,                 2u,        1u,             0u,                       4u,                         2u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState/SdEventHandler_0xC3C1_SenState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState] */
+  { /*     2 */               5u,                 4u,           1u, SD_NO_EVENTHANDLERMULTICASTIDXOFEVENTHANDLER,                                     0u, SD_NO_EVENTHANDLERUDPIDXOFEVENTHANDLER,       1u,                 0u,        2u,             0u,                       5u,                         4u }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState/SdEventHandler_0xC3C2_EcuState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState] */
 };
 #define SD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -310,7 +310,7 @@ CONST(Sd_EventHandlerMulticastType, SD_CONST) Sd_EventHandlerMulticast[2] = {  /
 /*lint -restore */
 CONST(Sd_EventHandlerTcpType, SD_CONST) Sd_EventHandlerTcp[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    RoutingGroupActRefIdx  RoutingGroupTriggerIdx                               Referable Keys */
-  { /*     0 */                    4u, SD_NO_ROUTINGGROUPTRIGGERIDXOFEVENTHANDLERTCP }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState/SdEventHandler_0xC3C1_EcuState] */
+  { /*     0 */                    4u, SD_NO_ROUTINGGROUPTRIGGERIDXOFEVENTHANDLERTCP }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState/SdEventHandler_0xC3C2_EcuState] */
 };
 #define SD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -387,7 +387,7 @@ CONST(Sd_EventHandlerUdpType, SD_CONST) Sd_EventHandlerUdp[2] = {  /* PRQA S 151
 /*lint -restore */
 CONST(Sd_InstanceType, SD_CONST) Sd_Instance[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    MulticastRxPduId                                          TxPduId                                        UnicastRxPduId                                        AddressStorageEndIdx  AddressStorageStartIdx  CapabilityRecordEndIdx                  CapabilityRecordStartIdx                  ClientEndIdx  ClientStartIdx  EndpointStorageEndIdx  EndpointStorageStartIdx  QueueProcessLimit  RetryDelay  RetryMax  RxEventEndIdx  RxEventStartIdx  SendEntryEndIdx  SendEntryStartIdx  ServerEndIdx  ServerStartIdx  TcpSoConIdEndIdx  TcpSoConIdStartIdx  UdpSoConEndIdx  UdpSoConStartIdx  EMalformedMsgId  ENackRecvId    EOutOfResId    MulticastRxSoConId                                                       TxSoConId                                                            UnicastRxSoConId                                                           Referable Keys */
-  { /*     0 */ SdConf_SdInstanceMulticastRxPdu_SdInstanceMulticastRxPdu, SoAdConf_SoAdPduRoute_SoAdPduRoute_SD_Ctrl_Tx, SdConf_SdInstanceUnicastRxPdu_SdInstanceUnicastRxPdu,                  10u,                     0u, SD_NO_CAPABILITYRECORDENDIDXOFINSTANCE, SD_NO_CAPABILITYRECORDSTARTIDXOFINSTANCE,           3u,             0u,                   20u,                      0u,               32u,         0u,       0u,           32u,              0u,             32u,                0u,           3u,             0u,               2u,                 0u,             3u,               0u, SD_INV_DEM_ID  , SD_INV_DEM_ID, SD_INV_DEM_ID, SoAdConf_SoAdSocketConnection_SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001, SoAdConf_SoAdSocketConnection_SC_SD_CTRL_UDP_Any_DynamicPort_Remote, SoAdConf_SoAdSocketConnection_SC_SD_CTRL_UDP_Any_DynamicPort_Remote }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus] */
+  { /*     0 */ SdConf_SdInstanceMulticastRxPdu_SdInstanceMulticastRxPdu, SoAdConf_SoAdPduRoute_SoAdPduRoute_SD_Ctrl_Tx, SdConf_SdInstanceUnicastRxPdu_SdInstanceUnicastRxPdu,                  10u,                     0u, SD_NO_CAPABILITYRECORDENDIDXOFINSTANCE, SD_NO_CAPABILITYRECORDSTARTIDXOFINSTANCE,           3u,             0u,                   20u,                      0u,               32u,         0u,       0u,           32u,              0u,             32u,                0u,           3u,             0u,               2u,                 0u,             3u,               0u, SD_INV_DEM_ID  , SD_INV_DEM_ID, SD_INV_DEM_ID, SoAdConf_SoAdSocketConnection_SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001, SoAdConf_SoAdSocketConnection_SC_SD_CTRL_UDP_Any_DynamicPort_Remote, SoAdConf_SoAdSocketConnection_SC_SD_CTRL_UDP_Any_DynamicPort_Remote }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus] */
 };
 #define SD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -505,10 +505,10 @@ CONST(SoAd_RoutingGroupIdType, SD_CONST) Sd_RoutingGroup[10] = {  /* PRQA S 1514
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(Sd_ServerType, SD_CONST) Sd_Server[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    ServiceId  AutoAvailable  ServiceGroupMember  CapabilityRecordEndIdx                CapabilityRecordFunctionCalloutPtrIdx                CapabilityRecordStartIdx                CommonInitialDelayIdx                EventHandlerEndIdx  EventHandlerStartIdx  HandleId  InstanceId  InstanceIdx  MajorVersion  MethodIdx                MinorVersion  ServerTimerIdx  TcpSoConIdEndIdx                TcpSoConIdStartIdx                UdpSoConEndIdx                UdpSoConStartIdx                      Referable Keys */
-  { /*     0 */    50112u,         FALSE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFSERVER, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFSERVER, SD_NO_CAPABILITYRECORDSTARTIDXOFSERVER, SD_NO_COMMONINITIALDELAYIDXOFSERVER,                 1u,                   0u,       1u,        23u,          0u,           1u, SD_NO_METHODIDXOFSERVER,           0u,             1u, SD_NO_TCPSOCONIDENDIDXOFSERVER, SD_NO_TCPSOCONIDSTARTIDXOFSERVER,                           3u,                             0u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
-  { /*     1 */    50113u,         FALSE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFSERVER, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFSERVER, SD_NO_CAPABILITYRECORDSTARTIDXOFSERVER, SD_NO_COMMONINITIALDELAYIDXOFSERVER,                 3u,                   2u,       0u,         1u,          0u,           1u, SD_NO_METHODIDXOFSERVER,           0u,             1u,                             1u,                               0u, SD_NO_UDPSOCONENDIDXOFSERVER, SD_NO_UDPSOCONSTARTIDXOFSERVER },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843] */
-  { /*     2 */    50113u,         FALSE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFSERVER, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFSERVER, SD_NO_CAPABILITYRECORDSTARTIDXOFSERVER, SD_NO_COMMONINITIALDELAYIDXOFSERVER,                 2u,                   1u,       2u,        23u,          0u,           1u, SD_NO_METHODIDXOFSERVER,           0u,             1u, SD_NO_TCPSOCONIDENDIDXOFSERVER, SD_NO_TCPSOCONIDSTARTIDXOFSERVER,                           3u,                             0u }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+    /* Index    ServiceId  AutoAvailable  ServiceGroupMember  CapabilityRecordEndIdx                CapabilityRecordFunctionCalloutPtrIdx                CapabilityRecordStartIdx                CommonInitialDelayIdx  EventHandlerEndIdx  EventHandlerStartIdx  HandleId  InstanceId  InstanceIdx  MajorVersion  MethodIdx                MinorVersion  ServerTimerIdx  TcpSoConIdEndIdx                TcpSoConIdStartIdx                UdpSoConEndIdx                UdpSoConStartIdx                      Referable Keys */
+  { /*     0 */    50112u,          TRUE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFSERVER, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFSERVER, SD_NO_CAPABILITYRECORDSTARTIDXOFSERVER,                    0u,                 1u,                   0u,       1u,        23u,          0u,           1u, SD_NO_METHODIDXOFSERVER,           0u,             1u, SD_NO_TCPSOCONIDENDIDXOFSERVER, SD_NO_TCPSOCONIDSTARTIDXOFSERVER,                           3u,                             0u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  { /*     1 */    50113u,          TRUE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFSERVER, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFSERVER, SD_NO_CAPABILITYRECORDSTARTIDXOFSERVER,                    0u,                 2u,                   1u,       2u,        23u,          0u,           1u, SD_NO_METHODIDXOFSERVER,           0u,             1u, SD_NO_TCPSOCONIDENDIDXOFSERVER, SD_NO_TCPSOCONIDSTARTIDXOFSERVER,                           3u,                             0u },  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  { /*     2 */    50114u,          TRUE,              FALSE, SD_NO_CAPABILITYRECORDENDIDXOFSERVER, SD_NO_CAPABILITYRECORDFUNCTIONCALLOUTPTRIDXOFSERVER, SD_NO_CAPABILITYRECORDSTARTIDXOFSERVER,                    0u,                 3u,                   2u,       0u,        23u,          0u,           1u, SD_NO_METHODIDXOFSERVER,           0u,             1u,                             1u,                               0u, SD_NO_UDPSOCONENDIDXOFSERVER, SD_NO_UDPSOCONSTARTIDXOFSERVER }   /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843] */
 };
 #define SD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -532,9 +532,9 @@ CONST(Sd_ServerType, SD_CONST) Sd_Server[3] = {  /* PRQA S 1514, 1533 */  /* MD_
 /*lint -restore */
 CONST(Sd_ServerMapType, SD_CONST) Sd_ServerMap[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InvalidHnd  ServerIdx */
-  { /*     0 */      FALSE,        1u },
+  { /*     0 */      FALSE,        2u },
   { /*     1 */      FALSE,        0u },
-  { /*     2 */      FALSE,        2u }
+  { /*     2 */      FALSE,        1u }
 };
 #define SD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -722,9 +722,30 @@ VAR(Sd_ClientListUType, SD_VAR_NOINIT) Sd_ClientList;  /* PRQA S 0759, 1514, 153
   /*     1 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo/SdEventHandler_0xC3C0_FaultInfo] */
   /*     2 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState/SdEventHandler_0xC3C1_SenState] */
   /*     3 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState/SdEventHandler_0xC3C1_SenState] */
-  /*     4 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState/SdEventHandler_0xC3C1_EcuState] */
+  /*     4 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState/SdEventHandler_0xC3C2_EcuState] */
 
 #define SD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Sd_CommonInitialDelay
+**********************************************************************************************************************/
+/** 
+  \var    Sd_CommonInitialDelay
+  \brief  Common Initial Offer/Find delay
+*/ 
+#define SD_START_SEC_VAR_NOINIT_32BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Sd_CommonInitialDelayType, SD_VAR_NOINIT) Sd_CommonInitialDelay[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState] */
+  /*     1 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus] */
+
+#define SD_STOP_SEC_VAR_NOINIT_32BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -812,7 +833,7 @@ VAR(Sd_EventHandlerDynType, SD_VAR_NOINIT) Sd_EventHandlerDyn[3];  /* PRQA S 151
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo/SdEventHandler_0xC3C0_FaultInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo] */
   /*     1 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState/SdEventHandler_0xC3C1_SenState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState] */
-  /*     2 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState/SdEventHandler_0xC3C1_EcuState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState] */
+  /*     2 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState/SdEventHandler_0xC3C2_EcuState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState] */
 
 #define SD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -843,7 +864,7 @@ VAR(Sd_EventHandlerDynType, SD_VAR_NOINIT) Sd_EventHandlerDyn[3];  /* PRQA S 151
 /*lint -restore */
 VAR(Sd_InstanceDynType, SD_VAR_NOINIT) Sd_InstanceDyn[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus] */
+  /*     0 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CB_VechicleSpeed, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdCLientService_0xC3CD_VechicleInfo, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdClientService_0xC3CC_VechicleStatus] */
 
 #define SD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1083,8 +1104,8 @@ VAR(Sd_SendEntryUType, SD_VAR_NOINIT) Sd_SendEntry;  /* PRQA S 0759, 1514, 1533 
 VAR(Sd_ServerDynType, SD_VAR_NOINIT) Sd_ServerDyn[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
-  /*     1 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843] */
-  /*     2 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  /*     1 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_UDP_fixed_10_23_0_33_40000] */
+  /*     2 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23, /ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState, /ActiveEcuC/SoAd/SoAdConfig/SCG_SD_TCP_TX_fixed_10_23_0_33_47843] */
 
 #define SD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1112,7 +1133,7 @@ VAR(Sd_SoConActivationMapUType, SD_VAR_NOINIT) Sd_SoConActivationMap;  /* PRQA S
   /*     1 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C0_FaultInfo/SdEventHandler_0xC3C0_FaultInfo] */
   /*     2 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState/SdEventHandler_0xC3C1_SenState] */
   /*     3 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_SenState/SdEventHandler_0xC3C1_SenState] */
-  /*     4 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C1_EcuState/SdEventHandler_0xC3C1_EcuState] */
+  /*     4 */  /* [/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState/SdEventHandler_0xC3C2_EcuState] */
 
 #define SD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1294,7 +1315,7 @@ CONST(Sd_PCConfigsType, SD_CONST) Sd_PCConfig = {  /* PRQA S 1514, 1533 */  /* M
     , Sd_ClientList.raw                         /**< the pointer to Sd_ClientList */
     , Sd_ClientMap                              /**< the pointer to Sd_ClientMap */
     , Sd_ClientTimer                            /**< the pointer to Sd_ClientTimer */
-    , NULL_PTR                                  /**< the pointer to Sd_CommonInitialDelay */
+    , Sd_CommonInitialDelay                     /**< the pointer to Sd_CommonInitialDelay */
     , Sd_ConsumedEventgroup                     /**< the pointer to Sd_ConsumedEventgroup */
     , Sd_ConsumedEventgroupDyn                  /**< the pointer to Sd_ConsumedEventgroupDyn */
     , Sd_ConsumedEventgroupMap                  /**< the pointer to Sd_ConsumedEventgroupMap */
@@ -1342,7 +1363,7 @@ CONST(Sd_PCConfigsType, SD_CONST) Sd_PCConfig = {  /* PRQA S 1514, 1533 */  /* M
     , 5u                                        /**< the number of elements in Sd_ClientList */
     , 3u                                        /**< the number of elements in Sd_ClientMap */
     , 2u                                        /**< the number of elements in Sd_ClientTimer */
-    , 0u                                        /**< the number of elements in Sd_CommonInitialDelay */
+    , 2u                                        /**< the number of elements in Sd_CommonInitialDelay */
     , 3u                                        /**< the number of elements in Sd_ConsumedEventgroup */
     , 3u                                        /**< the number of elements in Sd_ConsumedEventgroupMap */
     , 20u                                       /**< the number of elements in Sd_EndpointStorage */

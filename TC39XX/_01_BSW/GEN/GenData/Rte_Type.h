@@ -112,6 +112,24 @@ typedef uint8 BswM_ESH_Mode;
 # define Rte_TypeDef_BswM_ESH_RunRequest
 typedef uint8 BswM_ESH_RunRequest;
 
+# define Rte_TypeDef_BswM_SDC_SdClientServiceRequest
+typedef uint8 BswM_SDC_SdClientServiceRequest;
+
+# define Rte_TypeDef_BswM_SDC_SdClientServiceState
+typedef uint8 BswM_SDC_SdClientServiceState;
+
+# define Rte_TypeDef_BswM_SDC_SdConsumedEventGroupRequest
+typedef uint8 BswM_SDC_SdConsumedEventGroupRequest;
+
+# define Rte_TypeDef_BswM_SDC_SdConsumedEventGroupState
+typedef uint8 BswM_SDC_SdConsumedEventGroupState;
+
+# define Rte_TypeDef_BswM_SDC_SdEventHandlerState
+typedef uint8 BswM_SDC_SdEventHandlerState;
+
+# define Rte_TypeDef_BswM_SDC_SdServerServiceRequest
+typedef uint8 BswM_SDC_SdServerServiceRequest;
+
 # define Rte_TypeDef_ComM_ModeType
 typedef uint8 ComM_ModeType;
 

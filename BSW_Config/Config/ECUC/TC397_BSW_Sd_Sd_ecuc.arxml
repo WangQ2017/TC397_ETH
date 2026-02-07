@@ -87,7 +87,7 @@
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceAutoRequire</DEFINITION-REF>
-                          <VALUE>false</VALUE>
+                          <VALUE>true</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceHandleId</DEFINITION-REF>
@@ -99,7 +99,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceInstanceId</DEFINITION-REF>
-                          <VALUE>1</VALUE>
+                          <VALUE>23</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceMajorVersion</DEFINITION-REF>
@@ -127,7 +127,7 @@
                           <PARAMETER-VALUES>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdConsumedEventGroup/SdConsumedEventGroupAutoRequire</DEFINITION-REF>
-                              <VALUE>false</VALUE>
+                              <VALUE>true</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdConsumedEventGroup/SdConsumedEventGroupHandleId</DEFINITION-REF>
@@ -209,7 +209,7 @@
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceAutoRequire</DEFINITION-REF>
-                          <VALUE>false</VALUE>
+                          <VALUE>true</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceHandleId</DEFINITION-REF>
@@ -221,7 +221,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceInstanceId</DEFINITION-REF>
-                          <VALUE>1</VALUE>
+                          <VALUE>23</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceMajorVersion</DEFINITION-REF>
@@ -249,7 +249,7 @@
                           <PARAMETER-VALUES>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdConsumedEventGroup/SdConsumedEventGroupAutoRequire</DEFINITION-REF>
-                              <VALUE>false</VALUE>
+                              <VALUE>true</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdConsumedEventGroup/SdConsumedEventGroupHandleId</DEFINITION-REF>
@@ -287,7 +287,7 @@
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService/SdServerServiceAutoAvailable</DEFINITION-REF>
-                          <VALUE>false</VALUE>
+                          <VALUE>true</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService/SdServerServiceHandleId</DEFINITION-REF>
@@ -388,7 +388,7 @@
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService/SdServerServiceAutoAvailable</DEFINITION-REF>
-                          <VALUE>false</VALUE>
+                          <VALUE>true</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService/SdServerServiceHandleId</DEFINITION-REF>
@@ -535,12 +535,12 @@
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
                     <ECUC-CONTAINER-VALUE UUID="a614f40a-8e3d-48f5-b97b-69354dc0f566">
-                      <SHORT-NAME>SdServerService_0xC3C1_EcuState</SHORT-NAME>
+                      <SHORT-NAME>SdServerService_0xC3C2_EcuState</SHORT-NAME>
                       <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService</DEFINITION-REF>
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService/SdServerServiceAutoAvailable</DEFINITION-REF>
-                          <VALUE>false</VALUE>
+                          <VALUE>true</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService/SdServerServiceHandleId</DEFINITION-REF>
@@ -548,11 +548,11 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService/SdServerServiceId</DEFINITION-REF>
-                          <VALUE>50113</VALUE>
+                          <VALUE>50114</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService/SdServerServiceInstanceId</DEFINITION-REF>
-                          <VALUE>1</VALUE>
+                          <VALUE>23</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService/SdServerServiceMajorVersion</DEFINITION-REF>
@@ -575,7 +575,7 @@
                       </REFERENCE-VALUES>
                       <SUB-CONTAINERS>
                         <ECUC-CONTAINER-VALUE UUID="571581ea-d1ff-4e74-b5b7-f2ab12a05206">
-                          <SHORT-NAME>SdEventHandler_0xC3C1_EcuState</SHORT-NAME>
+                          <SHORT-NAME>SdEventHandler_0xC3C2_EcuState</SHORT-NAME>
                           <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdServerService/SdEventHandler</DEFINITION-REF>
                           <PARAMETER-VALUES>
                             <ECUC-NUMERICAL-PARAM-VALUE>
@@ -622,7 +622,7 @@
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceAutoRequire</DEFINITION-REF>
-                          <VALUE>false</VALUE>
+                          <VALUE>true</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceHandleId</DEFINITION-REF>
@@ -634,7 +634,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceInstanceId</DEFINITION-REF>
-                          <VALUE>1</VALUE>
+                          <VALUE>23</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdClientServiceMajorVersion</DEFINITION-REF>
@@ -662,7 +662,7 @@
                           <PARAMETER-VALUES>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdConsumedEventGroup/SdConsumedEventGroupAutoRequire</DEFINITION-REF>
-                              <VALUE>false</VALUE>
+                              <VALUE>true</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Sd/SdConfig/SdInstance/SdClientService/SdConsumedEventGroup/SdConsumedEventGroupHandleId</DEFINITION-REF>

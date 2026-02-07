@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Sd_Cfg.h
- *   Generation Time: 2026-01-24 23:52:00
+ *   Generation Time: 2026-02-07 22:15:18
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -102,8 +102,8 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define SdConf_SdServerService_SdServerService_0xC3C0_FaultInfo       1u
-#define SdConf_SdServerService_SdServerService_0xC3C1_EcuState        0u
 #define SdConf_SdServerService_SdServerService_0xC3C1_SenState        2u
+#define SdConf_SdServerService_SdServerService_0xC3C2_EcuState        0u
 /**\} */
 
 
@@ -132,8 +132,8 @@
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define SdConf_SdEventHandler_SdEventHandler_0xC3C0_FaultInfo         0u
-#define SdConf_SdEventHandler_SdEventHandler_0xC3C1_EcuState          1u
 #define SdConf_SdEventHandler_SdEventHandler_0xC3C1_SenState          2u
+#define SdConf_SdEventHandler_SdEventHandler_0xC3C2_EcuState          1u
 /**\} */
 
 
