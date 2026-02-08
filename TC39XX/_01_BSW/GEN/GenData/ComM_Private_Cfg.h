@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Private_Cfg.h
- *   Generation Time: 2026-01-25 23:19:09
+ *   Generation Time: 2026-02-08 21:31:38
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -61,6 +61,7 @@
 #define ComM_GetBusPncComModeReqOfPCConfig()                          ComM_BusPncComModeReq  /**< the pointer to ComM_BusPncComModeReq */
 #define ComM_GetChannelOfPCConfig()                                   ComM_Channel  /**< the pointer to ComM_Channel */
 #define ComM_GetChannelPbOfPCConfig()                                 ComM_ChannelPb  /**< the pointer to ComM_ChannelPb */
+#define ComM_GetDcmRequestActiveOfPCConfig()                          ComM_DcmRequestActive.raw  /**< the pointer to ComM_DcmRequestActive */
 #define ComM_GetMinFullComModeTimerOfPCConfig()                       ComM_MinFullComModeTimer.raw  /**< the pointer to ComM_MinFullComModeTimer */
 #define ComM_GetNmLightTimerOfPCConfig()                              ComM_NmLightTimer.raw  /**< the pointer to ComM_NmLightTimer */
 #define ComM_GetPncChannelMappingOfPCConfig()                         ComM_PncChannelMapping  /**< the pointer to ComM_PncChannelMapping */
@@ -101,6 +102,7 @@
 */ 
 #define ComM_GetSizeOfActivePncComModeOfPCConfig()                    ComM_GetSizeOfPncOfPCConfig()  /**< the number of accomplishable value elements in ComM_ActivePncComMode */
 #define ComM_GetSizeOfBusPncComModeReqOfPCConfig()                    ComM_GetSizeOfPncOfPCConfig()  /**< the number of accomplishable value elements in ComM_BusPncComModeReq */
+#define ComM_GetSizeOfDcmRequestActiveOfPCConfig()                    ComM_GetSizeOfChannelOfPCConfig()  /**< the number of accomplishable value elements in ComM_DcmRequestActive */
 #define ComM_GetSizeOfMinFullComModeTimerOfPCConfig()                 ComM_GetSizeOfChannelOfPCConfig()  /**< the number of accomplishable value elements in ComM_MinFullComModeTimer */
 #define ComM_GetSizeOfNmLightTimerOfPCConfig()                        ComM_GetSizeOfChannelOfPCConfig()  /**< the number of accomplishable value elements in ComM_NmLightTimer */
 #define ComM_GetSizeOfPncPSleepTimerOfPCConfig()                      ComM_GetSizeOfPncOfPCConfig()  /**< the number of accomplishable value elements in ComM_PncPSleepTimer */
@@ -126,6 +128,7 @@
 #define ComM_GetPncPbIndStartIdxOfChannelPb(Index)                    (ComM_GetChannelPbOfPCConfig()[(Index)].PncPbIndStartIdxOfChannelPb)
 #define ComM_GetUserReqFullComEndIdxOfChannelPb(Index)                (ComM_GetChannelPbOfPCConfig()[(Index)].UserReqFullComEndIdxOfChannelPb)
 #define ComM_GetUserReqFullComStartIdxOfChannelPb(Index)              (ComM_GetChannelPbOfPCConfig()[(Index)].UserReqFullComStartIdxOfChannelPb)
+#define ComM_IsDcmRequestActive(Index)                                ((ComM_GetDcmRequestActiveOfPCConfig()[(Index)]) != FALSE)
 #define ComM_GetMinFullComModeTimer(Index)                            (ComM_GetMinFullComModeTimerOfPCConfig()[(Index)])
 #define ComM_GetNmLightTimer(Index)                                   (ComM_GetNmLightTimerOfPCConfig()[(Index)])
 #define ComM_GetPncPSleepTimer(Index)                                 (ComM_GetPncPSleepTimerOfPCConfig()[(Index)])
@@ -181,6 +184,7 @@
 #define ComM_GetSizeOfBusPncComModeReq()                              ComM_GetSizeOfBusPncComModeReqOfPCConfig()
 #define ComM_GetSizeOfChannel()                                       ComM_GetSizeOfChannelOfPCConfig()
 #define ComM_GetSizeOfChannelPb()                                     ComM_GetSizeOfChannelPbOfPCConfig()
+#define ComM_GetSizeOfDcmRequestActive()                              ComM_GetSizeOfDcmRequestActiveOfPCConfig()
 #define ComM_GetSizeOfMinFullComModeTimer()                           ComM_GetSizeOfMinFullComModeTimerOfPCConfig()
 #define ComM_GetSizeOfNmLightTimer()                                  ComM_GetSizeOfNmLightTimerOfPCConfig()
 #define ComM_GetSizeOfPnc()                                           ComM_GetSizeOfPncOfPCConfig()
@@ -213,6 +217,7 @@
 */ 
 #define ComM_SetActivePncComMode(Index, Value)                        ComM_GetActivePncComModeOfPCConfig()[(Index)] = (Value)
 #define ComM_SetBusPncComModeReq(Index, Value)                        ComM_GetBusPncComModeReqOfPCConfig()[(Index)] = (Value)
+#define ComM_SetDcmRequestActive(Index, Value)                        ComM_GetDcmRequestActiveOfPCConfig()[(Index)] = (Value)
 #define ComM_SetMinFullComModeTimer(Index, Value)                     ComM_GetMinFullComModeTimerOfPCConfig()[(Index)] = (Value)
 #define ComM_SetNmLightTimer(Index, Value)                            ComM_GetNmLightTimerOfPCConfig()[(Index)] = (Value)
 #define ComM_SetPncPSleepTimer(Index, Value)                          ComM_GetPncPSleepTimerOfPCConfig()[(Index)] = (Value)
@@ -258,6 +263,7 @@
 #define ComM_HasUserReqFullComEndIdxOfChannelPb()                     (TRUE != FALSE)
 #define ComM_HasUserReqFullComStartIdxOfChannelPb()                   (TRUE != FALSE)
 #define ComM_HasUserReqFullComUsedOfChannelPb()                       (TRUE != FALSE)
+#define ComM_HasDcmRequestActive()                                    (TRUE != FALSE)
 #define ComM_HasMinFullComModeTimer()                                 (TRUE != FALSE)
 #define ComM_HasNmLightTimer()                                        (TRUE != FALSE)
 #define ComM_HasPnc()                                                 (TRUE != FALSE)
@@ -291,6 +297,7 @@
 #define ComM_HasSizeOfBusPncComModeReq()                              (TRUE != FALSE)
 #define ComM_HasSizeOfChannel()                                       (TRUE != FALSE)
 #define ComM_HasSizeOfChannelPb()                                     (TRUE != FALSE)
+#define ComM_HasSizeOfDcmRequestActive()                              (TRUE != FALSE)
 #define ComM_HasSizeOfMinFullComModeTimer()                           (TRUE != FALSE)
 #define ComM_HasSizeOfNmLightTimer()                                  (TRUE != FALSE)
 #define ComM_HasSizeOfPnc()                                           (TRUE != FALSE)
@@ -331,6 +338,7 @@
 #define ComM_HasBusPncComModeReqOfPCConfig()                          (TRUE != FALSE)
 #define ComM_HasChannelOfPCConfig()                                   (TRUE != FALSE)
 #define ComM_HasChannelPbOfPCConfig()                                 (TRUE != FALSE)
+#define ComM_HasDcmRequestActiveOfPCConfig()                          (TRUE != FALSE)
 #define ComM_HasMinFullComModeTimerOfPCConfig()                       (TRUE != FALSE)
 #define ComM_HasNmLightTimerOfPCConfig()                              (TRUE != FALSE)
 #define ComM_HasPncChannelMappingOfPCConfig()                         (TRUE != FALSE)
@@ -345,6 +353,7 @@
 #define ComM_HasSizeOfBusPncComModeReqOfPCConfig()                    (TRUE != FALSE)
 #define ComM_HasSizeOfChannelOfPCConfig()                             (TRUE != FALSE)
 #define ComM_HasSizeOfChannelPbOfPCConfig()                           (TRUE != FALSE)
+#define ComM_HasSizeOfDcmRequestActiveOfPCConfig()                    (TRUE != FALSE)
 #define ComM_HasSizeOfMinFullComModeTimerOfPCConfig()                 (TRUE != FALSE)
 #define ComM_HasSizeOfNmLightTimerOfPCConfig()                        (TRUE != FALSE)
 #define ComM_HasSizeOfPncChannelMappingOfPCConfig()                   (TRUE != FALSE)
@@ -599,6 +608,23 @@ extern VAR(ComM_PncModeType, COMM_VAR_NOINIT) ComM_ActivePncComMode[1];
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(ComM_PncModeType, COMM_VAR_NOINIT) ComM_BusPncComModeReq[1];
+#define COMM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_DcmRequestActive
+**********************************************************************************************************************/
+/** 
+  \var    ComM_DcmRequestActive
+  \brief  Status of Dcm active diagnostic request, TRUE if requested, FALSE otherwise
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_DcmRequestActiveUType, COMM_VAR_NOINIT) ComM_DcmRequestActive;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

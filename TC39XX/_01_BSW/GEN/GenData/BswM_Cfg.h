@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2026-02-02 11:06:38
+ *   Generation Time: 2026-02-08 21:31:38
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -41,6 +41,7 @@
 #include "BswM_ComM.h"
 #include "BswM_EthIf.h"
 #include "BswM_EthSM.h"
+#include "BswM_Dcm.h"
 #include "BswM_EcuM.h"
 #include "BswM_Sd.h"
 #include "BswM_Nm.h"
@@ -123,7 +124,7 @@
 #define BSWM_ENABLE_ETHIF                    STD_ON
 #define BSWM_ENABLE_ETHSM                    STD_ON
 #define BSWM_ENABLE_LINTP                    STD_OFF
-#define BSWM_ENABLE_DCM                      STD_OFF
+#define BSWM_ENABLE_DCM                      STD_ON
 #define BSWM_ENABLE_NVM                      STD_OFF
 #define BSWM_ENABLE_ECUM                     STD_ON
 #define BSWM_ENABLE_COMM                     STD_ON
@@ -179,7 +180,6 @@
 #define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus (24) 
 #define BswMConf_BswMRule_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo (25) 
 #define BswMConf_BswMRule_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState (26) 
-#define BswMConf_BswMRule_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState (27) 
 
 
 /* -----------------------------------------------------------------------------
@@ -652,7 +652,7 @@
 #define BSWM_ISDEF_PARTITIONSNVOFPARTITIONIDENTIFIERS                                               STD_OFF
 #define BSWM_ISDEF_FCTPTROFRULES                                                                    STD_OFF
 #define BSWM_ISDEF_IDOFRULES                                                                        STD_OFF
-#define BSWM_ISDEF_INITOFRULES                                                                      STD_ON
+#define BSWM_ISDEF_INITOFRULES                                                                      STD_OFF
 #define BSWM_ISDEF_RULESTATESIDXOFRULES                                                             STD_OFF
 #define BSWM_ISDEF_RULESIND                                                                         STD_OFF
 #define BSWM_ISDEF_EXTERNALIDOFSDCLIENTSERVICEMAPPING                                               STD_OFF
@@ -716,7 +716,7 @@
 #define BSWM_EQ2_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                 
 #define BSWM_EQ2_FCTPTROFRULES                                                                      
 #define BSWM_EQ2_IDOFRULES                                                                          
-#define BSWM_EQ2_INITOFRULES                                                                        BSWM_FALSE
+#define BSWM_EQ2_INITOFRULES                                                                        
 #define BSWM_EQ2_RULESTATESIDXOFRULES                                                               
 #define BSWM_EQ2_RULESIND                                                                           
 #define BSWM_EQ2_EXTERNALIDOFSDCLIENTSERVICEMAPPING                                                 
@@ -1128,6 +1128,7 @@ typedef struct sBswM_PartitionIdentifiersType
 typedef struct sBswM_RulesType
 {
   BswM_IdOfRulesType IdOfRules;  /**< External id of rule. */
+  BswM_InitOfRulesType InitOfRules;  /**< Initialization value of rule state (TRUE, FALSE, UNDEFINED or DEACTIVATED). */
   BswM_RuleStatesIdxOfRulesType RuleStatesIdxOfRules;  /**< the index of the 1:1 relation pointing to BswM_RuleStates */
   BswM_RuleTableFctPtrType FctPtrOfRules;  /**< Pointer to the rule function which does the arbitration. */
 } BswM_RulesType;
@@ -1196,8 +1197,6 @@ typedef struct BswM_ActionListQueueStructSTag
   BswM_ActionListQueueType AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C0_FaultInfo;
   BswM_ActionListQueueType AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C1_SenState;
   BswM_ActionListQueueType AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C1_SenState;
-  BswM_ActionListQueueType AL_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState;
-  BswM_ActionListQueueType AL_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState;
   BswM_ActionListQueueType AL_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN;
   BswM_ActionListQueueType AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE;
   BswM_ActionListQueueType AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus;
@@ -1236,7 +1235,6 @@ typedef struct BswM_RuleStatesStructSTag
   BswM_RuleStatesType R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus;
   BswM_RuleStatesType R_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo;
   BswM_RuleStatesType R_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState;
-  BswM_RuleStatesType R_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState;
   BswM_RuleStatesType R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus;
   BswM_RuleStatesType R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus;
   BswM_RuleStatesType R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo;
@@ -1269,14 +1267,14 @@ typedef struct BswM_TimerValueStructSTag
 /**   \brief  type to access BswM_ActionListQueue in an index and symbol based style. */
 typedef union BswM_ActionListQueueUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_ActionListQueueType raw[48];
+  BswM_ActionListQueueType raw[46];
   BswM_ActionListQueueStructSType str;
 } BswM_ActionListQueueUType;
 
 /**   \brief  type to access BswM_RuleStates in an index and symbol based style. */
 typedef union BswM_RuleStatesUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_RuleStatesType raw[28];
+  BswM_RuleStatesType raw[27];
   BswM_RuleStatesStructSType str;
 } BswM_RuleStatesUType;
 
@@ -1467,7 +1465,6 @@ extern VAR(Rte_ModeType_SDC_SdConsumedEventGroupState, BSWM_VAR_NOINIT) BswM_Swi
 extern VAR(Rte_ModeType_SDC_SdClientServiceState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState;
 extern VAR(Rte_ModeType_SDC_SdConsumedEventGroupState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState;
 extern VAR(Rte_ModeType_SDC_SdEventHandlerState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState;
-extern VAR(Rte_ModeType_SDC_SdEventHandlerState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState;
 extern VAR(Rte_ModeType_SDC_SdClientServiceState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState;
 extern VAR(Rte_ModeType_SDC_SdConsumedEventGroupState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState;
 extern VAR(BswM_ESH_RunRequest, BSWM_VAR_NOINIT) Request_ESH_RunRequest_0_requestedMode;

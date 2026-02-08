@@ -1038,21 +1038,6 @@
                       </ADMIN-DATA>
                       <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_SDC_SdEventHandlerState</PROVIDED-INTERFACE-TREF>
                     </P-PORT-PROTOTYPE>
-                    <P-PORT-PROTOTYPE UUID="e534d311-1fc6-4e34-86d9-7c05a6558183">
-                      <SHORT-NAME>Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:DerivedFromReferrables">
-                            <SDG GID="DV:DerivedFromReferrablesVariant">
-                              <SD GID="DV:InvariantValuesView"/>
-                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SDX-REF>
-                              <SD GID="DV:DerivedFromReferrablesUUID">71923264-a877-4e46-9766-659b532a346c</SD>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_SDC_SdEventHandlerState</PROVIDED-INTERFACE-TREF>
-                    </P-PORT-PROTOTYPE>
                     <P-PORT-PROTOTYPE UUID="a4f1873d-ad79-4d35-a6bd-7bb209852d1b">
                       <SHORT-NAME>Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus</SHORT-NAME>
                       <ADMIN-DATA>
@@ -1103,7 +1088,7 @@
                           <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
                           <INIT-VALUE>
                             <TEXT-VALUE-SPECIFICATION>
-                              <VALUE>SDC_CEG_RELEASED</VALUE>
+                              <VALUE>SDC_CEG_REQUESTED</VALUE>
                             </TEXT-VALUE-SPECIFICATION>
                           </INIT-VALUE>
                         </NONQUEUED-RECEIVER-COM-SPEC>
@@ -1130,7 +1115,7 @@
                           <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
                           <INIT-VALUE>
                             <TEXT-VALUE-SPECIFICATION>
-                              <VALUE>SDC_CLIENT_RELEASED</VALUE>
+                              <VALUE>SDC_CLIENT_REQUESTED</VALUE>
                             </TEXT-VALUE-SPECIFICATION>
                           </INIT-VALUE>
                         </NONQUEUED-RECEIVER-COM-SPEC>
@@ -1157,7 +1142,7 @@
                           <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
                           <INIT-VALUE>
                             <TEXT-VALUE-SPECIFICATION>
-                              <VALUE>SDC_CLIENT_RELEASED</VALUE>
+                              <VALUE>SDC_CLIENT_REQUESTED</VALUE>
                             </TEXT-VALUE-SPECIFICATION>
                           </INIT-VALUE>
                         </NONQUEUED-RECEIVER-COM-SPEC>
@@ -1184,7 +1169,7 @@
                           <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
                           <INIT-VALUE>
                             <TEXT-VALUE-SPECIFICATION>
-                              <VALUE>SDC_SERVER_DOWN</VALUE>
+                              <VALUE>SDC_SERVER_AVAILABE</VALUE>
                             </TEXT-VALUE-SPECIFICATION>
                           </INIT-VALUE>
                         </NONQUEUED-RECEIVER-COM-SPEC>
@@ -1211,7 +1196,7 @@
                           <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
                           <INIT-VALUE>
                             <TEXT-VALUE-SPECIFICATION>
-                              <VALUE>SDC_SERVER_DOWN</VALUE>
+                              <VALUE>SDC_SERVER_AVAILABE</VALUE>
                             </TEXT-VALUE-SPECIFICATION>
                           </INIT-VALUE>
                         </NONQUEUED-RECEIVER-COM-SPEC>
@@ -1238,7 +1223,7 @@
                           <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
                           <INIT-VALUE>
                             <TEXT-VALUE-SPECIFICATION>
-                              <VALUE>SDC_CEG_RELEASED</VALUE>
+                              <VALUE>SDC_CEG_REQUESTED</VALUE>
                             </TEXT-VALUE-SPECIFICATION>
                           </INIT-VALUE>
                         </NONQUEUED-RECEIVER-COM-SPEC>
@@ -1265,7 +1250,7 @@
                           <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
                           <INIT-VALUE>
                             <TEXT-VALUE-SPECIFICATION>
-                              <VALUE>SDC_SERVER_DOWN</VALUE>
+                              <VALUE>SDC_SERVER_AVAILABE</VALUE>
                             </TEXT-VALUE-SPECIFICATION>
                           </INIT-VALUE>
                         </NONQUEUED-RECEIVER-COM-SPEC>
@@ -1292,7 +1277,7 @@
                           <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
                           <INIT-VALUE>
                             <TEXT-VALUE-SPECIFICATION>
-                              <VALUE>SDC_CEG_RELEASED</VALUE>
+                              <VALUE>SDC_CEG_REQUESTED</VALUE>
                             </TEXT-VALUE-SPECIFICATION>
                           </INIT-VALUE>
                         </NONQUEUED-RECEIVER-COM-SPEC>
@@ -1319,7 +1304,7 @@
                           <HANDLE-OUT-OF-RANGE-STATUS>SILENT</HANDLE-OUT-OF-RANGE-STATUS>
                           <INIT-VALUE>
                             <TEXT-VALUE-SPECIFICATION>
-                              <VALUE>SDC_CLIENT_RELEASED</VALUE>
+                              <VALUE>SDC_CLIENT_REQUESTED</VALUE>
                             </TEXT-VALUE-SPECIFICATION>
                           </INIT-VALUE>
                         </NONQUEUED-RECEIVER-COM-SPEC>
@@ -1390,11 +1375,6 @@
                           <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
                           <INDIRECT-API>false</INDIRECT-API>
                           <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo</PORT-REF>
-                        </PORT-API-OPTION>
-                        <PORT-API-OPTION>
-                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
-                          <INDIRECT-API>false</INDIRECT-API>
-                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</PORT-REF>
                         </PORT-API-OPTION>
                         <PORT-API-OPTION>
                           <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
@@ -1658,13 +1638,6 @@
                               <SHORT-NAME>ModeSwitchPointBswM_MainFunction_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_92498af4</SHORT-NAME>
                               <MODE-GROUP-IREF>
                                 <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo</CONTEXT-P-PORT-REF>
-                                <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_SDC_SdEventHandlerState/BswM_MDGP_SDC_SdEventHandlerState</TARGET-MODE-GROUP-REF>
-                              </MODE-GROUP-IREF>
-                            </MODE-SWITCH-POINT>
-                            <MODE-SWITCH-POINT UUID="0de19ace-56fa-457d-8c8b-2ee6cad8872f">
-                              <SHORT-NAME>ModeSwitchPointBswM_MainFunction_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_Bs_3ee8fdcf</SHORT-NAME>
-                              <MODE-GROUP-IREF>
-                                <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/BswM_swc/ComponentTypes/BswM/Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</CONTEXT-P-PORT-REF>
                                 <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_SDC_SdEventHandlerState/BswM_MDGP_SDC_SdEventHandlerState</TARGET-MODE-GROUP-REF>
                               </MODE-GROUP-IREF>
                             </MODE-SWITCH-POINT>

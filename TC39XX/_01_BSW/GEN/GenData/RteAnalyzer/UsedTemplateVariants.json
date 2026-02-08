@@ -111,9 +111,6 @@
          },
          "Rte_Switch_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState" : {
             "0358927cd464cfc8fae36eb470a3d433" : {}
-         },
-         "Rte_Switch_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState" : {
-            "0358927cd464cfc8fae36eb470a3d433" : {}
          }
       },
       "Components/Rte_Cdd_Nm.h" : {
@@ -128,6 +125,11 @@
          },
          "Rte_Write_Cdd_Nm_BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest_requestedMode" : {
             "1e5deb2028b2518cd9545c187afb2f6d" : {}
+         }
+      },
+      "Components/Rte_Dcm.h" : {
+         "Rte_Switch_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl" : {
+            "0358927cd464cfc8fae36eb470a3d433" : {}
          }
       },
       "Rte.c" : {
@@ -616,7 +618,7 @@
             "9e4e1b2789008e1ef255809033315f7c" : {},
             "ee70797868c7e79d637957a01d59154c" : {}
          },
-         "Rte_Switch_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState" : {
+         "Rte_Switch_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl" : {
             "179aeabd6e617c673073ccec54bf018c" : {},
             "23cde970de0dbf4a6e96252aa3d0818f" : {},
             "8ffb905c8707df82f047182377a2e483" : {},
@@ -1669,11 +1671,27 @@
             "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
          }
       },
+      "SchM_Dcm.h" : {
+         "SchM_Enter_Dcm_DCM_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_Dcm_DCM_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
       "SchM_Det.h" : {
          "SchM_Enter_Det_DET_EXCLUSIVE_AREA_0" : {
             "d04949d119d50064b356ac78c5423a4b" : {}
          },
          "SchM_Exit_Det_DET_EXCLUSIVE_AREA_0" : {
+            "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
+         }
+      },
+      "SchM_DoIP.h" : {
+         "SchM_Enter_DoIP_DOIP_EXCLUSIVE_AREA_0" : {
+            "d04949d119d50064b356ac78c5423a4b" : {}
+         },
+         "SchM_Exit_DoIP_DOIP_EXCLUSIVE_AREA_0" : {
             "70f7afa710b9bdb6e8591ae22e0fec5a" : {}
          }
       },

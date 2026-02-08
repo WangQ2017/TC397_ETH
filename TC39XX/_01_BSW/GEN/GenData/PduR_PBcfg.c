@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_PBcfg.c
- *   Generation Time: 2026-01-24 23:52:00
+ *   Generation Time: 2026-02-08 21:29:40
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -47,6 +47,8 @@
 #include "UdpNm.h"
 #include "SoAd.h"
 #include "LdCom_Cbk.h"
+#include "Dcm_Cbk.h"
+#include "DoIP.h"
 
 /**********************************************************************************************************************
  * LOCAL CONSTANT MACROS

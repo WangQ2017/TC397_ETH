@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: SoAd_PBcfg.c
- *   Generation Time: 2026-01-24 23:56:19
+ *   Generation Time: 2026-02-08 21:29:41
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -44,6 +44,7 @@
 #include "UdpNm_Cbk.h" 
 #include "Sd_Cbk.h" 
 #include "PduR_SoAd.h" 
+#include "DoIP_Cbk.h" 
 
 
 /**********************************************************************************************************************

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2026-01-25 23:19:09
+ *   Generation Time: 2026-02-08 21:31:38
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -122,7 +122,7 @@
 
 #define COMM_FULL_COMM_REQUEST_NOTIF                    STD_OFF
 #define COMM_MAX_NUMBER_OF_USERS                        4u
-#define COMM_DCM_INDICATION                             STD_OFF
+#define COMM_DCM_INDICATION                             STD_ON
 #define COMM_USERMODENOTIFUNC_PNC_USER_ONLY             STD_ON
 
 #define COMM_SYNCHRONOUS_WAKE_UP                        STD_ON
@@ -197,7 +197,7 @@
 #define COMM_USERREQFULLCOMENDIDXOFCHANNELPB                          STD_ON
 #define COMM_USERREQFULLCOMSTARTIDXOFCHANNELPB                        STD_ON
 #define COMM_USERREQFULLCOMUSEDOFCHANNELPB                            STD_ON
-#define COMM_DCMREQUESTACTIVE                                         STD_OFF  /**< Deactivateable: 'ComM_DcmRequestActive' Reason: 'Keep Awake Channel support or Dcm support is disabled' */
+#define COMM_DCMREQUESTACTIVE                                         STD_ON
 #define COMM_FINALMAGICNUMBER                                         STD_OFF  /**< Deactivateable: 'ComM_FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define COMM_FULLCOMREQUESTERS                                        STD_OFF  /**< Deactivateable: 'ComM_FullComRequesters' Reason: 'Deactivated because no channel had ComMFullCommRequestNoficiation enabled' */
 #define COMM_INITDATAHASHCODE                                         STD_OFF  /**< Deactivateable: 'ComM_InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
@@ -238,6 +238,7 @@
 #define COMM_SIZEOFBUSPNCCOMMODEREQ                                   STD_ON
 #define COMM_SIZEOFCHANNEL                                            STD_ON
 #define COMM_SIZEOFCHANNELPB                                          STD_ON
+#define COMM_SIZEOFDCMREQUESTACTIVE                                   STD_ON
 #define COMM_SIZEOFMINFULLCOMMODETIMER                                STD_ON
 #define COMM_SIZEOFNMLIGHTTIMER                                       STD_ON
 #define COMM_SIZEOFPNC                                                STD_ON
@@ -279,6 +280,7 @@
 #define COMM_BUSPNCCOMMODEREQOFPCCONFIG                               STD_ON
 #define COMM_CHANNELOFPCCONFIG                                        STD_ON
 #define COMM_CHANNELPBOFPCCONFIG                                      STD_ON
+#define COMM_DCMREQUESTACTIVEOFPCCONFIG                               STD_ON
 #define COMM_FINALMAGICNUMBEROFPCCONFIG                               STD_OFF  /**< Deactivateable: 'ComM_PCConfig.FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define COMM_INITDATAHASHCODEOFPCCONFIG                               STD_OFF  /**< Deactivateable: 'ComM_PCConfig.InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
 #define COMM_MINFULLCOMMODETIMEROFPCCONFIG                            STD_ON
@@ -295,6 +297,7 @@
 #define COMM_SIZEOFBUSPNCCOMMODEREQOFPCCONFIG                         STD_ON
 #define COMM_SIZEOFCHANNELOFPCCONFIG                                  STD_ON
 #define COMM_SIZEOFCHANNELPBOFPCCONFIG                                STD_ON
+#define COMM_SIZEOFDCMREQUESTACTIVEOFPCCONFIG                         STD_ON
 #define COMM_SIZEOFMINFULLCOMMODETIMEROFPCCONFIG                      STD_ON
 #define COMM_SIZEOFNMLIGHTTIMEROFPCCONFIG                             STD_ON
 #define COMM_SIZEOFPNCCHANNELMAPPINGOFPCCONFIG                        STD_ON
@@ -467,6 +470,7 @@
 #define COMM_ISDEF_BUSPNCCOMMODEREQOFPCCONFIG                         STD_ON
 #define COMM_ISDEF_CHANNELOFPCCONFIG                                  STD_ON
 #define COMM_ISDEF_CHANNELPBOFPCCONFIG                                STD_ON
+#define COMM_ISDEF_DCMREQUESTACTIVEOFPCCONFIG                         STD_ON
 #define COMM_ISDEF_MINFULLCOMMODETIMEROFPCCONFIG                      STD_ON
 #define COMM_ISDEF_NMLIGHTTIMEROFPCCONFIG                             STD_ON
 #define COMM_ISDEF_PNCCHANNELMAPPINGOFPCCONFIG                        STD_ON
@@ -548,6 +552,7 @@
 #define COMM_EQ2_BUSPNCCOMMODEREQOFPCCONFIG                           ComM_BusPncComModeReq
 #define COMM_EQ2_CHANNELOFPCCONFIG                                    ComM_Channel
 #define COMM_EQ2_CHANNELPBOFPCCONFIG                                  ComM_ChannelPb
+#define COMM_EQ2_DCMREQUESTACTIVEOFPCCONFIG                           ComM_DcmRequestActive.raw
 #define COMM_EQ2_MINFULLCOMMODETIMEROFPCCONFIG                        ComM_MinFullComModeTimer.raw
 #define COMM_EQ2_NMLIGHTTIMEROFPCCONFIG                               ComM_NmLightTimer.raw
 #define COMM_EQ2_PNCCHANNELMAPPINGOFPCCONFIG                          ComM_PncChannelMapping
@@ -675,6 +680,9 @@ typedef ComM_PncIterType ComM_ActivePncComModeIterType;
 /**   \brief  type used to iterate ComM_BusPncComModeReq */
 typedef ComM_PncIterType ComM_BusPncComModeReqIterType;
 
+/**   \brief  type used to iterate ComM_DcmRequestActive */
+typedef ComM_ChannelIterType ComM_DcmRequestActiveIterType;
+
 /**   \brief  type used to iterate ComM_MinFullComModeTimer */
 typedef ComM_ChannelIterType ComM_MinFullComModeTimerIterType;
 
@@ -737,6 +745,9 @@ typedef uint8 ComM_UserReqFullComStartIdxOfChannelPbType;
 
 /**   \brief  value based type definition for ComM_UserReqFullComUsedOfChannelPb */
 typedef boolean ComM_UserReqFullComUsedOfChannelPbType;
+
+/**   \brief  value based type definition for ComM_DcmRequestActive */
+typedef boolean ComM_DcmRequestActiveType;
 
 /**   \brief  value based type definition for ComM_MinFullComModeTimer */
 typedef uint16 ComM_MinFullComModeTimerType;
@@ -827,6 +838,9 @@ typedef uint8 ComM_SizeOfChannelType;
 
 /**   \brief  value based type definition for ComM_SizeOfChannelPb */
 typedef uint8 ComM_SizeOfChannelPbType;
+
+/**   \brief  value based type definition for ComM_SizeOfDcmRequestActive */
+typedef uint8 ComM_SizeOfDcmRequestActiveType;
 
 /**   \brief  value based type definition for ComM_SizeOfMinFullComModeTimer */
 typedef uint8 ComM_SizeOfMinFullComModeTimerType;
@@ -1013,6 +1027,14 @@ typedef struct sComM_UserPncByteMaskType
   \brief  These structs are used in unions to have a symbol based data representation style.
   \{
 */ 
+/**   \brief  type to be used as symbolic data element access to ComM_DcmRequestActive */
+typedef struct ComM_DcmRequestActiveStructSTag
+{
+  ComM_DcmRequestActiveType ComMChannel_0;
+  ComM_DcmRequestActiveType ComMChannel_1;
+  ComM_DcmRequestActiveType ComMChannel_2;
+} ComM_DcmRequestActiveStructSType;
+
 /**   \brief  type to be used as symbolic data element access to ComM_MinFullComModeTimer */
 typedef struct ComM_MinFullComModeTimerStructSTag
 {
@@ -1045,6 +1067,13 @@ typedef struct ComM_PncSignalValuesStructSTag
   \brief  These unions are used to access arrays in an index and symbol based style.
   \{
 */ 
+/**   \brief  type to access ComM_DcmRequestActive in an index and symbol based style. */
+typedef union ComM_DcmRequestActiveUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  ComM_DcmRequestActiveType raw[3];
+  ComM_DcmRequestActiveStructSType str;
+} ComM_DcmRequestActiveUType;
+
 /**   \brief  type to access ComM_MinFullComModeTimer in an index and symbol based style. */
 typedef union ComM_MinFullComModeTimerUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
@@ -1086,6 +1115,9 @@ typedef P2CONST(ComM_ChannelType, TYPEDEF, COMM_CONST) ComM_ChannelPtrType;
 
 /**   \brief  type used to point to ComM_ChannelPb */
 typedef P2CONST(ComM_ChannelPbType, TYPEDEF, COMM_CONST) ComM_ChannelPbPtrType;
+
+/**   \brief  type used to point to ComM_DcmRequestActive */
+typedef P2VAR(ComM_DcmRequestActiveType, TYPEDEF, COMM_VAR_NOINIT) ComM_DcmRequestActivePtrType;
 
 /**   \brief  type used to point to ComM_MinFullComModeTimer */
 typedef P2VAR(ComM_MinFullComModeTimerType, TYPEDEF, COMM_VAR_NOINIT) ComM_MinFullComModeTimerPtrType;

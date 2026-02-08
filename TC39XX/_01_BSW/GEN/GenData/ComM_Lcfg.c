@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.c
- *   Generation Time: 2026-01-25 23:21:18
+ *   Generation Time: 2026-02-08 21:31:38
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -254,6 +254,28 @@ VAR(ComM_PncModeType, COMM_VAR_NOINIT) ComM_ActivePncComMode[1];  /* PRQA S 1514
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 VAR(ComM_PncModeType, COMM_VAR_NOINIT) ComM_BusPncComModeReq[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+#define COMM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_DcmRequestActive
+**********************************************************************************************************************/
+/** 
+  \var    ComM_DcmRequestActive
+  \brief  Status of Dcm active diagnostic request, TRUE if requested, FALSE otherwise
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(ComM_DcmRequestActiveUType, COMM_VAR_NOINIT) ComM_DcmRequestActive;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [ComMChannel_0] */
+  /*     1 */  /* [ComMChannel_1] */
+  /*     2 */  /* [ComMChannel_2] */
+
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

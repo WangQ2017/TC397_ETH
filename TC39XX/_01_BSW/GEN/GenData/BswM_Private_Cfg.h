@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Private_Cfg.h
- *   Generation Time: 2026-02-02 11:06:38
+ *   Generation Time: 2026-02-08 21:31:39
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -58,6 +58,8 @@
 #include "EthTrcv_30_Tja1100_Hw_Int.h" 
 #include "Sd.h" 
 #include "LdCom.h" 
+#include "DoIP.h" 
+#include "Dcm.h" 
 
 
 
@@ -123,13 +125,12 @@
 #define BSWM_ID_RULE_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus                                                  18u 
 #define BSWM_ID_RULE_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo                                                       19u 
 #define BSWM_ID_RULE_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState                                                        20u 
-#define BSWM_ID_RULE_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState                    21u 
-#define BSWM_ID_RULE_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus                                                22u 
-#define BSWM_ID_RULE_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus   23u 
-#define BSWM_ID_RULE_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo     24u 
-#define BSWM_ID_RULE_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState                                                        25u 
-#define BSWM_ID_RULE_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed     26u 
-#define BSWM_ID_RULE_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                    27u 
+#define BSWM_ID_RULE_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus                                                21u 
+#define BSWM_ID_RULE_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus   22u 
+#define BSWM_ID_RULE_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo     23u 
+#define BSWM_ID_RULE_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState                                                        24u 
+#define BSWM_ID_RULE_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed     25u 
+#define BSWM_ID_RULE_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                    26u 
 
 #define BSWM_ID_AL_ESH_AL_RunToPostRun                                                                                                 0u 
 #define BSWM_ID_AL_ESH_AL_WaitForNvMToShutdown                                                                                         1u 
@@ -165,20 +166,18 @@
 #define BSWM_ID_AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C0_FaultInfo                                                               31u 
 #define BSWM_ID_AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C1_SenState                                                                32u 
 #define BSWM_ID_AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C1_SenState                                                                33u 
-#define BSWM_ID_AL_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState                                34u 
-#define BSWM_ID_AL_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState                                35u 
-#define BSWM_ID_AL_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN                                                          36u 
-#define BSWM_ID_AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE                                                37u 
-#define BSWM_ID_AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus           38u 
-#define BSWM_ID_AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus           39u 
-#define BSWM_ID_AL_SDC_AL_SdDown_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_DOWN               40u 
-#define BSWM_ID_AL_SDC_AL_SdAvailable_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_AVAILABLE     41u 
-#define BSWM_ID_AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C2_EcuState                                                                42u 
-#define BSWM_ID_AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C2_EcuState                                                                43u 
-#define BSWM_ID_AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed             44u 
-#define BSWM_ID_AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed             45u 
-#define BSWM_ID_AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo                                                            46u 
-#define BSWM_ID_AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                            47u 
+#define BSWM_ID_AL_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN                                                          34u 
+#define BSWM_ID_AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE                                                35u 
+#define BSWM_ID_AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus           36u 
+#define BSWM_ID_AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus           37u 
+#define BSWM_ID_AL_SDC_AL_SdDown_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_DOWN               38u 
+#define BSWM_ID_AL_SDC_AL_SdAvailable_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_AVAILABLE     39u 
+#define BSWM_ID_AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C2_EcuState                                                                40u 
+#define BSWM_ID_AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C2_EcuState                                                                41u 
+#define BSWM_ID_AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed             42u 
+#define BSWM_ID_AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed             43u 
+#define BSWM_ID_AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo                                                            44u 
+#define BSWM_ID_AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                            45u 
 
 
 /**********************************************************************************************************************
@@ -223,22 +222,22 @@
 #define BswM_GetSdConsumedEventStateOfPCPartitionConfig(partitionIndex)                             BswM_SdConsumedEventState  /**< the pointer to BswM_SdConsumedEventState */
 #define BswM_GetSdEventHandlerMappingOfPCPartitionConfig(partitionIndex)                            BswM_SdEventHandlerMapping  /**< the pointer to BswM_SdEventHandlerMapping */
 #define BswM_GetSdEventHandlerStateOfPCPartitionConfig(partitionIndex)                              BswM_SdEventHandlerState  /**< the pointer to BswM_SdEventHandlerState */
-#define BswM_GetSizeOfActionListsOfPCPartitionConfig(partitionIndex)                                48u  /**< the number of accomplishable value elements in BswM_ActionLists */
-#define BswM_GetSizeOfDeferredRulesOfPCPartitionConfig(partitionIndex)                              25u  /**< the number of accomplishable value elements in BswM_DeferredRules */
+#define BswM_GetSizeOfActionListsOfPCPartitionConfig(partitionIndex)                                46u  /**< the number of accomplishable value elements in BswM_ActionLists */
+#define BswM_GetSizeOfDeferredRulesOfPCPartitionConfig(partitionIndex)                              24u  /**< the number of accomplishable value elements in BswM_DeferredRules */
 #define BswM_GetSizeOfGenericMappingOfPCPartitionConfig(partitionIndex)                             1u  /**< the number of accomplishable value elements in BswM_GenericMapping */
 #define BswM_GetSizeOfGenericStateOfPCPartitionConfig(partitionIndex)                               1u  /**< the number of accomplishable value elements in BswM_GenericState */
 #define BswM_GetSizeOfImmediateUserOfPCPartitionConfig(partitionIndex)                              1u  /**< the number of accomplishable value elements in BswM_ImmediateUser */
 #define BswM_GetSizeOfInitGenVarAndInitALOfPCPartitionConfig(partitionIndex)                        1u  /**< the number of accomplishable value elements in BswM_InitGenVarAndInitAL */
 #define BswM_GetSizeOfModeNotificationFctOfPCPartitionConfig(partitionIndex)                        1u  /**< the number of accomplishable value elements in BswM_ModeNotificationFct */
-#define BswM_GetSizeOfRuleStatesOfPCPartitionConfig(partitionIndex)                                 28u  /**< the number of accomplishable value elements in BswM_RuleStates */
+#define BswM_GetSizeOfRuleStatesOfPCPartitionConfig(partitionIndex)                                 27u  /**< the number of accomplishable value elements in BswM_RuleStates */
 #define BswM_GetSizeOfRulesIndOfPCPartitionConfig(partitionIndex)                                   8u  /**< the number of accomplishable value elements in BswM_RulesInd */
-#define BswM_GetSizeOfRulesOfPCPartitionConfig(partitionIndex)                                      28u  /**< the number of accomplishable value elements in BswM_Rules */
+#define BswM_GetSizeOfRulesOfPCPartitionConfig(partitionIndex)                                      27u  /**< the number of accomplishable value elements in BswM_Rules */
 #define BswM_GetSizeOfSdClientServiceMappingOfPCPartitionConfig(partitionIndex)                     3u  /**< the number of accomplishable value elements in BswM_SdClientServiceMapping */
 #define BswM_GetSizeOfSdClientServiceStateOfPCPartitionConfig(partitionIndex)                       3u  /**< the number of accomplishable value elements in BswM_SdClientServiceState */
 #define BswM_GetSizeOfSdConsumedEventMappingOfPCPartitionConfig(partitionIndex)                     3u  /**< the number of accomplishable value elements in BswM_SdConsumedEventMapping */
 #define BswM_GetSizeOfSdConsumedEventStateOfPCPartitionConfig(partitionIndex)                       3u  /**< the number of accomplishable value elements in BswM_SdConsumedEventState */
-#define BswM_GetSizeOfSdEventHandlerMappingOfPCPartitionConfig(partitionIndex)                      3u  /**< the number of accomplishable value elements in BswM_SdEventHandlerMapping */
-#define BswM_GetSizeOfSdEventHandlerStateOfPCPartitionConfig(partitionIndex)                        3u  /**< the number of accomplishable value elements in BswM_SdEventHandlerState */
+#define BswM_GetSizeOfSdEventHandlerMappingOfPCPartitionConfig(partitionIndex)                      2u  /**< the number of accomplishable value elements in BswM_SdEventHandlerMapping */
+#define BswM_GetSizeOfSdEventHandlerStateOfPCPartitionConfig(partitionIndex)                        2u  /**< the number of accomplishable value elements in BswM_SdEventHandlerState */
 #define BswM_GetSizeOfSwcModeRequestUpdateFctOfPCPartitionConfig(partitionIndex)                    1u  /**< the number of accomplishable value elements in BswM_SwcModeRequestUpdateFct */
 #define BswM_GetSizeOfTimerStateOfPCPartitionConfig(partitionIndex)                                 1u  /**< the number of accomplishable value elements in BswM_TimerState */
 #define BswM_GetSizeOfTimerValueOfPCPartitionConfig(partitionIndex)                                 1u  /**< the number of accomplishable value elements in BswM_TimerValue */
@@ -281,6 +280,7 @@
 #define BswM_GetRuleStates(Index, partitionIndex)                                                   (BswM_GetRuleStatesOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetFctPtrOfRules(Index, partitionIndex)                                                (BswM_GetRulesOfPCPartitionConfig(partitionIndex)[(Index)].FctPtrOfRules)
 #define BswM_GetIdOfRules(Index, partitionIndex)                                                    (BswM_GetRulesOfPCPartitionConfig(partitionIndex)[(Index)].IdOfRules)
+#define BswM_GetInitOfRules(Index, partitionIndex)                                                  (BswM_GetRulesOfPCPartitionConfig(partitionIndex)[(Index)].InitOfRules)
 #define BswM_GetRuleStatesIdxOfRules(Index, partitionIndex)                                         (BswM_GetRulesOfPCPartitionConfig(partitionIndex)[(Index)].RuleStatesIdxOfRules)
 #define BswM_GetRulesInd(Index, partitionIndex)                                                     (BswM_GetRulesIndOfPCPartitionConfig(partitionIndex)[(Index)])
 #define BswM_GetExternalIdOfSdClientServiceMapping(Index, partitionIndex)                           (BswM_GetSdClientServiceMappingOfPCPartitionConfig(partitionIndex)[(Index)].ExternalIdOfSdClientServiceMapping)
@@ -311,7 +311,6 @@
 #define BswM_GetRulesIndEndIdxOfImmediateUser(Index, partitionIndex)                                8u  /**< the end index of the 0:n relation pointing to BswM_RulesInd */
 #define BswM_GetRulesIndStartIdxOfImmediateUser(Index, partitionIndex)                              0u  /**< the start index of the 0:n relation pointing to BswM_RulesInd */
 #define BswM_IsRulesIndUsedOfImmediateUser(Index, partitionIndex)                                   (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to BswM_RulesInd */
-#define BswM_GetInitOfRules(Index, partitionIndex)                                                  BSWM_FALSE  /**< Initialization value of rule state (TRUE, FALSE, UNDEFINED or DEACTIVATED). */
 #define BswM_GetInitValueOfSdClientServiceMapping(Index, partitionIndex)                            SD_CLIENT_SERVICE_DOWN  /**< Initialization value of port. */
 #define BswM_GetInitValueOfSdConsumedEventMapping(Index, partitionIndex)                            SD_CONSUMED_EVENTGROUP_DOWN  /**< Initialization value of port. */
 #define BswM_GetInitValueOfSdEventHandlerMapping(Index, partitionIndex)                             SD_EVENT_HANDLER_RELEASED  /**< Initialization value of port. */
@@ -591,7 +590,7 @@
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[48];
+extern CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[46];
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -610,7 +609,7 @@ extern CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[48];
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_DeferredRulesType, BSWM_CONST) BswM_DeferredRules[25];
+extern CONST(BswM_DeferredRulesType, BSWM_CONST) BswM_DeferredRules[24];
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -671,6 +670,7 @@ extern CONST(BswM_PartitionIdentifiersType, BSWM_CONST) BswM_PartitionIdentifier
   \details
   Element          Description
   Id               External id of rule.
+  Init             Initialization value of rule state (TRUE, FALSE, UNDEFINED or DEACTIVATED).
   RuleStatesIdx    the index of the 1:1 relation pointing to BswM_RuleStates
   FctPtr           Pointer to the rule function which does the arbitration.
 */ 
@@ -678,7 +678,7 @@ extern CONST(BswM_PartitionIdentifiersType, BSWM_CONST) BswM_PartitionIdentifier
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[28];
+extern CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[27];
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -755,7 +755,7 @@ extern CONST(BswM_SdConsumedEventMappingType, BSWM_CONST) BswM_SdConsumedEventMa
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(BswM_SdEventHandlerMappingType, BSWM_CONST) BswM_SdEventHandlerMapping[3];
+extern CONST(BswM_SdEventHandlerMappingType, BSWM_CONST) BswM_SdEventHandlerMapping[2];
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -939,7 +939,7 @@ extern VAR(Sd_ConsumedEventGroupCurrentStateType, BSWM_VAR_NOINIT) BswM_SdConsum
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Sd_EventHandlerCurrentStateType, BSWM_VAR_NOINIT) BswM_SdEventHandlerState[3];
+extern VAR(Sd_EventHandlerCurrentStateType, BSWM_VAR_NOINIT) BswM_SdEventHandlerState[2];
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

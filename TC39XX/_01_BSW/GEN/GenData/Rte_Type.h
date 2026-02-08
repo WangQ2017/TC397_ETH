@@ -133,6 +133,30 @@ typedef uint8 BswM_SDC_SdServerServiceRequest;
 # define Rte_TypeDef_ComM_ModeType
 typedef uint8 ComM_ModeType;
 
+# define Rte_TypeDef_Dcm_CommunicationModeType
+typedef uint8 Dcm_CommunicationModeType;
+
+# define Rte_TypeDef_Dcm_ConfirmationStatusType
+typedef uint8 Dcm_ConfirmationStatusType;
+
+# define Rte_TypeDef_Dcm_DiagnosticSessionControlType
+typedef uint8 Dcm_DiagnosticSessionControlType;
+
+# define Rte_TypeDef_Dcm_NegativeResponseCodeType
+typedef uint8 Dcm_NegativeResponseCodeType;
+
+# define Rte_TypeDef_Dcm_OpStatusType
+typedef uint8 Dcm_OpStatusType;
+
+# define Rte_TypeDef_Dcm_ProtocolType
+typedef uint8 Dcm_ProtocolType;
+
+# define Rte_TypeDef_Dcm_RequestKindType
+typedef uint8 Dcm_RequestKindType;
+
+# define Rte_TypeDef_Dcm_SesCtrlType
+typedef uint8 Dcm_SesCtrlType;
+
 # define Rte_TypeDef_EcuM_BootTargetType
 typedef uint8 EcuM_BootTargetType;
 

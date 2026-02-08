@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Lcfg.h
- *   Generation Time: 2026-01-25 23:19:10
+ *   Generation Time: 2026-02-08 21:29:42
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -1684,22 +1684,22 @@
 #define TcpIp_GetSizeOfIcmpEchoReplyDataOfPCConfig()                                                32u  /**< the number of accomplishable value elements in TcpIp_IcmpEchoReplyData */
 #define TcpIp_GetSizeOfIpV4CtrlOfPCConfig()                                                         3u  /**< the number of accomplishable value elements in TcpIp_IpV4Ctrl */
 #define TcpIp_GetSizeOfIpV4GeneralOfPCConfig()                                                      1u  /**< the number of accomplishable value elements in TcpIp_IpV4General */
-#define TcpIp_GetSizeOfIpV4SocketDynOfPCConfig()                                                    12u  /**< the number of accomplishable value elements in TcpIp_IpV4SocketDyn */
+#define TcpIp_GetSizeOfIpV4SocketDynOfPCConfig()                                                    16u  /**< the number of accomplishable value elements in TcpIp_IpV4SocketDyn */
 #define TcpIp_GetSizeOfLocalAddrOfPCConfig()                                                        9u  /**< the number of accomplishable value elements in TcpIp_LocalAddr */
 #define TcpIp_GetSizeOfLocalAddrV4OfPCConfig()                                                      9u  /**< the number of accomplishable value elements in TcpIp_LocalAddrV4 */
-#define TcpIp_GetSizeOfSocketDynOfPCConfig()                                                        9u  /**< the number of accomplishable value elements in TcpIp_SocketDyn */
+#define TcpIp_GetSizeOfSocketDynOfPCConfig()                                                        13u  /**< the number of accomplishable value elements in TcpIp_SocketDyn */
 #define TcpIp_GetSizeOfSocketOwnerConfigOfPCConfig()                                                1u  /**< the number of accomplishable value elements in TcpIp_SocketOwnerConfig */
-#define TcpIp_GetSizeOfSocketTcpDynOfPCConfig()                                                     3u  /**< the number of accomplishable value elements in TcpIp_SocketTcpDyn */
-#define TcpIp_GetSizeOfSocketTcpNagleDynOfPCConfig()                                                3u  /**< the number of accomplishable value elements in TcpIp_SocketTcpNagleDyn */
-#define TcpIp_GetSizeOfSocketTcpOooDynOfPCConfig()                                                  3u  /**< the number of accomplishable value elements in TcpIp_SocketTcpOooDyn */
-#define TcpIp_GetSizeOfSocketUdpDynOfPCConfig()                                                     6u  /**< the number of accomplishable value elements in TcpIp_SocketUdpDyn */
+#define TcpIp_GetSizeOfSocketTcpDynOfPCConfig()                                                     6u  /**< the number of accomplishable value elements in TcpIp_SocketTcpDyn */
+#define TcpIp_GetSizeOfSocketTcpNagleDynOfPCConfig()                                                6u  /**< the number of accomplishable value elements in TcpIp_SocketTcpNagleDyn */
+#define TcpIp_GetSizeOfSocketTcpOooDynOfPCConfig()                                                  6u  /**< the number of accomplishable value elements in TcpIp_SocketTcpOooDyn */
+#define TcpIp_GetSizeOfSocketUdpDynOfPCConfig()                                                     7u  /**< the number of accomplishable value elements in TcpIp_SocketUdpDyn */
 #define TcpIp_GetSizeOfTcpConfigOfPCConfig()                                                        1u  /**< the number of accomplishable value elements in TcpIp_TcpConfig */
 #define TcpIp_GetSizeOfTcpResetQElementOfPCConfig()                                                 8u  /**< the number of accomplishable value elements in TcpIp_TcpResetQElement */
-#define TcpIp_GetSizeOfTcpRetryQElementOfPCConfig()                                                 30u  /**< the number of accomplishable value elements in TcpIp_TcpRetryQElement */
-#define TcpIp_GetSizeOfTcpRxBufferDescOfPCConfig()                                                  2u  /**< the number of accomplishable value elements in TcpIp_TcpRxBufferDesc */
-#define TcpIp_GetSizeOfTcpRxBufferOfPCConfig()                                                      1024u  /**< the number of accomplishable value elements in TcpIp_TcpRxBuffer */
-#define TcpIp_GetSizeOfTcpTxBufferDescOfPCConfig()                                                  2u  /**< the number of accomplishable value elements in TcpIp_TcpTxBufferDesc */
-#define TcpIp_GetSizeOfTcpTxBufferOfPCConfig()                                                      1024u  /**< the number of accomplishable value elements in TcpIp_TcpTxBuffer */
+#define TcpIp_GetSizeOfTcpRetryQElementOfPCConfig()                                                 60u  /**< the number of accomplishable value elements in TcpIp_TcpRetryQElement */
+#define TcpIp_GetSizeOfTcpRxBufferDescOfPCConfig()                                                  4u  /**< the number of accomplishable value elements in TcpIp_TcpRxBufferDesc */
+#define TcpIp_GetSizeOfTcpRxBufferOfPCConfig()                                                      2048u  /**< the number of accomplishable value elements in TcpIp_TcpRxBuffer */
+#define TcpIp_GetSizeOfTcpTxBufferDescOfPCConfig()                                                  4u  /**< the number of accomplishable value elements in TcpIp_TcpTxBufferDesc */
+#define TcpIp_GetSizeOfTcpTxBufferOfPCConfig()                                                      2048u  /**< the number of accomplishable value elements in TcpIp_TcpTxBuffer */
 #define TcpIp_GetSocketDynOfPCConfig()                                                              TcpIp_SocketDyn.raw  /**< the pointer to TcpIp_SocketDyn */
 #define TcpIp_GetSocketOwnerConfigOfPCConfig()                                                      TcpIp_SocketOwnerConfig  /**< the pointer to TcpIp_SocketOwnerConfig */
 #define TcpIp_GetSocketTcpDynOfPCConfig()                                                           TcpIp_SocketTcpDyn  /**< the pointer to TcpIp_SocketTcpDyn */
@@ -3683,8 +3683,8 @@ typedef struct TcpIp_LocalAddrStructSTag
 /**   \brief  type to be used as symbolic data element access to TcpIp_SocketDyn */
 typedef struct TcpIp_SocketDynStructSTag
 {
-  TcpIp_SocketDynType UDP[6];
-  TcpIp_SocketDynType TCP[3];
+  TcpIp_SocketDynType UDP[7];
+  TcpIp_SocketDynType TCP[6];
 } TcpIp_SocketDynStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_StaticUnicastAddrV4Requested */
@@ -3698,15 +3698,19 @@ typedef struct TcpIp_StaticUnicastAddrV4RequestedStructSTag
 /**   \brief  type to be used as symbolic data element access to TcpIp_TcpRxBuffer */
 typedef struct TcpIp_TcpRxBufferStructSTag
 {
-  TcpIp_TcpRxBufferType TcpIpTcpSocketBuffer[512];
   TcpIp_TcpRxBufferType TcpIpTcpSocketBuffer_001[512];
+  TcpIp_TcpRxBufferType TcpIpTcpSocketBuffer_002[512];
+  TcpIp_TcpRxBufferType TcpIpTcpSocketBuffer_003[512];
+  TcpIp_TcpRxBufferType TcpIpTcpSocketBuffer_004[512];
 } TcpIp_TcpRxBufferStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_TcpTxBuffer */
 typedef struct TcpIp_TcpTxBufferStructSTag
 {
-  TcpIp_TcpTxBufferType TcpIpTcpSocketBuffer[512];
   TcpIp_TcpTxBufferType TcpIpTcpSocketBuffer_001[512];
+  TcpIp_TcpTxBufferType TcpIpTcpSocketBuffer_002[512];
+  TcpIp_TcpTxBufferType TcpIpTcpSocketBuffer_003[512];
+  TcpIp_TcpTxBufferType TcpIpTcpSocketBuffer_004[512];
 } TcpIp_TcpTxBufferStructSType;
 
 /** 
@@ -3763,7 +3767,7 @@ typedef union TcpIp_LocalAddrUTag
 /**   \brief  type to access TcpIp_SocketDyn in an index and symbol based style. */
 typedef union TcpIp_SocketDynUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_SocketDynType raw[9];
+  TcpIp_SocketDynType raw[13];
   TcpIp_SocketDynStructSType str;
 } TcpIp_SocketDynUType;
 
@@ -3777,14 +3781,14 @@ typedef union TcpIp_StaticUnicastAddrV4RequestedUTag
 /**   \brief  type to access TcpIp_TcpRxBuffer in an index and symbol based style. */
 typedef union TcpIp_TcpRxBufferUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_TcpRxBufferType raw[1024];
+  TcpIp_TcpRxBufferType raw[2048];
   TcpIp_TcpRxBufferStructSType str;
 } TcpIp_TcpRxBufferUType;
 
 /**   \brief  type to access TcpIp_TcpTxBuffer in an index and symbol based style. */
 typedef union TcpIp_TcpTxBufferUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_TcpTxBufferType raw[1024];
+  TcpIp_TcpTxBufferType raw[2048];
   TcpIp_TcpTxBufferStructSType str;
 } TcpIp_TcpTxBufferUType;
 
@@ -4496,7 +4500,7 @@ extern CONST(TcpIp_TcpConfigType, TCPIP_CONST) TcpIp_TcpConfig[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_TcpRxBufferDescType, TCPIP_CONST) TcpIp_TcpRxBufferDesc[2];
+extern CONST(TcpIp_TcpRxBufferDescType, TCPIP_CONST) TcpIp_TcpRxBufferDesc[4];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4517,7 +4521,7 @@ extern CONST(TcpIp_TcpRxBufferDescType, TCPIP_CONST) TcpIp_TcpRxBufferDesc[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_TcpTxBufferDescType, TCPIP_CONST) TcpIp_TcpTxBufferDesc[2];
+extern CONST(TcpIp_TcpTxBufferDescType, TCPIP_CONST) TcpIp_TcpTxBufferDesc[4];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4726,7 +4730,7 @@ extern VAR(TcpIp_IpV4CtrlDynUType, TCPIP_VAR_NOINIT) TcpIp_IpV4CtrlDyn;  /* PRQA
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_IpV4SocketDynType, TCPIP_VAR_NOINIT) TcpIp_IpV4SocketDyn[12];
+extern VAR(TcpIp_IpV4SocketDynType, TCPIP_VAR_NOINIT) TcpIp_IpV4SocketDyn[16];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4857,7 +4861,7 @@ extern VAR(TcpIp_SocketDynUType, TCPIP_VAR_NOINIT) TcpIp_SocketDyn;  /* PRQA S 0
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern volatile VAR(TcpIp_SocketTcpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpDyn[3];
+extern volatile VAR(TcpIp_SocketTcpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpDyn[6];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4878,7 +4882,7 @@ extern volatile VAR(TcpIp_SocketTcpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpDyn
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_SocketTcpNagleDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpNagleDyn[3];
+extern VAR(TcpIp_SocketTcpNagleDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpNagleDyn[6];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4899,7 +4903,7 @@ extern VAR(TcpIp_SocketTcpNagleDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpNagleDy
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_SocketTcpOooDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpOooDyn[3];
+extern VAR(TcpIp_SocketTcpOooDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpOooDyn[6];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4923,7 +4927,7 @@ extern VAR(TcpIp_SocketTcpOooDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpOooDyn[3]
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_SocketUdpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketUdpDyn[6];
+extern VAR(TcpIp_SocketUdpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketUdpDyn[7];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4958,7 +4962,7 @@ extern VAR(TcpIp_StaticUnicastAddrV4RequestedUType, TCPIP_VAR_NOINIT) TcpIp_Stat
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_Tcp_RxPreBufEleType, TCPIP_VAR_NOINIT) TcpIp_TcpOooQElement[15];
+extern VAR(TcpIp_Tcp_RxPreBufEleType, TCPIP_VAR_NOINIT) TcpIp_TcpOooQElement[30];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -4984,7 +4988,7 @@ extern VAR(TcpIp_Tcp_RstTxQueueType, TCPIP_VAR_NOINIT) TcpIp_TcpResetQElement[8]
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_Tcp_TxRetrQueueType, TCPIP_VAR_NOINIT) TcpIp_TcpRetryQElement[30];
+extern VAR(TcpIp_Tcp_TxRetrQueueType, TCPIP_VAR_NOINIT) TcpIp_TcpRetryQElement[60];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5022,7 +5026,7 @@ extern VAR(TcpIp_TcpRxBufferUType, TCPIP_VAR_NOINIT) TcpIp_TcpRxBuffer;  /* PRQA
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_TcpRxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpRxBufferDescDyn[2];
+extern VAR(TcpIp_TcpRxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpRxBufferDescDyn[4];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5060,7 +5064,7 @@ extern VAR(TcpIp_TcpTxBufferUType, TCPIP_VAR_NOINIT) TcpIp_TcpTxBuffer;  /* PRQA
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_TcpTxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpTxBufferDescDyn[2];
+extern VAR(TcpIp_TcpTxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpTxBufferDescDyn[4];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

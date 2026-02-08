@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cfg.h
- *   Generation Time: 2026-01-24 23:51:59
+ *   Generation Time: 2026-02-08 21:31:40
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -2030,7 +2030,7 @@
 #define Com_GetTxIPduGroupISRLockThreshold()                                                        Com_GetTxIPduGroupISRLockThresholdOfPCConfig()
 #define Com_GetTxModeTrueIdxOfTxModeInfo(Index)                                                     ((Com_TxModeTrueIdxOfTxModeInfoType)((Index)))  /**< the index of the 1:1 relation pointing to Com_TxModeTrue */
 #define Com_IsCbkTxAckDefFuncPtrIndUsedOfTxPduInfo(Index)                                           Com_IsTxSigGrpInfoIndUsedOfTxPduInfo(Index)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_CbkTxAckDefFuncPtrInd */
-#define Com_GetExternalIdOfTxPduInfo(Index)                                                         ((Com_ExternalIdOfTxPduInfoType)((((Com_ExternalIdOfTxPduInfoType)(Index)) + 1u)))  /**< External ID used to call PduR_ComTransmit(). */
+#define Com_GetExternalIdOfTxPduInfo(Index)                                                         ((Com_ExternalIdOfTxPduInfoType)((((Com_ExternalIdOfTxPduInfoType)(Index)) + 2u)))  /**< External ID used to call PduR_ComTransmit(). */
 #define Com_IsPduGrpVectorUsedOfTxPduInfo(Index)                                                    (((!(Com_IsTxSigGrpInfoIndUsedOfTxPduInfo(Index)))) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_PduGrpVector */
 #define Com_GetPduWithMetaDataLengthOfTxPduInfo(Index)                                              ((Com_PduWithMetaDataLengthOfTxPduInfoType)((((Com_PduWithMetaDataLengthOfTxPduInfoType)(Index)) + 7u)))  /**< Length of Pdu with MetaData. */
 #define Com_GetTxBufferEndIdxOfTxPduInfo(Index)                                                     Com_GetTxPduInitValueEndIdxOfTxPduInfo(Index)  /**< the end index of the 0:n relation pointing to Com_TxBuffer */

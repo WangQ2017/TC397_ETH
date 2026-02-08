@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2026-01-25 10:15:41
+ *   Generation Time: 2026-02-08 21:29:39
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -116,7 +116,14 @@
 #define PDUR_FCT_SOADIFTX 0x69u 
 #define PDUR_FCT_SOADIFTXCFM 0x62u 
 #define PDUR_FCT_LDCOMTX 0xE9u 
- /*   PduR_ComTransmit  PduR_UdpNmIfRxIndication  PduR_UdpNmTransmit  PduR_UdpNmTxConfirmation  PduR_UdpNmTriggerTransmit  PduR_SoAdIfIfRxIndication  PduR_SoAdIfTransmit  PduR_SoAdIfTxConfirmation  PduR_LdComTransmit  */ 
+#define PDUR_FCT_DCMTX 0x99u 
+#define PDUR_FCT_DOIPTPRXIND 0xE5u 
+#define PDUR_FCT_DOIPTPTX 0xE9u 
+#define PDUR_FCT_DOIPTPTXCFM 0xE8u 
+#define PDUR_FCT_DOIPTPSOR 0xE6u 
+#define PDUR_FCT_DOIPTPCPYRX 0xE4u 
+#define PDUR_FCT_DOIPTPCPYTX 0xE7u 
+ /*   PduR_ComTransmit  PduR_UdpNmIfRxIndication  PduR_UdpNmTransmit  PduR_UdpNmTxConfirmation  PduR_UdpNmTriggerTransmit  PduR_SoAdIfIfRxIndication  PduR_SoAdIfTransmit  PduR_SoAdIfTxConfirmation  PduR_LdComTransmit  PduR_DcmTransmit  PduR_DoIPTpTpRxIndication  PduR_DoIPTpTransmit  PduR_DoIPTpTxConfirmation  PduR_DoIPTpStartOfReception  PduR_DoIPTpCopyRxData  PduR_DoIPTpCopyTxData  */ 
 
 
 
@@ -156,10 +163,11 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_EcuStateTx                     0u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_Eira_ETH_Tx                    1u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_FalutInfoTx                    2u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_SenStateTx                     3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_DoIPPhyResTx                   0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_EcuStateTx                     1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_Eira_ETH_Tx                    2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_FalutInfoTx                    3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_SenStateTx                     4u
 /**\} */
 
 /**
@@ -174,6 +182,41 @@
 #define PduRConf_PduRDestPdu_PduRDestPdu_Eira_ETH_Tx                  0u
 #define PduRConf_PduRDestPdu_PduRDestPdu_FalutInfoTx                  2u
 #define PduRConf_PduRDestPdu_PduRDestPdu_SenStateTx                   3u
+/**\} */
+
+/**
+ * \defgroup PduRHandleIdsTpRxDest Handle IDs of handle space TpRxDest.
+ * \brief Transport protocol Rx destination PDUs
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define PduRConf_PduRDestPdu_PduRDestPdu_DoIPFuncReqRx                0u
+#define PduRConf_PduRDestPdu_PduRDestPdu_DoIPPhyReqRx                 1u
+/**\} */
+
+/**
+ * \defgroup PduRHandleIdsTpRxSrc Handle IDs of handle space TpRxSrc.
+ * \brief Transport protocol Rx source PDUs
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_DoIPFuncReqRx                  0u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_DoIPPhyReqRx                   1u
+/**\} */
+
+/**
+ * \defgroup PduRHandleIdsTpTxDest Handle IDs of handle space TpTxDest.
+ * \brief Transport protocol Tx PDUs
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define PduRConf_PduRDestPdu_PduRDestPdu_DoIPPhyResTx                 0u
 /**\} */
 
 

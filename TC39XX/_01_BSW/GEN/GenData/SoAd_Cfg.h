@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: SoAd_Cfg.h
- *   Generation Time: 2026-01-24 23:56:18
+ *   Generation Time: 2026-02-08 21:29:40
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -51,16 +51,20 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define SoAdConf_SoAdSocketConnection_SC_SD_CTRL_UDP_Any_DynamicPort_Remote 1u
-#define SoAdConf_SoAdSocketConnection_SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001 0u
-#define SoAdConf_SoAdSocketConnection_SC_TCP_TX_fixed_10_23_0_33_47842 3u
-#define SoAdConf_SoAdSocketConnection_SC_TCP_TX_fixed_10_23_0_33_47843 2u
-#define SoAdConf_SoAdSocketConnection_SC_UDP_ANY_DynPort_Remote       8u
-#define SoAdConf_SoAdSocketConnection_SC_UDP_Fixed_10_23_0_33_40000_0 5u
-#define SoAdConf_SoAdSocketConnection_SC_UDP_Fixed_10_23_0_33_40000_1 6u
-#define SoAdConf_SoAdSocketConnection_SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote 9u
-#define SoAdConf_SoAdSocketConnection_SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote 7u
-#define SoAdConf_SoAdSocketConnection_SC_UDP_Multicast_Rx_Any_40000   4u
+#define SoAdConf_SoAdSocketConnection_SC_SD_CTRL_UDP_Any_DynamicPort_Remote 5u
+#define SoAdConf_SoAdSocketConnection_SC_SD_CTRL_UDP_Any_DynamicPort_Remote_001 4u
+#define SoAdConf_SoAdSocketConnection_SC_TCP_TX_fixed_10_23_0_33_47842 6u
+#define SoAdConf_SoAdSocketConnection_SC_TCP_TX_fixed_10_23_0_33_47843 7u
+#define SoAdConf_SoAdSocketConnection_SC_UDP_ANY_DynPort_Remote       12u
+#define SoAdConf_SoAdSocketConnection_SC_UDP_Fixed_10_23_0_33_40000_0 9u
+#define SoAdConf_SoAdSocketConnection_SC_UDP_Fixed_10_23_0_33_40000_1 10u
+#define SoAdConf_SoAdSocketConnection_SC_UDP_Multicast_Fixed_239_10_0_1_30000_Remote 13u
+#define SoAdConf_SoAdSocketConnection_SC_UDP_Multicast_Fixed_239_23_0_1_40000_Remote 11u
+#define SoAdConf_SoAdSocketConnection_SC_UDP_Multicast_Rx_Any_40000   8u
+#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_DOIP_Broad_UDP_fixed_255_255_255_255_13400_Remote 2u
+#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_DOIP_UDP_ANY_Remote 3u
+#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_0 0u
+#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_1 1u
 /**\} */
 
 /**********************************************************************************************************************
@@ -76,11 +80,15 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_EcuStateTx                 0u
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_FaultInfo_Tx               1u
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_NM_Tx                      2u
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_SD_Ctrl_Tx                 3u
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_SenState_Tx                4u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TCP_DATA0_Tx          6u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TCP_DATA1_Tx          7u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_UDP_DISCOVERY_Tx      0u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_UDP_TEST_EQUIPMENT_REQUEST_Tx 8u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_NM_Tx                      3u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_SD_Ctrl_Tx                 4u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_SD_TCP_EcuStateTx          1u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_SD_UDP_FaultInfo_Tx        2u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_SD_UDP_SenState_Tx         5u
 /**\} */
 
 /**********************************************************************************************************************
@@ -96,14 +104,17 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest              0u
-#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_002          1u
-#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_004          2u
-#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleInfo 7u
-#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleInfo_multi 5u
-#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleSpeed 6u
-#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleSpeed_Multi 4u
-#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleStatus 3u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest              3u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_002          4u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_004          5u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_DOIP_TCP_DATA0_Rx 0u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_DOIP_TCP_DATA1_Rx 1u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_DOIP_UDP_TEST_EQUIPMENT_REQUEST_Rx 2u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleInfo 10u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleInfo_multi 8u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleSpeed 9u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleSpeed_Multi 7u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleStatus 6u
 /**\} */
 
 /**********************************************************************************************************************
@@ -206,7 +217,7 @@
 #define SOAD_TX_DYN_LEN                         STD_OFF
 #define SOAD_IPV6                               STD_OFF
 #define SOAD_TCP                                STD_ON
-#define SOAD_DHCPV4_CLIENT_ENABLED              STD_OFF
+#define SOAD_DHCPV4_CLIENT_ENABLED              STD_ON
 #define SOAD_DHCPV6_CLIENT_ENABLED              STD_OFF
 #define SOAD_SOCKET_REPORT_ERROR_ENABLED        STD_OFF
 

@@ -36,7 +36,7 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMGeneral/BswMDcmEnabled</DEFINITION-REF>
-                  <VALUE>false</VALUE>
+                  <VALUE>true</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMGeneral/BswMEcuMEnabled</DEFINITION-REF>
@@ -285,6 +285,187 @@
                               </SDG>
                             </SDG>
                           </SDG>
+                          <SDG GID="DV:Communication">
+                            <SD GID="DV:Version">18.00.03.00</SD>
+                            <SDG GID="DV:Feature:ComMChannel_Vlan1">
+                              <SD GID="DV:Name">ComMChannel_Vlan1</SD>
+                              <SD GID="DV:Value">FALSE</SD>
+                              <SDG GID="DV:Param:ReInitialize_TX">
+                                <SD GID="DV:Name">ReInitialize TX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:ReInitialize_RX">
+                                <SD GID="DV:Name">ReInitialize RX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORMAL">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:CC_ComMChannel_Vlan1_NM">
+                                <SD GID="DV:Name">Nm Communication</SD>
+                                <SD GID="DV:Value">FALSE</SD>
+                              </SDG>
+                            </SDG>
+                            <SDG GID="DV:Feature:ComMChannel_Vlan10">
+                              <SD GID="DV:Name">ComMChannel_Vlan10</SD>
+                              <SD GID="DV:Value">FALSE</SD>
+                              <SDG GID="DV:Param:ReInitialize_TX">
+                                <SD GID="DV:Name">ReInitialize TX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:ReInitialize_RX">
+                                <SD GID="DV:Name">ReInitialize RX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORMAL">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:CC_ComMChannel_Vlan10_NM">
+                                <SD GID="DV:Name">Nm Communication</SD>
+                                <SD GID="DV:Value">FALSE</SD>
+                              </SDG>
+                            </SDG>
+                            <SDG GID="DV:Feature:ComMChannel_Vlan23">
+                              <SD GID="DV:Name">ComMChannel_Vlan23</SD>
+                              <SD GID="DV:Value">FALSE</SD>
+                              <SDG GID="DV:Param:ReInitialize_TX">
+                                <SD GID="DV:Name">ReInitialize TX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:ReInitialize_RX">
+                                <SD GID="DV:Name">ReInitialize RX</SD>
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORMAL">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_ENABLE_RX_DISABLE_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_ENABLE_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Param:DCM_DISABLE_RX_TX_NORM_NM">
+                                <SD GID="DV:Default">false</SD>
+                                <SD GID="DV:Value">false</SD>
+                              </SDG>
+                              <SDG GID="DV:Feature:CC_ComMChannel_Vlan23_NM">
+                                <SD GID="DV:Name">Nm Communication</SD>
+                                <SD GID="DV:Value">FALSE</SD>
+                              </SDG>
+                            </SDG>
+                            <SDG GID="DV:Feature:ComIPduGroup_Rx_PNC00">
+                              <SD GID="DV:Name">Group: ComIPduGroup_Rx_PNC00</SD>
+                              <SD GID="DV:Value">FALSE</SD>
+                            </SDG>
+                            <SDG GID="DV:Feature:ComIPduGroup_Rx_PNC_All_Active">
+                              <SD GID="DV:Name">Group: ComIPduGroup_Rx_PNC_All_Active</SD>
+                              <SD GID="DV:Value">FALSE</SD>
+                            </SDG>
+                            <SDG GID="DV:Feature:ComIPduGroup_Tx_PNC00">
+                              <SD GID="DV:Name">Group: ComIPduGroup_Tx_PNC00</SD>
+                              <SD GID="DV:Value">FALSE</SD>
+                            </SDG>
+                            <SDG GID="DV:Feature:ComIPduGroup_Tx_PNC_All_Active">
+                              <SD GID="DV:Name">Group: ComIPduGroup_Tx_PNC_All_Active</SD>
+                              <SD GID="DV:Value">FALSE</SD>
+                            </SDG>
+                          </SDG>
                           <SDG GID="DV:SDC">
                             <SD GID="DV:Version">18.00.03.00</SD>
                             <SDG GID="DV:Feature:Client_Services">
@@ -300,26 +481,26 @@
                                 <SD GID="DV:Value">TRUE</SD>
                                 <SDG GID="DV:Param:Initial_Port_Value">
                                   <SD GID="DV:Name">Initial Port Value</SD>
-                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_RELEASED</SD>
-                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_RELEASED</SD>
+                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_REQUESTED</SD>
+                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_REQUESTED</SD>
                                 </SDG>
                                 <SDG GID="DV:Param:Initial_Rule_State">
                                   <SD GID="DV:Name">Initial Rule State</SD>
-                                  <SD GID="DV:Default">BSWM_FALSE</SD>
-                                  <SD GID="DV:Value">BSWM_FALSE</SD>
+                                  <SD GID="DV:Default">BSWM_TRUE</SD>
+                                  <SD GID="DV:Value">BSWM_TRUE</SD>
                                 </SDG>
                                 <SDG GID="DV:Feature:CEG:_SdConsumedEventGroup_0xC3CB_VechicleSpeed">
                                   <SD GID="DV:Name">CEG: SdConsumedEventGroup_0xC3CB_VechicleSpeed</SD>
                                   <SD GID="DV:Value">TRUE</SD>
                                   <SDG GID="DV:Param:Initial_Port_Value">
                                     <SD GID="DV:Name">Initial Port Value</SD>
-                                    <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_RELEASED</SD>
-                                    <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_RELEASED</SD>
+                                    <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_REQUESTED</SD>
+                                    <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_REQUESTED</SD>
                                   </SDG>
                                   <SDG GID="DV:Param:Initial_Rule_State">
                                     <SD GID="DV:Name">Initial Rule State</SD>
-                                    <SD GID="DV:Default">BSWM_FALSE</SD>
-                                    <SD GID="DV:Value">BSWM_FALSE</SD>
+                                    <SD GID="DV:Default">BSWM_TRUE</SD>
+                                    <SD GID="DV:Value">BSWM_TRUE</SD>
                                   </SDG>
                                 </SDG>
                               </SDG>
@@ -328,26 +509,26 @@
                                 <SD GID="DV:Value">TRUE</SD>
                                 <SDG GID="DV:Param:Initial_Port_Value">
                                   <SD GID="DV:Name">Initial Port Value</SD>
-                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_RELEASED</SD>
-                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_RELEASED</SD>
+                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_REQUESTED</SD>
+                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_REQUESTED</SD>
                                 </SDG>
                                 <SDG GID="DV:Param:Initial_Rule_State">
                                   <SD GID="DV:Name">Initial Rule State</SD>
-                                  <SD GID="DV:Default">BSWM_FALSE</SD>
-                                  <SD GID="DV:Value">BSWM_FALSE</SD>
+                                  <SD GID="DV:Default">BSWM_TRUE</SD>
+                                  <SD GID="DV:Value">BSWM_TRUE</SD>
                                 </SDG>
                                 <SDG GID="DV:Feature:CEG:_SdConsumedEventGroup_0xC3CD_VechicleInfo">
                                   <SD GID="DV:Name">CEG: SdConsumedEventGroup_0xC3CD_VechicleInfo</SD>
                                   <SD GID="DV:Value">TRUE</SD>
                                   <SDG GID="DV:Param:Initial_Port_Value">
                                     <SD GID="DV:Name">Initial Port Value</SD>
-                                    <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_RELEASED</SD>
-                                    <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_RELEASED</SD>
+                                    <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_REQUESTED</SD>
+                                    <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_REQUESTED</SD>
                                   </SDG>
                                   <SDG GID="DV:Param:Initial_Rule_State">
                                     <SD GID="DV:Name">Initial Rule State</SD>
-                                    <SD GID="DV:Default">BSWM_FALSE</SD>
-                                    <SD GID="DV:Value">BSWM_FALSE</SD>
+                                    <SD GID="DV:Default">BSWM_TRUE</SD>
+                                    <SD GID="DV:Value">BSWM_TRUE</SD>
                                   </SDG>
                                 </SDG>
                               </SDG>
@@ -356,26 +537,26 @@
                                 <SD GID="DV:Value">TRUE</SD>
                                 <SDG GID="DV:Param:Initial_Port_Value">
                                   <SD GID="DV:Name">Initial Port Value</SD>
-                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_RELEASED</SD>
-                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_RELEASED</SD>
+                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_REQUESTED</SD>
+                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_REQUESTED</SD>
                                 </SDG>
                                 <SDG GID="DV:Param:Initial_Rule_State">
                                   <SD GID="DV:Name">Initial Rule State</SD>
-                                  <SD GID="DV:Default">BSWM_FALSE</SD>
-                                  <SD GID="DV:Value">BSWM_FALSE</SD>
+                                  <SD GID="DV:Default">BSWM_TRUE</SD>
+                                  <SD GID="DV:Value">BSWM_TRUE</SD>
                                 </SDG>
                                 <SDG GID="DV:Feature:CEG:_SdConsumedEventGroup_0xC3CC_VechicleStatus">
                                   <SD GID="DV:Name">CEG: SdConsumedEventGroup_0xC3CC_VechicleStatus</SD>
                                   <SD GID="DV:Value">TRUE</SD>
                                   <SDG GID="DV:Param:Initial_Port_Value">
                                     <SD GID="DV:Name">Initial Port Value</SD>
-                                    <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_RELEASED</SD>
-                                    <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_RELEASED</SD>
+                                    <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_REQUESTED</SD>
+                                    <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_REQUESTED</SD>
                                   </SDG>
                                   <SDG GID="DV:Param:Initial_Rule_State">
                                     <SD GID="DV:Name">Initial Rule State</SD>
-                                    <SD GID="DV:Default">BSWM_FALSE</SD>
-                                    <SD GID="DV:Value">BSWM_FALSE</SD>
+                                    <SD GID="DV:Default">BSWM_TRUE</SD>
+                                    <SD GID="DV:Value">BSWM_TRUE</SD>
                                   </SDG>
                                 </SDG>
                               </SDG>
@@ -393,13 +574,13 @@
                                 <SD GID="DV:Value">TRUE</SD>
                                 <SDG GID="DV:Param:Initial_Port_Value">
                                   <SD GID="DV:Name">Initial Port Value</SD>
-                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_DOWN</SD>
-                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_DOWN</SD>
+                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_AVAILABE</SD>
+                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_AVAILABE</SD>
                                 </SDG>
                                 <SDG GID="DV:Param:Initial_Rule_State">
                                   <SD GID="DV:Name">Initial Rule State</SD>
-                                  <SD GID="DV:Default">BSWM_FALSE</SD>
-                                  <SD GID="DV:Value">BSWM_FALSE</SD>
+                                  <SD GID="DV:Default">BSWM_TRUE</SD>
+                                  <SD GID="DV:Value">BSWM_TRUE</SD>
                                 </SDG>
                                 <SDG GID="DV:Feature:EH:_SdEventHandler_0xC3C0_FaultInfo">
                                   <SD GID="DV:Name">EH: SdEventHandler_0xC3C0_FaultInfo</SD>
@@ -411,13 +592,13 @@
                                 <SD GID="DV:Value">TRUE</SD>
                                 <SDG GID="DV:Param:Initial_Port_Value">
                                   <SD GID="DV:Name">Initial Port Value</SD>
-                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_DOWN</SD>
-                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_DOWN</SD>
+                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_AVAILABE</SD>
+                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_AVAILABE</SD>
                                 </SDG>
                                 <SDG GID="DV:Param:Initial_Rule_State">
                                   <SD GID="DV:Name">Initial Rule State</SD>
-                                  <SD GID="DV:Default">BSWM_FALSE</SD>
-                                  <SD GID="DV:Value">BSWM_FALSE</SD>
+                                  <SD GID="DV:Default">BSWM_TRUE</SD>
+                                  <SD GID="DV:Value">BSWM_TRUE</SD>
                                 </SDG>
                                 <SDG GID="DV:Feature:EH:_SdEventHandler_0xC3C1_SenState">
                                   <SD GID="DV:Name">EH: SdEventHandler_0xC3C1_SenState</SD>
@@ -429,17 +610,17 @@
                                 <SD GID="DV:Value">TRUE</SD>
                                 <SDG GID="DV:Param:Initial_Port_Value">
                                   <SD GID="DV:Name">Initial Port Value</SD>
-                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_DOWN</SD>
-                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_DOWN</SD>
+                                  <SD GID="DV:Default">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_AVAILABE</SD>
+                                  <SD GID="DV:Value">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_AVAILABE</SD>
                                 </SDG>
                                 <SDG GID="DV:Param:Initial_Rule_State">
                                   <SD GID="DV:Name">Initial Rule State</SD>
-                                  <SD GID="DV:Default">BSWM_FALSE</SD>
-                                  <SD GID="DV:Value">BSWM_FALSE</SD>
+                                  <SD GID="DV:Default">BSWM_TRUE</SD>
+                                  <SD GID="DV:Value">BSWM_TRUE</SD>
                                 </SDG>
-                                <SDG GID="DV:Feature:EH:_SdEventHandler_0xC3C1_EcuState">
-                                  <SD GID="DV:Name">EH: SdEventHandler_0xC3C1_EcuState</SD>
-                                  <SD GID="DV:Value">TRUE</SD>
+                                <SDG GID="DV:Feature:EH:_SdEventHandler_0xC3C2_EcuState">
+                                  <SD GID="DV:Name">EH: SdEventHandler_0xC3C2_EcuState</SD>
+                                  <SD GID="DV:Value">FALSE</SD>
                                 </SDG>
                               </SDG>
                             </SDG>
@@ -3106,7 +3287,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
+                          <VALUE>BSWM_TRUE</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <REFERENCE-VALUES>
@@ -3253,7 +3434,7 @@
                               <REFERENCE-VALUES>
                                 <ECUC-REFERENCE-VALUE>
                                   <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMSwcModeInitValue/BswMSwcModeInitValueRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_RELEASED</VALUE-REF>
+                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_REQUESTED</VALUE-REF>
                                 </ECUC-REFERENCE-VALUE>
                               </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
@@ -3808,7 +3989,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
+                          <VALUE>BSWM_TRUE</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <REFERENCE-VALUES>
@@ -3955,7 +4136,7 @@
                               <REFERENCE-VALUES>
                                 <ECUC-REFERENCE-VALUE>
                                   <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMSwcModeInitValue/BswMSwcModeInitValueRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_RELEASED</VALUE-REF>
+                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_REQUESTED</VALUE-REF>
                                 </ECUC-REFERENCE-VALUE>
                               </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
@@ -4510,7 +4691,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
+                          <VALUE>BSWM_TRUE</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <REFERENCE-VALUES>
@@ -4657,7 +4838,7 @@
                               <REFERENCE-VALUES>
                                 <ECUC-REFERENCE-VALUE>
                                   <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMSwcModeInitValue/BswMSwcModeInitValueRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_RELEASED</VALUE-REF>
+                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_REQUESTED</VALUE-REF>
                                 </ECUC-REFERENCE-VALUE>
                               </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
@@ -4690,7 +4871,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
+                          <VALUE>BSWM_TRUE</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <REFERENCE-VALUES>
@@ -4837,7 +5018,7 @@
                               <REFERENCE-VALUES>
                                 <ECUC-REFERENCE-VALUE>
                                   <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMSwcModeInitValue/BswMSwcModeInitValueRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_DOWN</VALUE-REF>
+                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_AVAILABE</VALUE-REF>
                                 </ECUC-REFERENCE-VALUE>
                               </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
@@ -4870,7 +5051,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
+                          <VALUE>BSWM_TRUE</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <REFERENCE-VALUES>
@@ -5017,183 +5198,9 @@
                               <REFERENCE-VALUES>
                                 <ECUC-REFERENCE-VALUE>
                                   <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMSwcModeInitValue/BswMSwcModeInitValueRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_DOWN</VALUE-REF>
+                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_AVAILABE</VALUE-REF>
                                 </ECUC-REFERENCE-VALUE>
                               </REFERENCE-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="49731b85-4468-4f8b-b779-8f5dd254b404">
-                      <SHORT-NAME>SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:SDC">
-                                <SD GID="NAME">SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMNestedExecutionOnly</DEFINITION-REF>
-                          <VALUE>false</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleId</DEFINITION-REF>
-                          <VALUE>27</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleExpressionRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/SDC_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuStateIsRequested</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleFalseActionList</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleTrueActionList</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="6a7224f7-08b3-4e00-b076-a90083d271cc">
-                      <SHORT-NAME>SDC_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuStateIsRequested</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:SDC">
-                                <SD GID="NAME">SDC_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuStateIsRequested</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMLogicalExpression</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMLogicalExpression/BswMLogicalOperator</DEFINITION-REF>
-                          <VALUE>BSWM_AND</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMLogicalExpression/BswMArgumentRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/SDC_Cond_SdEHState_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_EQ_SD_EVENT_HANDLER_REQUESTED</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="eb32b122-a748-47ca-b7f7-7d864cd9a570">
-                      <SHORT-NAME>SDC_Cond_SdEHState_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_EQ_SD_EVENT_HANDLER_REQUESTED</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:SDC">
-                                <SD GID="NAME">SDC_Cond_SdEHState_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_EQ_SD_EVENT_HANDLER_REQUESTED</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition/BswMConditionType</DEFINITION-REF>
-                          <VALUE>BSWM_EQUALS</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition/BswMConditionMode</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMArbitration/SDC_SdEHState_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="5b83fe8c-574d-45bf-9275-381a72bbe9c3">
-                          <SHORT-NAME>BswMConditionValue</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition/BswMConditionValue</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="5789a18f-a4c5-4978-bd86-2ff188b5aab4">
-                              <SHORT-NAME>BswMBswMode</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition/BswMConditionValue/BswMBswMode</DEFINITION-REF>
-                              <PARAMETER-VALUES>
-                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeCondition/BswMConditionValue/BswMBswMode/BswMBswRequestedMode</DEFINITION-REF>
-                                  <VALUE>SD_EVENT_HANDLER_REQUESTED</VALUE>
-                                </ECUC-TEXTUAL-PARAM-VALUE>
-                              </PARAMETER-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="a98b0091-e8cd-4a1c-989b-610ba671f73c">
-                      <SHORT-NAME>SDC_SdEHState_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:SDC">
-                                <SD GID="NAME">SDC_SdEHState_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-NUMERICAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMArbitrateOnInit</DEFINITION-REF>
-                          <VALUE>false</VALUE>
-                        </ECUC-NUMERICAL-PARAM-VALUE>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMRequestProcessing</DEFINITION-REF>
-                          <VALUE>BSWM_DEFERRED</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="541c7199-0238-499b-8f93-c778275657bf">
-                          <SHORT-NAME>BswMModeRequestSource</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeRequestSource</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="46f0c8b6-7506-49bd-b437-7935ab24bd88">
-                              <SHORT-NAME>BswMSdEventHandlerCurrentState</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeRequestSource/BswMSdEventHandlerCurrentState</DEFINITION-REF>
-                              <REFERENCE-VALUES>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeRequestSource/BswMSdEventHandlerCurrentState/BswMSdEventHandlerRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Sd/SdConfig/SdInstance_Vlan23/SdServerService_0xC3C2_EcuState/SdEventHandler_0xC3C2_EcuState</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                              </REFERENCE-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                        <ECUC-CONTAINER-VALUE UUID="43d7972e-d54b-4b21-b25f-22a35ed90f49">
-                          <SHORT-NAME>BswMModeInitValue</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="4cb3663d-76a8-46f1-8eda-cb7dbe844ff3">
-                              <SHORT-NAME>BswMBswModeInitValue</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMBswModeInitValue</DEFINITION-REF>
-                              <PARAMETER-VALUES>
-                                <ECUC-TEXTUAL-PARAM-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMBswModeInitValue/BswMBswModeInitValueMode</DEFINITION-REF>
-                                  <VALUE>SD_EVENT_HANDLER_RELEASED</VALUE>
-                                </ECUC-TEXTUAL-PARAM-VALUE>
-                              </PARAMETER-VALUES>
                             </ECUC-CONTAINER-VALUE>
                           </SUB-CONTAINERS>
                         </ECUC-CONTAINER-VALUE>
@@ -5398,7 +5405,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
+                          <VALUE>BSWM_TRUE</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <REFERENCE-VALUES>
@@ -5545,7 +5552,7 @@
                               <REFERENCE-VALUES>
                                 <ECUC-REFERENCE-VALUE>
                                   <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMSwcModeInitValue/BswMSwcModeInitValueRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_RELEASED</VALUE-REF>
+                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_REQUESTED</VALUE-REF>
                                 </ECUC-REFERENCE-VALUE>
                               </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
@@ -5752,7 +5759,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
+                          <VALUE>BSWM_TRUE</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <REFERENCE-VALUES>
@@ -5899,7 +5906,7 @@
                               <REFERENCE-VALUES>
                                 <ECUC-REFERENCE-VALUE>
                                   <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMSwcModeInitValue/BswMSwcModeInitValueRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_DOWN</VALUE-REF>
+                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdServerServiceRequest/SDC_SERVER_AVAILABE</VALUE-REF>
                                 </ECUC-REFERENCE-VALUE>
                               </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
@@ -5932,7 +5939,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
+                          <VALUE>BSWM_TRUE</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <REFERENCE-VALUES>
@@ -6079,7 +6086,7 @@
                               <REFERENCE-VALUES>
                                 <ECUC-REFERENCE-VALUE>
                                   <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMSwcModeInitValue/BswMSwcModeInitValueRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_RELEASED</VALUE-REF>
+                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdConsumedEventGroupRequest/SDC_CEG_REQUESTED</VALUE-REF>
                                 </ECUC-REFERENCE-VALUE>
                               </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
@@ -6112,7 +6119,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMRule/BswMRuleInitState</DEFINITION-REF>
-                          <VALUE>BSWM_FALSE</VALUE>
+                          <VALUE>BSWM_TRUE</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                       <REFERENCE-VALUES>
@@ -6259,7 +6266,7 @@
                               <REFERENCE-VALUES>
                                 <ECUC-REFERENCE-VALUE>
                                   <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMArbitration/BswMModeRequestPort/BswMModeInitValue/BswMSwcModeInitValue/BswMSwcModeInitValueRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_RELEASED</VALUE-REF>
+                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdClientServiceRequest/SDC_CLIENT_REQUESTED</VALUE-REF>
                                 </ECUC-REFERENCE-VALUE>
                               </REFERENCE-VALUES>
                             </ECUC-CONTAINER-VALUE>
@@ -8346,7 +8353,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>15</VALUE>
+                              <VALUE>16</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -8377,7 +8384,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>16</VALUE>
+                              <VALUE>17</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -8457,7 +8464,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>17</VALUE>
+                              <VALUE>18</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -8517,7 +8524,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>12</VALUE>
+                              <VALUE>13</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -8597,7 +8604,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>14</VALUE>
+                              <VALUE>15</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -8617,7 +8624,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>11</VALUE>
+                              <VALUE>12</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -8677,7 +8684,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>18</VALUE>
+                              <VALUE>20</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -8697,7 +8704,7 @@
                             </ECUC-NUMERICAL-PARAM-VALUE>
                             <ECUC-NUMERICAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>13</VALUE>
+                              <VALUE>14</VALUE>
                             </ECUC-NUMERICAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                           <REFERENCE-VALUES>
@@ -8724,6 +8731,46 @@
                             <ECUC-REFERENCE-VALUE>
                               <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
                               <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/INIT_Action_LdCom_Init</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="78fd6a12-8a9c-41ba-a21d-1bd7bca886ce">
+                          <SHORT-NAME>INIT_Action_DoIP_Init</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
+                              <VALUE>11</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/INIT_Action_DoIP_Init</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE UUID="daf55017-5ba9-4167-b69c-ea6d49827943">
+                          <SHORT-NAME>INIT_Action_Dcm_Init</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
+                              <VALUE>19</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/INIT_Action_Dcm_Init</VALUE-REF>
                             </ECUC-REFERENCE-VALUE>
                           </REFERENCE-VALUES>
                         </ECUC-CONTAINER-VALUE>
@@ -11633,209 +11680,6 @@
                         </ECUC-CONTAINER-VALUE>
                       </SUB-CONTAINERS>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="7d9fc228-2a63-4bfa-b515-d255b9ea78a0">
-                      <SHORT-NAME>SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:SDC">
-                                <SD GID="NAME">SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListExecution</DEFINITION-REF>
-                          <VALUE>BSWM_TRIGGER</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="72966dff-ae43-4069-8f4a-42fcf7c9f493">
-                          <SHORT-NAME>SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_SDC_EH_RELEASED</SHORT-NAME>
-                          <ADMIN-DATA>
-                            <SDGS>
-                              <SDG GID="DV:BswM">
-                                <SDG GID="DV:Statemachines">
-                                  <SDG GID="DV:SDC">
-                                    <SD GID="NAME">SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_SDC_EH_RELEASED</SD>
-                                  </SDG>
-                                </SDG>
-                              </SDG>
-                            </SDGS>
-                          </ADMIN-DATA>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
-                              <VALUE>false</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>0</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                          <REFERENCE-VALUES>
-                            <ECUC-REFERENCE-VALUE>
-                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_SDC_EH_RELEASED</VALUE-REF>
-                            </ECUC-REFERENCE-VALUE>
-                          </REFERENCE-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="579e8616-90b0-46db-a90c-2a5dd07d0b14">
-                      <SHORT-NAME>SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_SDC_EH_RELEASED</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:SDC">
-                                <SD GID="NAME">SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_SDC_EH_RELEASED</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="f1a4dca0-4786-450e-aa88-be0da0c4cad6">
-                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="3689dd78-4fb8-4018-bedc-369438e352eb">
-                              <SHORT-NAME>BswMRteSwitch</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMRteSwitch</DEFINITION-REF>
-                              <REFERENCE-VALUES>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMRteSwitch/BswMSwitchedMode</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdEventHandlerState/SDC_EH_RELEASED</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMRteSwitch/BswMRteSwitchPortRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                              </REFERENCE-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="71923264-a877-4e46-9766-659b532a346c">
-                      <SHORT-NAME>SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:SDC">
-                                <SD GID="NAME">SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMSwitchPort</DEFINITION-REF>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMSwitchPort/BswMModeSwitchInterfaceRef</DEFINITION-REF>
-                          <VALUE-REF DEST="MODE-SWITCH-INTERFACE">/MICROSAR/BswM_swc/Interfaces/BswM_MSI_SDC_SdEventHandlerState</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="8af31ec3-47d8-4511-bffd-300ebdd4dcb0">
-                      <SHORT-NAME>SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:SDC">
-                                <SD GID="NAME">SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList</DEFINITION-REF>
-                      <PARAMETER-VALUES>
-                        <ECUC-TEXTUAL-PARAM-VALUE>
-                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListExecution</DEFINITION-REF>
-                          <VALUE>BSWM_TRIGGER</VALUE>
-                        </ECUC-TEXTUAL-PARAM-VALUE>
-                      </PARAMETER-VALUES>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="47183e43-4f38-48e4-8a0b-27a43dcc0bb0">
-                          <SHORT-NAME>SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_SDC_EH_REQUESTED</SHORT-NAME>
-                          <ADMIN-DATA>
-                            <SDGS>
-                              <SDG GID="DV:BswM">
-                                <SDG GID="DV:Statemachines">
-                                  <SDG GID="DV:SDC">
-                                    <SD GID="NAME">SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_SDC_EH_REQUESTED</SD>
-                                  </SDG>
-                                </SDG>
-                              </SDG>
-                            </SDGS>
-                          </ADMIN-DATA>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMAbortOnFail</DEFINITION-REF>
-                              <VALUE>false</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                            <ECUC-NUMERICAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemIndex</DEFINITION-REF>
-                              <VALUE>0</VALUE>
-                            </ECUC-NUMERICAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                          <REFERENCE-VALUES>
-                            <ECUC-REFERENCE-VALUE>
-                              <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMActionList/BswMActionListItem/BswMActionListItemRef</DEFINITION-REF>
-                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_SDC_EH_REQUESTED</VALUE-REF>
-                            </ECUC-REFERENCE-VALUE>
-                          </REFERENCE-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="16b6d091-46e9-45a8-a2a0-970d50ca26d2">
-                      <SHORT-NAME>SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_SDC_EH_REQUESTED</SHORT-NAME>
-                      <ADMIN-DATA>
-                        <SDGS>
-                          <SDG GID="DV:BswM">
-                            <SDG GID="DV:Statemachines">
-                              <SDG GID="DV:SDC">
-                                <SD GID="NAME">SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_SDC_EH_REQUESTED</SD>
-                              </SDG>
-                            </SDG>
-                          </SDG>
-                        </SDGS>
-                      </ADMIN-DATA>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
-                      <SUB-CONTAINERS>
-                        <ECUC-CONTAINER-VALUE UUID="0a6aa668-8114-40a8-a6c5-38007ed90896">
-                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
-                          <SUB-CONTAINERS>
-                            <ECUC-CONTAINER-VALUE UUID="a0278058-a582-42ce-81a8-99d24aa21c91">
-                              <SHORT-NAME>BswMRteSwitch</SHORT-NAME>
-                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMRteSwitch</DEFINITION-REF>
-                              <REFERENCE-VALUES>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMRteSwitch/BswMSwitchedMode</DEFINITION-REF>
-                                  <VALUE-REF DEST="MODE-DECLARATION">/MICROSAR/BswM_swc/SDC_SdEventHandlerState/SDC_EH_REQUESTED</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                                <ECUC-REFERENCE-VALUE>
-                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMRteSwitch/BswMRteSwitchPortRef</DEFINITION-REF>
-                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/BswM/BswMConfig/BswMModeControl/SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState</VALUE-REF>
-                                </ECUC-REFERENCE-VALUE>
-                              </REFERENCE-VALUES>
-                            </ECUC-CONTAINER-VALUE>
-                          </SUB-CONTAINERS>
-                        </ECUC-CONTAINER-VALUE>
-                      </SUB-CONTAINERS>
-                    </ECUC-CONTAINER-VALUE>
                     <ECUC-CONTAINER-VALUE UUID="75846974-e285-4097-9a59-3b594150b2f8">
                       <SHORT-NAME>SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN</SHORT-NAME>
                       <ADMIN-DATA>
@@ -12986,6 +12830,66 @@
                         </ECUC-CONTAINER-VALUE>
                       </SUB-CONTAINERS>
                     </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="1782caec-f3ad-4e05-baed-5f2c00d7c802">
+                      <SHORT-NAME>INIT_Action_DoIP_Init</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="7bbdf159-b2bf-44a3-96a5-49a1a059582c">
+                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="7fd5d92b-50c8-4ad7-8eba-6d8f89ffbd64">
+                              <SHORT-NAME>BswMUserCallout</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserCalloutFunction</DEFINITION-REF>
+                                  <VALUE>DoIP_Init(DoIP_Config_Ptr)</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMCreateCallout</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserIncludeFile</DEFINITION-REF>
+                                  <VALUE>DoIP.h</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="80e4f158-ccf4-4137-9723-f434653fd057">
+                      <SHORT-NAME>INIT_Action_Dcm_Init</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE UUID="2b9f43a5-0a6b-4313-9935-df0bdbf38826">
+                          <SHORT-NAME>BswMAvailableActions</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions</DEFINITION-REF>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE UUID="875d3201-f48e-4fc6-9416-71726476bdad">
+                              <SHORT-NAME>BswMUserCallout</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserCalloutFunction</DEFINITION-REF>
+                                  <VALUE>Dcm_Init(NULL_PTR)</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMCreateCallout</DEFINITION-REF>
+                                  <VALUE>false</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/BswM/BswMConfig/BswMModeControl/BswMAction/BswMAvailableActions/BswMUserCallout/BswMUserIncludeFile</DEFINITION-REF>
+                                  <VALUE>Dcm.h</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
                 </ECUC-CONTAINER-VALUE>
                 <ECUC-CONTAINER-VALUE UUID="4aec40e1-d5ae-4cc0-8fd2-b528ef5279dc">
@@ -13212,7 +13116,7 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="ca7360a6-9868-401d-bfc2-107cd64dc47f">
+                    <ECUC-CONTAINER-VALUE UUID="0cfab109-8b5b-46e3-a6d9-00ce440b04fe">
                       <SHORT-NAME>SDC_EH_RELEASED</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13233,7 +13137,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="3c1ae135-3a8f-48ca-8c6b-09b05a66d25e">
+                    <ECUC-CONTAINER-VALUE UUID="9961fcc2-965d-41ae-bc54-cb93a8b0fd08">
                       <SHORT-NAME>SDC_EH_REQUESTED</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13277,7 +13181,7 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="81e3ad30-039e-452b-b369-c2da5ff60709">
+                    <ECUC-CONTAINER-VALUE UUID="31516d3a-0e25-4cde-8f0f-8bd9475a7235">
                       <SHORT-NAME>SDC_CLIENT_DOWN</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13298,7 +13202,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="dc8ddb5d-2cd9-4c9d-85bb-036911aebe25">
+                    <ECUC-CONTAINER-VALUE UUID="2675b573-959d-4a83-ab3d-e968c18d753f">
                       <SHORT-NAME>SDC_CLIENT_AVAILABLE</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13342,7 +13246,7 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="8d4a8497-3c61-47a8-becb-c3244060ba33">
+                    <ECUC-CONTAINER-VALUE UUID="41d30ab6-4c62-407c-89f0-0d44364cfcbf">
                       <SHORT-NAME>SDC_CEG_DOWN</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13363,7 +13267,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="dacfcceb-4990-42a5-abc4-ca313aa52e66">
+                    <ECUC-CONTAINER-VALUE UUID="7cdfacba-7124-4e39-be6d-bac313c37d89">
                       <SHORT-NAME>SDC_CEG_AVAILABLE</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13407,7 +13311,7 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="1bfb2094-57d6-4b0d-a8f8-865b020841a9">
+                    <ECUC-CONTAINER-VALUE UUID="555f676b-7fae-48f0-b877-86e7e094e47d">
                       <SHORT-NAME>SDC_SERVER_DOWN</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13428,7 +13332,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="8a0e59c4-bbb7-4e9a-8215-d284661feafe">
+                    <ECUC-CONTAINER-VALUE UUID="c4e8a2c7-6411-4ab8-91de-ee1a2280d007">
                       <SHORT-NAME>SDC_SERVER_AVAILABE</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13472,7 +13376,7 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="a46fc67f-f34e-43a6-8ba2-26aa3777be49">
+                    <ECUC-CONTAINER-VALUE UUID="f59a4b75-439a-409a-a38e-32a797eccb95">
                       <SHORT-NAME>SDC_CEG_RELEASED</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13493,7 +13397,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="1f61b6e5-af20-4c88-a6ad-305e2aa05c76">
+                    <ECUC-CONTAINER-VALUE UUID="a95c6de8-17e8-4b7c-afe0-e6824ffe452f">
                       <SHORT-NAME>SDC_CEG_REQUESTED</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13537,7 +13441,7 @@
                     </ECUC-REFERENCE-VALUE>
                   </REFERENCE-VALUES>
                   <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE UUID="50883dda-f998-4124-ba8f-acfa05dad87d">
+                    <ECUC-CONTAINER-VALUE UUID="8d1a846d-9988-4841-9e52-4d7882f16dd7">
                       <SHORT-NAME>SDC_CLIENT_RELEASED</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>
@@ -13558,7 +13462,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
-                    <ECUC-CONTAINER-VALUE UUID="e4ea2af7-da6c-4c66-9b74-b94025feb411">
+                    <ECUC-CONTAINER-VALUE UUID="101c7be8-5872-43e5-9894-7e0dc19a579d">
                       <SHORT-NAME>SDC_CLIENT_REQUESTED</SHORT-NAME>
                       <ADMIN-DATA>
                         <SDGS>

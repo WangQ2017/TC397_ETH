@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Lcfg.c
- *   Generation Time: 2026-02-02 11:06:38
+ *   Generation Time: 2026-02-08 21:31:39
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -233,8 +233,6 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRelease_S_
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRequest_S_SdServerService_0xC3C0_FaultInfo(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRelease_S_SdServerService_0xC3C1_SenState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRequest_S_SdServerService_0xC3C1_SenState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
-BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
-BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
@@ -291,7 +289,6 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_SdStateChange_S_SdServ
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
-BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
@@ -368,7 +365,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_C_SdCLient
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[48] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[46] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    FctPtr                                                                                                                                     Comment                   Referable Keys */
   { /*     0 */ BswM_ActionList_ESH_AL_RunToPostRun                                                                                                 },  /* [Priority: 0] */  /* [AL_ESH_AL_RunToPostRun] */
   { /*     1 */ BswM_ActionList_ESH_AL_WaitForNvMToShutdown                                                                                         },  /* [Priority: 0] */  /* [AL_ESH_AL_WaitForNvMToShutdown] */
@@ -404,20 +401,18 @@ CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[48] = {  /* PRQA S 1514
   { /*    31 */ BswM_ActionList_SDC_AL_ApplRequest_S_SdServerService_0xC3C0_FaultInfo                                                               },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C0_FaultInfo] */
   { /*    32 */ BswM_ActionList_SDC_AL_ApplRelease_S_SdServerService_0xC3C1_SenState                                                                },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C1_SenState] */
   { /*    33 */ BswM_ActionList_SDC_AL_ApplRequest_S_SdServerService_0xC3C1_SenState                                                                },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C1_SenState] */
-  { /*    34 */ BswM_ActionList_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState                                },  /* [Priority: 0] */  /* [AL_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState] */
-  { /*    35 */ BswM_ActionList_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState                                },  /* [Priority: 0] */  /* [AL_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState] */
-  { /*    36 */ BswM_ActionList_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN                                                          },  /* [Priority: 0] */  /* [AL_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN] */
-  { /*    37 */ BswM_ActionList_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE                                                },  /* [Priority: 0] */  /* [AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE] */
-  { /*    38 */ BswM_ActionList_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus           },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
-  { /*    39 */ BswM_ActionList_SDC_AL_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus           },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
-  { /*    40 */ BswM_ActionList_SDC_AL_SdDown_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_DOWN               },  /* [Priority: 0] */  /* [AL_SDC_AL_SdDown_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_DOWN] */
-  { /*    41 */ BswM_ActionList_SDC_AL_SdAvailable_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_AVAILABLE     },  /* [Priority: 0] */  /* [AL_SDC_AL_SdAvailable_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_AVAILABLE] */
-  { /*    42 */ BswM_ActionList_SDC_AL_ApplRelease_S_SdServerService_0xC3C2_EcuState                                                                },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C2_EcuState] */
-  { /*    43 */ BswM_ActionList_SDC_AL_ApplRequest_S_SdServerService_0xC3C2_EcuState                                                                },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C2_EcuState] */
-  { /*    44 */ BswM_ActionList_SDC_AL_ApplRelease_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed             },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
-  { /*    45 */ BswM_ActionList_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed             },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
-  { /*    46 */ BswM_ActionList_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo                                                            },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo] */
-  { /*    47 */ BswM_ActionList_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                            }   /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
+  { /*    34 */ BswM_ActionList_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN                                                          },  /* [Priority: 0] */  /* [AL_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN] */
+  { /*    35 */ BswM_ActionList_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE                                                },  /* [Priority: 0] */  /* [AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE] */
+  { /*    36 */ BswM_ActionList_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus           },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
+  { /*    37 */ BswM_ActionList_SDC_AL_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus           },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
+  { /*    38 */ BswM_ActionList_SDC_AL_SdDown_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_DOWN               },  /* [Priority: 0] */  /* [AL_SDC_AL_SdDown_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_DOWN] */
+  { /*    39 */ BswM_ActionList_SDC_AL_SdAvailable_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_AVAILABLE     },  /* [Priority: 0] */  /* [AL_SDC_AL_SdAvailable_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_AVAILABLE] */
+  { /*    40 */ BswM_ActionList_SDC_AL_ApplRelease_S_SdServerService_0xC3C2_EcuState                                                                },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C2_EcuState] */
+  { /*    41 */ BswM_ActionList_SDC_AL_ApplRequest_S_SdServerService_0xC3C2_EcuState                                                                },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C2_EcuState] */
+  { /*    42 */ BswM_ActionList_SDC_AL_ApplRelease_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed             },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
+  { /*    43 */ BswM_ActionList_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed             },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
+  { /*    44 */ BswM_ActionList_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo                                                            },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo] */
+  { /*    45 */ BswM_ActionList_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                            }   /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -437,7 +432,7 @@ CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[48] = {  /* PRQA S 1514
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_DeferredRulesType, BSWM_CONST) BswM_DeferredRules[25] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_DeferredRulesType, BSWM_CONST) BswM_DeferredRules[24] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    RulesIdx        Referable Keys */
   { /*     0 */       0u },  /* [R_ESH_RunToPostRun] */
   { /*     1 */       1u },  /* [R_ESH_WaitToShutdown] */
@@ -457,13 +452,12 @@ CONST(BswM_DeferredRulesType, BSWM_CONST) BswM_DeferredRules[25] = {  /* PRQA S 
   { /*    15 */      18u },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus] */
   { /*    16 */      19u },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo] */
   { /*    17 */      20u },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState] */
-  { /*    18 */      21u },  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState] */
-  { /*    19 */      22u },  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus] */
-  { /*    20 */      23u },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
-  { /*    21 */      24u },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
-  { /*    22 */      25u },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState] */
-  { /*    23 */      26u },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
-  { /*    24 */      27u }   /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
+  { /*    18 */      21u },  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus] */
+  { /*    19 */      22u },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
+  { /*    20 */      23u },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
+  { /*    21 */      24u },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState] */
+  { /*    22 */      25u },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
+  { /*    23 */      26u }   /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -534,6 +528,7 @@ CONST(BswM_PartitionIdentifiersType, BSWM_CONST) BswM_PartitionIdentifiers[1] = 
   \details
   Element          Description
   Id               External id of rule.
+  Init             Initialization value of rule state (TRUE, FALSE, UNDEFINED or DEACTIVATED).
   RuleStatesIdx    the index of the 1:1 relation pointing to BswM_RuleStates
   FctPtr           Pointer to the rule function which does the arbitration.
 */ 
@@ -541,36 +536,35 @@ CONST(BswM_PartitionIdentifiersType, BSWM_CONST) BswM_PartitionIdentifiers[1] = 
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[28] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    Id   RuleStatesIdx  FctPtr                                                                                                                    Referable Keys */
-  { /*     0 */  5u,            0u, BswM_Rule_ESH_RunToPostRun                                                                                         },  /* [R_ESH_RunToPostRun, MRP_ESH_State, MRP_ESH_ModeNotification, MRP_ESH_RunRequest_0, MRP_ESH_RunRequest_1, MRP_ESH_SelfRunRequestTimer] */
-  { /*     1 */  6u,            1u, BswM_Rule_ESH_WaitToShutdown                                                                                       },  /* [R_ESH_WaitToShutdown, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents] */
-  { /*     2 */  8u,            2u, BswM_Rule_ESH_WakeupToPrep                                                                                         },  /* [R_ESH_WakeupToPrep, MRP_ESH_State, MRP_ESH_EcuM_GetPendingWakeupEvents, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ModeNotification] */
-  { /*     3 */  7u,            3u, BswM_Rule_ESH_WaitToWakeup                                                                                         },  /* [R_ESH_WaitToWakeup, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents] */
-  { /*     4 */  9u,            4u, BswM_Rule_ESH_WakeupToRun                                                                                          },  /* [R_ESH_WakeupToRun, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ModeNotification] */
-  { /*     5 */  0u,            5u, BswM_Rule_ESH_InitToWakeup                                                                                         },  /* [R_ESH_InitToWakeup, MRP_ESH_State] */
-  { /*     6 */  3u,            6u, BswM_Rule_ESH_PostRunToPrepNested                                                                                  },  /* [R_ESH_PostRunToPrepNested] */
-  { /*     7 */  2u,            7u, BswM_Rule_ESH_PostRunNested                                                                                        },  /* [R_ESH_PostRunNested] */
-  { /*     8 */  1u,            8u, BswM_Rule_ESH_PostRun                                                                                              },  /* [R_ESH_PostRun, MRP_ESH_State, MRP_ESH_ModeNotification] */
-  { /*     9 */  4u,            9u, BswM_Rule_ESH_PrepToWait                                                                                           },  /* [R_ESH_PrepToWait, MRP_ESH_State, MRP_ESH_ModeNotification] */
-  { /*    10 */ 13u,           10u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo       },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo, MRP_SDC_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
-  { /*    11 */ 19u,           11u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed                                                 },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed, MRP_SDC_SdClientState_C_SdCLientService_0xC3CB_VechicleSpeed] */
-  { /*    12 */ 26u,           12u, BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState                    },  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState, MRP_SDC_SdEHState_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState] */
-  { /*    13 */ 20u,           13u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed   },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed, MRP_SDC_SdCEGState_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
-  { /*    14 */ 10u,           14u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed                                                   },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed, MRP_SDC_C_SdCLientService_0xC3CB_VechicleSpeed] */
-  { /*    15 */ 21u,           15u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo                                                  },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo, MRP_SDC_SdClientState_C_SdCLientService_0xC3CD_VechicleInfo] */
-  { /*    16 */ 24u,           16u, BswM_Rule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus },  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus, MRP_SDC_SdCEGState_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
-  { /*    17 */ 25u,           17u, BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo                  },  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo, MRP_SDC_SdEHState_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo] */
-  { /*    18 */ 14u,           18u, BswM_Rule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus                                                  },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus, MRP_SDC_C_SdClientService_0xC3CC_VechicleStatus] */
-  { /*    19 */ 16u,           19u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo                                                       },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo, MRP_SDC_S_SdServerService_0xC3C0_FaultInfo] */
-  { /*    20 */ 17u,           20u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState                                                        },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState, MRP_SDC_S_SdServerService_0xC3C1_SenState] */
-  { /*    21 */ 27u,           21u, BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState                    },  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState, MRP_SDC_SdEHState_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState] */
-  { /*    22 */ 23u,           22u, BswM_Rule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus                                                },  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus, MRP_SDC_SdClientState_C_SdClientService_0xC3CC_VechicleStatus] */
-  { /*    23 */ 15u,           23u, BswM_Rule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus   },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus, MRP_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
-  { /*    24 */ 22u,           24u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo     },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo, MRP_SDC_SdCEGState_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
-  { /*    25 */ 18u,           25u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState                                                        },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState, MRP_SDC_S_SdServerService_0xC3C2_EcuState] */
-  { /*    26 */ 11u,           26u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed     },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed, MRP_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
-  { /*    27 */ 12u,           27u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                    }   /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo, MRP_SDC_C_SdCLientService_0xC3CD_VechicleInfo] */
+CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[27] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    Id   Init        RuleStatesIdx  FctPtr                                                                                                                    Referable Keys */
+  { /*     0 */  5u, BSWM_FALSE,            0u, BswM_Rule_ESH_RunToPostRun                                                                                         },  /* [R_ESH_RunToPostRun, MRP_ESH_State, MRP_ESH_ModeNotification, MRP_ESH_RunRequest_0, MRP_ESH_RunRequest_1, MRP_ESH_SelfRunRequestTimer] */
+  { /*     1 */  6u, BSWM_FALSE,            1u, BswM_Rule_ESH_WaitToShutdown                                                                                       },  /* [R_ESH_WaitToShutdown, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents] */
+  { /*     2 */  8u, BSWM_FALSE,            2u, BswM_Rule_ESH_WakeupToPrep                                                                                         },  /* [R_ESH_WakeupToPrep, MRP_ESH_State, MRP_ESH_EcuM_GetPendingWakeupEvents, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ModeNotification] */
+  { /*     3 */  7u, BSWM_FALSE,            3u, BswM_Rule_ESH_WaitToWakeup                                                                                         },  /* [R_ESH_WaitToWakeup, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents] */
+  { /*     4 */  9u, BSWM_FALSE,            4u, BswM_Rule_ESH_WakeupToRun                                                                                          },  /* [R_ESH_WakeupToRun, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ModeNotification] */
+  { /*     5 */  0u, BSWM_FALSE,            5u, BswM_Rule_ESH_InitToWakeup                                                                                         },  /* [R_ESH_InitToWakeup, MRP_ESH_State] */
+  { /*     6 */  3u, BSWM_FALSE,            6u, BswM_Rule_ESH_PostRunToPrepNested                                                                                  },  /* [R_ESH_PostRunToPrepNested] */
+  { /*     7 */  2u, BSWM_FALSE,            7u, BswM_Rule_ESH_PostRunNested                                                                                        },  /* [R_ESH_PostRunNested] */
+  { /*     8 */  1u, BSWM_FALSE,            8u, BswM_Rule_ESH_PostRun                                                                                              },  /* [R_ESH_PostRun, MRP_ESH_State, MRP_ESH_ModeNotification] */
+  { /*     9 */  4u, BSWM_FALSE,            9u, BswM_Rule_ESH_PrepToWait                                                                                           },  /* [R_ESH_PrepToWait, MRP_ESH_State, MRP_ESH_ModeNotification] */
+  { /*    10 */ 13u, BSWM_TRUE ,           10u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo       },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo, MRP_SDC_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
+  { /*    11 */ 19u, BSWM_FALSE,           11u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed                                                 },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed, MRP_SDC_SdClientState_C_SdCLientService_0xC3CB_VechicleSpeed] */
+  { /*    12 */ 26u, BSWM_FALSE,           12u, BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState                    },  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState, MRP_SDC_SdEHState_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState] */
+  { /*    13 */ 20u, BSWM_FALSE,           13u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed   },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed, MRP_SDC_SdCEGState_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
+  { /*    14 */ 10u, BSWM_TRUE ,           14u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed                                                   },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed, MRP_SDC_C_SdCLientService_0xC3CB_VechicleSpeed] */
+  { /*    15 */ 21u, BSWM_FALSE,           15u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo                                                  },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo, MRP_SDC_SdClientState_C_SdCLientService_0xC3CD_VechicleInfo] */
+  { /*    16 */ 24u, BSWM_FALSE,           16u, BswM_Rule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus },  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus, MRP_SDC_SdCEGState_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
+  { /*    17 */ 25u, BSWM_FALSE,           17u, BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo                  },  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo, MRP_SDC_SdEHState_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo] */
+  { /*    18 */ 14u, BSWM_TRUE ,           18u, BswM_Rule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus                                                  },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus, MRP_SDC_C_SdClientService_0xC3CC_VechicleStatus] */
+  { /*    19 */ 16u, BSWM_TRUE ,           19u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo                                                       },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo, MRP_SDC_S_SdServerService_0xC3C0_FaultInfo] */
+  { /*    20 */ 17u, BSWM_TRUE ,           20u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState                                                        },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState, MRP_SDC_S_SdServerService_0xC3C1_SenState] */
+  { /*    21 */ 23u, BSWM_FALSE,           21u, BswM_Rule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus                                                },  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus, MRP_SDC_SdClientState_C_SdClientService_0xC3CC_VechicleStatus] */
+  { /*    22 */ 15u, BSWM_TRUE ,           22u, BswM_Rule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus   },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus, MRP_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
+  { /*    23 */ 22u, BSWM_FALSE,           23u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo     },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo, MRP_SDC_SdCEGState_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
+  { /*    24 */ 18u, BSWM_TRUE ,           24u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState                                                        },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState, MRP_SDC_S_SdServerService_0xC3C2_EcuState] */
+  { /*    25 */ 11u, BSWM_TRUE ,           25u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed     },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed, MRP_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
+  { /*    26 */ 12u, BSWM_TRUE ,           26u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                    }   /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo, MRP_SDC_C_SdCLientService_0xC3CD_VechicleInfo] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -668,11 +662,10 @@ CONST(BswM_SdConsumedEventMappingType, BSWM_CONST) BswM_SdConsumedEventMapping[3
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_SdEventHandlerMappingType, BSWM_CONST) BswM_SdEventHandlerMapping[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_SdEventHandlerMappingType, BSWM_CONST) BswM_SdEventHandlerMapping[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    ExternalId                                                   Referable Keys */
   { /*     0 */ SdConf_SdEventHandler_SdEventHandler_0xC3C0_FaultInfo },  /* [SD_EVENT_0, MRP_SDC_SdEHState_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo] */
-  { /*     1 */ SdConf_SdEventHandler_SdEventHandler_0xC3C1_EcuState  },  /* [SD_EVENT_1, MRP_SDC_SdEHState_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState] */
-  { /*     2 */ SdConf_SdEventHandler_SdEventHandler_0xC3C1_SenState  }   /* [SD_EVENT_2, MRP_SDC_SdEHState_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState] */
+  { /*     1 */ SdConf_SdEventHandler_SdEventHandler_0xC3C1_SenState  }   /* [SD_EVENT_1, MRP_SDC_SdEHState_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -742,20 +735,18 @@ VAR(BswM_ActionListQueueUType, BSWM_VAR_NOINIT) BswM_ActionListQueue;  /* PRQA S
   /*    31 */  /* [AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C0_FaultInfo] */
   /*    32 */  /* [AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C1_SenState] */
   /*    33 */  /* [AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C1_SenState] */
-  /*    34 */  /* [AL_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState] */
-  /*    35 */  /* [AL_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState] */
-  /*    36 */  /* [AL_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN] */
-  /*    37 */  /* [AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE] */
-  /*    38 */  /* [AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
-  /*    39 */  /* [AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
-  /*    40 */  /* [AL_SDC_AL_SdDown_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_DOWN] */
-  /*    41 */  /* [AL_SDC_AL_SdAvailable_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_AVAILABLE] */
-  /*    42 */  /* [AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C2_EcuState] */
-  /*    43 */  /* [AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C2_EcuState] */
-  /*    44 */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
-  /*    45 */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
-  /*    46 */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo] */
-  /*    47 */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
+  /*    34 */  /* [AL_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN] */
+  /*    35 */  /* [AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE] */
+  /*    36 */  /* [AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
+  /*    37 */  /* [AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
+  /*    38 */  /* [AL_SDC_AL_SdDown_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_DOWN] */
+  /*    39 */  /* [AL_SDC_AL_SdAvailable_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_AVAILABLE] */
+  /*    40 */  /* [AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C2_EcuState] */
+  /*    41 */  /* [AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C2_EcuState] */
+  /*    42 */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
+  /*    43 */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
+  /*    44 */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo] */
+  /*    45 */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -888,13 +879,12 @@ VAR(BswM_RuleStatesUType, BSWM_VAR_NOINIT) BswM_RuleStates;  /* PRQA S 0759, 151
   /*    18 */  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus] */
   /*    19 */  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo] */
   /*    20 */  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState] */
-  /*    21 */  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState] */
-  /*    22 */  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus] */
-  /*    23 */  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
-  /*    24 */  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
-  /*    25 */  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState] */
-  /*    26 */  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
-  /*    27 */  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
+  /*    21 */  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus] */
+  /*    22 */  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
+  /*    23 */  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
+  /*    24 */  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState] */
+  /*    25 */  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
+  /*    26 */  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -956,11 +946,10 @@ VAR(Sd_ConsumedEventGroupCurrentStateType, BSWM_VAR_NOINIT) BswM_SdConsumedEvent
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Sd_EventHandlerCurrentStateType, BSWM_VAR_NOINIT) BswM_SdEventHandlerState[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Sd_EventHandlerCurrentStateType, BSWM_VAR_NOINIT) BswM_SdEventHandlerState[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [SD_EVENT_0, MRP_SDC_SdEHState_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo] */
-  /*     1 */  /* [SD_EVENT_1, MRP_SDC_SdEHState_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState] */
-  /*     2 */  /* [SD_EVENT_2, MRP_SDC_SdEHState_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState] */
+  /*     1 */  /* [SD_EVENT_1, MRP_SDC_SdEHState_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1021,7 +1010,6 @@ VAR(Rte_ModeType_SDC_SdConsumedEventGroupState, BSWM_VAR_NOINIT) BswM_Switch_SDC
 VAR(Rte_ModeType_SDC_SdClientServiceState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState;
 VAR(Rte_ModeType_SDC_SdConsumedEventGroupState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState;
 VAR(Rte_ModeType_SDC_SdEventHandlerState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState;
-VAR(Rte_ModeType_SDC_SdEventHandlerState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState;
 VAR(Rte_ModeType_SDC_SdClientServiceState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState;
 VAR(Rte_ModeType_SDC_SdConsumedEventGroupState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState;
 
@@ -1130,22 +1118,21 @@ BSWM_LOCAL FUNC(void, BSWM_CODE) BswM_InitGenVarAndInitAL_BSWM_SINGLEPARTITION(B
   BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState = 0xFFu;
   BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState = 0xFFu;
   BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState = 0xFFu;
-  BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState = 0xFFu;
   BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState = 0xFFu;
   BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState = 0xFFu;
   Request_ESH_RunRequest_0_requestedMode = RELEASED;
   Request_ESH_RunRequest_1_requestedMode = RELEASED;
   Request_ESH_PostRunRequest_0_requestedMode = RELEASED;
   Request_ESH_PostRunRequest_1_requestedMode = RELEASED;
-  Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_requestedMode = SDC_CEG_RELEASED;
-  Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_requestedMode = SDC_CLIENT_RELEASED;
-  Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_requestedMode = SDC_CLIENT_RELEASED;
-  Request_SDC_S_SdServerService_0xC3C0_FaultInfo_requestedMode = SDC_SERVER_DOWN;
-  Request_SDC_S_SdServerService_0xC3C1_SenState_requestedMode = SDC_SERVER_DOWN;
-  Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_requestedMode = SDC_CEG_RELEASED;
-  Request_SDC_S_SdServerService_0xC3C2_EcuState_requestedMode = SDC_SERVER_DOWN;
-  Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_requestedMode = SDC_CEG_RELEASED;
-  Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_requestedMode = SDC_CLIENT_RELEASED;
+  Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_requestedMode = SDC_CEG_REQUESTED;
+  Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_requestedMode = SDC_CLIENT_REQUESTED;
+  Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_requestedMode = SDC_CLIENT_REQUESTED;
+  Request_SDC_S_SdServerService_0xC3C0_FaultInfo_requestedMode = SDC_SERVER_AVAILABE;
+  Request_SDC_S_SdServerService_0xC3C1_SenState_requestedMode = SDC_SERVER_AVAILABE;
+  Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_requestedMode = SDC_CEG_REQUESTED;
+  Request_SDC_S_SdServerService_0xC3C2_EcuState_requestedMode = SDC_SERVER_AVAILABE;
+  Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_requestedMode = SDC_CEG_REQUESTED;
+  Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_requestedMode = SDC_CLIENT_REQUESTED;
   BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_STARTUP;
   (void)BswM_ActionList_INIT_AL_Initialize(partitionIdx);
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
@@ -1203,13 +1190,6 @@ BSWM_LOCAL FUNC(void, BSWM_CODE) BswM_ModeNotificationFct_BSWM_SINGLEPARTITION(v
     if(Rte_Switch_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState(BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState) == RTE_E_OK)
     {
       BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState = 0xFFu;
-    }
-  }
-  if(BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState != 0xFFu)
-  {
-    if(Rte_Switch_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState(BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState) == RTE_E_OK)
-    {
-      BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState = 0xFFu;
     }
   }
   if(BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState != 0xFFu)
@@ -1413,6 +1393,9 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_INIT_AL_Initialize(Bs
   UdpNm_Init(UdpNm_Config_Ptr);
   /*lint -restore */
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  DoIP_Init(DoIP_Config_Ptr);
+  /*lint -restore */
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   TcpIp_Init(TcpIp_Config_Ptr);
   /*lint -restore */
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
@@ -1430,6 +1413,9 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_INIT_AL_Initialize(Bs
   /*lint -restore */
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   ComM_Init();
+  /*lint -restore */
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  Dcm_Init(NULL_PTR);
   /*lint -restore */
   BswM_Action_EthTrcvDebug();
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
@@ -1652,26 +1638,6 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRelease_S_
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRequest_S_SdServerService_0xC3C1_SenState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
   (void)Sd_ServerServiceSetState(SdConf_SdServerService_SdServerService_0xC3C1_SenState, BSWM_SD_SERVER_SERVICE_AVAILABLE);
-  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
-  return E_OK;
-}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
-
-/**********************************************************************************************************************
- *  BswM_ActionList_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState
- *********************************************************************************************************************/
-BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
-{
-  BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState = RTE_MODE_SDC_SdEventHandlerState_SDC_EH_RELEASED;
-  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
-  return E_OK;
-}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
-
-/**********************************************************************************************************************
- *  BswM_ActionList_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState
- *********************************************************************************************************************/
-BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
-{
-  BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState_BswM_MDGP_SDC_SdEventHandlerState = RTE_MODE_SDC_SdEventHandlerState_SDC_EH_REQUESTED;
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
   return E_OK;
 }/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -2039,7 +2005,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_SdStateChange_S_SdServ
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression SDC_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenStateIsRequested. */
-  if(BswM_GetSdEventHandlerState(2, 0u) == SD_EVENT_HANDLER_REQUESTED)
+  if(BswM_GetSdEventHandlerState(1, 0u) == SD_EVENT_HANDLER_REQUESTED)
   {
     if( BswM_GetRuleStates(BSWM_ID_RULE_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState, partitionIdx) != BSWM_TRUE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
     {
@@ -2287,35 +2253,6 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_S_SdServer
       BswM_UpdateRuleStates(BSWM_ID_RULE_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState, BSWM_FALSE, partitionIdx);
       /* Return triggered action list BswM_ActionList_SDC_AL_ApplRelease_S_SdServerService_0xC3C1_SenState. */
       retVal = BSWM_ID_AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C1_SenState;
-    }
-  }
-  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
-  return retVal;
-}
-
-/**********************************************************************************************************************
- *  BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState
- *********************************************************************************************************************/
-BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
-{
-  BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
-  /* Evaluate logical expression SDC_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuStateIsRequested. */
-  if(BswM_GetSdEventHandlerState(1, 0u) == SD_EVENT_HANDLER_REQUESTED)
-  {
-    if( BswM_GetRuleStates(BSWM_ID_RULE_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState, partitionIdx) != BSWM_TRUE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
-    {
-      BswM_UpdateRuleStates(BSWM_ID_RULE_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState, BSWM_TRUE, partitionIdx);
-      /* Return triggered action list BswM_ActionList_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState. */
-      retVal = BSWM_ID_AL_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState;
-    }
-  }
-  else
-  {
-    if( BswM_GetRuleStates(BSWM_ID_RULE_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState, partitionIdx) != BSWM_FALSE ) /* COV_BSWM_TRIGGEREDRULEEXECUTION */
-    {
-      BswM_UpdateRuleStates(BSWM_ID_RULE_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState, BSWM_FALSE, partitionIdx);
-      /* Return triggered action list BswM_ActionList_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState. */
-      retVal = BSWM_ID_AL_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C1_EcuState;
     }
   }
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */

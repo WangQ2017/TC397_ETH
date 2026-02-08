@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Lcfg.c
- *   Generation Time: 2026-01-25 23:19:09
+ *   Generation Time: 2026-02-08 21:29:41
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -379,7 +379,7 @@ CONST(TcpIp_IpV4CtrlType, TCPIP_CONST) TcpIp_IpV4Ctrl[3] = {  /* PRQA S 1514, 15
 /*lint -restore */
 CONST(TcpIp_IpV4GeneralType, TCPIP_CONST) TcpIp_IpV4General[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    IpV4SocketDynDhcpUsed  IpV4CtrlDefaultIdx                        IpV4SocketDynDhcpIdx  IpV4SocketDynIcmpIdx  IpV4SocketDynTcpRstIdx */
-  { /*     0 */                  TRUE, TCPIP_NO_IPV4CTRLDEFAULTIDXOFIPV4GENERAL,                  10u,                  11u,                     9u }
+  { /*     0 */                  TRUE, TCPIP_NO_IPV4CTRLDEFAULTIDXOFIPV4GENERAL,                  14u,                  15u,                    13u }
 };
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -543,10 +543,12 @@ CONST(TcpIp_TcpConfigType, TCPIP_CONST) TcpIp_TcpConfig[1] = {  /* PRQA S 1514, 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(TcpIp_TcpRxBufferDescType, TCPIP_CONST) TcpIp_TcpRxBufferDesc[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(TcpIp_TcpRxBufferDescType, TCPIP_CONST) TcpIp_TcpRxBufferDesc[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TcpRxBufferEndIdx  TcpRxBufferStartIdx */
   { /*     0 */              512u,                  0u },
-  { /*     1 */             1024u,                512u }
+  { /*     1 */             1024u,                512u },
+  { /*     2 */             1536u,               1024u },
+  { /*     3 */             2048u,               1536u }
 };
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -568,10 +570,12 @@ CONST(TcpIp_TcpRxBufferDescType, TCPIP_CONST) TcpIp_TcpRxBufferDesc[2] = {  /* P
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(TcpIp_TcpTxBufferDescType, TCPIP_CONST) TcpIp_TcpTxBufferDesc[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(TcpIp_TcpTxBufferDescType, TCPIP_CONST) TcpIp_TcpTxBufferDesc[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TcpTxBufferEndIdx  TcpTxBufferStartIdx */
   { /*     0 */              512u,                  0u },
-  { /*     1 */             1024u,                512u }
+  { /*     1 */             1024u,                512u },
+  { /*     2 */             1536u,               1024u },
+  { /*     3 */             2048u,               1536u }
 };
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -815,17 +819,17 @@ VAR(TcpIp_IpV4CtrlDynUType, TCPIP_VAR_NOINIT) TcpIp_IpV4CtrlDyn;  /* PRQA S 0759
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(TcpIp_IpV4SocketDynType, TCPIP_VAR_NOINIT) TcpIp_IpV4SocketDyn[12];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(TcpIp_IpV4SocketDynType, TCPIP_VAR_NOINIT) TcpIp_IpV4SocketDyn[16];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [UDP] */
   /*   ... */  /* [UDP] */
-  /*     5 */  /* [UDP] */
-  /*     6 */  /* [TCP] */
+  /*     6 */  /* [UDP] */
+  /*     7 */  /* [TCP] */
   /*   ... */  /* [TCP] */
-  /*     8 */  /* [TCP] */
-  /*     9 */  /* [TCP-RST] */
-  /*    10 */  /* [DHCPv4] */
-  /*    11 */  /* [ICMPv4] */
+  /*    12 */  /* [TCP] */
+  /*    13 */  /* [TCP-RST] */
+  /*    14 */  /* [DHCPv4] */
+  /*    15 */  /* [ICMPv4] */
 
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -911,10 +915,10 @@ VAR(TcpIp_SocketDynUType, TCPIP_VAR_NOINIT) TcpIp_SocketDyn;  /* PRQA S 0759, 15
   /* Index        Referable Keys */
   /*     0 */  /* [UDP] */
   /*   ... */  /* [UDP] */
-  /*     5 */  /* [UDP] */
-  /*     6 */  /* [TCP] */
+  /*     6 */  /* [UDP] */
+  /*     7 */  /* [TCP] */
   /*   ... */  /* [TCP] */
-  /*     8 */  /* [TCP] */
+  /*    12 */  /* [TCP] */
 
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -981,7 +985,7 @@ VAR(TcpIp_SocketDynUType, TCPIP_VAR_NOINIT) TcpIp_SocketDyn;  /* PRQA S 0759, 15
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-volatile VAR(TcpIp_SocketTcpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpDyn[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+volatile VAR(TcpIp_SocketTcpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpDyn[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1002,7 +1006,7 @@ volatile VAR(TcpIp_SocketTcpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpDyn[3];  /
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(TcpIp_SocketTcpNagleDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpNagleDyn[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(TcpIp_SocketTcpNagleDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpNagleDyn[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1023,7 +1027,7 @@ VAR(TcpIp_SocketTcpNagleDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpNagleDyn[3];  
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(TcpIp_SocketTcpOooDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpOooDyn[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(TcpIp_SocketTcpOooDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpOooDyn[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1047,7 +1051,7 @@ VAR(TcpIp_SocketTcpOooDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpOooDyn[3];  /* P
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(TcpIp_SocketUdpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketUdpDyn[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(TcpIp_SocketUdpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketUdpDyn[7];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1087,7 +1091,7 @@ VAR(TcpIp_StaticUnicastAddrV4RequestedUType, TCPIP_VAR_NOINIT) TcpIp_StaticUnica
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(TcpIp_Tcp_RxPreBufEleType, TCPIP_VAR_NOINIT) TcpIp_TcpOooQElement[15];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(TcpIp_Tcp_RxPreBufEleType, TCPIP_VAR_NOINIT) TcpIp_TcpOooQElement[30];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1113,7 +1117,7 @@ VAR(TcpIp_Tcp_RstTxQueueType, TCPIP_VAR_NOINIT) TcpIp_TcpResetQElement[8];  /* P
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(TcpIp_Tcp_TxRetrQueueType, TCPIP_VAR_NOINIT) TcpIp_TcpRetryQElement[30];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(TcpIp_Tcp_TxRetrQueueType, TCPIP_VAR_NOINIT) TcpIp_TcpRetryQElement[60];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1132,12 +1136,18 @@ VAR(TcpIp_Tcp_TxRetrQueueType, TCPIP_VAR_NOINIT) TcpIp_TcpRetryQElement[30];  /*
 /*lint -restore */
 VAR(TcpIp_TcpRxBufferUType, TCPIP_VAR_NOINIT) TcpIp_TcpRxBuffer;  /* PRQA S 0759, 1514, 1533, 0612, 0613 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_BigStructure, MD_CSL_BigStructure */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer] */
-  /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer] */
-  /*   511 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer] */
-  /*   512 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_001] */
+  /*     0 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_001] */
   /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_001] */
-  /*  1023 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_001] */
+  /*   511 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_001] */
+  /*   512 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_002] */
+  /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_002] */
+  /*  1023 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_002] */
+  /*  1024 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_003] */
+  /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_003] */
+  /*  1535 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_003] */
+  /*  1536 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_004] */
+  /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_004] */
+  /*  2047 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_004] */
 
 #define TCPIP_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1159,7 +1169,7 @@ VAR(TcpIp_TcpRxBufferUType, TCPIP_VAR_NOINIT) TcpIp_TcpRxBuffer;  /* PRQA S 0759
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(TcpIp_TcpRxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpRxBufferDescDyn[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(TcpIp_TcpRxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpRxBufferDescDyn[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1178,12 +1188,18 @@ VAR(TcpIp_TcpRxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpRxBufferDescDyn[2];
 /*lint -restore */
 VAR(TcpIp_TcpTxBufferUType, TCPIP_VAR_NOINIT) TcpIp_TcpTxBuffer;  /* PRQA S 0759, 1514, 1533, 0612, 0613 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_BigStructure, MD_CSL_BigStructure */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer] */
-  /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer] */
-  /*   511 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer] */
-  /*   512 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_001] */
+  /*     0 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_001] */
   /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_001] */
-  /*  1023 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_001] */
+  /*   511 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_001] */
+  /*   512 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_002] */
+  /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_002] */
+  /*  1023 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_002] */
+  /*  1024 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_003] */
+  /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_003] */
+  /*  1535 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_003] */
+  /*  1536 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_004] */
+  /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_004] */
+  /*  2047 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpTcpConfig/TcpIpTcpSocketBuffer_004] */
 
 #define TCPIP_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1205,7 +1221,7 @@ VAR(TcpIp_TcpTxBufferUType, TCPIP_VAR_NOINIT) TcpIp_TcpTxBuffer;  /* PRQA S 0759
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(TcpIp_TcpTxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpTxBufferDescDyn[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(TcpIp_TcpTxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpTxBufferDescDyn[4];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1373,7 +1389,7 @@ CONST(TcpIp_PCConfigsType, TCPIP_CONST) TcpIp_PCConfig = {  /* PRQA S 1514, 1533
     , 0u                                      /**< the number of elements in TcpIp_StaticArpEntry */
     , 0u                                      /**< the number of elements in TcpIp_StaticArpTable */
     , 3u                                      /**< the number of elements in TcpIp_StaticUnicastAddrV4Requested */
-    , 15u                                     /**< the number of elements in TcpIp_TcpOooQElement */
+    , 30u                                     /**< the number of elements in TcpIp_TcpOooQElement */
     , 0u                                      /**< the number of elements in TcpIp_TxReqElem */
     , 0u                                      /**< the number of elements in TcpIp_TxReqElemList */
     , 3u                                      /**< the number of elements in TcpIp_UdpTxRetryQueueElementChain */
