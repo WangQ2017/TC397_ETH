@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Nm_Cfg.c
- *   Generation Time: 2025-12-14 17:03:56
+ *   Generation Time: 2026-05-01 18:57:19
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -143,6 +143,28 @@ CONST(Nm_NmFunctionTableType, NM_CONST) Nm_NmFunctionTable[1] = {  /* PRQA S 151
   { /*     0 */ UdpNm_GetState, UdpNm_DisableCommunication, UdpNm_EnableCommunication, UdpNm_NetworkRelease, UdpNm_NetworkRequest, UdpNm_PassiveStartUp }   /* [UdpNm] */
 };
 #define NM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Nm_SysToNmChInd
+**********************************************************************************************************************/
+/** 
+  \var    Nm_SysToNmChInd
+  \brief  Channel indirection: System Channel handle to NM channel handle
+*/ 
+#define NM_START_SEC_CONST_8
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Nm_SysToNmChIndType, NM_CONST) Nm_SysToNmChInd[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     SysToNmChInd        */
+  /*     0 */                  0u,
+  /*     1 */  NM_NO_SYSTONMCHIND,
+  /*     2 */  NM_NO_SYSTONMCHIND
+};
+#define NM_STOP_SEC_CONST_8
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

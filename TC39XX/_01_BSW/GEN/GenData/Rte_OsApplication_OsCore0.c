@@ -44,6 +44,7 @@
 #include "Rte_Dcm.h"
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
+#include "Rte_NvM.h"
 #include "Rte_Os_OsCore0_swc.h"
 #include "Rte_Os_OsCore1_swc.h"
 #include "Rte_Os_OsCore2_swc.h"
@@ -51,8 +52,6 @@
 #include "Rte_Os_OsCore4_swc.h"
 #include "Rte_Os_OsCore5_swc.h"
 #include "Rte_StbM.h"
-#include "Rte_lock_control.h"
-#include "Rte_window_core1.h"
 #include "SchM_BswM.h"
 #include "SchM_Com.h"
 #include "SchM_ComM.h"
@@ -67,11 +66,14 @@
 #include "SchM_EthTSyn.h"
 #include "SchM_EthTrcv_30_Tja1100.h"
 #include "SchM_Eth_30_Tc3xx.h"
+#include "SchM_Fee.h"
+#include "SchM_Fls_17_Dmu.h"
 #include "SchM_Irq.h"
 #include "SchM_LdCom.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
 #include "SchM_Nm.h"
+#include "SchM_NvM.h"
 #include "SchM_PduR.h"
 #include "SchM_Port.h"
 #include "SchM_Sd.h"
@@ -295,8 +297,6 @@ VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM
 #define RTE_CONST_MSEC_SystemTimer_OsCore3_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore4_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore5_10 (1000000UL)
-#define RTE_CONST_MSEC_SystemTimer_OsCore0_2 (200000UL)
-#define RTE_CONST_MSEC_SystemTimer_OsCore1_2 (200000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_20 (2000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_25 (2500000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_5 (500000UL)
@@ -574,28 +574,32 @@ TASK(OsTask_Asw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreacha
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Run_Cdd_Core0_Runnable_20 | Rte_Ev_Run_Cdd_Core0_Runnable_5ms | Rte_Ev_Run_Cdd_nm_Cdd_Nm_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(OsTask_Asw_OsCore0, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Run_Cdd_Core0_Runnable_20 | Rte_Ev_Run_Cdd_Core0_Runnable_5ms | Rte_Ev_Run_Cdd_nm_Cdd_Nm_Runnable10ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable5ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
-    if ((ev & Rte_Ev_Run_Cdd_Core0_Runnable_20) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
-//      Runnable_20(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+      Cdd_Nm_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Run_Cdd_Core0_Runnable_5ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable5ms) != (EventMaskType)0)
     {
       /* call runnable */
-//      Runnable_5ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-    	Cdd_Nm_Runnable10ms();
+      Cdd_Core0_Runnable5ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Run_Cdd_nm_Cdd_Nm_Runnable10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms) != (EventMaskType)0)
     {
       /* call runnable */
-//      Cdd_Nm_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
       Cdd_Core0_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Cdd_Core0_Runnable20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -665,9 +669,9 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms | Rte_Ev_Run_EthIf_EthIf_MainFunctionState | Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_10ms | Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms | Rte_Ev_Run_EthIf_EthIf_MainFunctionState | Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(OsTask_Bsw_5ms_Core0, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms | Rte_Ev_Run_EthIf_EthIf_MainFunctionState | Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_10ms | Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms | Rte_Ev_Run_EthIf_EthIf_MainFunctionState | Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     if ((ev & Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction) != (EventMaskType)0)
     {
@@ -725,11 +729,32 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
       /* call schedulable entity */
       EthTSyn_MainFunction();
 
+      /* call schedulable entity */
+      EthIf_MainFunctionTx();
+
       /* call runnable */
       StbM_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
       /* call schedulable entity */
-      EthIf_MainFunctionTx();
+      Uart_MainFunction_Write();
+
+      /* call schedulable entity */
+      Uart_MainFunction_Read();
+    }
+
+    if ((ev & Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_10ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      NvM_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call schedulable entity */
+      Fee_MainFunction();
+    }
+
+    if ((ev & Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms) != (EventMaskType)0)
+    {
+      /* call schedulable entity */
+      Fls_17_Dmu_MainFunction();
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -746,25 +771,7 @@ TASK(OsTask_Init_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreach
   Cdd_Core0_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   /* call runnable */
-//  lock_control_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-  /* call runnable */
   Cdd_Nm_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-/**********************************************************************************************************************
- * Task:     OsTask_lock_2ms
- * Priority: 40
- * Schedule: FULL
- * Alarm:    Cycle Time 0.002 s Alarm Offset 0 s
- *********************************************************************************************************************/
-TASK(OsTask_lock_2ms) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
-{
-
-  /* call runnable */
-//  Runnable_2ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

@@ -16,14 +16,19 @@
                   <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Cdd_Core0_Init</START-ON-EVENT-REF>
                 </INIT-EVENT>
                 <TIMING-EVENT UUID="BF8EDC66-5307-47F8-A269-6F2801EE03E0">
-                  <SHORT-NAME>TMT_Runnable_5ms</SHORT-NAME>
-                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Runnable_5ms</START-ON-EVENT-REF>
-                  <PERIOD>0.005</PERIOD>
+                  <SHORT-NAME>TMT_Cdd_Core0_Runnable10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Cdd_Core0_Runnable10ms</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
                 </TIMING-EVENT>
                 <TIMING-EVENT UUID="D03D0D56-7827-409A-B725-21A5ADDA7211">
-                  <SHORT-NAME>TMT_Runnable_20</SHORT-NAME>
-                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Runnable_20</START-ON-EVENT-REF>
+                  <SHORT-NAME>TMT_Cdd_Core0_Runnable20ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Cdd_Core0_Runnable20ms</START-ON-EVENT-REF>
                   <PERIOD>0.02</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="FD8B37FA-9080-4464-B8B6-1E8A60EA726E">
+                  <SHORT-NAME>TMT_Cdd_Core0_Runnable5ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Cdd_Core0_Runnable5ms</START-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
                 </TIMING-EVENT>
               </EVENTS>
               <RUNNABLES>
@@ -38,12 +43,15 @@
                   </ADMIN-DATA>
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="B41D32D8-DF94-4606-A9A6-BE40E0F591F2">
-                  <SHORT-NAME>Runnable_5ms</SHORT-NAME>
+                  <SHORT-NAME>Cdd_Core0_Runnable10ms</SHORT-NAME>
                   <MINIMUM-START-INTERVAL>0.005</MINIMUM-START-INTERVAL>
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="123F6095-26FE-4BB0-B6E7-0B6A5E1DB550">
-                  <SHORT-NAME>Runnable_20</SHORT-NAME>
+                  <SHORT-NAME>Cdd_Core0_Runnable20ms</SHORT-NAME>
                   <MINIMUM-START-INTERVAL>0.02</MINIMUM-START-INTERVAL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="3EB0A390-D448-4E3B-B3D8-A22D5143530F">
+                  <SHORT-NAME>Cdd_Core0_Runnable5ms</SHORT-NAME>
                 </RUNNABLE-ENTITY>
               </RUNNABLES>
               <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Compiler_Cfg.h
- *   Generation Time: 2026-01-18 22:49:12
+ *   Generation Time: 2026-05-01 19:42:43
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -70,8 +70,6 @@
 # define OS_OSTASK_INIT_OSCORE3_CODE
 # define OS_OSTASK_INIT_OSCORE4_CODE
 # define OS_OSTASK_INIT_OSCORE5_CODE
-# define OS_OSTASK_LOCK_2MS_CODE
-# define OS_OSTASK_WINDOW_2MS_CODE
 
 
 #endif /* OS_COMPILER_CFG_H */

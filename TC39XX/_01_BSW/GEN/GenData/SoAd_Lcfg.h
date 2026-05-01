@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: SoAd_Lcfg.h
- *   Generation Time: 2026-02-08 21:29:41
+ *   Generation Time: 2026-05-01 18:57:23
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -5258,6 +5258,15 @@ typedef struct SoAd_IfRxBufferStructSTag
   SoAd_IfRxBufferType SC_TCP_TX_fixed_10_23_0_33_47842[16];
 } SoAd_IfRxBufferStructSType;
 
+/**   \brief  type to be used as symbolic data element access to SoAd_IpFragMgt */
+typedef struct SoAd_IpFragMgtStructSTag
+{
+  SoAd_IpFragMgtType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_0;
+  SoAd_IpFragMgtType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_1;
+  SoAd_IpFragMgtType SoAdSocketConnection_DOIP_Broad_UDP_fixed_255_255_255_255_13400_Remote;
+  SoAd_IpFragMgtType SoAdSocketConnection_DOIP_UDP_ANY_Remote;
+} SoAd_IpFragMgtStructSType;
+
 /**   \brief  type to be used as symbolic data element access to SoAd_NPduUdpTxBuffer */
 typedef struct SoAd_NPduUdpTxBufferStructSTag
 {
@@ -5453,6 +5462,13 @@ typedef union SoAd_IfRxBufferUTag
   SoAd_IfRxBufferType raw[16];
   SoAd_IfRxBufferStructSType str;
 } SoAd_IfRxBufferUType;
+
+/**   \brief  type to access SoAd_IpFragMgt in an index and symbol based style. */
+typedef union SoAd_IpFragMgtUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  SoAd_IpFragMgtType raw[4];
+  SoAd_IpFragMgtStructSType str;
+} SoAd_IpFragMgtUType;
 
 /**   \brief  type to access SoAd_NPduUdpTxBuffer in an index and symbol based style. */
 typedef union SoAd_NPduUdpTxBufferUTag
@@ -7041,6 +7057,26 @@ extern VAR(SoAd_EventQueueTpTxSoConUType, SOAD_VAR_NOINIT) SoAd_EventQueueTpTxSo
 /*lint -restore */
 extern VAR(SoAd_IfRxBufferUType, SOAD_VAR_NOINIT) SoAd_IfRxBuffer;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define SOAD_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_IpFragMgt
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_IpFragMgt
+  \brief  the IP fragmentation management structs
+  \details
+  Element               Description
+  IpFragBufConfigIdx    the index of the 1:1 relation pointing to SoAd_IpFragBufConfig
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(SoAd_IpFragMgtUType, SOAD_VAR_NOINIT) SoAd_IpFragMgt;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

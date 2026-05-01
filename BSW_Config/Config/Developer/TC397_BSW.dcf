@@ -45,12 +45,4 @@
 		<ARXML>ComponentTypes/Cdd_Core5.arxml</ARXML>
 		<DVG>ComponentTypes/Cdd_Core5.dvg</DVG>
 	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes/lock_control.arxml</ARXML>
-		<DVG>ComponentTypes/lock_control.dvg</DVG>
-	</FILEREF>
-	<FILEREF>
-		<ARXML>ComponentTypes/window_core1.arxml</ARXML>
-		<DVG>ComponentTypes/window_core1.dvg</DVG>
-	</FILEREF>
 </DCF>

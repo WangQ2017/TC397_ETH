@@ -768,7 +768,7 @@ FUNC(Os_StatusType, OS_CODE) Os_EventSetLocal
 
   Os_IntResume(&intState);                                                                                              /* SBSW_OS_FC_POINTER2LOCAL */
 
-  return status;
+                                                                                                                                                                                                             return status;
 }                                                                                                                       /* PRQA S 6050 */ /* MD_MSR_STCAL */
 
 

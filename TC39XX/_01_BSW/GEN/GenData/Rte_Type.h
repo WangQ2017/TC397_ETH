@@ -26,8 +26,6 @@
 # define RTE_TYPE_H
 
 # include "Rte.h"
-# include "Rte_Cfg.h"
-# include "ComStack_Types.h"
 
 /* PRQA S 1039 EOF */ /* MD_Rte_1039 */
 
@@ -269,6 +267,9 @@ typedef void * dtRef_VOID;
 
 #  define Rte_TypeDef_dtRef_const_VOID
 typedef const void * dtRef_const_VOID;
+
+#  define Rte_TypeDef_NvM_BlockIdType
+typedef uint16 NvM_BlockIdType;
 
 #  define Rte_TypeDef_Dem_UdsStatusByteType
 typedef uint8 Dem_UdsStatusByteType;

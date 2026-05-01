@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.h
- *   Generation Time: 2026-01-25 23:30:02
+ *   Generation Time: 2026-05-01 20:50:40
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -80,17 +80,17 @@ extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_Os
 /*! Alarm configuration data: Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms */
 extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms;
 
+/*! Alarm configuration data: Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_10ms */
+extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_10ms;
+
 /*! Alarm configuration data: Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms;
 
-/*! Alarm configuration data: Rte_Al_TE_Cdd_Core0_Runnable_20 */
-extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_Core0_Runnable_20;
+/*! Alarm configuration data: Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms */
+extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms;
 
-/*! Alarm configuration data: Rte_Al_TE_Cdd_Core0_Runnable_5ms */
-extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_Core0_Runnable_5ms;
-
-/*! Alarm configuration data: Rte_Al_TE_Cdd_nm_Cdd_Nm_Runnable10ms */
-extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_nm_Cdd_Nm_Runnable10ms;
+/*! Alarm configuration data: Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable5ms */
+extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable5ms;
 
 /*! Alarm configuration data: Rte_Al_TE_EthIf_EthIf_MainFunctionState */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_EthIf_EthIf_MainFunctionState;
@@ -101,8 +101,8 @@ extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_EthTrcv
 /*! Alarm configuration data: Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction */
 extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction;
 
-/*! Alarm configuration data: Rte_Al_TE_swc_lock_Runnable_2ms */
-extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_swc_lock_Runnable_2ms;
+/*! Alarm configuration data: Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms */
+extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms;
 
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -116,9 +116,6 @@ extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_Ec
 
 /*! Alarm configuration data: Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms */
 extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms;
-
-/*! Alarm configuration data: Rte_Al_TE_window_core1_Runnable_windows_2ms */
-extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_window_core1_Runnable_windows_2ms;
 
 # define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

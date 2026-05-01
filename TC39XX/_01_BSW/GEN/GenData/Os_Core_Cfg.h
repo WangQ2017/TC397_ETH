@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Cfg.h
- *   Generation Time: 2026-01-18 21:20:50
+ *   Generation Time: 2026-05-01 19:42:43
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -70,7 +70,7 @@
 # define OS_CFG_NUM_CORE_OSCORE0_HOOKS            (4uL)
 # define OS_CFG_NUM_CORE_OSCORE0_IOCS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE0_RESOURCES        (1uL)
-# define OS_CFG_NUM_CORE_OSCORE0_STACKS           (15uL)
+# define OS_CFG_NUM_CORE_OSCORE0_STACKS           (14uL)
 # define OS_CFG_NUM_CORE_OSCORE0_ISRS             (3uL)
 
 /* Number of core objects: OsCore1 */
@@ -78,7 +78,7 @@
 # define OS_CFG_NUM_CORE_OSCORE1_HOOKS            (4uL)
 # define OS_CFG_NUM_CORE_OSCORE1_IOCS             (0uL)
 # define OS_CFG_NUM_CORE_OSCORE1_RESOURCES        (0uL)
-# define OS_CFG_NUM_CORE_OSCORE1_STACKS           (13uL)
+# define OS_CFG_NUM_CORE_OSCORE1_STACKS           (12uL)
 # define OS_CFG_NUM_CORE_OSCORE1_ISRS             (2uL)
 
 /* Number of core objects: OsCore2 */

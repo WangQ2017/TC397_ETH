@@ -44,6 +44,7 @@
 #include "Rte_Dcm.h"
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
+#include "Rte_NvM.h"
 #include "Rte_Os_OsCore0_swc.h"
 #include "Rte_Os_OsCore1_swc.h"
 #include "Rte_Os_OsCore2_swc.h"
@@ -51,8 +52,6 @@
 #include "Rte_Os_OsCore4_swc.h"
 #include "Rte_Os_OsCore5_swc.h"
 #include "Rte_StbM.h"
-#include "Rte_lock_control.h"
-#include "Rte_window_core1.h"
 #include "SchM_BswM.h"
 #include "SchM_Com.h"
 #include "SchM_ComM.h"
@@ -67,11 +66,14 @@
 #include "SchM_EthTSyn.h"
 #include "SchM_EthTrcv_30_Tja1100.h"
 #include "SchM_Eth_30_Tc3xx.h"
+#include "SchM_Fee.h"
+#include "SchM_Fls_17_Dmu.h"
 #include "SchM_Irq.h"
 #include "SchM_LdCom.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
 #include "SchM_Nm.h"
+#include "SchM_NvM.h"
 #include "SchM_PduR.h"
 #include "SchM_Port.h"
 #include "SchM_Sd.h"
@@ -351,8 +353,6 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_CONST_MSEC_SystemTimer_OsCore3_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore4_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore5_10 (1000000UL)
-#define RTE_CONST_MSEC_SystemTimer_OsCore0_2 (200000UL)
-#define RTE_CONST_MSEC_SystemTimer_OsCore1_2 (200000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_20 (2000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_25 (2500000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_5 (500000UL)
@@ -382,6 +382,7 @@ FUNC(void, RTE_CODE) SchM_Init(void)
 
     /* activate the alarms used for TimingEvents */
     (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(1)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_10ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(10)); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_EthIf_EthIf_MainFunctionState, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(25)); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(20)); /* PRQA S 3417 */ /* MD_Rte_Os */
@@ -437,11 +438,9 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
     (void)ActivateTask(OsTask_Init_OsCore0); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     /* activate the alarms used for TimingEvents */
-    (void)SetRelAlarm(Rte_Al_TE_window_core1_Runnable_windows_2ms, RTE_MSEC_SystemTimer_OsCore1(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore1(2)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_swc_lock_Runnable_2ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(2)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Runnable_20, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(20)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Runnable_5ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_Cdd_nm_Cdd_Nm_Runnable10ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(20)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable5ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms, RTE_MSEC_SystemTimer_OsCore1(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore1(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms, RTE_MSEC_SystemTimer_OsCore2(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore2(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms, RTE_MSEC_SystemTimer_OsCore3(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore3(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
@@ -502,16 +501,14 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
   {
     Rte_StartTiming_InitState = RTE_STATE_UNINIT;
     /* deactivate alarms */
-    (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Runnable_20); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Runnable_5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_Cdd_nm_Cdd_Nm_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core4_Cdd_Core4_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_swc_lock_Runnable_2ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_window_core1_Runnable_windows_2ms); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     Rte_InitState = RTE_STATE_SCHM_INIT;
 
@@ -553,6 +550,7 @@ FUNC(void, RTE_CODE) SchM_Deinit(void)
     (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_EthIf_EthIf_MainFunctionState); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction); /* PRQA S 3417 */ /* MD_Rte_Os */
@@ -637,6 +635,84 @@ FUNC(void, RTE_CODE) Rte_InitMemory(void)
 /**********************************************************************************************************************
  * Exclusive area access
  *********************************************************************************************************************/
+
+FUNC(void, RTE_CODE) SchM_Enter_Fls_17_Dmu_Erase(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Fls_17_Dmu_Erase(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Fls_17_Dmu_Init(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Fls_17_Dmu_Init(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Fls_17_Dmu_Main(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Fls_17_Dmu_Main(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Fls_17_Dmu_ResumeErase(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Fls_17_Dmu_ResumeErase(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Fls_17_Dmu_UserContentCount(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Fls_17_Dmu_UserContentCount(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
+
+FUNC(void, RTE_CODE) SchM_Enter_Fls_17_Dmu_Write(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  SuspendAllInterrupts();
+}
+
+FUNC(void, RTE_CODE) SchM_Exit_Fls_17_Dmu_Write(void)
+{
+  /* RteAnalyzer(ExclusiveArea, ALL_INTERRUPT_BLOCKING) */
+  ResumeAllInterrupts();
+}
+
 
 FUNC(void, RTE_CODE) SchM_Enter_Mcu_AtomAgcReg(void)
 {

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Cfg.h
- *   Generation Time: 2026-01-25 23:19:09
+ *   Generation Time: 2026-05-01 18:57:26
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -77,10 +77,10 @@
 
 
 #define TCPIP_SUPPORT_TCP_USER_TIMEOUT_OPTION      STD_OFF
-#define TCPIP_SUPPORT_TCP_CONGESTION_CONTROL       STD_OFF
-#define TCPIP_SUPPORT_TCP_TIMESTAMP_OPTION         STD_OFF
-#define TCPIP_SUPPORT_TCP_SELECTIVE_ACK            STD_OFF
-#define TCPIP_SUPPORT_TCP_KEEP_ALIVE               STD_OFF
+#define TCPIP_SUPPORT_TCP_CONGESTION_CONTROL       STD_ON
+#define TCPIP_SUPPORT_TCP_TIMESTAMP_OPTION         STD_ON
+#define TCPIP_SUPPORT_TCP_SELECTIVE_ACK            STD_ON
+#define TCPIP_SUPPORT_TCP_KEEP_ALIVE               STD_ON
 #define TCPIP_SUPPORT_TCP_RX_OOO                   STD_ON
 #define TCPIP_SUPPORT_TCP_NAGLE_TIMEOUT            STD_ON
 

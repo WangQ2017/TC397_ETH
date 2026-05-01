@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 6.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2026-01-18, 21:29:24      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2026-05-01, 16:31:31      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b170330-0431        !!!IGNORE-LINE!!!                   ** 
 **                                                                            **
@@ -2734,7 +2734,7 @@ Container : IrqAsclin interruptConfiguration
 #define IRQ_ASCLIN9_TX_CAT            (IRQ_CAT1)
 
 /* Asclin Tx interrupt Priority Setting*/
-#define IRQ_ASCLIN0_TX_PRIO           0x0
+#define IRQ_ASCLIN0_TX_PRIO           0x81
 #define IRQ_ASCLIN10_TX_PRIO           0x0
 #define IRQ_ASCLIN11_TX_PRIO           0x0
 #define IRQ_ASCLIN12_TX_PRIO           0x0
@@ -2890,7 +2890,7 @@ Container : IrqAsclin interruptConfiguration
 #define IRQ_ASCLIN9_ERR_CAT           (IRQ_CAT1)
 
 /* Asclin Err interrupt Priority Setting*/
-#define IRQ_ASCLIN0_ERR_PRIO          0x0
+#define IRQ_ASCLIN0_ERR_PRIO          0x80
 #define IRQ_ASCLIN10_ERR_PRIO          0x0
 #define IRQ_ASCLIN11_ERR_PRIO          0x0
 #define IRQ_ASCLIN12_ERR_PRIO          0x0
@@ -3431,9 +3431,9 @@ Container : I2C interrupt Configuration
 #define IRQ_FLEXRAY0_EXIST          (STD_OFF)
 #define IRQ_FLEXRAY1_EXIST          (STD_OFF)
 
-#define IRQ_DMU_EXIST              (STD_OFF)
-#define IRQ_DMU_HOST_EXIST          (STD_OFF)
-#define IRQ_DMU_FSI_EXIST          (STD_OFF)
+#define IRQ_DMU_EXIST              (STD_ON)
+#define IRQ_DMU_HOST_EXIST          (STD_ON)
+#define IRQ_DMU_FSI_EXIST          (STD_ON)
 
 #define IRQ_SCU_EXIST               (STD_OFF)
 
@@ -3455,7 +3455,7 @@ Container : I2C interrupt Configuration
 
 
 
-#define IRQ_ASCLIN_CHANNEL0_USED IRQ_ASCLIN_CH_NOT_USED
+#define IRQ_ASCLIN_CHANNEL0_USED IRQ_ASCLIN_CH_USED_BY_UART_DRIVER
 
 
 #define IRQ_ASCLIN_CHANNEL1_USED IRQ_ASCLIN_CH_USED_BY_UART_DRIVER
@@ -3464,7 +3464,7 @@ Container : I2C interrupt Configuration
 #define IRQ_ASCLIN_CHANNEL2_USED IRQ_ASCLIN_CH_NOT_USED
 
 
-#define IRQ_ASCLIN_CHANNEL3_USED IRQ_ASCLIN_CH_NOT_USED
+#define IRQ_ASCLIN_CHANNEL3_USED IRQ_ASCLIN_CH_USED_BY_UART_DRIVER
 
 
 #define IRQ_ASCLIN_CHANNEL4_USED IRQ_ASCLIN_CH_NOT_USED

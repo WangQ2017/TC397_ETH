@@ -16,7 +16,7 @@
 **                                                                           **
 **  VERSION   : 1.40.0_11.0.0                                                **
 **                                                                           **
-**  DATE, TIME: 2026-01-18, 21:29:24          !!!IGNORE-LINE!!!               **
+**  DATE, TIME: 2026-05-01, 16:31:32          !!!IGNORE-LINE!!!               **
 **                                                                           **
 **  GENERATOR : Build b170330-0431            !!!IGNORE-LINE!!!               **
 **                                                                           **
@@ -65,7 +65,11 @@
                 <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                   <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/Irq_ClearAllInterruptFlags</BSW-MODULE-ENTRY-REF>
                 </BSW-MODULE-ENTRY-REF-CONDITIONAL>
-                                                                                                                                              <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                                                      
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/IrqDmu_Init</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                                                                                      <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                   <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/IrqGpsr_Init</BSW-MODULE-ENTRY-REF>
                 </BSW-MODULE-ENTRY-REF-CONDITIONAL>
                                             <BSW-MODULE-ENTRY-REF-CONDITIONAL>
@@ -91,7 +95,12 @@
                       <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
                       <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/IrqAsclin_Init</IMPLEMENTED-ENTRY-REF>
                     </BSW-CALLED-ENTITY>
-                                                                                                                                                                                                                          <BSW-CALLED-ENTITY>
+                                                                                                                                <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>IrqDmu_Init</SHORT-NAME>
+                      <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/IrqDmu_Init</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                                                                                                                                <BSW-CALLED-ENTITY>
                       <SHORT-NAME>Irq_ClearAllInterruptFlags</SHORT-NAME>
                       <REENTRANCY-LEVEL>NON-REENTRANT</REENTRANCY-LEVEL>
                       <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G_Irq/BswModuleEntrys/Irq_ClearAllInterruptFlags</IMPLEMENTED-ENTRY-REF>
@@ -122,7 +131,15 @@
               <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
               <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
             </BSW-MODULE-ENTRY>
-                                                                                             <BSW-MODULE-ENTRY>
+                                                         <BSW-MODULE-ENTRY>
+              <SHORT-NAME>IrqDmu_Init</SHORT-NAME>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+                                                         <BSW-MODULE-ENTRY>
               <SHORT-NAME>IrqGpsr_Init</SHORT-NAME>
               <IS-REENTRANT>false</IS-REENTRANT>
               <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>

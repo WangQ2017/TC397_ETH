@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Application_Cfg.h
- *   Generation Time: 2026-01-18 21:20:50
+ *   Generation Time: 2026-05-01 19:42:43
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -51,17 +51,17 @@
 # define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE0_ISRS               (0uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE0_CAT1ISRS           (0uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE0_SCHTS              (0uL)
-# define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE0_TASKS              (9uL)
+# define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE0_TASKS              (8uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE0_SERVICES           (0uL)
 
 /* Number of application objects: OsApplication_OsCore1 */
-# define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE1_ALARMS             (3uL)
+# define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE1_ALARMS             (2uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE1_COUNTERS           (0uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE1_HOOKS              (0uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE1_ISRS               (0uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE1_CAT1ISRS           (0uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE1_SCHTS              (0uL)
-# define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE1_TASKS              (6uL)
+# define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE1_TASKS              (5uL)
 # define OS_CFG_NUM_APP_OSAPPLICATION_OSCORE1_SERVICES           (0uL)
 
 /* Number of application objects: OsApplication_OsCore2 */

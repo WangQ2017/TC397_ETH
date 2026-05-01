@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LdCom_Lcfg.h
- *   Generation Time: 2026-01-25 00:11:18
+ *   Generation Time: 2026-05-01 18:57:24
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -37,22 +37,22 @@
  * [Warning] Cfg00022 - Missing parameter value 
  * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
  * Erroneous configuration elements:
- * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_EcuStateTx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_EcuStateTx[0:LdComSystemTemplateSignalRef](value={empty}) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
  * 
  * [Warning] Cfg00022 - Missing parameter value 
  * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
  * Erroneous configuration elements:
- * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_SenStateTx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_SenStateTx[0:LdComSystemTemplateSignalRef](value={empty}) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
  * 
  * [Warning] Cfg00022 - Missing parameter value 
  * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
  * Erroneous configuration elements:
- * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleSpeedRx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleSpeedRx[0:LdComSystemTemplateSignalRef](value={empty}) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
  * 
  * [Warning] Cfg00022 - Missing parameter value 
  * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
  * Erroneous configuration elements:
- * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleStatusRx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleStatusRx[0:LdComSystemTemplateSignalRef](value={empty}) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
  *********************************************************************************************************************/
 
 #if !defined (LDCOM_LCFG_H)
@@ -260,7 +260,6 @@
 #define LdCom_IsIfPduOfRxTxPduInfo(Index)                                                           ((LdCom_GetRxTxPduInfoOfPCConfig()[(Index)].IfPduOfRxTxPduInfo) != FALSE)
 #define LdCom_GetIfRxIndicationFctPtrIdxOfRxTxPduInfo(Index)                                        (LdCom_GetRxTxPduInfoOfPCConfig()[(Index)].IfRxIndicationFctPtrIdxOfRxTxPduInfo)
 #define LdCom_GetPduRTxHandleIdOfRxTxPduInfo(Index)                                                 (LdCom_GetRxTxPduInfoOfPCConfig()[(Index)].PduRTxHandleIdOfRxTxPduInfo)
-#define LdCom_IsTxPduOfRxTxPduInfo(Index)                                                           ((LdCom_GetRxTxPduInfoOfPCConfig()[(Index)].TxPduOfRxTxPduInfo) != FALSE)
 /** 
   \}
 */ 
@@ -271,6 +270,7 @@
   \{
 */ 
 #define LdCom_IsIfRxIndicationFctPtrUsedOfRxTxPduInfo(Index)                                        (((boolean)(LdCom_GetIfRxIndicationFctPtrIdxOfRxTxPduInfo(Index) != LDCOM_NO_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to LdCom_IfRxIndicationFctPtr */
+#define LdCom_IsTxPduOfRxTxPduInfo(Index)                                                           (((boolean)(LdCom_GetPduRTxHandleIdOfRxTxPduInfo(Index) != 0u)) != FALSE)
 #define LdCom_GetSizeOfIfRxIndicationFctPtr()                                                       LdCom_GetSizeOfIfRxIndicationFctPtrOfPCConfig()
 #define LdCom_GetSizeOfRxTxPduInfo()                                                                LdCom_GetSizeOfRxTxPduInfoOfPCConfig()
 /** 
@@ -418,7 +418,6 @@ typedef uint8 LdCom_SizeOfRxTxPduInfoType;
 typedef struct sLdCom_RxTxPduInfoType
 {
   LdCom_IfPduOfRxTxPduInfoType IfPduOfRxTxPduInfo;
-  LdCom_TxPduOfRxTxPduInfoType TxPduOfRxTxPduInfo;
   LdCom_IfRxIndicationFctPtrIdxOfRxTxPduInfoType IfRxIndicationFctPtrIdxOfRxTxPduInfo;  /**< the index of the 0:1 relation pointing to LdCom_IfRxIndicationFctPtr */
   LdCom_PduRTxHandleIdOfRxTxPduInfoType PduRTxHandleIdOfRxTxPduInfo;  /**< Handle ID used to call PduR_LdComTransmit() */
 } LdCom_RxTxPduInfoType;
@@ -506,7 +505,6 @@ extern CONST(LdCom_IfRxIndicationFctPtrType, LDCOM_CONST) LdCom_IfRxIndicationFc
   \details
   Element                    Description
   IfPdu                  
-  TxPdu                  
   IfRxIndicationFctPtrIdx    the index of the 0:1 relation pointing to LdCom_IfRxIndicationFctPtr
   PduRTxHandleId             Handle ID used to call PduR_LdComTransmit()
 */ 

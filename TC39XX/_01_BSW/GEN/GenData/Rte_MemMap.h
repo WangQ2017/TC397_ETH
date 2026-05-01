@@ -539,6 +539,19 @@
  *********************************************************************************************************************/
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!         << Start of memory mapping implementation >>         DO NOT CHANGE THIS COMMENT!
+ * Symbol: RTE_START_SEC_NVM_APPL_CODE
+ *********************************************************************************************************************/
+
+#ifdef RTE_START_SEC_NVM_APPL_CODE
+# undef RTE_START_SEC_NVM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define START_SEC_CODE
+#endif
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!          << End of memory mapping implementation >>          DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!         << Start of memory mapping implementation >>         DO NOT CHANGE THIS COMMENT!
  * Symbol: RTE_START_SEC_OS_OSCORE0_SWC_APPL_CODE
  *********************************************************************************************************************/
 
@@ -622,32 +635,6 @@
 
 #ifdef RTE_START_SEC_STBM_APPL_CODE
 # undef RTE_START_SEC_STBM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# define START_SEC_CODE
-#endif
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!          << End of memory mapping implementation >>          DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!         << Start of memory mapping implementation >>         DO NOT CHANGE THIS COMMENT!
- * Symbol: RTE_START_SEC_LOCK_CONTROL_APPL_CODE
- *********************************************************************************************************************/
-
-#ifdef RTE_START_SEC_LOCK_CONTROL_APPL_CODE
-# undef RTE_START_SEC_LOCK_CONTROL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# define START_SEC_CODE
-#endif
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!          << End of memory mapping implementation >>          DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!         << Start of memory mapping implementation >>         DO NOT CHANGE THIS COMMENT!
- * Symbol: RTE_START_SEC_WINDOW_CORE1_APPL_CODE
- *********************************************************************************************************************/
-
-#ifdef RTE_START_SEC_WINDOW_CORE1_APPL_CODE
-# undef RTE_START_SEC_WINDOW_CORE1_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
 # define START_SEC_CODE
 #endif
 
@@ -814,6 +801,19 @@
  *********************************************************************************************************************/
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!         << Start of memory mapping implementation >>         DO NOT CHANGE THIS COMMENT!
+ * Symbol: RTE_STOP_SEC_NVM_APPL_CODE
+ *********************************************************************************************************************/
+
+#ifdef RTE_STOP_SEC_NVM_APPL_CODE
+# undef RTE_STOP_SEC_NVM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# define STOP_SEC_CODE
+#endif
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!          << End of memory mapping implementation >>          DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!         << Start of memory mapping implementation >>         DO NOT CHANGE THIS COMMENT!
  * Symbol: RTE_STOP_SEC_OS_OSCORE0_SWC_APPL_CODE
  *********************************************************************************************************************/
 
@@ -897,32 +897,6 @@
 
 #ifdef RTE_STOP_SEC_STBM_APPL_CODE
 # undef RTE_STOP_SEC_STBM_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# define STOP_SEC_CODE
-#endif
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!          << End of memory mapping implementation >>          DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!         << Start of memory mapping implementation >>         DO NOT CHANGE THIS COMMENT!
- * Symbol: RTE_STOP_SEC_LOCK_CONTROL_APPL_CODE
- *********************************************************************************************************************/
-
-#ifdef RTE_STOP_SEC_LOCK_CONTROL_APPL_CODE
-# undef RTE_STOP_SEC_LOCK_CONTROL_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
-# define STOP_SEC_CODE
-#endif
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!          << End of memory mapping implementation >>          DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!         << Start of memory mapping implementation >>         DO NOT CHANGE THIS COMMENT!
- * Symbol: RTE_STOP_SEC_WINDOW_CORE1_APPL_CODE
- *********************************************************************************************************************/
-
-#ifdef RTE_STOP_SEC_WINDOW_CORE1_APPL_CODE
-# undef RTE_STOP_SEC_WINDOW_CORE1_APPL_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
 # define STOP_SEC_CODE
 #endif
 

@@ -839,6 +839,65 @@
  *********************************************************************************************************************/
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
+ * Symbol: RTE_NVM_APPL
+ *********************************************************************************************************************/
+
+/* used for references on application variables */
+# define RTE_NVM_APPL_VAR
+
+/* used for references on application data (constants or variables) */
+# define RTE_NVM_APPL_DATA
+
+/* used for references on application functions */
+# define RTE_NVM_APPL_CODE
+
+/* used for references on application constants */
+# define RTE_NVM_APPL_CONST
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
+ * Symbol: NvM_CODE
+ *********************************************************************************************************************/
+
+/* used for SWC specific code */
+# define NvM_CODE
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
+ * Symbol: NvM_CONST
+ *********************************************************************************************************************/
+
+/* used for global or static SWC specific constants */
+# define NvM_CONST
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
+ * Symbol: NvM_VAR
+ *********************************************************************************************************************/
+
+/* used for all global or static SWC specific variables that are not initialized by the startup code of the compiler */
+# define NvM_VAR_NOINIT
+
+/* used for global or static SWC specific variables that are initialized by the startup code of the compiler */
+# define NvM_VAR_INIT
+
+/* used for global or static SWC specific variables that are initialized with zero by the startup code of the compiler */
+# define NvM_VAR_ZERO_INIT
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
  * Symbol: RTE_OS_OSCORE0_SWC_APPL
  *********************************************************************************************************************/
 
@@ -1250,129 +1309,13 @@
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: RTE_LOCK_CONTROL_APPL
- *********************************************************************************************************************/
-
-/* used for references on application variables */
-# define RTE_LOCK_CONTROL_APPL_VAR
-
-/* used for references on application data (constants or variables) */
-# define RTE_LOCK_CONTROL_APPL_DATA
-
-/* used for references on application functions */
-# define RTE_LOCK_CONTROL_APPL_CODE
-
-/* used for references on application constants */
-# define RTE_LOCK_CONTROL_APPL_CONST
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: lock_control_CODE
- *********************************************************************************************************************/
-
-/* used for SWC specific code */
-# define lock_control_CODE
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: lock_control_CONST
- *********************************************************************************************************************/
-
-/* used for global or static SWC specific constants */
-# define lock_control_CONST
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: lock_control_VAR
- *********************************************************************************************************************/
-
-/* used for all global or static SWC specific variables that are not initialized by the startup code of the compiler */
-# define lock_control_VAR_NOINIT
-
-/* used for global or static SWC specific variables that are initialized by the startup code of the compiler */
-# define lock_control_VAR_INIT
-
-/* used for global or static SWC specific variables that are initialized with zero by the startup code of the compiler */
-# define lock_control_VAR_ZERO_INIT
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: RTE_WINDOW_CORE1_APPL
- *********************************************************************************************************************/
-
-/* used for references on application variables */
-# define RTE_WINDOW_CORE1_APPL_VAR
-
-/* used for references on application data (constants or variables) */
-# define RTE_WINDOW_CORE1_APPL_DATA
-
-/* used for references on application functions */
-# define RTE_WINDOW_CORE1_APPL_CODE
-
-/* used for references on application constants */
-# define RTE_WINDOW_CORE1_APPL_CONST
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: window_core1_CODE
- *********************************************************************************************************************/
-
-/* used for SWC specific code */
-# define window_core1_CODE
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: window_core1_CONST
- *********************************************************************************************************************/
-
-/* used for global or static SWC specific constants */
-# define window_core1_CONST
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!     << Start of compiler abstraction implementation >>       DO NOT CHANGE THIS COMMENT!
- * Symbol: window_core1_VAR
- *********************************************************************************************************************/
-
-/* used for all global or static SWC specific variables that are not initialized by the startup code of the compiler */
-# define window_core1_VAR_NOINIT
-
-/* used for global or static SWC specific variables that are initialized by the startup code of the compiler */
-# define window_core1_VAR_INIT
-
-/* used for global or static SWC specific variables that are initialized with zero by the startup code of the compiler */
-# define window_core1_VAR_ZERO_INIT
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!      << End of compiler abstraction implementation >>        DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
 
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of removed code area >>                   DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
+
+
 
 
 /**********************************************************************************************************************

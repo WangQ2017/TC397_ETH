@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Task_Lcfg.h
- *   Generation Time: 2025-12-14 17:03:55
+ *   Generation Time: 2026-05-01 19:42:43
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -99,9 +99,6 @@ extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_5ms_Core0;
 /*! Task configuration data: OsTask_Init_OsCore0 */
 extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Init_OsCore0;
 
-/*! Task configuration data: OsTask_lock_2ms */
-extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_lock_2ms;
-
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -126,9 +123,6 @@ extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Bsw_OsCore1;
 
 /*! Task configuration data: OsTask_Init_OsCore1 */
 extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_Init_OsCore1;
-
-/*! Task configuration data: OsTask_window_2ms */
-extern CONST(Os_TaskConfigType, OS_CONST) OsCfg_Task_OsTask_window_2ms;
 
 # define OS_STOP_SEC_CORE1_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

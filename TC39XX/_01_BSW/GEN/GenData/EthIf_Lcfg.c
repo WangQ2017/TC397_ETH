@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthIf_Lcfg.c
- *   Generation Time: 2026-01-25 23:19:09
+ *   Generation Time: 2026-05-01 18:57:23
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -91,7 +91,7 @@
 /*lint -restore */
 CONST(EthIf_EthCtrlType, ETHIF_CONST) EthIf_EthCtrl[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Snv                                       EthDrvApiIdx                      TxContextEndIdx                                                         TxContextStartIdx                                                               Referable Keys */
-  { /*     0 */ EthConf_EthCtrlConfig_EthCtrlConfig_MAIN,           0u  /* Eth_30_Tc3xx */,             10u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
+  { /*     0 */ EthConf_EthCtrlConfig_EthCtrlConfig_MAIN,           0u  /* Eth_30_Tc3xx */,             12u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan10, /ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan23] */
 };
 #define ETHIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -849,7 +849,7 @@ VAR(EthIf_TxContextUType, ETHIF_VAR_NOINIT) EthIf_TxContext;  /* PRQA S 0759, 15
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
   /*   ... */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
-  /*     9 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*    11 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1012,7 +1012,7 @@ CONST(EthIf_PCConfigsType, ETHIF_CONST) EthIf_PCConfig = {  /* PRQA S 1514, 1533
     , NULL_PTR                                 /**< the pointer to EthIf_WakeupMap */
     , 5u
     , 5u
-    , 10u
+    , 12u
     , 0u
     , 1u                                       /**< the number of elements in EthIf_EthCtrl */
     , 1u                                       /**< the number of elements in EthIf_EthDrvApi */
@@ -1041,7 +1041,7 @@ CONST(EthIf_PCConfigsType, ETHIF_CONST) EthIf_PCConfig = {  /* PRQA S 1514, 1533
     , 3u                                       /**< the number of elements in EthIf_RxIndicationsInd */
     , 2u                                       /**< the number of elements in EthIf_TxConfirmations */
     , 2u                                       /**< the number of elements in EthIf_TxConfirmationsInd */
-    , 10u                                      /**< the number of elements in EthIf_TxContext */
+    , 12u                                      /**< the number of elements in EthIf_TxContext */
     , 3u                                       /**< the number of elements in EthIf_User */
     , 0u                                       /**< the number of elements in EthIf_WakeupMap */
   }

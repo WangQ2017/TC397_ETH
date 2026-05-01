@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Eth_30_Tc3xx_Lcfg.c
- *   Generation Time: 2026-01-18 23:08:52
+ *   Generation Time: 2026-05-01 18:57:20
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -407,7 +407,7 @@ CONST(Eth_30_Tc3xx_RxTxNotificationCalloutsType, ETH_30_TC3XX_CONST) Eth_30_Tc3x
 /*lint -restore */
 CONST(Eth_30_Tc3xx_TsHandlingType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_TsHandling[1] = {
     /* Index    RxTsContextStackEndIdx                                                         RxTsContextStackPosIdx                                                         RxTsContextStackStartIdx                                                         TimeHandlingIdx                                                         TxTsContextEndIdx                                                         TxTsContextStartIdx                                                               Referable Keys */
-  { /*     0 */                     1u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                     0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                       0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,              0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,               10u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                  0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  { /*     0 */                     1u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                     0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                       0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,              0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,               12u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                  0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 };
 #define ETH_30_TC3XX_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -429,7 +429,7 @@ CONST(Eth_30_Tc3xx_TsHandlingType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_TsHandling[1
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_19.1 */
 /*lint -restore */
-CONST(Eth_30_Tc3xx_TxBufferDataType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_TxBufferData[10] = {
+CONST(Eth_30_Tc3xx_TxBufferDataType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_TxBufferData[12] = {
     /* Index    Length  StartPos        Referable Keys */
   { /*     0 */  1518u,       2u },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
   { /*     1 */  1518u,    1538u },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
@@ -440,7 +440,9 @@ CONST(Eth_30_Tc3xx_TxBufferDataType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_TxBufferDa
   { /*     6 */  1518u,    9218u },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
   { /*     7 */  1518u,   10754u },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
   { /*     8 */  1518u,   12290u },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
-  { /*     9 */  1518u,   13826u }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  { /*     9 */  1518u,   13826u },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  { /*    10 */  1518u,   15362u },  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  { /*    11 */  1518u,   16898u }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 };
 #define ETH_30_TC3XX_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -473,7 +475,7 @@ CONST(Eth_30_Tc3xx_TxBufferDataType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_TxBufferDa
 /*lint -restore */
 CONST(Eth_30_Tc3xx_TxBufferHandlingType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_TxBufferHandling[1] = {
     /* Index    AlignedSegSize  MaxBufferLen  TxBufferEndIdx                                                         TxBufferStartIdx                                                         BufferNum  DescrNum  TxBufferDataEndIdx                                                         TxBufferDataStartIdx                                                         TxBufferFreeElemNumIdx                                                         TxBufferStateEndIdx                                                         TxBufferStateStartIdx                                                               Referable Keys */
-  { /*     0 */          1536u,      0x05EEu,         15360u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,               0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,       10u,      10u,                10u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                   0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                     0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                 10u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                    0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  { /*     0 */          1536u,      0x05EEu,         18432u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,               0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,       12u,      12u,                12u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                   0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                     0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                 12u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                    0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 };
 #define ETH_30_TC3XX_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -500,7 +502,7 @@ CONST(Eth_30_Tc3xx_TxBufferHandlingType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_TxBuff
 /*lint -restore */
 CONST(Eth_30_Tc3xx_TxDescrHandlingType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_TxDescrHandling[1] = {
     /* Index    TxDescrEndIdx                                                         TxDescrRingProcIdx                                                         TxDescrStartIdx                                                         TxDescrStateEndIdx                                                         TxDescrStateStartIdx                                                               Referable Keys */
-  { /*     0 */           10u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                 0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,              0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                10u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                   0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  { /*     0 */           12u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                 0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,              0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                12u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */,                   0u  /* /ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 };
 #define ETH_30_TC3XX_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -891,7 +893,7 @@ VAR(Eth_30_Tc3xx_TxBufferStateUType, ETH_30_TC3XX_VAR_NOINIT) Eth_30_Tc3xx_TxBuf
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
   /*   ... */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
-  /*     9 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*    11 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 
 #define ETH_30_TC3XX_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -913,7 +915,7 @@ VAR(Eth_30_Tc3xx_TxDescrUType, ETH_30_TC3XX_VAR_NOINIT) Eth_30_Tc3xx_TxDescr;  /
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
   /*   ... */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
-  /*     9 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*    11 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 
 #define ETH_30_TC3XX_STOP_SEC_TX_DESCRIPTOR_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -963,7 +965,7 @@ VAR(Eth_30_Tc3xx_TxDescrStateUType, ETH_30_TC3XX_VAR_NOINIT) Eth_30_Tc3xx_TxDesc
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
   /*   ... */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
-  /*     9 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*    11 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 
 #define ETH_30_TC3XX_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -989,7 +991,7 @@ VAR(Eth_30_Tc3xx_TxTsContextUType, ETH_30_TC3XX_VAR_NOINIT) Eth_30_Tc3xx_TxTsCon
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
   /*   ... */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
-  /*     9 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*    11 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 
 #define ETH_30_TC3XX_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -1135,7 +1137,7 @@ CONST(Eth_30_Tc3xx_PCConfigsType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_PCConfig = {
     , NULL_PTR                                  /**< the pointer to Eth_30_Tc3xx_VlanIdTxDescrRingMap */
     , NULL_PTR                                  /**< the pointer to Eth_30_Tc3xx_VlanPrioTxDescrRingMap */
     , 15360u                                    /**< the number of elements in Eth_30_Tc3xx_RxBuffer */
-    , 15360u                                    /**< the number of elements in Eth_30_Tc3xx_TxBuffer */
+    , 18432u                                    /**< the number of elements in Eth_30_Tc3xx_TxBuffer */
     , 6u                                        /**< the number of elements in Eth_30_Tc3xx_ActiveMacAddress */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_EthCtrl */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_EthCtrlTc3xx */
@@ -1158,15 +1160,15 @@ CONST(Eth_30_Tc3xx_PCConfigsType, ETH_30_TC3XX_CONST) Eth_30_Tc3xx_PCConfig = {
     , 0u                                        /**< the number of elements in Eth_30_Tc3xx_ShaperAvailable */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_TimeHandling */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_TsHandling */
-    , 10u                                       /**< the number of elements in Eth_30_Tc3xx_TxBufferData */
+    , 12u                                       /**< the number of elements in Eth_30_Tc3xx_TxBufferData */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_TxBufferFreeElemNum */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_TxBufferHandling */
-    , 10u                                       /**< the number of elements in Eth_30_Tc3xx_TxBufferState */
-    , 10u                                       /**< the number of elements in Eth_30_Tc3xx_TxDescr */
+    , 12u                                       /**< the number of elements in Eth_30_Tc3xx_TxBufferState */
+    , 12u                                       /**< the number of elements in Eth_30_Tc3xx_TxDescr */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_TxDescrHandling */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_TxDescrRingProc */
-    , 10u                                       /**< the number of elements in Eth_30_Tc3xx_TxDescrState */
-    , 10u                                       /**< the number of elements in Eth_30_Tc3xx_TxTsContext */
+    , 12u                                       /**< the number of elements in Eth_30_Tc3xx_TxDescrState */
+    , 12u                                       /**< the number of elements in Eth_30_Tc3xx_TxTsContext */
     , 1u                                        /**< the number of elements in Eth_30_Tc3xx_UserInitCallouts */
     , 0u                                        /**< the number of elements in Eth_30_Tc3xx_VlanIdBasedQueuingHandling */
     , 0u                                        /**< the number of elements in Eth_30_Tc3xx_VlanIdRxDescrRingMap */

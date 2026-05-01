@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2026-01-18 22:49:12
+ *   Generation Time: 2026-05-01 19:42:43
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -469,30 +469,6 @@ extern FUNC(void, OS_OSTASK_INIT_OSCORE4_CODE) Os_Task_OsTask_Init_OsCore4(void)
 extern FUNC(void, OS_OSTASK_INIT_OSCORE5_CODE) Os_Task_OsTask_Init_OsCore5(void);
 
 # define OS_STOP_SEC_OsTask_Init_OsCore5_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-# define OS_START_SEC_OsTask_lock_2ms_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/**********************************************************************************************************************
- *  OsTask_lock_2ms()
- *********************************************************************************************************************/
-extern FUNC(void, OS_OSTASK_LOCK_2MS_CODE) Os_Task_OsTask_lock_2ms(void);
-
-# define OS_STOP_SEC_OsTask_lock_2ms_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-# define OS_START_SEC_OsTask_window_2ms_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/**********************************************************************************************************************
- *  OsTask_window_2ms()
- *********************************************************************************************************************/
-extern FUNC(void, OS_OSTASK_WINDOW_2MS_CODE) Os_Task_OsTask_window_2ms(void);
-
-# define OS_STOP_SEC_OsTask_window_2ms_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

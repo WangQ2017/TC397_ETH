@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: UdpNm_Cfg.h
- *   Generation Time: 2026-01-24 23:52:00
+ *   Generation Time: 2026-05-01 18:57:19
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -714,7 +714,7 @@
 #define UdpNm_GetSizeOfChannelConfigOfPCConfig()                                                    1u  /**< the number of accomplishable value elements in UdpNm_ChannelConfig */
 #define UdpNm_GetSizeOfPbChannelConfigOfPCConfig()                                                  1u  /**< the number of accomplishable value elements in UdpNm_PbChannelConfig */
 #define UdpNm_GetSizeOfPnInfoByteConfigOfPCConfig()                                                 7u  /**< the number of accomplishable value elements in UdpNm_PnInfoByteConfig */
-#define UdpNm_GetSizeOfSysToNmChIndOfPCConfig()                                                     1u  /**< the number of accomplishable value elements in UdpNm_SysToNmChInd */
+#define UdpNm_GetSizeOfSysToNmChIndOfPCConfig()                                                     3u  /**< the number of accomplishable value elements in UdpNm_SysToNmChInd */
 #define UdpNm_GetSizeOfTxMessageDataOfPCConfig()                                                    8u  /**< the number of accomplishable value elements in UdpNm_TxMessageData */
 #define UdpNm_GetSysToNmChIndOfPCConfig()                                                           UdpNm_SysToNmChInd  /**< the pointer to UdpNm_SysToNmChInd */
 #define UdpNm_GetTimeoutTimerOfPCConfig()                                                           UdpNm_TimeoutTimer.raw  /**< the pointer to UdpNm_TimeoutTimer */
@@ -2151,7 +2151,7 @@ extern CONST(UdpNm_PnInfoByteConfigType, UDPNM_CONST) UdpNm_PnInfoByteConfig[7];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(UdpNm_SysToNmChIndType, UDPNM_CONST) UdpNm_SysToNmChInd[1];
+extern CONST(UdpNm_SysToNmChIndType, UDPNM_CONST) UdpNm_SysToNmChInd[3];
 #define UDPNM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

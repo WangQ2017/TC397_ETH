@@ -162,6 +162,18 @@
         <Splitter File=".\Config\ECUC\TC397_BSW_Dcm_Dcm_ecuc.arxml">
             <Module Name="Dcm"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Fls_Fls_ecuc.arxml">
+            <Module Name="Fls"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Fee_Fee_ecuc.arxml">
+            <Module Name="Fee"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_NvM_NvM_ecuc.arxml">
+            <Module Name="NvM"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_MemIf_MemIf_ecuc.arxml">
+            <Module Name="MemIf"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
@@ -191,6 +203,7 @@
             </Settings>
             <Settings Name="com.vector.cfg.gui.core.generators.GeneratedModules">
                 <Setting Value="false" Name="Dio"/>
+                <Setting Value="false" Name="Fls"/>
                 <Setting Value="false" Name="Irq"/>
                 <Setting Value="false" Name="McalLib"/>
                 <Setting Value="false" Name="Mcu"/>
@@ -439,7 +452,7 @@
                 </Settings>
             </Settings>
             <Settings Name="com.vector.cfg.gen.core.gencore.internal.aov.AutomaticOnDemandValidationConfigurationService">
-                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAGc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQAA0Rpb3QAES9BVVJJWDJHL0VjdWNEZWZz&#xA;c3EAfgAIdAAFRTJFUFd0AAkvTUlDUk9TQVJzcQB+AAh0AARVYXJ0cQB+AAxzcQB+AAh0AANJcnFx&#xA;AH4ADHNxAH4ACHQAA01jdXEAfgAMc3EAfgAIdAAHTWNhbExpYnEAfgAM" Name="Data"/>
+                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAKc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQAA0NzbXQACS9NSUNST1NBUnNxAH4ACHQA&#xA;BUNyeUlmcQB+AAxzcQB+AAh0AAZDcnlwdG90ABkvTUlDUk9TQVIvQ3J5cHRvXzMwX0xpYkN2c3EA&#xA;fgAIdAAFRTJFUFdxAH4ADHNxAH4ACHQAA01jdXQAES9BVVJJWDJHL0VjdWNEZWZzc3EAfgAIdAAH&#xA;TWNhbExpYnEAfgAWc3EAfgAIdAADSXJxcQB+ABZzcQB+AAh0AANGbHNxAH4AFnNxAH4ACHQAA0Rp&#xA;b3EAfgAWc3EAfgAIdAAEVWFydHEAfgAW" Name="Data"/>
             </Settings>
             <Settings Name="com.vector.cfg.gui.pse.pages.generators">
                 <Settings Name="BuildVipProject"/>
@@ -460,13 +473,13 @@
         <AutomaticSyncSystemDescription>false</AutomaticSyncSystemDescription>
     </Miscellaneous>
     <SwctGeneration>
-        <Component Name="Cdd_Nm" GenerationEnabled="true"/>
-        <Component Name="Cdd_Core0" GenerationEnabled="true"/>
-        <Component Name="Cdd_Core1" GenerationEnabled="true"/>
-        <Component Name="Cdd_Core2" GenerationEnabled="true"/>
-        <Component Name="Cdd_Core3" GenerationEnabled="true"/>
-        <Component Name="Cdd_Core4" GenerationEnabled="true"/>
-        <Component Name="Cdd_Core5" GenerationEnabled="true"/>
+        <Component Name="Cdd_Nm" GenerationEnabled="false"/>
+        <Component Name="Cdd_Core0" GenerationEnabled="true" TargetFolder="..\TC39XX\_02_CDD"/>
+        <Component Name="Cdd_Core1" GenerationEnabled="false"/>
+        <Component Name="Cdd_Core2" GenerationEnabled="false"/>
+        <Component Name="Cdd_Core3" GenerationEnabled="false"/>
+        <Component Name="Cdd_Core4" GenerationEnabled="false"/>
+        <Component Name="Cdd_Core5" GenerationEnabled="false"/>
         <Component Name="swc_lock" GenerationEnabled="true"/>
         <Component Name="lock_control" GenerationEnabled="true"/>
         <Component Name="window_core1" GenerationEnabled="true"/>

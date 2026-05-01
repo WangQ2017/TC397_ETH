@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: UdpNm_Cfg.c
- *   Generation Time: 2026-01-24 23:52:00
+ *   Generation Time: 2026-05-01 18:57:19
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -189,9 +189,11 @@ CONST(UdpNm_PnInfoByteConfigType, UDPNM_CONST) UdpNm_PnInfoByteConfig[7] = {  /*
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(UdpNm_SysToNmChIndType, UDPNM_CONST) UdpNm_SysToNmChInd[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-  /* Index     SysToNmChInd  */
-  /*     0 */            0u
+CONST(UdpNm_SysToNmChIndType, UDPNM_CONST) UdpNm_SysToNmChInd[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     SysToNmChInd           */
+  /*     0 */                     0u,
+  /*     1 */  UDPNM_NO_SYSTONMCHIND,
+  /*     2 */  UDPNM_NO_SYSTONMCHIND
 };
 #define UDPNM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */

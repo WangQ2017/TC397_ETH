@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Lcfg.c
- *   Generation Time: 2026-02-08 21:29:41
+ *   Generation Time: 2026-05-01 18:57:26
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -133,7 +133,7 @@ CONST(TcpIp_AddrAssignmentCfgByPrioType, TCPIP_CONST) TcpIp_AddrAssignmentCfgByP
 /*lint -restore */
 CONST(TcpIp_ArpConfigType, TCPIP_CONST) TcpIp_ArpConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    EntryTimeout  RetryInterval  RetryTime  PacketQueueEnabled  NumGratuitousArpOnStartup  RequestTimeout  TableSize        Referable Keys */
-  { /*     0 */        6000u,          400u,     1000u,               TRUE,                        0u,            20u,       10u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpArpConfig] */
+  { /*     0 */        6000u,          400u,     1000u,               TRUE,                        5u,            20u,       10u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpArpConfig] */
 };
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -265,6 +265,33 @@ CONST(TcpIp_EthIfCtrlType, TCPIP_CONST) TcpIp_EthIfCtrl[3] = {  /* PRQA S 1514, 
 /*lint -restore */
 
 /**********************************************************************************************************************
+  TcpIp_FragmentationConfig
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_FragmentationConfig
+  \details
+  Element                         Description
+  MaxPacketSize                   Reassembly Buffer Size - Value of configuration parameter TcpIpIpMaxReassDgramSize
+  ReassemblyTimeoutMs             Reassembly Timeout - Value of configuration parameter TcpIpIpReassTimeout [MILLISECONDS]
+  ReassemblyBufferDescUsed        TRUE, if the 0:n relation has 1 relation pointing to TcpIp_ReassemblyBufferDesc
+  ReassemblyBufferDescEndIdx      the end index of the 0:n relation pointing to TcpIp_ReassemblyBufferDesc
+  ReassemblyBufferDescLength      the number of relations pointing to TcpIp_ReassemblyBufferDesc
+  ReassemblyBufferDescStartIdx    the start index of the 0:n relation pointing to TcpIp_ReassemblyBufferDesc
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(TcpIp_FragmentationConfigType, TCPIP_CONST) TcpIp_FragmentationConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    MaxPacketSize  ReassemblyTimeoutMs  ReassemblyBufferDescUsed  ReassemblyBufferDescEndIdx  ReassemblyBufferDescLength  ReassemblyBufferDescStartIdx        Referable Keys */
+  { /*     0 */         4460u,               1000u,                     TRUE,                         3u,                         3u,                           0u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpIpFragmentationConfig] */
+};
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   TcpIp_IcmpConfig
 **********************************************************************************************************************/
 /** 
@@ -309,12 +336,8 @@ CONST(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFctPtr = 
   MaxTxMsgSize                       -
   MtuTx                              Value of configuration parameter EthIfCtrlMtu
   AutoIpConfigUsed                   TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_AutoIpConfig
-  HwChecksumIcmp                     Defines if harware supports calculation of IPv4 ICMP checksum.
-  HwChecksumIp                       Defines if harware supports calculation of IPv4 checksum.
-  HwChecksumTcp                      Defines if harware supports calculation of IPv4 TCP checksum.
-  HwChecksumUdp                      Defines if harware supports calculation of IPv4 UDP checksum.
+  GratuitousArpUsed                  TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_GratuitousArp
   MulticastAddrV4Used                TRUE, if the 0:n relation has 1 relation pointing to TcpIp_MulticastAddrV4
-  ReceiveAllMulticasts               -
   AddrAssignmentCfgByPrioEndIdx      the end index of the 1:n relation pointing to TcpIp_AddrAssignmentCfgByPrio
   AddrAssignmentCfgByPrioStartIdx    the start index of the 1:n relation pointing to TcpIp_AddrAssignmentCfgByPrio
   AddrAssignmentPrioByType           -
@@ -350,10 +373,10 @@ CONST(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFctPtr = 
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(TcpIp_IpV4CtrlType, TCPIP_CONST) TcpIp_IpV4Ctrl[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    MaxTxMsgSize  MtuTx  AutoIpConfigUsed  HwChecksumIcmp  HwChecksumIp  HwChecksumTcp  HwChecksumUdp  MulticastAddrV4Used  ReceiveAllMulticasts  AddrAssignmentCfgByPrioEndIdx  AddrAssignmentCfgByPrioStartIdx  AddrAssignmentPrioByType                                          ArpConfigIdx  ArpTableEntryEndIdx  ArpTableEntryStartIdx  AutoIpConfigIdx                     Buf2TxReqMapEndIdx  Buf2TxReqMapStartIdx  DefaultTtl  DhcpConfigIdx                     DhcpHostnameEndIdx                     DhcpHostnameStartIdx                     DhcpStatusIdx                     DhcpUserOptionEndIdx                     DhcpUserOptionStartIdx                     EthIfCtrlIdx                                      FragmentationConfigIdx                     FramePrioDefault  GratuitousArpIdx                     LlAddrStateIdx                     LocalAddrV4BroadcastIdx  LocalAddrV4DhcpIdx                     LocalAddrV4UnicastIdx  MulticastAddrV4EndIdx                     MulticastAddrV4StartIdx                     StaticArpTableIdx                     TypeOfServiceDefault  UnicastAddrV4Idx        Referable Keys */
-  { /*     0 */        1500u, 1500u,            FALSE,          FALSE,        FALSE,         FALSE,         FALSE,                TRUE,                FALSE,                            2u,                              1u,                    0x04u  /* DHCP(-), LINKLOCAL(-), STATIC(1) */,           0u,                 10u,                    0u, TCPIP_NO_AUTOIPCONFIGIDXOFIPV4CTRL,                10u,                   0u,        64u, TCPIP_NO_DHCPCONFIGIDXOFIPV4CTRL, TCPIP_NO_DHCPHOSTNAMEENDIDXOFIPV4CTRL, TCPIP_NO_DHCPHOSTNAMESTARTIDXOFIPV4CTRL, TCPIP_NO_DHCPSTATUSIDXOFIPV4CTRL, TCPIP_NO_DHCPUSEROPTIONENDIDXOFIPV4CTRL, TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL, EthIfConf_EthIfController_EthIfController_Vlan10, TCPIP_NO_FRAGMENTATIONCONFIGIDXOFIPV4CTRL,               0u, TCPIP_NO_GRATUITOUSARPIDXOFIPV4CTRL, TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL,                      2u, TCPIP_NO_LOCALADDRV4DHCPIDXOFIPV4CTRL,                    0u,                                       1u,                                         0u, TCPIP_NO_STATICARPTABLEIDXOFIPV4CTRL,                   0u,               0u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10] */
-  { /*     1 */        1500u, 1500u,            FALSE,          FALSE,        FALSE,         FALSE,         FALSE,                TRUE,                FALSE,                            2u,                              1u,                    0x04u  /* DHCP(-), LINKLOCAL(-), STATIC(1) */,           0u,                 20u,                   10u, TCPIP_NO_AUTOIPCONFIGIDXOFIPV4CTRL,                10u,                   0u,        64u, TCPIP_NO_DHCPCONFIGIDXOFIPV4CTRL, TCPIP_NO_DHCPHOSTNAMEENDIDXOFIPV4CTRL, TCPIP_NO_DHCPHOSTNAMESTARTIDXOFIPV4CTRL, TCPIP_NO_DHCPSTATUSIDXOFIPV4CTRL, TCPIP_NO_DHCPUSEROPTIONENDIDXOFIPV4CTRL, TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL, EthIfConf_EthIfController_EthIfController_Vlan23, TCPIP_NO_FRAGMENTATIONCONFIGIDXOFIPV4CTRL,               0u, TCPIP_NO_GRATUITOUSARPIDXOFIPV4CTRL, TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL,                      6u, TCPIP_NO_LOCALADDRV4DHCPIDXOFIPV4CTRL,                    3u,                                       3u,                                         1u, TCPIP_NO_STATICARPTABLEIDXOFIPV4CTRL,                   0u,               1u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan23] */
-  { /*     2 */        1500u, 1500u,            FALSE,          FALSE,        FALSE,         FALSE,         FALSE,               FALSE,                FALSE,                            2u,                              0u,                    0x48u  /* DHCP(1), LINKLOCAL(-), STATIC(2) */,           0u,                 30u,                   20u, TCPIP_NO_AUTOIPCONFIGIDXOFIPV4CTRL,                10u,                   0u,        64u,                               0u,                                   30u,                                      0u,                               0u, TCPIP_NO_DHCPUSEROPTIONENDIDXOFIPV4CTRL, TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL, EthIfConf_EthIfController_EthIfController_Vlan1 , TCPIP_NO_FRAGMENTATIONCONFIGIDXOFIPV4CTRL,               0u, TCPIP_NO_GRATUITOUSARPIDXOFIPV4CTRL, TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL,                      8u,                                    7u,                    7u, TCPIP_NO_MULTICASTADDRV4ENDIDXOFIPV4CTRL, TCPIP_NO_MULTICASTADDRV4STARTIDXOFIPV4CTRL, TCPIP_NO_STATICARPTABLEIDXOFIPV4CTRL,                   0u,               2u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan1] */
+    /* Index    MaxTxMsgSize  MtuTx  AutoIpConfigUsed  GratuitousArpUsed  MulticastAddrV4Used  AddrAssignmentCfgByPrioEndIdx  AddrAssignmentCfgByPrioStartIdx  AddrAssignmentPrioByType                                          ArpConfigIdx  ArpTableEntryEndIdx  ArpTableEntryStartIdx  AutoIpConfigIdx                     Buf2TxReqMapEndIdx  Buf2TxReqMapStartIdx  DefaultTtl  DhcpConfigIdx                     DhcpHostnameEndIdx                     DhcpHostnameStartIdx                     DhcpStatusIdx                     DhcpUserOptionEndIdx                     DhcpUserOptionStartIdx                     EthIfCtrlIdx                                      FragmentationConfigIdx                     FramePrioDefault  GratuitousArpIdx  LlAddrStateIdx                     LocalAddrV4BroadcastIdx  LocalAddrV4DhcpIdx                     LocalAddrV4UnicastIdx  MulticastAddrV4EndIdx                     MulticastAddrV4StartIdx                     StaticArpTableIdx                     TypeOfServiceDefault  UnicastAddrV4Idx        Referable Keys */
+  { /*     0 */        1500u, 1500u,            FALSE,              TRUE,                TRUE,                            2u,                              1u,                    0x04u  /* DHCP(-), LINKLOCAL(-), STATIC(1) */,           0u,                 10u,                    0u, TCPIP_NO_AUTOIPCONFIGIDXOFIPV4CTRL,                12u,                   0u,        64u, TCPIP_NO_DHCPCONFIGIDXOFIPV4CTRL, TCPIP_NO_DHCPHOSTNAMEENDIDXOFIPV4CTRL, TCPIP_NO_DHCPHOSTNAMESTARTIDXOFIPV4CTRL, TCPIP_NO_DHCPSTATUSIDXOFIPV4CTRL, TCPIP_NO_DHCPUSEROPTIONENDIDXOFIPV4CTRL, TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL, EthIfConf_EthIfController_EthIfController_Vlan10, TCPIP_NO_FRAGMENTATIONCONFIGIDXOFIPV4CTRL,               0u,               0u, TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL,                      2u, TCPIP_NO_LOCALADDRV4DHCPIDXOFIPV4CTRL,                    0u,                                       1u,                                         0u, TCPIP_NO_STATICARPTABLEIDXOFIPV4CTRL,                   0u,               0u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10] */
+  { /*     1 */        1500u, 1500u,            FALSE,              TRUE,                TRUE,                            2u,                              1u,                    0x04u  /* DHCP(-), LINKLOCAL(-), STATIC(1) */,           0u,                 20u,                   10u, TCPIP_NO_AUTOIPCONFIGIDXOFIPV4CTRL,                12u,                   0u,        64u, TCPIP_NO_DHCPCONFIGIDXOFIPV4CTRL, TCPIP_NO_DHCPHOSTNAMEENDIDXOFIPV4CTRL, TCPIP_NO_DHCPHOSTNAMESTARTIDXOFIPV4CTRL, TCPIP_NO_DHCPSTATUSIDXOFIPV4CTRL, TCPIP_NO_DHCPUSEROPTIONENDIDXOFIPV4CTRL, TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL, EthIfConf_EthIfController_EthIfController_Vlan23, TCPIP_NO_FRAGMENTATIONCONFIGIDXOFIPV4CTRL,               0u,               1u, TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL,                      6u, TCPIP_NO_LOCALADDRV4DHCPIDXOFIPV4CTRL,                    3u,                                       3u,                                         1u,                                   0u,                   0u,               1u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan23] */
+  { /*     2 */        4460u, 1500u,            FALSE,              TRUE,               FALSE,                            2u,                              0u,                    0x48u  /* DHCP(1), LINKLOCAL(-), STATIC(2) */,           0u,                 30u,                   20u, TCPIP_NO_AUTOIPCONFIGIDXOFIPV4CTRL,                12u,                   0u,        64u,                               0u,                                   30u,                                      0u,                               0u, TCPIP_NO_DHCPUSEROPTIONENDIDXOFIPV4CTRL, TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL, EthIfConf_EthIfController_EthIfController_Vlan1 ,                                        0u,               0u,               2u, TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL,                      8u,                                    7u,                    7u, TCPIP_NO_MULTICASTADDRV4ENDIDXOFIPV4CTRL, TCPIP_NO_MULTICASTADDRV4STARTIDXOFIPV4CTRL, TCPIP_NO_STATICARPTABLEIDXOFIPV4CTRL,                   0u,               2u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan1] */
 };
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -459,6 +482,31 @@ CONST(TcpIp_GetRandomNumberType, TCPIP_CONST) TcpIp_RandomNumberFctPtr = Appl_Cr
 /*lint -restore */
 
 /**********************************************************************************************************************
+  TcpIp_ReassemblyBufferDesc
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_ReassemblyBufferDesc
+  \details
+  Element                     Description
+  ReassemblyBufferEndIdx      the end index of the 1:n relation pointing to TcpIp_ReassemblyBuffer
+  ReassemblyBufferStartIdx    the start index of the 1:n relation pointing to TcpIp_ReassemblyBuffer
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(TcpIp_ReassemblyBufferDescType, TCPIP_CONST) TcpIp_ReassemblyBufferDesc[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    ReassemblyBufferEndIdx  ReassemblyBufferStartIdx        Referable Keys */
+  { /*     0 */                  4460u,                       0u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpIpFragmentationConfig] */
+  { /*     1 */                  8920u,                    4460u },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpIpFragmentationConfig] */
+  { /*     2 */                 13380u,                    8920u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpIpFragmentationConfig] */
+};
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   TcpIp_SocketOwnerConfig
 **********************************************************************************************************************/
 /** 
@@ -484,6 +532,54 @@ CONST(TcpIp_GetRandomNumberType, TCPIP_CONST) TcpIp_RandomNumberFctPtr = Appl_Cr
 CONST(TcpIp_SocketOwnerConfigType, TCPIP_CONST) TcpIp_SocketOwnerConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    CopyTxDataDynFuncPtr  CopyTxDataFuncPtr  DhcpEventFuncPtr  LocalIpAddrAssignmentChgFuncPtr  RxIndicationFuncPtr  TcpAcceptedFuncPtr  TcpConnectedFuncPtr  TcpIpEventFuncPtr  TlsValidationResultFuncPtr  TxConfirmationFuncPtr */
   { /*     0 */ NULL_PTR            , SoAd_CopyTxData  , NULL_PTR        , SoAd_LocalIpAddrAssignmentChg  , SoAd_RxIndication  , SoAd_TcpAccepted  , SoAd_TcpConnected  , SoAd_TcpIpEvent  , NULL_PTR                  , SoAd_TxConfirmation   }
+};
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_StaticArpEntry
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_StaticArpEntry
+  \brief  -
+  \details
+  Element     Description
+  IpAddr      -
+  PhysAddr    -
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(TcpIp_StaticArpEntryType, TCPIP_CONST) TcpIp_StaticArpEntry[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    IpAddr                                           PhysAddr                                              Referable Keys */
+  { /*     0 */ 0x6400170AuL /*  10.23.0.100 LITTLE_ENDIAN  */ , {{ 0x00u, 0x17u, 0xBCu, 0x00u, 0x17u, 0xBCu }} }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpStaticArpTable] */
+};
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_StaticArpTable
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_StaticArpTable
+  \brief  -
+  \details
+  Element                   Description
+  StaticArpEntryEndIdx      the end index of the 1:n relation pointing to TcpIp_StaticArpEntry
+  StaticArpEntryStartIdx    the start index of the 1:n relation pointing to TcpIp_StaticArpEntry
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(TcpIp_StaticArpTableType, TCPIP_CONST) TcpIp_StaticArpTable[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    StaticArpEntryEndIdx  StaticArpEntryStartIdx        Referable Keys */
+  { /*     0 */                   1u,                     0u }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpStaticArpTable] */
 };
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -521,7 +617,7 @@ CONST(TcpIp_SocketOwnerConfigType, TCPIP_CONST) TcpIp_SocketOwnerConfig[1] = {  
 /*lint -restore */
 CONST(TcpIp_TcpConfigType, TCPIP_CONST) TcpIp_TcpConfig[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    KeepAliveTime  FinWait2Timeout  Msl     RetransTimeoutMax  RxMss  TxMss  UserTimeoutDefCycles  KeepAliveInterval  KeepAliveProbesMax  NagleTimeout  RetransTimeout  TcpOooQSizePerSocketAvg  TcpOooQSizePerSocketMax  TcpRetryQSize  TimeToLiveDefault  UserTimeoutMaxCycles                      UserTimeoutMinCycles                     */
-  { /*     0 */      1440000u,          24000u, 24000u,            12000u, 1460u, 1460u,                4000u,                0u,                 0u,           0u,           200u,                      5u,                      5u,           10u,               64u, TCPIP_NO_USERTIMEOUTMAXCYCLESOFTCPCONFIG, TCPIP_NO_USERTIMEOUTMINCYCLESOFTCPCONFIG }
+  { /*     0 */      1440000u,          24000u, 24000u,            12000u, 1460u, 1460u,                4000u,                0u,                 0u,          20u,           200u,                      5u,                      5u,           10u,               64u, TCPIP_NO_USERTIMEOUTMAXCYCLESOFTCPCONFIG, TCPIP_NO_USERTIMEOUTMINCYCLESOFTCPCONFIG }
 };
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -576,6 +672,31 @@ CONST(TcpIp_TcpTxBufferDescType, TCPIP_CONST) TcpIp_TcpTxBufferDesc[4] = {  /* P
   { /*     1 */             1024u,                512u },
   { /*     2 */             1536u,               1024u },
   { /*     3 */             2048u,               1536u }
+};
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TxReqElemList
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_TxReqElemList
+  \brief  UDP TX request list configuration
+  \details
+  Element              Description
+  TxReqElemEndIdx      the end index of the 1:n relation pointing to TcpIp_TxReqElem
+  TxReqElemLength      the number of relations pointing to TcpIp_TxReqElem
+  TxReqElemStartIdx    the start index of the 1:n relation pointing to TcpIp_TxReqElem
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(TcpIp_TxReqElemListType, TCPIP_CONST) TcpIp_TxReqElemList[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TxReqElemEndIdx  TxReqElemLength  TxReqElemStartIdx */
+  { /*     0 */              3u,              3u,                0u }
 };
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -665,7 +786,7 @@ VAR(TcpIp_Buf2TxReqMapUType, TCPIP_VAR_NOINIT) TcpIp_Buf2TxReqMap;  /* PRQA S 07
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
   /*   ... */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
-  /*     9 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
+  /*    11 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN] */
 
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -722,6 +843,31 @@ VAR(TcpIp_DhcpHostnameUType, TCPIP_VAR_NOINIT) TcpIp_DhcpHostname;  /* PRQA S 07
 VAR(TcpIp_DhcpStatusUType, TCPIP_VAR_NOINIT) TcpIp_DhcpStatus;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan1] */
+
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_GratuitousArp
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_GratuitousArp
+  \details
+  Element               Description
+  NextTransmissionMs    Time of next gratuitous ARP transmission.
+  TransmissionCnt       Number of transmitted gratuitous ARPs.
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(TcpIp_GratuitousArpUType, TCPIP_VAR_NOINIT) TcpIp_GratuitousArp;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan10/TcpIpIpVXCtrl/TcpIpIpV4Ctrl_Vlan10] */
+  /*     1 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan23/TcpIpIpVXCtrl/TcpIpIpV4Ctrl_Vlan23] */
+  /*     2 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpCtrl_Vlan1/TcpIpIpVXCtrl/TcpIpIpV4Ctrl_Vlan1] */
 
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -892,6 +1038,56 @@ VAR(TcpIp_MulticastAddrV4RequestedType, TCPIP_VAR_NOINIT) TcpIp_MulticastAddrV4R
 /*lint -restore */
 
 /**********************************************************************************************************************
+  TcpIp_ReassemblyBuffer
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_ReassemblyBuffer
+  \brief  -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(TcpIp_ReassemblyBufferUType, TCPIP_VAR_NOINIT) TcpIp_ReassemblyBuffer;  /* PRQA S 0759, 1514, 1533, 0612, 0613 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_BigStructure, MD_CSL_BigStructure */
+  /* Index        Referable Keys */
+  /*     0 */  /* [TcpIpIpFragmentationConfig_Ra0] */
+  /*   ... */  /* [TcpIpIpFragmentationConfig_Ra0] */
+  /*  4459 */  /* [TcpIpIpFragmentationConfig_Ra0] */
+  /*  4460 */  /* [TcpIpIpFragmentationConfig_Ra1] */
+  /*   ... */  /* [TcpIpIpFragmentationConfig_Ra1] */
+  /*  8919 */  /* [TcpIpIpFragmentationConfig_Ra1] */
+  /*  8920 */  /* [TcpIpIpFragmentationConfig_Ra2] */
+  /*   ... */  /* [TcpIpIpFragmentationConfig_Ra2] */
+  /* 13379 */  /* [TcpIpIpFragmentationConfig_Ra2] */
+
+#define TCPIP_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_ReassemblyBufferDescDyn
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_ReassemblyBufferDescDyn
+  \brief  -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(TcpIp_ReassemblyBufferDescDynUType, TCPIP_VAR_NOINIT) TcpIp_ReassemblyBufferDescDyn;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpIpFragmentationConfig] */
+  /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpIpFragmentationConfig] */
+  /*     2 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpIpConfig/TcpIpIpV4Config/TcpIpIpFragmentationConfig] */
+
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   TcpIp_SocketDyn
 **********************************************************************************************************************/
 /** 
@@ -920,6 +1116,34 @@ VAR(TcpIp_SocketDynUType, TCPIP_VAR_NOINIT) TcpIp_SocketDyn;  /* PRQA S 0759, 15
   /*   ... */  /* [TCP] */
   /*    12 */  /* [TCP] */
 
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_SocketTcpCongCtrlDyn
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_SocketTcpCongCtrlDyn
+  \brief  Manages the state of the TCP timestamp option
+  \details
+  Element                  Description
+  AckSumN                  -
+  AckSumTimeout            -
+  Cwnd                     -
+  Recover                  -
+  Ssthresh                 -
+  CwndSegNumLimit          -
+  CongestionControlMode    -
+  DupAckCnt                -
+  FastRetransmitPending    -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(TcpIp_SocketTcpCongCtrlDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpCongCtrlDyn[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -956,6 +1180,7 @@ VAR(TcpIp_SocketDynUType, TCPIP_VAR_NOINIT) TcpIp_SocketDyn;  /* PRQA S 0759, 15
   PathMtuChanged                       -
   RetryQFillNum                        -
   RstReceived                          -
+  SackOptActive                        -
   SendLastHsAck                        Flag to indicate if the next ACK is the last of the handshake
   SockIsServer                         -
   SockState                            -
@@ -992,6 +1217,31 @@ volatile VAR(TcpIp_SocketTcpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpDyn[6];  /
 /*lint -restore */
 
 /**********************************************************************************************************************
+  TcpIp_SocketTcpKeepAliveDyn
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_SocketTcpKeepAliveDyn
+  \brief  Manages the state of the keep alive feature.
+  \details
+  Element          Description
+  IdleTime         -
+  ProbeInterval    -
+  Timeout          -
+  Probes           -
+  ProbesMax        -
+  Enabled          -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(TcpIp_SocketTcpKeepAliveDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpKeepAliveDyn[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   TcpIp_SocketTcpNagleDyn
 **********************************************************************************************************************/
 /** 
@@ -1019,15 +1269,44 @@ VAR(TcpIp_SocketTcpNagleDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpNagleDyn[6];  
   \var    TcpIp_SocketTcpOooDyn
   \brief  Manages the state of TCP segments that arrive out of order
   \details
-  Element                   Description
-  TcpOooQElementFirstIdx    the index of the 0:1 relation pointing to TcpIp_TcpOooQElement
-  TcpOooQFillNum            -
+  Element                         Description
+  TcpOooChangeCounter             Counter to mark the order of changes for ooo elements
+  TcpOooQElementFirstIdx          the index of the 0:1 relation pointing to TcpIp_TcpOooQElement
+  TcpOooQElementLastChangedIdx    the index of the 0:1 relation pointing to TcpIp_TcpOooQElement
+  TcpOooQFillNum                  -
 */ 
 #define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 VAR(TcpIp_SocketTcpOooDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpOooDyn[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_SocketTcpTsOptDyn
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_SocketTcpTsOptDyn
+  \brief  Manages the state of the TCP timestamp option
+  \details
+  Element               Description
+  Rto                   -
+  RtoValid              -
+  RttVar                -
+  SRtt                  -
+  TimestampReceived     -
+  RtoResetPending       -
+  RtoState              -
+  TimestampOptActive    -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(TcpIp_SocketTcpTsOptDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpTsOptDyn[6];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -1228,6 +1507,55 @@ VAR(TcpIp_TcpTxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpTxBufferDescDyn[4];
 /*lint -restore */
 
 /**********************************************************************************************************************
+  TcpIp_TxReqElem
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_TxReqElem
+  \brief  UDP TX request list elements
+  \details
+  Element                 Description
+  TxReqElemDataLenByte    -
+  TxReqElemTransmitted    -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(TcpIp_TxReqElemUType, TCPIP_VAR_NOINIT) TcpIp_TxReqElem;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpUdpConfig/TcpIpUdpTxReqList] */
+  /*   ... */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpUdpConfig/TcpIpUdpTxReqList] */
+  /*     2 */  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpUdpConfig/TcpIpUdpTxReqList] */
+
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TxReqElemListDyn
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_TxReqElemListDyn
+  \brief  UDP TX request list variables
+  \details
+  Element            Description
+  FillNum            Number of elements currently stored in TX request ring buffer
+  ReadPos            Read position of TX request ring buffer
+  SocketUdpDynIdx    the index of the 0:1 relation pointing to TcpIp_SocketUdpDyn
+  WritePos           Write position in TX request ring buffer
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(TcpIp_TxReqElemListDynType, TCPIP_VAR_NOINIT) TcpIp_TxReqElemListDyn[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   TcpIp_UdpTxRetryQueueElementChain
 **********************************************************************************************************************/
 /** 
@@ -1313,6 +1641,7 @@ VAR(TcpIp_DListDescType, TCPIP_VAR_NOINIT) TcpIp_UdpTxRetryQueuePoolDesc[1];  /*
   UdpTxRetryQueueElements               the pointer to TcpIp_UdpTxRetryQueueElements
   UdpTxRetryQueuePoolDesc               the pointer to TcpIp_UdpTxRetryQueuePoolDesc
   UnicastAddrV4                         the pointer to TcpIp_UnicastAddrV4
+  SizeOfReassemblyBuffer                the number of accomplishable value elements in TcpIp_ReassemblyBuffer
   SizeOfArpConfig                       the number of accomplishable value elements in TcpIp_ArpConfig
   SizeOfArpTableEntry                   the number of accomplishable value elements in TcpIp_ArpTableEntry
   SizeOfAutoIpConfig                    the number of accomplishable value elements in TcpIp_AutoIpConfig
@@ -1325,7 +1654,6 @@ VAR(TcpIp_DListDescType, TCPIP_VAR_NOINIT) TcpIp_UdpTxRetryQueuePoolDesc[1];  /*
   SizeOfLlAddrState                     the number of accomplishable value elements in TcpIp_LlAddrState
   SizeOfMulticastAddrV4                 the number of accomplishable value elements in TcpIp_MulticastAddrV4
   SizeOfPhysAddrConfig                  the number of accomplishable value elements in TcpIp_PhysAddrConfig
-  SizeOfReassemblyBuffer                the number of accomplishable value elements in TcpIp_ReassemblyBuffer
   SizeOfReassemblyBufferDesc            the number of accomplishable value elements in TcpIp_ReassemblyBufferDesc
   SizeOfStaticArpEntry                  the number of accomplishable value elements in TcpIp_StaticArpEntry
   SizeOfStaticArpTable                  the number of accomplishable value elements in TcpIp_StaticArpTable
@@ -1352,26 +1680,27 @@ CONST(TcpIp_PCConfigsType, TCPIP_CONST) TcpIp_PCConfig = {  /* PRQA S 1514, 1533
     , NULL_PTR                                /**< the pointer to TcpIp_DhcpUserOption */
     , NULL_PTR                                /**< the pointer to TcpIp_DhcpUserOptionBuffer */
     , NULL_PTR                                /**< the pointer to TcpIp_DhcpUserOptionDyn */
-    , NULL_PTR                                /**< the pointer to TcpIp_FragmentationConfig */
-    , NULL_PTR                                /**< the pointer to TcpIp_GratuitousArp */
+    , TcpIp_FragmentationConfig               /**< the pointer to TcpIp_FragmentationConfig */
+    , TcpIp_GratuitousArp.raw                 /**< the pointer to TcpIp_GratuitousArp */
     , NULL_PTR                                /**< the pointer to TcpIp_LlAddrState */
     , TcpIp_MulticastAddrV4                   /**< the pointer to TcpIp_MulticastAddrV4 */
     , TcpIp_MulticastAddrV4Requested          /**< the pointer to TcpIp_MulticastAddrV4Requested */
     , NULL_PTR                                /**< the pointer to TcpIp_PhysAddrConfig */
-    , NULL_PTR                                /**< the pointer to TcpIp_ReassemblyBuffer */
-    , NULL_PTR                                /**< the pointer to TcpIp_ReassemblyBufferDesc */
-    , NULL_PTR                                /**< the pointer to TcpIp_ReassemblyBufferDescDyn */
-    , NULL_PTR                                /**< the pointer to TcpIp_StaticArpEntry */
-    , NULL_PTR                                /**< the pointer to TcpIp_StaticArpTable */
+    , TcpIp_ReassemblyBuffer.raw              /**< the pointer to TcpIp_ReassemblyBuffer */
+    , TcpIp_ReassemblyBufferDesc              /**< the pointer to TcpIp_ReassemblyBufferDesc */
+    , TcpIp_ReassemblyBufferDescDyn.raw       /**< the pointer to TcpIp_ReassemblyBufferDescDyn */
+    , TcpIp_StaticArpEntry                    /**< the pointer to TcpIp_StaticArpEntry */
+    , TcpIp_StaticArpTable                    /**< the pointer to TcpIp_StaticArpTable */
     , TcpIp_StaticUnicastAddrV4Requested.raw  /**< the pointer to TcpIp_StaticUnicastAddrV4Requested */
     , TcpIp_TcpOooQElement                    /**< the pointer to TcpIp_TcpOooQElement */
-    , NULL_PTR                                /**< the pointer to TcpIp_TxReqElem */
-    , NULL_PTR                                /**< the pointer to TcpIp_TxReqElemList */
-    , NULL_PTR                                /**< the pointer to TcpIp_TxReqElemListDyn */
+    , TcpIp_TxReqElem.raw                     /**< the pointer to TcpIp_TxReqElem */
+    , TcpIp_TxReqElemList                     /**< the pointer to TcpIp_TxReqElemList */
+    , TcpIp_TxReqElemListDyn                  /**< the pointer to TcpIp_TxReqElemListDyn */
     , TcpIp_UdpTxRetryQueueElementChain       /**< the pointer to TcpIp_UdpTxRetryQueueElementChain */
     , TcpIp_UdpTxRetryQueueElements           /**< the pointer to TcpIp_UdpTxRetryQueueElements */
     , TcpIp_UdpTxRetryQueuePoolDesc           /**< the pointer to TcpIp_UdpTxRetryQueuePoolDesc */
     , TcpIp_UnicastAddrV4                     /**< the pointer to TcpIp_UnicastAddrV4 */
+    , 13380u                                  /**< the number of elements in TcpIp_ReassemblyBuffer */
     , 1u                                      /**< the number of elements in TcpIp_ArpConfig */
     , 30u                                     /**< the number of elements in TcpIp_ArpTableEntry */
     , 0u                                      /**< the number of elements in TcpIp_AutoIpConfig */
@@ -1379,19 +1708,18 @@ CONST(TcpIp_PCConfigsType, TCPIP_CONST) TcpIp_PCConfig = {  /* PRQA S 1514, 1533
     , 3u                                      /**< the number of elements in TcpIp_DefaultUnicastAddrV4 */
     , 0u                                      /**< the number of elements in TcpIp_DhcpUserOption */
     , 0u                                      /**< the number of elements in TcpIp_DhcpUserOptionBuffer */
-    , 0u                                      /**< the number of elements in TcpIp_FragmentationConfig */
-    , 0u                                      /**< the number of elements in TcpIp_GratuitousArp */
+    , 1u                                      /**< the number of elements in TcpIp_FragmentationConfig */
+    , 3u                                      /**< the number of elements in TcpIp_GratuitousArp */
     , 0u                                      /**< the number of elements in TcpIp_LlAddrState */
     , 3u                                      /**< the number of elements in TcpIp_MulticastAddrV4 */
     , 0u                                      /**< the number of elements in TcpIp_PhysAddrConfig */
-    , 0u                                      /**< the number of elements in TcpIp_ReassemblyBuffer */
-    , 0u                                      /**< the number of elements in TcpIp_ReassemblyBufferDesc */
-    , 0u                                      /**< the number of elements in TcpIp_StaticArpEntry */
-    , 0u                                      /**< the number of elements in TcpIp_StaticArpTable */
+    , 3u                                      /**< the number of elements in TcpIp_ReassemblyBufferDesc */
+    , 1u                                      /**< the number of elements in TcpIp_StaticArpEntry */
+    , 1u                                      /**< the number of elements in TcpIp_StaticArpTable */
     , 3u                                      /**< the number of elements in TcpIp_StaticUnicastAddrV4Requested */
     , 30u                                     /**< the number of elements in TcpIp_TcpOooQElement */
-    , 0u                                      /**< the number of elements in TcpIp_TxReqElem */
-    , 0u                                      /**< the number of elements in TcpIp_TxReqElemList */
+    , 3u                                      /**< the number of elements in TcpIp_TxReqElem */
+    , 1u                                      /**< the number of elements in TcpIp_TxReqElemList */
     , 3u                                      /**< the number of elements in TcpIp_UdpTxRetryQueueElementChain */
     , 3u                                      /**< the number of elements in TcpIp_UdpTxRetryQueueElements */
     , 1u                                      /**< the number of elements in TcpIp_UdpTxRetryQueuePoolDesc */

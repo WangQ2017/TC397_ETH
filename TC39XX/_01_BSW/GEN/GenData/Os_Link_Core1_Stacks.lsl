@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Link_Core1_Stacks.lsl
- *   Generation Time: 2025-09-02 11:14:44
+ *   Generation Time: 2026-05-01 19:42:43
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -108,15 +108,6 @@ group OS_STACK_OSCORE1_TASK_PRIO34_VAR_NOINIT_GROUP(ordered, contiguous, fill, a
 "_OS_STACK_OSCORE1_TASK_PRIO34_VAR_NOINIT_START" = "_lc_gb_OS_STACK_OSCORE1_TASK_PRIO34_VAR_NOINIT_GROUP";
 "_OS_STACK_OSCORE1_TASK_PRIO34_VAR_NOINIT_END" = "_lc_ge_OS_STACK_OSCORE1_TASK_PRIO34_VAR_NOINIT_GROUP" - 1;
 "_OS_STACK_OSCORE1_TASK_PRIO34_VAR_NOINIT_LIMIT" = "_lc_ge_OS_STACK_OSCORE1_TASK_PRIO34_VAR_NOINIT_GROUP";
-
-/* Stack: OsCore1_Task_Prio41 (1024 Byte) */
-group OS_STACK_OSCORE1_TASK_PRIO41_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
-{
-  select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO41_VAR_NOINIT";
-}
-"_OS_STACK_OSCORE1_TASK_PRIO41_VAR_NOINIT_START" = "_lc_gb_OS_STACK_OSCORE1_TASK_PRIO41_VAR_NOINIT_GROUP";
-"_OS_STACK_OSCORE1_TASK_PRIO41_VAR_NOINIT_END" = "_lc_ge_OS_STACK_OSCORE1_TASK_PRIO41_VAR_NOINIT_GROUP" - 1;
-"_OS_STACK_OSCORE1_TASK_PRIO41_VAR_NOINIT_LIMIT" = "_lc_ge_OS_STACK_OSCORE1_TASK_PRIO41_VAR_NOINIT_GROUP";
 
 /* Stack: OsCore1_Task_Prio4294967295 (1024 Byte) */
 group OS_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
