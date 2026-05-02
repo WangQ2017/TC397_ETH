@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.h
- *   Generation Time: 2026-05-01 20:50:40
+ *   Generation Time: 2026-05-02 11:41:04
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -89,9 +89,6 @@ extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE2_OsTask
 /*! Alarm configuration data: Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms;
 
-/*! Alarm configuration data: Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable5ms */
-extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable5ms;
-
 /*! Alarm configuration data: Rte_Al_TE_EthIf_EthIf_MainFunctionState */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_EthIf_EthIf_MainFunctionState;
 
@@ -103,6 +100,9 @@ extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Eth
 
 /*! Alarm configuration data: Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms;
+
+/*! Alarm configuration data: Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms */
+extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms;
 
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

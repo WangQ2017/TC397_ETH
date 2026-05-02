@@ -39,6 +39,7 @@
 #include "Rte_Cdd_Core3.h"
 #include "Rte_Cdd_Core4.h"
 #include "Rte_Cdd_Core5.h"
+#include "Rte_Cdd_Log.h"
 #include "Rte_Cdd_Nm.h"
 #include "Rte_ComM.h"
 #include "Rte_Dcm.h"

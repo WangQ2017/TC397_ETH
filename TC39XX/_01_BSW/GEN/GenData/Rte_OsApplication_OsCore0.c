@@ -39,6 +39,7 @@
 #include "Rte_Cdd_Core3.h"
 #include "Rte_Cdd_Core4.h"
 #include "Rte_Cdd_Core5.h"
+#include "Rte_Cdd_Log.h"
 #include "Rte_Cdd_Nm.h"
 #include "Rte_ComM.h"
 #include "Rte_Dcm.h"
@@ -574,18 +575,15 @@ TASK(OsTask_Asw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreacha
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms | Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(OsTask_Asw_OsCore0, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable5ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms | Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
-    if ((ev & Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms) != (EventMaskType)0)
     {
       /* call runnable */
-      Cdd_Nm_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-    }
+      Cdd_Log_Runnable5ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
-    if ((ev & Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable5ms) != (EventMaskType)0)
-    {
       /* call runnable */
       Cdd_Core0_Runnable5ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
@@ -600,6 +598,12 @@ TASK(OsTask_Asw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreacha
     {
       /* call runnable */
       Cdd_Core0_Runnable20ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Cdd_Nm_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -772,6 +776,9 @@ TASK(OsTask_Init_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreach
 
   /* call runnable */
   Cdd_Nm_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  /* call runnable */
+  Cdd_Log_Runnable_init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

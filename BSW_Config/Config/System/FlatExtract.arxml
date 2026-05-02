@@ -213,6 +213,22 @@
                                   <SHORT-NAME>NvM</SHORT-NAME>
                                   <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/MICROSAR/NvM_swc/ComponentTypes/NvM</TYPE-TREF>
                                 </SW-COMPONENT-PROTOTYPE>
+                                <SW-COMPONENT-PROTOTYPE UUID="95a1f0ea-becb-4f54-a2ce-f4f71008e4d6">
+                                  <SHORT-NAME>Cdd_log</SHORT-NAME>
+                                  <ADMIN-DATA>
+                                    <SDGS>
+                                      <SDG GID="DV:DEV">
+                                        <SD GID="DV:ImportModePreset">Keep</SD>
+                                      </SDG>
+                                    </SDGS>
+                                  </ADMIN-DATA>
+                                  <ANNOTATIONS>
+                                    <ANNOTATION>
+                                      <ANNOTATION-ORIGIN>DV:Flattener</ANNOTATION-ORIGIN>
+                                    </ANNOTATION>
+                                  </ANNOTATIONS>
+                                  <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Cdd_Log</TYPE-TREF>
+                                </SW-COMPONENT-PROTOTYPE>
                               </COMPONENTS>
                               <CONNECTORS>
                                 <ASSEMBLY-SW-CONNECTOR UUID="85d60f24-4c89-441d-ab6c-e5ce0c57f4c3">
@@ -304,6 +320,7 @@
                                     <SD GID="2febec56-3d6d-473c-a988-621d3b040d28">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_Core3</SD>
                                     <SD GID="4f6437ce-56f8-4266-a2a2-fb8b59eec5bc">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_Core4</SD>
                                     <SD GID="e9db2323-9cdd-42a6-bec8-b050a48da38f">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_Core5</SD>
+                                    <SD GID="95a1f0ea-becb-4f54-a2ce-f4f71008e4d6">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_log</SD>
                                     <SD GID="da92e43e-b1d1-4320-8b2f-bfa742243b73">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Cdd_nm</SD>
                                     <SD GID="747b34e7-56d8-4bce-83e8-e53a2ee36ed3">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/ComM</SD>
                                     <SD GID="4dd7cfc1-ca6f-4024-b1e2-2981f935905c">/COM/VECTOR/CFG/WORKFLOW/SYSDESC/SYNC/COMPOSITIONTYPE/Dcm</SD>
@@ -346,6 +363,10 @@
                                     <SD GID="D5719505-A4C9-4AA0-A22E-CF6366F3097A">/ComponentTypes/Cdd_Core5/Cdd_Core5_InternalBehavior/Cdd_Core5_InitEvent</SD>
                                     <SD GID="D53F39C5-793B-434D-B313-98ED419490AC">/ComponentTypes/Cdd_Core5/Cdd_Core5_InternalBehavior/TMT_Cdd_Core5_Runnable10ms</SD>
                                     <SD GID="62EFE584-AC65-4762-8EB7-CFB35B8ADA88">/ComponentTypes/Cdd_Core5_Implementation</SD>
+                                    <SD GID="823D15A2-24A2-48B2-9193-3D1134DF9FC8">/ComponentTypes/Cdd_Log</SD>
+                                    <SD GID="B2CDDA6B-C86A-4DA5-9EDA-B9B15932CDBC">/ComponentTypes/Cdd_Log/Cdd_Log_InternalBehavior/Runnable_InitEvent</SD>
+                                    <SD GID="90E6B576-7EC5-489F-9E08-A04257D979C6">/ComponentTypes/Cdd_Log/Cdd_Log_InternalBehavior/TMT_Cdd_Log_Runnable5ms</SD>
+                                    <SD GID="CA941C9A-D00B-4AB5-8FE7-C36449254030">/ComponentTypes/Cdd_Log_Implementation</SD>
                                     <SD GID="5B860049-C51B-4285-A4D8-026CA0BBBD52">/ComponentTypes/Cdd_Nm</SD>
                                     <SD GID="9240DCA1-63AB-4EA4-BD5E-805829E2512F">/ComponentTypes/Cdd_Nm/BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest</SD>
                                     <SD GID="35FCCDE2-E40B-4CDF-B0CF-DC10C7B8597C">/ComponentTypes/Cdd_Nm/Cdd_Nm_InternalBehavior/Cdd_Nm_InitEvent</SD>
@@ -358,6 +379,7 @@
                                     <SD GID="3B608291-7352-4CD4-ABF6-174308D70A97">/ECUCompositionTypes/ECU_Composition/Cdd_Core3</SD>
                                     <SD GID="53E6B70C-9B70-44B7-B2BF-8C1532A3E801">/ECUCompositionTypes/ECU_Composition/Cdd_Core4</SD>
                                     <SD GID="46A7FD0E-64F8-47F6-AAD2-2F852DB93ED4">/ECUCompositionTypes/ECU_Composition/Cdd_Core5</SD>
+                                    <SD GID="05790F6F-90A8-4AC6-8688-ADB9A19B5558">/ECUCompositionTypes/ECU_Composition/Cdd_log</SD>
                                     <SD GID="7505401B-A153-409B-8E9A-0EF47185F80F">/ECUCompositionTypes/ECU_Composition/Cdd_nm</SD>
                                     <SD GID="2ddd9cf3-f9f3-47b9-91db-ea7722a4b413">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior</SD>
                                     <SD GID="f610369d-8e2d-4d07-977d-8f31eccc21a7">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BSWM_EXCLUSIVE_AREA_0</SD>

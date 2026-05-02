@@ -473,15 +473,16 @@
         <AutomaticSyncSystemDescription>false</AutomaticSyncSystemDescription>
     </Miscellaneous>
     <SwctGeneration>
-        <Component Name="Cdd_Nm" GenerationEnabled="false"/>
-        <Component Name="Cdd_Core0" GenerationEnabled="true" TargetFolder="..\TC39XX\_02_CDD"/>
-        <Component Name="Cdd_Core1" GenerationEnabled="false"/>
-        <Component Name="Cdd_Core2" GenerationEnabled="false"/>
-        <Component Name="Cdd_Core3" GenerationEnabled="false"/>
-        <Component Name="Cdd_Core4" GenerationEnabled="false"/>
-        <Component Name="Cdd_Core5" GenerationEnabled="false"/>
+        <Component Name="Cdd_Nm" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
+        <Component Name="Cdd_Core0" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
+        <Component Name="Cdd_Core1" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
+        <Component Name="Cdd_Core2" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
+        <Component Name="Cdd_Core3" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
+        <Component Name="Cdd_Core4" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
+        <Component Name="Cdd_Core5" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
         <Component Name="swc_lock" GenerationEnabled="true"/>
         <Component Name="lock_control" GenerationEnabled="true"/>
         <Component Name="window_core1" GenerationEnabled="true"/>
+        <Component Name="Cdd_log" GenerationEnabled="true" TargetFolder="..\TC39XX\_02_CDD"/>
     </SwctGeneration>
 </ProjectAssistant>

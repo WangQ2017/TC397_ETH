@@ -13,16 +13,16 @@
 /**********************************************************************************************************************
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
- *             File:  Cdd_Core0.c
+ *             File:  Cdd_Log.c
  *           Config:  G:/class/TC397_ETH/BSW_Config/TC397_BSW.dpa
- *        SW-C Type:  Cdd_Core0
- *  Generation Time:  2026-05-01 18:42:33
+ *        SW-C Type:  Cdd_Log
+ *  Generation Time:  2026-05-02 10:45:06
  *
  *        Generator:  MICROSAR RTE Generator Version 4.23.0
  *                    RTE Core Version 1.23.0
  *          License:  CBD2000642
  *
- *      Description:  C-Code implementation template for SW-C <Cdd_Core0>
+ *      Description:  C-Code implementation template for SW-C <Cdd_Log>
  *********************************************************************************************************************/
 
 
@@ -36,184 +36,25 @@
  * DO NOT CHANGE THIS COMMENT!           << End of version logging area >>                  DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 
-#include "Rte_Cdd_Core0.h"
-
+#include "Rte_Cdd_Log.h"
+#include "Uart.h"
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
-#include "Dio.h"
-#include "ComM.h"
-#include "EthTrcv_30_Tja1100_Hw_Int.h"
-#include "Cdd_Log.h"
+
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 
 
-#define Cdd_Core0_START_SEC_CODE
-#include "Cdd_Core0_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#define Cdd_Log_START_SEC_CODE
+#include "Cdd_Log_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /**********************************************************************************************************************
  *
- * Runnable Entity Name: Cdd_Core0_Init
- *
- *---------------------------------------------------------------------------------------------------------------------
- *
- * Executed once after the RTE is started
- *
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
- * Symbol: Cdd_Core0_Init_doc
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
-{
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
- * Symbol: Cdd_Core0_Init
- *********************************************************************************************************************/
-    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Channel_Vlan10, COMM_FULL_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Channel_Vlan23, COMM_FULL_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Channel_Vlan1, COMM_FULL_COMMUNICATION);
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-}
-
-/**********************************************************************************************************************
- *
- * Runnable Entity Name: Cdd_Core0_Runnable10ms
- *
- *---------------------------------------------------------------------------------------------------------------------
- *
- * Executed if at least one of the following trigger conditions occurred:
- *   - triggered on TimingEvent every 10ms
- *
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
- * Symbol: Cdd_Core0_Runnable10ms_doc
- *********************************************************************************************************************/
-volatile uint32 Cdd_Core0_Task_10ms_Cnt = 0;
-#define LOOPBACK_INTERNAL_0  0U
-#define LOOPBACK_EXTERNAL_1  1U
-#define LOOPBACK_INTERNAL_2  2U
-#define LOOPBACK_REMOTE_3    3U
-#define LOOPBACK_INVILID     0xFFFFU
-volatile uint16 g_LoopBackMode = LOOPBACK_INVILID;
-volatile uint16 g_LinkStatus = 0;
-volatile uint16 g_phyRegDump[28] = {0};
-volatile uint32 Cdd_Core0_Runnable10ms_Data_cnt = 0;
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
-{
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
- * Symbol: Cdd_Core0_Runnable10ms
- *********************************************************************************************************************/
-    Cdd_Core0_Task_10ms_Cnt++;
-
-    if (Cdd_Core0_Task_10ms_Cnt % 100 == 0)
-    {
-        if (Cdd_Core0_Runnable10ms_Data_cnt)
-        {
-            Dio_WriteChannel(DioConf_DioChannel_DioChannel_LED1,0);
-            Cdd_Core0_Runnable10ms_Data_cnt = 0;
-        }
-        else
-        {
-            Dio_WriteChannel(DioConf_DioChannel_DioChannel_LED1,1);
-            Cdd_Core0_Runnable10ms_Data_cnt = 1;
-        }
-
-
-        uint16         regVal = 0;
-
-        Std_ReturnType retVal = EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 1, &regVal);
-        if ((regVal != 0xffff) && ((regVal & 0x4) == 0x4))
-        {
-            g_LinkStatus = 1;
-        }
-        else
-        {
-            g_LinkStatus = 0;
-        }
-
-        for (uint16 i = 0; i < 28; i++)
-        {
-            (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, i, &g_phyRegDump[i]);
-        }
-        
-        if (g_LoopBackMode != LOOPBACK_INVILID)
-        {
-            regVal = 0;
-            (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 0U, &regVal);
-            regVal |= (1 << 14U);
-            (void)EthTrcv_30_Tja1100_Internal_WriteTrcvReg(0, 0U, regVal);
-
-            regVal = 0;
-            (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 17U, &regVal);
-            regVal |= (g_LoopBackMode << 3U);
-            (void)EthTrcv_30_Tja1100_Internal_WriteTrcvReg(0, 17U, regVal);
-
-            g_LoopBackMode = LOOPBACK_INVILID;
-        }
-    }
-  
-    CDD_LOG_DEBUG("HelloWord");
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-}
-
-/**********************************************************************************************************************
- *
- * Runnable Entity Name: Cdd_Core0_Runnable20ms
- *
- *---------------------------------------------------------------------------------------------------------------------
- *
- * Executed if at least one of the following trigger conditions occurred:
- *   - triggered on TimingEvent every 20ms
- *
- *********************************************************************************************************************/
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
- * Symbol: Cdd_Core0_Runnable20ms_doc
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-
-FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable20ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
-{
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
- * Symbol: Cdd_Core0_Runnable20ms
- *********************************************************************************************************************/
-
-
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
-}
-
-/**********************************************************************************************************************
- *
- * Runnable Entity Name: Cdd_Core0_Runnable5ms
+ * Runnable Entity Name: Cdd_Log_Runnable5ms
  *
  *---------------------------------------------------------------------------------------------------------------------
  *
@@ -223,7 +64,39 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable20ms(void) /* PRQA S 0624, 3206 */ 
  *********************************************************************************************************************/
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
- * Symbol: Cdd_Core0_Runnable5ms_doc
+ * Symbol: Cdd_Log_Runnable5ms_doc
+ *********************************************************************************************************************/
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, Cdd_Log_CODE) Cdd_Log_Runnable5ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: Cdd_Log_Runnable5ms
+ *********************************************************************************************************************/
+
+    DualPrint_MainFunction();
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: Cdd_Log_Runnable_init
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed once after the RTE is started
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: Cdd_Log_Runnable_init_doc
  *********************************************************************************************************************/
 
 
@@ -231,13 +104,14 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable20ms(void) /* PRQA S 0624, 3206 */ 
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 
-FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable5ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+FUNC(void, Cdd_Log_CODE) Cdd_Log_Runnable_init(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
 {
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
- * Symbol: Cdd_Core0_Runnable5ms
+ * Symbol: Cdd_Log_Runnable_init
  *********************************************************************************************************************/
 
+    DualPrint_Init();
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
@@ -245,8 +119,8 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable5ms(void) /* PRQA S 0624, 3206 */ /
 }
 
 
-#define Cdd_Core0_STOP_SEC_CODE
-#include "Cdd_Core0_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#define Cdd_Log_STOP_SEC_CODE
+#include "Cdd_Log_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
 /**********************************************************************************************************************

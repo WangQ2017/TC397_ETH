@@ -39,6 +39,7 @@
 #include "Rte_Cdd_Core3.h"
 #include "Rte_Cdd_Core4.h"
 #include "Rte_Cdd_Core5.h"
+#include "Rte_Cdd_Log.h"
 #include "Rte_Cdd_Nm.h"
 #include "Rte_ComM.h"
 #include "Rte_Dcm.h"
@@ -439,8 +440,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
 
     /* activate the alarms used for TimingEvents */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(20)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable5ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms, RTE_MSEC_SystemTimer_OsCore1(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore1(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms, RTE_MSEC_SystemTimer_OsCore2(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore2(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms, RTE_MSEC_SystemTimer_OsCore3(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore3(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
@@ -502,8 +503,8 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
     Rte_StartTiming_InitState = RTE_STATE_UNINIT;
     /* deactivate alarms */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */

@@ -123,6 +123,7 @@ Rte_Cdd_Core2.h<br>
 Rte_Cdd_Core3.h<br>
 Rte_Cdd_Core4.h<br>
 Rte_Cdd_Core5.h<br>
+Rte_Cdd_Log.h<br>
 Rte_Cdd_Nm.h<br>
 Rte_ComM.h<br>
 Rte_Dcm.h<br>
@@ -143,6 +144,7 @@ Rte_Cdd_Core2_Type.h<br>
 Rte_Cdd_Core3_Type.h<br>
 Rte_Cdd_Core4_Type.h<br>
 Rte_Cdd_Core5_Type.h<br>
+Rte_Cdd_Log_Type.h<br>
 Rte_Cdd_Nm_Type.h<br>
 Rte_ComM_Type.h<br>
 Rte_Dcm_Type.h<br>
@@ -172,6 +174,7 @@ Cdd_Core2_MemMap.h<br>
 Cdd_Core3_MemMap.h<br>
 Cdd_Core4_MemMap.h<br>
 Cdd_Core5_MemMap.h<br>
+Cdd_Log_MemMap.h<br>
 Cdd_Nm_MemMap.h<br>
 ComM_MemMap.h<br>
 Dcm_MemMap.h<br>
@@ -451,8 +454,8 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>Cdd_Core0_Runnable5ms</TD>
 <TD>OsTask_Asw_OsCore0</TD>
-<TD>Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable5ms</TD>
-<TD>Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable5ms</TD>
+<TD>Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms</TD>
+<TD>Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>InitEvent</B></TD>
@@ -523,6 +526,20 @@ CONST Size: 0 Bytes<br>
 <TD>OsTask_Asw_OsCore5</TD>
 <TD>n/a</TD>
 <TD>Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>Cdd_Log_Runnable5ms</TD>
+<TD>OsTask_Asw_OsCore0</TD>
+<TD>Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms</TD>
+<TD>Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms</TD>
+</TR>
+<TR>
+<TD><B>InitEvent</B></TD>
+<TD>Cdd_Log_Runnable_init</TD>
+<TD>OsTask_Init_OsCore0</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
 </TR>
 <TR>
 <TD><B>InitEvent</B></TD>

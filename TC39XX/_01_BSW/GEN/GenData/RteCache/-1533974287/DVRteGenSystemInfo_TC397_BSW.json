@@ -9,12 +9,13 @@
     "VerboseLevel": 1,
     "ShortNamesRestricted": false,
     "GenerationModes": [
-      "RTE_GEN"
+      "RTE_CTRC_HEADER",
+      "COMP_TYPE_IMPL"
     ],
     "FileName": "",
     "WorkspacePath": "",
     "GeneratorBasePath": "G:\\class\\Tricore_TC397_SIP\\Components\\Rte\\Generator\\",
-    "OutputDirectory": "C:\\Users\\86188\\AppData\\Local\\Temp\\1777690420772-0\\"
+    "OutputDirectory": "C:\\Users\\86188\\AppData\\Local\\Temp\\1777689883138-0\\"
   },
   "ECUName": "EcuInstance",
   "EnableVFBTracing": false,

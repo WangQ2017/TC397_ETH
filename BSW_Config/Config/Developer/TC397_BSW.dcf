@@ -45,4 +45,8 @@
 		<ARXML>ComponentTypes/Cdd_Core5.arxml</ARXML>
 		<DVG>ComponentTypes/Cdd_Core5.dvg</DVG>
 	</FILEREF>
+	<FILEREF>
+		<ARXML>ComponentTypes/Cdd_Log.arxml</ARXML>
+		<DVG>ComponentTypes/Cdd_Log.dvg</DVG>
+	</FILEREF>
 </DCF>

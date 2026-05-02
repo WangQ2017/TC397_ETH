@@ -1513,6 +1513,18 @@
 },
 {
   "directory": "G:/class/TC397_ETH/TOOLS/CMake/build/tc39x-rel-tasking",
+  "command": "\"C:\\PROGRA~1\\TASKING\\TriCore v6.3r1\\ctc\\bin\\cctc.exe\" -DBUILD_BIP -DHT_CUSTOMER_PLATFORM -IG:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-rel-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\G_\\class\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_log\\Cdd_Log.c.obj -c G:\\class\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_log\\Cdd_Log.c",
+  "file": "G:\\class\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_log\\Cdd_Log.c",
+  "output": "CMakeFiles\\tc39x.dir\\G_\\class\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_log\\Cdd_Log.c.obj"
+},
+{
+  "directory": "G:/class/TC397_ETH/TOOLS/CMake/build/tc39x-rel-tasking",
+  "command": "\"C:\\PROGRA~1\\TASKING\\TriCore v6.3r1\\ctc\\bin\\cctc.exe\" -DBUILD_BIP -DHT_CUSTOMER_PLATFORM -IG:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-rel-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\G_\\class\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_log\\DualPrint_Cdd.c.obj -c G:\\class\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_log\\DualPrint_Cdd.c",
+  "file": "G:\\class\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_log\\DualPrint_Cdd.c",
+  "output": "CMakeFiles\\tc39x.dir\\G_\\class\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_log\\DualPrint_Cdd.c.obj"
+},
+{
+  "directory": "G:/class/TC397_ETH/TOOLS/CMake/build/tc39x-rel-tasking",
   "command": "\"C:\\PROGRA~1\\TASKING\\TriCore v6.3r1\\ctc\\bin\\cctc.exe\" -DBUILD_BIP -DHT_CUSTOMER_PLATFORM -IG:\\class\\TC397_ETH\\TOOLS\\CMake\\build\\tc39x-rel-tasking\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\G_\\class\\TC397_ETH\\TC39XX\\_03_MCAL\\Infra_Prod\\Irq\\ssc\\src\\Irq.c.obj -c G:\\class\\TC397_ETH\\TC39XX\\_03_MCAL\\Infra_Prod\\Irq\\ssc\\src\\Irq.c",
   "file": "G:\\class\\TC397_ETH\\TC39XX\\_03_MCAL\\Infra_Prod\\Irq\\ssc\\src\\Irq.c",
   "output": "CMakeFiles\\tc39x.dir\\G_\\class\\TC397_ETH\\TC39XX\\_03_MCAL\\Infra_Prod\\Irq\\ssc\\src\\Irq.c.obj"

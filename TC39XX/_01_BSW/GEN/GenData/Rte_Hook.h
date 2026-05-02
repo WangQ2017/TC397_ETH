@@ -84,6 +84,10 @@
  *  Rte_Runnable_Cdd_Core5_Cdd_Core5_Init_Start
  *  Rte_Runnable_Cdd_Core5_Cdd_Core5_Runnable10ms_Return
  *  Rte_Runnable_Cdd_Core5_Cdd_Core5_Runnable10ms_Start
+ *  Rte_Runnable_Cdd_Log_Cdd_Log_Runnable5ms_Return
+ *  Rte_Runnable_Cdd_Log_Cdd_Log_Runnable5ms_Start
+ *  Rte_Runnable_Cdd_Log_Cdd_Log_Runnable_init_Return
+ *  Rte_Runnable_Cdd_Log_Cdd_Log_Runnable_init_Start
  *  Rte_Runnable_Cdd_Nm_Cdd_Nm_Init_Return
  *  Rte_Runnable_Cdd_Nm_Cdd_Nm_Init_Start
  *  Rte_Runnable_Cdd_Nm_Cdd_Nm_Runnable10ms_Return
