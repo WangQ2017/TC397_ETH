@@ -38,7 +38,7 @@
 
 #include "Rte_Cdd_Log.h"
 #include "Uart.h"
-
+#include "Cdd_Log.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -112,6 +112,7 @@ FUNC(void, Cdd_Log_CODE) Cdd_Log_Runnable_init(void) /* PRQA S 0624, 3206 */ /* 
  *********************************************************************************************************************/
 
     DualPrint_Init();
+    CDD_LOG_DEBUG("App Start Up Success!");
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

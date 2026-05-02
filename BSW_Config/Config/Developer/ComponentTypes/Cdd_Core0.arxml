@@ -30,6 +30,11 @@
                   <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Cdd_Core0_Runnable5ms</START-ON-EVENT-REF>
                   <PERIOD>0.005</PERIOD>
                 </TIMING-EVENT>
+                <TIMING-EVENT UUID="0B2CB766-AF73-4A00-953C-D8A26803D64C">
+                  <SHORT-NAME>TMT_Cdd_Core0_Runnable1ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Cdd_Core0_Runnable1ms</START-ON-EVENT-REF>
+                  <PERIOD>0.001</PERIOD>
+                </TIMING-EVENT>
               </EVENTS>
               <RUNNABLES>
                 <RUNNABLE-ENTITY UUID="CBE22E0D-F8EA-4C98-ADA7-C8B6E627C066">
@@ -52,6 +57,9 @@
                 </RUNNABLE-ENTITY>
                 <RUNNABLE-ENTITY UUID="3EB0A390-D448-4E3B-B3D8-A22D5143530F">
                   <SHORT-NAME>Cdd_Core0_Runnable5ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="BDB6097F-4A41-4CA3-BD64-95EC08D34D36">
+                  <SHORT-NAME>Cdd_Core0_Runnable1ms</SHORT-NAME>
                 </RUNNABLE-ENTITY>
               </RUNNABLES>
               <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>

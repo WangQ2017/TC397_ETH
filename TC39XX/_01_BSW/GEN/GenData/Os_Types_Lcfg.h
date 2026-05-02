@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2026-05-02 11:41:04
+ *   Generation Time: 2026-05-02 16:55:33
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -135,6 +135,7 @@
 #define Rte_Al_TE4_EcuM_EcuM_MainFunction Rte_Al_TE4_EcuM_EcuM_MainFunction
 #define Rte_Al_TE5_EcuM_EcuM_MainFunction Rte_Al_TE5_EcuM_EcuM_MainFunction
 #define Rte_Al_TE6_EcuM_EcuM_MainFunction Rte_Al_TE6_EcuM_EcuM_MainFunction
+#define Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms
 #define Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms
 #define Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms
 #define Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms
@@ -294,18 +295,19 @@ typedef enum
   Rte_Al_TE4_EcuM_EcuM_MainFunction = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE5_EcuM_EcuM_MainFunction = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE6_EcuM_EcuM_MainFunction = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms = 12,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core4_Cdd_Core4_Runnable10ms = 13,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_EthIf_EthIf_MainFunctionState = 15,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction = 16,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction = 17,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms = 18,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms = 19,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ALARMID_COUNT = 20
+  Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms = 12,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms = 13,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core4_Cdd_Core4_Runnable10ms = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms = 15,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_EthIf_EthIf_MainFunctionState = 16,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction = 17,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction = 18,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms = 19,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms = 20,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ALARMID_COUNT = 21
 } AlarmType;
 
 /*! Counter identifiers. */

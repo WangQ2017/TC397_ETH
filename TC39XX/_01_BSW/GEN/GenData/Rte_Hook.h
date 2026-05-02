@@ -60,6 +60,8 @@
  *  Rte_Runnable_Cdd_Core0_Cdd_Core0_Init_Start
  *  Rte_Runnable_Cdd_Core0_Cdd_Core0_Runnable10ms_Return
  *  Rte_Runnable_Cdd_Core0_Cdd_Core0_Runnable10ms_Start
+ *  Rte_Runnable_Cdd_Core0_Cdd_Core0_Runnable1ms_Return
+ *  Rte_Runnable_Cdd_Core0_Cdd_Core0_Runnable1ms_Start
  *  Rte_Runnable_Cdd_Core0_Cdd_Core0_Runnable20ms_Return
  *  Rte_Runnable_Cdd_Core0_Cdd_Core0_Runnable20ms_Start
  *  Rte_Runnable_Cdd_Core0_Cdd_Core0_Runnable5ms_Return

@@ -56,12 +56,14 @@ extern "C"
 # ifndef RTE_CORE
 #  define RTE_RUNNABLE_Cdd_Core0_Init Cdd_Core0_Init
 #  define RTE_RUNNABLE_Cdd_Core0_Runnable10ms Cdd_Core0_Runnable10ms
+#  define RTE_RUNNABLE_Cdd_Core0_Runnable1ms Cdd_Core0_Runnable1ms
 #  define RTE_RUNNABLE_Cdd_Core0_Runnable20ms Cdd_Core0_Runnable20ms
 #  define RTE_RUNNABLE_Cdd_Core0_Runnable5ms Cdd_Core0_Runnable5ms
 # endif
 
 FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable1ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable20ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable5ms(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
 

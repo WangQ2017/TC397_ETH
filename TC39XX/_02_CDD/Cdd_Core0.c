@@ -16,7 +16,7 @@
  *             File:  Cdd_Core0.c
  *           Config:  G:/class/TC397_ETH/BSW_Config/TC397_BSW.dpa
  *        SW-C Type:  Cdd_Core0
- *  Generation Time:  2026-05-01 18:42:33
+ *  Generation Time:  2026-05-02 16:57:47
  *
  *        Generator:  MICROSAR RTE Generator Version 4.23.0
  *                    RTE Core Version 1.23.0
@@ -102,7 +102,6 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Runnable10ms_doc
  *********************************************************************************************************************/
-volatile uint32 Cdd_Core0_Task_10ms_Cnt = 0;
 #define LOOPBACK_INTERNAL_0  0U
 #define LOOPBACK_EXTERNAL_1  1U
 #define LOOPBACK_INTERNAL_2  2U
@@ -111,6 +110,7 @@ volatile uint32 Cdd_Core0_Task_10ms_Cnt = 0;
 volatile uint16 g_LoopBackMode = LOOPBACK_INVILID;
 volatile uint16 g_LinkStatus = 0;
 volatile uint16 g_phyRegDump[28] = {0};
+volatile uint32 Cdd_Core0_Task_10ms_Cnt = 0;
 volatile uint32 Cdd_Core0_Runnable10ms_Data_cnt = 0;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
@@ -123,7 +123,7 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ 
  * Symbol: Cdd_Core0_Runnable10ms
  *********************************************************************************************************************/
     Cdd_Core0_Task_10ms_Cnt++;
-
+  
     if (Cdd_Core0_Task_10ms_Cnt % 100 == 0)
     {
         if (Cdd_Core0_Runnable10ms_Data_cnt)
@@ -139,40 +139,72 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ 
 
 
         uint16         regVal = 0;
-
         Std_ReturnType retVal = EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 1, &regVal);
         if ((regVal != 0xffff) && ((regVal & 0x4) == 0x4))
         {
             g_LinkStatus = 1;
+            CDD_LOG_DEBUG("PHY is link up!");
         }
         else
         {
             g_LinkStatus = 0;
+            CDD_LOG_DEBUG("PHY is link down!");
         }
 
-        for (uint16 i = 0; i < 28; i++)
-        {
-            (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, i, &g_phyRegDump[i]);
-        }
+        // for (uint16 i = 0; i < 28; i++)
+        // {
+        //     (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, i, &g_phyRegDump[i]);
+        // }
         
-        if (g_LoopBackMode != LOOPBACK_INVILID)
-        {
-            regVal = 0;
-            (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 0U, &regVal);
-            regVal |= (1 << 14U);
-            (void)EthTrcv_30_Tja1100_Internal_WriteTrcvReg(0, 0U, regVal);
+        // if (g_LoopBackMode != LOOPBACK_INVILID)
+        // {
+        //     regVal = 0;
+        //     (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 0U, &regVal);
+        //     regVal |= (1 << 14U);
+        //     (void)EthTrcv_30_Tja1100_Internal_WriteTrcvReg(0, 0U, regVal);
 
-            regVal = 0;
-            (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 17U, &regVal);
-            regVal |= (g_LoopBackMode << 3U);
-            (void)EthTrcv_30_Tja1100_Internal_WriteTrcvReg(0, 17U, regVal);
+        //     regVal = 0;
+        //     (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 17U, &regVal);
+        //     regVal |= (g_LoopBackMode << 3U);
+        //     (void)EthTrcv_30_Tja1100_Internal_WriteTrcvReg(0, 17U, regVal);
 
-            g_LoopBackMode = LOOPBACK_INVILID;
-        }
-    }
-  
-    CDD_LOG_DEBUG("HelloWord");
+        //     g_LoopBackMode = LOOPBACK_INVILID;
+        // }
+    } 
 
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+}
+
+/**********************************************************************************************************************
+ *
+ * Runnable Entity Name: Cdd_Core0_Runnable1ms
+ *
+ *---------------------------------------------------------------------------------------------------------------------
+ *
+ * Executed if at least one of the following trigger conditions occurred:
+ *   - triggered on TimingEvent every 1ms
+ *
+ *********************************************************************************************************************/
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
+ * Symbol: Cdd_Core0_Runnable1ms_doc
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable1ms(void) /* PRQA S 0624, 3206 */ /* MD_Rte_0624, MD_Rte_3206 */
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
+ * Symbol: Cdd_Core0_Runnable1ms
+ *********************************************************************************************************************/
+    uint16         regVal = 0;
+    EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 1, &regVal);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

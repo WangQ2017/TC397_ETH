@@ -340,6 +340,7 @@
                                     <SD GID="2E97FEAD-44E3-4BCC-B717-3D1D6D03718A">/ComponentTypes/Cdd_Core0</SD>
                                     <SD GID="B2479696-7126-4866-8C96-D9DF74041519">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/Cdd_Core0_InitEvent</SD>
                                     <SD GID="BF8EDC66-5307-47F8-A269-6F2801EE03E0">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/TMT_Cdd_Core0_Runnable10ms</SD>
+                                    <SD GID="0B2CB766-AF73-4A00-953C-D8A26803D64C">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/TMT_Cdd_Core0_Runnable1ms</SD>
                                     <SD GID="D03D0D56-7827-409A-B725-21A5ADDA7211">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/TMT_Cdd_Core0_Runnable20ms</SD>
                                     <SD GID="FD8B37FA-9080-4464-B8B6-1E8A60EA726E">/ComponentTypes/Cdd_Core0/Cdd_Core0_InternalBehavior/TMT_Cdd_Core0_Runnable5ms</SD>
                                     <SD GID="1326A14A-37B0-4AB9-BBCC-DDB47EDE67ED">/ComponentTypes/Cdd_Core0_Implementation</SD>

@@ -439,6 +439,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
     (void)ActivateTask(OsTask_Init_OsCore0); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     /* activate the alarms used for TimingEvents */
+    (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(1)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(20)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
@@ -502,6 +503,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
   {
     Rte_StartTiming_InitState = RTE_STATE_UNINIT;
     /* deactivate alarms */
+    (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms); /* PRQA S 3417 */ /* MD_Rte_Os */

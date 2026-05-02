@@ -36,7 +36,23 @@
       AUTOSTART = FALSE:"@RO@";
       EVENT = Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms:"@RO@";
       EVENT = Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms:"@RO@";
+      EVENT = Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable1ms:"@RO@";
       EVENT = Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms {
+      COUNTER = SystemTimer_OsCore0;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_Asw_OsCore0;
+         EVENT = Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable1ms;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
       ACCESSING_APPLICATION = OsApplication_OsCore1;
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
@@ -611,6 +627,10 @@
       MASK = AUTO;
    }:"@ROC@@NR@";
 
+   EVENT Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable1ms {
+      MASK = AUTO;
+   }:"@ROC@@NR@";
+
    EVENT Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms {
       MASK = AUTO;
    }:"@ROC@@NR@";
@@ -633,6 +653,7 @@
 //      ERRORHOOK = FALSE;
 //      HAS_RESTARTTASK = FALSE;
       TASK = OsTask_Asw_OsCore0;
+      ALARM = Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms;
       ALARM = Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms;
       ALARM = Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms;
       ALARM = Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms;
