@@ -44,47 +44,15 @@
             "hidden": true,
             "description":"Template for building customer tc39x version",
             "cacheVariables":{
-                "TARGET":"tc39x",
-                "CUSTOMER":"00",
-                "CUSTOMER_DIRNAME":"tc39x"
+                "TARGET":"tc39x"
             }
         },
         {
-            "name": "tc39x-rel-ads",
-            "displayName":"tc39x, Release, ADS",
-            "binaryDir":"${sourceDir}/build/tc39x-rel-ads",
+            "name": "tc397_eth",
+            "displayName":"tc397 eth project",
+            "binaryDir":"${sourceDir}/build/tc397_eth",
             "inherits":[
                 "release",
-                "ads",
-                "tc39x"
-            ]
-        },
-        {
-            "name": "tc39x-fac-ads",
-            "displayName":"tc39x, Factory, ADS",
-            "binaryDir":"${sourceDir}/build/tc39x-fac-ads",
-            "inherits":[
-                "factory",
-                "ads",
-                "tc39x"
-            ]
-        },
-        {
-            "name": "tc39x-rel-tasking",
-            "displayName":"tc39x, Release, tasking",
-            "binaryDir":"${sourceDir}/build/tc39x-rel-tasking",
-            "inherits":[
-                "release",
-                "tasking",
-                "tc39x"
-            ]
-        },
-        {
-            "name": "tc39x-fac-tasking",
-            "displayName":"tc39x, Factory, tasking",
-            "binaryDir":"${sourceDir}/build/tc39x-fac-tasking",
-            "inherits":[
-                "factory",
                 "tasking",
                 "tc39x"
             ]
@@ -92,20 +60,8 @@
     ],
     "buildPresets": [
         {
-            "name":"tc39x-fac-ads",
-            "configurePreset": "tc39x-fac-ads"
-        },
-        {
-            "name":"tc39x-fac-tasking",
-            "configurePreset": "tc39x-fac-tasking"
-        },
-        {
-            "name":"tc39x-rel-ads",
-            "configurePreset": "tc39x-rel-ads"
-        },
-        {
-            "name":"tc39x-rel-tasking",
-            "configurePreset": "tc39x-rel-tasking"
+            "name":"tc397_eth",
+            "configurePreset": "tc397_eth"
         }
     ]
 }
