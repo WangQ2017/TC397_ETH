@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Private_Cfg.h
- *   Generation Time: 2026-05-03 13:49:37
+ *   Generation Time: 2026-05-03 19:40:25
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -41,8 +41,6 @@
 #include "Rte_BswM.h" 
 #include "EcuM.h" 
 #include "Rte_Main.h" 
-#include "EthTrcv_30_Tja1100.h" 
-#include "Eth_30_Tc3xx.h" 
 #include "EthTrcv_30_Tja1100_Hw_Int.h" 
 
 

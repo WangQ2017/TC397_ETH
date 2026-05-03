@@ -79,12 +79,7 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Init
  *********************************************************************************************************************/
-  Eth_30_Tc3xx_Init(Eth_30_Tc3xx_Config_Ptr);
-  Eth_30_Tc3xx_ControllerInit(0, 0);
-  Eth_30_Tc3xx_SetControllerMode(0, ETH_MODE_ACTIVE);
-  EthTrcv_30_Tja1100_Init(EthTrcv_30_Tja1100_Config_Ptr);
-  EthTrcv_30_Tja1100_TransceiverInit(0, 0);
-  EthTrcv_30_Tja1100_SetTransceiverMode(0, ETHTRCV_MODE_ACTIVE);
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -106,92 +101,6 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  *********************************************************************************************************************/
 
 volatile uint32 Cdd_Core0_Task_10ms_Cnt = 0;
-/* 以太网配置参数 */
-#define ETH_CTRL_IDX            (0U)           /* 使用控制器0 */
-#define ETH_MAC_HEADER_LEN      (14U)          /* MAC头部长度（目标MAC 6 + 源MAC 6 + 类型 2） */
-#define ETH_MIN_PAYLOAD_LEN     (46U)          /* 以太网最小负载长度（不含FCS） */
-#define ETH_MAX_FRAME_LEN       (1518U)        /* 标准以太网最大帧长（不含FCS） */
-
-/* 测试用的MAC地址（示例） */
-static const uint8 srcMacAddr[6] = {0x00, 0x11, 0x22, 0x33, 0x44, 0x55};
-static const uint8 dstMacAddr[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}; /* 广播地址 */
-Std_ReturnType Eth_IntegratedTransmit(
-    const uint8* sendData,
-    uint16       dataLen,
-    uint16       etherType,
-    boolean        needConfirm)
-{
-    BufReq_ReturnType  bufRet;
-    Std_ReturnType     txRet = E_NOT_OK;
-    
-    uint8*           txBufPtr = NULL_PTR;
-    uint8            txBufIdx = 0U;
-    uint16           txBufSize = 0U;
-    
-    uint16           totalFrameLen;
-    uint16           actualPayloadLen;
-    static uint32    internalCounter = 0U;  /* 内部计数器（用于演示） */
-    
-    /* ========== 步骤1: 获取发送缓冲区 ========== */
-    bufRet = Eth_30_Tc3xx_ProvideTxBuffer(ETH_CTRL_IDX, &txBufIdx, &txBufPtr, &txBufSize);
-    
-    /* 检查是否成功获取缓冲区 */
-    if (bufRet != BUFREQ_OK)
-    {
-        return E_NOT_OK;
-    }
-    /* 检查缓冲区指针有效性 */
-    if ((txBufPtr == NULL_PTR) || (txBufSize < ETH_MAC_HEADER_LEN))
-    {
-        return E_NOT_OK;
-    }
-  
-    /* ========== 步骤2: 计算实际负载长度并校验 ========== */
-    /* 计算可用于负载的最大长度（总缓冲区大小 - MAC头部长度） */
-    uint16 maxPayloadLen = txBufSize - ETH_MAC_HEADER_LEN;
-    if (sendData != NULL_PTR)
-    {
-        actualPayloadLen = (dataLen < maxPayloadLen) ? dataLen : maxPayloadLen;
-    }
-    else
-    {
-        actualPayloadLen = 46; /* 最小46字节（不含FCS 4字节） */
-    }   
-    totalFrameLen = ETH_MAC_HEADER_LEN + actualPayloadLen;
-    /* ========== 步骤3: 填充MAC头部 ========== */
-    /* 填充目标MAC地址（6字节） */
-    for (uint16 i = 0; i < 6U; i++)
-    {
-        txBufPtr[i] = dstMacAddr[i];
-    }
-    /* 填充源MAC地址（6字节） */
-    for (uint16 i = 0; i < 6U; i++)
-    {
-        txBufPtr[6U + i] = srcMacAddr[i];
-    }
-    /* 填充以太网类型（2字节，网络字节序） */
-    txBufPtr[12U] = (uint8)((etherType >> 8U) & 0xFFU);
-    txBufPtr[13U] = (uint8)(etherType & 0xFFU);
-    /* ========== 步骤4: 填充负载数据 ========== */
-    if (sendData != NULL_PTR)
-    {
-        (void)memcpy(txBufPtr + ETH_MAC_HEADER_LEN, sendData, actualPayloadLen);
-    }
-    /* ========== 步骤5: 发送以太网帧 ========== */
-    txRet = Eth_30_Tc3xx_Transmit(ETH_CTRL_IDX,
-                                  txBufIdx,             /* 缓冲区ID */
-                                  0x800,                /* 普通数据帧类型 */
-                                  needConfirm,          /* 是否需要发送确认 */
-                                  totalFrameLen,        /* 帧总长度（字节） */
-                                  txBufPtr);            /* 缓冲区指针 */
-    if (txRet != E_OK)
-    {
-        return E_NOT_OK;
-    }
-    
-    return txRet;
-}
-
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -204,14 +113,6 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ 
  *********************************************************************************************************************/
     Cdd_Core0_Task_10ms_Cnt++;
   
-    uint8 testData[46] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x11, 0x22, 0x33, 0x44, 0x55,
-                          0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0};
-    Std_ReturnType ret;
-    
-    /* 发送自定义数据，以太网类型为0x1234（自定义协议），不需要确认 */
-    ret = Eth_IntegratedTransmit(testData, sizeof(testData), 0x1134, FALSE);
-
-
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

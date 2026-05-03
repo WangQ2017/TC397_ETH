@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Compiler_Cfg.h
- *   Generation Time: 2026-05-01 19:42:43
+ *   Generation Time: 2026-05-03 19:48:58
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -48,7 +48,6 @@
 # define OS_DEFAULT_INIT_TASK_CORE6_CODE
 # define OS_DEFAULT_INIT_TASK_CORE6_TRUSTED_CODE
 # define OS_DEFAULT_INIT_TASK_TRUSTED_CODE
-# define OS_ETHISR_ETHCTRLCONFIG_MAIN_ETHINTERRUPTSERVICEROUTINE_Q0TX_CODE
 # define OS_OSTASK_ASW_OSCORE0_CODE
 # define OS_OSTASK_ASW_OSCORE1_CODE
 # define OS_OSTASK_ASW_OSCORE2_CODE
@@ -57,8 +56,6 @@
 # define OS_OSTASK_ASW_OSCORE5_CODE
 # define OS_OSTASK_BSW_10MS_CORE0_CODE
 # define OS_OSTASK_BSW_1MS_CORE0_CODE
-# define OS_OSTASK_BSW_20MS_CORE0_CODE
-# define OS_OSTASK_BSW_5MS_CORE0_CODE
 # define OS_OSTASK_BSW_OSCORE1_CODE
 # define OS_OSTASK_BSW_OSCORE2_CODE
 # define OS_OSTASK_BSW_OSCORE3_CODE

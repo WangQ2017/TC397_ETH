@@ -54,8 +54,6 @@
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
 #include "SchM_EcuM.h"
-#include "SchM_EthTrcv_30_Tja1100.h"
-#include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Irq.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
@@ -476,50 +474,6 @@ TASK(OsTask_Bsw_1ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
   Uart_MainFunction_Read();
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-/**********************************************************************************************************************
- * Task:     OsTask_Bsw_20ms_Core0
- * Priority: 20
- * Schedule: FULL
- * Alarm:    Cycle Time 0.02 s Alarm Offset 0 s
- *********************************************************************************************************************/
-TASK(OsTask_Bsw_20ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
-{
-
-  /* call schedulable entity */
-  Eth_30_Tc3xx_MainFunction();
-
-  (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-/**********************************************************************************************************************
- * Task:     OsTask_Bsw_5ms_Core0
- * Priority: 40
- * Schedule: FULL
- *********************************************************************************************************************/
-TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
-{
-  EventMaskType ev;
-
-  for(;;)
-  {
-    (void)WaitEvent(Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction | Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)GetEvent(OsTask_Bsw_5ms_Core0, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction | Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling)); /* PRQA S 3417 */ /* MD_Rte_Os */
-
-    if ((ev & Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction) != (EventMaskType)0)
-    {
-      /* call schedulable entity */
-      EthTrcv_30_Tja1100_MainFunction();
-    }
-
-    if ((ev & Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling) != (EventMaskType)0)
-    {
-      /* call schedulable entity */
-      EthTrcv_30_Tja1100_MainFunctionLinkHandling();
-    }
-  }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
 /**********************************************************************************************************************

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2026-05-03 14:05:52
+ *   Generation Time: 2026-05-03 19:45:42
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -69,8 +69,6 @@
 #include "Det.h" 
 #include "Rte_Main.h" 
 #include "BswM.h" 
-#include "Eth_30_Tc3xx.h" 
-#include "EthTrcv_30_Tja1100.h" 
 #include "Mcu.h" 
 #include "Port.h" 
 #include "EthTrcv_Callout.h" 
@@ -235,8 +233,6 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitZero(void)
     Det_Init( Det_Config_Ptr );
     Rte_InitMemory();
     BswM_InitMemory();
-    Eth_30_Tc3xx_InitMemory();
-    EthTrcv_30_Tja1100_InitMemory();
   }
 
 /**********************************************************************************************************************

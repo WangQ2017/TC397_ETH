@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2026-05-01 19:42:43
+ *   Generation Time: 2026-05-03 19:48:58
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -316,30 +316,6 @@ extern FUNC(void, OS_OSTASK_BSW_1MS_CORE0_CODE) Os_Task_OsTask_Bsw_1ms_Core0(voi
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
-# define OS_START_SEC_OsTask_Bsw_20ms_Core0_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/**********************************************************************************************************************
- *  OsTask_Bsw_20ms_Core0()
- *********************************************************************************************************************/
-extern FUNC(void, OS_OSTASK_BSW_20MS_CORE0_CODE) Os_Task_OsTask_Bsw_20ms_Core0(void);
-
-# define OS_STOP_SEC_OsTask_Bsw_20ms_Core0_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-# define OS_START_SEC_OsTask_Bsw_5ms_Core0_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/**********************************************************************************************************************
- *  OsTask_Bsw_5ms_Core0()
- *********************************************************************************************************************/
-extern FUNC(void, OS_OSTASK_BSW_5MS_CORE0_CODE) Os_Task_OsTask_Bsw_5ms_Core0(void);
-
-# define OS_STOP_SEC_OsTask_Bsw_5ms_Core0_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
 # define OS_START_SEC_OsTask_Bsw_OsCore1_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -469,18 +445,6 @@ extern FUNC(void, OS_OSTASK_INIT_OSCORE4_CODE) Os_Task_OsTask_Init_OsCore4(void)
 extern FUNC(void, OS_OSTASK_INIT_OSCORE5_CODE) Os_Task_OsTask_Init_OsCore5(void);
 
 # define OS_STOP_SEC_OsTask_Init_OsCore5_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
-# define OS_START_SEC_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_CODE
-# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/**********************************************************************************************************************
- *  EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx()
- *********************************************************************************************************************/
-extern FUNC(void, OS_ETHISR_ETHCTRLCONFIG_MAIN_ETHINTERRUPTSERVICEROUTINE_Q0TX_CODE) Os_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx(void);
-
-# define OS_STOP_SEC_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
