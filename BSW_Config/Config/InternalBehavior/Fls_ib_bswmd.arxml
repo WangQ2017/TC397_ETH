@@ -12,54 +12,6 @@
               <AR-PACKAGES>
                 <AR-PACKAGE UUID="abe61874-90a7-4ce9-bbc3-682aa6bf29bd">
                   <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
-                  <ELEMENTS>
-                    <BSW-MODULE-DESCRIPTION UUID="05e55fae-6c33-462d-9cb0-30a47be1f906">
-                      <SHORT-NAME>Fls</SHORT-NAME>
-                      <PROVIDED-ENTRYS>
-                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
-                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G/EcucDefs/Fls_ib_bswmd/BswModuleDescriptions/Fls_17_Dmu_MainFunction</BSW-MODULE-ENTRY-REF>
-                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
-                      </PROVIDED-ENTRYS>
-                      <INTERNAL-BEHAVIORS>
-                        <BSW-INTERNAL-BEHAVIOR UUID="cd90fa5f-8aea-4092-a7e4-9e93f8f96dd6">
-                          <SHORT-NAME>FlsBehavior</SHORT-NAME>
-                          <EXCLUSIVE-AREAS>
-                            <EXCLUSIVE-AREA UUID="5c9b9a39-a2c3-42b9-ba58-04c072c86051">
-                              <SHORT-NAME>Init</SHORT-NAME>
-                            </EXCLUSIVE-AREA>
-                            <EXCLUSIVE-AREA UUID="5b60bb1f-2d4c-40f7-8d14-bd040d6607f6">
-                              <SHORT-NAME>Erase</SHORT-NAME>
-                            </EXCLUSIVE-AREA>
-                            <EXCLUSIVE-AREA UUID="dfa75027-4950-4e15-9e83-8995d3d2b850">
-                              <SHORT-NAME>Write</SHORT-NAME>
-                            </EXCLUSIVE-AREA>
-                            <EXCLUSIVE-AREA UUID="9a73e2de-7043-4c81-a69f-b8344616e823">
-                              <SHORT-NAME>Main</SHORT-NAME>
-                            </EXCLUSIVE-AREA>
-                            <EXCLUSIVE-AREA UUID="67d0b0d9-0fd8-4fdd-b90f-cc9109df0ad9">
-                              <SHORT-NAME>ResumeErase</SHORT-NAME>
-                            </EXCLUSIVE-AREA>
-                            <EXCLUSIVE-AREA UUID="a4bc4a43-f9a7-4192-9cfc-7732bb078026">
-                              <SHORT-NAME>UserContentCount</SHORT-NAME>
-                            </EXCLUSIVE-AREA>
-                          </EXCLUSIVE-AREAS>
-                          <ENTITYS>
-                            <BSW-SCHEDULABLE-ENTITY UUID="3080f9e4-8e8b-46f4-95f8-2180c9938da9">
-                              <SHORT-NAME>Fls_17_Dmu_MainFunction</SHORT-NAME>
-                              <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G/EcucDefs/Fls_ib_bswmd/BswModuleDescriptions/Fls_17_Dmu_MainFunction</IMPLEMENTED-ENTRY-REF>
-                            </BSW-SCHEDULABLE-ENTITY>
-                          </ENTITYS>
-                          <EVENTS>
-                            <BSW-TIMING-EVENT UUID="b329aafb-7fc4-44e4-96e3-dfdd9bcd8074">
-                              <SHORT-NAME>Fls_17_Dmu_MainFunctionTimingEvent0</SHORT-NAME>
-                              <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AURIX2G/EcucDefs/Fls_ib_bswmd/BswModuleDescriptions/Fls/FlsBehavior/Fls_17_Dmu_MainFunction</STARTS-ON-EVENT-REF>
-                              <PERIOD>0.005</PERIOD>
-                            </BSW-TIMING-EVENT>
-                          </EVENTS>
-                        </BSW-INTERNAL-BEHAVIOR>
-                      </INTERNAL-BEHAVIORS>
-                    </BSW-MODULE-DESCRIPTION>
-                  </ELEMENTS>
                 </AR-PACKAGE>
               </AR-PACKAGES>
             </AR-PACKAGE>

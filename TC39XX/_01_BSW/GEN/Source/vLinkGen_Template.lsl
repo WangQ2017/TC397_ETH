@@ -3411,7 +3411,6 @@ section_layout mpe:vtc:linear
         select "[.]bss.OS_STACK_OSCORE0_STARTUP_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO20_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO30_VAR_NOINIT";
-        select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO40_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO4294967295_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO48_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT";
@@ -3447,7 +3446,6 @@ section_layout mpe:vtc:linear
         select "[.]bss.OS_STACK_OSCORE1_STARTUP_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO14_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO34_VAR_NOINIT";
-        select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO41_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO4294967295_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO48_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE1_TASK_PRIO49_VAR_NOINIT";
@@ -3640,8 +3638,6 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_OsTask_Init_OsCore3_CODE";
         select "[.]text.OS_OsTask_Init_OsCore4_CODE";
         select "[.]text.OS_OsTask_Init_OsCore5_CODE";
-        select "[.]text.OS_OsTask_lock_2ms_CODE";
-        select "[.]text.OS_OsTask_window_2ms_CODE";
         select "[.]text.OS_POSTTASKHOOK_CODE";
         select "[.]text.OS_PRETASKHOOK_CODE";
         select "[.]text.OS_SHUTDOWNHOOK_CODE";

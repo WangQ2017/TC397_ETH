@@ -6,49 +6,6 @@
       <AR-PACKAGES>
         <AR-PACKAGE UUID="7e118c10-0a18-49f2-9978-33759fe5e7c2">
           <SHORT-NAME>EcucDefs</SHORT-NAME>
-          <AR-PACKAGES>
-            <AR-PACKAGE UUID="80455450-9e71-438a-8be9-819029884667">
-              <SHORT-NAME>Fee_ib_bswmd</SHORT-NAME>
-              <AR-PACKAGES>
-                <AR-PACKAGE UUID="1286c05a-ed59-494b-aa39-deb8e3fc4665">
-                  <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
-                  <ELEMENTS>
-                    <BSW-MODULE-DESCRIPTION UUID="2abc441e-553b-4eec-b94b-0b9ac67c8981">
-                      <SHORT-NAME>Fee</SHORT-NAME>
-                      <PROVIDED-ENTRYS>
-                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
-                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G/EcucDefs/Fee_ib_bswmd/BswModuleDescriptions/Fee_MainFunction</BSW-MODULE-ENTRY-REF>
-                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
-                      </PROVIDED-ENTRYS>
-                      <INTERNAL-BEHAVIORS>
-                        <BSW-INTERNAL-BEHAVIOR UUID="f24cd5e6-f8a3-4e03-b7b3-02e2621136ec">
-                          <SHORT-NAME>FeeBehavior</SHORT-NAME>
-                          <ENTITYS>
-                            <BSW-SCHEDULABLE-ENTITY UUID="5a52d8d4-6806-457b-9c7b-53c68397b068">
-                              <SHORT-NAME>Fee_MainFunction</SHORT-NAME>
-                              <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AURIX2G/EcucDefs/Fee_ib_bswmd/BswModuleDescriptions/Fee_MainFunction</IMPLEMENTED-ENTRY-REF>
-                            </BSW-SCHEDULABLE-ENTITY>
-                          </ENTITYS>
-                          <EVENTS>
-                            <BSW-TIMING-EVENT UUID="08b03501-7565-4f3e-887b-5de66547f374">
-                              <SHORT-NAME>Fee_MainFunctionTimingEvent0</SHORT-NAME>
-                              <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AURIX2G/EcucDefs/Fee_ib_bswmd/BswModuleDescriptions/Fee/FeeBehavior/Fee_MainFunction</STARTS-ON-EVENT-REF>
-                              <PERIOD>0.01</PERIOD>
-                            </BSW-TIMING-EVENT>
-                          </EVENTS>
-                        </BSW-INTERNAL-BEHAVIOR>
-                      </INTERNAL-BEHAVIORS>
-                    </BSW-MODULE-DESCRIPTION>
-                    <BSW-MODULE-ENTRY UUID="69d160d8-0388-4960-b87b-bf4ebfa9e88a">
-                      <SHORT-NAME>Fee_MainFunction</SHORT-NAME>
-                      <CALL-TYPE>SCHEDULED</CALL-TYPE>
-                      <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
-                    </BSW-MODULE-ENTRY>
-                  </ELEMENTS>
-                </AR-PACKAGE>
-              </AR-PACKAGES>
-            </AR-PACKAGE>
-          </AR-PACKAGES>
         </AR-PACKAGE>
       </AR-PACKAGES>
     </AR-PACKAGE>

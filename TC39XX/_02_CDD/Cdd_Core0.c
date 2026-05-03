@@ -43,7 +43,6 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
 #include "Dio.h"
-#include "ComM.h"
 #include "EthTrcv_30_Tja1100_Hw_Int.h"
 #include "Cdd_Log.h"
 
@@ -80,9 +79,7 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Init
  *********************************************************************************************************************/
-    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Channel_Vlan10, COMM_FULL_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Channel_Vlan23, COMM_FULL_COMMUNICATION);
-    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Channel_Vlan1, COMM_FULL_COMMUNICATION);
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -102,16 +99,9 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Runnable10ms_doc
  *********************************************************************************************************************/
-#define LOOPBACK_INTERNAL_0  0U
-#define LOOPBACK_EXTERNAL_1  1U
-#define LOOPBACK_INTERNAL_2  2U
-#define LOOPBACK_REMOTE_3    3U
-#define LOOPBACK_INVILID     0xFFFFU
-volatile uint16 g_LoopBackMode = LOOPBACK_INVILID;
-volatile uint16 g_LinkStatus = 0;
-volatile uint16 g_phyRegDump[28] = {0};
+
 volatile uint32 Cdd_Core0_Task_10ms_Cnt = 0;
-volatile uint32 Cdd_Core0_Runnable10ms_Data_cnt = 0;
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -124,53 +114,7 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ 
  *********************************************************************************************************************/
     Cdd_Core0_Task_10ms_Cnt++;
   
-    if (Cdd_Core0_Task_10ms_Cnt % 100 == 0)
-    {
-        if (Cdd_Core0_Runnable10ms_Data_cnt)
-        {
-            Dio_WriteChannel(DioConf_DioChannel_DioChannel_LED1,0);
-            Cdd_Core0_Runnable10ms_Data_cnt = 0;
-        }
-        else
-        {
-            Dio_WriteChannel(DioConf_DioChannel_DioChannel_LED1,1);
-            Cdd_Core0_Runnable10ms_Data_cnt = 1;
-        }
 
-
-        uint16         regVal = 0;
-        Std_ReturnType retVal = EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 1, &regVal);
-        if ((regVal != 0xffff) && ((regVal & 0x4) == 0x4))
-        {
-            g_LinkStatus = 1;
-            CDD_LOG_DEBUG("PHY is link up!");
-        }
-        else
-        {
-            g_LinkStatus = 0;
-            CDD_LOG_DEBUG("PHY is link down!");
-        }
-
-        // for (uint16 i = 0; i < 28; i++)
-        // {
-        //     (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, i, &g_phyRegDump[i]);
-        // }
-        
-        // if (g_LoopBackMode != LOOPBACK_INVILID)
-        // {
-        //     regVal = 0;
-        //     (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 0U, &regVal);
-        //     regVal |= (1 << 14U);
-        //     (void)EthTrcv_30_Tja1100_Internal_WriteTrcvReg(0, 0U, regVal);
-
-        //     regVal = 0;
-        //     (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 17U, &regVal);
-        //     regVal |= (g_LoopBackMode << 3U);
-        //     (void)EthTrcv_30_Tja1100_Internal_WriteTrcvReg(0, 17U, regVal);
-
-        //     g_LoopBackMode = LOOPBACK_INVILID;
-        // }
-    } 
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
@@ -203,8 +147,7 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable1ms(void) /* PRQA S 0624, 3206 */ /
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Runnable1ms
  *********************************************************************************************************************/
-    uint16         regVal = 0;
-    EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 1, &regVal);
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

@@ -12,13 +12,6 @@
               <AR-PACKAGES>
                 <AR-PACKAGE UUID="abe61874-90a7-4ce9-bbc3-682aa6bf29bd">
                   <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
-                  <ELEMENTS>
-                    <BSW-MODULE-ENTRY UUID="29972c17-5036-4a83-83fc-26e3c75ce52c">
-                      <SHORT-NAME>Fls_17_Dmu_MainFunction</SHORT-NAME>
-                      <CALL-TYPE>SCHEDULED</CALL-TYPE>
-                      <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
-                    </BSW-MODULE-ENTRY>
-                  </ELEMENTS>
                 </AR-PACKAGE>
               </AR-PACKAGES>
             </AR-PACKAGE>

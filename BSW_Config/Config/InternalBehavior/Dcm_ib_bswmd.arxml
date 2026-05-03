@@ -3,54 +3,6 @@
   <AR-PACKAGES>
     <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
       <SHORT-NAME>MICROSAR</SHORT-NAME>
-      <AR-PACKAGES>
-        <AR-PACKAGE UUID="47ecb949-e88c-4fba-82cd-319eb3b68bf3">
-          <SHORT-NAME>Dcm_ib_bswmd</SHORT-NAME>
-          <AR-PACKAGES>
-            <AR-PACKAGE UUID="eb894d69-249a-4992-a97e-c490742948a8">
-              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
-              <ELEMENTS>
-                <BSW-MODULE-DESCRIPTION UUID="a403b2df-09fa-4206-b211-319b1c895584">
-                  <SHORT-NAME>Dcm</SHORT-NAME>
-                  <PROVIDED-ENTRYS>
-                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
-                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Dcm_ib_bswmd/BswModuleDescriptions/Dcm_MainFunction</BSW-MODULE-ENTRY-REF>
-                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
-                  </PROVIDED-ENTRYS>
-                  <INTERNAL-BEHAVIORS>
-                    <BSW-INTERNAL-BEHAVIOR UUID="c9b29889-d20e-4bca-97ad-f39f156c7d9d">
-                      <SHORT-NAME>DcmBehavior</SHORT-NAME>
-                      <EXCLUSIVE-AREAS>
-                        <EXCLUSIVE-AREA UUID="dbb9e1f2-c7a6-4d3b-840e-3f62f17a64ac">
-                          <SHORT-NAME>DCM_EXCLUSIVE_AREA_0</SHORT-NAME>
-                        </EXCLUSIVE-AREA>
-                      </EXCLUSIVE-AREAS>
-                      <ENTITYS>
-                        <BSW-SCHEDULABLE-ENTITY UUID="edfa9d99-eba7-4ebf-a520-9154642c4d8c">
-                          <SHORT-NAME>Dcm_MainFunction</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Dcm_ib_bswmd/BswModuleDescriptions/Dcm_MainFunction</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                      </ENTITYS>
-                      <EVENTS>
-                        <BSW-TIMING-EVENT UUID="c5820f10-96ca-4822-bbec-b89771cf7ee0">
-                          <SHORT-NAME>Dcm_MainFunctionTimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Dcm_ib_bswmd/BswModuleDescriptions/Dcm/DcmBehavior/Dcm_MainFunction</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.005</PERIOD>
-                        </BSW-TIMING-EVENT>
-                      </EVENTS>
-                    </BSW-INTERNAL-BEHAVIOR>
-                  </INTERNAL-BEHAVIORS>
-                </BSW-MODULE-DESCRIPTION>
-                <BSW-MODULE-ENTRY UUID="0dde2d0e-f2e0-4345-966e-401d42bb2b3f">
-                  <SHORT-NAME>Dcm_MainFunction</SHORT-NAME>
-                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
-                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
-                </BSW-MODULE-ENTRY>
-              </ELEMENTS>
-            </AR-PACKAGE>
-          </AR-PACKAGES>
-        </AR-PACKAGE>
-      </AR-PACKAGES>
     </AR-PACKAGE>
   </AR-PACKAGES>
 </AUTOSAR>

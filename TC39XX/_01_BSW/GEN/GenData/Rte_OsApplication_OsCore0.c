@@ -41,48 +41,26 @@
 #include "Rte_Cdd_Core5.h"
 #include "Rte_Cdd_Log.h"
 #include "Rte_Cdd_Nm.h"
-#include "Rte_ComM.h"
-#include "Rte_Dcm.h"
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
-#include "Rte_NvM.h"
 #include "Rte_Os_OsCore0_swc.h"
 #include "Rte_Os_OsCore1_swc.h"
 #include "Rte_Os_OsCore2_swc.h"
 #include "Rte_Os_OsCore3_swc.h"
 #include "Rte_Os_OsCore4_swc.h"
 #include "Rte_Os_OsCore5_swc.h"
-#include "Rte_StbM.h"
 #include "SchM_BswM.h"
-#include "SchM_Com.h"
-#include "SchM_ComM.h"
 #include "SchM_Crc.h"
-#include "SchM_Dcm.h"
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
-#include "SchM_DoIP.h"
 #include "SchM_EcuM.h"
-#include "SchM_EthIf.h"
-#include "SchM_EthSM.h"
-#include "SchM_EthTSyn.h"
 #include "SchM_EthTrcv_30_Tja1100.h"
 #include "SchM_Eth_30_Tc3xx.h"
-#include "SchM_Fee.h"
-#include "SchM_Fls_17_Dmu.h"
 #include "SchM_Irq.h"
-#include "SchM_LdCom.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
-#include "SchM_Nm.h"
-#include "SchM_NvM.h"
-#include "SchM_PduR.h"
 #include "SchM_Port.h"
-#include "SchM_Sd.h"
-#include "SchM_SoAd.h"
-#include "SchM_StbM.h"
-#include "SchM_TcpIp.h"
 #include "SchM_Uart.h"
-#include "SchM_UdpNm.h"
 
 #include "Rte_Hook.h"
 
@@ -299,7 +277,6 @@ VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM
 #define RTE_CONST_MSEC_SystemTimer_OsCore4_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore5_10 (1000000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_20 (2000000UL)
-#define RTE_CONST_MSEC_SystemTimer_OsCore0_25 (2500000UL)
 #define RTE_CONST_MSEC_SystemTimer_OsCore0_5 (500000UL)
 
 
@@ -364,69 +341,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_RunRequest_1_requestedM
   return RTE_E_UNCONNECTED;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_requestedMode(P2VAR(BswM_SDC_SdClientServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  *data = 1U;
-
-  return RTE_E_UNCONNECTED;
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_requestedMode(P2VAR(BswM_SDC_SdConsumedEventGroupRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  *data = 1U;
-
-  return RTE_E_UNCONNECTED;
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_requestedMode(P2VAR(BswM_SDC_SdClientServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  *data = 1U;
-
-  return RTE_E_UNCONNECTED;
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_requestedMode(P2VAR(BswM_SDC_SdConsumedEventGroupRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  *data = 1U;
-
-  return RTE_E_UNCONNECTED;
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_requestedMode(P2VAR(BswM_SDC_SdClientServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  *data = 1U;
-
-  return RTE_E_UNCONNECTED;
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_requestedMode(P2VAR(BswM_SDC_SdConsumedEventGroupRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  *data = 1U;
-
-  return RTE_E_UNCONNECTED;
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_S_SdServerService_0xC3C0_FaultInfo_requestedMode(P2VAR(BswM_SDC_SdServerServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  *data = 1U;
-
-  return RTE_E_UNCONNECTED;
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_S_SdServerService_0xC3C1_SenState_requestedMode(P2VAR(BswM_SDC_SdServerServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  *data = 1U;
-
-  return RTE_E_UNCONNECTED;
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_S_SdServerService_0xC3C2_EcuState_requestedMode(P2VAR(BswM_SDC_SdServerServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  *data = 1U;
-
-  return RTE_E_UNCONNECTED;
-} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
-
 
 /**********************************************************************************************************************
  * Mode Switch API (Rte_Switch)
@@ -461,78 +375,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_E
   return ret;
 } /* PRQA S 6050 */ /* MD_MSR_STCAL */
 
-FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState(BswM_SDC_SdClientServiceState nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  nextMode = nextMode;
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdConsumedEventGroupState(BswM_SDC_SdConsumedEventGroupState nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  nextMode = nextMode;
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState(BswM_SDC_SdClientServiceState nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  nextMode = nextMode;
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState(BswM_SDC_SdConsumedEventGroupState nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  nextMode = nextMode;
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState(BswM_SDC_SdClientServiceState nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  nextMode = nextMode;
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState(BswM_SDC_SdConsumedEventGroupState nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  nextMode = nextMode;
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState(BswM_SDC_SdEventHandlerState nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  nextMode = nextMode;
-
-  return ret;
-}
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState(BswM_SDC_SdEventHandlerState nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  nextMode = nextMode;
-
-  return ret;
-}
-
 
 /**********************************************************************************************************************
  * Mode reading API (Rte_Mode)
@@ -543,20 +385,6 @@ FUNC(BswM_ESH_Mode, RTE_CODE) Rte_Mode_BswM_Notification_ESH_ModeNotification_Bs
   BswM_ESH_Mode curMode;
   curMode = Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode;
   return curMode;
-}
-
-
-/**********************************************************************************************************************
- * Mode Switch API (Rte_Switch)
- *********************************************************************************************************************/
-
-FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl(Dcm_DiagnosticSessionControlType nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
-{
-  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
-
-  nextMode = nextMode;
-
-  return ret;
 }
 
 
@@ -636,19 +464,16 @@ TASK(OsTask_Bsw_10ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unrea
  * Task:     OsTask_Bsw_1ms_Core0
  * Priority: 50
  * Schedule: FULL
- * Alarm:    Cycle Time 0.001 s Alarm Offset 0 s
+ * Alarm:    Cycle Time 0.005 s Alarm Offset 0 s
  *********************************************************************************************************************/
 TASK(OsTask_Bsw_1ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 {
 
   /* call schedulable entity */
-  Com_MainFunctionRx();
+  Uart_MainFunction_Write();
 
   /* call schedulable entity */
-  Com_MainFunctionTx();
-
-  /* call schedulable entity */
-  Rte_ComSendSignalProxyPeriodic();
+  Uart_MainFunction_Read();
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -679,9 +504,9 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_10ms | Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms | Rte_Ev_Run_EthIf_EthIf_MainFunctionState | Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction | Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(OsTask_Bsw_5ms_Core0, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_10ms | Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms | Rte_Ev_Run_EthIf_EthIf_MainFunctionState | Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction | Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     if ((ev & Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction) != (EventMaskType)0)
     {
@@ -689,82 +514,10 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
       EthTrcv_30_Tja1100_MainFunction();
     }
 
-    if ((ev & Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling) != (EventMaskType)0)
     {
       /* call schedulable entity */
       EthTrcv_30_Tja1100_MainFunctionLinkHandling();
-
-      /* call schedulable entity */
-      EthIf_MainFunctionRx();
-    }
-
-    if ((ev & Rte_Ev_Run_EthIf_EthIf_MainFunctionState) != (EventMaskType)0)
-    {
-      /* call schedulable entity */
-      EthIf_MainFunctionState();
-    }
-
-    if ((ev & Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms) != (EventMaskType)0)
-    {
-      /* call schedulable entity */
-      UdpNm_MainFunction_0();
-
-      /* call runnable */
-      ComM_MainFunction_0(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-      /* call runnable */
-      ComM_MainFunction_1(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-      /* call runnable */
-      ComM_MainFunction_2(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-      /* call schedulable entity */
-      EthSM_MainFunction();
-
-      /* call runnable */
-      Dcm_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-      /* call schedulable entity */
-      Sd_MainFunction();
-
-      /* call schedulable entity */
-      SoAd_MainFunction();
-
-      /* call schedulable entity */
-      TcpIp_MainFunction();
-
-      /* call schedulable entity */
-      DoIP_MainFunction();
-
-      /* call schedulable entity */
-      EthTSyn_MainFunction();
-
-      /* call schedulable entity */
-      EthIf_MainFunctionTx();
-
-      /* call runnable */
-      StbM_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-      /* call schedulable entity */
-      Uart_MainFunction_Write();
-
-      /* call schedulable entity */
-      Uart_MainFunction_Read();
-    }
-
-    if ((ev & Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_10ms) != (EventMaskType)0)
-    {
-      /* call runnable */
-      NvM_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-      /* call schedulable entity */
-      Fee_MainFunction();
-    }
-
-    if ((ev & Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms) != (EventMaskType)0)
-    {
-      /* call schedulable entity */
-      Fls_17_Dmu_MainFunction();
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

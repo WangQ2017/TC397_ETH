@@ -280,7 +280,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore5;
    }:"@RO@@NR@";
 
-   ALARM Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms {
+   ALARM Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_5ms {
       COUNTER = SystemTimer_OsCore0;
       ACTION = ACTIVATETASK
       {
@@ -327,55 +327,8 @@
       SCHEDULE = FULL:"@RO@";
 // TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
       AUTOSTART = FALSE:"@RO@";
-      EVENT = Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_10ms:"@RO@";
-      EVENT = Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms:"@RO@";
-      EVENT = Rte_Ev_Run_EthIf_EthIf_MainFunctionState:"@RO@";
       EVENT = Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction:"@RO@";
-      ACCESSING_APPLICATION = OsApplication_OsCore1;
-      ACCESSING_APPLICATION = OsApplication_OsCore2;
-      ACCESSING_APPLICATION = OsApplication_OsCore3;
-      ACCESSING_APPLICATION = OsApplication_OsCore4;
-      ACCESSING_APPLICATION = OsApplication_OsCore5;
-   }:"@RO@@NR@";
-
-   ALARM Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_10ms {
-      COUNTER = SystemTimer_OsCore0;
-      ACTION = SETEVENT
-      {
-         TASK = OsTask_Bsw_5ms_Core0;
-         EVENT = Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_10ms;
-      }:"@ROC@";
-      AUTOSTART = FALSE:"@RO@";
-      ACCESSING_APPLICATION = OsApplication_OsCore1;
-      ACCESSING_APPLICATION = OsApplication_OsCore2;
-      ACCESSING_APPLICATION = OsApplication_OsCore3;
-      ACCESSING_APPLICATION = OsApplication_OsCore4;
-      ACCESSING_APPLICATION = OsApplication_OsCore5;
-   }:"@RO@@NR@";
-
-   ALARM Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms {
-      COUNTER = SystemTimer_OsCore0;
-      ACTION = SETEVENT
-      {
-         TASK = OsTask_Bsw_5ms_Core0;
-         EVENT = Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms;
-      }:"@ROC@";
-      AUTOSTART = FALSE:"@RO@";
-      ACCESSING_APPLICATION = OsApplication_OsCore1;
-      ACCESSING_APPLICATION = OsApplication_OsCore2;
-      ACCESSING_APPLICATION = OsApplication_OsCore3;
-      ACCESSING_APPLICATION = OsApplication_OsCore4;
-      ACCESSING_APPLICATION = OsApplication_OsCore5;
-   }:"@RO@@NR@";
-
-   ALARM Rte_Al_TE_EthIf_EthIf_MainFunctionState {
-      COUNTER = SystemTimer_OsCore0;
-      ACTION = SETEVENT
-      {
-         TASK = OsTask_Bsw_5ms_Core0;
-         EVENT = Rte_Ev_Run_EthIf_EthIf_MainFunctionState;
-      }:"@ROC@";
-      AUTOSTART = FALSE:"@RO@";
+      EVENT = Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling:"@RO@";
       ACCESSING_APPLICATION = OsApplication_OsCore1;
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
@@ -389,6 +342,21 @@
       {
          TASK = OsTask_Bsw_5ms_Core0;
          EVENT = Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling {
+      COUNTER = SystemTimer_OsCore0;
+      ACTION = SETEVENT
+      {
+         TASK = OsTask_Bsw_5ms_Core0;
+         EVENT = Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
       ACCESSING_APPLICATION = OsApplication_OsCore1;
@@ -611,14 +579,6 @@
       ACCESSING_APPLICATION = OsApplication_OsCore4;
    }:"@RO@@NR@";
 
-   EVENT Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_10ms {
-      MASK = AUTO;
-   }:"@ROC@@NR@";
-
-   EVENT Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms {
-      MASK = AUTO;
-   }:"@ROC@@NR@";
-
    EVENT Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms {
       MASK = AUTO;
    }:"@ROC@@NR@";
@@ -635,11 +595,11 @@
       MASK = AUTO;
    }:"@ROC@@NR@";
 
-   EVENT Rte_Ev_Run_EthIf_EthIf_MainFunctionState {
+   EVENT Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction {
       MASK = AUTO;
    }:"@ROC@@NR@";
 
-   EVENT Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction {
+   EVENT Rte_Ev_Run_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling {
       MASK = AUTO;
    }:"@ROC@@NR@";
 
@@ -660,14 +620,12 @@
       TASK = OsTask_Bsw_10ms_Core0;
       ALARM = Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms;
       TASK = OsTask_Bsw_1ms_Core0;
-      ALARM = Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_1ms;
+      ALARM = Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_5ms;
       TASK = OsTask_Bsw_20ms_Core0;
       ALARM = Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction;
       TASK = OsTask_Bsw_5ms_Core0;
-      ALARM = Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_10ms;
-      ALARM = Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms;
-      ALARM = Rte_Al_TE_EthIf_EthIf_MainFunctionState;
       ALARM = Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction;
+      ALARM = Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling;
       TASK = OsTask_Init_OsCore0;
       CORE = 0;
   };

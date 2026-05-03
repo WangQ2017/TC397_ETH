@@ -18,47 +18,6 @@
         <AR-PACKAGE UUID="1edd2677-acb5-4f7a-8c54-65842eb2eefa">
           <SHORT-NAME>NvM_ib_bswmd</SHORT-NAME>
           <AR-PACKAGES>
-            <AR-PACKAGE UUID="5b3c289b-a1d3-44ea-b59e-138ba009abc6">
-              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
-              <ELEMENTS>
-                <BSW-MODULE-DESCRIPTION UUID="45fc0dfe-5924-478e-8a16-4c3e1673c82e">
-                  <SHORT-NAME>NvM</SHORT-NAME>
-                  <PROVIDED-ENTRYS>
-                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
-                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/NvM_ib_bswmd/BswModuleDescriptions/NvM_MainFunction</BSW-MODULE-ENTRY-REF>
-                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
-                  </PROVIDED-ENTRYS>
-                  <INTERNAL-BEHAVIORS>
-                    <BSW-INTERNAL-BEHAVIOR UUID="60c46090-40ff-4afe-8b09-3fd8bcbc8b47">
-                      <SHORT-NAME>NvMBehavior</SHORT-NAME>
-                      <EXCLUSIVE-AREAS>
-                        <EXCLUSIVE-AREA UUID="dcdee038-5449-4baf-aa35-4bb1c65c2b15">
-                          <SHORT-NAME>NVM_EXCLUSIVE_AREA_0</SHORT-NAME>
-                        </EXCLUSIVE-AREA>
-                      </EXCLUSIVE-AREAS>
-                      <ENTITYS>
-                        <BSW-SCHEDULABLE-ENTITY UUID="a6c9049a-fc95-420a-95f1-db5ec777e1f4">
-                          <SHORT-NAME>NvM_MainFunction</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/NvM_ib_bswmd/BswModuleDescriptions/NvM_MainFunction</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                      </ENTITYS>
-                      <EVENTS>
-                        <BSW-TIMING-EVENT UUID="ad4e5507-4ed0-4b04-8b0c-375731c95b3b">
-                          <SHORT-NAME>NvM_MainFunctionTimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/NvM_ib_bswmd/BswModuleDescriptions/NvM/NvMBehavior/NvM_MainFunction</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                      </EVENTS>
-                    </BSW-INTERNAL-BEHAVIOR>
-                  </INTERNAL-BEHAVIORS>
-                </BSW-MODULE-DESCRIPTION>
-                <BSW-MODULE-ENTRY UUID="3caa32ed-e4b2-4c67-bc39-ebea3ffa0cb8">
-                  <SHORT-NAME>NvM_MainFunction</SHORT-NAME>
-                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
-                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
-                </BSW-MODULE-ENTRY>
-              </ELEMENTS>
-            </AR-PACKAGE>
             <AR-PACKAGE UUID="57eb789f-1f73-48bf-9cf1-8f3484da8863">
               <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>

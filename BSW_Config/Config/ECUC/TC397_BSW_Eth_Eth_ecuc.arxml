@@ -101,6 +101,10 @@
                   <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthGeneral/EthPostCtrlInitUserCallout</DEFINITION-REF>
                   <VALUE>NULL_PTR</VALUE>
                 </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthGeneral/EthAdditionalIncludes</DEFINITION-REF>
+                  <VALUE>EthIf_Cbk.h</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="e666ae6b-1e58-4d17-a540-69bba5ca23a9">
@@ -215,6 +219,14 @@
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlSkewTx</DEFINITION-REF>
                       <VALUE>0</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthRxIndicationCallout</DEFINITION-REF>
+                      <VALUE>NULL_PTR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthTxConfirmationCallout</DEFINITION-REF>
+                      <VALUE>NULL_PTR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
                     <ECUC-REFERENCE-VALUE>

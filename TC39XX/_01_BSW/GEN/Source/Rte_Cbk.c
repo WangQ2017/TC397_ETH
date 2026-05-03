@@ -43,26 +43,3 @@
  *********************************************************************************************************************/
 
 #include "Rte_Cbk.h"
-#include "Appl_Cbk.h"
-
-/* ldcom cbk */
-FUNC(void, RTE_CODE) Rte_LdComCbkRxIndication_VechicleSpeedRx(P2CONST(PduInfoType, AUTOMATIC, COM_APPL_DATA) PduInfoPtr)
-{
-
-}
-
-FUNC(void, RTE_CODE) Rte_LdComCbkRxIndication_VechicleStatusRx(P2CONST(PduInfoType, AUTOMATIC, COM_APPL_DATA) PduInfoPtr)
-{
-
-}
-
-/* com cbk */
-FUNC(void, COM_APPL_CODE) Com_Cbk_FalutInfoTx(void)
-{
-
-}
-
-FUNC(void, COM_APPL_CODE) Com_Cbk_VechicleInfoRx(void)
-{
-
-}
