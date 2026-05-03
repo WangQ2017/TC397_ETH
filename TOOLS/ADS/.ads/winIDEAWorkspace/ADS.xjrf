@@ -135,7 +135,7 @@
            <Area></Area>
            <Load>true</Load>
            <OverrideMemArea>false</OverrideMemArea>
-           <Path>G:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/tc39x.elf</Path>
+           <Path>G:/class/TC397_ETH/TOOLS/CMake/build/tc397_eth/tc39x.elf</Path>
            <UseDefaultMSID>true</UseDefaultMSID>
            <MSID>
             <App>0x0</App>
@@ -227,7 +227,7 @@
            <Area></Area>
            <Load>true</Load>
            <OverrideMemArea>false</OverrideMemArea>
-           <Path>G:/class/TC397_ETH/TOOLS/CMake/build/tc39x-fac-tasking/tc39x.elf</Path>
+           <Path>G:/class/TC397_ETH/TOOLS/CMake/build/tc397_eth/tc39x.elf</Path>
            <UseDefaultMSID>true</UseDefaultMSID>
            <MSID>
             <App>0x0</App>
