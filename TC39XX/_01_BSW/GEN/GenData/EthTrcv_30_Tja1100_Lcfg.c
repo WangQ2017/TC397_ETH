@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTrcv_30_Tja1100_Lcfg.c
- *   Generation Time: 2026-01-18 22:53:01
+ *   Generation Time: 2026-05-04 10:27:34
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -41,6 +41,7 @@
 
 #include "Eth_30_Tc3xx.h"
 
+#include "EthTrcv_Callout.h"
 
 /**********************************************************************************************************************
   CONFIGURATION CLASS: PRE_COMPILE
@@ -211,8 +212,8 @@ CONST(EthTrcv_30_Tja1100_UserAccessCalloutsType, ETHTRCV_30_TJA1100_CONST) EthTr
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_19.1 */
 /*lint -restore */
 CONST(EthTrcv_30_Tja1100_UserInitCalloutsType, ETHTRCV_30_TJA1100_CONST) EthTrcv_30_Tja1100_UserInitCallouts[1] = {
-    /* Index    PostInitUserCallout  PreInitUserCallout */
-  { /*     0 */ NULL_PTR           , NULL_PTR           }
+    /* Index    PostInitUserCallout          PreInitUserCallout         */
+  { /*     0 */ EthTrcv_PostTrcvInitCallout, EthTrcv_PreTrcvInitCallout }
 };
 #define ETHTRCV_30_TJA1100_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

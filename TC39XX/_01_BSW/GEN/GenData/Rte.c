@@ -359,7 +359,7 @@ FUNC(void, RTE_CODE) SchM_Init(void)
     (void)ActivateTask(OsTask_Bsw_5ms_Core0); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     /* activate the alarms used for TimingEvents */
-    (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_5ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_Uart_Uart_MainFunction_Read, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(20)); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(10)); /* PRQA S 3417 */ /* MD_Rte_Os */
@@ -526,7 +526,7 @@ FUNC(void, RTE_CODE) SchM_Deinit(void)
   {
     /* deactivate alarms */
     (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_Uart_Uart_MainFunction_Read); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling); /* PRQA S 3417 */ /* MD_Rte_Os */

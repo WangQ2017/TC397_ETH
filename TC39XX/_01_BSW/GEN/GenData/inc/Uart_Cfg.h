@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_11.0.0                                                  **
 **                                                                            **
-**  DATE, TIME: 2026-05-01, 18:07:49  !!!IGNORE-LINE!!!                       **
+**  DATE, TIME: 2026-05-04, 13:40:54  !!!IGNORE-LINE!!!                       **
 **                                                                            **
 **  GENERATOR : Build b170330-0431      !!!IGNORE-LINE!!!                     **
 **                                                                            **
@@ -168,7 +168,7 @@ Derived Configuration for UartTxPollingEnable
 - if UART_POLLING_MODE,Function Uart_MainFunction_Write is available
 - if UART_MIXED_MODE,Function Uart_MainFunction_Write,Uart_IsrTransmit and Uart_IsrError is available.
 */
-#define UART_TX_MODE  (UART_POLLING_MODE)
+#define UART_TX_MODE  (UART_INTERRUPT_MODE)
 
 /* [cover parentID={2596A0C0-0059-4db8-99CD-BE08911A6173}]
 [/cover] */

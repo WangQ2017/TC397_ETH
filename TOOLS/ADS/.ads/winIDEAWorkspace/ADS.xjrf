@@ -135,7 +135,7 @@
            <Area></Area>
            <Load>true</Load>
            <OverrideMemArea>false</OverrideMemArea>
-           <Path>G:/class/TC397_ETH/TOOLS/CMake/build/tc397_eth/tc39x.elf</Path>
+           <Path>G:/TC397_ETH/TOOLS/CMake/build/tc397_eth/tc39x.elf</Path>
            <UseDefaultMSID>true</UseDefaultMSID>
            <MSID>
             <App>0x0</App>
@@ -227,7 +227,7 @@
            <Area></Area>
            <Load>true</Load>
            <OverrideMemArea>false</OverrideMemArea>
-           <Path>G:/class/TC397_ETH/TOOLS/CMake/build/tc397_eth/tc39x.elf</Path>
+           <Path>G:/TC397_ETH/TOOLS/CMake/build/tc397_eth/tc39x.elf</Path>
            <UseDefaultMSID>true</UseDefaultMSID>
            <MSID>
             <App>0x0</App>
@@ -425,6 +425,19 @@
          <Name>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd.c&quot;::2177</Name>
         </__>
        </BP.4>
+       <BP.5>
+        <__>
+         <ActionEnabled>False</ActionEnabled>
+         <ActionScript></ActionScript>
+         <ActionScriptParams></ActionScriptParams>
+         <ActionShow>False</ActionShow>
+         <Active>False</Active>
+         <Condition></Condition>
+         <Condition_Count>0</Condition_Count>
+         <ConditionEnabled>False</ConditionEnabled>
+         <Name>&quot;..\..\..\..\TC39XX\_03_MCAL\Infra_Prod\Irq\ssc\src\AscLin_Irq.c&quot;::59</Name>
+        </__>
+       </BP.5>
       </Fetch>
      </Breakpoints>
      <Debug>
@@ -685,6 +698,18 @@
         <Location>&quot;..\..\..\..\TC39XX\_01_BSW\Src\SoAd\Implementation\SoAd.c&quot;::2177</Location>
         <ProcessFilter></ProcessFilter>
        </__.4>
+       <__.5>
+        <ActionEnabled>false</ActionEnabled>
+        <ActionParams></ActionParams>
+        <ActionScript></ActionScript>
+        <ActionShow>false</ActionShow>
+        <Condition>false</Condition>
+        <Count>0</Count>
+        <Enabled>false</Enabled>
+        <Expression></Expression>
+        <Location>&quot;..\..\..\..\TC39XX\_03_MCAL\Infra_Prod\Irq\ssc\src\AscLin_Irq.c&quot;::59</Location>
+        <ProcessFilter></ProcessFilter>
+       </__.5>
       </BPs>
       <Processes>
        <__.0>

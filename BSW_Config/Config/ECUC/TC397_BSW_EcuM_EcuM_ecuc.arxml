@@ -68,6 +68,10 @@
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/EcuM/EcuMGeneral/EcuMNonChannelWakeupInRun</DEFINITION-REF>
                   <VALUE>false</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMGeneral/EcuMAdditionalIncludes</DEFINITION-REF>
+                  <VALUE>IfxSrc_reg.h</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
               </PARAMETER-VALUES>
               <SUB-CONTAINERS>
                 <ECUC-CONTAINER-VALUE UUID="ce4e4440-dfba-4ee6-8ad6-4a320c5a074c">
@@ -100,7 +104,7 @@
                   <PARAMETER-VALUES>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMConfigConsistencyHash</DEFINITION-REF>
-                      <VALUE>2781386751270244925</VALUE>
+                      <VALUE>9357439986693789939</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>

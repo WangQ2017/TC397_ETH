@@ -2953,6 +2953,14 @@
                           <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupRef</DEFINITION-REF>
                           <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_CODE</VALUE-REF>
                         </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/OS_ASCLIN0ERR_ISR_CODE</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-CHOICE-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLogicalConstGroup/vLinkGenConstSectionGroup/vLinkGenConstSectionGroupRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/OS_ASCLIN0TX_ISR_CODE</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
                       </REFERENCE-VALUES>
                     </ECUC-CONTAINER-VALUE>
                   </SUB-CONTAINERS>
@@ -21244,6 +21252,54 @@
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection/vLinkGenLinkerCodeSectionName</DEFINITION-REF>
                           <VALUE>OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_CODE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection/vLinkGenLinkerCodeSectionFast</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection/vLinkGenLinkerCodeSectionAlignment</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection/vLinkGenLinkerCodeSectionModule</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ActiveEcuC/Os</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="5a427a60-8dde-4299-8259-d2b6b54e287d">
+                      <SHORT-NAME>OS_ASCLIN0ERR_ISR_CODE</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection/vLinkGenLinkerCodeSectionName</DEFINITION-REF>
+                          <VALUE>OS_ASCLIN0ERR_ISR_CODE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection/vLinkGenLinkerCodeSectionFast</DEFINITION-REF>
+                          <VALUE>false</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection/vLinkGenLinkerCodeSectionAlignment</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection/vLinkGenLinkerCodeSectionModule</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-MODULE-CONFIGURATION-VALUES">/ActiveEcuC/Os</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE UUID="2465c573-8d85-41ea-9031-8590b08bff81">
+                      <SHORT-NAME>OS_ASCLIN0TX_ISR_CODE</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection/vLinkGenLinkerCodeSectionName</DEFINITION-REF>
+                          <VALUE>OS_ASCLIN0TX_ISR_CODE</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/vLinkGen/vLinkGenMemLayout/vLinkGenLinkerSections/vLinkGenLinkerCodeSection/vLinkGenLinkerCodeSectionFast</DEFINITION-REF>

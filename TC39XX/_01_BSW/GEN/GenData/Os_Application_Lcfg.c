@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Application_Lcfg.c
- *   Generation Time: 2026-05-03 14:25:45
+ *   Generation Time: 2026-05-04 14:49:37
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -172,7 +172,6 @@ OS_LOCAL VAR(Os_AppType, OS_VAR_NOINIT) OsCfg_App_SystemApplication_OsCore5_Dyn;
 OS_LOCAL CONST(Os_AlarmConfigRefType, OS_CONST) OsCfg_App_OsApplication_OsCore0_AlarmRefs[OS_CFG_NUM_APP_OSAPPLICATION_OSCORE0_ALARMS + 1u] =
 {
   OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms),
-  OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_5ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction),
@@ -180,6 +179,7 @@ OS_LOCAL CONST(Os_AlarmConfigRefType, OS_CONST) OsCfg_App_OsApplication_OsCore0_
   OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms),
   OS_ALARM_CASTCONFIG_ALARMSETEVENT_2_ALARM(OsCfg_Alarm_Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms),
+  OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE_Uart_Uart_MainFunction_Read),
   NULL_PTR
 };
 
@@ -287,6 +287,8 @@ OS_LOCAL CONST(Os_HookConfigRefType, OS_CONST) OsCfg_App_SystemApplication_OsCor
 /*! Object reference table for application ISRs: SystemApplication_OsCore0 */
 OS_LOCAL CONST(Os_IsrConfigRefType, OS_CONST) OsCfg_App_SystemApplication_OsCore0_IsrRefs[OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_ISRS + 1u] =
 {
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN0ERR_ISR),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN0TX_ISR),
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer_OsCore0),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx),
   OS_XSIGNAL_CASTCONFIG_XSIGNALISR_2_ISR(OsCfg_Isr_XSignalIsr_OsCore0),

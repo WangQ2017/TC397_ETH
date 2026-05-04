@@ -87,11 +87,11 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-TEXTUAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvPreTrcvInitUserCallout</DEFINITION-REF>
-                  <VALUE>NULL_PTR</VALUE>
+                  <VALUE>EthTrcv_PreTrcvInitCallout</VALUE>
                 </ECUC-TEXTUAL-PARAM-VALUE>
                 <ECUC-TEXTUAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-LINKER-SYMBOL-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvPostTrcvInitUserCallout</DEFINITION-REF>
-                  <VALUE>NULL_PTR</VALUE>
+                  <VALUE>EthTrcv_PostTrcvInitCallout</VALUE>
                 </ECUC-TEXTUAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvHwAccessMonitorPeriod</DEFINITION-REF>
@@ -113,6 +113,10 @@
                   <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvMainFunctionLinkHandlingPeriod</DEFINITION-REF>
                   <VALUE>0.005</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EthTrcv_Tja1100/EthTrcv/EthTrcvGeneral/EthTrcvCalloutIncludeFiles</DEFINITION-REF>
+                  <VALUE>EthTrcv_Callout.h</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
               </PARAMETER-VALUES>
             </ECUC-CONTAINER-VALUE>
             <ECUC-CONTAINER-VALUE UUID="7ec04e0b-93c5-47e2-9c68-66e4085c346a">

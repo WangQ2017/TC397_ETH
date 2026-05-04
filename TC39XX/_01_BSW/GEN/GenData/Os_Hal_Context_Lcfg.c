@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.c
- *   Generation Time: 2026-05-01 19:42:43
+ *   Generation Time: 2026-05-04 14:49:37
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -103,6 +103,12 @@ VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level2_Dyn;
 
 /*! HAL dynamic ISR2 level context data: Level3 */
 VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level3_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level4 */
+VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level4_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level5 */
+VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level5_Dyn;
 
 /*! HAL dynamic task context data: Default_Init_Task */
 VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Default_Init_Task_Dyn;
@@ -384,7 +390,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Os_CoreInitHook_OsCo
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperOs_CoreInitHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: StartupHook_OsCore0 */
@@ -396,7 +402,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_StartupHook_OsCore0 
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperCallback,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ShutdownHook_OsCore0 */
@@ -408,7 +414,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ShutdownHook_OsCore0
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ErrorHook_OsCore0 */
@@ -420,7 +426,31 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ErrorHook_OsCore0 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+};
+
+/*! HAL ISR2 context configuration data: ASCLIN0ERR_ISR */
+CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ASCLIN0ERR_ISR =
+{
+  /* .StackEndAddr     = */ (uint32)(OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsCore0_Isr_Core_Dyn)+1),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
+  /* .StackStartAddr   = */ (uint32)OS_STACK_GETLOWADDRESS(OsCfg_Stack_OsCore0_Isr_Core_Dyn),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
+  /* .ProgramStatus    = */ (uint32)OS_HAL_PSW_IS_MASK | OS_HAL_PSW_CDE_MASK | OS_HAL_PSW_IO_SUPERVISOR | OS_HAL_PSW_S_MASK,
+  /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
+  /* .Entry            = */ (uint32)&Os_Isr_ASCLIN0ERR_ISR,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
+  /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+};
+
+/*! HAL ISR2 context configuration data: ASCLIN0TX_ISR */
+CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ASCLIN0TX_ISR =
+{
+  /* .StackEndAddr     = */ (uint32)(OS_STACK_GETHIGHADDRESS(OsCfg_Stack_OsCore0_Isr_Core_Dyn)+1),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
+  /* .StackStartAddr   = */ (uint32)OS_STACK_GETLOWADDRESS(OsCfg_Stack_OsCore0_Isr_Core_Dyn),  /* PRQA S 0306 */ /* MD_Os_Hal_Rule11.4_0306 */
+  /* .ProgramStatus    = */ (uint32)OS_HAL_PSW_IS_MASK | OS_HAL_PSW_CDE_MASK | OS_HAL_PSW_IO_SUPERVISOR | OS_HAL_PSW_S_MASK,
+  /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
+  /* .Entry            = */ (uint32)&Os_Isr_ASCLIN0TX_ISR,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
+  /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: CounterIsr_SystemTimer_OsCore0 */
@@ -432,7 +462,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CounterIsr_SystemTim
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_TimerHrtIsr,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx */
@@ -444,7 +474,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_EthIsr_EthCtrlConfig
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: XSignalIsr_OsCore0 */
@@ -456,7 +486,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_OsCore0 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_XSigRecvIsrHandler,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL task context configuration data: Default_Init_Task */
@@ -590,7 +620,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Os_CoreInitHook_OsCo
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperOs_CoreInitHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: StartupHook_OsCore1 */
@@ -602,7 +632,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_StartupHook_OsCore1 
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperCallback,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ShutdownHook_OsCore1 */
@@ -614,7 +644,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ShutdownHook_OsCore1
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ErrorHook_OsCore1 */
@@ -626,7 +656,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ErrorHook_OsCore1 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: CounterIsr_SystemTimer_OsCore1 */
@@ -638,7 +668,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CounterIsr_SystemTim
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_TimerHrtIsr,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: XSignalIsr_OsCore1 */
@@ -650,7 +680,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_OsCore1 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_XSigRecvIsrHandler,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL task context configuration data: Default_Init_Task_Core1 */
@@ -748,7 +778,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Os_CoreInitHook_OsCo
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperOs_CoreInitHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: StartupHook_OsCore2 */
@@ -760,7 +790,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_StartupHook_OsCore2 
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperCallback,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ShutdownHook_OsCore2 */
@@ -772,7 +802,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ShutdownHook_OsCore2
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ErrorHook_OsCore2 */
@@ -784,7 +814,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ErrorHook_OsCore2 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: CounterIsr_SystemTimer_OsCore2 */
@@ -796,7 +826,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CounterIsr_SystemTim
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_TimerHrtIsr,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: XSignalIsr_OsCore2 */
@@ -808,7 +838,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_OsCore2 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_XSigRecvIsrHandler,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL task context configuration data: Default_Init_Task_Core2 */
@@ -906,7 +936,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Os_CoreInitHook_OsCo
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperOs_CoreInitHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: StartupHook_OsCore3 */
@@ -918,7 +948,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_StartupHook_OsCore3 
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperCallback,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ShutdownHook_OsCore3 */
@@ -930,7 +960,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ShutdownHook_OsCore3
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ErrorHook_OsCore3 */
@@ -942,7 +972,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ErrorHook_OsCore3 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: CounterIsr_SystemTimer_OsCore3 */
@@ -954,7 +984,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CounterIsr_SystemTim
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_TimerHrtIsr,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: XSignalIsr_OsCore3 */
@@ -966,7 +996,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_OsCore3 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_XSigRecvIsrHandler,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL task context configuration data: Default_Init_Task_Core3 */
@@ -1064,7 +1094,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Os_CoreInitHook_OsCo
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperOs_CoreInitHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: StartupHook_OsCore4 */
@@ -1076,7 +1106,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_StartupHook_OsCore4 
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperCallback,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ShutdownHook_OsCore4 */
@@ -1088,7 +1118,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ShutdownHook_OsCore4
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ErrorHook_OsCore4 */
@@ -1100,7 +1130,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ErrorHook_OsCore4 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: CounterIsr_SystemTimer_OsCore4 */
@@ -1112,7 +1142,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CounterIsr_SystemTim
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_TimerHrtIsr,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: XSignalIsr_OsCore4 */
@@ -1124,7 +1154,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_OsCore4 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_XSigRecvIsrHandler,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL task context configuration data: Default_Init_Task_Core4 */
@@ -1222,7 +1252,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_Os_CoreInitHook_OsCo
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperOs_CoreInitHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: StartupHook_OsCore5 */
@@ -1234,7 +1264,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_StartupHook_OsCore5 
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperCallback,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ShutdownHook_OsCore5 */
@@ -1246,7 +1276,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ShutdownHook_OsCore5
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL hook context configuration data: ErrorHook_OsCore5 */
@@ -1258,7 +1288,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ErrorHook_OsCore5 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_HookWrapperStatusHook,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapHookReturn,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: CounterIsr_SystemTimer_OsCore5 */
@@ -1270,7 +1300,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CounterIsr_SystemTim
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_TimerHrtIsr,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL ISR2 context configuration data: XSignalIsr_OsCore5 */
@@ -1282,7 +1312,7 @@ CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_OsCore5 =
   /* .ProtectionSet    = */ (uint32)OS_HAL_PSW_PRS_PS0,
   /* .Entry            = */ (uint32)&Os_Isr_Os_XSigRecvIsrHandler,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
   /* .ReturnAddress    = */ (uint32)&Os_TrapIsrEpilogue,  /* PRQA S 0305 */ /* MD_Os_Hal_Rule11.1_0305 */
-  /* .IntStatus        = */ ((uint32)255<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
+  /* .IntStatus        = */ ((uint32)129<<OS_HAL_PCXI_PCPN_BIT_POSITION) | OS_HAL_PCXI_PIE_ENABLED
 };
 
 /*! HAL task context configuration data: Default_Init_Task_Core6 */

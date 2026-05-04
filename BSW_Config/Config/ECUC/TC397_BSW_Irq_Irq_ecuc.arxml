@@ -103,7 +103,7 @@
                       <PARAMETER-VALUES>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinCatConfig/IrqAsclinErrCatConfig/IrqAsclin0ErrCat</DEFINITION-REF>
-                          <VALUE>CAT1</VALUE>
+                          <VALUE>CAT2</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinCatConfig/IrqAsclinErrCatConfig/IrqAsclin10ErrCat</DEFINITION-REF>
@@ -307,7 +307,7 @@
                       <PARAMETER-VALUES>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinCatConfig/IrqAsclinTxCatConfig/IrqAsclin0TxCat</DEFINITION-REF>
-                          <VALUE>CAT1</VALUE>
+                          <VALUE>CAT2</VALUE>
                         </ECUC-TEXTUAL-PARAM-VALUE>
                         <ECUC-TEXTUAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqASCLINConfig/IrqAsclinCatConfig/IrqAsclinTxCatConfig/IrqAsclin10TxCat</DEFINITION-REF>

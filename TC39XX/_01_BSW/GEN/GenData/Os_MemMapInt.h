@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_MemMapInt.h
- *   Generation Time: 2026-05-01 19:42:43
+ *   Generation Time: 2026-05-04 13:06:43
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -182,6 +182,56 @@
 # undef OS_STARTUPHOOK_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
 # pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 # undef OS_STOP_SEC_STARTUPHOOK_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_ASCLIN0ERR_ISR_CODE
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_ASCLIN0ERR_ISR_CODE_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code "OS_ASCLIN0ERR_ISR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_ASCLIN0ERR_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_ASCLIN0ERR_ISR_CODE
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_ASCLIN0ERR_ISR_CODE_OPEN
+#  error Section OS_ASCLIN0ERR_ISR_CODE is currently not opened and so cannot be closed.
+# endif
+# undef OS_ASCLIN0ERR_ISR_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_ASCLIN0ERR_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_ASCLIN0TX_ISR_CODE
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_ASCLIN0TX_ISR_CODE_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code "OS_ASCLIN0TX_ISR_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_ASCLIN0TX_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_ASCLIN0TX_ISR_CODE
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_ASCLIN0TX_ISR_CODE_OPEN
+#  error Section OS_ASCLIN0TX_ISR_CODE is currently not opened and so cannot be closed.
+# endif
+# undef OS_ASCLIN0TX_ISR_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_ASCLIN0TX_ISR_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 

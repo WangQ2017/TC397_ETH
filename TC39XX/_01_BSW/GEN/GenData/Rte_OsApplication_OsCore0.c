@@ -416,9 +416,6 @@ TASK(OsTask_Asw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreacha
     if ((ev & Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms) != (EventMaskType)0)
     {
       /* call runnable */
-      Cdd_Log_Runnable5ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-      /* call runnable */
       Cdd_Core0_Runnable5ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
@@ -438,6 +435,12 @@ TASK(OsTask_Asw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreacha
     {
       /* call runnable */
       Cdd_Nm_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Cdd_Log_Runnable5ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -468,9 +471,6 @@ TASK(OsTask_Bsw_10ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unrea
  *********************************************************************************************************************/
 TASK(OsTask_Bsw_1ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreachable */
 {
-
-  /* call schedulable entity */
-  Uart_MainFunction_Write();
 
   /* call schedulable entity */
   Uart_MainFunction_Read();
@@ -531,13 +531,13 @@ TASK(OsTask_Init_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreach
 {
 
   /* call runnable */
+  Cdd_Log_Runnable_init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  /* call runnable */
   Cdd_Core0_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   /* call runnable */
   Cdd_Nm_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
-
-  /* call runnable */
-  Cdd_Log_Runnable_init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

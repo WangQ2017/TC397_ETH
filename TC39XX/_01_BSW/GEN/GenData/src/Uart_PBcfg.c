@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 1.40.0_13.0.0                                                 **
 **                                                                            **
-**  DATE, TIME: 2026-05-01, 18:07:48  !!!IGNORE-LINE!!!                       **
+**  DATE, TIME: 2026-05-04, 13:40:54  !!!IGNORE-LINE!!!                       **
 **                                                                            **
 **  GENERATOR : Build b170330-0431      !!!IGNORE-LINE!!!                     **
 **                                                                            **
@@ -132,7 +132,7 @@ static const Uart_ChannelConfigType  Uart_ChannelConfig[1] =
     /* Receive operation mode polling/interrupt */
     UART_POLLING_MODE,
     /* Transmit operation mode polling/interrupt  */
-    UART_POLLING_MODE
+    UART_INTERRUPT_MODE
   }
 };
 /* [cover parentID={1614ABEB-C055-42f9-90C1-009D55C1699C}]

@@ -42,7 +42,6 @@
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
-#include "Dio.h"
 #include "EthTrcv_30_Tja1100_Hw_Int.h"
 #include "Cdd_Log.h"
 #include "Eth_30_Tc3xx.h"
@@ -202,16 +201,44 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ 
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Runnable10ms
  *********************************************************************************************************************/
-    Cdd_Core0_Task_10ms_Cnt++;
-  
+    Std_ReturnType ret;
+
+
     uint8 testData[46] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x11, 0x22, 0x33, 0x44, 0x55,
                           0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0};
-    Std_ReturnType ret;
-    
     /* 发送自定义数据，以太网类型为0x1234（自定义协议），不需要确认 */
     ret = Eth_IntegratedTransmit(testData, sizeof(testData), 0x1134, FALSE);
+    if (ret == E_NOT_OK)
+    {
+        // CDD_LOG_DEBUG("Send Data failed!");
+    }
 
+    if ((Cdd_Core0_Task_10ms_Cnt % 100) == 0)
+    {
+        uint8 SignalQuality;
+        ret = EthTrcv_30_Tja1100_GetPhySignalQuality(0, &SignalQuality);
+        if (ret == E_OK)
+        {
+            CDD_LOG_DEBUG("Post:SignalQuality=%d", SignalQuality);
+        }
+        else
+        {
+            CDD_LOG_ERROR("Post:get Signal Quality failed");
+        }
 
+        EthTrcv_LinkStateType LinkState;
+        ret = EthTrcv_30_Tja1100_GetLinkState(0, &LinkState);
+        if (ret == E_OK)
+        {
+            CDD_LOG_DEBUG("Post:LinkState=%d", LinkState);
+        }
+        else
+        {
+            CDD_LOG_ERROR("Post:get Link State failed");
+        }
+    }
+
+    Cdd_Core0_Task_10ms_Cnt++;
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

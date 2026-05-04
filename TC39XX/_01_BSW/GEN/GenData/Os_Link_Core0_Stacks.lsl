@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Link_Core0_Stacks.lsl
- *   Generation Time: 2026-05-01 19:42:43
+ *   Generation Time: 2026-05-04 14:49:38
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -145,7 +145,7 @@ group OS_STACK_OSCORE0_TASK_PRIO55_VAR_NOINIT_GROUP(ordered, contiguous, fill, a
 "_OS_STACK_OSCORE0_TASK_PRIO55_VAR_NOINIT_END" = "_lc_ge_OS_STACK_OSCORE0_TASK_PRIO55_VAR_NOINIT_GROUP" - 1;
 "_OS_STACK_OSCORE0_TASK_PRIO55_VAR_NOINIT_LIMIT" = "_lc_ge_OS_STACK_OSCORE0_TASK_PRIO55_VAR_NOINIT_GROUP";
 
-/* Stack: OsTask_Asw_OsCore0 (1024 Byte) */
+/* Stack: OsTask_Asw_OsCore0 (4096 Byte) */
 group OS_STACK_OSTASK_ASW_OSCORE0_VAR_NOINIT_GROUP(ordered, contiguous, fill, align=8)
 {
   select "[.]bss.OS_STACK_OSTASK_ASW_OSCORE0_VAR_NOINIT";

@@ -110,10 +110,8 @@ FUNC(void, Cdd_Log_CODE) Cdd_Log_Runnable_init(void) /* PRQA S 0624, 3206 */ /* 
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Log_Runnable_init
  *********************************************************************************************************************/
-
     DualPrint_Init();
     CDD_LOG_DEBUG("App Start Up Success!");
-
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

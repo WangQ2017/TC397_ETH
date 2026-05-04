@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Interrupt_Lcfg.c
- *   Generation Time: 2026-01-18 22:49:12
+ *   Generation Time: 2026-05-04 12:52:14
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -79,10 +79,36 @@
 #define OS_START_SEC_CORE0_CONST_UNSPECIFIED
 #include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
+/*! HAL ISR configuration data: ASCLIN0ERR_ISR */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_ASCLIN0ERR_ISR =
+{
+  /* .Level          = */ 128,
+  /* .Source         = */ 0x58uL,
+  /* .CoreAssignment = */ 0
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_ASCLIN0ERR_ISR =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
+/*! HAL ISR configuration data: ASCLIN0TX_ISR */
+CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_ASCLIN0TX_ISR =
+{
+  /* .Level          = */ 129,
+  /* .Source         = */ 0x50uL,
+  /* .CoreAssignment = */ 0
+};
+
+CONST(Os_Hal_IntIsrMapConfigType, OS_CONST) OsCfg_Hal_IntIsrMap_ASCLIN0TX_ISR =
+{
+  /* .Dummy         = */ (uint32)0
+};
+
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore0 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore0 =
 {
-  /* .Level          = */ 255,
+  /* .Level          = */ 100,
   /* .Source         = */ 0x300uL,
   /* .CoreAssignment = */ 0
 };
@@ -134,7 +160,7 @@ CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore1 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore1 =
 {
-  /* .Level          = */ 255,
+  /* .Level          = */ 100,
   /* .Source         = */ 0x308uL,
   /* .CoreAssignment = */ 2
 };
@@ -173,7 +199,7 @@ CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore2 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore2 =
 {
-  /* .Level          = */ 255,
+  /* .Level          = */ 100,
   /* .Source         = */ 0x310uL,
   /* .CoreAssignment = */ 3
 };
@@ -212,7 +238,7 @@ CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore3 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore3 =
 {
-  /* .Level          = */ 255,
+  /* .Level          = */ 100,
   /* .Source         = */ 0x318uL,
   /* .CoreAssignment = */ 4
 };
@@ -251,7 +277,7 @@ CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore4 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore4 =
 {
-  /* .Level          = */ 255,
+  /* .Level          = */ 100,
   /* .Source         = */ 0x320uL,
   /* .CoreAssignment = */ 5
 };
@@ -290,7 +316,7 @@ CONST(Os_Hal_XSigInterruptConfigType, OS_CONST) OsCfg_Hal_XSig_XSignalIsr_OsCore
 /*! HAL ISR configuration data: CounterIsr_SystemTimer_OsCore5 */
 CONST(Os_Hal_IntIsrConfigType, OS_CONST) OsCfg_Hal_IntIsr_CounterIsr_SystemTimer_OsCore5 =
 {
-  /* .Level          = */ 255,
+  /* .Level          = */ 100,
   /* .Source         = */ 0x328uL,
   /* .CoreAssignment = */ 6
 };

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2026-05-03 14:05:52
+ *   Generation Time: 2026-05-04 12:24:32
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -66,6 +66,7 @@
 /**********************************************************************************************************************
  *  Additional configured User includes
  *********************************************************************************************************************/
+#include "IfxSrc_reg.h" 
 #include "Det.h" 
 #include "Rte_Main.h" 
 #include "BswM.h" 
@@ -331,6 +332,11 @@ FUNC(void, ECUM_CODE) EcuM_AL_SetProgrammableInterrupts(void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_SetProgrammableInterrupts>      DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
   /* Add implementation of EcuM_AL_SetProgrammableInterrupts() */
+
+
+  IrqAsclin_Init();
+  SRC_ASCLIN0TX.B.SRE = 1;
+  SRC_ASCLIN0ERR.B.SRE = 1;
 
   return;
 /**********************************************************************************************************************
