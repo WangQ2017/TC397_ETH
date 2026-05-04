@@ -15,8 +15,8 @@
 #endif
 
 /* 全局中断控制宏 */
-#define DUALPRINT_ENTER_CRITICAL_SECTION()      SuspendAllInterrupts()
-#define DUALPRINT_EXIT_CRITICAL_SECTION()       ResumeAllInterrupts()
+#define DUALPRINT_ENTER_CRITICAL_SECTION()      //SuspendOSInterrupts()
+#define DUALPRINT_EXIT_CRITICAL_SECTION()       //ResumeOSInterrupts()
 
 /******************************************************************************
  * 环形缓冲区数据结构
@@ -585,18 +585,21 @@ static void DualPrint_SendUartData(void)
     DUALPRINT_EXIT_CRITICAL_SECTION();
     
     /* 调用UART驱动发送（立即发送，不等待回调）*/
-    ret = Uart_Write(0u, txBuffer, sendLength);
-    
-    if(ret == UART_E_OK)
+    if (Uart_GetStatus(0u) == UART_IDLE)
     {
-        /* 发送成功，更新统计 */
-        DUALPRINT_ENTER_CRITICAL_SECTION();
-        UartChannel.totalSentBytes += sendLength;
-        DUALPRINT_EXIT_CRITICAL_SECTION();
-    }
-    else
-    {
-        /* 发送失败，数据已丢失（实际项目中需要重试机制）*/
+        ret = Uart_Write(0u, txBuffer, sendLength);
+        
+        if(ret == UART_E_OK)
+        {
+            /* 发送成功，更新统计 */
+            DUALPRINT_ENTER_CRITICAL_SECTION();
+            UartChannel.totalSentBytes += sendLength;
+            DUALPRINT_EXIT_CRITICAL_SECTION();
+        }
+        else
+        {
+            /* 发送失败，数据已丢失（实际项目中需要重试机制）*/
+        }
     }
 }
 

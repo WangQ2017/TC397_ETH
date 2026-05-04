@@ -29,11 +29,11 @@ typedef enum
 /******************************************************************************
  * 模块配置参数
  ******************************************************************************/
-#define UART_PRINT_RING_BUFFER_SIZE     1024u
+#define UART_PRINT_RING_BUFFER_SIZE     2048u
 #define ETH_PRINT_RING_BUFFER_SIZE      2048u
 #define PRINT_MAX_FORMAT_BUFFER         512u    /* 增加缓冲区大小以容纳时间戳 */
 #define ETH_MAX_CHUNK_SIZE              1500u
-#define UART_MAX_CHUNK_SIZE             128u
+#define UART_MAX_CHUNK_SIZE             512u
 
 #define PRINT_AUTO_NEWLINE_ENABLE       STD_ON  /* 自动添加换行符 */
 #define PRINT_TIMESTAMP_ENABLE          STD_OFF  /* 启用StbM时间戳 */

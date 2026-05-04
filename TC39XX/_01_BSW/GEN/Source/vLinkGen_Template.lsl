@@ -3409,14 +3409,12 @@ section_layout mpe:vtc:linear
         select "[.]bss.OS_STACK_OSCORE0_KERNEL_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_SHUTDOWN_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_STARTUP_VAR_NOINIT";
-        select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO20_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO30_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO4294967295_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO48_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSCORE0_TASK_PRIO55_VAR_NOINIT";
         select "[.]bss.OS_STACK_OSTASK_ASW_OSCORE0_VAR_NOINIT";
-        select "[.]bss.OS_STACK_OSTASK_BSW_5MS_CORE0_VAR_NOINIT";
       }
     }
     group OS_STACKS_CORE0_VAR_NOINIT_PAD (align = 1)
@@ -3603,6 +3601,8 @@ section_layout mpe:vtc:linear
     {
       section "OS_USER_CODE_SEC" (fill, blocksize = 2, attributes = rx)
       {
+        select "[.]text.OS_ASCLIN0ERR_ISR_CODE";
+        select "[.]text.OS_ASCLIN0TX_ISR_CODE";
         select "[.]text.OS_Default_Init_Task_CODE";
         select "[.]text.OS_Default_Init_Task_Core1_CODE";
         select "[.]text.OS_Default_Init_Task_Core1_Trusted_CODE";
@@ -3616,7 +3616,6 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_Default_Init_Task_Core6_Trusted_CODE";
         select "[.]text.OS_Default_Init_Task_Trusted_CODE";
         select "[.]text.OS_ERRORHOOK_CODE";
-        select "[.]text.OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore0_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore1_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore2_CODE";
@@ -3625,8 +3624,6 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_OsTask_Asw_OsCore5_CODE";
         select "[.]text.OS_OsTask_Bsw_10ms_Core0_CODE";
         select "[.]text.OS_OsTask_Bsw_1ms_Core0_CODE";
-        select "[.]text.OS_OsTask_Bsw_20ms_Core0_CODE";
-        select "[.]text.OS_OsTask_Bsw_5ms_Core0_CODE";
         select "[.]text.OS_OsTask_Bsw_OsCore1_CODE";
         select "[.]text.OS_OsTask_Bsw_OsCore2_CODE";
         select "[.]text.OS_OsTask_Bsw_OsCore3_CODE";

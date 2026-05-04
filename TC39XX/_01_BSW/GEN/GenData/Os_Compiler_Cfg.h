@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Compiler_Cfg.h
- *   Generation Time: 2026-05-03 19:48:58
+ *   Generation Time: 2026-05-04 14:14:37
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -36,6 +36,8 @@
  *  OS USER CALLOUT CODE SECTIONS
  *********************************************************************************************************************/
 
+# define OS_ASCLIN0ERR_ISR_CODE
+# define OS_ASCLIN0TX_ISR_CODE
 # define OS_DEFAULT_INIT_TASK_CODE
 # define OS_DEFAULT_INIT_TASK_CORE1_CODE
 # define OS_DEFAULT_INIT_TASK_CORE1_TRUSTED_CODE

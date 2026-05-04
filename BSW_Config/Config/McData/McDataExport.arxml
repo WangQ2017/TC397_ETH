@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-3-1.xsd">
   <AR-PACKAGES>
     <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
       <SHORT-NAME>MICROSAR</SHORT-NAME>
@@ -43,99 +43,53 @@
                         </EXCLUSIVE-AREA>
                       </EXCLUSIVE-AREAS>
                       <ENTITYS>
-                        <BSW-SCHEDULABLE-ENTITY UUID="b924165a-8178-4edf-a53f-499fcae3dcba">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore5</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM_MainFunction_OsApplication_OsCore5</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                        <BSW-SCHEDULABLE-ENTITY UUID="209f9c43-1b6e-4a31-8d28-fc0f42dcca18">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore4</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM_MainFunction_OsApplication_OsCore4</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                        <BSW-SCHEDULABLE-ENTITY UUID="e65ae939-630f-42c9-b258-006f247f81db">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore3</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM_MainFunction_OsApplication_OsCore3</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                        <BSW-SCHEDULABLE-ENTITY UUID="a887f427-6094-43f3-ab41-183748db62a5">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore1</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM_MainFunction_OsApplication_OsCore1</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                        <BSW-SCHEDULABLE-ENTITY UUID="76df3624-0a38-4b44-9980-e3bea69c5744">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore2</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM_MainFunction_OsApplication_OsCore2</IMPLEMENTED-ENTRY-REF>
-                        </BSW-SCHEDULABLE-ENTITY>
-                        <BSW-SCHEDULABLE-ENTITY UUID="5897a815-61f5-4ac5-ab35-17eb767d95a5">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore0</SHORT-NAME>
-                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM_MainFunction_OsApplication_OsCore0</IMPLEMENTED-ENTRY-REF>
+                        <BSW-SCHEDULABLE-ENTITY UUID="e56a21fe-2547-49e4-add3-5848b41578f6">
+                          <SHORT-NAME>BswM_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM_MainFunction</IMPLEMENTED-ENTRY-REF>
                         </BSW-SCHEDULABLE-ENTITY>
                       </ENTITYS>
                       <EVENTS>
-                        <BSW-TIMING-EVENT UUID="3052f8e3-0fa8-49fe-afb6-d243c49df492">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore5TimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction_OsApplication_OsCore5</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                        <BSW-TIMING-EVENT UUID="bfeb4a0a-0cd9-4399-aeca-cbabad205d71">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore4TimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction_OsApplication_OsCore4</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                        <BSW-TIMING-EVENT UUID="ca75d63c-7081-490a-9073-c6795bac584b">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore3TimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction_OsApplication_OsCore3</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                        <BSW-TIMING-EVENT UUID="2dc678bc-2590-4ad8-9eed-3a8cb5fe5da7">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore1TimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction_OsApplication_OsCore1</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                        <BSW-TIMING-EVENT UUID="8be0f5dc-ae81-4f50-980c-62a9c32c5ed3">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore2TimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction_OsApplication_OsCore2</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.01</PERIOD>
-                        </BSW-TIMING-EVENT>
-                        <BSW-TIMING-EVENT UUID="215c3c22-7b0a-4aa5-b838-b7fe7d622765">
-                          <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore0TimingEvent0</SHORT-NAME>
-                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction_OsApplication_OsCore0</STARTS-ON-EVENT-REF>
+                        <BSW-TIMING-EVENT UUID="333d61b7-fb9e-42ba-a72e-26b84b545177">
+                          <SHORT-NAME>BswM_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/BswM_ib_bswmd/BswModuleDescriptions/BswM/BswMBehavior/BswM_MainFunction</STARTS-ON-EVENT-REF>
                           <PERIOD>0.01</PERIOD>
                         </BSW-TIMING-EVENT>
                       </EVENTS>
                     </BSW-INTERNAL-BEHAVIOR>
                   </INTERNAL-BEHAVIORS>
                 </BSW-MODULE-DESCRIPTION>
-                <BSW-MODULE-ENTRY UUID="fd7c6827-96d9-4d04-a152-53a232392917">
-                  <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore0</SHORT-NAME>
-                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
-                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
-                </BSW-MODULE-ENTRY>
-                <BSW-MODULE-ENTRY UUID="5cc3ce66-6bb4-452a-a033-e5bbc8940a1e">
-                  <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore1</SHORT-NAME>
-                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
-                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
-                </BSW-MODULE-ENTRY>
-                <BSW-MODULE-ENTRY UUID="2b990986-5a6f-4f25-9ea4-58ed5ceeff79">
-                  <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore5</SHORT-NAME>
-                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
-                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
-                </BSW-MODULE-ENTRY>
-                <BSW-MODULE-ENTRY UUID="23759fb7-c1fe-490c-aa73-062648e3fca9">
-                  <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore4</SHORT-NAME>
-                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
-                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
-                </BSW-MODULE-ENTRY>
-                <BSW-MODULE-ENTRY UUID="87f7a7a8-430d-4597-83a3-875cd2c577e5">
-                  <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore3</SHORT-NAME>
-                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
-                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
-                </BSW-MODULE-ENTRY>
-                <BSW-MODULE-ENTRY UUID="2cdd643e-8588-4df6-886a-7fb16d67d679">
-                  <SHORT-NAME>BswM_MainFunction_OsApplication_OsCore2</SHORT-NAME>
+                <BSW-MODULE-ENTRY UUID="04f21f0f-366b-4116-aa99-1d8cc91fa61b">
+                  <SHORT-NAME>BswM_MainFunction</SHORT-NAME>
                   <CALL-TYPE>SCHEDULED</CALL-TYPE>
                   <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
                 </BSW-MODULE-ENTRY>
               </ELEMENTS>
             </AR-PACKAGE>
             <AR-PACKAGE UUID="31ddefc9-a91a-4142-9351-0b6ad81891b6">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="fd95b105-f626-483c-bbb2-d69a8ae1e6ab">
+          <SHORT-NAME>ComM_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="3c0c4c95-65b1-4f35-b88e-35060dabdc5c">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="defe7b4c-aba3-4586-a41e-9de064e0d247">
+          <SHORT-NAME>Com_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="d4dda6e1-5961-4c9a-aa0a-026ecc03be7f">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="f3451feb-a4f2-493d-868b-56517fbcc1bd">
+          <SHORT-NAME>DoIP_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="e730e5d2-8ee3-4d80-b72f-ad801d14b062">
               <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
           </AR-PACKAGES>
@@ -226,6 +180,70 @@
               </ELEMENTS>
             </AR-PACKAGE>
             <AR-PACKAGE UUID="b8739c58-ab83-4286-b700-f491d277931b">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="79da30c2-bbbc-42eb-9879-899f9b8cf29a">
+          <SHORT-NAME>LdCom_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="eb4a6d56-0691-4a47-9ed6-33b85f17b30f">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="8ae1d0f6-2434-4531-afbf-966e17626030">
+          <SHORT-NAME>Nm_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="483ba859-e270-4f62-a256-35a5ea74ff22">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="1edd2677-acb5-4f7a-8c54-65842eb2eefa">
+          <SHORT-NAME>NvM_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="57eb789f-1f73-48bf-9cf1-8f3484da8863">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="3eca0300-0a00-4f9b-bc86-51a7b2286a57">
+          <SHORT-NAME>PduR_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="056ea3e3-f2f8-4dcd-a948-3cb63e48cb44">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="c030798d-202a-494a-b5b1-6507f1c35a5f">
+          <SHORT-NAME>Sd_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="c1ebf2e7-4800-4c71-9b89-b09cf3bf1a0f">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="2d646fe9-4225-4d8b-a4eb-d8a7d49731b0">
+          <SHORT-NAME>SoAd_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="ae615aae-dc77-4b41-a8be-d1b926729530">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="a79b6c60-8bc8-4c65-b9b8-27feb22be995">
+          <SHORT-NAME>StbM_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="f8763420-4c85-41bd-869f-7ff8e80146fc">
+              <SHORT-NAME>XcpEvents</SHORT-NAME>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="2dc9b0dd-7edb-4c13-8074-32148f03ae3b">
+          <SHORT-NAME>UdpNm_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="86c3590f-73d5-41e0-9ef6-a142a430833b">
               <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
           </AR-PACKAGES>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Lcfg.h
- *   Generation Time: 2026-05-03 19:48:58
+ *   Generation Time: 2026-05-04 14:14:37
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -445,6 +445,30 @@ extern FUNC(void, OS_OSTASK_INIT_OSCORE4_CODE) Os_Task_OsTask_Init_OsCore4(void)
 extern FUNC(void, OS_OSTASK_INIT_OSCORE5_CODE) Os_Task_OsTask_Init_OsCore5(void);
 
 # define OS_STOP_SEC_OsTask_Init_OsCore5_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_ASCLIN0ERR_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  ASCLIN0ERR_ISR()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_ASCLIN0ERR_ISR_CODE) Os_Isr_ASCLIN0ERR_ISR(void);
+
+# define OS_STOP_SEC_ASCLIN0ERR_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_ASCLIN0TX_ISR_CODE
+# include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ *  ASCLIN0TX_ISR()
+ *********************************************************************************************************************/
+extern FUNC(void, OS_ASCLIN0TX_ISR_CODE) Os_Isr_ASCLIN0TX_ISR(void);
+
+# define OS_STOP_SEC_ASCLIN0TX_ISR_CODE
 # include "Os_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

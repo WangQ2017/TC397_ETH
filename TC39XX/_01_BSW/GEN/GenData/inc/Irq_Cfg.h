@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 6.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2026-05-01, 16:31:31      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2026-05-04, 15:21:15      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b170330-0431        !!!IGNORE-LINE!!!                   ** 
 **                                                                            **
@@ -2708,7 +2708,7 @@ Container : IrqSTMinterruptConfiguration
 Container : IrqAsclin interruptConfiguration
 */
 /* Asclin Tx interrupt Category Setting*/
-#define IRQ_ASCLIN0_TX_CAT            (IRQ_CAT1)
+#define IRQ_ASCLIN0_TX_CAT            (IRQ_CAT2)
 #define IRQ_ASCLIN10_TX_CAT            (IRQ_CAT1)
 #define IRQ_ASCLIN11_TX_CAT            (IRQ_CAT1)
 #define IRQ_ASCLIN12_TX_CAT            (IRQ_CAT1)
@@ -2864,7 +2864,7 @@ Container : IrqAsclin interruptConfiguration
 #define IRQ_ASCLIN9_RX_TOS            (IRQ_TOS_CPU0)
 
 /* Asclin Err interrupt Category Setting*/
-#define IRQ_ASCLIN0_ERR_CAT           (IRQ_CAT1)
+#define IRQ_ASCLIN0_ERR_CAT           (IRQ_CAT2)
 #define IRQ_ASCLIN10_ERR_CAT           (IRQ_CAT1)
 #define IRQ_ASCLIN11_ERR_CAT           (IRQ_CAT1)
 #define IRQ_ASCLIN12_ERR_CAT           (IRQ_CAT1)
@@ -3431,9 +3431,9 @@ Container : I2C interrupt Configuration
 #define IRQ_FLEXRAY0_EXIST          (STD_OFF)
 #define IRQ_FLEXRAY1_EXIST          (STD_OFF)
 
-#define IRQ_DMU_EXIST              (STD_ON)
-#define IRQ_DMU_HOST_EXIST          (STD_ON)
-#define IRQ_DMU_FSI_EXIST          (STD_ON)
+#define IRQ_DMU_EXIST              (STD_OFF)
+#define IRQ_DMU_HOST_EXIST          (STD_OFF)
+#define IRQ_DMU_FSI_EXIST          (STD_OFF)
 
 #define IRQ_SCU_EXIST               (STD_OFF)
 

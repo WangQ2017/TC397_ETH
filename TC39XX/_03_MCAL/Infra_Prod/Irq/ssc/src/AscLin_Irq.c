@@ -1,6 +1,6 @@
 /*******************************************************************************
 **                                                                            **
-** Copyright (C) Infineon Technologies (2019)                                 **
+** Copyright (C) Infineon Technologies (2020)                                 **
 **                                                                            **
 ** All rights reserved.                                                       **
 **                                                                            **
@@ -10,49 +10,68 @@
 **                                                                            **
 ********************************************************************************
 **                                                                            **
-**  FILENAME  : Port_PBcfg.h                                                  **
+**  FILENAME     : Irq.c                                                      **
 **                                                                            **
-**  VERSION   : 1.30.0_7.0.0                                                  **
+**  VERSION      : 6.0.0                                                      **
 **                                                                            **
-**  DATE, TIME: 2026-05-04, 15:21:14           !!!IGNORE-LINE !!!             **
+**  DATE         : 2020-07-02                                                 **
 **                                                                            **
-**  GENERATOR : Build b170330-0431              !!!IGNORE-LINE !!!            **
+**  VARIANT      : Variant PC                                                 **
 **                                                                            **
-**  BSW MODULE DECRIPTION : Port.bmd                                          **
+**  PLATFORM     : Infineon AURIX2G                                           **
 **                                                                            **
-**  VARIANT   : Variant PB                                                    **
+**  AUTHOR       : DL-AUTOSAR-Engineering                                     **
 **                                                                            **
-**  PLATFORM  : Infineon AURIX2G                                              **
+**  VENDOR       : Infineon Technologies                                      **
 **                                                                            **
-**  AUTHOR    : DL-AUTOSAR-Engineering                                        **
+**  DESCRIPTION  : Irq Driver source file                                     **
 **                                                                            **
-**  VENDOR    : Infineon Technologies                                         **
+**  SPECIFICATION(S) : na                                                     **
 **                                                                            **
-**  DESCRIPTION  : Port configuration generated out of ECUC file               **
-**                                                                            **
-**  SPECIFICATION(S) : Specification of Port Driver, AUTOSAR Release 4.2.2     **
-**                                                                            **
-**  MAY BE CHANGED BY USER : no                                               **
+**  MAY BE CHANGED BY USER : yes                                              **
 **                                                                            **
 *******************************************************************************/
-#ifndef PORT_PBCFG_H
-#define PORT_PBCFG_H
 
 /*******************************************************************************
 **                      Includes                                              **
 *******************************************************************************/
-/*******************************************************************************
-**                      Global Const Declaration                              **
-*******************************************************************************/
-#define PORT_START_SEC_CONFIG_DATA_ASIL_B_GLOBAL_UNSPECIFIED
-/*MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header usage as per Autosar
-guideline.*/
-#include "Port_MemMap.h"
-/* Extern declaration of Port Config Root */
-extern const Port_ConfigType Port_Config;
 
-#define PORT_STOP_SEC_CONFIG_DATA_ASIL_B_GLOBAL_UNSPECIFIED
-/*MISRA2012_RULE_4_10_JUSTIFICATION: Memmap header usage as per Autosar
-guideline.*/
-#include "Port_MemMap.h"
-#endif  /* PORT_PBCFG_H */
+/* Inclusion of Tasking sfr file */
+#include "IfxSrc_reg.h"
+
+/*Include Irq Module header file*/
+#include "Os.h"
+#include "Irq.h"
+
+#include "Uart.h"
+
+
+#if IRQ_ASCLIN0_TX_TOS != IRQ_TOS_DMA
+#if((IRQ_ASCLIN0_TX_PRIO > 0) || (IRQ_ASCLIN0_TX_CAT == IRQ_CAT2))
+#if((IRQ_ASCLIN0_TX_PRIO > 0) && (IRQ_ASCLIN0_TX_CAT == IRQ_CAT1))
+IFX_INTERRUPT(ASCLIN0TX_ISR, 0, IRQ_ASCLIN0_TX_PRIO)
+#elif IRQ_ASCLIN0_TX_CAT == IRQ_CAT2
+ISR(ASCLIN0TX_ISR)
+#endif
+{
+    // ENABLE();
+    /* call uart Interrupt function */
+    Uart_IsrTransmit(0);
+}
+#endif
+#endif
+
+#if IRQ_ASCLIN0_ERR_TOS != IRQ_TOS_DMA
+#if((IRQ_ASCLIN0_ERR_PRIO > 0) || (IRQ_ASCLIN0_ERR_CAT == IRQ_CAT2))
+#if((IRQ_ASCLIN0_ERR_PRIO > 0) && (IRQ_ASCLIN0_ERR_CAT == IRQ_CAT1))
+IFX_INTERRUPT(ASCLIN0ERR_ISR, 0, IRQ_ASCLIN0_ERR_PRIO)
+#elif IRQ_ASCLIN0_ERR_CAT == IRQ_CAT2
+ISR(ASCLIN0ERR_ISR)
+#endif
+{
+    // ENABLE();
+    /* call uart Interrupt function */
+    Uart_IsrError(0);
+}
+#endif
+#endif

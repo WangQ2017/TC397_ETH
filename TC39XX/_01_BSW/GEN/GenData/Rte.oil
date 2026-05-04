@@ -280,7 +280,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore5;
    }:"@RO@@NR@";
 
-   ALARM Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_5ms {
+   ALARM Rte_Al_TE_Uart_Uart_MainFunction_Read {
       COUNTER = SystemTimer_OsCore0;
       ACTION = ACTIVATETASK
       {
@@ -540,7 +540,7 @@
       TASK = OsTask_Bsw_10ms_Core0;
       ALARM = Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms;
       TASK = OsTask_Bsw_1ms_Core0;
-      ALARM = Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_5ms;
+      ALARM = Rte_Al_TE_Uart_Uart_MainFunction_Read;
       TASK = OsTask_Init_OsCore0;
       CORE = 0;
   };

@@ -164,7 +164,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Uart/UartConfigSet/UartChannel/UartTxChannelMode</DEFINITION-REF>
-                      <VALUE>POLLING</VALUE>
+                      <VALUE>INTERRUPT</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Uart/UartConfigSet/UartChannel/UartRxChannelMode</DEFINITION-REF>

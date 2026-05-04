@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2026-05-03 19:48:58
+ *   Generation Time: 2026-05-04 14:14:37
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -109,6 +109,8 @@
 #define OsTask_Init_OsCore5 OsTask_Init_OsCore5
 
 /* Category 2 ISR identifiers. */
+#define ASCLIN0ERR_ISR ASCLIN0ERR_ISR
+#define ASCLIN0TX_ISR ASCLIN0TX_ISR
 #define CounterIsr_SystemTimer_OsCore0 CounterIsr_SystemTimer_OsCore0
 #define CounterIsr_SystemTimer_OsCore1 CounterIsr_SystemTimer_OsCore1
 #define CounterIsr_SystemTimer_OsCore2 CounterIsr_SystemTimer_OsCore2
@@ -125,7 +127,6 @@
 /* Alarm identifiers. */
 #define Rte_Al_TE2_EcuM_EcuM_MainFunction Rte_Al_TE2_EcuM_EcuM_MainFunction
 #define Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms
-#define Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_5ms Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_5ms
 #define Rte_Al_TE3_EcuM_EcuM_MainFunction Rte_Al_TE3_EcuM_EcuM_MainFunction
 #define Rte_Al_TE4_EcuM_EcuM_MainFunction Rte_Al_TE4_EcuM_EcuM_MainFunction
 #define Rte_Al_TE5_EcuM_EcuM_MainFunction Rte_Al_TE5_EcuM_EcuM_MainFunction
@@ -139,6 +140,7 @@
 #define Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms
 #define Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms
 #define Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms
+#define Rte_Al_TE_Uart_Uart_MainFunction_Read Rte_Al_TE_Uart_Uart_MainFunction_Read
 
 /* Counter identifiers. */
 #define SystemTimer_OsCore0 SystemTimer_OsCore0
@@ -256,19 +258,21 @@ typedef enum
 /*! Category 2 ISR identifiers. */
 typedef enum
 {
-  CounterIsr_SystemTimer_OsCore0 = 0,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CounterIsr_SystemTimer_OsCore1 = 1,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CounterIsr_SystemTimer_OsCore2 = 2,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CounterIsr_SystemTimer_OsCore3 = 3,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CounterIsr_SystemTimer_OsCore4 = 4,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  CounterIsr_SystemTimer_OsCore5 = 5,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore0 = 6,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore1 = 7,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore2 = 8,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore3 = 9,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore4 = 10,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  XSignalIsr_OsCore5 = 11,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  OS_ISRID_COUNT = 12,
+  ASCLIN0ERR_ISR = 0,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  ASCLIN0TX_ISR = 1,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer_OsCore0 = 2,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer_OsCore1 = 3,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer_OsCore2 = 4,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer_OsCore3 = 5,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer_OsCore4 = 6,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  CounterIsr_SystemTimer_OsCore5 = 7,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore0 = 8,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore1 = 9,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore2 = 10,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore3 = 11,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore4 = 12,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  XSignalIsr_OsCore5 = 13,   /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  OS_ISRID_COUNT = 14,
   INVALID_ISR = OS_ISRID_COUNT
 } ISRType;
 
@@ -277,20 +281,20 @@ typedef enum
 {
   Rte_Al_TE2_EcuM_EcuM_MainFunction = 0,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms = 1,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE2_OsTask_Bsw_1ms_Core0_0_5ms = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE3_EcuM_EcuM_MainFunction = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE4_EcuM_EcuM_MainFunction = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE5_EcuM_EcuM_MainFunction = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE6_EcuM_EcuM_MainFunction = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core4_Cdd_Core4_Runnable10ms = 12,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms = 13,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms = 15,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE3_EcuM_EcuM_MainFunction = 2,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE4_EcuM_EcuM_MainFunction = 3,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE5_EcuM_EcuM_MainFunction = 4,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE6_EcuM_EcuM_MainFunction = 5,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms = 6,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms = 7,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms = 8,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms = 9,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms = 10,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core4_Cdd_Core4_Runnable10ms = 11,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms = 12,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms = 13,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_Uart_Uart_MainFunction_Read = 15,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   OS_ALARMID_COUNT = 16
 } AlarmType;
 

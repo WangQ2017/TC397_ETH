@@ -66,6 +66,7 @@
 /**********************************************************************************************************************
  *  Additional configured User includes
  *********************************************************************************************************************/
+#include "IfxSrc_reg.h" 
 #include "Det.h" 
 #include "Rte_Main.h" 
 #include "BswM.h" 
@@ -327,6 +328,11 @@ FUNC(void, ECUM_CODE) EcuM_AL_SetProgrammableInterrupts(void)
  * DO NOT CHANGE THIS COMMENT!           <USERBLOCK EcuM_AL_SetProgrammableInterrupts>      DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
   /* Add implementation of EcuM_AL_SetProgrammableInterrupts() */
+
+
+  IrqAsclin_Init();
+  SRC_ASCLIN0TX.B.SRE = 1;
+  SRC_ASCLIN0ERR.B.SRE = 1;
 
   return;
 /**********************************************************************************************************************
