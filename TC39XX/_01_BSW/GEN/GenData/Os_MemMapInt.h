@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_MemMapInt.h
- *   Generation Time: 2026-05-04 14:14:37
+ *   Generation Time: 2026-05-04 17:02:48
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -535,6 +535,31 @@
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 
+#ifdef OS_START_SEC_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code "OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE_OPEN
+#  error Section OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE is currently not opened and so cannot be closed.
+# endif
+# undef OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
 #ifdef OS_START_SEC_OsTask_Asw_OsCore0_CODE
 # ifdef OS_MEMMAP_SECTION_OPEN
 #  error A MemMap section is already open. Nesting is not supported.
@@ -732,6 +757,56 @@
 # undef OS_OsTask_Bsw_1ms_Core0_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
 # pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
 # undef OS_STOP_SEC_OsTask_Bsw_1ms_Core0_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_OsTask_Bsw_20ms_Core0_CODE
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_OsTask_Bsw_20ms_Core0_CODE_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code "OS_OsTask_Bsw_20ms_Core0_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_OsTask_Bsw_20ms_Core0_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_OsTask_Bsw_20ms_Core0_CODE
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_OsTask_Bsw_20ms_Core0_CODE_OPEN
+#  error Section OS_OsTask_Bsw_20ms_Core0_CODE is currently not opened and so cannot be closed.
+# endif
+# undef OS_OsTask_Bsw_20ms_Core0_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_OsTask_Bsw_20ms_Core0_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_START_SEC_OsTask_Bsw_5ms_Core0_CODE
+# ifdef OS_MEMMAP_SECTION_OPEN
+#  error A MemMap section is already open. Nesting is not supported.
+# endif
+# define OS_MEMMAP_SECTION_OPEN
+# define OS_OsTask_Bsw_5ms_Core0_CODE_OPEN
+# undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code "OS_OsTask_Bsw_5ms_Core0_CODE" /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_START_SEC_OsTask_Bsw_5ms_Core0_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
+#endif
+
+#ifdef OS_STOP_SEC_OsTask_Bsw_5ms_Core0_CODE
+# ifndef OS_MEMMAP_SECTION_OPEN
+#  error No MemMap section is currently opened.
+# endif
+# undef OS_MEMMAP_SECTION_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# ifndef OS_OsTask_Bsw_5ms_Core0_CODE_OPEN
+#  error Section OS_OsTask_Bsw_5ms_Core0_CODE is currently not opened and so cannot be closed.
+# endif
+# undef OS_OsTask_Bsw_5ms_Core0_CODE_OPEN /* PRQA S 0841 */ /* MD_MSR_Undef */
+# pragma section code restore /* PRQA S 3116 */ /* MD_MSR_Pragma */
+# undef OS_STOP_SEC_OsTask_Bsw_5ms_Core0_CODE /* PRQA S 0841 */ /* MD_MSR_Undef */
 # undef MEMMAP_ERROR /* PRQA S 0841 */ /* MD_MSR_Undef */
 #endif
 

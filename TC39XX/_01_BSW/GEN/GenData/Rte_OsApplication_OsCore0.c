@@ -54,6 +54,8 @@
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
 #include "SchM_EcuM.h"
+#include "SchM_EthTrcv_30_Tja1100.h"
+#include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Irq.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
@@ -61,8 +63,6 @@
 #include "SchM_Uart.h"
 
 #include "Rte_Hook.h"
-
-#include "Rte_Cbk.h"
 
 /* AUTOSAR 3.x compatibility */
 #if !defined (RTE_LOCAL)
@@ -107,14 +107,14 @@
  * Buffers for unqueued S/R
  *********************************************************************************************************************/
 
-#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#define RTE_START_SEC_VAR_OsApplication_OsCore0_INIT_UNSPECIFIED
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /* PRQA S 3408, 1504, 1514 L1 */ /* MD_Rte_3408, MD_MSR_Rule8.7, MD_Rte_1514 */
 VAR(BswM_ESH_RunRequest, RTE_VAR_INIT) Rte_Cdd_nm_BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest_requestedMode = 0U;
 /* PRQA L:L1 */
 
-#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#define RTE_STOP_SEC_VAR_OsApplication_OsCore0_INIT_UNSPECIFIED
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 /**********************************************************************************************************************
  * Defines for Rte_ComSendSignalProxy
@@ -141,10 +141,10 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
  * Data structures for mode management
  *********************************************************************************************************************/
 
-#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#define RTE_START_SEC_VAR_OsApplication_OsCore0_INIT_UNSPECIFIED
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_BswM_ESH_Mode_STARTUP; /* PRQA S 3408 */ /* MD_Rte_3408 */
-#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#define RTE_STOP_SEC_VAR_OsApplication_OsCore0_INIT_UNSPECIFIED
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

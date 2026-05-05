@@ -111,6 +111,12 @@
         <Splitter File=".\Config\ECUC\TC397_BSW_Mcu_Mcu_ecuc.arxml">
             <Module Name="Mcu"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Eth_Eth_ecuc.arxml">
+            <Module Name="Eth"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_EthTrcv_EthTrcv_ecuc.arxml">
+            <Module Name="EthTrcv"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
@@ -388,7 +394,7 @@
                 </Settings>
             </Settings>
             <Settings Name="com.vector.cfg.gen.core.gencore.internal.aov.AutomaticOnDemandValidationConfigurationService">
-                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAKc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQAB01jYWxMaWJ0ABEvQVVSSVgyRy9FY3Vj&#xA;RGVmc3NxAH4ACHQAA0Zsc3EAfgAMc3EAfgAIdAADQ3NtdAAJL01JQ1JPU0FSc3EAfgAIdAADTWN1&#xA;cQB+AAxzcQB+AAh0AARVYXJ0cQB+AAxzcQB+AAh0AANJcnFxAH4ADHNxAH4ACHQABUUyRVBXcQB+&#xA;ABFzcQB+AAh0AANEaW9xAH4ADHNxAH4ACHQABkNyeXB0b3QAGS9NSUNST1NBUi9DcnlwdG9fMzBf&#xA;TGliQ3ZzcQB+AAh0AAVDcnlJZnEAfgAR" Name="Data"/>
+                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAKc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQAA0NzbXQACS9NSUNST1NBUnNxAH4ACHQA&#xA;A01jdXQAES9BVVJJWDJHL0VjdWNEZWZzc3EAfgAIdAAFRTJFUFdxAH4ADHNxAH4ACHQAB01jYWxM&#xA;aWJxAH4AD3NxAH4ACHQABFVhcnRxAH4AD3NxAH4ACHQAA0lycXEAfgAPc3EAfgAIdAADRmxzcQB+&#xA;AA9zcQB+AAh0AAZDcnlwdG90ABkvTUlDUk9TQVIvQ3J5cHRvXzMwX0xpYkN2c3EAfgAIdAADRGlv&#xA;cQB+AA9zcQB+AAh0AAVDcnlJZnEAfgAM" Name="Data"/>
             </Settings>
             <Settings Name="com.vector.cfg.gui.pse.pages.generators">
                 <Settings Name="BuildVipProject"/>

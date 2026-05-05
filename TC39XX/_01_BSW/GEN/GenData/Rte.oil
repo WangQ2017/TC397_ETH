@@ -43,6 +43,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms {
@@ -58,6 +59,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms {
@@ -73,6 +75,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms {
@@ -88,6 +91,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms {
@@ -103,6 +107,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Asw_OsCore1 {
@@ -116,6 +121,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms {
@@ -130,6 +136,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Asw_OsCore2 {
@@ -143,6 +150,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_Cdd_Core2_Cdd_Core2_Runnable10ms {
@@ -157,6 +165,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Asw_OsCore3 {
@@ -170,6 +179,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms {
@@ -184,6 +194,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Asw_OsCore4 {
@@ -197,6 +208,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_Cdd_Core4_Cdd_Core4_Runnable10ms {
@@ -211,6 +223,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Asw_OsCore5 {
@@ -224,6 +237,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms {
@@ -238,6 +252,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Bsw_10ms_Core0 {
@@ -251,6 +266,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms {
@@ -265,6 +281,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Bsw_1ms_Core0 {
@@ -278,6 +295,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE_Uart_Uart_MainFunction_Read {
@@ -287,6 +305,65 @@
          TASK = OsTask_Bsw_1ms_Core0;
       }:"@ROC@";
       AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
+   }:"@RO@@NR@";
+
+   TASK OsTask_Bsw_20ms_Core0 {
+      ACTIVATION = 3:"@RO@";
+      PRIORITY = 50:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore0;
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE2_OsTask_Bsw_20ms_Core0_0_20ms {
+      COUNTER = SystemTimer_OsCore0;
+      ACTION = ACTIVATETASK
+      {
+         TASK = OsTask_Bsw_20ms_Core0;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore0;
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   TASK OsTask_Bsw_5ms_Core0 {
+      ACTIVATION = 3:"@RO@";
+      PRIORITY = 50:"@RO@";
+      SCHEDULE = FULL:"@RO@";
+// TIMING_PROTECTION = FALSE|TRUE; (AUTOSAR OS only)
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore0;
+      ACCESSING_APPLICATION = OsApplication_OsCore1;
+      ACCESSING_APPLICATION = OsApplication_OsCore2;
+      ACCESSING_APPLICATION = OsApplication_OsCore3;
+      ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = OsApplication_OsCore5;
+   }:"@RO@@NR@";
+
+   ALARM Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling {
+      COUNTER = SystemTimer_OsCore0;
+      ACTION = ACTIVATETASK
+      {
+         TASK = OsTask_Bsw_5ms_Core0;
+      }:"@ROC@";
+      AUTOSTART = FALSE:"@RO@";
+      ACCESSING_APPLICATION = OsApplication_OsCore0;
       ACCESSING_APPLICATION = OsApplication_OsCore1;
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
@@ -305,6 +382,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE2_EcuM_EcuM_MainFunction {
@@ -319,6 +397,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Bsw_OsCore2 {
@@ -332,6 +411,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE3_EcuM_EcuM_MainFunction {
@@ -346,6 +426,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Bsw_OsCore3 {
@@ -359,6 +440,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE4_EcuM_EcuM_MainFunction {
@@ -373,6 +455,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Bsw_OsCore4 {
@@ -386,6 +469,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE5_EcuM_EcuM_MainFunction {
@@ -400,6 +484,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Bsw_OsCore5 {
@@ -413,6 +498,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    ALARM Rte_Al_TE6_EcuM_EcuM_MainFunction {
@@ -427,6 +513,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Init_OsCore0 {
@@ -440,6 +527,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Init_OsCore1 {
@@ -453,6 +541,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Init_OsCore2 {
@@ -466,6 +555,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Init_OsCore3 {
@@ -479,6 +569,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Init_OsCore4 {
@@ -492,6 +583,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore5;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    TASK OsTask_Init_OsCore5 {
@@ -505,6 +597,7 @@
       ACCESSING_APPLICATION = OsApplication_OsCore2;
       ACCESSING_APPLICATION = OsApplication_OsCore3;
       ACCESSING_APPLICATION = OsApplication_OsCore4;
+      ACCESSING_APPLICATION = SystemApplication_OsCore0;
    }:"@RO@@NR@";
 
    EVENT Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms {
@@ -623,4 +716,19 @@
       ALARM = Rte_Al_TE6_EcuM_EcuM_MainFunction;
       TASK = OsTask_Init_OsCore5;
       CORE = 5;
+  };
+
+   APPLICATION SystemApplication_OsCore0 {
+      TRUSTED = TRUE;
+// Add the following four attributes according to your needs.
+// Note: They do not have a default value and are therefore necessary in the configuration.
+//      STARTUPHOOK = FALSE;
+//      SHUTDOWNHOOK = FALSE;
+//      ERRORHOOK = FALSE;
+//      HAS_RESTARTTASK = FALSE;
+      TASK = OsTask_Bsw_20ms_Core0;
+      ALARM = Rte_Al_TE2_OsTask_Bsw_20ms_Core0_0_20ms;
+      TASK = OsTask_Bsw_5ms_Core0;
+      ALARM = Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling;
+      CORE = 0;
   };

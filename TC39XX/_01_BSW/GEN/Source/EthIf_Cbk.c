@@ -54,7 +54,7 @@ void EthIf_RxIndication(
 {
 
 }
-
+ 
 void EthIf_TxConfirmation(
   uint8  CtrlIdx,
   uint8  BufIdx)

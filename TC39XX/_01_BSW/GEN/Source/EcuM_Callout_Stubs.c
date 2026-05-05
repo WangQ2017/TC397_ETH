@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2026-05-03 19:45:42
+ *   Generation Time: 2026-05-04 22:37:28
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -72,7 +72,6 @@
 #include "BswM.h" 
 #include "Mcu.h" 
 #include "Port.h" 
-#include "EthTrcv_Callout.h" 
 
 
 /**********************************************************************************************************************
@@ -258,7 +257,6 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitOne(void)
     Mcu_InitClock(0);while (MCU_PLL_LOCKED != Mcu_GetPllStatus());Mcu_DistributePllClock();
     BswM_PreInit( BswM_Config_Ptr );
     Port_Init( &Port_Config );
-    EthTrcv_PhyReset();
   }
 
 /**********************************************************************************************************************

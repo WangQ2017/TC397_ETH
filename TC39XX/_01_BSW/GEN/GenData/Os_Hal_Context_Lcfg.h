@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.h
- *   Generation Time: 2026-05-04 14:14:37
+ *   Generation Time: 2026-05-04 17:02:48
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -95,6 +95,9 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Leve
 /*! HAL dynamic ISR2 level context data: Level4 */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level4_Dyn;
 
+/*! HAL dynamic ISR2 level context data: Level5 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level5_Dyn;
+
 /*! HAL dynamic task context data: Default_Init_Task */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Default_Init_Task_Dyn;
 
@@ -117,6 +120,14 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsTask_Bsw_10ms_
 
 /*! HAL dynamic task context data: OsTask_Bsw_1ms_Core0 */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsTask_Bsw_1ms_Core0_Dyn;
+
+
+/*! HAL dynamic task context data: OsTask_Bsw_20ms_Core0 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsTask_Bsw_20ms_Core0_Dyn;
+
+
+/*! HAL dynamic task context data: OsTask_Bsw_5ms_Core0 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsTask_Bsw_5ms_Core0_Dyn;
 
 
 /*! HAL dynamic task context data: OsTask_Init_OsCore0 */
@@ -418,6 +429,9 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_ASCLIN0TX_ISR
 /*! HAL ISR2 context configuration data: CounterIsr_SystemTimer_OsCore0 */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CounterIsr_SystemTimer_OsCore0;
 
+/*! HAL ISR2 context configuration data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine;
+
 /*! HAL ISR2 context configuration data: XSignalIsr_OsCore0 */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_OsCore0;
 
@@ -438,6 +452,12 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_OsTask_Bsw_10
 
 /*! HAL task context configuration data: OsTask_Bsw_1ms_Core0 */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_OsTask_Bsw_1ms_Core0;
+
+/*! HAL task context configuration data: OsTask_Bsw_20ms_Core0 */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_OsTask_Bsw_20ms_Core0;
+
+/*! HAL task context configuration data: OsTask_Bsw_5ms_Core0 */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_OsTask_Bsw_5ms_Core0;
 
 /*! HAL task context configuration data: OsTask_Init_OsCore0 */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_OsTask_Init_OsCore0;

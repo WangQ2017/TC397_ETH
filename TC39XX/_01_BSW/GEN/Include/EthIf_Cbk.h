@@ -13,10 +13,10 @@ void EthIf_RxIndication(
         uint8 *                                   PhysAddrPtr,
         Eth_DataType*                             DataPtr,
         uint16                                    LenByte);
-
+ 
 void EthIf_TxConfirmation(
   uint8  CtrlIdx,
   uint8  BufIdx);
-
+ 
 #endif /* ETHIF_CBK_H */
 

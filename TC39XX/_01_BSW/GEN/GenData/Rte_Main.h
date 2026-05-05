@@ -46,6 +46,7 @@ FUNC(void, RTE_CODE) Rte_InitMemory_OsApplication_OsCore2(void);
 FUNC(void, RTE_CODE) Rte_InitMemory_OsApplication_OsCore3(void);
 FUNC(void, RTE_CODE) Rte_InitMemory_OsApplication_OsCore4(void);
 FUNC(void, RTE_CODE) Rte_InitMemory_OsApplication_OsCore5(void);
+FUNC(void, RTE_CODE) Rte_InitMemory_SystemApplication_OsCore0(void);
 
 # define RTE_STOP_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

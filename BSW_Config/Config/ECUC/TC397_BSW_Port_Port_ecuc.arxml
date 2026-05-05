@@ -51,7 +51,7 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Port/CommonPublishedInformation/SwPatchVersion</DEFINITION-REF>
-                  <VALUE>0</VALUE>
+                  <VALUE>1</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Port/CommonPublishedInformation/VendorId</DEFINITION-REF>

@@ -29,3 +29,4 @@ GENERATED_SOURCE_FILES       += $(GENDATA_DIR)\Rte_OsApplication_OsCore2.c
 GENERATED_SOURCE_FILES       += $(GENDATA_DIR)\Rte_OsApplication_OsCore3.c
 GENERATED_SOURCE_FILES       += $(GENDATA_DIR)\Rte_OsApplication_OsCore4.c
 GENERATED_SOURCE_FILES       += $(GENDATA_DIR)\Rte_OsApplication_OsCore5.c
+GENERATED_SOURCE_FILES       += $(GENDATA_DIR)\Rte_SystemApplication_OsCore0.c

@@ -141,6 +141,14 @@
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_2_Start
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Return
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Start
+ *  SchM_EnterHook_EthTrcv_30_Tja1100_ETHTRCV_30_TJA1100_EXCLUSIVE_AREA_SEQUENCE_Return
+ *  SchM_EnterHook_EthTrcv_30_Tja1100_ETHTRCV_30_TJA1100_EXCLUSIVE_AREA_SEQUENCE_Start
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_Return
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_Start
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DISABLE_MAC_Return
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DISABLE_MAC_Start
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_MII_Return
+ *  SchM_EnterHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_MII_Start
  *  SchM_EnterHook_McalLib_CpuEndInit_Return
  *  SchM_EnterHook_McalLib_CpuEndInit_Start
  *  SchM_EnterHook_McalLib_PeripheralEndInit_Return
@@ -167,6 +175,14 @@
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_2_Start
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Return
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_3_Start
+ *  SchM_ExitHook_EthTrcv_30_Tja1100_ETHTRCV_30_TJA1100_EXCLUSIVE_AREA_SEQUENCE_Return
+ *  SchM_ExitHook_EthTrcv_30_Tja1100_ETHTRCV_30_TJA1100_EXCLUSIVE_AREA_SEQUENCE_Start
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_Return
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DATA_Start
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DISABLE_MAC_Return
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_DISABLE_MAC_Start
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_MII_Return
+ *  SchM_ExitHook_Eth_30_Tc3xx_ETH_30_TC3XX_EXCLUSIVE_AREA_MII_Start
  *  SchM_ExitHook_McalLib_CpuEndInit_Return
  *  SchM_ExitHook_McalLib_CpuEndInit_Start
  *  SchM_ExitHook_McalLib_PeripheralEndInit_Return
@@ -183,6 +199,12 @@
  *  SchM_Schedulable_BswM_BswM_MainFunction_Start
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Return
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Start
+ *  SchM_Schedulable_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling_Return
+ *  SchM_Schedulable_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling_Start
+ *  SchM_Schedulable_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction_Return
+ *  SchM_Schedulable_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction_Start
+ *  SchM_Schedulable_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction_Return
+ *  SchM_Schedulable_Eth_30_Tc3xx_Eth_30_Tc3xx_MainFunction_Start
  *  SchM_Schedulable_Uart_Uart_MainFunction_Read_Return
  *  SchM_Schedulable_Uart_Uart_MainFunction_Read_Start
  *  SchM_Schedulable_Uart_Uart_MainFunction_Write_Return

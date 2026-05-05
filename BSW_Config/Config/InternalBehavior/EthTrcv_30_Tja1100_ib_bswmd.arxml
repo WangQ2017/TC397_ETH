@@ -3,6 +3,71 @@
   <AR-PACKAGES>
     <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
       <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="2250a69f-2b39-4857-a8d1-27a379370898">
+          <SHORT-NAME>EthTrcv_30_Tja1100_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="cdb031de-8e4e-48f7-8ed2-66cd11a742d1">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="4f65f6a0-fc88-42f2-bb20-6f5b100e6bab">
+                  <SHORT-NAME>EthTrcv</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv_30_Tja1100_MainFunction</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv_30_Tja1100_MainFunctionLinkHandling</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="a246868b-4e37-4c7a-816e-269873d431d3">
+                      <SHORT-NAME>EthTrcv_30_Tja1100Behavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="4188acd9-e7d2-430f-9d4e-57f79fe7ab1b">
+                          <SHORT-NAME>ETHTRCV_30_TJA1100_EXCLUSIVE_AREA_SEQUENCE</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="ef61749d-1dc1-4b36-836b-4a66561d346b">
+                          <SHORT-NAME>EthTrcv_30_Tja1100_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv_30_Tja1100_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="26f2a297-b2ad-4896-b741-a0ddad3b7b35">
+                          <SHORT-NAME>EthTrcv_30_Tja1100_MainFunctionLinkHandling</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv_30_Tja1100_MainFunctionLinkHandling</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="e2b7cbbe-cd91-4aae-893b-3f168088ed73">
+                          <SHORT-NAME>EthTrcv_30_Tja1100_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv/EthTrcv_30_Tja1100Behavior/EthTrcv_30_Tja1100_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.02</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="37bdf499-29ee-42eb-af44-9effef36de54">
+                          <SHORT-NAME>EthTrcv_30_Tja1100_MainFunctionLinkHandlingTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EthTrcv_30_Tja1100_ib_bswmd/BswModuleDescriptions/EthTrcv/EthTrcv_30_Tja1100Behavior/EthTrcv_30_Tja1100_MainFunctionLinkHandling</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.005</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="b82b950e-b1f3-4151-b337-ee7f5fba0da2">
+                  <SHORT-NAME>EthTrcv_30_Tja1100_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="f2ae399b-1d64-4cd7-8612-72e96b1653f3">
+                  <SHORT-NAME>EthTrcv_30_Tja1100_MainFunctionLinkHandling</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
     </AR-PACKAGE>
   </AR-PACKAGES>
 </AUTOSAR>

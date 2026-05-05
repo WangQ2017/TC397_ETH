@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Stack_Lcfg.h
- *   Generation Time: 2026-05-04 14:14:37
+ *   Generation Time: 2026-05-04 17:02:48
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -91,7 +91,7 @@ extern OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Init_Dyn, OS_CFG_SIZE_OSCORE0_INIT_S
 # include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /* ISR core global stack: OsCore0_Isr_Core */
-/* User: [ASCLIN0ERR_ISR, ASCLIN0TX_ISR, CounterIsr_SystemTimer_OsCore0, XSignalIsr_OsCore0] */
+/* User: [ASCLIN0ERR_ISR, ASCLIN0TX_ISR, CounterIsr_SystemTimer_OsCore0, EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine, XSignalIsr_OsCore0] */
 extern OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Isr_Core_Dyn, OS_CFG_SIZE_OSCORE0_ISR_CORE_STACK);
 
 # define OS_STOP_SEC_STACK_OSCORE0_ISR_CORE_VAR_NOINIT_UNSPECIFIED
@@ -168,7 +168,7 @@ extern OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio48_Dyn, OS_CFG_SIZE_OSCORE0
 # include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 /* Shared Task stack: OsCore0_Task_Prio50 */
-/* User: [Default_Init_Task_Trusted, OsTask_Bsw_1ms_Core0] */
+/* User: [Default_Init_Task_Trusted, OsTask_Bsw_1ms_Core0, OsTask_Bsw_20ms_Core0, OsTask_Bsw_5ms_Core0] */
 extern OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio50_Dyn, OS_CFG_SIZE_OSCORE0_TASK_PRIO50_STACK);
 
 # define OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO50_VAR_NOINIT_UNSPECIFIED

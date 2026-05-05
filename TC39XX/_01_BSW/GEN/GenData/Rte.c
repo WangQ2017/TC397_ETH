@@ -54,6 +54,8 @@
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
 #include "SchM_EcuM.h"
+#include "SchM_EthTrcv_30_Tja1100.h"
+#include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Irq.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"
@@ -118,7 +120,7 @@ volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_StartTiming_InitState = RTE_S
 #define RTE_START_SEC_VAR_GLOBALSHARED_NOCACHE_ZERO_INIT_8BIT
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_InitState_1 = RTE_STATE_UNINIT; /* PRQA S 3408 */ /* MD_Rte_3408 */
+volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_InitState_0 = RTE_STATE_UNINIT; /* PRQA S 3408 */ /* MD_Rte_3408 */
 
 #define RTE_STOP_SEC_VAR_GLOBALSHARED_NOCACHE_ZERO_INIT_8BIT
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -354,17 +356,19 @@ FUNC(void, RTE_CODE) SchM_Init(void)
   if (id == OS_CORE_ID_0) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
     /* activate the alarms used for TimingEvents */
+    (void)SetRelAlarm(Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_20ms_Core0_0_20ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(20)); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Uart_Uart_MainFunction_Read, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(10)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
-    Rte_InitState = RTE_STATE_SCHM_INIT;
+    Rte_InitState_0 = RTE_STATE_SCHM_INIT;
   }
   if (id == OS_CORE_ID_1) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
     /* activate the alarms used for TimingEvents */
     (void)SetRelAlarm(Rte_Al_TE2_EcuM_EcuM_MainFunction, RTE_MSEC_SystemTimer_OsCore1(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore1(10)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
-    Rte_InitState_1 = RTE_STATE_SCHM_INIT;
+    Rte_InitState = RTE_STATE_SCHM_INIT;
   }
   if (id == OS_CORE_ID_2) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
@@ -405,6 +409,14 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
     (void)ActivateTask(OsTask_Asw_OsCore0); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)ActivateTask(OsTask_Init_OsCore0); /* PRQA S 3417 */ /* MD_Rte_Os */
 
+    Rte_InitState_0 = RTE_STATE_INIT;
+
+  }
+  if (id == OS_CORE_ID_1) /* PRQA S 1843 */ /* MD_Rte_Os */
+  {
+    /* activate the tasks */
+    (void)ActivateTask(OsTask_Init_OsCore1); /* PRQA S 3417 */ /* MD_Rte_Os */
+
     /* activate the alarms used for TimingEvents */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(1)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(20)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
@@ -418,14 +430,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
 
     Rte_StartTiming_InitState = RTE_STATE_INIT;
     Rte_InitState = RTE_STATE_INIT;
-
-  }
-  if (id == OS_CORE_ID_1) /* PRQA S 1843 */ /* MD_Rte_Os */
-  {
-    /* activate the tasks */
-    (void)ActivateTask(OsTask_Init_OsCore1); /* PRQA S 3417 */ /* MD_Rte_Os */
-
-    Rte_InitState_1 = RTE_STATE_INIT;
 
   }
   if (id == OS_CORE_ID_2) /* PRQA S 1843 */ /* MD_Rte_Os */
@@ -468,6 +472,11 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
   uint32 id = GetCoreID();
   if (id == OS_CORE_ID_0) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
+    Rte_InitState_0 = RTE_STATE_SCHM_INIT;
+
+  }
+  if (id == OS_CORE_ID_1) /* PRQA S 1843 */ /* MD_Rte_Os */
+  {
     Rte_StartTiming_InitState = RTE_STATE_UNINIT;
     /* deactivate alarms */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms); /* PRQA S 3417 */ /* MD_Rte_Os */
@@ -481,11 +490,6 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     Rte_InitState = RTE_STATE_SCHM_INIT;
-
-  }
-  if (id == OS_CORE_ID_1) /* PRQA S 1843 */ /* MD_Rte_Os */
-  {
-    Rte_InitState_1 = RTE_STATE_SCHM_INIT;
 
   }
   if (id == OS_CORE_ID_2) /* PRQA S 1843 */ /* MD_Rte_Os */
@@ -519,15 +523,17 @@ FUNC(void, RTE_CODE) SchM_Deinit(void)
     /* deactivate alarms */
     (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_10ms_Core0_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Uart_Uart_MainFunction_Read); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE2_OsTask_Bsw_20ms_Core0_0_20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling); /* PRQA S 3417 */ /* MD_Rte_Os */
 
-    Rte_InitState = RTE_STATE_UNINIT;
+    Rte_InitState_0 = RTE_STATE_UNINIT;
   }
   if (id == OS_CORE_ID_1) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
     /* deactivate alarms */
     (void)CancelAlarm(Rte_Al_TE2_EcuM_EcuM_MainFunction); /* PRQA S 3417 */ /* MD_Rte_Os */
 
-    Rte_InitState_1 = RTE_STATE_UNINIT;
+    Rte_InitState = RTE_STATE_UNINIT;
   }
   if (id == OS_CORE_ID_2) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
@@ -565,13 +571,14 @@ FUNC(void, RTE_CODE) Rte_InitMemory(void)
   id = GetCoreID();
   if (id == OS_CORE_ID_0) /* PRQA S 1843 */ /* MD_Rte_Os */
   {
-    Rte_InitState = RTE_STATE_UNINIT;
-    Rte_StartTiming_InitState = RTE_STATE_UNINIT;
+    Rte_InitState_0 = RTE_STATE_UNINIT;
     Rte_InitMemory_OsApplication_OsCore0();
+    Rte_InitMemory_SystemApplication_OsCore0();
   }
   else if (id == OS_CORE_ID_1) /* PRQA S 2004, 1843 */ /* MD_MSR_EmptyClause, MD_Rte_Os */
   {
-    Rte_InitState_1 = RTE_STATE_UNINIT;
+    Rte_InitState = RTE_STATE_UNINIT;
+    Rte_StartTiming_InitState = RTE_STATE_UNINIT;
     Rte_InitMemory_OsApplication_OsCore1();
   }
   else if (id == OS_CORE_ID_2) /* PRQA S 2004, 1843 */ /* MD_MSR_EmptyClause, MD_Rte_Os */
@@ -594,7 +601,7 @@ FUNC(void, RTE_CODE) Rte_InitMemory(void)
     Rte_InitState_5 = RTE_STATE_UNINIT;
     Rte_InitMemory_OsApplication_OsCore5();
   }
-}
+} /* PRQA S 6050 */ /* MD_MSR_STCAL */
 
 
 /**********************************************************************************************************************

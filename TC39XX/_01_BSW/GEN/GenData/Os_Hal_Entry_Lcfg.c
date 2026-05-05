@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Entry_Lcfg.c
- *   Generation Time: 2026-05-04 15:21:20
+ *   Generation Time: 2026-05-04 17:02:48
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -162,7 +162,7 @@ Os_Hal_UnhandledInterruptEntry(0, 46)
 Os_Hal_UnhandledInterruptEntry(0, 47)
 Os_Hal_UnhandledInterruptEntry(0, 48)
 Os_Hal_UnhandledInterruptEntry(0, 49)
-Os_Hal_UnhandledInterruptEntry(0, 50)
+Os_Hal_Cat2InterruptEntry(0, 50, OS_CFG_HAL_ISR2_DISABLE_LEVEL, OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine)
 Os_Hal_UnhandledInterruptEntry(0, 51)
 Os_Hal_UnhandledInterruptEntry(0, 52)
 Os_Hal_UnhandledInterruptEntry(0, 53)

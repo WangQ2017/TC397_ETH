@@ -54,6 +54,8 @@
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
 #include "SchM_EcuM.h"
+#include "SchM_EthTrcv_30_Tja1100.h"
+#include "SchM_Eth_30_Tc3xx.h"
 #include "SchM_Irq.h"
 #include "SchM_McalLib.h"
 #include "SchM_Mcu.h"

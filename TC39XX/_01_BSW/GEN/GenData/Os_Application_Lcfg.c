@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Application_Lcfg.c
- *   Generation Time: 2026-05-04 14:14:36
+ *   Generation Time: 2026-05-04 17:02:47
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -263,6 +263,8 @@ CONST(Os_AppConfigType, OS_CONST) OsCfg_App_OsApplication_OsCore0 =
 /*! Object reference table for application alarms: SystemApplication_OsCore0 */
 OS_LOCAL CONST(Os_AlarmConfigRefType, OS_CONST) OsCfg_App_SystemApplication_OsCore0_AlarmRefs[OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_ALARMS + 1u] =
 {
+  OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE2_OsTask_Bsw_20ms_Core0_0_20ms),
+  OS_ALARM_CASTCONFIG_ALARMACTIVATETASK_2_ALARM(OsCfg_Alarm_Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunctionLinkHandling),
   NULL_PTR
 };
 
@@ -285,6 +287,7 @@ OS_LOCAL CONST(Os_IsrConfigRefType, OS_CONST) OsCfg_App_SystemApplication_OsCore
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN0ERR_ISR),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN0TX_ISR),
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer_OsCore0),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine),
   OS_XSIGNAL_CASTCONFIG_XSIGNALISR_2_ISR(OsCfg_Isr_XSignalIsr_OsCore0),
   NULL_PTR
 };
@@ -305,6 +308,8 @@ OS_LOCAL CONST(Os_SchTConfigRefType, OS_CONST) OsCfg_App_SystemApplication_OsCor
 OS_LOCAL CONST(Os_TaskConfigRefType, OS_CONST) OsCfg_App_SystemApplication_OsCore0_TaskRefs[OS_CFG_NUM_APP_SYSTEMAPPLICATION_OSCORE0_TASKS + 1u] =
 {
   OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_IdleTask_OsCore0),
+  OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_OsTask_Bsw_20ms_Core0),
+  OS_TASK_CASTCONFIG_TASK_2_TASK(OsCfg_Task_OsTask_Bsw_5ms_Core0),
   NULL_PTR
 };
 

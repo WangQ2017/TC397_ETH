@@ -137,7 +137,7 @@ extern volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_StartTiming_InitState;
 # define RTE_START_SEC_VAR_GLOBALSHARED_NOCACHE_ZERO_INIT_8BIT
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
-extern volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_InitState_1; /* PRQA S 3408 */ /* MD_Rte_3408 */
+extern volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_InitState_0; /* PRQA S 3408 */ /* MD_Rte_3408 */
 
 # define RTE_STOP_SEC_VAR_GLOBALSHARED_NOCACHE_ZERO_INIT_8BIT
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -180,12 +180,12 @@ extern volatile VAR(uint8, RTE_VAR_ZERO_INIT_NOCACHE) Rte_InitState_5; /* PRQA S
  * Buffers for unqueued S/R
  *********************************************************************************************************************/
 
-#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  define RTE_START_SEC_VAR_OsApplication_OsCore0_INIT_UNSPECIFIED
 #  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(BswM_ESH_RunRequest, RTE_VAR_INIT) Rte_Cdd_nm_BswM_SRI_BswM_MSI_ESH_RunRequest_BswM_MDGP_ESH_RunRequest_requestedMode; /* PRQA S 3408, 1504 */ /* MD_Rte_3408, MD_MSR_Rule8.7 */
 
-#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  define RTE_STOP_SEC_VAR_OsApplication_OsCore0_INIT_UNSPECIFIED
 #  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -194,12 +194,12 @@ extern VAR(BswM_ESH_RunRequest, RTE_VAR_INIT) Rte_Cdd_nm_BswM_SRI_BswM_MSI_ESH_R
  *********************************************************************************************************************/
 
 
-#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  define RTE_START_SEC_VAR_OsApplication_OsCore0_INIT_UNSPECIFIED
 #  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode;
 
-#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  define RTE_STOP_SEC_VAR_OsApplication_OsCore0_INIT_UNSPECIFIED
 #  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

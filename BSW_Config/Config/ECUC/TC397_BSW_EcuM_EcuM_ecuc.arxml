@@ -104,7 +104,7 @@
                   <PARAMETER-VALUES>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMConfigConsistencyHash</DEFINITION-REF>
-                      <VALUE>5403029656122120367</VALUE>
+                      <VALUE>17021607560021532231</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                   </PARAMETER-VALUES>
                   <REFERENCE-VALUES>
@@ -376,24 +376,6 @@
                             <ECUC-TEXTUAL-PARAM-VALUE>
                               <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMModuleHeader</DEFINITION-REF>
                               <VALUE>Port.h</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                          </PARAMETER-VALUES>
-                        </ECUC-CONTAINER-VALUE>
-                        <ECUC-CONTAINER-VALUE UUID="98f33451-54c6-47a1-8240-cac3e1cab701">
-                          <SHORT-NAME>EthTrcv_PhyReset</SHORT-NAME>
-                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem</DEFINITION-REF>
-                          <PARAMETER-VALUES>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMModuleID</DEFINITION-REF>
-                              <VALUE>Code</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMAdditionalInitCode</DEFINITION-REF>
-                              <VALUE>EthTrcv_PhyReset();</VALUE>
-                            </ECUC-TEXTUAL-PARAM-VALUE>
-                            <ECUC-TEXTUAL-PARAM-VALUE>
-                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/MICROSAR/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMDriverInitListOne/EcuMDriverInitItem/EcuMModuleHeader</DEFINITION-REF>
-                              <VALUE>EthTrcv_Callout.h</VALUE>
                             </ECUC-TEXTUAL-PARAM-VALUE>
                           </PARAMETER-VALUES>
                         </ECUC-CONTAINER-VALUE>
