@@ -79,7 +79,7 @@
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthGeneral/EthMainFunctionPeriod</DEFINITION-REF>
-                  <VALUE>0.02</VALUE>
+                  <VALUE>0.005</VALUE>
                 </ECUC-NUMERICAL-PARAM-VALUE>
                 <ECUC-NUMERICAL-PARAM-VALUE>
                   <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthGeneral/EthGetEtherStatsApi</DEFINITION-REF>
@@ -141,11 +141,11 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthRxBufTotal</DEFINITION-REF>
-                      <VALUE>10</VALUE>
+                      <VALUE>4</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthTxBufTotal</DEFINITION-REF>
-                      <VALUE>12</VALUE>
+                      <VALUE>8</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthCtrlEnableMacWriteAccess</DEFINITION-REF>
@@ -405,7 +405,7 @@
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthTxBufConfig/EthTxBufTotal</DEFINITION-REF>
-                          <VALUE>12</VALUE>
+                          <VALUE>8</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                       </PARAMETER-VALUES>
                     </ECUC-CONTAINER-VALUE>
@@ -415,7 +415,7 @@
                       <PARAMETER-VALUES>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthRxBufConfig/EthRxSegmentNumber</DEFINITION-REF>
-                          <VALUE>10</VALUE>
+                          <VALUE>4</VALUE>
                         </ECUC-NUMERICAL-PARAM-VALUE>
                         <ECUC-NUMERICAL-PARAM-VALUE>
                           <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/MICROSAR/Eth_Tc3xx/Eth/EthConfigSet/EthCtrlConfig/EthRxBufConfig/EthRxSegmentSize</DEFINITION-REF>

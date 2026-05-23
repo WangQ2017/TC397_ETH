@@ -180,7 +180,7 @@ Std_ReturnType Eth_IntegratedTransmit(
     txRet = Eth_30_Tc3xx_Transmit(ETH_CTRL_IDX,
                                   txBufIdx,             /* 缓冲区ID */
                                   0x800,                /* 普通数据帧类型 */
-                                  needConfirm,          /* 是否需要发送确认 */
+                                  TRUE,          /* 是否需要发送确认 */
                                   totalFrameLen,        /* 帧总长度（字节） */
                                   dstMacAddr);            /* 缓冲区指针 */
     if (txRet != E_OK)
@@ -205,70 +205,75 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ 
 
     if ((Cdd_Core0_Task_10ms_Cnt % 100) == 0)
     {
-        uint8 SignalQuality;
-        Std_ReturnType ret = EthTrcv_30_Tja1100_GetPhySignalQuality(0, &SignalQuality);
-        if (ret == E_OK)
+        // uint8 SignalQuality;
+        // Std_ReturnType ret = EthTrcv_30_Tja1100_GetPhySignalQuality(0, &SignalQuality);
+        // if (ret == E_OK)
+        // {
+        //     CDD_LOG_DEBUG("Post:SignalQuality=%d", SignalQuality);
+        // }
+        // else
+        // {
+        //     CDD_LOG_ERROR("Post:get Signal Quality failed");
+        // }
+
+        // EthTrcv_BaudRateType BaudRate;
+        // ret = EthTrcv_30_Tja1100_GetBaudRate(0, &BaudRate);
+        // if (ret == E_OK)
+        // {
+        //     CDD_LOG_DEBUG("Post:BaudRate=%d", BaudRate);
+        // }
+        // else
+        // {
+        //     CDD_LOG_ERROR("Post:get Baud Rate failed");
+        // }
+
+        // EthTrcv_DuplexModeType DuplexMode;
+        // ret = EthTrcv_30_Tja1100_GetDuplexMode(0, &DuplexMode);
+        // if (ret == E_OK)
+        // {
+        //     CDD_LOG_DEBUG("Post:DuplexMode=%d", DuplexMode);
+        // }
+        // else
+        // {
+        //     CDD_LOG_ERROR("Post:get Duplex Mode failed");
+        // }
+
+        // EthTrcv_LinkStateType LinkState;
+        // ret = EthTrcv_30_Tja1100_GetLinkState(0, &LinkState);
+        // if (ret == E_OK)
+        // {
+        //     CDD_LOG_DEBUG("Post:LinkState=%d", LinkState);
+        // }
+        // else
+        // {
+        //     CDD_LOG_ERROR("Post:get Link State failed");
+        // }
+
+        // uint16 regVal = 0;
+        // (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 18, &regVal);
+        // if ((regVal != 0xffff) && ((regVal & 0x8000) == 0x8000))
+        // {
+        //     CDD_LOG_DEBUG("PHY is Master!");
+        // }
+        // else
+        // {
+        //     CDD_LOG_DEBUG("PHY is Slave!");
+        // }
+
+        uint8 testData[46] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x11, 0x22, 0x33, 0x44, 0x55,
+                            0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0};
+        /* 发送自定义数据，以太网类型为0x1234（自定义协议），不需要确认 */
+        Std_ReturnType ret = Eth_IntegratedTransmit(testData, sizeof(testData), 0x1134, FALSE);
+        if (ret == E_NOT_OK)
         {
-            CDD_LOG_DEBUG("Post:SignalQuality=%d", SignalQuality);
-        }
-        else
-        {
-            CDD_LOG_ERROR("Post:get Signal Quality failed");
+            // CDD_LOG_DEBUG("Send Data failed!");
         }
 
-        EthTrcv_BaudRateType BaudRate;
-        ret = EthTrcv_30_Tja1100_GetBaudRate(0, &BaudRate);
-        if (ret == E_OK)
-        {
-            CDD_LOG_DEBUG("Post:BaudRate=%d", BaudRate);
-        }
-        else
-        {
-            CDD_LOG_ERROR("Post:get Baud Rate failed");
-        }
-
-        EthTrcv_DuplexModeType DuplexMode;
-        ret = EthTrcv_30_Tja1100_GetDuplexMode(0, &DuplexMode);
-        if (ret == E_OK)
-        {
-            CDD_LOG_DEBUG("Post:DuplexMode=%d", DuplexMode);
-        }
-        else
-        {
-            CDD_LOG_ERROR("Post:get Duplex Mode failed");
-        }
-
-        EthTrcv_LinkStateType LinkState;
-        ret = EthTrcv_30_Tja1100_GetLinkState(0, &LinkState);
-        if (ret == E_OK)
-        {
-            CDD_LOG_DEBUG("Post:LinkState=%d", LinkState);
-        }
-        else
-        {
-            CDD_LOG_ERROR("Post:get Link State failed");
-        }
-
-        uint16 regVal = 0;
-        (void)EthTrcv_30_Tja1100_Internal_ReadTrcvReg(0, 18, &regVal);
-        if ((regVal != 0xffff) && ((regVal & 0x8000) == 0x8000))
-        {
-            CDD_LOG_DEBUG("PHY is Master!");
-        }
-        else
-        {
-            CDD_LOG_DEBUG("PHY is Slave!");
-        }
+        Eth_RxStatusType rxStatus;
+        Eth_30_Tc3xx_Receive(0, &rxStatus);  
     }
 
-    uint8 testData[46] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x11, 0x22, 0x33, 0x44, 0x55,
-                          0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0, 0xF0};
-    /* 发送自定义数据，以太网类型为0x1234（自定义协议），不需要确认 */
-    Std_ReturnType ret = Eth_IntegratedTransmit(testData, sizeof(testData), 0x1134, FALSE);
-    if (ret == E_NOT_OK)
-    {
-        // CDD_LOG_DEBUG("Send Data failed!");
-    }
+
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!

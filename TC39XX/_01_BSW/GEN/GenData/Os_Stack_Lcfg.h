@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Stack_Lcfg.h
- *   Generation Time: 2026-05-04 14:49:38
+ *   Generation Time: 2026-05-23 10:31:35
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -150,6 +150,17 @@ extern OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio20_Dyn, OS_CFG_SIZE_OSCORE0
 extern OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio30_Dyn, OS_CFG_SIZE_OSCORE0_TASK_PRIO30_STACK);
 
 # define OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO30_VAR_NOINIT_UNSPECIFIED
+# include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+# define OS_START_SEC_STACK_OSCORE0_TASK_PRIO40_VAR_NOINIT_UNSPECIFIED
+# include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/* Shared Task stack: OsCore0_Task_Prio40 */
+/* User: [OsTask_Bsw_5ms_Core0] */
+extern OS_STACK_DECLARE(OsCfg_Stack_OsCore0_Task_Prio40_Dyn, OS_CFG_SIZE_OSCORE0_TASK_PRIO40_STACK);
+
+# define OS_STOP_SEC_STACK_OSCORE0_TASK_PRIO40_VAR_NOINIT_UNSPECIFIED
 # include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -868,17 +879,6 @@ extern OS_STACK_DECLARE(OsCfg_Stack_OsTask_Asw_OsCore0_Dyn, OS_CFG_SIZE_OSTASK_A
 # include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
-# define OS_START_SEC_STACK_OSTASK_BSW_5MS_CORE0_VAR_NOINIT_UNSPECIFIED
-# include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-/* Task stack: OsTask_Bsw_5ms_Core0 */
-/* User: [OsTask_Bsw_5ms_Core0] */
-extern OS_STACK_DECLARE(OsCfg_Stack_OsTask_Bsw_5ms_Core0_Dyn, OS_CFG_SIZE_OSTASK_BSW_5MS_CORE0_STACK);
-
-# define OS_STOP_SEC_STACK_OSTASK_BSW_5MS_CORE0_VAR_NOINIT_UNSPECIFIED
-# include "Os_MemMap_Stacks.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
-
-
 /**********************************************************************************************************************
  *  GLOBAL CONSTANT DATA PROTOTYPES
  *********************************************************************************************************************/
@@ -910,6 +910,9 @@ extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Task_Prio20;
 /*! Stack configuration data: OsCore0_Task_Prio30 */
 extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Task_Prio30;
 
+/*! Stack configuration data: OsCore0_Task_Prio40 */
+extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Task_Prio40;
+
 /*! Stack configuration data: OsCore0_Task_Prio4294967295 */
 extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Task_Prio4294967295;
 
@@ -924,9 +927,6 @@ extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsCore0_Task_Prio55;
 
 /*! Stack configuration data: OsTask_Asw_OsCore0 */
 extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsTask_Asw_OsCore0;
-
-/*! Stack configuration data: OsTask_Bsw_5ms_Core0 */
-extern CONST(Os_StackConfigType, OS_CONST) OsCfg_Stack_OsTask_Bsw_5ms_Core0;
 
 # define OS_STOP_SEC_CORE0_CONST_UNSPECIFIED
 # include "Os_MemMap_OsSections.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

@@ -41,7 +41,7 @@
                         <BSW-TIMING-EVENT UUID="3664c482-6b5e-47a0-bece-79fccf61820d">
                           <SHORT-NAME>Eth_30_Tc3xx_MainFunctionTimingEvent0</SHORT-NAME>
                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Eth_ib_bswmd/BswModuleDescriptions/Eth/EthBehavior/Eth_30_Tc3xx_MainFunction</STARTS-ON-EVENT-REF>
-                          <PERIOD>0.02</PERIOD>
+                          <PERIOD>0.005</PERIOD>
                         </BSW-TIMING-EVENT>
                       </EVENTS>
                     </BSW-INTERNAL-BEHAVIOR>

@@ -43,6 +43,7 @@
  *********************************************************************************************************************/
 
 #include "EthIf_Cbk.h"
+#include "Cdd_Log.h"
 
 void EthIf_RxIndication(
         uint8                                     CtrlIdx,
@@ -52,12 +53,16 @@ void EthIf_RxIndication(
         Eth_DataType*                             DataPtr,
         uint16                                    LenByte)
 {
-
+    CDD_LOG_DEBUG("\n=== EthIf_RxIndication ===\n");
+    CDD_LOG_DEBUG("Frame Type: 0x%x\n", FrameType);
+    CDD_LOG_DEBUG("Is Broadcast: %s\n", IsBroadcast ? "Yes" : "No");
+    CDD_LOG_DEBUG("MAC: %02X:%02X:%02X:%02X:%02X:%02X\n", PhysAddrPtr[0], PhysAddrPtr[1], PhysAddrPtr[2], PhysAddrPtr[3], PhysAddrPtr[4], PhysAddrPtr[5]);
+    CDD_LOG_DEBUG("Data Length: %u bytes\n", LenByte);
 }
 
 void EthIf_TxConfirmation(
   uint8  CtrlIdx,
   uint8  BufIdx)
 {
-
+    CDD_LOG_DEBUG("\n=== EthIf_TxConfirmation ===\n");
 }
