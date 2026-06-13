@@ -4915,7 +4915,7 @@
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqETHConfig/IrqETHCatConfig/IrqETHSR1Cat</DEFINITION-REF>
-                      <VALUE>CAT1</VALUE>
+                      <VALUE>CAT2</VALUE>
                     </ECUC-TEXTUAL-PARAM-VALUE>
                     <ECUC-TEXTUAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqETHConfig/IrqETHCatConfig/IrqETHSR2Cat</DEFINITION-REF>
@@ -4961,7 +4961,7 @@
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqETHConfig/IrqETHPrioConfig/IrqETHSR1Prio</DEFINITION-REF>
-                      <VALUE>0</VALUE>
+                      <VALUE>130</VALUE>
                     </ECUC-NUMERICAL-PARAM-VALUE>
                     <ECUC-NUMERICAL-PARAM-VALUE>
                       <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AURIX2G/EcucDefs/Irq/IrqETHConfig/IrqETHPrioConfig/IrqETHSR2Prio</DEFINITION-REF>

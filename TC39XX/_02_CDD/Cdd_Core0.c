@@ -14,9 +14,9 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *             File:  Cdd_Core0.c
- *           Config:  G:/class/TC397_ETH/BSW_Config/TC397_BSW.dpa
+ *           Config:  G:/TC397_ETH/BSW_Config/TC397_BSW.dpa
  *        SW-C Type:  Cdd_Core0
- *  Generation Time:  2026-05-02 16:57:47
+ *  Generation Time:  2026-05-30 11:43:30
  *
  *        Generator:  MICROSAR RTE Generator Version 4.23.0
  *                    RTE Core Version 1.23.0
@@ -45,6 +45,8 @@
 #include "EthTrcv_30_Tja1100_Hw_Int.h"
 #include "Cdd_Log.h"
 #include "Eth_30_Tc3xx.h"
+#include "Com.h"
+#include "ComM.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of include and declaration area >>          DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -78,12 +80,10 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rt
  * DO NOT CHANGE THIS COMMENT!           << Start of runnable implementation >>             DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Core0_Init
  *********************************************************************************************************************/
-  Eth_30_Tc3xx_Init(Eth_30_Tc3xx_Config_Ptr);
-  Eth_30_Tc3xx_ControllerInit(0, 0);
-  Eth_30_Tc3xx_SetControllerMode(0, ETH_MODE_ACTIVE);
-  EthTrcv_30_Tja1100_Init(EthTrcv_30_Tja1100_Config_Ptr);
-  EthTrcv_30_Tja1100_TransceiverInit(0, 0);
-  EthTrcv_30_Tja1100_SetTransceiverMode(0, ETHTRCV_MODE_ACTIVE);
+
+ 
+ ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Channel_untagged, COMM_FULL_COMMUNICATION);
+
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -269,8 +269,8 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ 
             // CDD_LOG_DEBUG("Send Data failed!");
         }
 
-        Eth_RxStatusType rxStatus;
-        Eth_30_Tc3xx_Receive(0, &rxStatus);  
+        // Eth_RxStatusType rxStatus;
+        // Eth_30_Tc3xx_Receive(0, &rxStatus);  
     }
 
 

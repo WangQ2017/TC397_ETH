@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Cfg.h
- *   Generation Time: 2026-05-04 13:06:43
+ *   Generation Time: 2026-05-30 11:44:19
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -68,6 +68,8 @@
 # define OS_ISR_COUNTERISR_SYSTEMTIMER_OSCORE5_LEVEL     (100)
 # define OS_ISR_ETHISR_ETHCTRLCONFIG_MAIN_ETHINTERRUPTSERVICEROUTINE_Q0TX_CORE      (0)
 # define OS_ISR_ETHISR_ETHCTRLCONFIG_MAIN_ETHINTERRUPTSERVICEROUTINE_Q0TX_LEVEL     (50)
+# define OS_ISR_ETHISR_PPS_CORE      (0)
+# define OS_ISR_ETHISR_PPS_LEVEL     (130)
 # define OS_ISR_XSIGNALISR_OSCORE0_CORE      (0)
 # define OS_ISR_XSIGNALISR_OSCORE0_LEVEL     (1)
 # define OS_ISR_XSIGNALISR_OSCORE1_CORE      (1)

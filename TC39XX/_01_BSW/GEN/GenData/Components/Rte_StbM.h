@@ -58,14 +58,24 @@ extern "C"
 #  define RTE_RUNNABLE_GetRateDeviation StbM_GetRateDeviation
 #  define RTE_RUNNABLE_GetTimeBaseStatus StbM_GetTimeBaseStatus
 #  define RTE_RUNNABLE_GetTimeLeap StbM_GetTimeLeap
+#  define RTE_RUNNABLE_SetGlobalTime StbM_SetGlobalTime
+#  define RTE_RUNNABLE_SetRateCorrection StbM_SetRateCorrection
+#  define RTE_RUNNABLE_SetUserData StbM_SetUserData
 #  define RTE_RUNNABLE_StbM_MainFunction StbM_MainFunction
+#  define RTE_RUNNABLE_TriggerTimeTransmission StbM_TriggerTimeTransmission
+#  define RTE_RUNNABLE_UpdateGlobalTime StbM_UpdateGlobalTime
 # endif
 
 FUNC(Std_ReturnType, StbM_CODE) StbM_GetCurrentTime(StbM_SynchronizedTimeBaseType parg0, P2VAR(StbM_TimeStampType, AUTOMATIC, RTE_STBM_APPL_VAR) timeStampPtr, P2VAR(StbM_UserDataType, AUTOMATIC, RTE_STBM_APPL_VAR) userDataPtr); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, StbM_CODE) StbM_GetRateDeviation(StbM_SynchronizedTimeBaseType parg0, P2VAR(StbM_RateDeviationType, AUTOMATIC, RTE_STBM_APPL_VAR) rateDeviation); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, StbM_CODE) StbM_GetTimeBaseStatus(StbM_SynchronizedTimeBaseType parg0, P2VAR(StbM_TimeBaseStatusType, AUTOMATIC, RTE_STBM_APPL_VAR) syncTimeBaseStatus, P2VAR(StbM_TimeBaseStatusType, AUTOMATIC, RTE_STBM_APPL_VAR) offsetTimeBaseStatus); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(Std_ReturnType, StbM_CODE) StbM_GetTimeLeap(StbM_SynchronizedTimeBaseType parg0, P2VAR(StbM_TimeDiffType, AUTOMATIC, RTE_STBM_APPL_VAR) timeJump); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, StbM_CODE) StbM_SetGlobalTime(StbM_SynchronizedTimeBaseType parg0, P2CONST(StbM_TimeStampType, AUTOMATIC, RTE_STBM_APPL_DATA) timeStampPtr, P2CONST(StbM_UserDataType, AUTOMATIC, RTE_STBM_APPL_DATA) userDataPtr); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, StbM_CODE) StbM_SetRateCorrection(StbM_SynchronizedTimeBaseType parg0, StbM_RateDeviationType rateDeviation); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, StbM_CODE) StbM_SetUserData(StbM_SynchronizedTimeBaseType parg0, P2CONST(StbM_UserDataType, AUTOMATIC, RTE_STBM_APPL_DATA) userDataPtr); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 FUNC(void, StbM_CODE) StbM_MainFunction(void); /* PRQA S 3451, 0786, 3449 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449 */
+FUNC(Std_ReturnType, StbM_CODE) StbM_TriggerTimeTransmission(StbM_SynchronizedTimeBaseType parg0); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+FUNC(Std_ReturnType, StbM_CODE) StbM_UpdateGlobalTime(StbM_SynchronizedTimeBaseType parg0, P2CONST(StbM_TimeStampType, AUTOMATIC, RTE_STBM_APPL_DATA) timeStamp, P2CONST(StbM_UserDataType, AUTOMATIC, RTE_STBM_APPL_DATA) userData); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
 
 # define StbM_STOP_SEC_CODE
 # include "StbM_MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -76,9 +86,17 @@ FUNC(void, StbM_CODE) StbM_MainFunction(void); /* PRQA S 3451, 0786, 3449 */ /* 
  * Application errors
  *********************************************************************************************************************/
 
-#  define RTE_E_GlobalTime_Slave_StbMSynchronizedTimeBase_E_NOT_OK (1U)
+#  define RTE_E_GlobalTime_Master_StbMSynchronizedTimeBase_MAIN6_E_NOT_OK (1U)
 
-#  define RTE_E_GlobalTime_Slave_StbMSynchronizedTimeBase_E_OK (0U)
+#  define RTE_E_GlobalTime_Master_StbMSynchronizedTimeBase_MAIN6_E_OK (0U)
+
+#  define RTE_E_GlobalTime_Slave_StbMSynchronizedTimeBase_MAIN0_E_NOT_OK (1U)
+
+#  define RTE_E_GlobalTime_Slave_StbMSynchronizedTimeBase_MAIN0_E_OK (0U)
+
+#  define RTE_E_GlobalTime_Slave_StbMSynchronizedTimeBase_MAIN6_E_NOT_OK (1U)
+
+#  define RTE_E_GlobalTime_Slave_StbMSynchronizedTimeBase_MAIN6_E_OK (0U)
 # endif /* !defined(RTE_CORE) */
 
 # ifdef __cplusplus

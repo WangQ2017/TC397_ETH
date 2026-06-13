@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2026-05-03 13:49:36
+ *   Generation Time: 2026-05-31 09:02:42
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -37,6 +37,10 @@
     &&&~ INCLUDE
  ----------------------------------------------------------------------------- */
 #include "Std_Types.h"
+#include "ComStack_Types.h" 
+#include "BswM_ComM.h"
+#include "BswM_EthIf.h"
+#include "BswM_EthSM.h"
 #include "BswM_EcuM.h"
 #include "Rte_BswM_Type.h"
 #include "EthTrcv_30_Tja1100_Hw_Int.h" 
@@ -114,13 +118,13 @@
 #define BSWM_ENABLE_CANSM                    STD_OFF
 #define BSWM_ENABLE_FRSM                     STD_OFF
 #define BSWM_ENABLE_LINSM                    STD_OFF
-#define BSWM_ENABLE_ETHIF                    STD_OFF
-#define BSWM_ENABLE_ETHSM                    STD_OFF
+#define BSWM_ENABLE_ETHIF                    STD_ON
+#define BSWM_ENABLE_ETHSM                    STD_ON
 #define BSWM_ENABLE_LINTP                    STD_OFF
 #define BSWM_ENABLE_DCM                      STD_OFF
 #define BSWM_ENABLE_NVM                      STD_OFF
 #define BSWM_ENABLE_ECUM                     STD_ON
-#define BSWM_ENABLE_COMM                     STD_OFF
+#define BSWM_ENABLE_COMM                     STD_ON
 #define BSWM_ENABLE_J1939DCM                 STD_OFF
 #define BSWM_ENABLE_J1939NM                  STD_OFF
 #define BSWM_ENABLE_SD                       STD_OFF
@@ -131,7 +135,7 @@
 #define BSWM_VERSION_INFO_API                STD_OFF
 #define BSWM_COMM_PNC_SUPPORT                STD_OFF
 #define BSWM_COMM_INITIATE_RESET             STD_OFF
-#define BSWM_CHANNEL_COUNT                   0u
+#define BSWM_CHANNEL_COUNT                   1u
 #define BSWM_WAKEUP_SOURCE_COUNT             5u
 #define BSWM_IPDU_GROUP_CONTROL              STD_OFF
 #define BSWM_ECUM_MODE_HANDLING              STD_OFF

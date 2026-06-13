@@ -21,6 +21,19 @@
             <AR-PACKAGE UUID="eb4a6d56-0691-4a47-9ed6-33b85f17b30f">
               <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
+            <AR-PACKAGE UUID="facae704-51e6-4e7b-b382-d218ca7649c7">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="ad98e30f-9a6a-4876-afc5-4ba104b4a70a">
+                  <SHORT-NAME>LdCom</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="f74388aa-7da3-4980-9058-23f8b064a518">
+                      <SHORT-NAME>LdComBehavior</SHORT-NAME>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+              </ELEMENTS>
+            </AR-PACKAGE>
           </AR-PACKAGES>
         </AR-PACKAGE>
       </AR-PACKAGES>

@@ -39,6 +39,7 @@
 #include "Rte_Cdd_Log.h"
 #include "Uart.h"
 #include "Cdd_Log.h"
+#include "IfxStm_reg.h"
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << Start of include and declaration area >>        DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -66,6 +67,34 @@
  * DO NOT CHANGE THIS COMMENT!           << Start of documentation area >>                  DO NOT CHANGE THIS COMMENT!
  * Symbol: Cdd_Log_Runnable5ms_doc
  *********************************************************************************************************************/
+
+static uint64 TimerGetCounter()
+{
+    uint32 cap0 = 0;
+    uint32 cap1 = 0;
+    uint32 tim0 = 0;
+
+    uint32 high, low;
+
+    do {
+        tim0 = STM0_TIM0.U; 
+        cap0  = STM0_CAP.U;
+        tim0 = STM0_TIM0.U; 
+        cap1  = STM0_CAP.U;
+    } while (cap0 != cap1); // 读两次防止进位
+
+    return (((uint64)cap0 << 32) | (uint64)tim0);
+}
+
+uint32 TimerGetMs(void)
+{
+  return (uint32)(TimerGetCounter() / 100000);
+}
+
+uint64 TimerGetUs(void)
+{
+  return (uint64)(TimerGetCounter() / 100);
+}
 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of documentation area >>                    DO NOT CHANGE THIS COMMENT!

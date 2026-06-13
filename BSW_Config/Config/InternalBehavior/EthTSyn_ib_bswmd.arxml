@@ -3,6 +3,69 @@
   <AR-PACKAGES>
     <AR-PACKAGE UUID="ff55d029-386d-43a2-b3c2-dfef4c7a5e36">
       <SHORT-NAME>MICROSAR</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE UUID="c29d9174-5e8b-41aa-82ba-6c53682cd39e">
+          <SHORT-NAME>EthTSyn_ib_bswmd</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE UUID="0ccf4a41-1083-4099-bf05-2802764e07c9">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="77ffb61f-747b-435e-8f8f-ff5b9ed6d939">
+                  <SHORT-NAME>EthTSyn</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthTSyn_ib_bswmd/BswModuleDescriptions/EthTSyn_MainFunction</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="c808ff9d-b5da-46af-93ba-3ce82bc1ff4e">
+                      <SHORT-NAME>EthTSynBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="9d1dce08-5cd4-4f6e-b0c5-5cc54daf0d25">
+                          <SHORT-NAME>ETHTSYN_EXCLUSIVE_AREA_0</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Default exclusive area to ensure consistency of global RAM variables.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="3045f33a-1f94-48b2-b0d5-1c973a3e563c">
+                          <SHORT-NAME>ETHTSYN_EXCLUSIVE_AREA_GET_TS</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Exclusive area to ensure consisteny of global RAM variables related to ingress and egress timestamping. Also used to minimize the delays when taking timestamps.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                        <EXCLUSIVE-AREA UUID="6e1b0448-7597-4a41-bc3f-94a11639c214">
+                          <SHORT-NAME>ETHTSYN_EXCLUSIVE_AREA_TIME_VALID</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL">Exlusive area to ensure consistency of time validation data.</L-2>
+                          </DESC>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="56b1b35e-d943-4b36-a78d-f9e4a1050812">
+                          <SHORT-NAME>EthTSyn_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/EthTSyn_ib_bswmd/BswModuleDescriptions/EthTSyn_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="8062faca-5e52-4b96-807e-f9373b87c983">
+                          <SHORT-NAME>EthTSyn_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/EthTSyn_ib_bswmd/BswModuleDescriptions/EthTSyn/EthTSynBehavior/EthTSyn_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.005</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="e55fda2f-ea35-40e3-9be6-cc553c0efe72">
+                  <SHORT-NAME>EthTSyn_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
     </AR-PACKAGE>
   </AR-PACKAGES>
 </AUTOSAR>

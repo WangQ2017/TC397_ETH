@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Hal_Context_Lcfg.h
- *   Generation Time: 2026-05-04 13:06:43
+ *   Generation Time: 2026-05-30 11:44:19
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -97,6 +97,9 @@ extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Leve
 
 /*! HAL dynamic ISR2 level context data: Level5 */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level5_Dyn;
+
+/*! HAL dynamic ISR2 level context data: Level6 */
+extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_OsCore0_Isr_Level6_Dyn;
 
 /*! HAL dynamic task context data: Default_Init_Task */
 extern VAR(Os_Hal_ContextType, OS_VAR_NOINIT) OsCfg_Hal_Context_Default_Init_Task_Dyn;
@@ -431,6 +434,9 @@ extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_CounterIsr_Sy
 
 /*! HAL ISR2 context configuration data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx;
+
+/*! HAL ISR2 context configuration data: EthIsr_PPS */
+extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_EthIsr_PPS;
 
 /*! HAL ISR2 context configuration data: XSignalIsr_OsCore0 */
 extern CONST(Os_Hal_ContextConfigType, OS_CONST) OsCfg_Hal_Context_XSignalIsr_OsCore0;

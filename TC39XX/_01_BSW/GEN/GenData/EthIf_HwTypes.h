@@ -10,7 +10,7 @@
  *  -------------------------------------------------------------------------------------------------------------------
  *  LICENSE
  *  -------------------------------------------------------------------------------------------------------------------
- *            Module: EcuM
+ *            Module: EthIf
  *           Program: MSR_Vector_SLP4
  *          Customer: Aptiv (China) Technology Company Ltd.
  *       Expiry Date: Not restricted
@@ -20,8 +20,8 @@
  *  -------------------------------------------------------------------------------------------------------------------
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
- *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2025-12-20 18:14:00
+ *              File: EthIf_HwTypes.h
+ *   Generation Time: 2026-05-23 23:37:07
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -30,39 +30,24 @@
  *********************************************************************************************************************/
 
 
-/**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           <USERBLOCK User Version>                           DO NOT CHANGE THIS COMMENT!
- *********************************************************************************************************************/
+#if !defined (ETHIF_HWTYPES_H)
+# define ETHIF_HWTYPES_H
 
 /**********************************************************************************************************************
- * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
+ *  INCLUDE
+ *********************************************************************************************************************/
+/* \trace SPEC-2393718 */
+/* \trace SPEC-2393858 */
+
+#include "Eth_30_Tc3xx_Types.h"
+
+
+#include "EthTrcv_30_Tja1100_Types.h"
+
+#endif /* ETHIF_HWTYPES_H */
+
+/**********************************************************************************************************************
+ *  END OF FILE: EthIf_HwTypes.h
  *********************************************************************************************************************/
 
-/*********************************************************************************************************************
-    INCLUDES
- *********************************************************************************************************************/
 
-#include "EthIf_Cbk.h"
-#include "Cdd_Log.h"
-
-void EthIf_RxIndication(
-        uint8                                     CtrlIdx,
-        Eth_FrameType                             FrameType,
-        boolean                                   IsBroadcast,
-        uint8 *                                   PhysAddrPtr,
-        Eth_DataType*                             DataPtr,
-        uint16                                    LenByte)
-{
-    CDD_LOG_DEBUG("\n=== EthIf_RxIndication ===\n");
-    CDD_LOG_DEBUG("Frame Type: 0x%x\n", FrameType);
-    CDD_LOG_DEBUG("Is Broadcast: %s\n", IsBroadcast ? "Yes" : "No");
-    CDD_LOG_DEBUG("MAC: %02X:%02X:%02X:%02X:%02X:%02X\n", PhysAddrPtr[0], PhysAddrPtr[1], PhysAddrPtr[2], PhysAddrPtr[3], PhysAddrPtr[4], PhysAddrPtr[5]);
-    CDD_LOG_DEBUG("Data Length: %u bytes\n", LenByte);
-}
-
-void EthIf_TxConfirmation(
-  uint8  CtrlIdx,
-  uint8  BufIdx)
-{
-    CDD_LOG_DEBUG("\n=== EthIf_TxConfirmation ===\n");
-}

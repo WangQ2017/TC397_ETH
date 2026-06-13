@@ -15,7 +15,7 @@
 **                                                                            **
 **  VERSION   : 6.0.0                                                         **
 **                                                                            **
-**  DATE, TIME: 2026-05-04, 13:06:12      !!!IGNORE-LINE!!!                   **
+**  DATE, TIME: 2026-05-30, 11:41:16      !!!IGNORE-LINE!!!                   **
 **                                                                            **
 **  GENERATOR : Build b170330-0431        !!!IGNORE-LINE!!!                   ** 
 **                                                                            **
@@ -985,7 +985,7 @@ Container : Ethernet interrupt Configuration
 */
 /* Ethernet interrupt Category Setting*/
 #define IRQ_GETH_SR0_CAT              (IRQ_CAT1)
-#define IRQ_GETH_SR1_CAT              (IRQ_CAT1)
+#define IRQ_GETH_SR1_CAT              (IRQ_CAT2)
 #define IRQ_GETH_SR2_CAT              (IRQ_CAT2)
 #define IRQ_GETH_SR3_CAT              (IRQ_CAT1)
 #define IRQ_GETH_SR4_CAT              (IRQ_CAT1)
@@ -997,7 +997,7 @@ Container : Ethernet interrupt Configuration
 
 /* Ethernet interrupt Category Setting*/
 #define IRQ_GETH_SR0_PRIO             0x0
-#define IRQ_GETH_SR1_PRIO             0x0
+#define IRQ_GETH_SR1_PRIO             0x82
 #define IRQ_GETH_SR2_PRIO             0x32
 #define IRQ_GETH_SR3_PRIO             0x0
 #define IRQ_GETH_SR4_PRIO             0x0
