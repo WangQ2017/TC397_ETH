@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Lcfg.c
- *   Generation Time: 2026-02-08 21:31:39
+ *   Generation Time: 2026-06-13 19:00:24
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -206,6 +206,7 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_WaitForNvMToSh
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_WakeupToPrep(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_WaitForNvMWakeup(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_WakeupToRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_PostRunToPrepShutdown(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ESH_PostRunToPrepCheck(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_PostRunToRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ExitPostRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
@@ -245,8 +246,8 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRelease_C_
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_DemInit(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 /*! \} */ /* End of sharing description for BswMActionListFunctions */
-#define BswM_ActionList_ESH_AL_PostRunToPrepShutdown BswM_ActionList_ESH_AL_WakeupToPrep
 #define BswM_ActionList_ESH_AL_InitToWakeup BswM_ActionList_ESH_AL_WaitForNvMWakeup
 /*! \} */ /* End of group BswMActionListFunctions */
 
@@ -295,6 +296,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_SdStateChange_C_SdCLie
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_DemInit(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 /*! \} */ /* End of sharing description for BswMRuleFunctions */
 /*! \} */ /* End of group BswMRuleFunctions */
 /* PRQA L:FUNCTIONDECLARATIONS */
@@ -365,7 +367,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_C_SdCLient
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[46] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[47] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    FctPtr                                                                                                                                     Comment                   Referable Keys */
   { /*     0 */ BswM_ActionList_ESH_AL_RunToPostRun                                                                                                 },  /* [Priority: 0] */  /* [AL_ESH_AL_RunToPostRun] */
   { /*     1 */ BswM_ActionList_ESH_AL_WaitForNvMToShutdown                                                                                         },  /* [Priority: 0] */  /* [AL_ESH_AL_WaitForNvMToShutdown] */
@@ -412,7 +414,8 @@ CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[46] = {  /* PRQA S 1514
   { /*    42 */ BswM_ActionList_SDC_AL_ApplRelease_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed             },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
   { /*    43 */ BswM_ActionList_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed             },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
   { /*    44 */ BswM_ActionList_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo                                                            },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo] */
-  { /*    45 */ BswM_ActionList_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                            }   /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
+  { /*    45 */ BswM_ActionList_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                            },  /* [Priority: 0] */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
+  { /*    46 */ BswM_ActionList_ESH_AL_DemInit                                                                                                      }   /* [Priority: 0] */  /* [AL_ESH_AL_DemInit] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -458,6 +461,60 @@ CONST(BswM_DeferredRulesType, BSWM_CONST) BswM_DeferredRules[24] = {  /* PRQA S 
   { /*    21 */      24u },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState] */
   { /*    22 */      25u },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
   { /*    23 */      26u }   /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
+};
+#define BSWM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  BswM_GenericMapping
+**********************************************************************************************************************/
+/** 
+  \var    BswM_GenericMapping
+  \brief  Maps the external id of BswMGenericRequest to an internal id and references immediate request ports.
+  \details
+  Element                  Description
+  ExternalId               External id of BswMGenericRequest.
+  ImmediateUserEndIdx      the end index of the 0:n relation pointing to BswM_ImmediateUser
+  ImmediateUserStartIdx    the start index of the 0:n relation pointing to BswM_ImmediateUser
+  InitValue                Initialization value of port.
+*/ 
+#define BSWM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(BswM_GenericMappingType, BSWM_CONST) BswM_GenericMapping[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    ExternalId                            ImmediateUserEndIdx                          ImmediateUserStartIdx                          InitValue                                                  Referable Keys */
+  { /*     0 */ BSWM_GENERIC_ESH_DemInitStatus      ,                                          1u,                                            0u, BSWM_GENERICVALUE_ESH_DemInitStatus_DEM_INITIALIZED },  /* [GENERIC_0, MRP_ESH_DemInitStatus] */
+  { /*     1 */ BSWM_GENERIC_ESH_DemPostRunRequested, BSWM_NO_IMMEDIATEUSERENDIDXOFGENERICMAPPING, BSWM_NO_IMMEDIATEUSERSTARTIDXOFGENERICMAPPING, BSWM_GENERICVALUE_ESH_DemPostRunRequested_TRUE      },  /* [GENERIC_1, MRP_ESH_DemPostRunRequested] */
+  { /*     2 */ BSWM_GENERIC_ESH_State              ,                                          2u,                                            1u, BSWM_GENERICVALUE_ESH_State_ESH_INIT                }   /* [GENERIC_2, MRP_ESH_State] */
+};
+#define BSWM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  BswM_ImmediateUser
+**********************************************************************************************************************/
+/** 
+  \var    BswM_ImmediateUser
+  \brief  Contains all immediate request ports.
+  \details
+  Element             Description
+  MaskedBits          contains bitcoded the boolean data of BswM_OnInitOfImmediateUser, BswM_RulesIndUsedOfImmediateUser
+  RulesIndEndIdx      the end index of the 0:n relation pointing to BswM_RulesInd
+  RulesIndStartIdx    the start index of the 0:n relation pointing to BswM_RulesInd
+*/ 
+#define BSWM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(BswM_ImmediateUserType, BSWM_CONST) BswM_ImmediateUser[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    MaskedBits  RulesIndEndIdx                         RulesIndStartIdx                               Comment                               Referable Keys */
+  { /*     0 */      0x00u, BSWM_NO_RULESINDENDIDXOFIMMEDIATEUSER, BSWM_NO_RULESINDSTARTIDXOFIMMEDIATEUSER },  /* [Name: ESH_DemInitStatus] */  /* [MRP_ESH_DemInitStatus, GENERIC_0] */
+  { /*     1 */      0x03u,                                    8u,                                      0u }   /* [Name: ESH_State]         */  /* [MRP_ESH_State, GENERIC_2] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -536,35 +593,36 @@ CONST(BswM_PartitionIdentifiersType, BSWM_CONST) BswM_PartitionIdentifiers[1] = 
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[27] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[28] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Id   Init        RuleStatesIdx  FctPtr                                                                                                                    Referable Keys */
-  { /*     0 */  5u, BSWM_FALSE,            0u, BswM_Rule_ESH_RunToPostRun                                                                                         },  /* [R_ESH_RunToPostRun, MRP_ESH_State, MRP_ESH_ModeNotification, MRP_ESH_RunRequest_0, MRP_ESH_RunRequest_1, MRP_ESH_SelfRunRequestTimer] */
-  { /*     1 */  6u, BSWM_FALSE,            1u, BswM_Rule_ESH_WaitToShutdown                                                                                       },  /* [R_ESH_WaitToShutdown, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents] */
-  { /*     2 */  8u, BSWM_FALSE,            2u, BswM_Rule_ESH_WakeupToPrep                                                                                         },  /* [R_ESH_WakeupToPrep, MRP_ESH_State, MRP_ESH_EcuM_GetPendingWakeupEvents, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ModeNotification] */
-  { /*     3 */  7u, BSWM_FALSE,            3u, BswM_Rule_ESH_WaitToWakeup                                                                                         },  /* [R_ESH_WaitToWakeup, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents] */
-  { /*     4 */  9u, BSWM_FALSE,            4u, BswM_Rule_ESH_WakeupToRun                                                                                          },  /* [R_ESH_WakeupToRun, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ModeNotification] */
-  { /*     5 */  0u, BSWM_FALSE,            5u, BswM_Rule_ESH_InitToWakeup                                                                                         },  /* [R_ESH_InitToWakeup, MRP_ESH_State] */
-  { /*     6 */  3u, BSWM_FALSE,            6u, BswM_Rule_ESH_PostRunToPrepNested                                                                                  },  /* [R_ESH_PostRunToPrepNested] */
-  { /*     7 */  2u, BSWM_FALSE,            7u, BswM_Rule_ESH_PostRunNested                                                                                        },  /* [R_ESH_PostRunNested] */
-  { /*     8 */  1u, BSWM_FALSE,            8u, BswM_Rule_ESH_PostRun                                                                                              },  /* [R_ESH_PostRun, MRP_ESH_State, MRP_ESH_ModeNotification] */
-  { /*     9 */  4u, BSWM_FALSE,            9u, BswM_Rule_ESH_PrepToWait                                                                                           },  /* [R_ESH_PrepToWait, MRP_ESH_State, MRP_ESH_ModeNotification] */
-  { /*    10 */ 13u, BSWM_TRUE ,           10u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo       },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo, MRP_SDC_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
-  { /*    11 */ 19u, BSWM_FALSE,           11u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed                                                 },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed, MRP_SDC_SdClientState_C_SdCLientService_0xC3CB_VechicleSpeed] */
-  { /*    12 */ 26u, BSWM_FALSE,           12u, BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState                    },  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState, MRP_SDC_SdEHState_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState] */
-  { /*    13 */ 20u, BSWM_FALSE,           13u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed   },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed, MRP_SDC_SdCEGState_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
-  { /*    14 */ 10u, BSWM_TRUE ,           14u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed                                                   },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed, MRP_SDC_C_SdCLientService_0xC3CB_VechicleSpeed] */
-  { /*    15 */ 21u, BSWM_FALSE,           15u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo                                                  },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo, MRP_SDC_SdClientState_C_SdCLientService_0xC3CD_VechicleInfo] */
-  { /*    16 */ 24u, BSWM_FALSE,           16u, BswM_Rule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus },  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus, MRP_SDC_SdCEGState_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
-  { /*    17 */ 25u, BSWM_FALSE,           17u, BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo                  },  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo, MRP_SDC_SdEHState_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo] */
-  { /*    18 */ 14u, BSWM_TRUE ,           18u, BswM_Rule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus                                                  },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus, MRP_SDC_C_SdClientService_0xC3CC_VechicleStatus] */
-  { /*    19 */ 16u, BSWM_TRUE ,           19u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo                                                       },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo, MRP_SDC_S_SdServerService_0xC3C0_FaultInfo] */
-  { /*    20 */ 17u, BSWM_TRUE ,           20u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState                                                        },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState, MRP_SDC_S_SdServerService_0xC3C1_SenState] */
-  { /*    21 */ 23u, BSWM_FALSE,           21u, BswM_Rule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus                                                },  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus, MRP_SDC_SdClientState_C_SdClientService_0xC3CC_VechicleStatus] */
-  { /*    22 */ 15u, BSWM_TRUE ,           22u, BswM_Rule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus   },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus, MRP_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
-  { /*    23 */ 22u, BSWM_FALSE,           23u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo     },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo, MRP_SDC_SdCEGState_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
-  { /*    24 */ 18u, BSWM_TRUE ,           24u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState                                                        },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState, MRP_SDC_S_SdServerService_0xC3C2_EcuState] */
-  { /*    25 */ 11u, BSWM_TRUE ,           25u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed     },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed, MRP_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
-  { /*    26 */ 12u, BSWM_TRUE ,           26u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                    }   /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo, MRP_SDC_C_SdCLientService_0xC3CD_VechicleInfo] */
+  { /*     0 */  6u, BSWM_FALSE,            0u, BswM_Rule_ESH_RunToPostRun                                                                                         },  /* [R_ESH_RunToPostRun, MRP_ESH_State, MRP_ESH_ModeNotification, MRP_ESH_RunRequest_0, MRP_ESH_RunRequest_1, MRP_ESH_SelfRunRequestTimer] */
+  { /*     1 */  7u, BSWM_FALSE,            1u, BswM_Rule_ESH_WaitToShutdown                                                                                       },  /* [R_ESH_WaitToShutdown, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents] */
+  { /*     2 */  9u, BSWM_FALSE,            2u, BswM_Rule_ESH_WakeupToPrep                                                                                         },  /* [R_ESH_WakeupToPrep, MRP_ESH_State, MRP_ESH_EcuM_GetPendingWakeupEvents, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ModeNotification] */
+  { /*     3 */  8u, BSWM_FALSE,            3u, BswM_Rule_ESH_WaitToWakeup                                                                                         },  /* [R_ESH_WaitToWakeup, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents] */
+  { /*     4 */ 10u, BSWM_FALSE,            4u, BswM_Rule_ESH_WakeupToRun                                                                                          },  /* [R_ESH_WakeupToRun, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ModeNotification] */
+  { /*     5 */  1u, BSWM_FALSE,            5u, BswM_Rule_ESH_InitToWakeup                                                                                         },  /* [R_ESH_InitToWakeup, MRP_ESH_State] */
+  { /*     6 */  4u, BSWM_FALSE,            6u, BswM_Rule_ESH_PostRunToPrepNested                                                                                  },  /* [R_ESH_PostRunToPrepNested] */
+  { /*     7 */  3u, BSWM_FALSE,            7u, BswM_Rule_ESH_PostRunNested                                                                                        },  /* [R_ESH_PostRunNested] */
+  { /*     8 */  2u, BSWM_FALSE,            8u, BswM_Rule_ESH_PostRun                                                                                              },  /* [R_ESH_PostRun, MRP_ESH_State, MRP_ESH_ModeNotification] */
+  { /*     9 */  5u, BSWM_FALSE,            9u, BswM_Rule_ESH_PrepToWait                                                                                           },  /* [R_ESH_PrepToWait, MRP_ESH_State, MRP_ESH_ModeNotification] */
+  { /*    10 */ 14u, BSWM_TRUE ,           10u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo       },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo, MRP_SDC_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
+  { /*    11 */ 20u, BSWM_FALSE,           11u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed                                                 },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed, MRP_SDC_SdClientState_C_SdCLientService_0xC3CB_VechicleSpeed] */
+  { /*    12 */ 27u, BSWM_FALSE,           12u, BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState                    },  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState, MRP_SDC_SdEHState_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState] */
+  { /*    13 */ 21u, BSWM_FALSE,           13u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed   },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed, MRP_SDC_SdCEGState_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
+  { /*    14 */ 11u, BSWM_TRUE ,           14u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed                                                   },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed, MRP_SDC_C_SdCLientService_0xC3CB_VechicleSpeed] */
+  { /*    15 */ 22u, BSWM_FALSE,           15u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo                                                  },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo, MRP_SDC_SdClientState_C_SdCLientService_0xC3CD_VechicleInfo] */
+  { /*    16 */ 25u, BSWM_FALSE,           16u, BswM_Rule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus },  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus, MRP_SDC_SdCEGState_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
+  { /*    17 */ 26u, BSWM_FALSE,           17u, BswM_Rule_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo                  },  /* [R_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo, MRP_SDC_SdEHState_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo] */
+  { /*    18 */ 15u, BSWM_TRUE ,           18u, BswM_Rule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus                                                  },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus, MRP_SDC_C_SdClientService_0xC3CC_VechicleStatus] */
+  { /*    19 */ 17u, BSWM_TRUE ,           19u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo                                                       },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo, MRP_SDC_S_SdServerService_0xC3C0_FaultInfo] */
+  { /*    20 */ 18u, BSWM_TRUE ,           20u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState                                                        },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState, MRP_SDC_S_SdServerService_0xC3C1_SenState] */
+  { /*    21 */ 24u, BSWM_FALSE,           21u, BswM_Rule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus                                                },  /* [R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus, MRP_SDC_SdClientState_C_SdClientService_0xC3CC_VechicleStatus] */
+  { /*    22 */ 16u, BSWM_TRUE ,           22u, BswM_Rule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus   },  /* [R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus, MRP_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus] */
+  { /*    23 */ 23u, BSWM_FALSE,           23u, BswM_Rule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo     },  /* [R_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo, MRP_SDC_SdCEGState_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo] */
+  { /*    24 */ 19u, BSWM_TRUE ,           24u, BswM_Rule_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState                                                        },  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState, MRP_SDC_S_SdServerService_0xC3C2_EcuState] */
+  { /*    25 */ 12u, BSWM_TRUE ,           25u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed     },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed, MRP_SDC_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
+  { /*    26 */ 13u, BSWM_TRUE ,           26u, BswM_Rule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo                                                    },  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo, MRP_SDC_C_SdCLientService_0xC3CD_VechicleInfo] */
+  { /*    27 */  0u, BSWM_FALSE,           27u, BswM_Rule_ESH_DemInit                                                                                              }   /* [R_ESH_DemInit] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -747,6 +805,7 @@ VAR(BswM_ActionListQueueUType, BSWM_VAR_NOINIT) BswM_ActionListQueue;  /* PRQA S
   /*    43 */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
   /*    44 */  /* [AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo] */
   /*    45 */  /* [AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
+  /*    46 */  /* [AL_ESH_AL_DemInit] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -777,9 +836,11 @@ VAR(BswM_ForcedActionListPriorityType, BSWM_VAR_NOINIT) BswM_ForcedActionListPri
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(BswM_ModeType, BSWM_VAR_NOINIT) BswM_GenericState[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(BswM_ModeType, BSWM_VAR_NOINIT) BswM_GenericState[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [GENERIC_0, MRP_ESH_State] */
+  /*     0 */  /* [GENERIC_0, MRP_ESH_DemInitStatus] */
+  /*     1 */  /* [GENERIC_1, MRP_ESH_DemPostRunRequested] */
+  /*     2 */  /* [GENERIC_2, MRP_ESH_State] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -810,9 +871,10 @@ VAR(BswM_InitializedType, BSWM_VAR_NOINIT) BswM_Initialized;  /* PRQA S 1514, 15
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(BswM_ModeRequestQueueType, BSWM_VAR_NOINIT) BswM_ModeRequestQueue[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(BswM_ModeRequestQueueType, BSWM_VAR_NOINIT) BswM_ModeRequestQueue[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [MRP_ESH_State, GENERIC_0] */
+  /*     0 */  /* [MRP_ESH_DemInitStatus, GENERIC_0] */
+  /*     1 */  /* [MRP_ESH_State, GENERIC_2] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -885,6 +947,7 @@ VAR(BswM_RuleStatesUType, BSWM_VAR_NOINIT) BswM_RuleStates;  /* PRQA S 0759, 151
   /*    24 */  /* [R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState] */
   /*    25 */  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed] */
   /*    26 */  /* [R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo] */
+  /*    27 */  /* [R_ESH_DemInit] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -1243,11 +1306,11 @@ BSWM_LOCAL FUNC(void, BSWM_CODE) BswM_SwcModeRequestUpdateFct_BSWM_SINGLEPARTITI
  *********************************************************************************************************************/
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_RunToPostRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
+  ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan10, FALSE);
+  ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan23, FALSE);
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   EcuM_ClearValidatedWakeupEvent(ECUM_WKSOURCE_ALL_SOURCES);
   /*lint -restore */
-  ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan10, FALSE);
-  ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan23, FALSE);
   ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan1, FALSE);
   BswM_ESH_OnEnterPostRun();
   BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_POSTRUN;
@@ -1298,13 +1361,30 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_WaitForNvMWake
  *********************************************************************************************************************/
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_WakeupToRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
-  BswM_UpdateTimer(partitionIdx, BSWM_TMR_ESH_SelfRunRequestTimer, 10uL);
   ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan10, TRUE);
+  (void)BswM_Action_RuleHandler(BSWM_ID_RULE_ESH_DemInit, partitionIdx);
   ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan23, TRUE);
   ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan1, TRUE);
+  BswM_UpdateTimer(partitionIdx, BSWM_TMR_ESH_SelfRunRequestTimer, 10uL);
   BswM_ESH_OnEnterRun();
   BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_RUN;
   BswM_RequestMode(BSWM_GENERIC_ESH_State, BSWM_GENERICVALUE_ESH_State_ESH_RUN);
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
+ *  BswM_ActionList_ESH_AL_PostRunToPrepShutdown
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_PostRunToPrepShutdown(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  Dem_Shutdown();
+  /*lint -restore */
+  BswM_RequestMode(BSWM_GENERIC_ESH_DemInitStatus, BSWM_GENERICVALUE_ESH_DemInitStatus_DEM_NOT_INITIALIZED);
+  BswM_ESH_OnEnterPrepShutdown();
+  BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_SHUTDOWN;
+  BswM_RequestMode(BSWM_GENERIC_ESH_State, BSWM_GENERICVALUE_ESH_State_ESH_PREP_SHUTDOWN);
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
   return E_OK;
 }/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -1324,8 +1404,8 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ESH_PostRunToP
  *********************************************************************************************************************/
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_PostRunToRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
-  BswM_UpdateTimer(partitionIdx, BSWM_TMR_ESH_SelfRunRequestTimer, 10uL);
   ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan10, TRUE);
+  BswM_UpdateTimer(partitionIdx, BSWM_TMR_ESH_SelfRunRequestTimer, 10uL);
   BswM_ESH_OnEnterRun();
   BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_RUN;
   BswM_RequestMode(BSWM_GENERIC_ESH_State, BSWM_GENERICVALUE_ESH_State_ESH_RUN);
@@ -1338,6 +1418,7 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_PostRunToRun(B
  *********************************************************************************************************************/
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ExitPostRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
+  ESH_Dem_PostRunRequested();
   (void)BswM_Action_RuleHandler(BSWM_ID_RULE_ESH_PostRunNested, partitionIdx);
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
   return E_OK;
@@ -1402,11 +1483,15 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_INIT_AL_Initialize(Bs
   EthTSyn_Init(EthTSyn_Config_Ptr);
   /*lint -restore */
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  NvM_Init();
+  /*lint -restore */
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   Sd_Init(Sd_Config_Ptr);
   /*lint -restore */
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   StbM_Init(StbM_Config_Ptr);
   /*lint -restore */
+  BswM_INIT_NvMReadAll();
   BswM_AL_SetProgrammableInterrupts();
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   Rte_Start();
@@ -1416,6 +1501,9 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_INIT_AL_Initialize(Bs
   /*lint -restore */
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   Dcm_Init(NULL_PTR);
+  /*lint -restore */
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  Dem_Init(Dem_Config_Ptr);
   /*lint -restore */
   BswM_Action_EthTrcvDebug();
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
@@ -1763,6 +1851,19 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_SDC_AL_ApplRequest_C_
 }/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
 
 /**********************************************************************************************************************
+ *  BswM_ActionList_ESH_AL_DemInit
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_DemInit(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  Dem_Init(Dem_Config_Ptr);
+  /*lint -restore */
+  BswM_RequestMode(BSWM_GENERIC_ESH_DemInitStatus, BSWM_GENERICVALUE_ESH_DemInitStatus_DEM_INITIALIZED);
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
  *  BswMRuleFunctions
  *********************************************************************************************************************/
 
@@ -1773,7 +1874,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_RunToPostRun(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_RunToPostRunTransition. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if(((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_RUN)) && (((Request_ESH_RunRequest_0_requestedMode == RELEASED) && (Request_ESH_RunRequest_1_requestedMode == RELEASED)) && (BswM_GetTimerState(0, 0u) == BSWM_TIMER_EXPIRED)))
+  if(((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_RUN)) && (((Request_ESH_RunRequest_0_requestedMode == RELEASED) && (Request_ESH_RunRequest_1_requestedMode == RELEASED)) && (BswM_GetTimerState(0, 0u) == BSWM_TIMER_EXPIRED)))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_RunToPostRun. */
     retVal = BSWM_ID_AL_ESH_AL_RunToPostRun;
@@ -1790,7 +1891,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WaitToShutdown(BswM_PC
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WaitForNvMToShutdown. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && (EcuM_GetValidatedWakeupEvents() == 0u))
+  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && (EcuM_GetValidatedWakeupEvents() == 0u))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WaitForNvMToShutdown. */
     retVal = BSWM_ID_AL_ESH_AL_WaitForNvMToShutdown;
@@ -1807,7 +1908,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WakeupToPrep(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WakeupToPrepShutdown. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && (EcuM_GetPendingWakeupEvents() == 0u) && (EcuM_GetValidatedWakeupEvents() == 0u) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
+  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && (EcuM_GetPendingWakeupEvents() == 0u) && (EcuM_GetValidatedWakeupEvents() == 0u) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WakeupToPrep. */
     retVal = BSWM_ID_AL_ESH_AL_WakeupToPrep;
@@ -1824,7 +1925,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WaitToWakeup(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WaitForNvMToWakeup. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && (EcuM_GetValidatedWakeupEvents() != 0u))
+  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && (EcuM_GetValidatedWakeupEvents() != 0u))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WaitForNvMWakeup. */
     retVal = BSWM_ID_AL_ESH_AL_WaitForNvMWakeup;
@@ -1841,7 +1942,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WakeupToRun(BswM_PCPar
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WakeupToRun. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && (EcuM_GetValidatedWakeupEvents() != 0u) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
+  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && (EcuM_GetValidatedWakeupEvents() != 0u) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WakeupToRun. */
     retVal = BSWM_ID_AL_ESH_AL_WakeupToRun;
@@ -1858,7 +1959,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_InitToWakeup(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_InitToWakeup. */
-  if(BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_INIT)
+  if(BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_INIT)
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_InitToWakeup. */
     retVal = BSWM_ID_AL_ESH_AL_InitToWakeup;
@@ -1875,7 +1976,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PostRunToPrepNested(Bs
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_Dem_PostRunRequested. */
-  if((Request_ESH_PostRunRequest_0_requestedMode == RELEASED) && (Request_ESH_PostRunRequest_1_requestedMode == RELEASED))
+  if(((Request_ESH_PostRunRequest_0_requestedMode == RELEASED) && (Request_ESH_PostRunRequest_1_requestedMode == RELEASED)) && (BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_DemPostRunRequested_FALSE))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_PostRunToPrepShutdown. */
     retVal = BSWM_ID_AL_ESH_AL_PostRunToPrepShutdown;
@@ -1913,7 +2014,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PostRun(BswM_PCPartiti
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_PostRun. */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_POSTRUN))
+  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_POSTRUN))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_ExitPostRun. */
     retVal = BSWM_ID_AL_ESH_AL_ExitPostRun;
@@ -1930,7 +2031,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PrepToWait(BswM_PCPart
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_PrepShutdownToWaitForNvM. */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_PREP_SHUTDOWN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_SHUTDOWN))
+  if((BswM_GetGenericState(2, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_PREP_SHUTDOWN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_SHUTDOWN))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_PrepShutdownToWaitForNvM. */
     retVal = BSWM_ID_AL_ESH_AL_PrepShutdownToWaitForNvM;
@@ -2429,6 +2530,23 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_SDC_ApplRequest_C_SdCLient
       retVal = BSWM_ID_AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo;
     }
   }
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return retVal;
+}
+
+/**********************************************************************************************************************
+ *  BswM_Rule_ESH_DemInit
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_DemInit(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
+  /* Evaluate logical expression ESH_LE_DemNotInitialized. */
+  if(BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_DemInitStatus_DEM_NOT_INITIALIZED)
+  {
+    /* Return conditional action list BswM_ActionList_ESH_AL_DemInit. */
+    retVal = BSWM_ID_AL_ESH_AL_DemInit;
+  }
+  /* No false action list configured. */
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
   return retVal;
 }

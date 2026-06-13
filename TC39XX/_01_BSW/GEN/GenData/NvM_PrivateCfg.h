@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_PrivateCfg.h
- *   Generation Time: 2026-05-01 21:08:32
+ *   Generation Time: 2026-06-13 17:35:01
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -329,7 +329,7 @@ extern CONST(uint16, NVM_PRIVATE_CONST) NvM_CrcQueueSize_u16;
  *********************************************************************************************************************/
 #include "Crc.h" /* always needed, since the config Block has a CRC */
 #define NVM_USE_CRC16 STD_ON 
-#define NVM_USE_CRC32 STD_OFF 
+#define NVM_USE_CRC32 STD_ON 
 
 
 /**********************************************************************************************************************

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Callout_Stubs.c
- *   Generation Time: 2026-01-18 21:32:33
+ *   Generation Time: 2026-06-13 19:00:23
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -187,6 +187,59 @@ FUNC(void, BSWM_CODE) BswM_ESH_OnEnterWakeup(void)
  *********************************************************************************************************************/
 
 } /* End of BswM_ESH_OnEnterWakeup */
+
+
+FUNC(void, BSWM_CODE) BswM_INIT_NvMReadAll(void)
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           <USERBLOCK BswM_INIT_NvMReadAll>                   DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+    MemIf_StatusType feeState = MEMIF_UNINIT;
+    do {
+        Fls_17_Dmu_MainFunction();
+        Fee_MainFunction();
+    } while (feeState != MEMIF_IDLE);
+   
+    NvM_RequestResultType nvmStatus = NVM_REQ_NOT_OK;
+    NvM_ReadAll();
+
+    do {
+        Fls_17_Dmu_MainFunction();
+        Fee_MainFunction();
+        // NvM_MemIfMemoryCore_MainFunction();
+        NvM_MainFunction();
+        NvM_GetErrorStatus(0, &nvmStatus);
+    } while (NVM_REQ_PENDING == nvmStatus);
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+} /* End of BswM_INIT_NvMReadAll */
+
+
+FUNC(void, BSWM_CODE) ESH_Dem_PostRunRequested(void)
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           <USERBLOCK ESH_Dem_PostRunRequested>               DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+  boolean isRequested = FALSE;
+  (void)Dem_PostRunRequested(&isRequested); /* SBSW_BSWM_FCTCALL_LOCALVAR */
+  if (isRequested == TRUE)
+  {
+    BswM_RequestMode(BSWM_GENERIC_ESH_DemPostRunRequested, BSWM_GENERICVALUE_ESH_DemPostRunRequested_TRUE);
+  }
+  else
+  {
+    BswM_RequestMode(BSWM_GENERIC_ESH_DemPostRunRequested, BSWM_GENERICVALUE_ESH_DemPostRunRequested_FALSE);
+  }
+  
+} /* End of ESH_Dem_PostRunRequested */
 
 
 

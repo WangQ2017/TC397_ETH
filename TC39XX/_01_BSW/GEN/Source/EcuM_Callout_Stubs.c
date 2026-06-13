@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EcuM_Callout_Stubs.c
- *   Generation Time: 2025-12-20 18:14:00
+ *   Generation Time: 2026-06-13 19:29:50
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -82,9 +82,12 @@
 #include "TcpIp.h" 
 #include "EthTrcv_30_Tja1100.h" 
 #include "Nm.h" 
+#include "Dem.h" 
 #include "Mcu.h" 
 #include "Port.h" 
 #include "EthTrcv_Callout.h" 
+#include "Fls_17_Dmu.h" 
+#include "Fee.h" 
 
 
 /**********************************************************************************************************************
@@ -260,6 +263,8 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitZero(void)
     TcpIp_InitMemory();
     EthTrcv_30_Tja1100_InitMemory();
     Nm_InitMemory();
+    Dem_PreInit( Dem_Config_Ptr );
+    Dem_InitMemory();
   }
 
 /**********************************************************************************************************************
@@ -286,6 +291,8 @@ FUNC(void, ECUM_CODE) EcuM_AL_DriverInitOne(void)
     Port_Init( &Port_Config );
     PduR_PreInit( PduR_Config_Ptr );
     EthTrcv_PhyReset();
+    Fls_17_Dmu_Init( &Fls_17_Dmu_Config );
+    Fee_Init( &Fee_Config );
   }
 
 /**********************************************************************************************************************

@@ -33,6 +33,21 @@
  * Data type definitions
  *********************************************************************************************************************/
 
+# define Rte_TypeDef_DataArrayType_uint8_8
+typedef uint8 DataArrayType_uint8_8[8];
+
+# define Rte_TypeDef_Dcm_Data32ByteType
+typedef uint8 Dcm_Data32ByteType[32];
+
+# define Rte_TypeDef_Dcm_Data64ByteType
+typedef uint8 Dcm_Data64ByteType[64];
+
+# define Rte_TypeDef_Dcm_Data8ByteType
+typedef uint8 Dcm_Data8ByteType[8];
+
+# define Rte_TypeDef_Dem_MaxDataValueType
+typedef uint8 Dem_MaxDataValueType[8];
+
 # define Rte_TypeDef_StbM_OffsetRecordTableHeadType
 typedef struct
 {
@@ -82,6 +97,18 @@ typedef uint8 ComM_InhibitionStatusType;
 
 # define Rte_TypeDef_ComM_UserHandleType
 typedef uint16 ComM_UserHandleType;
+
+# define Rte_TypeDef_Dem_DTCGroupType
+typedef uint32 Dem_DTCGroupType;
+
+# define Rte_TypeDef_Dem_DTCStatusMaskType
+typedef uint8 Dem_DTCStatusMaskType;
+
+# define Rte_TypeDef_Dem_EventIdType
+typedef uint16 Dem_EventIdType;
+
+# define Rte_TypeDef_Dem_RatioIdType
+typedef uint16 Dem_RatioIdType;
 
 # define Rte_TypeDef_EcuM_TimeType
 typedef uint32 EcuM_TimeType;
@@ -140,6 +167,9 @@ typedef uint8 Dcm_ConfirmationStatusType;
 # define Rte_TypeDef_Dcm_DiagnosticSessionControlType
 typedef uint8 Dcm_DiagnosticSessionControlType;
 
+# define Rte_TypeDef_Dcm_EcuResetType
+typedef uint8 Dcm_EcuResetType;
+
 # define Rte_TypeDef_Dcm_NegativeResponseCodeType
 typedef uint8 Dcm_NegativeResponseCodeType;
 
@@ -152,8 +182,59 @@ typedef uint8 Dcm_ProtocolType;
 # define Rte_TypeDef_Dcm_RequestKindType
 typedef uint8 Dcm_RequestKindType;
 
+# define Rte_TypeDef_Dcm_SecLevelType
+typedef uint8 Dcm_SecLevelType;
+
 # define Rte_TypeDef_Dcm_SesCtrlType
 typedef uint8 Dcm_SesCtrlType;
+
+# define Rte_TypeDef_Dem_DTCFormatType
+typedef uint8 Dem_DTCFormatType;
+
+# define Rte_TypeDef_Dem_DTCKindType
+typedef uint8 Dem_DTCKindType;
+
+# define Rte_TypeDef_Dem_DTCOriginType
+typedef uint16 Dem_DTCOriginType;
+
+# define Rte_TypeDef_Dem_DTCSeverityType
+typedef uint8 Dem_DTCSeverityType;
+
+# define Rte_TypeDef_Dem_DTRControlType
+typedef uint8 Dem_DTRControlType;
+
+# define Rte_TypeDef_Dem_DebounceResetStatusType
+typedef uint8 Dem_DebounceResetStatusType;
+
+# define Rte_TypeDef_Dem_DebouncingStateType
+typedef uint8 Dem_DebouncingStateType;
+
+# define Rte_TypeDef_Dem_EventStatusType
+typedef uint8 Dem_EventStatusType;
+
+# define Rte_TypeDef_Dem_IndicatorStatusType
+typedef uint8 Dem_IndicatorStatusType;
+
+# define Rte_TypeDef_Dem_InitMonitorReasonType
+typedef uint8 Dem_InitMonitorReasonType;
+
+# define Rte_TypeDef_Dem_IumprDenomCondIdType
+typedef uint8 Dem_IumprDenomCondIdType;
+
+# define Rte_TypeDef_Dem_IumprDenomCondStatusType
+typedef uint8 Dem_IumprDenomCondStatusType;
+
+# define Rte_TypeDef_Dem_IumprReadinessGroupType
+typedef uint8 Dem_IumprReadinessGroupType;
+
+# define Rte_TypeDef_Dem_MonitorStatusType
+typedef uint8 Dem_MonitorStatusType;
+
+# define Rte_TypeDef_Dem_OperationCycleStateType
+typedef uint8 Dem_OperationCycleStateType;
+
+# define Rte_TypeDef_Dem_UdsStatusByteType
+typedef uint8 Dem_UdsStatusByteType;
 
 # define Rte_TypeDef_EcuM_BootTargetType
 typedef uint8 EcuM_BootTargetType;
@@ -268,11 +349,11 @@ typedef void * dtRef_VOID;
 #  define Rte_TypeDef_dtRef_const_VOID
 typedef const void * dtRef_const_VOID;
 
+#  define Rte_TypeDef_Dem_OperationCycleIdType
+typedef uint8 Dem_OperationCycleIdType;
+
 #  define Rte_TypeDef_NvM_BlockIdType
 typedef uint16 NvM_BlockIdType;
-
-#  define Rte_TypeDef_Dem_UdsStatusByteType
-typedef uint8 Dem_UdsStatusByteType;
 
 #  define Rte_TypeDef_NvM_RequestResultType
 typedef uint8 NvM_RequestResultType;

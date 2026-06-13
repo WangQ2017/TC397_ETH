@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2026-05-01 21:14:54
+ *   Generation Time: 2026-06-13 19:20:10
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -48,6 +48,8 @@
 #include "BswM_Nm.h"
 #include "Rte_BswM_Type.h"
 #include "EthTrcv_30_Tja1100_Hw_Int.h" 
+#include "Dem.h" 
+#include "MemIf.h" 
 
 
 
@@ -154,47 +156,54 @@
 /* -----------------------------------------------------------------------------
     &&&~ RULE DEFINES
  ----------------------------------------------------------------------------- */
-#define BswMConf_BswMRule_ESH_InitToWakeup (0) 
-#define BswMConf_BswMRule_ESH_PostRun (1) 
-#define BswMConf_BswMRule_ESH_PostRunNested (2) 
-#define BswMConf_BswMRule_ESH_PostRunToPrepNested (3) 
-#define BswMConf_BswMRule_ESH_PrepToWait (4) 
-#define BswMConf_BswMRule_ESH_RunToPostRun (5) 
-#define BswMConf_BswMRule_ESH_WaitToShutdown (6) 
-#define BswMConf_BswMRule_ESH_WaitToWakeup (7) 
-#define BswMConf_BswMRule_ESH_WakeupToPrep (8) 
-#define BswMConf_BswMRule_ESH_WakeupToRun (9) 
-#define BswMConf_BswMRule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed (10) 
-#define BswMConf_BswMRule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed (11) 
-#define BswMConf_BswMRule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo (12) 
-#define BswMConf_BswMRule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo (13) 
-#define BswMConf_BswMRule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus (14) 
-#define BswMConf_BswMRule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus (15) 
-#define BswMConf_BswMRule_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo (16) 
-#define BswMConf_BswMRule_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState (17) 
-#define BswMConf_BswMRule_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState (18) 
-#define BswMConf_BswMRule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed (19) 
-#define BswMConf_BswMRule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed (20) 
-#define BswMConf_BswMRule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo (21) 
-#define BswMConf_BswMRule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo (22) 
-#define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus (23) 
-#define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus (24) 
-#define BswMConf_BswMRule_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo (25) 
-#define BswMConf_BswMRule_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState (26) 
+#define BswMConf_BswMRule_ESH_DemInit (0) 
+#define BswMConf_BswMRule_ESH_InitToWakeup (1) 
+#define BswMConf_BswMRule_ESH_PostRun (2) 
+#define BswMConf_BswMRule_ESH_PostRunNested (3) 
+#define BswMConf_BswMRule_ESH_PostRunToPrepNested (4) 
+#define BswMConf_BswMRule_ESH_PrepToWait (5) 
+#define BswMConf_BswMRule_ESH_RunToPostRun (6) 
+#define BswMConf_BswMRule_ESH_WaitToShutdown (7) 
+#define BswMConf_BswMRule_ESH_WaitToWakeup (8) 
+#define BswMConf_BswMRule_ESH_WakeupToPrep (9) 
+#define BswMConf_BswMRule_ESH_WakeupToRun (10) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed (11) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed (12) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo (13) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo (14) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus (15) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus (16) 
+#define BswMConf_BswMRule_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo (17) 
+#define BswMConf_BswMRule_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState (18) 
+#define BswMConf_BswMRule_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState (19) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed (20) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed (21) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo (22) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdCLientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo (23) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus (24) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus (25) 
+#define BswMConf_BswMRule_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo (26) 
+#define BswMConf_BswMRule_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState (27) 
 
 
 /* -----------------------------------------------------------------------------
     &&&~ GENERIC DEFINES
  ----------------------------------------------------------------------------- */
-#define BSWM_GENERIC_ESH_State 230u 
+#define BSWM_GENERIC_ESH_DemInitStatus       231u 
+#define BSWM_GENERIC_ESH_DemPostRunRequested 233u 
+#define BSWM_GENERIC_ESH_State               230u 
 
-#define BSWM_GENERICVALUE_ESH_State_ESH_INIT          0x0000u 
-#define BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN      0x0002u 
-#define BSWM_GENERICVALUE_ESH_State_ESH_PREP_SHUTDOWN 0x0003u 
-#define BSWM_GENERICVALUE_ESH_State_ESH_RUN           0x0001u 
-#define BSWM_GENERICVALUE_ESH_State_ESH_SHUTDOWN      0x0005u 
-#define BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM  0x0004u 
-#define BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP        0x0006u 
+#define BSWM_GENERICVALUE_ESH_DemInitStatus_DEM_INITIALIZED     0x0000u 
+#define BSWM_GENERICVALUE_ESH_DemInitStatus_DEM_NOT_INITIALIZED 0x0001u 
+#define BSWM_GENERICVALUE_ESH_DemPostRunRequested_FALSE         0x0001u 
+#define BSWM_GENERICVALUE_ESH_DemPostRunRequested_TRUE          0x0000u 
+#define BSWM_GENERICVALUE_ESH_State_ESH_INIT                    0x0000u 
+#define BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN                0x0002u 
+#define BSWM_GENERICVALUE_ESH_State_ESH_PREP_SHUTDOWN           0x0003u 
+#define BSWM_GENERICVALUE_ESH_State_ESH_RUN                     0x0001u 
+#define BSWM_GENERICVALUE_ESH_State_ESH_SHUTDOWN                0x0005u 
+#define BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM            0x0004u 
+#define BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP                  0x0006u 
 
 
 /* -----------------------------------------------------------------------------
@@ -637,16 +646,16 @@
 */ 
 #define BSWM_ISDEF_FCTPTROFACTIONLISTS                                                              STD_OFF
 #define BSWM_ISDEF_RULESIDXOFDEFERREDRULES                                                          STD_OFF
-#define BSWM_ISDEF_EXTERNALIDOFGENERICMAPPING                                                       STD_ON
-#define BSWM_ISDEF_IMMEDIATEUSERENDIDXOFGENERICMAPPING                                              STD_ON
-#define BSWM_ISDEF_IMMEDIATEUSERSTARTIDXOFGENERICMAPPING                                            STD_ON
-#define BSWM_ISDEF_IMMEDIATEUSERUSEDOFGENERICMAPPING                                                STD_ON
-#define BSWM_ISDEF_INITVALUEOFGENERICMAPPING                                                        STD_ON
-#define BSWM_ISDEF_MASKEDBITSOFIMMEDIATEUSER                                                        STD_ON
-#define BSWM_ISDEF_ONINITOFIMMEDIATEUSER                                                            STD_ON
-#define BSWM_ISDEF_RULESINDENDIDXOFIMMEDIATEUSER                                                    STD_ON
-#define BSWM_ISDEF_RULESINDSTARTIDXOFIMMEDIATEUSER                                                  STD_ON
-#define BSWM_ISDEF_RULESINDUSEDOFIMMEDIATEUSER                                                      STD_ON
+#define BSWM_ISDEF_EXTERNALIDOFGENERICMAPPING                                                       STD_OFF
+#define BSWM_ISDEF_IMMEDIATEUSERENDIDXOFGENERICMAPPING                                              STD_OFF
+#define BSWM_ISDEF_IMMEDIATEUSERSTARTIDXOFGENERICMAPPING                                            STD_OFF
+#define BSWM_ISDEF_IMMEDIATEUSERUSEDOFGENERICMAPPING                                                STD_OFF
+#define BSWM_ISDEF_INITVALUEOFGENERICMAPPING                                                        STD_OFF
+#define BSWM_ISDEF_MASKEDBITSOFIMMEDIATEUSER                                                        STD_OFF
+#define BSWM_ISDEF_ONINITOFIMMEDIATEUSER                                                            STD_OFF
+#define BSWM_ISDEF_RULESINDENDIDXOFIMMEDIATEUSER                                                    STD_OFF
+#define BSWM_ISDEF_RULESINDSTARTIDXOFIMMEDIATEUSER                                                  STD_OFF
+#define BSWM_ISDEF_RULESINDUSEDOFIMMEDIATEUSER                                                      STD_OFF
 #define BSWM_ISDEF_INITGENVARANDINITAL                                                              STD_OFF
 #define BSWM_ISDEF_MODENOTIFICATIONFCT                                                              STD_OFF
 #define BSWM_ISDEF_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                       STD_OFF
@@ -701,16 +710,16 @@
 */ 
 #define BSWM_EQ2_FCTPTROFACTIONLISTS                                                                
 #define BSWM_EQ2_RULESIDXOFDEFERREDRULES                                                            
-#define BSWM_EQ2_EXTERNALIDOFGENERICMAPPING                                                         BSWM_GENERIC_ESH_State
-#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFGENERICMAPPING                                                1u
-#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFGENERICMAPPING                                              0u
-#define BSWM_EQ2_IMMEDIATEUSERUSEDOFGENERICMAPPING                                                  TRUE
-#define BSWM_EQ2_INITVALUEOFGENERICMAPPING                                                          BSWM_GENERICVALUE_ESH_State_ESH_INIT
-#define BSWM_EQ2_MASKEDBITSOFIMMEDIATEUSER                                                          0x03u
-#define BSWM_EQ2_ONINITOFIMMEDIATEUSER                                                              TRUE
-#define BSWM_EQ2_RULESINDENDIDXOFIMMEDIATEUSER                                                      8u
-#define BSWM_EQ2_RULESINDSTARTIDXOFIMMEDIATEUSER                                                    0u
-#define BSWM_EQ2_RULESINDUSEDOFIMMEDIATEUSER                                                        TRUE
+#define BSWM_EQ2_EXTERNALIDOFGENERICMAPPING                                                         
+#define BSWM_EQ2_IMMEDIATEUSERENDIDXOFGENERICMAPPING                                                
+#define BSWM_EQ2_IMMEDIATEUSERSTARTIDXOFGENERICMAPPING                                              
+#define BSWM_EQ2_IMMEDIATEUSERUSEDOFGENERICMAPPING                                                  
+#define BSWM_EQ2_INITVALUEOFGENERICMAPPING                                                          
+#define BSWM_EQ2_MASKEDBITSOFIMMEDIATEUSER                                                          
+#define BSWM_EQ2_ONINITOFIMMEDIATEUSER                                                              
+#define BSWM_EQ2_RULESINDENDIDXOFIMMEDIATEUSER                                                      
+#define BSWM_EQ2_RULESINDSTARTIDXOFIMMEDIATEUSER                                                    
+#define BSWM_EQ2_RULESINDUSEDOFIMMEDIATEUSER                                                        
 #define BSWM_EQ2_INITGENVARANDINITAL                                                                
 #define BSWM_EQ2_MODENOTIFICATIONFCT                                                                
 #define BSWM_EQ2_PCPARTITIONCONFIGIDXOFPARTITIONIDENTIFIERS                                         
@@ -1109,13 +1118,18 @@ typedef struct sBswM_DeferredRulesType
 /**   \brief  type used in BswM_GenericMapping */
 typedef struct sBswM_GenericMappingType
 {
-  uint8 BswM_GenericMappingNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  BswM_ExternalIdOfGenericMappingType ExternalIdOfGenericMapping;  /**< External id of BswMGenericRequest. */
+  BswM_ImmediateUserEndIdxOfGenericMappingType ImmediateUserEndIdxOfGenericMapping;  /**< the end index of the 0:n relation pointing to BswM_ImmediateUser */
+  BswM_ImmediateUserStartIdxOfGenericMappingType ImmediateUserStartIdxOfGenericMapping;  /**< the start index of the 0:n relation pointing to BswM_ImmediateUser */
+  BswM_ModeType InitValueOfGenericMapping;  /**< Initialization value of port. */
 } BswM_GenericMappingType;
 
 /**   \brief  type used in BswM_ImmediateUser */
 typedef struct sBswM_ImmediateUserType
 {
-  uint8 BswM_ImmediateUserNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  BswM_MaskedBitsOfImmediateUserType MaskedBitsOfImmediateUser;  /**< contains bitcoded the boolean data of BswM_OnInitOfImmediateUser, BswM_RulesIndUsedOfImmediateUser */
+  BswM_RulesIndEndIdxOfImmediateUserType RulesIndEndIdxOfImmediateUser;  /**< the end index of the 0:n relation pointing to BswM_RulesInd */
+  BswM_RulesIndStartIdxOfImmediateUserType RulesIndStartIdxOfImmediateUser;  /**< the start index of the 0:n relation pointing to BswM_RulesInd */
 } BswM_ImmediateUserType;
 
 /**   \brief  type used in BswM_PartitionIdentifiers */
@@ -1210,6 +1224,7 @@ typedef struct BswM_ActionListQueueStructSTag
   BswM_ActionListQueueType AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed;
   BswM_ActionListQueueType AL_SDC_AL_ApplRelease_C_SdCLientService_0xC3CD_VechicleInfo;
   BswM_ActionListQueueType AL_SDC_AL_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo;
+  BswM_ActionListQueueType AL_ESH_AL_DemInit;
 } BswM_ActionListQueueStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_RuleStates in the partition context  */
@@ -1242,6 +1257,7 @@ typedef struct BswM_RuleStatesStructSTag
   BswM_RuleStatesType R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState;
   BswM_RuleStatesType R_SDC_ApplRequest_C_SdCLientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed;
   BswM_RuleStatesType R_SDC_ApplRequest_C_SdCLientService_0xC3CD_VechicleInfo;
+  BswM_RuleStatesType R_ESH_DemInit;
 } BswM_RuleStatesStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_TimerState in the partition context  */
@@ -1268,14 +1284,14 @@ typedef struct BswM_TimerValueStructSTag
 /**   \brief  type to access BswM_ActionListQueue in an index and symbol based style. */
 typedef union BswM_ActionListQueueUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_ActionListQueueType raw[46];
+  BswM_ActionListQueueType raw[47];
   BswM_ActionListQueueStructSType str;
 } BswM_ActionListQueueUType;
 
 /**   \brief  type to access BswM_RuleStates in an index and symbol based style. */
 typedef union BswM_RuleStatesUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_RuleStatesType raw[27];
+  BswM_RuleStatesType raw[28];
   BswM_RuleStatesStructSType str;
 } BswM_RuleStatesUType;
 
@@ -1509,6 +1525,8 @@ extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterRun(void);
 extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterShutdown(void);
 extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterWaitForNvm(void);
 extern FUNC(void, BSWM_CODE) BswM_ESH_OnEnterWakeup(void);
+extern FUNC(void, BSWM_CODE) BswM_INIT_NvMReadAll(void);
+extern FUNC(void, BSWM_CODE) ESH_Dem_PostRunRequested(void);
 /* PRQA L:CALLOUTDECLARATIONS */
 
 /* -----------------------------------------------------------------------------

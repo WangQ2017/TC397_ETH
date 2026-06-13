@@ -63,9 +63,9 @@ Container : CRCGeneral
 */
 
 /*Autosar specific information*/
-#define CRC_AR_RELEASE_MAJOR_VERSION  (4U)
-#define CRC_AR_RELEASE_MINOR_VERSION  (2U)
-#define CRC_AR_RELEASE_REVISION_VERSION  (2U)
+// #define CRC_CFG_RELEASE_MAJOR_VERSION  (4U)
+// #define CRC_AR_RELEASE_MINOR_VERSION  (2U)
+// #define CRC_AR_RELEASE_REVISION_VERSION  (2U)
 
 /*Release specific information*/
 #define CRC_CFG_MAJOR_VERSION  (10U)

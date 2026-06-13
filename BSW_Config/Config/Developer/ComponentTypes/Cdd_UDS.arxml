@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="F079C6CB-4661-40D9-899F-DD405F22B640">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="5500E115-56B8-43EF-8CBD-F7039CD57206">
+          <SHORT-NAME>Cdd_UDS</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="5835C1F4-7723-4117-8466-8B99B7E0684E">
+              <SHORT-NAME>CSDataServices_Data_Did_0x16E_MCU_Info</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/CSDataServices_Data_Did_0x16E_MCU_Info/ReadData</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dem_swc/Interfaces/CSDataServices_Data_Did_0x16E_MCU_Info</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="362D41FC-F93A-41DF-926F-D7452776CF47">
+              <SHORT-NAME>DID_0x16F_DataServices_Version_Info</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Version_Info/WriteData</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Version_Info/ConditionCheckRead</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Version_Info/ReadData</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DataServices_Version_Info</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="76230BD4-BFDF-4614-A0FE-9B2591BE5BB1">
+              <SHORT-NAME>RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_Get_Link_Quality_Start/RequestResults</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_Get_Link_Quality_Start/Start</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_Get_Link_Quality_Start</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="F528B599-94DC-4D94-9E33-4C0D219C270A">
+              <SHORT-NAME>Cdd_UDS_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <OPERATION-INVOKED-EVENT UUID="E6548F89-81C5-4D97-9D4C-2BC186247387">
+                  <SHORT-NAME>OIT_Runnable_CSDataServices_Data_Did_0x16E_MCU_Info_ReadData</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/CSDataServices_Data_Did_0x16E_MCU_Info_ReadData</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/CSDataServices_Data_Did_0x16E_MCU_Info</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dem_swc/Interfaces/CSDataServices_Data_Did_0x16E_MCU_Info/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="5F0F4BC1-2745-4C69-A600-CB81F3A6A80D">
+                  <SHORT-NAME>OIT_Runnable_DID_0x16F_DataServices_Version_Info_ConditionCheckRead</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/DID_0x16F_DataServices_Version_Info_ConditionCheckRead</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/DID_0x16F_DataServices_Version_Info</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Version_Info/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="39CE2E2D-A81F-4CCB-828A-9385C221D9EA">
+                  <SHORT-NAME>OIT_Runnable_DID_0x16F_DataServices_Version_Info_ReadData</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/DID_0x16F_DataServices_Version_Info_ReadData</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/DID_0x16F_DataServices_Version_Info</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Version_Info/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="4F0A2D93-B173-4158-B518-745160894270">
+                  <SHORT-NAME>OIT_Runnable_DID_0x16F_DataServices_Version_Info_WriteData</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/DID_0x16F_DataServices_Version_Info_WriteData</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/DID_0x16F_DataServices_Version_Info</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_Version_Info/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="C5B4A4C3-05B5-4C43-A7B1-6BFD0814C677">
+                  <SHORT-NAME>OIT_Runnable_RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_Start</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_Get_Link_Quality_Start/Start</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="6AC64ED8-FE78-47C9-9CAA-3E24967CFE41">
+                  <SHORT-NAME>OIT_Runnable_RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_RequestResults</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_RequestResults</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_Get_Link_Quality_Start/RequestResults</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <INIT-EVENT UUID="81860CE5-AAD9-4A21-B56B-5F6D5E5D9F69">
+                  <SHORT-NAME>Cdd_UDS_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/Cdd_UDS_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="EF01CCBF-5432-4DB5-9CE8-BF1B7C0B3722">
+                  <SHORT-NAME>CSDataServices_Data_Did_0x16E_MCU_Info_ReadData</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="105E02BE-7A99-4F5C-B42A-1BB6C424D724">
+                  <SHORT-NAME>DID_0x16F_DataServices_Version_Info_ConditionCheckRead</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="3A5B355D-F7E5-49C2-BCBF-3011B8BFFABB">
+                  <SHORT-NAME>DID_0x16F_DataServices_Version_Info_ReadData</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="23A1C8EB-2AC2-43E5-85B7-E055B3C077ED">
+                  <SHORT-NAME>DID_0x16F_DataServices_Version_Info_WriteData</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="DC301D97-EF2C-4777-AD89-ADA81446CB59">
+                  <SHORT-NAME>RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="B871C747-6449-4A36-AEB4-60ACDC9FCEFE">
+                  <SHORT-NAME>RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_RequestResults</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="2DAFA21A-75F1-4B1A-A43E-6E08E8AB2755">
+                  <SHORT-NAME>Cdd_UDS_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="FD3FA8D5-E3A2-42BF-A164-3F064DCE93DC">
+          <SHORT-NAME>Cdd_UDS_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

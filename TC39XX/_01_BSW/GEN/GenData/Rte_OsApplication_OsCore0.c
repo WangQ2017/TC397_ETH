@@ -41,8 +41,11 @@
 #include "Rte_Cdd_Core5.h"
 #include "Rte_Cdd_Log.h"
 #include "Rte_Cdd_Nm.h"
+#include "Rte_Cdd_UDS.h"
 #include "Rte_ComM.h"
 #include "Rte_Dcm.h"
+#include "Rte_DemMaster_0.h"
+#include "Rte_DemSatellite_0.h"
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
 #include "Rte_NvM.h"
@@ -58,6 +61,7 @@
 #include "SchM_ComM.h"
 #include "SchM_Crc.h"
 #include "SchM_Dcm.h"
+#include "SchM_Dem.h"
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
 #include "SchM_DoIP.h"
@@ -429,6 +433,71 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_S_SdServerService_0xC3C
 
 
 /**********************************************************************************************************************
+ * Internal C/S connections
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_Level_3_CompareKey(P2CONST(Dcm_Data64ByteType, AUTOMATIC, RTE_DCM_APPL_DATA) Key, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Key = Key;
+  OpStatus = OpStatus;
+  ErrorCode = ErrorCode;
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_Level_3_GetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_DCM_APPL_VAR) AttemptCounter) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  AttemptCounter = AttemptCounter;
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_Level_3_GetSeed(Dcm_OpStatusType OpStatus, P2VAR(Dcm_Data32ByteType, AUTOMATIC, RTE_DCM_APPL_VAR) Seed, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_DCM_APPL_VAR) ErrorCode) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  Seed = Seed;
+  ErrorCode = ErrorCode;
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_Dcm_SecurityAccess_Level_3_SetSecurityAttemptCounter(Dcm_OpStatusType OpStatus, uint8 AttemptCounter) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  OpStatus = OpStatus;
+  AttemptCounter = AttemptCounter;
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemMaster_0_CBFaultDetectCtr_DTC_0xDDD094_Event_GetFaultDetectionCounter(P2VAR(sint8, AUTOMATIC, RTE_DEMMASTER_0_APPL_VAR) FaultDetectionCounter) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  FaultDetectionCounter = FaultDetectionCounter;
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Call_DemSatellite_0_CBReadData_Data_Did_0x16E_MCU_Info_ReadData(P2VAR(DataArrayType_uint8_8, AUTOMATIC, RTE_DEMSATELLITE_0_APPL_VAR) Data) /* PRQA S 1505, 3206, 3673 */ /* MD_MSR_Rule8.7, MD_Rte_3206, MD_Rte_Qac */
+{
+  Std_ReturnType ret = RTE_E_UNCONNECTED; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  Data = Data;
+
+  return ret;
+}
+
+
+/**********************************************************************************************************************
  * Mode Switch API (Rte_Switch)
  *********************************************************************************************************************/
 
@@ -547,10 +616,39 @@ FUNC(BswM_ESH_Mode, RTE_CODE) Rte_Mode_BswM_Notification_ESH_ModeNotification_Bs
 
 
 /**********************************************************************************************************************
+ * Transmission/Mode Switch Acknowledgement handling (Rte_Feedback/Rte_SwitchAck)
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_SwitchAck_Dcm_DcmEcuReset_DcmEcuReset(void)
+{
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+
+/**********************************************************************************************************************
  * Mode Switch API (Rte_Switch)
  *********************************************************************************************************************/
 
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmCommunicationControl_ComMConf_ComMChannel_ComMChannel_Vlan1_DcmCommunicationControl_ComMConf_ComMChannel_ComMChannel_Vlan1(Dcm_CommunicationModeType nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  nextMode = nextMode;
+
+  return ret;
+}
+
 FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl(Dcm_DiagnosticSessionControlType nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  nextMode = nextMode;
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmEcuReset_DcmEcuReset(Dcm_EcuResetType nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
 {
   Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
 
@@ -723,7 +821,19 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
 
       /* call runnable */
       Dcm_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
 
+    if ((ev & Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_10ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Dem_SatelliteMainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call runnable */
+      Dem_MasterMainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms) != (EventMaskType)0)
+    {
       /* call schedulable entity */
       Sd_MainFunction();
 
@@ -785,6 +895,9 @@ TASK(OsTask_Init_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreach
 
   /* call runnable */
   Cdd_Log_Runnable_init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  /* call runnable */
+  Cdd_UDS_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

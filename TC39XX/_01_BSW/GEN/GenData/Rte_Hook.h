@@ -28,6 +28,30 @@
  *
  * Not configured:
  *
+ *  Rte_CallHook_Dcm_DataServices_Version_Info_ConditionCheckRead_Return
+ *  Rte_CallHook_Dcm_DataServices_Version_Info_ConditionCheckRead_Start
+ *  Rte_CallHook_Dcm_DataServices_Version_Info_ReadData_Return
+ *  Rte_CallHook_Dcm_DataServices_Version_Info_ReadData_Start
+ *  Rte_CallHook_Dcm_DataServices_Version_Info_WriteData_Return
+ *  Rte_CallHook_Dcm_DataServices_Version_Info_WriteData_Start
+ *  Rte_CallHook_Dcm_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_RequestResults_Return
+ *  Rte_CallHook_Dcm_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_RequestResults_Start
+ *  Rte_CallHook_Dcm_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_Start_Return
+ *  Rte_CallHook_Dcm_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_Start_Start
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_CompareKey_Return
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_CompareKey_Start
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_GetSecurityAttemptCounter_Return
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_GetSecurityAttemptCounter_Start
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_GetSeed_Return
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_GetSeed_Start
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_SetSecurityAttemptCounter_Return
+ *  Rte_CallHook_Dcm_SecurityAccess_Level_3_SetSecurityAttemptCounter_Start
+ *  Rte_CallHook_DemMaster_0_CBFaultDetectCtr_DTC_0xDDD094_Event_GetFaultDetectionCounter_Return
+ *  Rte_CallHook_DemMaster_0_CBFaultDetectCtr_DTC_0xDDD094_Event_GetFaultDetectionCounter_Start
+ *  Rte_CallHook_DemMaster_0_CBReadData_Data_Did_0x16E_MCU_Info_ReadData_Return
+ *  Rte_CallHook_DemMaster_0_CBReadData_Data_Did_0x16E_MCU_Info_ReadData_Start
+ *  Rte_CallHook_DemSatellite_0_CBReadData_Data_Did_0x16E_MCU_Info_ReadData_Return
+ *  Rte_CallHook_DemSatellite_0_CBReadData_Data_Did_0x16E_MCU_Info_ReadData_Start
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Return
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Start
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_1_requestedMode_Return
@@ -94,6 +118,20 @@
  *  Rte_Runnable_Cdd_Nm_Cdd_Nm_Init_Start
  *  Rte_Runnable_Cdd_Nm_Cdd_Nm_Runnable10ms_Return
  *  Rte_Runnable_Cdd_Nm_Cdd_Nm_Runnable10ms_Start
+ *  Rte_Runnable_Cdd_UDS_CSDataServices_Data_Did_0x16E_MCU_Info_ReadData_Return
+ *  Rte_Runnable_Cdd_UDS_CSDataServices_Data_Did_0x16E_MCU_Info_ReadData_Start
+ *  Rte_Runnable_Cdd_UDS_Cdd_UDS_Init_Return
+ *  Rte_Runnable_Cdd_UDS_Cdd_UDS_Init_Start
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_Version_Info_ConditionCheckRead_Return
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_Version_Info_ConditionCheckRead_Start
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_Version_Info_ReadData_Return
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_Version_Info_ReadData_Start
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_Version_Info_WriteData_Return
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_Version_Info_WriteData_Start
+ *  Rte_Runnable_Cdd_UDS_RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_RequestResults_Return
+ *  Rte_Runnable_Cdd_UDS_RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_RequestResults_Start
+ *  Rte_Runnable_Cdd_UDS_RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_Return
+ *  Rte_Runnable_Cdd_UDS_RID_0x050_RoutineServices_DcmDspRoutine_Get_Link_Quality_Start_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_0_Return
  *  Rte_Runnable_ComM_ComM_MainFunction_0_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_1_Return
@@ -128,12 +166,86 @@
  *  Rte_Runnable_Dcm_GetActiveProtocol_Start
  *  Rte_Runnable_Dcm_GetRequestKind_Return
  *  Rte_Runnable_Dcm_GetRequestKind_Start
+ *  Rte_Runnable_Dcm_GetSecurityLevel_Return
+ *  Rte_Runnable_Dcm_GetSecurityLevel_Start
  *  Rte_Runnable_Dcm_GetSesCtrlType_Return
  *  Rte_Runnable_Dcm_GetSesCtrlType_Start
  *  Rte_Runnable_Dcm_ResetToDefaultSession_Return
  *  Rte_Runnable_Dcm_ResetToDefaultSession_Start
  *  Rte_Runnable_Dcm_SetActiveDiagnostic_Return
  *  Rte_Runnable_Dcm_SetActiveDiagnostic_Start
+ *  Rte_Runnable_DemMaster_0_ClearDTC_Return
+ *  Rte_Runnable_DemMaster_0_ClearDTC_Start
+ *  Rte_Runnable_DemMaster_0_Dem_MasterMainFunction_Return
+ *  Rte_Runnable_DemMaster_0_Dem_MasterMainFunction_Start
+ *  Rte_Runnable_DemMaster_0_GetDTCOfEvent_Return
+ *  Rte_Runnable_DemMaster_0_GetDTCOfEvent_Start
+ *  Rte_Runnable_DemMaster_0_GetDTCStatusAvailabilityMask_Return
+ *  Rte_Runnable_DemMaster_0_GetDTCStatusAvailabilityMask_Start
+ *  Rte_Runnable_DemMaster_0_GetDebouncingOfEvent_Return
+ *  Rte_Runnable_DemMaster_0_GetDebouncingOfEvent_Start
+ *  Rte_Runnable_DemMaster_0_GetEventEnableCondition_Return
+ *  Rte_Runnable_DemMaster_0_GetEventEnableCondition_Start
+ *  Rte_Runnable_DemMaster_0_GetEventExtendedDataRecordEx_Return
+ *  Rte_Runnable_DemMaster_0_GetEventExtendedDataRecordEx_Start
+ *  Rte_Runnable_DemMaster_0_GetEventFailed_Return
+ *  Rte_Runnable_DemMaster_0_GetEventFailed_Start
+ *  Rte_Runnable_DemMaster_0_GetEventFreezeFrameDataEx_Return
+ *  Rte_Runnable_DemMaster_0_GetEventFreezeFrameDataEx_Start
+ *  Rte_Runnable_DemMaster_0_GetEventMemoryOverflow_Return
+ *  Rte_Runnable_DemMaster_0_GetEventMemoryOverflow_Start
+ *  Rte_Runnable_DemMaster_0_GetEventStatus_Return
+ *  Rte_Runnable_DemMaster_0_GetEventStatus_Start
+ *  Rte_Runnable_DemMaster_0_GetEventTested_Return
+ *  Rte_Runnable_DemMaster_0_GetEventTested_Start
+ *  Rte_Runnable_DemMaster_0_GetEventUdsStatus_Return
+ *  Rte_Runnable_DemMaster_0_GetEventUdsStatus_Start
+ *  Rte_Runnable_DemMaster_0_GetFaultDetectionCounter_Return
+ *  Rte_Runnable_DemMaster_0_GetFaultDetectionCounter_Start
+ *  Rte_Runnable_DemMaster_0_GetMonitorStatus_Return
+ *  Rte_Runnable_DemMaster_0_GetMonitorStatus_Start
+ *  Rte_Runnable_DemMaster_0_GetNumberOfEventMemoryEntries_Return
+ *  Rte_Runnable_DemMaster_0_GetNumberOfEventMemoryEntries_Start
+ *  Rte_Runnable_DemMaster_0_GetOperationCycleState_Return
+ *  Rte_Runnable_DemMaster_0_GetOperationCycleState_Start
+ *  Rte_Runnable_DemMaster_0_PostRunRequested_Return
+ *  Rte_Runnable_DemMaster_0_PostRunRequested_Start
+ *  Rte_Runnable_DemMaster_0_SelectDTC_Return
+ *  Rte_Runnable_DemMaster_0_SelectDTC_Start
+ *  Rte_Runnable_DemMaster_0_SetEnableCondition_Return
+ *  Rte_Runnable_DemMaster_0_SetEnableCondition_Start
+ *  Rte_Runnable_DemMaster_0_SetOperationCycleState_Return
+ *  Rte_Runnable_DemMaster_0_SetOperationCycleState_Start
+ *  Rte_Runnable_DemSatellite_0_Dem_SatelliteMainFunction_Return
+ *  Rte_Runnable_DemSatellite_0_Dem_SatelliteMainFunction_Start
+ *  Rte_Runnable_DemSatellite_0_GetDTCOfEvent_Return
+ *  Rte_Runnable_DemSatellite_0_GetDTCOfEvent_Start
+ *  Rte_Runnable_DemSatellite_0_GetDebouncingOfEvent_Return
+ *  Rte_Runnable_DemSatellite_0_GetDebouncingOfEvent_Start
+ *  Rte_Runnable_DemSatellite_0_GetEventEnableCondition_Return
+ *  Rte_Runnable_DemSatellite_0_GetEventEnableCondition_Start
+ *  Rte_Runnable_DemSatellite_0_GetEventExtendedDataRecordEx_Return
+ *  Rte_Runnable_DemSatellite_0_GetEventExtendedDataRecordEx_Start
+ *  Rte_Runnable_DemSatellite_0_GetEventFailed_Return
+ *  Rte_Runnable_DemSatellite_0_GetEventFailed_Start
+ *  Rte_Runnable_DemSatellite_0_GetEventFreezeFrameDataEx_Return
+ *  Rte_Runnable_DemSatellite_0_GetEventFreezeFrameDataEx_Start
+ *  Rte_Runnable_DemSatellite_0_GetEventStatus_Return
+ *  Rte_Runnable_DemSatellite_0_GetEventStatus_Start
+ *  Rte_Runnable_DemSatellite_0_GetEventTested_Return
+ *  Rte_Runnable_DemSatellite_0_GetEventTested_Start
+ *  Rte_Runnable_DemSatellite_0_GetEventUdsStatus_Return
+ *  Rte_Runnable_DemSatellite_0_GetEventUdsStatus_Start
+ *  Rte_Runnable_DemSatellite_0_GetFaultDetectionCounter_Return
+ *  Rte_Runnable_DemSatellite_0_GetFaultDetectionCounter_Start
+ *  Rte_Runnable_DemSatellite_0_GetMonitorStatus_Return
+ *  Rte_Runnable_DemSatellite_0_GetMonitorStatus_Start
+ *  Rte_Runnable_DemSatellite_0_ResetEventDebounceStatus_Return
+ *  Rte_Runnable_DemSatellite_0_ResetEventDebounceStatus_Start
+ *  Rte_Runnable_DemSatellite_0_ResetEventStatus_Return
+ *  Rte_Runnable_DemSatellite_0_ResetEventStatus_Start
+ *  Rte_Runnable_DemSatellite_0_SetEventStatus_Return
+ *  Rte_Runnable_DemSatellite_0_SetEventStatus_Start
  *  Rte_Runnable_EcuM_EcuM_MainFunction_Return
  *  Rte_Runnable_EcuM_EcuM_MainFunction_Start
  *  Rte_Runnable_EcuM_GetBootTarget_Return
@@ -186,6 +298,8 @@
  *  Rte_Runnable_StbM_GetTimeLeap_Start
  *  Rte_Runnable_StbM_StbM_MainFunction_Return
  *  Rte_Runnable_StbM_StbM_MainFunction_Start
+ *  Rte_SwitchAckHook_Dcm_DcmEcuReset_DcmEcuReset_Return
+ *  Rte_SwitchAckHook_Dcm_DcmEcuReset_DcmEcuReset_Start
  *  Rte_SwitchHook_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode_Return
  *  Rte_SwitchHook_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode_Start
  *  Rte_SwitchHook_BswM_Switch_SDC_Mode_C_SdCLientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState_Return
@@ -204,8 +318,12 @@
  *  Rte_SwitchHook_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState_Start
  *  Rte_SwitchHook_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState_Return
  *  Rte_SwitchHook_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState_Start
+ *  Rte_SwitchHook_Dcm_DcmCommunicationControl_ComMConf_ComMChannel_ComMChannel_Vlan1_DcmCommunicationControl_ComMConf_ComMChannel_ComMChannel_Vlan1_Return
+ *  Rte_SwitchHook_Dcm_DcmCommunicationControl_ComMConf_ComMChannel_ComMChannel_Vlan1_DcmCommunicationControl_ComMConf_ComMChannel_ComMChannel_Vlan1_Start
  *  Rte_SwitchHook_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl_Return
  *  Rte_SwitchHook_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl_Start
+ *  Rte_SwitchHook_Dcm_DcmEcuReset_DcmEcuReset_Return
+ *  Rte_SwitchHook_Dcm_DcmEcuReset_DcmEcuReset_Start
  *  Rte_Task_Activate
  *  Rte_Task_Dispatch
  *  Rte_Task_Terminate
@@ -231,6 +349,16 @@
  *  SchM_EnterHook_Crc_CriticalSection_Start
  *  SchM_EnterHook_Dcm_DCM_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_Dcm_DCM_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_1_Return
+ *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_1_Start
+ *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_2_Return
+ *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_2_Start
+ *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_3_Return
+ *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_3_Start
+ *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_4_Return
+ *  SchM_EnterHook_Dem_DEM_EXCLUSIVE_AREA_4_Start
  *  SchM_EnterHook_Det_DET_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_Det_DET_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_DoIP_DOIP_EXCLUSIVE_AREA_0_Return
@@ -339,6 +467,16 @@
  *  SchM_ExitHook_Crc_CriticalSection_Start
  *  SchM_ExitHook_Dcm_DCM_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_Dcm_DCM_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_1_Return
+ *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_1_Start
+ *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_2_Return
+ *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_2_Start
+ *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_3_Return
+ *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_3_Start
+ *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_4_Return
+ *  SchM_ExitHook_Dem_DEM_EXCLUSIVE_AREA_4_Start
  *  SchM_ExitHook_Det_DET_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_Det_DET_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_DoIP_DOIP_EXCLUSIVE_AREA_0_Return
@@ -445,6 +583,10 @@
  *  SchM_Schedulable_Com_Com_MainFunctionTx_Start
  *  SchM_Schedulable_Dcm_Dcm_MainFunction_Return
  *  SchM_Schedulable_Dcm_Dcm_MainFunction_Start
+ *  SchM_Schedulable_Dem_Dem_MasterMainFunction_Return
+ *  SchM_Schedulable_Dem_Dem_MasterMainFunction_Start
+ *  SchM_Schedulable_Dem_Dem_SatelliteMainFunction_Return
+ *  SchM_Schedulable_Dem_Dem_SatelliteMainFunction_Start
  *  SchM_Schedulable_DoIP_DoIP_MainFunction_Return
  *  SchM_Schedulable_DoIP_DoIP_MainFunction_Start
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Return

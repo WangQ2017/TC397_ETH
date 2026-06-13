@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: NvM_Cfg.c
- *   Generation Time: 2026-05-01 21:08:32
+ *   Generation Time: 2026-06-13 18:44:59
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -70,6 +70,7 @@
 #endif
 
 /* include list of the callback definitions */
+#include "Dem_Cbk.h" 
 
 
 /* include configured file declaring or defining resource (un)locking service(s) */
@@ -97,6 +98,9 @@ CONST(uint16, NVM_PRIVATE_CONST) NvM_CrcQueueSize_u16 = NVM_TOTAL_NUM_OF_NVRAM_B
 static VAR(uint8, NVM_PRIVATE_DATA) NvMConfigBlock_RamBlock_au8[4u];
 
 #if ((NVM_CRC_INT_BUFFER == STD_ON) || (NVM_REPAIR_REDUNDANT_BLOCKS_API == STD_ON))
+static VAR(uint8, NVM_PRIVATE_DATA) DemAdminDataBlock_Crc[2uL]; 
+static VAR(uint8, NVM_PRIVATE_DATA) DemStatusDataBlock_Crc[4uL]; 
+static VAR(uint8, NVM_PRIVATE_DATA) DemPrimaryDataBlock0_Crc[4uL]; 
 
 
 /* create the internal buffer of size NVM_INTERNAL_BUFFER_LENGTH */
@@ -161,7 +165,7 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
         NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
         NULL_PTR /*  RamBlockCRC data buffer (defined by NvM)  */ , 
         NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
-        0x0010u /*  NV block Base number (defined by FEE/EA)  */ , 
+        0x00D0u /*  NV block Base number (defined by FEE/EA)  */ , 
         2u /*  NvMNvBlockLength  */ , 
         0u /*  CsmJobArrayIndex  */ , 
         2u /*  NvMNvBlockNVRAMDataLength  */ , 
@@ -179,6 +183,111 @@ CONST(NvM_BlockDescriptorType, NVM_CONFIG_CONST) NvM_BlockDescriptorTable_at[NVM
          | NVM_SELECT_BLOCK_FOR_WRITEALL_ON
          | NVM_INVOKE_CALLBACKS_FOR_READALL_OFF
          | NVM_INVOKE_CALLBACKS_FOR_WRITEALL_OFF
+         | NVM_BLOCK_USE_SET_RAM_BLOCK_STATUS_ON
+        ) /*  Flags  */ , 
+        STD_OFF /*  NvMBswMBlockStatusInformation  */ 
+      }, 
+      { /*  DemAdminDataBlock  */ 
+        (NvM_RamAddressType)&Dem_Cfg_AdminData /*  NvMRamBlockDataAddress  */ , 
+        NULL_PTR /*  NvMRomBlockDataAddress  */ , 
+        Dem_NvM_InitAdminData /*  NvMInitBlockCallback  */ , 
+        NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
+        Dem_NvM_JobFinished /*  NvMSingleBlockCallback  */ , 
+        NULL_PTR /*  NvMSingleBlockCallback (extended)  */ , 
+        NULL_PTR /*  NvMReadRamBlockFromNvCallback  */ , 
+        NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
+        NULL_PTR /*  NvMBlockPreWriteTransformCallback  */ , 
+        NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
+        DemAdminDataBlock_Crc /*  RamBlockCRC data buffer (defined by NvM)  */ , 
+        NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
+        0x0320u /*  NV block Base number (defined by FEE/EA)  */ , 
+        16u /*  NvMNvBlockLength  */ , 
+        0u /*  CsmJobArrayIndex  */ , 
+        16u /*  NvMNvBlockNVRAMDataLength  */ , 
+        1u /*  NvMNvBlockNum  */ , 
+        127u /*  NvMBlockJobPriority  */ , 
+        MEMIF_Fee /*  Device Id (defined by MemIf)  */ , 
+        NVM_BLOCK_NATIVE /*  NvMBlockManagementType  */ , 
+        NVM_BLOCK_CRC_16_ON /*  NvMBlockCrcType  */ , 
+        (
+           NVM_CALC_RAM_BLOCK_CRC_OFF
+         | NVM_BLOCK_WRITE_PROT_OFF
+         | NVM_BLOCK_WRITE_BLOCK_ONCE_OFF
+         | NVM_RESISTANT_TO_CHANGED_SW_ON
+         | NVM_SELECT_BLOCK_FOR_READALL_ON
+         | NVM_SELECT_BLOCK_FOR_WRITEALL_ON
+         | NVM_INVOKE_CALLBACKS_FOR_READALL_ON
+         | NVM_INVOKE_CALLBACKS_FOR_WRITEALL_ON
+         | NVM_BLOCK_USE_SET_RAM_BLOCK_STATUS_ON
+        ) /*  Flags  */ , 
+        STD_OFF /*  NvMBswMBlockStatusInformation  */ 
+      }, 
+      { /*  DemStatusDataBlock  */ 
+        (NvM_RamAddressType)&Dem_Cfg_StatusData /*  NvMRamBlockDataAddress  */ , 
+        NULL_PTR /*  NvMRomBlockDataAddress  */ , 
+        Dem_NvM_InitStatusData /*  NvMInitBlockCallback  */ , 
+        NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
+        Dem_NvM_JobFinished /*  NvMSingleBlockCallback  */ , 
+        NULL_PTR /*  NvMSingleBlockCallback (extended)  */ , 
+        NULL_PTR /*  NvMReadRamBlockFromNvCallback  */ , 
+        NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
+        NULL_PTR /*  NvMBlockPreWriteTransformCallback  */ , 
+        NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
+        DemStatusDataBlock_Crc /*  RamBlockCRC data buffer (defined by NvM)  */ , 
+        NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
+        0x0300u /*  NV block Base number (defined by FEE/EA)  */ , 
+        12u /*  NvMNvBlockLength  */ , 
+        0u /*  CsmJobArrayIndex  */ , 
+        12u /*  NvMNvBlockNVRAMDataLength  */ , 
+        1u /*  NvMNvBlockNum  */ , 
+        127u /*  NvMBlockJobPriority  */ , 
+        MEMIF_Fee /*  Device Id (defined by MemIf)  */ , 
+        NVM_BLOCK_NATIVE /*  NvMBlockManagementType  */ , 
+        NVM_BLOCK_CRC_32_ON /*  NvMBlockCrcType  */ , 
+        (
+           NVM_CALC_RAM_BLOCK_CRC_OFF
+         | NVM_BLOCK_WRITE_PROT_OFF
+         | NVM_BLOCK_WRITE_BLOCK_ONCE_OFF
+         | NVM_RESISTANT_TO_CHANGED_SW_ON
+         | NVM_SELECT_BLOCK_FOR_READALL_ON
+         | NVM_SELECT_BLOCK_FOR_WRITEALL_OFF
+         | NVM_INVOKE_CALLBACKS_FOR_READALL_ON
+         | NVM_INVOKE_CALLBACKS_FOR_WRITEALL_OFF
+         | NVM_BLOCK_USE_SET_RAM_BLOCK_STATUS_ON
+        ) /*  Flags  */ , 
+        STD_OFF /*  NvMBswMBlockStatusInformation  */ 
+      }, 
+      { /*  DemPrimaryDataBlock0  */ 
+        (NvM_RamAddressType)&Dem_Cfg_PrimaryEntry_0 /*  NvMRamBlockDataAddress  */ , 
+        (NvM_RomAddressType)&Dem_Cfg_MemoryEntryInit /*  NvMRomBlockDataAddress  */ , 
+        NULL_PTR /*  NvMInitBlockCallback  */ , 
+        NULL_PTR /*  NvMInitBlockCallback (extended)  */ , 
+        Dem_NvM_JobFinished /*  NvMSingleBlockCallback  */ , 
+        NULL_PTR /*  NvMSingleBlockCallback (extended)  */ , 
+        NULL_PTR /*  NvMReadRamBlockFromNvCallback  */ , 
+        NULL_PTR /*  NvMWriteRamBlockToNvCallback  */ , 
+        NULL_PTR /*  NvMBlockPreWriteTransformCallback  */ , 
+        NULL_PTR /*  NvMBlockPostReadTransformCallback  */ , 
+        DemPrimaryDataBlock0_Crc /*  RamBlockCRC data buffer (defined by NvM)  */ , 
+        NULL_PTR /*  CRCCompMechanism CRC data (defined by NvM)  */ , 
+        0x0010u /*  NV block Base number (defined by FEE/EA)  */ , 
+        28u /*  NvMNvBlockLength  */ , 
+        0u /*  CsmJobArrayIndex  */ , 
+        28u /*  NvMNvBlockNVRAMDataLength  */ , 
+        1u /*  NvMNvBlockNum  */ , 
+        127u /*  NvMBlockJobPriority  */ , 
+        MEMIF_Fee /*  Device Id (defined by MemIf)  */ , 
+        NVM_BLOCK_NATIVE /*  NvMBlockManagementType  */ , 
+        NVM_BLOCK_CRC_32_ON /*  NvMBlockCrcType  */ , 
+        (
+           NVM_CALC_RAM_BLOCK_CRC_OFF
+         | NVM_BLOCK_WRITE_PROT_OFF
+         | NVM_BLOCK_WRITE_BLOCK_ONCE_OFF
+         | NVM_RESISTANT_TO_CHANGED_SW_ON
+         | NVM_SELECT_BLOCK_FOR_READALL_ON
+         | NVM_SELECT_BLOCK_FOR_WRITEALL_ON
+         | NVM_INVOKE_CALLBACKS_FOR_READALL_ON
+         | NVM_INVOKE_CALLBACKS_FOR_WRITEALL_ON
          | NVM_BLOCK_USE_SET_RAM_BLOCK_STATUS_ON
         ) /*  Flags  */ , 
         STD_OFF /*  NvMBswMBlockStatusInformation  */ 
@@ -212,8 +321,10 @@ typedef unsigned int NvM_LengthCheck;
 #define SizeOfRamBlockLessThanConfiguredLength(ramBlock, crcLength, blockLength) (((sizeof(ramBlock) - (crcLength)) < (blockLength)) ? -1 : 1) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 
 /* RAM block length checks */
-
-
+struct PermanentRamBlockLengthChecks {
+  NvM_LengthCheck Block_DemStatusDataBlock : SizeOfRamBlockDoesNotMatchConfiguredLength(Dem_Cfg_StatusData, 0u, 12u);
+  NvM_LengthCheck Block_DemPrimaryDataBlock0 : SizeOfRamBlockDoesNotMatchConfiguredLength(Dem_Cfg_PrimaryEntry_0, 0u, 28u);
+};
 
 /* Block Length Check and Automatic Block Length enabled: error if sizeof ROM block is less than sizeof RAM block */
 #define SizeOfRomBlockLessThanSizeOfRamBlock(romBlock, ramBlock) ((sizeof(romBlock) < sizeof(ramBlock)) ? -1 : 1) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
@@ -223,8 +334,9 @@ typedef unsigned int NvM_LengthCheck;
 #define SizeOfRomBlockLessThanConfiguredLength(romBlock, blockLength) ((sizeof(romBlock) < (blockLength)) ? -1 : 1) /* PRQA S 3453 */ /* MD_MSR_FctLikeMacro */
 
 /* ROM block length checks */
-
-
+struct PermRomBlockLengthCheck {
+  NvM_LengthCheck Block_DemPrimaryDataBlock0 : SizeOfRomBlockDoesNotMatchConfiguredLength(Dem_Cfg_MemoryEntryInit, 28u);
+};
 
 /* PRQA L:BlockLengthChecks */
 

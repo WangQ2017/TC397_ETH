@@ -114,6 +114,34 @@ extern "C"
 #   define DCM_ENUM_EXTENDED_SESSION (3U)
 #  endif
 
+#  ifndef DCM_ENUM_NONE
+#   define DCM_ENUM_NONE (0U)
+#  endif
+
+#  ifndef DCM_ENUM_HARD
+#   define DCM_ENUM_HARD (1U)
+#  endif
+
+#  ifndef DCM_ENUM_KEYONOFF
+#   define DCM_ENUM_KEYONOFF (2U)
+#  endif
+
+#  ifndef DCM_ENUM_SOFT
+#   define DCM_ENUM_SOFT (3U)
+#  endif
+
+#  ifndef DCM_ENUM_JUMPTOBOOTLOADER
+#   define DCM_ENUM_JUMPTOBOOTLOADER (4U)
+#  endif
+
+#  ifndef DCM_ENUM_JUMPTOSYSSUPPLIERBOOTLOADER
+#   define DCM_ENUM_JUMPTOSYSSUPPLIERBOOTLOADER (5U)
+#  endif
+
+#  ifndef DCM_ENUM_EXECUTE
+#   define DCM_ENUM_EXECUTE (6U)
+#  endif
+
 #  ifndef DCM_E_POSITIVERESPONSE
 #   define DCM_E_POSITIVERESPONSE (0U)
 #  endif
@@ -502,6 +530,14 @@ extern "C"
 #   define DCM_REQ_KIND_ROE (2U)
 #  endif
 
+#  ifndef DCM_SEC_LEV_LOCKED
+#   define DCM_SEC_LEV_LOCKED (0U)
+#  endif
+
+#  ifndef DCM_SEC_LEV_L3
+#   define DCM_SEC_LEV_L3 (3U)
+#  endif
+
 #  ifndef DCM_DEFAULT_SESSION
 #   define DCM_DEFAULT_SESSION (1U)
 #  endif
@@ -520,9 +556,70 @@ extern "C"
 /**********************************************************************************************************************
  * Definitions for Mode Management
  *********************************************************************************************************************/
+# ifndef RTE_MODETYPE_DcmCommunicationControl
+#  define RTE_MODETYPE_DcmCommunicationControl
+typedef Dcm_CommunicationModeType Rte_ModeType_DcmCommunicationControl;
+# endif
 # ifndef RTE_MODETYPE_DcmDiagnosticSessionControl
 #  define RTE_MODETYPE_DcmDiagnosticSessionControl
 typedef Dcm_DiagnosticSessionControlType Rte_ModeType_DcmDiagnosticSessionControl;
+# endif
+# ifndef RTE_MODETYPE_DcmEcuReset
+#  define RTE_MODETYPE_DcmEcuReset
+typedef Dcm_EcuResetType Rte_ModeType_DcmEcuReset;
+# endif
+
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_ENABLE_RX_TX_NORM (0U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_TX_NORM
+#  define RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_TX_NORM (0U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_ENABLE_RX_DISABLE_TX_NORM (1U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_DISABLE_TX_NORM
+#  define RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_DISABLE_TX_NORM (1U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_DISABLE_RX_ENABLE_TX_NORM (2U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_ENABLE_TX_NORM
+#  define RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_ENABLE_TX_NORM (2U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_DISABLE_RX_TX_NORMAL (3U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_TX_NORMAL
+#  define RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_TX_NORMAL (3U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_ENABLE_RX_TX_NM (4U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_TX_NM
+#  define RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_TX_NM (4U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_ENABLE_RX_DISABLE_TX_NM (5U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_DISABLE_TX_NM
+#  define RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_DISABLE_TX_NM (5U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_DISABLE_RX_ENABLE_TX_NM (6U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_ENABLE_TX_NM
+#  define RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_ENABLE_TX_NM (6U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_DISABLE_RX_TX_NM (7U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_TX_NM
+#  define RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_TX_NM (7U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_ENABLE_RX_TX_NORM_NM (8U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_TX_NORM_NM
+#  define RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_TX_NORM_NM (8U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_ENABLE_RX_DISABLE_TX_NORM_NM (9U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_DISABLE_TX_NORM_NM
+#  define RTE_MODE_DcmCommunicationControl_DCM_ENABLE_RX_DISABLE_TX_NORM_NM (9U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_DISABLE_RX_ENABLE_TX_NORM_NM (10U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_ENABLE_TX_NORM_NM
+#  define RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_ENABLE_TX_NORM_NM (10U)
+# endif
+# define RTE_MODE_Dcm_DcmCommunicationControl_DCM_DISABLE_RX_TX_NORM_NM (11U)
+# ifndef RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_TX_NORM_NM
+#  define RTE_MODE_DcmCommunicationControl_DCM_DISABLE_RX_TX_NORM_NM (11U)
+# endif
+# define RTE_TRANSITION_Dcm_DcmCommunicationControl (12U)
+# ifndef RTE_TRANSITION_DcmCommunicationControl
+#  define RTE_TRANSITION_DcmCommunicationControl (12U)
 # endif
 
 # define RTE_MODE_Dcm_DcmDiagnosticSessionControl_DEFAULT_SESSION (1U)
@@ -540,6 +637,39 @@ typedef Dcm_DiagnosticSessionControlType Rte_ModeType_DcmDiagnosticSessionContro
 # define RTE_TRANSITION_Dcm_DcmDiagnosticSessionControl (255U)
 # ifndef RTE_TRANSITION_DcmDiagnosticSessionControl
 #  define RTE_TRANSITION_DcmDiagnosticSessionControl (255U)
+# endif
+
+# define RTE_MODE_Dcm_DcmEcuReset_NONE (0U)
+# ifndef RTE_MODE_DcmEcuReset_NONE
+#  define RTE_MODE_DcmEcuReset_NONE (0U)
+# endif
+# define RTE_MODE_Dcm_DcmEcuReset_HARD (1U)
+# ifndef RTE_MODE_DcmEcuReset_HARD
+#  define RTE_MODE_DcmEcuReset_HARD (1U)
+# endif
+# define RTE_MODE_Dcm_DcmEcuReset_KEYONOFF (2U)
+# ifndef RTE_MODE_DcmEcuReset_KEYONOFF
+#  define RTE_MODE_DcmEcuReset_KEYONOFF (2U)
+# endif
+# define RTE_MODE_Dcm_DcmEcuReset_SOFT (3U)
+# ifndef RTE_MODE_DcmEcuReset_SOFT
+#  define RTE_MODE_DcmEcuReset_SOFT (3U)
+# endif
+# define RTE_MODE_Dcm_DcmEcuReset_JUMPTOBOOTLOADER (4U)
+# ifndef RTE_MODE_DcmEcuReset_JUMPTOBOOTLOADER
+#  define RTE_MODE_DcmEcuReset_JUMPTOBOOTLOADER (4U)
+# endif
+# define RTE_MODE_Dcm_DcmEcuReset_JUMPTOSYSSUPPLIERBOOTLOADER (5U)
+# ifndef RTE_MODE_DcmEcuReset_JUMPTOSYSSUPPLIERBOOTLOADER
+#  define RTE_MODE_DcmEcuReset_JUMPTOSYSSUPPLIERBOOTLOADER (5U)
+# endif
+# define RTE_MODE_Dcm_DcmEcuReset_EXECUTE (6U)
+# ifndef RTE_MODE_DcmEcuReset_EXECUTE
+#  define RTE_MODE_DcmEcuReset_EXECUTE (6U)
+# endif
+# define RTE_TRANSITION_Dcm_DcmEcuReset (7U)
+# ifndef RTE_TRANSITION_DcmEcuReset
+#  define RTE_TRANSITION_DcmEcuReset (7U)
 # endif
 
 # ifdef __cplusplus

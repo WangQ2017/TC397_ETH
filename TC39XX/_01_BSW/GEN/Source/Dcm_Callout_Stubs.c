@@ -68,6 +68,27 @@ FUNC(void, DCM_CALLOUT_CODE) Dcm_Confirmation(
     return;
 }
 
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_DiagnosticService_0x34(Dcm_OpStatusType opStatus, Dcm_MsgContextPtrType pMsgContext, Dcm_NegativeResponseCodePtrType ErrorCode) /* PRQA S 3673 */ /* MD_Dcm_APIStd_3673 */
+{
+    return DCM_E_OK;
+}
+
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_DiagnosticService_0x35(Dcm_OpStatusType opStatus, Dcm_MsgContextPtrType pMsgContext, Dcm_NegativeResponseCodePtrType ErrorCode)
+{
+    return DCM_E_OK;
+}
+
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_DiagnosticService_0x36(Dcm_OpStatusType opStatus, Dcm_MsgContextPtrType pMsgContext, Dcm_NegativeResponseCodePtrType ErrorCode)
+{
+    return DCM_E_OK;
+}
+
+FUNC(Std_ReturnType, DCM_CALLOUT_CODE) Dcm_DiagnosticService_0x37(Dcm_OpStatusType opStatus, Dcm_MsgContextPtrType pMsgContext, Dcm_NegativeResponseCodePtrType ErrorCode)
+{
+    return DCM_E_OK;
+}
+
+
 /**********************************************************************************************************************
  *  END OF FILE: ECUM_CALLOUT_STUBS.C
  *********************************************************************************************************************/
