@@ -36,7 +36,7 @@ typedef enum
 #define UART_MAX_CHUNK_SIZE             512u
 
 #define PRINT_AUTO_NEWLINE_ENABLE       STD_ON  /* 自动添加换行符 */
-#define PRINT_TIMESTAMP_ENABLE          STD_OFF  /* 启用StbM时间戳 */
+#define PRINT_TIMESTAMP_ENABLE          STD_ON  /* 启用StbM时间戳 */
 #define PRINT_TIMESTAMP_FORMAT          "[%04d-%02d-%02d %02d:%02d:%02d.%03d] "
 
 /******************************************************************************

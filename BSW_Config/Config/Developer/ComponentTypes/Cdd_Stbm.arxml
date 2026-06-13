@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="F079C6CB-4661-40D9-899F-DD405F22B640">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="41418AB8-356B-4BDD-8AF0-0D39401D1F3E">
+          <SHORT-NAME>Cdd_StbM</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="17CF85BA-1303-4E85-A2D6-C19DAC9DC177">
+              <SHORT-NAME>Cdd_StbM_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="5E3C8441-CF28-4952-8436-BA744F9C3FD4">
+                  <SHORT-NAME>TMT_Cdd_StbM_Runnable100ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_StbM/Cdd_StbM_InternalBehavior/Cdd_StbM_Runnable100ms</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+                <INIT-EVENT UUID="7178E92C-F953-4A9B-B02F-C3F50A643F1E">
+                  <SHORT-NAME>Cdd_StbM_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_StbM/Cdd_StbM_InternalBehavior/Cdd_StbM_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+                <TIMING-EVENT UUID="EF754764-38D3-491D-AAF8-5519221794F1">
+                  <SHORT-NAME>TMT_Cdd_StbM_Runnable5ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_StbM/Cdd_StbM_InternalBehavior/Cdd_StbM_Runnable5ms</START-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="266F9281-CE59-4377-9796-705AEF005331">
+                  <SHORT-NAME>Cdd_StbM_Runnable100ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="FBD63DAA-D394-4017-90F4-24E2B4569B55">
+                  <SHORT-NAME>Cdd_StbM_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="382A0364-73E1-4A62-8270-E21FC1328CBC">
+                  <SHORT-NAME>Cdd_StbM_Runnable5ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="3A58056B-B756-4D7F-9E6B-1F748D7B847C">
+          <SHORT-NAME>Cdd_StbM_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/Cdd_StbM/Cdd_StbM_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

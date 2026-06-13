@@ -7,6 +7,9 @@
 
 #include "DualPrint_Cdd.h"
 
+uint32 TimerGetMs(void);
+uint64 TimerGetUs(void);
+
 #define CDD_LOG_ERROR(...)         DualPrint_Printf(PRINT_CHANNEL_BOTH, "ERROR: " __VA_ARGS__)
 #define CDD_LOG_DEBUG(...)         DualPrint_Printf(PRINT_CHANNEL_BOTH, "DEBUG: " __VA_ARGS__)
 #define CDD_LOG_DEBUG_INFO(...)    DualPrint_Printf(PRINT_CHANNEL_BOTH, __FILE__, __LINE__, __VA_ARGS__)

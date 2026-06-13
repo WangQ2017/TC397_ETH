@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.h
- *   Generation Time: 2026-05-04 13:06:43
+ *   Generation Time: 2026-06-07 20:45:48
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -88,6 +88,10 @@ extern CONST(Os_TimerIsrConfigType, OS_CONST) OsCfg_Isr_CounterIsr_SystemTimer_O
 /*! ISR configuration data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_HwConfig;
 extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx;
+
+/*! ISR configuration data: OsIsr_PPS */
+extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_OsIsr_PPS_HwConfig;
+extern CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_OsIsr_PPS;
 
 /*! ISR configuration data: XSignalIsr_OsCore0 */
 extern CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_XSignalIsr_OsCore0_HwConfig;

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Stack_Cfg.h
- *   Generation Time: 2026-05-23 10:31:35
+ *   Generation Time: 2026-05-23 23:37:06
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -58,7 +58,6 @@
 # define OS_CFG_SIZE_OSCORE0_STARTUP_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE0_TASK_PRIO20_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE0_TASK_PRIO30_STACK     (1024uL)
-# define OS_CFG_SIZE_OSCORE0_TASK_PRIO40_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE0_TASK_PRIO4294967295_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE0_TASK_PRIO48_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE0_TASK_PRIO50_STACK     (1024uL)
@@ -124,6 +123,7 @@
 # define OS_CFG_SIZE_OSCORE5_TASK_PRIO49_STACK     (1024uL)
 # define OS_CFG_SIZE_OSCORE5_TASK_PRIO50_STACK     (1024uL)
 # define OS_CFG_SIZE_OSTASK_ASW_OSCORE0_STACK     (4096uL)
+# define OS_CFG_SIZE_OSTASK_BSW_5MS_CORE0_STACK     (1024uL)
 
 
 /**********************************************************************************************************************

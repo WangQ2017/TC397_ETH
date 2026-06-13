@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Isr_Lcfg.c
- *   Generation Time: 2026-05-04 13:06:43
+ *   Generation Time: 2026-06-07 20:45:48
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -94,6 +94,9 @@ OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_CounterIsr_SystemTimer_OsCore0
 
 /*! Dynamic ISR data: EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_Dyn;
+
+/*! Dynamic ISR data: OsIsr_PPS */
+OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_OsIsr_PPS_Dyn;
 
 /*! Dynamic ISR data: XSignalIsr_OsCore0 */
 OS_LOCAL VAR(Os_IsrType, OS_VAR_NOINIT) OsCfg_Isr_XSignalIsr_OsCore0_Dyn;
@@ -319,6 +322,41 @@ CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterru
   },
   /* .SourceConfig              = */ &OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_HwConfig,
   /* .IsrId                     = */ EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx,
+  /* .IsEnabledOnInitialization = */ TRUE
+}
+;
+/*! ISR configuration data: OsIsr_PPS */
+CONST(Os_IsrHwConfigType, OS_CONST) OsCfg_Isr_OsIsr_PPS_HwConfig =
+{
+  /* .HwConfig                  = */ &OsCfg_Hal_IntIsr_OsIsr_PPS,
+  /* .MapConfig                 = */ &OsCfg_Hal_IntIsrMap_OsIsr_PPS,
+  /* .IsMapped                  = */ FALSE,
+  /* .IsPostActionRequired      = */ FALSE
+}
+;  
+CONST(Os_IsrConfigType, OS_CONST) OsCfg_Isr_OsIsr_PPS =
+{
+  /* .Thread   = */
+  {
+    /* .ContextConfig         = */ &OsCfg_Hal_Context_OsIsr_PPS,
+    /* .Context               = */ &OsCfg_Hal_Context_OsCore0_Isr_Level6_Dyn,
+    /* .Stack                 = */ &OsCfg_Stack_OsCore0_Isr_Core,
+    /* .Dyn                   = */ OS_ISR_CASTDYN_ISR_2_THREAD(OsCfg_Isr_OsIsr_PPS_Dyn),
+    /* .OwnerApplication      = */ &OsCfg_App_OsApplication_OsCore0,
+    /* .Core                  = */ &OsCfg_Core_OsCore0,
+    /* .IntApiState           = */ &OsCfg_Core_OsCore0_Dyn.IntApiState,
+    /* .TimeProtConfig        = */ NULL_PTR,
+    /* .MpAccessRightsInitial = */ NULL_PTR,
+    /* .AccessRights          = */ &OsCfg_AccessCheck_NoAccess,
+    /* .Trace                 = */ NULL_PTR,
+    /* .FpuContext            = */ NULL_PTR,
+    /* .InitialCallContext    = */ OS_CALLCONTEXT_ISR2,
+    /* .PreThreadHook         = */ NULL_PTR,
+    /* .InitDuringStartUp     = */ FALSE,
+    /* .UsesFpu               = */ FALSE
+  },
+  /* .SourceConfig              = */ &OsCfg_Isr_OsIsr_PPS_HwConfig,
+  /* .IsrId                     = */ OsIsr_PPS,
   /* .IsEnabledOnInitialization = */ TRUE
 }
 ;
@@ -829,6 +867,7 @@ CONSTP2CONST(Os_IsrConfigType, OS_CONST, OS_CONST) OsCfg_IsrRefs[OS_ISRID_COUNT 
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer_OsCore4),
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer_OsCore5),
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx),
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_OsIsr_PPS),
   OS_XSIGNAL_CASTCONFIG_XSIGNALISR_2_ISR(OsCfg_Isr_XSignalIsr_OsCore0),
   OS_XSIGNAL_CASTCONFIG_XSIGNALISR_2_ISR(OsCfg_Isr_XSignalIsr_OsCore1),
   OS_XSIGNAL_CASTCONFIG_XSIGNALISR_2_ISR(OsCfg_Isr_XSignalIsr_OsCore2),

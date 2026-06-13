@@ -49,4 +49,12 @@
 		<ARXML>ComponentTypes/Cdd_Log.arxml</ARXML>
 		<DVG>ComponentTypes/Cdd_Log.dvg</DVG>
 	</FILEREF>
+	<FILEREF>
+		<ARXML>ComponentTypes/Cdd_StbM.arxml</ARXML>
+		<DVG>ComponentTypes/Cdd_StbM.dvg</DVG>
+	</FILEREF>
+	<FILEREF>
+		<ARXML>ComponentTypes/Cdd_PPS.arxml</ARXML>
+		<DVG>ComponentTypes/Cdd_PPS.dvg</DVG>
+	</FILEREF>
 </DCF>

@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Core_Lcfg.c
- *   Generation Time: 2026-05-23 10:31:34
+ *   Generation Time: 2026-06-07 20:45:48
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -347,12 +347,12 @@ OS_LOCAL CONST(Os_StackConfigRefType, OS_CONST) OsCfg_Core_OsCore0_StackRefs[OS_
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Startup,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio20,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio30,
-  (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio40,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio4294967295,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio48,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio50,
   (Os_StackConfigRefType) &OsCfg_Stack_OsCore0_Task_Prio55,
   (Os_StackConfigRefType) &OsCfg_Stack_OsTask_Asw_OsCore0,
+  (Os_StackConfigRefType) &OsCfg_Stack_OsTask_Bsw_5ms_Core0,
   NULL_PTR
 };
 
@@ -363,6 +363,7 @@ OS_LOCAL CONST(Os_IsrConfigRefType, OS_CONST) OsCfg_Core_OsCore0_IsrRefs[OS_CFG_
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_ASCLIN0TX_ISR), 
   OS_TIMER_CASTCONFIG_TIMERISR_2_ISR(OsCfg_Isr_CounterIsr_SystemTimer_OsCore0), 
   OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx), 
+  OS_ISR_CASTCONFIG_ISR_2_ISR(OsCfg_Isr_OsIsr_PPS), 
   OS_XSIGNAL_CASTCONFIG_XSIGNALISR_2_ISR(OsCfg_Isr_XSignalIsr_OsCore0), 
   NULL_PTR
 };

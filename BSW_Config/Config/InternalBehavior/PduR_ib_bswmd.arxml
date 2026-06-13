@@ -21,6 +21,24 @@
             <AR-PACKAGE UUID="056ea3e3-f2f8-4dcd-a948-3cb63e48cb44">
               <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
+            <AR-PACKAGE UUID="8c275498-e817-45fb-9079-0a3d547fb454">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="34d58243-c48d-4d19-b5ff-223b124a962f">
+                  <SHORT-NAME>PduR</SHORT-NAME>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="cc167fa2-f0b9-400f-9552-2406310945f7">
+                      <SHORT-NAME>PduRBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="f49d26c7-5930-4c84-8ef1-7f65617f82a4">
+                          <SHORT-NAME>PDUR_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+              </ELEMENTS>
+            </AR-PACKAGE>
           </AR-PACKAGES>
         </AR-PACKAGE>
       </AR-PACKAGES>

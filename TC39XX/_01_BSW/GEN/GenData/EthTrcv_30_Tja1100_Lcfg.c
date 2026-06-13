@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTrcv_30_Tja1100_Lcfg.c
- *   Generation Time: 2026-05-04 10:27:34
+ *   Generation Time: 2026-05-31 00:10:42
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3

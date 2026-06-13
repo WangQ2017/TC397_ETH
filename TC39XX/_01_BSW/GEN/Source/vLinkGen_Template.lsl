@@ -3603,6 +3603,8 @@ section_layout mpe:vtc:linear
     {
       section "OS_USER_CODE_SEC" (fill, blocksize = 2, attributes = rx)
       {
+        select "[.]text.OS_ASCLIN0ERR_ISR_CODE";
+        select "[.]text.OS_ASCLIN0TX_ISR_CODE";
         select "[.]text.OS_Default_Init_Task_CODE";
         select "[.]text.OS_Default_Init_Task_Core1_CODE";
         select "[.]text.OS_Default_Init_Task_Core1_Trusted_CODE";
@@ -3617,6 +3619,7 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_Default_Init_Task_Trusted_CODE";
         select "[.]text.OS_ERRORHOOK_CODE";
         select "[.]text.OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_CODE";
+        select "[.]text.OS_EthIsr_PPS_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore0_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore1_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore2_CODE";

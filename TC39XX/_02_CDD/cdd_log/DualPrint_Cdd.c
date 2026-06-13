@@ -10,6 +10,7 @@
 #include "stdarg.h"
 #include "stdio.h"
 #include "stdlib.h"
+#include "LdCom.h"
 #if (PRINT_TIMESTAMP_ENABLE == STD_ON)
 #include "StbM.h"
 #endif
@@ -55,13 +56,13 @@ static boolean DualPrint_Initialized = FALSE;
  ******************************************************************************/
 typedef struct
 {
-    uint16 year;        /* 年份，如2024 */
-    uint8  month;       /* 月份，1-12 */
-    uint8  day;         /* 日期，1-31 */
-    uint8  hour;        /* 小时，0-23 */
-    uint8  minute;      /* 分钟，0-59 */
-    uint8  second;      /* 秒，0-59 */
-    uint16 millisecond; /* 毫秒，0-999 */
+    uint32  year;        /* 年份，如2024 */
+    uint32  month;       /* 月份，1-12 */
+    uint32  day;         /* 日期，1-31 */
+    uint32  hour;        /* 小时，0-23 */
+    uint32  minute;      /* 分钟，0-59 */
+    uint32  second;      /* 秒，0-59 */
+    uint32  millisecond; /* 毫秒，0-999 */
 } DateTime_Type;
 
 /******************************************************************************
@@ -218,15 +219,87 @@ static boolean LocalTime_GetUTC(DateTime_Type* dateTime)
     }
     
     /* 填充输出结构 */
-    dateTime->year = (uint16)year;
-    dateTime->month = (uint8)month;
-    dateTime->day = (uint8)day;
-    dateTime->hour = (uint8)hour;
-    dateTime->minute = (uint8)minute;
-    dateTime->second = (uint8)second;
+    dateTime->year = (uint32)year;
+    dateTime->month = (uint32)month;
+    dateTime->day = (uint32)day;
+    dateTime->hour = (uint32)hour;
+    dateTime->minute = (uint32)minute;
+    dateTime->second = (uint32)second;
     dateTime->millisecond = LocalTime.msCounter;
     
     return TRUE;
+}
+
+/* 判断是否为闰年 */
+static boolean is_leap_year(uint32 year) {
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+}
+
+/* 获取某月的天数（给定年份和月份） */
+static uint32 days_in_month(uint32 year, uint32 month) {
+    static const uint32 days[12] = {31, 28, 31, 30, 31, 30,
+                                  31, 31, 30, 31, 30, 31};
+    if (month == 2 && is_leap_year(year))
+        return 29;
+    return days[month - 1];
+}
+
+/* 将Unix时间戳（秒数）转换为UTC日期时间 */
+static void unix_timestamp_to_utc(uint64 timestamp, DateTime_Type *utc) {
+    /* 处理负数时间戳（1970年以前） */
+    uint64 days = timestamp / 86400;        /* 总天数 */
+    uint64 seconds_in_day = timestamp % 86400;
+
+    /* 调整负余数：确保 seconds_in_day 在 [0, 86400) 范围内 */
+    if (seconds_in_day < 0) {
+        seconds_in_day += 86400;
+        days -= 1;
+    }
+
+    /* 计算时分秒 */
+    utc->second = (uint32)(seconds_in_day % 60);
+    utc->minute = (uint32)((seconds_in_day / 60) % 60);
+    utc->hour   = (uint32)(seconds_in_day / 3600);
+
+    /* 基准日期：1970-01-01 */
+    uint32 year = 1970;
+    uint32 month = 1;
+    uint32 day = 1;
+
+    /* 逐日向前/向后调整天数 */
+    if (days >= 0) {
+        while (days > 0) {
+            uint32 dim = days_in_month(year, month);
+            if (days >= dim) {
+                days -= dim;
+                month++;
+                if (month > 12) {
+                    month = 1;
+                    year++;
+                }
+            } else {
+                day += (uint32)days;
+                days = 0;
+            }
+        }
+    } else {
+        /* 负数天数：向回退 */
+        while (days < 0) {
+            /* 退回到前一个月 */
+            month--;
+            if (month < 1) {
+                month = 12;
+                year--;
+            }
+            uint32 dim = days_in_month(year, month);
+            days += dim;
+        }
+        day = 1 + (uint32)days;
+    }
+
+    utc->year = year;
+    utc->month = month;
+    utc->day = day;
 }
 
 /******************************************************************************
@@ -251,20 +324,16 @@ static uint32 DualPrint_GetTimestamp(char* buffer, uint32 bufferSize)
     
     /* 尝试使用StbM模块获取UTC时间 */
 #if (PRINT_TIMESTAMP_ENABLE == STD_ON)
-    StbM_TimeValueType stbmTime;
-    Std_ReturnType ret;
-    
-    ret = StbM_GetCurrentTime(0u, &stbmTime);  /* 0表示StbM模块实例ID */
-    if(ret == STBM_E_OK)
+    StbM_UserDataType userData = {0U};
+    StbM_TimeStampType  globalTime;
+    StbM_TimeStampType localTime;
+    /* 1. 调用StbM_BusGetCurrentTime获取源时基的时间、状态和用户数据 */
+    if (StbM_BusGetCurrentTime(StbMConf_StbMSynchronizedTimeBase_StbMSynchronizedTimeBase_MAIN0, &globalTime, &localTime, &userData) == E_OK)
     {
-        /* 从StbM获取UTC时间成功 */
-        dateTime.year = (uint16)(stbmTime.year);
-        dateTime.month = (uint8)(stbmTime.month);
-        dateTime.day = (uint8)(stbmTime.day);
-        dateTime.hour = (uint8)(stbmTime.hour);
-        dateTime.minute = (uint8)(stbmTime.minute);
-        dateTime.second = (uint8)(stbmTime.second);
-        dateTime.millisecond = (uint16)(stbmTime.millisecond);
+        uint64 glbTime = ((uint64)(globalTime.secondsHi << 32) + globalTime.seconds);
+
+        unix_timestamp_to_utc(glbTime, &dateTime);
+        dateTime.millisecond = (uint32)(globalTime.nanoseconds / 1000000);
         timeValid = TRUE;
     }
 #endif
@@ -517,27 +586,15 @@ static const char* DualPrint_ProcessMessage(PrintChannelType channel,
  ******************************************************************************/
 static Std_ReturnType Eth_SendData(const uint8* data, uint32 length)
 {
-    /* 注意：实际项目中需要根据ETH驱动实现构建正确的以太网帧
-       以下为示例代码，需要根据实际Eth驱动API调整 */
-    
-    // Eth_FrameType ethFrame;
-    // uint8 dstMacAddr[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF}; /* 广播地址 */
-    
-    // if((data == NULL) || (length == 0u))
-    // {
-    //     return E_NOT_OK;
-    // }
-    
-    /* 构建以太网帧（简化版，实际需要设置MAC地址、VLAN等）*/
-    // ethFrame.length = length;
-    // ethFrame.buffer = (uint8*)data;
-    // ethFrame.hwAddrHndl = 0u;
-    // ethFrame.swAddrHndl = 0u;
-    // ethFrame.txBufId = 0u;
-    
-    /* 调用ETH发送接口
-       参数：控制器ID(0), 帧指针 */
-    // return Eth_Transmit(0u, &ethFrame);
+    PduInfoType PduInfo;
+    PduInfo.SduDataPtr = data;
+    PduInfo.SduLength = length;
+    Std_ReturnType ret = LdCom_Transmit(LdComConf_LdComIPdu_LdComIPdu_udplog_Tx, &PduInfo);
+    if (ret != E_OK)
+    {
+        DualPrint_Printf(PRINT_CHANNEL_UART, "LdCom_Transmit transimit fail!");
+    }
+    return ret;
 }
 
 /******************************************************************************
