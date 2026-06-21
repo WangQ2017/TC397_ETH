@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LdCom_Lcfg.h
- *   Generation Time: 2026-05-30 23:48:29
+ *   Generation Time: 2026-06-19 21:41:27
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -229,7 +229,7 @@
   \{
 */ 
 #define LdCom_IsIfPduOfRxTxPduInfo(Index)                                                           LdCom_IsTxPduOfRxTxPduInfo(Index)
-#define LdCom_GetPduRTxHandleIdOfRxTxPduInfo(Index)                                                 ((LdCom_PduRTxHandleIdOfRxTxPduInfoType)((((LdCom_PduRTxHandleIdOfRxTxPduInfoType)(Index)) + 1u)))  /**< Handle ID used to call PduR_LdComTransmit() */
+#define LdCom_GetPduRTxHandleIdOfRxTxPduInfo(Index)                                                 ((LdCom_PduRTxHandleIdOfRxTxPduInfoType)((((LdCom_PduRTxHandleIdOfRxTxPduInfoType)(Index)) + 2u)))  /**< Handle ID used to call PduR_LdComTransmit() */
 #define LdCom_GetSizeOfRxTxPduInfo()                                                                LdCom_GetSizeOfRxTxPduInfoOfPCConfig()
 /** 
   \}

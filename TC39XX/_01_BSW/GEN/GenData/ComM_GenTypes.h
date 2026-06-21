@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_GenTypes.h
- *   Generation Time: 2026-05-30 10:22:03
+ *   Generation Time: 2026-06-18 21:32:21
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -44,7 +44,7 @@ typedef struct ComM_InhibitionTypeTag
 {
   ComM_InhibitionStatusType ComM_ECUGroupClassification;
   uint16 ComM_InhibitCnt;
-  ComM_InhibitionStatusType ComM_InhibitionStatus[1uL]; /* PRQA S 1039 */ /* MD_ComM_1039 */
+  ComM_InhibitionStatusType ComM_InhibitionStatus[2uL]; /* PRQA S 1039 */ /* MD_ComM_1039 */
 } ComM_InhibitionType;
 
 #endif /* COMM_GENTYPES_H */

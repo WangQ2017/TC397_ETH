@@ -57,4 +57,8 @@
 		<ARXML>ComponentTypes/Cdd_PPS.arxml</ARXML>
 		<DVG>ComponentTypes/Cdd_PPS.dvg</DVG>
 	</FILEREF>
+	<FILEREF>
+		<ARXML>ComponentTypes/Cdd_UDS.arxml</ARXML>
+		<DVG>ComponentTypes/Cdd_UDS.dvg</DVG>
+	</FILEREF>
 </DCF>

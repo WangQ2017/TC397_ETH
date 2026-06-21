@@ -43,7 +43,9 @@
 #include "Rte_Cdd_Nm.h"
 #include "Rte_Cdd_PPS.h"
 #include "Rte_Cdd_StbM.h"
+#include "Rte_Cdd_UDS.h"
 #include "Rte_ComM.h"
+#include "Rte_Dcm.h"
 #include "Rte_Det.h"
 #include "Rte_EcuM.h"
 #include "Rte_Os_OsCore0_swc.h"
@@ -57,8 +59,10 @@
 #include "SchM_Com.h"
 #include "SchM_ComM.h"
 #include "SchM_Crc.h"
+#include "SchM_Dcm.h"
 #include "SchM_Det.h"
 #include "SchM_Dio.h"
+#include "SchM_DoIP.h"
 #include "SchM_EcuM.h"
 #include "SchM_EthIf.h"
 #include "SchM_EthSM.h"
@@ -405,6 +409,20 @@ FUNC(BswM_ESH_Mode, RTE_CODE) Rte_Mode_BswM_Notification_ESH_ModeNotification_Bs
 
 
 /**********************************************************************************************************************
+ * Mode Switch API (Rte_Switch)
+ *********************************************************************************************************************/
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl(Dcm_DiagnosticSessionControlType nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  nextMode = nextMode;
+
+  return ret;
+}
+
+
+/**********************************************************************************************************************
  * Task bodies for RTE controlled tasks
  *********************************************************************************************************************/
 
@@ -469,6 +487,12 @@ TASK(OsTask_Asw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreacha
     {
       /* call runnable */
       Cdd_StbM_Runnable100ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Cdd_Uds_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -557,6 +581,9 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
       EthSM_MainFunction();
 
       /* call runnable */
+      ComM_MainFunction_1(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call runnable */
       ComM_MainFunction_0(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
@@ -582,6 +609,12 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
 
       /* call schedulable entity */
       TcpIp_MainFunction();
+
+      /* call schedulable entity */
+      DoIP_MainFunction();
+
+      /* call runnable */
+      Dcm_MainFunction(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
       /* call schedulable entity */
       EthTSyn_MainFunction();
@@ -617,6 +650,9 @@ TASK(OsTask_Init_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreach
 
   /* call runnable */
   Cdd_StbM_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  /* call runnable */
+  Cdd_UDS_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

@@ -118,6 +118,17 @@
               </ADMIN-DATA>
               <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Cdd_PPS</TYPE-TREF>
             </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="9FE61A7E-649D-49E2-83F1-2D729E3FB04A">
+              <SHORT-NAME>Cdd_UDS</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/ComponentTypes/Cdd_UDS</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
           </COMPONENTS>
         </COMPOSITION-SW-COMPONENT-TYPE>
       </ELEMENTS>

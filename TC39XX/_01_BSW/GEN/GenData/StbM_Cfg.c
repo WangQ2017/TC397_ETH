@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: StbM_Cfg.c
- *   Generation Time: 2026-05-31 10:45:36
+ *   Generation Time: 2026-06-19 21:41:28
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -123,8 +123,8 @@
 /*lint -restore */
 CONST(StbM_EthClockConfigType, STBM_CONST) StbM_EthClockConfig[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    EthIfCtrlIdx        Referable Keys */
-  { /*     0 */           2u },  /* [/ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0] */
-  { /*     1 */           2u }   /* [/ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN6] */
+  { /*     0 */           0u },  /* [/ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0] */
+  { /*     1 */           0u }   /* [/ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN6] */
 };
 #define STBM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

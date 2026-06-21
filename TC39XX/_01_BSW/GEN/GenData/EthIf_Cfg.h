@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthIf_Cfg.h
- *   Generation Time: 2026-05-31 10:45:35
+ *   Generation Time: 2026-06-18 21:53:25
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -88,12 +88,11 @@
 /**********************************************************************************************************************
  *  SNVS (SYMBOLIC NAME DEFINES)
  *********************************************************************************************************************/
-#define EthIfConf_EthIfController_EthIfController_Vlan10 (0uL)
-#define EthIfConf_EthIfController_EthIfController_Vlan23 (1uL)
-#define EthIfConf_EthIfController_EthIfController_untagged (2uL)
-#define EthIfConf_EthIfFrameOwnerConfig_TcpIp_IPv4 (0uL)
+#define EthIfConf_EthIfController_EthIfController_untagged (0uL)
+#define EthIfConf_EthIfController_EthIfController_Vlan1 (1uL)
+#define EthIfConf_EthIfFrameOwnerConfig_EthIfFrameOwnerConfig_IPv4 (0uL)
 #define EthIfConf_EthIfFrameOwnerConfig_EthIfFrameOwnerConfig_ARP (1uL)
-#define EthIfConf_EthIfFrameOwnerConfig_EthTSyn_EthTSyn (2uL)
+#define EthIfConf_EthIfFrameOwnerConfig_EthIfFrameOwnerConfig_EthTsyn (2uL)
 
 /**********************************************************************************************************************
  *  FEATURE SWITCHES
@@ -105,7 +104,7 @@
 # define ETHIF_VERSION_INFO_API                 (STD_OFF)
 # define ETHIF_ENABLE_UPDATE_PHYS_ADDR_FILTER   (STD_ON)
 # define ETHIF_ENABLE_MAIN_FUNCTION_STATE       (STD_ON)
-# define ETHIF_ENABLE_SIGNAL_QUALITY_API        (STD_OFF)
+# define ETHIF_ENABLE_SIGNAL_QUALITY_API        (STD_ON)
 # define ETHIF_ENABLE_ZERO_COPY_EXTENSIONS      (STD_OFF)
 # define ETHIF_ENABLE_HEADER_ACCESS_API         (STD_OFF)
 # define ETHIF_GLOBAL_TIME_SUPPORT              (STD_ON)

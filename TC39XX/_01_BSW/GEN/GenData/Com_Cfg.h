@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Cfg.h
- *   Generation Time: 2026-06-07 11:45:09
+ *   Generation Time: 2026-06-19 21:41:31
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -1459,7 +1459,7 @@
 #define Com_GetTxIPduGroupISRLockThreshold()                                                        Com_GetTxIPduGroupISRLockThresholdOfPCConfig()
 #define Com_GetTxModeFalseIdxOfTxModeInfo(Index)                                                    ((Com_TxModeFalseIdxOfTxModeInfoType)((Index)))  /**< the index of the 1:1 relation pointing to Com_TxModeFalse */
 #define Com_GetTxModeTrueIdxOfTxModeInfo(Index)                                                     ((Com_TxModeTrueIdxOfTxModeInfoType)((Index)))  /**< the index of the 1:1 relation pointing to Com_TxModeTrue */
-#define Com_GetExternalIdOfTxPduInfo(Index)                                                         ((Com_ExternalIdOfTxPduInfoType)((Index)))  /**< External ID used to call PduR_ComTransmit(). */
+#define Com_GetExternalIdOfTxPduInfo(Index)                                                         ((Com_ExternalIdOfTxPduInfoType)((((Com_ExternalIdOfTxPduInfoType)(Index)) + 1u)))  /**< External ID used to call PduR_ComTransmit(). */
 #define Com_GetIPduGroupInfoOfTxPduInfoIndEndIdxOfTxPduInfo(Index)                                  ((Com_IPduGroupInfoOfTxPduInfoIndEndIdxOfTxPduInfoType)((((Com_IPduGroupInfoOfTxPduInfoIndEndIdxOfTxPduInfoType)(Index)) + 1u)))  /**< the end index of the 0:n relation pointing to Com_IPduGroupInfoOfTxPduInfoInd */
 #define Com_GetIPduGroupInfoOfTxPduInfoIndStartIdxOfTxPduInfo(Index)                                ((Com_IPduGroupInfoOfTxPduInfoIndStartIdxOfTxPduInfoType)((Index)))  /**< the start index of the 0:n relation pointing to Com_IPduGroupInfoOfTxPduInfoInd */
 #define Com_IsIPduGroupInfoOfTxPduInfoIndUsedOfTxPduInfo(Index)                                     Com_IsTxBufferUsedOfTxPduInfo(Index)  /**< TRUE, if the 0:n relation has 1 relation pointing to Com_IPduGroupInfoOfTxPduInfoInd */

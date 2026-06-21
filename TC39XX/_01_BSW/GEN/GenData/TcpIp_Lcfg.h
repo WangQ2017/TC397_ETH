@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Lcfg.h
- *   Generation Time: 2026-05-31 10:45:41
+ *   Generation Time: 2026-06-20 17:30:53
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -137,34 +137,34 @@
 #define TCPIP_DEFGWADDROFDEFAULTUNICASTADDRV4                                                       STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_NETADDROFDEFAULTUNICASTADDRV4                                                         STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_NETMASKOFDEFAULTUNICASTADDRV4                                                         STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
-#define TCPIP_DHCPCONFIG                                                                            STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define TCPIP_DISCOVERINTERVALMAXOFDHCPCONFIG                                                       STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.DiscoverIntervalMax' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_DISCOVERINTERVALMINOFDHCPCONFIG                                                       STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.DiscoverIntervalMin' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_DISCOVERMAXNUMOFDHCPCONFIG                                                            STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.DiscoverMaxNum' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_HOSTNAMELENMAXOFDHCPCONFIG                                                            STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.HostNameLenMax' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_INITWAITMAXOFDHCPCONFIG                                                               STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.InitWaitMax' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_INITWAITMINOFDHCPCONFIG                                                               STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.InitWaitMin' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_REBINDINTERVALMINOFDHCPCONFIG                                                         STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RebindIntervalMin' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_RENEWINTERVALMINOFDHCPCONFIG                                                          STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RenewIntervalMin' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_REQADDRCALLOUTFUNCOFDHCPCONFIG                                                        STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.ReqAddrCalloutFunc' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_REQUESTINTERVALOFDHCPCONFIG                                                           STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RequestInterval' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_REQUESTMAXNUMOFDHCPCONFIG                                                             STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RequestMaxNum' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_RESTARTONFAILOFDHCPCONFIG                                                             STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RestartOnFail' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_RXREQOPTIONCNTOFDHCPCONFIG                                                            STD_OFF  /**< Deactivateable: 'TcpIp_DhcpConfig.RxReqOptionCnt' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_DHCPHOSTNAME                                                                          STD_OFF  /**< Deactivateable: 'TcpIp_DhcpHostname' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_DHCPSTATUS                                                                            STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_CTRLSTATEOFDHCPSTATUS                                                                 STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.CtrlState' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_DATASTRUCTOFDHCPSTATUS                                                                STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.DataStruct' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_HOSTNAMELENOFDHCPSTATUS                                                               STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.HostNameLen' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_LASTDISCOVERSECSOFDHCPSTATUS                                                          STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.LastDiscoverSecs' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_MSTIMEROFDHCPSTATUS                                                                   STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.MsTimer' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_REQIPADDROFDHCPSTATUS                                                                 STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.ReqIpAddr' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_RETRYCOUNTEROFDHCPSTATUS                                                              STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.RetryCounter' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SECELAPSEDOFDHCPSTATUS                                                                STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.SecElapsed' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SECNEXTEVENTOFDHCPSTATUS                                                              STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.SecNextEvent' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SECNEXTINTERVALOFDHCPSTATUS                                                           STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.SecNextInterval' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SECTIMEROFDHCPSTATUS                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.SecTimer' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TIMEOUTOCCURREDOFDHCPSTATUS                                                           STD_OFF  /**< Deactivateable: 'TcpIp_DhcpStatus.TimeoutOccurred' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
+#define TCPIP_DHCPCONFIG                                                                            STD_ON
+#define TCPIP_DISCOVERINTERVALMAXOFDHCPCONFIG                                                       STD_ON
+#define TCPIP_DISCOVERINTERVALMINOFDHCPCONFIG                                                       STD_ON
+#define TCPIP_DISCOVERMAXNUMOFDHCPCONFIG                                                            STD_ON
+#define TCPIP_HOSTNAMELENMAXOFDHCPCONFIG                                                            STD_ON
+#define TCPIP_INITWAITMAXOFDHCPCONFIG                                                               STD_ON
+#define TCPIP_INITWAITMINOFDHCPCONFIG                                                               STD_ON
+#define TCPIP_REBINDINTERVALMINOFDHCPCONFIG                                                         STD_ON
+#define TCPIP_RENEWINTERVALMINOFDHCPCONFIG                                                          STD_ON
+#define TCPIP_REQADDRCALLOUTFUNCOFDHCPCONFIG                                                        STD_ON
+#define TCPIP_REQUESTINTERVALOFDHCPCONFIG                                                           STD_ON
+#define TCPIP_REQUESTMAXNUMOFDHCPCONFIG                                                             STD_ON
+#define TCPIP_RESTARTONFAILOFDHCPCONFIG                                                             STD_ON
+#define TCPIP_RXREQOPTIONCNTOFDHCPCONFIG                                                            STD_ON
+#define TCPIP_DHCPHOSTNAME                                                                          STD_ON
+#define TCPIP_DHCPSTATUS                                                                            STD_ON
+#define TCPIP_CTRLSTATEOFDHCPSTATUS                                                                 STD_ON
+#define TCPIP_DATASTRUCTOFDHCPSTATUS                                                                STD_ON
+#define TCPIP_HOSTNAMELENOFDHCPSTATUS                                                               STD_ON
+#define TCPIP_LASTDISCOVERSECSOFDHCPSTATUS                                                          STD_ON
+#define TCPIP_MSTIMEROFDHCPSTATUS                                                                   STD_ON
+#define TCPIP_REQIPADDROFDHCPSTATUS                                                                 STD_ON
+#define TCPIP_RETRYCOUNTEROFDHCPSTATUS                                                              STD_ON
+#define TCPIP_SECELAPSEDOFDHCPSTATUS                                                                STD_ON
+#define TCPIP_SECNEXTEVENTOFDHCPSTATUS                                                              STD_ON
+#define TCPIP_SECNEXTINTERVALOFDHCPSTATUS                                                           STD_ON
+#define TCPIP_SECTIMEROFDHCPSTATUS                                                                  STD_ON
+#define TCPIP_TIMEOUTOCCURREDOFDHCPSTATUS                                                           STD_ON
 #define TCPIP_DHCPUSEROPTION                                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_CODEOFDHCPUSEROPTION                                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_DHCPUSEROPTIONBUFFERENDIDXOFDHCPUSEROPTION                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -258,9 +258,9 @@
 #define TCPIP_DEFAULTTTLOFIPV4CTRL                                                                  STD_ON
 #define TCPIP_DHCPCONFIGIDXOFIPV4CTRL                                                               STD_ON
 #define TCPIP_DHCPCONFIGUSEDOFIPV4CTRL                                                              STD_ON
-#define TCPIP_DHCPHOSTNAMEENDIDXOFIPV4CTRL                                                          STD_OFF  /**< Deactivateable: 'TcpIp_IpV4Ctrl.DhcpHostnameEndIdx' Reason: 'the optional indirection is deactivated because DhcpHostnameUsedOfIpV4Ctrl is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define TCPIP_DHCPHOSTNAMESTARTIDXOFIPV4CTRL                                                        STD_OFF  /**< Deactivateable: 'TcpIp_IpV4Ctrl.DhcpHostnameStartIdx' Reason: 'the optional indirection is deactivated because DhcpHostnameUsedOfIpV4Ctrl is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define TCPIP_DHCPHOSTNAMEUSEDOFIPV4CTRL                                                            STD_OFF  /**< Deactivateable: 'TcpIp_IpV4Ctrl.DhcpHostnameUsed' Reason: 'the optional indirection is deactivated because DhcpHostnameUsedOfIpV4Ctrl is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define TCPIP_DHCPHOSTNAMEENDIDXOFIPV4CTRL                                                          STD_ON
+#define TCPIP_DHCPHOSTNAMESTARTIDXOFIPV4CTRL                                                        STD_ON
+#define TCPIP_DHCPHOSTNAMEUSEDOFIPV4CTRL                                                            STD_ON
 #define TCPIP_DHCPSTATUSIDXOFIPV4CTRL                                                               STD_ON
 #define TCPIP_DHCPSTATUSUSEDOFIPV4CTRL                                                              STD_ON
 #define TCPIP_DHCPUSEROPTIONENDIDXOFIPV4CTRL                                                        STD_ON
@@ -281,8 +281,8 @@
 #define TCPIP_LLADDRSTATEIDXOFIPV4CTRL                                                              STD_ON
 #define TCPIP_LLADDRSTATEUSEDOFIPV4CTRL                                                             STD_ON
 #define TCPIP_LOCALADDRV4BROADCASTIDXOFIPV4CTRL                                                     STD_ON
-#define TCPIP_LOCALADDRV4DHCPIDXOFIPV4CTRL                                                          STD_OFF  /**< Deactivateable: 'TcpIp_IpV4Ctrl.LocalAddrV4DhcpIdx' Reason: 'the optional indirection is deactivated because LocalAddrV4DhcpUsedOfIpV4Ctrl is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define TCPIP_LOCALADDRV4DHCPUSEDOFIPV4CTRL                                                         STD_OFF  /**< Deactivateable: 'TcpIp_IpV4Ctrl.LocalAddrV4DhcpUsed' Reason: 'the optional indirection is deactivated because LocalAddrV4DhcpUsedOfIpV4Ctrl is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define TCPIP_LOCALADDRV4DHCPIDXOFIPV4CTRL                                                          STD_ON
+#define TCPIP_LOCALADDRV4DHCPUSEDOFIPV4CTRL                                                         STD_ON
 #define TCPIP_LOCALADDRV4UNICASTIDXOFIPV4CTRL                                                       STD_ON
 #define TCPIP_MAXTXMSGSIZEOFIPV4CTRL                                                                STD_ON
 #define TCPIP_MTUTXOFIPV4CTRL                                                                       STD_ON
@@ -408,6 +408,9 @@
 #define TCPIP_SIZEOFBUF2TXREQMAP                                                                    STD_ON
 #define TCPIP_SIZEOFDEFAULTMULTICASTADDRV4                                                          STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDEFAULTUNICASTADDRV4                                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_SIZEOFDHCPCONFIG                                                                      STD_ON
+#define TCPIP_SIZEOFDHCPHOSTNAME                                                                    STD_ON
+#define TCPIP_SIZEOFDHCPSTATUS                                                                      STD_ON
 #define TCPIP_SIZEOFDHCPUSEROPTION                                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDHCPUSEROPTIONBUFFER                                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDHCPUSEROPTIONDYN                                                               STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -431,10 +434,23 @@
 #define TCPIP_SIZEOFREASSEMBLYBUFFERDESCDYN                                                         STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFSOCKETDYN                                                                       STD_ON
 #define TCPIP_SIZEOFSOCKETOWNERCONFIG                                                               STD_ON
+#define TCPIP_SIZEOFSOCKETTCPDYN                                                                    STD_ON
+#define TCPIP_SIZEOFSOCKETTCPNAGLEDYN                                                               STD_ON
+#define TCPIP_SIZEOFSOCKETTCPOOODYN                                                                 STD_ON
 #define TCPIP_SIZEOFSOCKETUDPDYN                                                                    STD_ON
 #define TCPIP_SIZEOFSTATICARPENTRY                                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFSTATICARPTABLE                                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFSTATICUNICASTADDRV4REQUESTED                                                    STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_SIZEOFTCPCONFIG                                                                       STD_ON
+#define TCPIP_SIZEOFTCPOOOQELEMENT                                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_SIZEOFTCPRESETQELEMENT                                                                STD_ON
+#define TCPIP_SIZEOFTCPRETRYQELEMENT                                                                STD_ON
+#define TCPIP_SIZEOFTCPRXBUFFER                                                                     STD_ON
+#define TCPIP_SIZEOFTCPRXBUFFERDESC                                                                 STD_ON
+#define TCPIP_SIZEOFTCPRXBUFFERDESCDYN                                                              STD_ON
+#define TCPIP_SIZEOFTCPTXBUFFER                                                                     STD_ON
+#define TCPIP_SIZEOFTCPTXBUFFERDESC                                                                 STD_ON
+#define TCPIP_SIZEOFTCPTXBUFFERDESCDYN                                                              STD_ON
 #define TCPIP_SIZEOFTXREQELEM                                                                       STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFTXREQELEMLIST                                                                   STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFTXREQELEMLISTDYN                                                                STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -462,58 +478,62 @@
 #define TCPIP_TLSVALIDATIONRESULTFUNCPTROFSOCKETOWNERCONFIG                                         STD_ON
 #define TCPIP_TXCONFIRMATIONFUNCPTROFSOCKETOWNERCONFIG                                              STD_ON
 #define TCPIP_SOCKETTCPCONGCTRLDYN                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpCongCtrlDyn' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define TCPIP_SOCKETTCPDYN                                                                          STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_BACKLOGARRAYOFSOCKETTCPDYN                                                            STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.BackLogArray' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_EVENTINDICATIONPENDINGOFSOCKETTCPDYN                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.EventIndicationPending' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_FINWAIT2TIMEOUTOFSOCKETTCPDYN                                                         STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.FinWait2Timeout' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_IDLETIMEOUTSHORTOFSOCKETTCPDYN                                                        STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.IdleTimeoutShort' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_ISSOFSOCKETTCPDYN                                                                     STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.Iss' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_MAXNUMLISTENSOCKETSOFSOCKETTCPDYN                                                     STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.MaxNumListenSockets' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_MSLTIMEOUTOFSOCKETTCPDYN                                                              STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.MslTimeout' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_PATHMTUCHANGEDOFSOCKETTCPDYN                                                          STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.PathMtuChanged' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_PATHMTUNEWSIZEOFSOCKETTCPDYN                                                          STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.PathMtuNewSize' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_RCVNXTOFSOCKETTCPDYN                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.RcvNxt' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_RCVWNDOFSOCKETTCPDYN                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.RcvWnd' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_REQUESTEDRXBUFFERSIZEOFSOCKETTCPDYN                                                   STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.RequestedRxBufferSize' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_REQUESTEDTXBUFFERSIZEOFSOCKETTCPDYN                                                   STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.RequestedTxBufferSize' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_RETRANSMITTIMEOUTOFSOCKETTCPDYN                                                       STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.RetransmitTimeout' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_RETRYQFILLNUMOFSOCKETTCPDYN                                                           STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.RetryQFillNum' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_RSTRECEIVEDOFSOCKETTCPDYN                                                             STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.RstReceived' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_RTORELOADVALUEOFSOCKETTCPDYN                                                          STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.RtoReloadValue' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_RXBUFFERINDPOSOFSOCKETTCPDYN                                                          STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.RxBufferIndPos' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_RXBUFFERREMINDLENOFSOCKETTCPDYN                                                       STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.RxBufferRemIndLen' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SENDLASTHSACKOFSOCKETTCPDYN                                                           STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.SendLastHsAck' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SNDNXTOFSOCKETTCPDYN                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.SndNxt' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SNDUNAOFSOCKETTCPDYN                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.SndUna' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SNDWL1OFSOCKETTCPDYN                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.SndWl1' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SNDWL2OFSOCKETTCPDYN                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.SndWl2' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SNDWNDOFSOCKETTCPDYN                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.SndWnd' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SOCKISSERVEROFSOCKETTCPDYN                                                            STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.SockIsServer' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SOCKSTATENEXTOFSOCKETTCPDYN                                                           STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.SockStateNext' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SOCKSTATEOFSOCKETTCPDYN                                                               STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.SockState' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SOCKETTCPDYNMASTERLISTENSOCKETIDXOFSOCKETTCPDYN                                       STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.SocketTcpDynMasterListenSocketIdx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TCPRETRYQELEMENTFIRSTIDXOFSOCKETTCPDYN                                                STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TcpRetryQElementFirstIdx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TCPRETRYQELEMENTLASTIDXOFSOCKETTCPDYN                                                 STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TcpRetryQElementLastIdx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TCPRXBUFFERDESCIDXOFSOCKETTCPDYN                                                      STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TcpRxBufferDescIdx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TCPTXBUFFERDESCIDXOFSOCKETTCPDYN                                                      STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TcpTxBufferDescIdx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXFLAGSOFSOCKETTCPDYN                                                                 STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxFlags' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXLENBYTETXOFSOCKETTCPDYN                                                             STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxLenByteTx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXMAXSEGLENBYTEOFSOCKETTCPDYN                                                         STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxMaxSegLenByte' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXMSSAGREEDOFSOCKETTCPDYN                                                             STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxMssAgreed' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXNEXTSENDSEQNOOFSOCKETTCPDYN                                                         STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxNextSendSeqNo' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXONETIMEOPTSLENOFSOCKETTCPDYN                                                        STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxOneTimeOptsLen' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXONETIMEOPTSOFSOCKETTCPDYN                                                           STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxOneTimeOpts' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXOPTLENOFSOCKETTCPDYN                                                                STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxOptLen' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXREQDATABUFSTARTIDXOFSOCKETTCPDYN                                                    STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxReqDataBufStartIdx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXREQDATALENBYTEOFSOCKETTCPDYN                                                        STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxReqDataLenByte' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXREQFULLYQUEUEDOFSOCKETTCPDYN                                                        STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxReqFullyQueued' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXREQQUEUEDLENOFSOCKETTCPDYN                                                          STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxReqQueuedLen' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXREQSEQNOOFSOCKETTCPDYN                                                              STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxReqSeqNo' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TXTOTNOTQUEUEDLENOFSOCKETTCPDYN                                                       STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.TxTotNotQueuedLen' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_USETLSOFSOCKETTCPDYN                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.UseTls' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
+#define TCPIP_SOCKETTCPDYN                                                                          STD_ON
+#define TCPIP_BACKLOGARRAYOFSOCKETTCPDYN                                                            STD_ON
+#define TCPIP_EVENTINDICATIONPENDINGOFSOCKETTCPDYN                                                  STD_ON
+#define TCPIP_FINWAIT2TIMEOUTOFSOCKETTCPDYN                                                         STD_ON
+#define TCPIP_IDLETIMEOUTSHORTOFSOCKETTCPDYN                                                        STD_ON
+#define TCPIP_ISSOFSOCKETTCPDYN                                                                     STD_ON
+#define TCPIP_MAXNUMLISTENSOCKETSOFSOCKETTCPDYN                                                     STD_ON
+#define TCPIP_MSLTIMEOUTOFSOCKETTCPDYN                                                              STD_ON
+#define TCPIP_PATHMTUCHANGEDOFSOCKETTCPDYN                                                          STD_ON
+#define TCPIP_PATHMTUNEWSIZEOFSOCKETTCPDYN                                                          STD_ON
+#define TCPIP_RCVNXTOFSOCKETTCPDYN                                                                  STD_ON
+#define TCPIP_RCVWNDOFSOCKETTCPDYN                                                                  STD_ON
+#define TCPIP_REQUESTEDRXBUFFERSIZEOFSOCKETTCPDYN                                                   STD_ON
+#define TCPIP_REQUESTEDTXBUFFERSIZEOFSOCKETTCPDYN                                                   STD_ON
+#define TCPIP_RETRANSMITTIMEOUTOFSOCKETTCPDYN                                                       STD_ON
+#define TCPIP_RETRYQFILLNUMOFSOCKETTCPDYN                                                           STD_ON
+#define TCPIP_RSTRECEIVEDOFSOCKETTCPDYN                                                             STD_ON
+#define TCPIP_RTORELOADVALUEOFSOCKETTCPDYN                                                          STD_ON
+#define TCPIP_RXBUFFERINDPOSOFSOCKETTCPDYN                                                          STD_ON
+#define TCPIP_RXBUFFERREMINDLENOFSOCKETTCPDYN                                                       STD_ON
+#define TCPIP_SENDLASTHSACKOFSOCKETTCPDYN                                                           STD_ON
+#define TCPIP_SNDNXTOFSOCKETTCPDYN                                                                  STD_ON
+#define TCPIP_SNDUNAOFSOCKETTCPDYN                                                                  STD_ON
+#define TCPIP_SNDWL1OFSOCKETTCPDYN                                                                  STD_ON
+#define TCPIP_SNDWL2OFSOCKETTCPDYN                                                                  STD_ON
+#define TCPIP_SNDWNDOFSOCKETTCPDYN                                                                  STD_ON
+#define TCPIP_SOCKISSERVEROFSOCKETTCPDYN                                                            STD_ON
+#define TCPIP_SOCKSTATENEXTOFSOCKETTCPDYN                                                           STD_ON
+#define TCPIP_SOCKSTATEOFSOCKETTCPDYN                                                               STD_ON
+#define TCPIP_SOCKETTCPDYNMASTERLISTENSOCKETIDXOFSOCKETTCPDYN                                       STD_ON
+#define TCPIP_TCPRETRYQELEMENTFIRSTIDXOFSOCKETTCPDYN                                                STD_ON
+#define TCPIP_TCPRETRYQELEMENTLASTIDXOFSOCKETTCPDYN                                                 STD_ON
+#define TCPIP_TCPRXBUFFERDESCIDXOFSOCKETTCPDYN                                                      STD_ON
+#define TCPIP_TCPTXBUFFERDESCIDXOFSOCKETTCPDYN                                                      STD_ON
+#define TCPIP_TXFLAGSOFSOCKETTCPDYN                                                                 STD_ON
+#define TCPIP_TXLENBYTETXOFSOCKETTCPDYN                                                             STD_ON
+#define TCPIP_TXMAXSEGLENBYTEOFSOCKETTCPDYN                                                         STD_ON
+#define TCPIP_TXMSSAGREEDOFSOCKETTCPDYN                                                             STD_ON
+#define TCPIP_TXNEXTSENDSEQNOOFSOCKETTCPDYN                                                         STD_ON
+#define TCPIP_TXONETIMEOPTSLENOFSOCKETTCPDYN                                                        STD_ON
+#define TCPIP_TXONETIMEOPTSOFSOCKETTCPDYN                                                           STD_ON
+#define TCPIP_TXOPTLENOFSOCKETTCPDYN                                                                STD_ON
+#define TCPIP_TXREQDATABUFSTARTIDXOFSOCKETTCPDYN                                                    STD_ON
+#define TCPIP_TXREQDATALENBYTEOFSOCKETTCPDYN                                                        STD_ON
+#define TCPIP_TXREQFULLYQUEUEDOFSOCKETTCPDYN                                                        STD_ON
+#define TCPIP_TXREQQUEUEDLENOFSOCKETTCPDYN                                                          STD_ON
+#define TCPIP_TXREQSEQNOOFSOCKETTCPDYN                                                              STD_ON
+#define TCPIP_TXTOTNOTQUEUEDLENOFSOCKETTCPDYN                                                       STD_ON
+#define TCPIP_USETLSOFSOCKETTCPDYN                                                                  STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpDyn.UseTls' Reason: 'TLS not present in configuration.' */
 #define TCPIP_SOCKETTCPKEEPALIVEDYN                                                                 STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpKeepAliveDyn' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define TCPIP_SOCKETTCPNAGLEDYN                                                                     STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpNagleDyn' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define TCPIP_SOCKETTCPOOODYN                                                                       STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpOooDyn' Reason: 'the struct is deactivated because all elements are deactivated.' */
+#define TCPIP_SOCKETTCPNAGLEDYN                                                                     STD_ON
+#define TCPIP_ENABLEDOFSOCKETTCPNAGLEDYN                                                            STD_ON
+#define TCPIP_TIMEOUTOFSOCKETTCPNAGLEDYN                                                            STD_ON
+#define TCPIP_SOCKETTCPOOODYN                                                                       STD_ON
+#define TCPIP_TCPOOOQELEMENTFIRSTIDXOFSOCKETTCPOOODYN                                               STD_ON
+#define TCPIP_TCPOOOQFILLNUMOFSOCKETTCPOOODYN                                                       STD_ON
 #define TCPIP_SOCKETTCPTSOPTDYN                                                                     STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpTsOptDyn' Reason: 'the struct is deactivated because all elements are deactivated.' */
 #define TCPIP_SOCKETTCPUTODYN                                                                       STD_OFF  /**< Deactivateable: 'TcpIp_SocketTcpUtoDyn' Reason: 'the struct is deactivated because all elements are deactivated.' */
 #define TCPIP_SOCKETUDPDYN                                                                          STD_ON
@@ -545,44 +565,45 @@
 #define TCPIP_DEFGWADDROFSTATICUNICASTADDRV4REQUESTED                                               STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_NETADDROFSTATICUNICASTADDRV4REQUESTED                                                 STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_NETMASKOFSTATICUNICASTADDRV4REQUESTED                                                 STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
-#define TCPIP_TCPCONFIG                                                                             STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define TCPIP_FINWAIT2TIMEOUTOFTCPCONFIG                                                            STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.FinWait2Timeout' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_KEEPALIVEINTERVALOFTCPCONFIG                                                          STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.KeepAliveInterval' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_KEEPALIVEPROBESMAXOFTCPCONFIG                                                         STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.KeepAliveProbesMax' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_KEEPALIVETIMEOFTCPCONFIG                                                              STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.KeepAliveTime' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_MSLOFTCPCONFIG                                                                        STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.Msl' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_NAGLETIMEOUTOFTCPCONFIG                                                               STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.NagleTimeout' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_RETRANSTIMEOUTMAXOFTCPCONFIG                                                          STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.RetransTimeoutMax' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_RETRANSTIMEOUTOFTCPCONFIG                                                             STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.RetransTimeout' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_RXMSSOFTCPCONFIG                                                                      STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.RxMss' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPOOOQSIZEPERSOCKETAVGOFTCPCONFIG                                                    STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.TcpOooQSizePerSocketAvg' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPOOOQSIZEPERSOCKETMAXOFTCPCONFIG                                                    STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.TcpOooQSizePerSocketMax' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPRETRYQSIZEOFTCPCONFIG                                                              STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.TcpRetryQSize' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TIMETOLIVEDEFAULTOFTCPCONFIG                                                          STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.TimeToLiveDefault' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TXMSSOFTCPCONFIG                                                                      STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.TxMss' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_USERTIMEOUTDEFCYCLESOFTCPCONFIG                                                       STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.UserTimeoutDefCycles' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_USERTIMEOUTMAXCYCLESOFTCPCONFIG                                                       STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.UserTimeoutMaxCycles' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_USERTIMEOUTMINCYCLESOFTCPCONFIG                                                       STD_OFF  /**< Deactivateable: 'TcpIp_TcpConfig.UserTimeoutMinCycles' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPOOOQELEMENT                                                                        STD_OFF  /**< Deactivateable: 'TcpIp_TcpOooQElement' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPRETRYQELEMENT                                                                      STD_OFF  /**< Deactivateable: 'TcpIp_TcpRetryQElement' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPRXBUFFER                                                                           STD_OFF  /**< Deactivateable: 'TcpIp_TcpRxBuffer' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPRXBUFFERDESC                                                                       STD_OFF  /**< Deactivateable: 'TcpIp_TcpRxBufferDesc' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define TCPIP_TCPRXBUFFERENDIDXOFTCPRXBUFFERDESC                                                    STD_OFF  /**< Deactivateable: 'TcpIp_TcpRxBufferDesc.TcpRxBufferEndIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPRXBUFFERLENGTHOFTCPRXBUFFERDESC                                                    STD_OFF  /**< Deactivateable: 'TcpIp_TcpRxBufferDesc.TcpRxBufferLength' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPRXBUFFERSTARTIDXOFTCPRXBUFFERDESC                                                  STD_OFF  /**< Deactivateable: 'TcpIp_TcpRxBufferDesc.TcpRxBufferStartIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPRXBUFFERDESCDYN                                                                    STD_OFF  /**< Deactivateable: 'TcpIp_TcpRxBufferDescDyn' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_FILLLEVELOFTCPRXBUFFERDESCDYN                                                         STD_OFF  /**< Deactivateable: 'TcpIp_TcpRxBufferDescDyn.FillLevel' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SOCKETTCPDYNIDXOFTCPRXBUFFERDESCDYN                                                   STD_OFF  /**< Deactivateable: 'TcpIp_TcpRxBufferDescDyn.SocketTcpDynIdx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TCPRXBUFFERWRITEIDXOFTCPRXBUFFERDESCDYN                                               STD_OFF  /**< Deactivateable: 'TcpIp_TcpRxBufferDescDyn.TcpRxBufferWriteIdx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TCPTXBUFFER                                                                           STD_OFF  /**< Deactivateable: 'TcpIp_TcpTxBuffer' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPTXBUFFERDESC                                                                       STD_OFF  /**< Deactivateable: 'TcpIp_TcpTxBufferDesc' Reason: 'the struct is deactivated because all elements are deactivated.' */
-#define TCPIP_TCPTXBUFFERENDIDXOFTCPTXBUFFERDESC                                                    STD_OFF  /**< Deactivateable: 'TcpIp_TcpTxBufferDesc.TcpTxBufferEndIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPTXBUFFERLENGTHOFTCPTXBUFFERDESC                                                    STD_OFF  /**< Deactivateable: 'TcpIp_TcpTxBufferDesc.TcpTxBufferLength' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPTXBUFFERSTARTIDXOFTCPTXBUFFERDESC                                                  STD_OFF  /**< Deactivateable: 'TcpIp_TcpTxBufferDesc.TcpTxBufferStartIdx' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define TCPIP_TCPTXBUFFERDESCDYN                                                                    STD_OFF  /**< Deactivateable: 'TcpIp_TcpTxBufferDescDyn' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_FILLLEVELOFTCPTXBUFFERDESCDYN                                                         STD_OFF  /**< Deactivateable: 'TcpIp_TcpTxBufferDescDyn.FillLevel' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_SOCKETTCPDYNIDXOFTCPTXBUFFERDESCDYN                                                   STD_OFF  /**< Deactivateable: 'TcpIp_TcpTxBufferDescDyn.SocketTcpDynIdx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
-#define TCPIP_TCPTXBUFFERWRITEIDXOFTCPTXBUFFERDESCDYN                                               STD_OFF  /**< Deactivateable: 'TcpIp_TcpTxBufferDescDyn.TcpTxBufferWriteIdx' Reason: 'the struct is deactivated because all elements are deactivated in all variants.' */
+#define TCPIP_TCPCONFIG                                                                             STD_ON
+#define TCPIP_FINWAIT2TIMEOUTOFTCPCONFIG                                                            STD_ON
+#define TCPIP_KEEPALIVEINTERVALOFTCPCONFIG                                                          STD_ON
+#define TCPIP_KEEPALIVEPROBESMAXOFTCPCONFIG                                                         STD_ON
+#define TCPIP_KEEPALIVETIMEOFTCPCONFIG                                                              STD_ON
+#define TCPIP_MSLOFTCPCONFIG                                                                        STD_ON
+#define TCPIP_NAGLETIMEOUTOFTCPCONFIG                                                               STD_ON
+#define TCPIP_RETRANSTIMEOUTMAXOFTCPCONFIG                                                          STD_ON
+#define TCPIP_RETRANSTIMEOUTOFTCPCONFIG                                                             STD_ON
+#define TCPIP_RXMSSOFTCPCONFIG                                                                      STD_ON
+#define TCPIP_TCPOOOQSIZEPERSOCKETAVGOFTCPCONFIG                                                    STD_ON
+#define TCPIP_TCPOOOQSIZEPERSOCKETMAXOFTCPCONFIG                                                    STD_ON
+#define TCPIP_TCPRETRYQSIZEOFTCPCONFIG                                                              STD_ON
+#define TCPIP_TIMETOLIVEDEFAULTOFTCPCONFIG                                                          STD_ON
+#define TCPIP_TXMSSOFTCPCONFIG                                                                      STD_ON
+#define TCPIP_USERTIMEOUTDEFCYCLESOFTCPCONFIG                                                       STD_ON
+#define TCPIP_USERTIMEOUTMAXCYCLESOFTCPCONFIG                                                       STD_ON
+#define TCPIP_USERTIMEOUTMINCYCLESOFTCPCONFIG                                                       STD_ON
+#define TCPIP_TCPOOOQELEMENT                                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_TCPRESETQELEMENT                                                                      STD_ON
+#define TCPIP_TCPRETRYQELEMENT                                                                      STD_ON
+#define TCPIP_TCPRXBUFFER                                                                           STD_ON
+#define TCPIP_TCPRXBUFFERDESC                                                                       STD_ON
+#define TCPIP_TCPRXBUFFERENDIDXOFTCPRXBUFFERDESC                                                    STD_ON
+#define TCPIP_TCPRXBUFFERLENGTHOFTCPRXBUFFERDESC                                                    STD_ON
+#define TCPIP_TCPRXBUFFERSTARTIDXOFTCPRXBUFFERDESC                                                  STD_ON
+#define TCPIP_TCPRXBUFFERDESCDYN                                                                    STD_ON
+#define TCPIP_FILLLEVELOFTCPRXBUFFERDESCDYN                                                         STD_ON
+#define TCPIP_SOCKETTCPDYNIDXOFTCPRXBUFFERDESCDYN                                                   STD_ON
+#define TCPIP_TCPRXBUFFERWRITEIDXOFTCPRXBUFFERDESCDYN                                               STD_ON
+#define TCPIP_TCPTXBUFFER                                                                           STD_ON
+#define TCPIP_TCPTXBUFFERDESC                                                                       STD_ON
+#define TCPIP_TCPTXBUFFERENDIDXOFTCPTXBUFFERDESC                                                    STD_ON
+#define TCPIP_TCPTXBUFFERLENGTHOFTCPTXBUFFERDESC                                                    STD_ON
+#define TCPIP_TCPTXBUFFERSTARTIDXOFTCPTXBUFFERDESC                                                  STD_ON
+#define TCPIP_TCPTXBUFFERDESCDYN                                                                    STD_ON
+#define TCPIP_FILLLEVELOFTCPTXBUFFERDESCDYN                                                         STD_ON
+#define TCPIP_SOCKETTCPDYNIDXOFTCPTXBUFFERDESCDYN                                                   STD_ON
+#define TCPIP_TCPTXBUFFERWRITEIDXOFTCPTXBUFFERDESCDYN                                               STD_ON
 #define TCPIP_TXREQELEM                                                                             STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_TXREQELEMDATALENBYTEOFTXREQELEM                                                       STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_TXREQELEMTRANSMITTEDOFTXREQELEM                                                       STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -611,6 +632,9 @@
 #define TCPIP_BUF2TXREQMAPOFPCCONFIG                                                                STD_ON
 #define TCPIP_DEFAULTMULTICASTADDRV4OFPCCONFIG                                                      STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_DEFAULTUNICASTADDRV4OFPCCONFIG                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_DHCPCONFIGOFPCCONFIG                                                                  STD_ON
+#define TCPIP_DHCPHOSTNAMEOFPCCONFIG                                                                STD_ON
+#define TCPIP_DHCPSTATUSOFPCCONFIG                                                                  STD_ON
 #define TCPIP_DHCPUSEROPTIONBUFFEROFPCCONFIG                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_DHCPUSEROPTIONDYNOFPCCONFIG                                                           STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_DHCPUSEROPTIONOFPCCONFIG                                                              STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -644,6 +668,9 @@
 #define TCPIP_SIZEOFBUF2TXREQMAPOFPCCONFIG                                                          STD_ON
 #define TCPIP_SIZEOFDEFAULTMULTICASTADDRV4OFPCCONFIG                                                STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDEFAULTUNICASTADDRV4OFPCCONFIG                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_SIZEOFDHCPCONFIGOFPCCONFIG                                                            STD_ON
+#define TCPIP_SIZEOFDHCPHOSTNAMEOFPCCONFIG                                                          STD_ON
+#define TCPIP_SIZEOFDHCPSTATUSOFPCCONFIG                                                            STD_ON
 #define TCPIP_SIZEOFDHCPUSEROPTIONBUFFEROFPCCONFIG                                                  STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDHCPUSEROPTIONDYNOFPCCONFIG                                                     STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFDHCPUSEROPTIONOFPCCONFIG                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -667,10 +694,23 @@
 #define TCPIP_SIZEOFREASSEMBLYBUFFEROFPCCONFIG                                                      STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFSOCKETDYNOFPCCONFIG                                                             STD_ON
 #define TCPIP_SIZEOFSOCKETOWNERCONFIGOFPCCONFIG                                                     STD_ON
+#define TCPIP_SIZEOFSOCKETTCPDYNOFPCCONFIG                                                          STD_ON
+#define TCPIP_SIZEOFSOCKETTCPNAGLEDYNOFPCCONFIG                                                     STD_ON
+#define TCPIP_SIZEOFSOCKETTCPOOODYNOFPCCONFIG                                                       STD_ON
 #define TCPIP_SIZEOFSOCKETUDPDYNOFPCCONFIG                                                          STD_ON
 #define TCPIP_SIZEOFSTATICARPENTRYOFPCCONFIG                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFSTATICARPTABLEOFPCCONFIG                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFSTATICUNICASTADDRV4REQUESTEDOFPCCONFIG                                          STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_SIZEOFTCPCONFIGOFPCCONFIG                                                             STD_ON
+#define TCPIP_SIZEOFTCPOOOQELEMENTOFPCCONFIG                                                        STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_SIZEOFTCPRESETQELEMENTOFPCCONFIG                                                      STD_ON
+#define TCPIP_SIZEOFTCPRETRYQELEMENTOFPCCONFIG                                                      STD_ON
+#define TCPIP_SIZEOFTCPRXBUFFERDESCDYNOFPCCONFIG                                                    STD_ON
+#define TCPIP_SIZEOFTCPRXBUFFERDESCOFPCCONFIG                                                       STD_ON
+#define TCPIP_SIZEOFTCPRXBUFFEROFPCCONFIG                                                           STD_ON
+#define TCPIP_SIZEOFTCPTXBUFFERDESCDYNOFPCCONFIG                                                    STD_ON
+#define TCPIP_SIZEOFTCPTXBUFFERDESCOFPCCONFIG                                                       STD_ON
+#define TCPIP_SIZEOFTCPTXBUFFEROFPCCONFIG                                                           STD_ON
 #define TCPIP_SIZEOFTXREQELEMLISTDYNOFPCCONFIG                                                      STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFTXREQELEMLISTOFPCCONFIG                                                         STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SIZEOFTXREQELEMOFPCCONFIG                                                             STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -680,10 +720,23 @@
 #define TCPIP_SIZEOFUNICASTADDRV4OFPCCONFIG                                                         STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_SOCKETDYNOFPCCONFIG                                                                   STD_ON
 #define TCPIP_SOCKETOWNERCONFIGOFPCCONFIG                                                           STD_ON
+#define TCPIP_SOCKETTCPDYNOFPCCONFIG                                                                STD_ON
+#define TCPIP_SOCKETTCPNAGLEDYNOFPCCONFIG                                                           STD_ON
+#define TCPIP_SOCKETTCPOOODYNOFPCCONFIG                                                             STD_ON
 #define TCPIP_SOCKETUDPDYNOFPCCONFIG                                                                STD_ON
 #define TCPIP_STATICARPENTRYOFPCCONFIG                                                              STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_STATICARPTABLEOFPCCONFIG                                                              STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_STATICUNICASTADDRV4REQUESTEDOFPCCONFIG                                                STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_TCPCONFIGOFPCCONFIG                                                                   STD_ON
+#define TCPIP_TCPOOOQELEMENTOFPCCONFIG                                                              STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
+#define TCPIP_TCPRESETQELEMENTOFPCCONFIG                                                            STD_ON
+#define TCPIP_TCPRETRYQELEMENTOFPCCONFIG                                                            STD_ON
+#define TCPIP_TCPRXBUFFERDESCDYNOFPCCONFIG                                                          STD_ON
+#define TCPIP_TCPRXBUFFERDESCOFPCCONFIG                                                             STD_ON
+#define TCPIP_TCPRXBUFFEROFPCCONFIG                                                                 STD_ON
+#define TCPIP_TCPTXBUFFERDESCDYNOFPCCONFIG                                                          STD_ON
+#define TCPIP_TCPTXBUFFERDESCOFPCCONFIG                                                             STD_ON
+#define TCPIP_TCPTXBUFFEROFPCCONFIG                                                                 STD_ON
 #define TCPIP_TXREQELEMLISTDYNOFPCCONFIG                                                            STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_TXREQELEMLISTOFPCCONFIG                                                               STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
 #define TCPIP_TXREQELEMOFPCCONFIG                                                                   STD_ON  /**< This preprocessing switch is always STD_ON because the PrecompilePreprocessingStrategy is RUNTIME_CHECKING and feature deactivation conditions are not available. */
@@ -707,6 +760,16 @@
 #define TCPIP_MIN_ETHBUFLENOFBUF2TXREQMAP                                                           0u
 #define TCPIP_MIN_SOCKETDYNIDXOFBUF2TXREQMAP                                                        0u
 #define TCPIP_MIN_ULTXREQIDXOFBUF2TXREQMAP                                                          0u
+#define TCPIP_MIN_DHCPHOSTNAME                                                                      0u
+#define TCPIP_MIN_CTRLSTATEOFDHCPSTATUS                                                             0u
+#define TCPIP_MIN_HOSTNAMELENOFDHCPSTATUS                                                           0u
+#define TCPIP_MIN_LASTDISCOVERSECSOFDHCPSTATUS                                                      0u
+#define TCPIP_MIN_MSTIMEROFDHCPSTATUS                                                               0u
+#define TCPIP_MIN_RETRYCOUNTEROFDHCPSTATUS                                                          0u
+#define TCPIP_MIN_SECELAPSEDOFDHCPSTATUS                                                            0u
+#define TCPIP_MIN_SECNEXTEVENTOFDHCPSTATUS                                                          0u
+#define TCPIP_MIN_SECNEXTINTERVALOFDHCPSTATUS                                                       0u
+#define TCPIP_MIN_SECTIMEROFDHCPSTATUS                                                              0u
 #define TCPIP_MIN_DHCPUSEROPTIONBUFFER                                                              0u
 #define TCPIP_MIN_LENGTHOFDHCPUSEROPTIONDYN                                                         0u
 #define TCPIP_MIN_NEXTTRANSMISSIONMSOFGRATUITOUSARP                                                 0u
@@ -739,8 +802,49 @@
 #define TCPIP_MIN_LOCALADDRBINDIDXOFSOCKETDYN                                                       0u
 #define TCPIP_MIN_SOCKETOWNERCONFIGIDXOFSOCKETDYN                                                   0u
 #define TCPIP_MIN_TXIPADDRIDXOFSOCKETDYN                                                            0u
+#define TCPIP_MIN_EVENTINDICATIONPENDINGOFSOCKETTCPDYN                                              0u
+#define TCPIP_MIN_FINWAIT2TIMEOUTOFSOCKETTCPDYN                                                     0u
+#define TCPIP_MIN_IDLETIMEOUTSHORTOFSOCKETTCPDYN                                                    0u
+#define TCPIP_MIN_ISSOFSOCKETTCPDYN                                                                 0u
+#define TCPIP_MIN_MAXNUMLISTENSOCKETSOFSOCKETTCPDYN                                                 0u
+#define TCPIP_MIN_MSLTIMEOUTOFSOCKETTCPDYN                                                          0u
+#define TCPIP_MIN_PATHMTUNEWSIZEOFSOCKETTCPDYN                                                      0u
+#define TCPIP_MIN_RCVNXTOFSOCKETTCPDYN                                                              0u
+#define TCPIP_MIN_RCVWNDOFSOCKETTCPDYN                                                              0u
+#define TCPIP_MIN_RETRANSMITTIMEOUTOFSOCKETTCPDYN                                                   0u
+#define TCPIP_MIN_RETRYQFILLNUMOFSOCKETTCPDYN                                                       0u
+#define TCPIP_MIN_RTORELOADVALUEOFSOCKETTCPDYN                                                      0u
+#define TCPIP_MIN_SNDNXTOFSOCKETTCPDYN                                                              0u
+#define TCPIP_MIN_SNDUNAOFSOCKETTCPDYN                                                              0u
+#define TCPIP_MIN_SNDWL1OFSOCKETTCPDYN                                                              0u
+#define TCPIP_MIN_SNDWL2OFSOCKETTCPDYN                                                              0u
+#define TCPIP_MIN_SNDWNDOFSOCKETTCPDYN                                                              0u
+#define TCPIP_MIN_SOCKSTATENEXTOFSOCKETTCPDYN                                                       0u
+#define TCPIP_MIN_SOCKSTATEOFSOCKETTCPDYN                                                           0u
+#define TCPIP_MIN_SOCKETTCPDYNMASTERLISTENSOCKETIDXOFSOCKETTCPDYN                                   0u
+#define TCPIP_MIN_TCPRETRYQELEMENTFIRSTIDXOFSOCKETTCPDYN                                            0u
+#define TCPIP_MIN_TCPRETRYQELEMENTLASTIDXOFSOCKETTCPDYN                                             0u
+#define TCPIP_MIN_TCPRXBUFFERDESCIDXOFSOCKETTCPDYN                                                  0u
+#define TCPIP_MIN_TCPTXBUFFERDESCIDXOFSOCKETTCPDYN                                                  0u
+#define TCPIP_MIN_TXFLAGSOFSOCKETTCPDYN                                                             0u
+#define TCPIP_MIN_TXMAXSEGLENBYTEOFSOCKETTCPDYN                                                     0u
+#define TCPIP_MIN_TXMSSAGREEDOFSOCKETTCPDYN                                                         0u
+#define TCPIP_MIN_TXNEXTSENDSEQNOOFSOCKETTCPDYN                                                     0u
+#define TCPIP_MIN_TXONETIMEOPTSLENOFSOCKETTCPDYN                                                    0u
+#define TCPIP_MIN_TXONETIMEOPTSOFSOCKETTCPDYN                                                       0u
+#define TCPIP_MIN_TXOPTLENOFSOCKETTCPDYN                                                            0u
+#define TCPIP_MIN_TXREQSEQNOOFSOCKETTCPDYN                                                          0u
+#define TCPIP_MIN_TIMEOUTOFSOCKETTCPNAGLEDYN                                                        0u
+#define TCPIP_MIN_TCPOOOQELEMENTFIRSTIDXOFSOCKETTCPOOODYN                                           0u
+#define TCPIP_MIN_TCPOOOQFILLNUMOFSOCKETTCPOOODYN                                                   0u
 #define TCPIP_MIN_TXREQELEMLISTIDXOFSOCKETUDPDYN                                                    0u
 #define TCPIP_MIN_TXRETRQUEUEMAXNUMOFSOCKETUDPDYN                                                   0u
+#define TCPIP_MIN_TCPRXBUFFER                                                                       0u
+#define TCPIP_MIN_SOCKETTCPDYNIDXOFTCPRXBUFFERDESCDYN                                               0u
+#define TCPIP_MIN_TCPRXBUFFERWRITEIDXOFTCPRXBUFFERDESCDYN                                           0u
+#define TCPIP_MIN_TCPTXBUFFER                                                                       0u
+#define TCPIP_MIN_SOCKETTCPDYNIDXOFTCPTXBUFFERDESCDYN                                               0u
+#define TCPIP_MIN_TCPTXBUFFERWRITEIDXOFTCPTXBUFFERDESCDYN                                           0u
 #define TCPIP_MIN_TXREQELEMDATALENBYTEOFTXREQELEM                                                   0u
 #define TCPIP_MIN_FILLNUMOFTXREQELEMLISTDYN                                                         0u
 #define TCPIP_MIN_READPOSOFTXREQELEMLISTDYN                                                         0u
@@ -762,6 +866,16 @@
 #define TCPIP_MAX_ETHBUFLENOFBUF2TXREQMAP                                                           65535u
 #define TCPIP_MAX_SOCKETDYNIDXOFBUF2TXREQMAP                                                        255u
 #define TCPIP_MAX_ULTXREQIDXOFBUF2TXREQMAP                                                          255u
+#define TCPIP_MAX_DHCPHOSTNAME                                                                      255u
+#define TCPIP_MAX_CTRLSTATEOFDHCPSTATUS                                                             255u
+#define TCPIP_MAX_HOSTNAMELENOFDHCPSTATUS                                                           255u
+#define TCPIP_MAX_LASTDISCOVERSECSOFDHCPSTATUS                                                      65535u
+#define TCPIP_MAX_MSTIMEROFDHCPSTATUS                                                               65535u
+#define TCPIP_MAX_RETRYCOUNTEROFDHCPSTATUS                                                          255u
+#define TCPIP_MAX_SECELAPSEDOFDHCPSTATUS                                                            65535u
+#define TCPIP_MAX_SECNEXTEVENTOFDHCPSTATUS                                                          4294967295u
+#define TCPIP_MAX_SECNEXTINTERVALOFDHCPSTATUS                                                       4294967295u
+#define TCPIP_MAX_SECTIMEROFDHCPSTATUS                                                              4294967295u
 #define TCPIP_MAX_DHCPUSEROPTIONBUFFER                                                              255u
 #define TCPIP_MAX_LENGTHOFDHCPUSEROPTIONDYN                                                         65535u
 #define TCPIP_MAX_NEXTTRANSMISSIONMSOFGRATUITOUSARP                                                 4294967295u
@@ -794,8 +908,49 @@
 #define TCPIP_MAX_LOCALADDRBINDIDXOFSOCKETDYN                                                       255u
 #define TCPIP_MAX_SOCKETOWNERCONFIGIDXOFSOCKETDYN                                                   255u
 #define TCPIP_MAX_TXIPADDRIDXOFSOCKETDYN                                                            255u
+#define TCPIP_MAX_EVENTINDICATIONPENDINGOFSOCKETTCPDYN                                              255u
+#define TCPIP_MAX_FINWAIT2TIMEOUTOFSOCKETTCPDYN                                                     4294967295u
+#define TCPIP_MAX_IDLETIMEOUTSHORTOFSOCKETTCPDYN                                                    4294967295u
+#define TCPIP_MAX_ISSOFSOCKETTCPDYN                                                                 4294967295u
+#define TCPIP_MAX_MAXNUMLISTENSOCKETSOFSOCKETTCPDYN                                                 65535u
+#define TCPIP_MAX_MSLTIMEOUTOFSOCKETTCPDYN                                                          4294967295u
+#define TCPIP_MAX_PATHMTUNEWSIZEOFSOCKETTCPDYN                                                      65535u
+#define TCPIP_MAX_RCVNXTOFSOCKETTCPDYN                                                              4294967295u
+#define TCPIP_MAX_RCVWNDOFSOCKETTCPDYN                                                              65535u
+#define TCPIP_MAX_RETRANSMITTIMEOUTOFSOCKETTCPDYN                                                   4294967295u
+#define TCPIP_MAX_RETRYQFILLNUMOFSOCKETTCPDYN                                                       255u
+#define TCPIP_MAX_RTORELOADVALUEOFSOCKETTCPDYN                                                      4294967295u
+#define TCPIP_MAX_SNDNXTOFSOCKETTCPDYN                                                              4294967295u
+#define TCPIP_MAX_SNDUNAOFSOCKETTCPDYN                                                              4294967295u
+#define TCPIP_MAX_SNDWL1OFSOCKETTCPDYN                                                              4294967295u
+#define TCPIP_MAX_SNDWL2OFSOCKETTCPDYN                                                              4294967295u
+#define TCPIP_MAX_SNDWNDOFSOCKETTCPDYN                                                              65535u
+#define TCPIP_MAX_SOCKSTATENEXTOFSOCKETTCPDYN                                                       255u
+#define TCPIP_MAX_SOCKSTATEOFSOCKETTCPDYN                                                           255u
+#define TCPIP_MAX_SOCKETTCPDYNMASTERLISTENSOCKETIDXOFSOCKETTCPDYN                                   255u
+#define TCPIP_MAX_TCPRETRYQELEMENTFIRSTIDXOFSOCKETTCPDYN                                            255u
+#define TCPIP_MAX_TCPRETRYQELEMENTLASTIDXOFSOCKETTCPDYN                                             255u
+#define TCPIP_MAX_TCPRXBUFFERDESCIDXOFSOCKETTCPDYN                                                  255u
+#define TCPIP_MAX_TCPTXBUFFERDESCIDXOFSOCKETTCPDYN                                                  255u
+#define TCPIP_MAX_TXFLAGSOFSOCKETTCPDYN                                                             255u
+#define TCPIP_MAX_TXMAXSEGLENBYTEOFSOCKETTCPDYN                                                     65535u
+#define TCPIP_MAX_TXMSSAGREEDOFSOCKETTCPDYN                                                         65535u
+#define TCPIP_MAX_TXNEXTSENDSEQNOOFSOCKETTCPDYN                                                     4294967295u
+#define TCPIP_MAX_TXONETIMEOPTSLENOFSOCKETTCPDYN                                                    255u
+#define TCPIP_MAX_TXONETIMEOPTSOFSOCKETTCPDYN                                                       255u
+#define TCPIP_MAX_TXOPTLENOFSOCKETTCPDYN                                                            255u
+#define TCPIP_MAX_TXREQSEQNOOFSOCKETTCPDYN                                                          4294967295u
+#define TCPIP_MAX_TIMEOUTOFSOCKETTCPNAGLEDYN                                                        255u
+#define TCPIP_MAX_TCPOOOQELEMENTFIRSTIDXOFSOCKETTCPOOODYN                                           255u
+#define TCPIP_MAX_TCPOOOQFILLNUMOFSOCKETTCPOOODYN                                                   255u
 #define TCPIP_MAX_TXREQELEMLISTIDXOFSOCKETUDPDYN                                                    255u
 #define TCPIP_MAX_TXRETRQUEUEMAXNUMOFSOCKETUDPDYN                                                   255u
+#define TCPIP_MAX_TCPRXBUFFER                                                                       255u
+#define TCPIP_MAX_SOCKETTCPDYNIDXOFTCPRXBUFFERDESCDYN                                               255u
+#define TCPIP_MAX_TCPRXBUFFERWRITEIDXOFTCPRXBUFFERDESCDYN                                           65535u
+#define TCPIP_MAX_TCPTXBUFFER                                                                       255u
+#define TCPIP_MAX_SOCKETTCPDYNIDXOFTCPTXBUFFERDESCDYN                                               255u
+#define TCPIP_MAX_TCPTXBUFFERWRITEIDXOFTCPTXBUFFERDESCDYN                                           65535u
 #define TCPIP_MAX_TXREQELEMDATALENBYTEOFTXREQELEM                                                   65535u
 #define TCPIP_MAX_FILLNUMOFTXREQELEMLISTDYN                                                         255u
 #define TCPIP_MAX_READPOSOFTXREQELEMLISTDYN                                                         255u
@@ -819,12 +974,15 @@
 #define TCPIP_NO_ARPTABLEENTRYSTARTIDXOFIPV4CTRL                                                    255u
 #define TCPIP_NO_AUTOIPCONFIGIDXOFIPV4CTRL                                                          255u
 #define TCPIP_NO_DHCPCONFIGIDXOFIPV4CTRL                                                            255u
+#define TCPIP_NO_DHCPHOSTNAMEENDIDXOFIPV4CTRL                                                       255u
+#define TCPIP_NO_DHCPHOSTNAMESTARTIDXOFIPV4CTRL                                                     255u
 #define TCPIP_NO_DHCPSTATUSIDXOFIPV4CTRL                                                            255u
 #define TCPIP_NO_DHCPUSEROPTIONENDIDXOFIPV4CTRL                                                     255u
 #define TCPIP_NO_DHCPUSEROPTIONSTARTIDXOFIPV4CTRL                                                   255u
 #define TCPIP_NO_FRAGMENTATIONCONFIGIDXOFIPV4CTRL                                                   255u
 #define TCPIP_NO_GRATUITOUSARPIDXOFIPV4CTRL                                                         255u
 #define TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL                                                           255u
+#define TCPIP_NO_LOCALADDRV4DHCPIDXOFIPV4CTRL                                                       255u
 #define TCPIP_NO_MULTICASTADDRV4ENDIDXOFIPV4CTRL                                                    255u
 #define TCPIP_NO_MULTICASTADDRV4STARTIDXOFIPV4CTRL                                                  255u
 #define TCPIP_NO_STATICARPTABLEIDXOFIPV4CTRL                                                        255u
@@ -838,7 +996,18 @@
 #define TCPIP_NO_UNICASTADDRV4IDXOFLOCALADDRV4                                                      255u
 #define TCPIP_NO_LOCALADDRBINDIDXOFSOCKETDYN                                                        255u
 #define TCPIP_NO_SOCKETOWNERCONFIGIDXOFSOCKETDYN                                                    255u
+#define TCPIP_NO_SOCKETTCPDYNMASTERLISTENSOCKETIDXOFSOCKETTCPDYN                                    255u
+#define TCPIP_NO_TCPRETRYQELEMENTFIRSTIDXOFSOCKETTCPDYN                                             255u
+#define TCPIP_NO_TCPRETRYQELEMENTLASTIDXOFSOCKETTCPDYN                                              255u
+#define TCPIP_NO_TCPRXBUFFERDESCIDXOFSOCKETTCPDYN                                                   255u
+#define TCPIP_NO_TCPTXBUFFERDESCIDXOFSOCKETTCPDYN                                                   255u
+#define TCPIP_NO_TCPOOOQELEMENTFIRSTIDXOFSOCKETTCPOOODYN                                            255u
 #define TCPIP_NO_TXREQELEMLISTIDXOFSOCKETUDPDYN                                                     255u
+#define TCPIP_NO_NAGLETIMEOUTOFTCPCONFIG                                                            255u
+#define TCPIP_NO_USERTIMEOUTMAXCYCLESOFTCPCONFIG                                                    255u
+#define TCPIP_NO_USERTIMEOUTMINCYCLESOFTCPCONFIG                                                    255u
+#define TCPIP_NO_SOCKETTCPDYNIDXOFTCPRXBUFFERDESCDYN                                                255u
+#define TCPIP_NO_SOCKETTCPDYNIDXOFTCPTXBUFFERDESCDYN                                                255u
 #define TCPIP_NO_SOCKETUDPDYNIDXOFTXREQELEMLISTDYN                                                  255u
 #define TCPIP_NO_DEFAULTUNICASTADDRV4IDXOFUNICASTADDRV4                                             255u
 #define TCPIP_NO_STATICUNICASTADDRV4REQUESTEDIDXOFUNICASTADDRV4                                     255u
@@ -875,6 +1044,19 @@
 #define TCPIP_ISDEF_DEFGWADDROFDEFAULTUNICASTADDRV4                                                 STD_OFF
 #define TCPIP_ISDEF_NETADDROFDEFAULTUNICASTADDRV4                                                   STD_OFF
 #define TCPIP_ISDEF_NETMASKOFDEFAULTUNICASTADDRV4                                                   STD_OFF
+#define TCPIP_ISDEF_DISCOVERINTERVALMAXOFDHCPCONFIG                                                 STD_OFF
+#define TCPIP_ISDEF_DISCOVERINTERVALMINOFDHCPCONFIG                                                 STD_OFF
+#define TCPIP_ISDEF_DISCOVERMAXNUMOFDHCPCONFIG                                                      STD_OFF
+#define TCPIP_ISDEF_HOSTNAMELENMAXOFDHCPCONFIG                                                      STD_OFF
+#define TCPIP_ISDEF_INITWAITMAXOFDHCPCONFIG                                                         STD_OFF
+#define TCPIP_ISDEF_INITWAITMINOFDHCPCONFIG                                                         STD_OFF
+#define TCPIP_ISDEF_REBINDINTERVALMINOFDHCPCONFIG                                                   STD_OFF
+#define TCPIP_ISDEF_RENEWINTERVALMINOFDHCPCONFIG                                                    STD_OFF
+#define TCPIP_ISDEF_REQADDRCALLOUTFUNCOFDHCPCONFIG                                                  STD_OFF
+#define TCPIP_ISDEF_REQUESTINTERVALOFDHCPCONFIG                                                     STD_OFF
+#define TCPIP_ISDEF_REQUESTMAXNUMOFDHCPCONFIG                                                       STD_OFF
+#define TCPIP_ISDEF_RESTARTONFAILOFDHCPCONFIG                                                       STD_OFF
+#define TCPIP_ISDEF_RXREQOPTIONCNTOFDHCPCONFIG                                                      STD_OFF
 #define TCPIP_ISDEF_CODEOFDHCPUSEROPTION                                                            STD_OFF
 #define TCPIP_ISDEF_DHCPUSEROPTIONBUFFERENDIDXOFDHCPUSEROPTION                                      STD_OFF
 #define TCPIP_ISDEF_DHCPUSEROPTIONBUFFERLENGTHOFDHCPUSEROPTION                                      STD_OFF
@@ -905,6 +1087,9 @@
 #define TCPIP_ISDEF_DEFAULTTTLOFIPV4CTRL                                                            STD_OFF
 #define TCPIP_ISDEF_DHCPCONFIGIDXOFIPV4CTRL                                                         STD_OFF
 #define TCPIP_ISDEF_DHCPCONFIGUSEDOFIPV4CTRL                                                        STD_OFF
+#define TCPIP_ISDEF_DHCPHOSTNAMEENDIDXOFIPV4CTRL                                                    STD_OFF
+#define TCPIP_ISDEF_DHCPHOSTNAMESTARTIDXOFIPV4CTRL                                                  STD_OFF
+#define TCPIP_ISDEF_DHCPHOSTNAMEUSEDOFIPV4CTRL                                                      STD_OFF
 #define TCPIP_ISDEF_DHCPSTATUSIDXOFIPV4CTRL                                                         STD_OFF
 #define TCPIP_ISDEF_DHCPSTATUSUSEDOFIPV4CTRL                                                        STD_OFF
 #define TCPIP_ISDEF_DHCPUSEROPTIONENDIDXOFIPV4CTRL                                                  STD_OFF
@@ -923,6 +1108,8 @@
 #define TCPIP_ISDEF_LLADDRSTATEIDXOFIPV4CTRL                                                        STD_OFF
 #define TCPIP_ISDEF_LLADDRSTATEUSEDOFIPV4CTRL                                                       STD_OFF
 #define TCPIP_ISDEF_LOCALADDRV4BROADCASTIDXOFIPV4CTRL                                               STD_OFF
+#define TCPIP_ISDEF_LOCALADDRV4DHCPIDXOFIPV4CTRL                                                    STD_OFF
+#define TCPIP_ISDEF_LOCALADDRV4DHCPUSEDOFIPV4CTRL                                                   STD_OFF
 #define TCPIP_ISDEF_LOCALADDRV4UNICASTIDXOFIPV4CTRL                                                 STD_OFF
 #define TCPIP_ISDEF_MAXTXMSGSIZEOFIPV4CTRL                                                          STD_OFF
 #define TCPIP_ISDEF_MTUTXOFIPV4CTRL                                                                 STD_OFF
@@ -967,6 +1154,29 @@
 #define TCPIP_ISDEF_PHYSADDROFSTATICARPENTRY                                                        STD_OFF
 #define TCPIP_ISDEF_STATICARPENTRYENDIDXOFSTATICARPTABLE                                            STD_OFF
 #define TCPIP_ISDEF_STATICARPENTRYSTARTIDXOFSTATICARPTABLE                                          STD_OFF
+#define TCPIP_ISDEF_FINWAIT2TIMEOUTOFTCPCONFIG                                                      STD_OFF
+#define TCPIP_ISDEF_KEEPALIVEINTERVALOFTCPCONFIG                                                    STD_OFF
+#define TCPIP_ISDEF_KEEPALIVEPROBESMAXOFTCPCONFIG                                                   STD_OFF
+#define TCPIP_ISDEF_KEEPALIVETIMEOFTCPCONFIG                                                        STD_OFF
+#define TCPIP_ISDEF_MSLOFTCPCONFIG                                                                  STD_OFF
+#define TCPIP_ISDEF_NAGLETIMEOUTOFTCPCONFIG                                                         STD_OFF
+#define TCPIP_ISDEF_RETRANSTIMEOUTMAXOFTCPCONFIG                                                    STD_OFF
+#define TCPIP_ISDEF_RETRANSTIMEOUTOFTCPCONFIG                                                       STD_OFF
+#define TCPIP_ISDEF_RXMSSOFTCPCONFIG                                                                STD_OFF
+#define TCPIP_ISDEF_TCPOOOQSIZEPERSOCKETAVGOFTCPCONFIG                                              STD_OFF
+#define TCPIP_ISDEF_TCPOOOQSIZEPERSOCKETMAXOFTCPCONFIG                                              STD_OFF
+#define TCPIP_ISDEF_TCPRETRYQSIZEOFTCPCONFIG                                                        STD_OFF
+#define TCPIP_ISDEF_TIMETOLIVEDEFAULTOFTCPCONFIG                                                    STD_OFF
+#define TCPIP_ISDEF_TXMSSOFTCPCONFIG                                                                STD_OFF
+#define TCPIP_ISDEF_USERTIMEOUTDEFCYCLESOFTCPCONFIG                                                 STD_OFF
+#define TCPIP_ISDEF_USERTIMEOUTMAXCYCLESOFTCPCONFIG                                                 STD_OFF
+#define TCPIP_ISDEF_USERTIMEOUTMINCYCLESOFTCPCONFIG                                                 STD_OFF
+#define TCPIP_ISDEF_TCPRXBUFFERENDIDXOFTCPRXBUFFERDESC                                              STD_OFF
+#define TCPIP_ISDEF_TCPRXBUFFERLENGTHOFTCPRXBUFFERDESC                                              STD_OFF
+#define TCPIP_ISDEF_TCPRXBUFFERSTARTIDXOFTCPRXBUFFERDESC                                            STD_OFF
+#define TCPIP_ISDEF_TCPTXBUFFERENDIDXOFTCPTXBUFFERDESC                                              STD_OFF
+#define TCPIP_ISDEF_TCPTXBUFFERLENGTHOFTCPTXBUFFERDESC                                              STD_OFF
+#define TCPIP_ISDEF_TCPTXBUFFERSTARTIDXOFTCPTXBUFFERDESC                                            STD_OFF
 #define TCPIP_ISDEF_TXREQELEMENDIDXOFTXREQELEMLIST                                                  STD_OFF
 #define TCPIP_ISDEF_TXREQELEMLENGTHOFTXREQELEMLIST                                                  STD_OFF
 #define TCPIP_ISDEF_TXREQELEMSTARTIDXOFTXREQELEMLIST                                                STD_OFF
@@ -981,6 +1191,9 @@
 #define TCPIP_ISDEF_BUF2TXREQMAPOFPCCONFIG                                                          STD_ON
 #define TCPIP_ISDEF_DEFAULTMULTICASTADDRV4OFPCCONFIG                                                STD_OFF
 #define TCPIP_ISDEF_DEFAULTUNICASTADDRV4OFPCCONFIG                                                  STD_OFF
+#define TCPIP_ISDEF_DHCPCONFIGOFPCCONFIG                                                            STD_ON
+#define TCPIP_ISDEF_DHCPHOSTNAMEOFPCCONFIG                                                          STD_ON
+#define TCPIP_ISDEF_DHCPSTATUSOFPCCONFIG                                                            STD_ON
 #define TCPIP_ISDEF_DHCPUSEROPTIONBUFFEROFPCCONFIG                                                  STD_OFF
 #define TCPIP_ISDEF_DHCPUSEROPTIONDYNOFPCCONFIG                                                     STD_OFF
 #define TCPIP_ISDEF_DHCPUSEROPTIONOFPCCONFIG                                                        STD_OFF
@@ -1022,6 +1235,7 @@
 #define TCPIP_ISDEF_SIZEOFSTATICARPENTRYOFPCCONFIG                                                  STD_OFF
 #define TCPIP_ISDEF_SIZEOFSTATICARPTABLEOFPCCONFIG                                                  STD_OFF
 #define TCPIP_ISDEF_SIZEOFSTATICUNICASTADDRV4REQUESTEDOFPCCONFIG                                    STD_OFF
+#define TCPIP_ISDEF_SIZEOFTCPOOOQELEMENTOFPCCONFIG                                                  STD_OFF
 #define TCPIP_ISDEF_SIZEOFTXREQELEMLISTOFPCCONFIG                                                   STD_OFF
 #define TCPIP_ISDEF_SIZEOFTXREQELEMOFPCCONFIG                                                       STD_OFF
 #define TCPIP_ISDEF_SIZEOFUDPTXRETRYQUEUEELEMENTCHAINOFPCCONFIG                                     STD_OFF
@@ -1030,10 +1244,23 @@
 #define TCPIP_ISDEF_SIZEOFUNICASTADDRV4OFPCCONFIG                                                   STD_OFF
 #define TCPIP_ISDEF_SOCKETDYNOFPCCONFIG                                                             STD_ON
 #define TCPIP_ISDEF_SOCKETOWNERCONFIGOFPCCONFIG                                                     STD_ON
+#define TCPIP_ISDEF_SOCKETTCPDYNOFPCCONFIG                                                          STD_ON
+#define TCPIP_ISDEF_SOCKETTCPNAGLEDYNOFPCCONFIG                                                     STD_ON
+#define TCPIP_ISDEF_SOCKETTCPOOODYNOFPCCONFIG                                                       STD_ON
 #define TCPIP_ISDEF_SOCKETUDPDYNOFPCCONFIG                                                          STD_ON
 #define TCPIP_ISDEF_STATICARPENTRYOFPCCONFIG                                                        STD_OFF
 #define TCPIP_ISDEF_STATICARPTABLEOFPCCONFIG                                                        STD_OFF
 #define TCPIP_ISDEF_STATICUNICASTADDRV4REQUESTEDOFPCCONFIG                                          STD_OFF
+#define TCPIP_ISDEF_TCPCONFIGOFPCCONFIG                                                             STD_ON
+#define TCPIP_ISDEF_TCPOOOQELEMENTOFPCCONFIG                                                        STD_OFF
+#define TCPIP_ISDEF_TCPRESETQELEMENTOFPCCONFIG                                                      STD_ON
+#define TCPIP_ISDEF_TCPRETRYQELEMENTOFPCCONFIG                                                      STD_ON
+#define TCPIP_ISDEF_TCPRXBUFFERDESCDYNOFPCCONFIG                                                    STD_ON
+#define TCPIP_ISDEF_TCPRXBUFFERDESCOFPCCONFIG                                                       STD_ON
+#define TCPIP_ISDEF_TCPRXBUFFEROFPCCONFIG                                                           STD_ON
+#define TCPIP_ISDEF_TCPTXBUFFERDESCDYNOFPCCONFIG                                                    STD_ON
+#define TCPIP_ISDEF_TCPTXBUFFERDESCOFPCCONFIG                                                       STD_ON
+#define TCPIP_ISDEF_TCPTXBUFFEROFPCCONFIG                                                           STD_ON
 #define TCPIP_ISDEF_TXREQELEMLISTDYNOFPCCONFIG                                                      STD_OFF
 #define TCPIP_ISDEF_TXREQELEMLISTOFPCCONFIG                                                         STD_OFF
 #define TCPIP_ISDEF_TXREQELEMOFPCCONFIG                                                             STD_OFF
@@ -1074,6 +1301,19 @@
 #define TCPIP_EQ2_DEFGWADDROFDEFAULTUNICASTADDRV4                                                   
 #define TCPIP_EQ2_NETADDROFDEFAULTUNICASTADDRV4                                                     
 #define TCPIP_EQ2_NETMASKOFDEFAULTUNICASTADDRV4                                                     
+#define TCPIP_EQ2_DISCOVERINTERVALMAXOFDHCPCONFIG                                                   
+#define TCPIP_EQ2_DISCOVERINTERVALMINOFDHCPCONFIG                                                   
+#define TCPIP_EQ2_DISCOVERMAXNUMOFDHCPCONFIG                                                        
+#define TCPIP_EQ2_HOSTNAMELENMAXOFDHCPCONFIG                                                        
+#define TCPIP_EQ2_INITWAITMAXOFDHCPCONFIG                                                           
+#define TCPIP_EQ2_INITWAITMINOFDHCPCONFIG                                                           
+#define TCPIP_EQ2_REBINDINTERVALMINOFDHCPCONFIG                                                     
+#define TCPIP_EQ2_RENEWINTERVALMINOFDHCPCONFIG                                                      
+#define TCPIP_EQ2_REQADDRCALLOUTFUNCOFDHCPCONFIG                                                    
+#define TCPIP_EQ2_REQUESTINTERVALOFDHCPCONFIG                                                       
+#define TCPIP_EQ2_REQUESTMAXNUMOFDHCPCONFIG                                                         
+#define TCPIP_EQ2_RESTARTONFAILOFDHCPCONFIG                                                         
+#define TCPIP_EQ2_RXREQOPTIONCNTOFDHCPCONFIG                                                        
 #define TCPIP_EQ2_CODEOFDHCPUSEROPTION                                                              
 #define TCPIP_EQ2_DHCPUSEROPTIONBUFFERENDIDXOFDHCPUSEROPTION                                        
 #define TCPIP_EQ2_DHCPUSEROPTIONBUFFERLENGTHOFDHCPUSEROPTION                                        
@@ -1104,6 +1344,9 @@
 #define TCPIP_EQ2_DEFAULTTTLOFIPV4CTRL                                                              
 #define TCPIP_EQ2_DHCPCONFIGIDXOFIPV4CTRL                                                           
 #define TCPIP_EQ2_DHCPCONFIGUSEDOFIPV4CTRL                                                          
+#define TCPIP_EQ2_DHCPHOSTNAMEENDIDXOFIPV4CTRL                                                      
+#define TCPIP_EQ2_DHCPHOSTNAMESTARTIDXOFIPV4CTRL                                                    
+#define TCPIP_EQ2_DHCPHOSTNAMEUSEDOFIPV4CTRL                                                        
 #define TCPIP_EQ2_DHCPSTATUSIDXOFIPV4CTRL                                                           
 #define TCPIP_EQ2_DHCPSTATUSUSEDOFIPV4CTRL                                                          
 #define TCPIP_EQ2_DHCPUSEROPTIONENDIDXOFIPV4CTRL                                                    
@@ -1122,6 +1365,8 @@
 #define TCPIP_EQ2_LLADDRSTATEIDXOFIPV4CTRL                                                          
 #define TCPIP_EQ2_LLADDRSTATEUSEDOFIPV4CTRL                                                         
 #define TCPIP_EQ2_LOCALADDRV4BROADCASTIDXOFIPV4CTRL                                                 
+#define TCPIP_EQ2_LOCALADDRV4DHCPIDXOFIPV4CTRL                                                      
+#define TCPIP_EQ2_LOCALADDRV4DHCPUSEDOFIPV4CTRL                                                     
 #define TCPIP_EQ2_LOCALADDRV4UNICASTIDXOFIPV4CTRL                                                   
 #define TCPIP_EQ2_MAXTXMSGSIZEOFIPV4CTRL                                                            
 #define TCPIP_EQ2_MTUTXOFIPV4CTRL                                                                   
@@ -1166,6 +1411,29 @@
 #define TCPIP_EQ2_PHYSADDROFSTATICARPENTRY                                                          
 #define TCPIP_EQ2_STATICARPENTRYENDIDXOFSTATICARPTABLE                                              
 #define TCPIP_EQ2_STATICARPENTRYSTARTIDXOFSTATICARPTABLE                                            
+#define TCPIP_EQ2_FINWAIT2TIMEOUTOFTCPCONFIG                                                        
+#define TCPIP_EQ2_KEEPALIVEINTERVALOFTCPCONFIG                                                      
+#define TCPIP_EQ2_KEEPALIVEPROBESMAXOFTCPCONFIG                                                     
+#define TCPIP_EQ2_KEEPALIVETIMEOFTCPCONFIG                                                          
+#define TCPIP_EQ2_MSLOFTCPCONFIG                                                                    
+#define TCPIP_EQ2_NAGLETIMEOUTOFTCPCONFIG                                                           
+#define TCPIP_EQ2_RETRANSTIMEOUTMAXOFTCPCONFIG                                                      
+#define TCPIP_EQ2_RETRANSTIMEOUTOFTCPCONFIG                                                         
+#define TCPIP_EQ2_RXMSSOFTCPCONFIG                                                                  
+#define TCPIP_EQ2_TCPOOOQSIZEPERSOCKETAVGOFTCPCONFIG                                                
+#define TCPIP_EQ2_TCPOOOQSIZEPERSOCKETMAXOFTCPCONFIG                                                
+#define TCPIP_EQ2_TCPRETRYQSIZEOFTCPCONFIG                                                          
+#define TCPIP_EQ2_TIMETOLIVEDEFAULTOFTCPCONFIG                                                      
+#define TCPIP_EQ2_TXMSSOFTCPCONFIG                                                                  
+#define TCPIP_EQ2_USERTIMEOUTDEFCYCLESOFTCPCONFIG                                                   
+#define TCPIP_EQ2_USERTIMEOUTMAXCYCLESOFTCPCONFIG                                                   
+#define TCPIP_EQ2_USERTIMEOUTMINCYCLESOFTCPCONFIG                                                   
+#define TCPIP_EQ2_TCPRXBUFFERENDIDXOFTCPRXBUFFERDESC                                                
+#define TCPIP_EQ2_TCPRXBUFFERLENGTHOFTCPRXBUFFERDESC                                                
+#define TCPIP_EQ2_TCPRXBUFFERSTARTIDXOFTCPRXBUFFERDESC                                              
+#define TCPIP_EQ2_TCPTXBUFFERENDIDXOFTCPTXBUFFERDESC                                                
+#define TCPIP_EQ2_TCPTXBUFFERLENGTHOFTCPTXBUFFERDESC                                                
+#define TCPIP_EQ2_TCPTXBUFFERSTARTIDXOFTCPTXBUFFERDESC                                              
 #define TCPIP_EQ2_TXREQELEMENDIDXOFTXREQELEMLIST                                                    
 #define TCPIP_EQ2_TXREQELEMLENGTHOFTXREQELEMLIST                                                    
 #define TCPIP_EQ2_TXREQELEMSTARTIDXOFTXREQELEMLIST                                                  
@@ -1180,6 +1448,9 @@
 #define TCPIP_EQ2_BUF2TXREQMAPOFPCCONFIG                                                            TcpIp_Buf2TxReqMap.raw
 #define TCPIP_EQ2_DEFAULTMULTICASTADDRV4OFPCCONFIG                                                  
 #define TCPIP_EQ2_DEFAULTUNICASTADDRV4OFPCCONFIG                                                    
+#define TCPIP_EQ2_DHCPCONFIGOFPCCONFIG                                                              TcpIp_DhcpConfig
+#define TCPIP_EQ2_DHCPHOSTNAMEOFPCCONFIG                                                            TcpIp_DhcpHostname.raw
+#define TCPIP_EQ2_DHCPSTATUSOFPCCONFIG                                                              TcpIp_DhcpStatus.raw
 #define TCPIP_EQ2_DHCPUSEROPTIONBUFFEROFPCCONFIG                                                    
 #define TCPIP_EQ2_DHCPUSEROPTIONDYNOFPCCONFIG                                                       
 #define TCPIP_EQ2_DHCPUSEROPTIONOFPCCONFIG                                                          
@@ -1193,7 +1464,7 @@
 #define TCPIP_EQ2_IPV4CTRLDYNOFPCCONFIG                                                             TcpIp_IpV4CtrlDyn.raw
 #define TCPIP_EQ2_IPV4CTRLOFPCCONFIG                                                                TcpIp_IpV4Ctrl
 #define TCPIP_EQ2_IPV4GENERALOFPCCONFIG                                                             TcpIp_IpV4General
-#define TCPIP_EQ2_IPV4SOCKETDYNOFPCCONFIG                                                           TcpIp_IpV4SocketDyn.raw
+#define TCPIP_EQ2_IPV4SOCKETDYNOFPCCONFIG                                                           TcpIp_IpV4SocketDyn
 #define TCPIP_EQ2_LLADDRSTATEOFPCCONFIG                                                             
 #define TCPIP_EQ2_LOCALADDROFPCCONFIG                                                               TcpIp_LocalAddr.raw
 #define TCPIP_EQ2_LOCALADDRV4OFPCCONFIG                                                             TcpIp_LocalAddrV4
@@ -1221,6 +1492,7 @@
 #define TCPIP_EQ2_SIZEOFSTATICARPENTRYOFPCCONFIG                                                    
 #define TCPIP_EQ2_SIZEOFSTATICARPTABLEOFPCCONFIG                                                    
 #define TCPIP_EQ2_SIZEOFSTATICUNICASTADDRV4REQUESTEDOFPCCONFIG                                      
+#define TCPIP_EQ2_SIZEOFTCPOOOQELEMENTOFPCCONFIG                                                    
 #define TCPIP_EQ2_SIZEOFTXREQELEMLISTOFPCCONFIG                                                     
 #define TCPIP_EQ2_SIZEOFTXREQELEMOFPCCONFIG                                                         
 #define TCPIP_EQ2_SIZEOFUDPTXRETRYQUEUEELEMENTCHAINOFPCCONFIG                                       
@@ -1229,10 +1501,23 @@
 #define TCPIP_EQ2_SIZEOFUNICASTADDRV4OFPCCONFIG                                                     
 #define TCPIP_EQ2_SOCKETDYNOFPCCONFIG                                                               TcpIp_SocketDyn.raw
 #define TCPIP_EQ2_SOCKETOWNERCONFIGOFPCCONFIG                                                       TcpIp_SocketOwnerConfig
+#define TCPIP_EQ2_SOCKETTCPDYNOFPCCONFIG                                                            TcpIp_SocketTcpDyn
+#define TCPIP_EQ2_SOCKETTCPNAGLEDYNOFPCCONFIG                                                       TcpIp_SocketTcpNagleDyn
+#define TCPIP_EQ2_SOCKETTCPOOODYNOFPCCONFIG                                                         TcpIp_SocketTcpOooDyn
 #define TCPIP_EQ2_SOCKETUDPDYNOFPCCONFIG                                                            TcpIp_SocketUdpDyn
 #define TCPIP_EQ2_STATICARPENTRYOFPCCONFIG                                                          
 #define TCPIP_EQ2_STATICARPTABLEOFPCCONFIG                                                          
 #define TCPIP_EQ2_STATICUNICASTADDRV4REQUESTEDOFPCCONFIG                                            
+#define TCPIP_EQ2_TCPCONFIGOFPCCONFIG                                                               TcpIp_TcpConfig
+#define TCPIP_EQ2_TCPOOOQELEMENTOFPCCONFIG                                                          
+#define TCPIP_EQ2_TCPRESETQELEMENTOFPCCONFIG                                                        TcpIp_TcpResetQElement
+#define TCPIP_EQ2_TCPRETRYQELEMENTOFPCCONFIG                                                        TcpIp_TcpRetryQElement
+#define TCPIP_EQ2_TCPRXBUFFERDESCDYNOFPCCONFIG                                                      TcpIp_TcpRxBufferDescDyn
+#define TCPIP_EQ2_TCPRXBUFFERDESCOFPCCONFIG                                                         TcpIp_TcpRxBufferDesc
+#define TCPIP_EQ2_TCPRXBUFFEROFPCCONFIG                                                             TcpIp_TcpRxBuffer.raw
+#define TCPIP_EQ2_TCPTXBUFFERDESCDYNOFPCCONFIG                                                      TcpIp_TcpTxBufferDescDyn
+#define TCPIP_EQ2_TCPTXBUFFERDESCOFPCCONFIG                                                         TcpIp_TcpTxBufferDesc
+#define TCPIP_EQ2_TCPTXBUFFEROFPCCONFIG                                                             TcpIp_TcpTxBuffer.raw
 #define TCPIP_EQ2_TXREQELEMLISTDYNOFPCCONFIG                                                        
 #define TCPIP_EQ2_TXREQELEMLISTOFPCCONFIG                                                           
 #define TCPIP_EQ2_TXREQELEMOFPCCONFIG                                                               
@@ -1273,7 +1558,7 @@
 #define TCPIP_FINAL_MAGIC_NUMBER                                                                    0xAA1Eu  /**< the precompile constant to validate the size of the initialization structure at initialization time of TcpIp */
 #define TCPIP_INDIVIDUAL_POSTBUILD                                                                  STD_OFF  /**< the precompile constant to check, that the module is individual postbuildable. The module 'TcpIp' is not configured to be postbuild capable. */
 #define TCPIP_INIT_DATA                                                                             TCPIP_CONST  /**< CompilerMemClassDefine for the initialization data. */
-#define TCPIP_INIT_DATA_HASH_CODE                                                                   557150583  /**< the precompile constant to validate the initialization structure at initialization time of TcpIp with a hashcode. The seed value is '0xAA1Eu' */
+#define TCPIP_INIT_DATA_HASH_CODE                                                                   -2042571559  /**< the precompile constant to validate the initialization structure at initialization time of TcpIp with a hashcode. The seed value is '0xAA1Eu' */
 #define TCPIP_USE_ECUM_BSW_ERROR_HOOK                                                               STD_OFF  /**< STD_ON if the EcuM_BswErrorHook shall be called in the ConfigPtr check. */
 #define TCPIP_USE_INIT_POINTER                                                                      STD_ON  /**< STD_ON if the init pointer TcpIp shall be used. */
 /** 
@@ -1336,6 +1621,7 @@
 #define TcpIp_GetSizeOfStaticArpEntryOfPCConfig()                                                   TcpIp_ConfigDataPtr->SizeOfStaticArpEntryOfPCConfig
 #define TcpIp_GetSizeOfStaticArpTableOfPCConfig()                                                   TcpIp_ConfigDataPtr->SizeOfStaticArpTableOfPCConfig
 #define TcpIp_GetSizeOfStaticUnicastAddrV4RequestedOfPCConfig()                                     TcpIp_ConfigDataPtr->SizeOfStaticUnicastAddrV4RequestedOfPCConfig
+#define TcpIp_GetSizeOfTcpOooQElementOfPCConfig()                                                   TcpIp_ConfigDataPtr->SizeOfTcpOooQElementOfPCConfig
 #define TcpIp_GetSizeOfTxReqElemListOfPCConfig()                                                    TcpIp_ConfigDataPtr->SizeOfTxReqElemListOfPCConfig
 #define TcpIp_GetSizeOfTxReqElemOfPCConfig()                                                        TcpIp_ConfigDataPtr->SizeOfTxReqElemOfPCConfig
 #define TcpIp_GetSizeOfUdpTxRetryQueueElementChainOfPCConfig()                                      TcpIp_ConfigDataPtr->SizeOfUdpTxRetryQueueElementChainOfPCConfig
@@ -1345,6 +1631,7 @@
 #define TcpIp_GetStaticArpEntryOfPCConfig()                                                         TcpIp_ConfigDataPtr->StaticArpEntryOfPCConfig
 #define TcpIp_GetStaticArpTableOfPCConfig()                                                         TcpIp_ConfigDataPtr->StaticArpTableOfPCConfig
 #define TcpIp_GetStaticUnicastAddrV4RequestedOfPCConfig()                                           TcpIp_ConfigDataPtr->StaticUnicastAddrV4RequestedOfPCConfig
+#define TcpIp_GetTcpOooQElementOfPCConfig()                                                         TcpIp_ConfigDataPtr->TcpOooQElementOfPCConfig
 #define TcpIp_GetTxReqElemListDynOfPCConfig()                                                       TcpIp_ConfigDataPtr->TxReqElemListDynOfPCConfig
 #define TcpIp_GetTxReqElemListOfPCConfig()                                                          TcpIp_ConfigDataPtr->TxReqElemListOfPCConfig
 #define TcpIp_GetTxReqElemOfPCConfig()                                                              TcpIp_ConfigDataPtr->TxReqElemOfPCConfig
@@ -1363,6 +1650,9 @@
 */ 
 #define TcpIp_GetAddrAssignmentCfgByPrioOfPCConfig()                                                TcpIp_AddrAssignmentCfgByPrio  /**< the pointer to TcpIp_AddrAssignmentCfgByPrio */
 #define TcpIp_GetBuf2TxReqMapOfPCConfig()                                                           TcpIp_Buf2TxReqMap.raw  /**< the pointer to TcpIp_Buf2TxReqMap */
+#define TcpIp_GetDhcpConfigOfPCConfig()                                                             TcpIp_DhcpConfig  /**< the pointer to TcpIp_DhcpConfig */
+#define TcpIp_GetDhcpHostnameOfPCConfig()                                                           TcpIp_DhcpHostname.raw  /**< the pointer to TcpIp_DhcpHostname */
+#define TcpIp_GetDhcpStatusOfPCConfig()                                                             TcpIp_DhcpStatus.raw  /**< the pointer to TcpIp_DhcpStatus */
 #define TcpIp_GetDuplicateAddrDetectionFctPtrOfPCConfig()                                           (&(TcpIp_DuplicateAddrDetectionFctPtr))  /**< the pointer to TcpIp_DuplicateAddrDetectionFctPtr */
 #define TcpIp_GetEthIfCtrlOfPCConfig()                                                              TcpIp_EthIfCtrl  /**< the pointer to TcpIp_EthIfCtrl */
 #define TcpIp_GetIcmpConfigOfPCConfig()                                                             TcpIp_IcmpConfig  /**< the pointer to TcpIp_IcmpConfig */
@@ -1371,26 +1661,51 @@
 #define TcpIp_GetIpV4CtrlDynOfPCConfig()                                                            TcpIp_IpV4CtrlDyn.raw  /**< the pointer to TcpIp_IpV4CtrlDyn */
 #define TcpIp_GetIpV4CtrlOfPCConfig()                                                               TcpIp_IpV4Ctrl  /**< the pointer to TcpIp_IpV4Ctrl */
 #define TcpIp_GetIpV4GeneralOfPCConfig()                                                            TcpIp_IpV4General  /**< the pointer to TcpIp_IpV4General */
-#define TcpIp_GetIpV4SocketDynOfPCConfig()                                                          TcpIp_IpV4SocketDyn.raw  /**< the pointer to TcpIp_IpV4SocketDyn */
+#define TcpIp_GetIpV4SocketDynOfPCConfig()                                                          TcpIp_IpV4SocketDyn  /**< the pointer to TcpIp_IpV4SocketDyn */
 #define TcpIp_GetLocalAddrOfPCConfig()                                                              TcpIp_LocalAddr.raw  /**< the pointer to TcpIp_LocalAddr */
 #define TcpIp_GetLocalAddrV4OfPCConfig()                                                            TcpIp_LocalAddrV4  /**< the pointer to TcpIp_LocalAddrV4 */
 #define TcpIp_GetRandomNumberFctPtrOfPCConfig()                                                     (&(TcpIp_RandomNumberFctPtr))  /**< the pointer to TcpIp_RandomNumberFctPtr */
-#define TcpIp_GetSizeOfAddrAssignmentCfgByPrioOfPCConfig()                                          1u  /**< the number of accomplishable value elements in TcpIp_AddrAssignmentCfgByPrio */
+#define TcpIp_GetSizeOfAddrAssignmentCfgByPrioOfPCConfig()                                          3u  /**< the number of accomplishable value elements in TcpIp_AddrAssignmentCfgByPrio */
 #define TcpIp_GetSizeOfBuf2TxReqMapOfPCConfig()                                                     8u  /**< the number of accomplishable value elements in TcpIp_Buf2TxReqMap */
-#define TcpIp_GetSizeOfEthIfCtrlOfPCConfig()                                                        3u  /**< the number of accomplishable value elements in TcpIp_EthIfCtrl */
+#define TcpIp_GetSizeOfDhcpConfigOfPCConfig()                                                       1u  /**< the number of accomplishable value elements in TcpIp_DhcpConfig */
+#define TcpIp_GetSizeOfDhcpHostnameOfPCConfig()                                                     30u  /**< the number of accomplishable value elements in TcpIp_DhcpHostname */
+#define TcpIp_GetSizeOfDhcpStatusOfPCConfig()                                                       1u  /**< the number of accomplishable value elements in TcpIp_DhcpStatus */
+#define TcpIp_GetSizeOfEthIfCtrlOfPCConfig()                                                        2u  /**< the number of accomplishable value elements in TcpIp_EthIfCtrl */
 #define TcpIp_GetSizeOfIcmpConfigOfPCConfig()                                                       1u  /**< the number of accomplishable value elements in TcpIp_IcmpConfig */
 #define TcpIp_GetSizeOfIcmpEchoReplyDataOfPCConfig()                                                32u  /**< the number of accomplishable value elements in TcpIp_IcmpEchoReplyData */
-#define TcpIp_GetSizeOfIpV4CtrlOfPCConfig()                                                         1u  /**< the number of accomplishable value elements in TcpIp_IpV4Ctrl */
+#define TcpIp_GetSizeOfIpV4CtrlOfPCConfig()                                                         2u  /**< the number of accomplishable value elements in TcpIp_IpV4Ctrl */
 #define TcpIp_GetSizeOfIpV4GeneralOfPCConfig()                                                      1u  /**< the number of accomplishable value elements in TcpIp_IpV4General */
-#define TcpIp_GetSizeOfIpV4SocketDynOfPCConfig()                                                    2u  /**< the number of accomplishable value elements in TcpIp_IpV4SocketDyn */
-#define TcpIp_GetSizeOfLocalAddrOfPCConfig()                                                        2u  /**< the number of accomplishable value elements in TcpIp_LocalAddr */
-#define TcpIp_GetSizeOfLocalAddrV4OfPCConfig()                                                      2u  /**< the number of accomplishable value elements in TcpIp_LocalAddrV4 */
-#define TcpIp_GetSizeOfSocketDynOfPCConfig()                                                        1u  /**< the number of accomplishable value elements in TcpIp_SocketDyn */
+#define TcpIp_GetSizeOfIpV4SocketDynOfPCConfig()                                                    8u  /**< the number of accomplishable value elements in TcpIp_IpV4SocketDyn */
+#define TcpIp_GetSizeOfLocalAddrOfPCConfig()                                                        4u  /**< the number of accomplishable value elements in TcpIp_LocalAddr */
+#define TcpIp_GetSizeOfLocalAddrV4OfPCConfig()                                                      4u  /**< the number of accomplishable value elements in TcpIp_LocalAddrV4 */
+#define TcpIp_GetSizeOfSocketDynOfPCConfig()                                                        5u  /**< the number of accomplishable value elements in TcpIp_SocketDyn */
 #define TcpIp_GetSizeOfSocketOwnerConfigOfPCConfig()                                                1u  /**< the number of accomplishable value elements in TcpIp_SocketOwnerConfig */
-#define TcpIp_GetSizeOfSocketUdpDynOfPCConfig()                                                     1u  /**< the number of accomplishable value elements in TcpIp_SocketUdpDyn */
+#define TcpIp_GetSizeOfSocketTcpDynOfPCConfig()                                                     3u  /**< the number of accomplishable value elements in TcpIp_SocketTcpDyn */
+#define TcpIp_GetSizeOfSocketTcpNagleDynOfPCConfig()                                                3u  /**< the number of accomplishable value elements in TcpIp_SocketTcpNagleDyn */
+#define TcpIp_GetSizeOfSocketTcpOooDynOfPCConfig()                                                  3u  /**< the number of accomplishable value elements in TcpIp_SocketTcpOooDyn */
+#define TcpIp_GetSizeOfSocketUdpDynOfPCConfig()                                                     2u  /**< the number of accomplishable value elements in TcpIp_SocketUdpDyn */
+#define TcpIp_GetSizeOfTcpConfigOfPCConfig()                                                        1u  /**< the number of accomplishable value elements in TcpIp_TcpConfig */
+#define TcpIp_GetSizeOfTcpResetQElementOfPCConfig()                                                 8u  /**< the number of accomplishable value elements in TcpIp_TcpResetQElement */
+#define TcpIp_GetSizeOfTcpRetryQElementOfPCConfig()                                                 30u  /**< the number of accomplishable value elements in TcpIp_TcpRetryQElement */
+#define TcpIp_GetSizeOfTcpRxBufferDescOfPCConfig()                                                  2u  /**< the number of accomplishable value elements in TcpIp_TcpRxBufferDesc */
+#define TcpIp_GetSizeOfTcpRxBufferOfPCConfig()                                                      2048u  /**< the number of accomplishable value elements in TcpIp_TcpRxBuffer */
+#define TcpIp_GetSizeOfTcpTxBufferDescOfPCConfig()                                                  2u  /**< the number of accomplishable value elements in TcpIp_TcpTxBufferDesc */
+#define TcpIp_GetSizeOfTcpTxBufferOfPCConfig()                                                      2048u  /**< the number of accomplishable value elements in TcpIp_TcpTxBuffer */
 #define TcpIp_GetSocketDynOfPCConfig()                                                              TcpIp_SocketDyn.raw  /**< the pointer to TcpIp_SocketDyn */
 #define TcpIp_GetSocketOwnerConfigOfPCConfig()                                                      TcpIp_SocketOwnerConfig  /**< the pointer to TcpIp_SocketOwnerConfig */
+#define TcpIp_GetSocketTcpDynOfPCConfig()                                                           TcpIp_SocketTcpDyn  /**< the pointer to TcpIp_SocketTcpDyn */
+#define TcpIp_GetSocketTcpNagleDynOfPCConfig()                                                      TcpIp_SocketTcpNagleDyn  /**< the pointer to TcpIp_SocketTcpNagleDyn */
+#define TcpIp_GetSocketTcpOooDynOfPCConfig()                                                        TcpIp_SocketTcpOooDyn  /**< the pointer to TcpIp_SocketTcpOooDyn */
 #define TcpIp_GetSocketUdpDynOfPCConfig()                                                           TcpIp_SocketUdpDyn  /**< the pointer to TcpIp_SocketUdpDyn */
+#define TcpIp_GetTcpConfigOfPCConfig()                                                              TcpIp_TcpConfig  /**< the pointer to TcpIp_TcpConfig */
+#define TcpIp_GetTcpResetQElementOfPCConfig()                                                       TcpIp_TcpResetQElement  /**< the pointer to TcpIp_TcpResetQElement */
+#define TcpIp_GetTcpRetryQElementOfPCConfig()                                                       TcpIp_TcpRetryQElement  /**< the pointer to TcpIp_TcpRetryQElement */
+#define TcpIp_GetTcpRxBufferDescDynOfPCConfig()                                                     TcpIp_TcpRxBufferDescDyn  /**< the pointer to TcpIp_TcpRxBufferDescDyn */
+#define TcpIp_GetTcpRxBufferDescOfPCConfig()                                                        TcpIp_TcpRxBufferDesc  /**< the pointer to TcpIp_TcpRxBufferDesc */
+#define TcpIp_GetTcpRxBufferOfPCConfig()                                                            TcpIp_TcpRxBuffer.raw  /**< the pointer to TcpIp_TcpRxBuffer */
+#define TcpIp_GetTcpTxBufferDescDynOfPCConfig()                                                     TcpIp_TcpTxBufferDescDyn  /**< the pointer to TcpIp_TcpTxBufferDescDyn */
+#define TcpIp_GetTcpTxBufferDescOfPCConfig()                                                        TcpIp_TcpTxBufferDesc  /**< the pointer to TcpIp_TcpTxBufferDesc */
+#define TcpIp_GetTcpTxBufferOfPCConfig()                                                            TcpIp_TcpTxBuffer.raw  /**< the pointer to TcpIp_TcpTxBuffer */
 /** 
   \}
 */ 
@@ -1404,6 +1719,8 @@
 #define TcpIp_GetSizeOfIpV4CtrlDynOfPCConfig()                                                      TcpIp_GetSizeOfIpV4CtrlOfPCConfig()  /**< the number of accomplishable value elements in TcpIp_IpV4CtrlDyn */
 #define TcpIp_GetSizeOfMulticastAddrV4RequestedOfPCConfig()                                         TcpIp_GetSizeOfMulticastAddrV4OfPCConfig()  /**< the number of accomplishable value elements in TcpIp_MulticastAddrV4Requested */
 #define TcpIp_GetSizeOfReassemblyBufferDescDynOfPCConfig()                                          TcpIp_GetSizeOfReassemblyBufferDescOfPCConfig()  /**< the number of accomplishable value elements in TcpIp_ReassemblyBufferDescDyn */
+#define TcpIp_GetSizeOfTcpRxBufferDescDynOfPCConfig()                                               TcpIp_GetSizeOfTcpRxBufferDescOfPCConfig()  /**< the number of accomplishable value elements in TcpIp_TcpRxBufferDescDyn */
+#define TcpIp_GetSizeOfTcpTxBufferDescDynOfPCConfig()                                               TcpIp_GetSizeOfTcpTxBufferDescOfPCConfig()  /**< the number of accomplishable value elements in TcpIp_TcpTxBufferDescDyn */
 #define TcpIp_GetSizeOfTxReqElemListDynOfPCConfig()                                                 TcpIp_GetSizeOfTxReqElemListOfPCConfig()  /**< the number of accomplishable value elements in TcpIp_TxReqElemListDyn */
 /** 
   \}
@@ -1455,6 +1772,15 @@ typedef uint8_least TcpIp_DefaultMulticastAddrV4IterType;
 
 /**   \brief  type used to iterate TcpIp_DefaultUnicastAddrV4 */
 typedef uint8_least TcpIp_DefaultUnicastAddrV4IterType;
+
+/**   \brief  type used to iterate TcpIp_DhcpConfig */
+typedef uint8_least TcpIp_DhcpConfigIterType;
+
+/**   \brief  type used to iterate TcpIp_DhcpHostname */
+typedef uint8_least TcpIp_DhcpHostnameIterType;
+
+/**   \brief  type used to iterate TcpIp_DhcpStatus */
+typedef uint8_least TcpIp_DhcpStatusIterType;
 
 /**   \brief  type used to iterate TcpIp_DhcpUserOption */
 typedef uint8_least TcpIp_DhcpUserOptionIterType;
@@ -1513,6 +1839,15 @@ typedef uint8_least TcpIp_SocketDynIterType;
 /**   \brief  type used to iterate TcpIp_SocketOwnerConfig */
 typedef uint8_least TcpIp_SocketOwnerConfigIterType;
 
+/**   \brief  type used to iterate TcpIp_SocketTcpDyn */
+typedef uint8_least TcpIp_SocketTcpDynIterType;
+
+/**   \brief  type used to iterate TcpIp_SocketTcpNagleDyn */
+typedef uint8_least TcpIp_SocketTcpNagleDynIterType;
+
+/**   \brief  type used to iterate TcpIp_SocketTcpOooDyn */
+typedef uint8_least TcpIp_SocketTcpOooDynIterType;
+
 /**   \brief  type used to iterate TcpIp_SocketUdpDyn */
 typedef uint8_least TcpIp_SocketUdpDynIterType;
 
@@ -1524,6 +1859,30 @@ typedef uint8_least TcpIp_StaticArpTableIterType;
 
 /**   \brief  type used to iterate TcpIp_StaticUnicastAddrV4Requested */
 typedef uint8_least TcpIp_StaticUnicastAddrV4RequestedIterType;
+
+/**   \brief  type used to iterate TcpIp_TcpConfig */
+typedef uint8_least TcpIp_TcpConfigIterType;
+
+/**   \brief  type used to iterate TcpIp_TcpOooQElement */
+typedef uint8_least TcpIp_TcpOooQElementIterType;
+
+/**   \brief  type used to iterate TcpIp_TcpResetQElement */
+typedef uint8_least TcpIp_TcpResetQElementIterType;
+
+/**   \brief  type used to iterate TcpIp_TcpRetryQElement */
+typedef uint8_least TcpIp_TcpRetryQElementIterType;
+
+/**   \brief  type used to iterate TcpIp_TcpRxBuffer */
+typedef uint16_least TcpIp_TcpRxBufferIterType;
+
+/**   \brief  type used to iterate TcpIp_TcpRxBufferDesc */
+typedef uint8_least TcpIp_TcpRxBufferDescIterType;
+
+/**   \brief  type used to iterate TcpIp_TcpTxBuffer */
+typedef uint16_least TcpIp_TcpTxBufferIterType;
+
+/**   \brief  type used to iterate TcpIp_TcpTxBufferDesc */
+typedef uint8_least TcpIp_TcpTxBufferDescIterType;
 
 /**   \brief  type used to iterate TcpIp_TxReqElem */
 typedef uint8_least TcpIp_TxReqElemIterType;
@@ -1563,6 +1922,12 @@ typedef TcpIp_MulticastAddrV4IterType TcpIp_MulticastAddrV4RequestedIterType;
 
 /**   \brief  type used to iterate TcpIp_ReassemblyBufferDescDyn */
 typedef TcpIp_ReassemblyBufferDescIterType TcpIp_ReassemblyBufferDescDynIterType;
+
+/**   \brief  type used to iterate TcpIp_TcpRxBufferDescDyn */
+typedef TcpIp_TcpRxBufferDescIterType TcpIp_TcpRxBufferDescDynIterType;
+
+/**   \brief  type used to iterate TcpIp_TcpTxBufferDescDyn */
+typedef TcpIp_TcpTxBufferDescIterType TcpIp_TcpTxBufferDescDynIterType;
 
 /**   \brief  type used to iterate TcpIp_TxReqElemListDyn */
 typedef TcpIp_TxReqElemListIterType TcpIp_TxReqElemListDynIterType;
@@ -1653,6 +2018,75 @@ typedef uint8 TcpIp_SocketDynIdxOfBuf2TxReqMapType;
 
 /**   \brief  value based type definition for TcpIp_UlTxReqIdxOfBuf2TxReqMap */
 typedef uint8 TcpIp_UlTxReqIdxOfBuf2TxReqMapType;
+
+/**   \brief  value based type definition for TcpIp_DiscoverIntervalMaxOfDhcpConfig */
+typedef uint8 TcpIp_DiscoverIntervalMaxOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_DiscoverIntervalMinOfDhcpConfig */
+typedef uint8 TcpIp_DiscoverIntervalMinOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_DiscoverMaxNumOfDhcpConfig */
+typedef uint8 TcpIp_DiscoverMaxNumOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_HostNameLenMaxOfDhcpConfig */
+typedef uint8 TcpIp_HostNameLenMaxOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_InitWaitMaxOfDhcpConfig */
+typedef uint16 TcpIp_InitWaitMaxOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_InitWaitMinOfDhcpConfig */
+typedef uint8 TcpIp_InitWaitMinOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RebindIntervalMinOfDhcpConfig */
+typedef uint8 TcpIp_RebindIntervalMinOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RenewIntervalMinOfDhcpConfig */
+typedef uint8 TcpIp_RenewIntervalMinOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RequestIntervalOfDhcpConfig */
+typedef uint8 TcpIp_RequestIntervalOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RequestMaxNumOfDhcpConfig */
+typedef uint8 TcpIp_RequestMaxNumOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RestartOnFailOfDhcpConfig */
+typedef boolean TcpIp_RestartOnFailOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RxReqOptionCntOfDhcpConfig */
+typedef uint8 TcpIp_RxReqOptionCntOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_DhcpHostname */
+typedef uint8 TcpIp_DhcpHostnameType;
+
+/**   \brief  value based type definition for TcpIp_CtrlStateOfDhcpStatus */
+typedef uint8 TcpIp_CtrlStateOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_HostNameLenOfDhcpStatus */
+typedef uint8 TcpIp_HostNameLenOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_LastDiscoverSecsOfDhcpStatus */
+typedef uint16 TcpIp_LastDiscoverSecsOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_MsTimerOfDhcpStatus */
+typedef uint16 TcpIp_MsTimerOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_RetryCounterOfDhcpStatus */
+typedef uint8 TcpIp_RetryCounterOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_SecElapsedOfDhcpStatus */
+typedef uint16 TcpIp_SecElapsedOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_SecNextEventOfDhcpStatus */
+typedef uint32 TcpIp_SecNextEventOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_SecNextIntervalOfDhcpStatus */
+typedef uint32 TcpIp_SecNextIntervalOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_SecTimerOfDhcpStatus */
+typedef uint32 TcpIp_SecTimerOfDhcpStatusType;
+
+/**   \brief  value based type definition for TcpIp_TimeoutOccurredOfDhcpStatus */
+typedef boolean TcpIp_TimeoutOccurredOfDhcpStatusType;
 
 /**   \brief  value based type definition for TcpIp_CodeOfDhcpUserOption */
 typedef uint8 TcpIp_CodeOfDhcpUserOptionType;
@@ -1756,6 +2190,15 @@ typedef uint8 TcpIp_DhcpConfigIdxOfIpV4CtrlType;
 /**   \brief  value based type definition for TcpIp_DhcpConfigUsedOfIpV4Ctrl */
 typedef boolean TcpIp_DhcpConfigUsedOfIpV4CtrlType;
 
+/**   \brief  value based type definition for TcpIp_DhcpHostnameEndIdxOfIpV4Ctrl */
+typedef uint8 TcpIp_DhcpHostnameEndIdxOfIpV4CtrlType;
+
+/**   \brief  value based type definition for TcpIp_DhcpHostnameStartIdxOfIpV4Ctrl */
+typedef uint8 TcpIp_DhcpHostnameStartIdxOfIpV4CtrlType;
+
+/**   \brief  value based type definition for TcpIp_DhcpHostnameUsedOfIpV4Ctrl */
+typedef boolean TcpIp_DhcpHostnameUsedOfIpV4CtrlType;
+
 /**   \brief  value based type definition for TcpIp_DhcpStatusIdxOfIpV4Ctrl */
 typedef uint8 TcpIp_DhcpStatusIdxOfIpV4CtrlType;
 
@@ -1809,6 +2252,12 @@ typedef boolean TcpIp_LlAddrStateUsedOfIpV4CtrlType;
 
 /**   \brief  value based type definition for TcpIp_LocalAddrV4BroadcastIdxOfIpV4Ctrl */
 typedef uint8 TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType;
+
+/**   \brief  value based type definition for TcpIp_LocalAddrV4DhcpIdxOfIpV4Ctrl */
+typedef uint8 TcpIp_LocalAddrV4DhcpIdxOfIpV4CtrlType;
+
+/**   \brief  value based type definition for TcpIp_LocalAddrV4DhcpUsedOfIpV4Ctrl */
+typedef boolean TcpIp_LocalAddrV4DhcpUsedOfIpV4CtrlType;
 
 /**   \brief  value based type definition for TcpIp_LocalAddrV4UnicastIdxOfIpV4Ctrl */
 typedef uint8 TcpIp_LocalAddrV4UnicastIdxOfIpV4CtrlType;
@@ -1993,6 +2442,15 @@ typedef uint8 TcpIp_SizeOfDefaultMulticastAddrV4Type;
 /**   \brief  value based type definition for TcpIp_SizeOfDefaultUnicastAddrV4 */
 typedef uint8 TcpIp_SizeOfDefaultUnicastAddrV4Type;
 
+/**   \brief  value based type definition for TcpIp_SizeOfDhcpConfig */
+typedef uint8 TcpIp_SizeOfDhcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfDhcpHostname */
+typedef uint8 TcpIp_SizeOfDhcpHostnameType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfDhcpStatus */
+typedef uint8 TcpIp_SizeOfDhcpStatusType;
+
 /**   \brief  value based type definition for TcpIp_SizeOfDhcpUserOption */
 typedef uint8 TcpIp_SizeOfDhcpUserOptionType;
 
@@ -2062,6 +2520,15 @@ typedef uint8 TcpIp_SizeOfSocketDynType;
 /**   \brief  value based type definition for TcpIp_SizeOfSocketOwnerConfig */
 typedef uint8 TcpIp_SizeOfSocketOwnerConfigType;
 
+/**   \brief  value based type definition for TcpIp_SizeOfSocketTcpDyn */
+typedef uint8 TcpIp_SizeOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfSocketTcpNagleDyn */
+typedef uint8 TcpIp_SizeOfSocketTcpNagleDynType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfSocketTcpOooDyn */
+typedef uint8 TcpIp_SizeOfSocketTcpOooDynType;
+
 /**   \brief  value based type definition for TcpIp_SizeOfSocketUdpDyn */
 typedef uint8 TcpIp_SizeOfSocketUdpDynType;
 
@@ -2073,6 +2540,36 @@ typedef uint8 TcpIp_SizeOfStaticArpTableType;
 
 /**   \brief  value based type definition for TcpIp_SizeOfStaticUnicastAddrV4Requested */
 typedef uint8 TcpIp_SizeOfStaticUnicastAddrV4RequestedType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfTcpConfig */
+typedef uint8 TcpIp_SizeOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfTcpOooQElement */
+typedef uint8 TcpIp_SizeOfTcpOooQElementType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfTcpResetQElement */
+typedef uint8 TcpIp_SizeOfTcpResetQElementType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfTcpRetryQElement */
+typedef uint8 TcpIp_SizeOfTcpRetryQElementType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfTcpRxBuffer */
+typedef uint16 TcpIp_SizeOfTcpRxBufferType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfTcpRxBufferDesc */
+typedef uint8 TcpIp_SizeOfTcpRxBufferDescType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfTcpRxBufferDescDyn */
+typedef uint8 TcpIp_SizeOfTcpRxBufferDescDynType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfTcpTxBuffer */
+typedef uint16 TcpIp_SizeOfTcpTxBufferType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfTcpTxBufferDesc */
+typedef uint8 TcpIp_SizeOfTcpTxBufferDescType;
+
+/**   \brief  value based type definition for TcpIp_SizeOfTcpTxBufferDescDyn */
+typedef uint8 TcpIp_SizeOfTcpTxBufferDescDynType;
 
 /**   \brief  value based type definition for TcpIp_SizeOfTxReqElem */
 typedef uint8 TcpIp_SizeOfTxReqElemType;
@@ -2110,6 +2607,129 @@ typedef boolean TcpIp_TxBufRequestedOfSocketDynType;
 /**   \brief  value based type definition for TcpIp_TxIpAddrIdxOfSocketDyn */
 typedef uint8 TcpIp_TxIpAddrIdxOfSocketDynType;
 
+/**   \brief  value based type definition for TcpIp_EventIndicationPendingOfSocketTcpDyn */
+typedef uint8 TcpIp_EventIndicationPendingOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_FinWait2TimeoutOfSocketTcpDyn */
+typedef uint32 TcpIp_FinWait2TimeoutOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_IdleTimeoutShortOfSocketTcpDyn */
+typedef uint32 TcpIp_IdleTimeoutShortOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_IssOfSocketTcpDyn */
+typedef uint32 TcpIp_IssOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_MaxNumListenSocketsOfSocketTcpDyn */
+typedef uint16 TcpIp_MaxNumListenSocketsOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_MslTimeoutOfSocketTcpDyn */
+typedef uint32 TcpIp_MslTimeoutOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_PathMtuChangedOfSocketTcpDyn */
+typedef boolean TcpIp_PathMtuChangedOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_PathMtuNewSizeOfSocketTcpDyn */
+typedef uint16 TcpIp_PathMtuNewSizeOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_RcvNxtOfSocketTcpDyn */
+typedef uint32 TcpIp_RcvNxtOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_RcvWndOfSocketTcpDyn */
+typedef uint16 TcpIp_RcvWndOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_RetransmitTimeoutOfSocketTcpDyn */
+typedef uint32 TcpIp_RetransmitTimeoutOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_RetryQFillNumOfSocketTcpDyn */
+typedef uint8 TcpIp_RetryQFillNumOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_RstReceivedOfSocketTcpDyn */
+typedef boolean TcpIp_RstReceivedOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_RtoReloadValueOfSocketTcpDyn */
+typedef uint32 TcpIp_RtoReloadValueOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SendLastHsAckOfSocketTcpDyn */
+typedef boolean TcpIp_SendLastHsAckOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SndNxtOfSocketTcpDyn */
+typedef uint32 TcpIp_SndNxtOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SndUnaOfSocketTcpDyn */
+typedef uint32 TcpIp_SndUnaOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SndWl1OfSocketTcpDyn */
+typedef uint32 TcpIp_SndWl1OfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SndWl2OfSocketTcpDyn */
+typedef uint32 TcpIp_SndWl2OfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SndWndOfSocketTcpDyn */
+typedef uint16 TcpIp_SndWndOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SockIsServerOfSocketTcpDyn */
+typedef boolean TcpIp_SockIsServerOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SockStateNextOfSocketTcpDyn */
+typedef uint8 TcpIp_SockStateNextOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SockStateOfSocketTcpDyn */
+typedef uint8 TcpIp_SockStateOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDyn */
+typedef uint8 TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDyn */
+typedef uint8 TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TcpRetryQElementLastIdxOfSocketTcpDyn */
+typedef uint8 TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TcpRxBufferDescIdxOfSocketTcpDyn */
+typedef uint8 TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TcpTxBufferDescIdxOfSocketTcpDyn */
+typedef uint8 TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TxFlagsOfSocketTcpDyn */
+typedef uint8 TcpIp_TxFlagsOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TxMaxSegLenByteOfSocketTcpDyn */
+typedef uint16 TcpIp_TxMaxSegLenByteOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TxMssAgreedOfSocketTcpDyn */
+typedef uint16 TcpIp_TxMssAgreedOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TxNextSendSeqNoOfSocketTcpDyn */
+typedef uint32 TcpIp_TxNextSendSeqNoOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TxOneTimeOptsLenOfSocketTcpDyn */
+typedef uint8 TcpIp_TxOneTimeOptsLenOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TxOneTimeOptsOfSocketTcpDyn */
+typedef uint8 TcpIp_TxOneTimeOptsOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TxOptLenOfSocketTcpDyn */
+typedef uint8 TcpIp_TxOptLenOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TxReqFullyQueuedOfSocketTcpDyn */
+typedef boolean TcpIp_TxReqFullyQueuedOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_TxReqSeqNoOfSocketTcpDyn */
+typedef uint32 TcpIp_TxReqSeqNoOfSocketTcpDynType;
+
+/**   \brief  value based type definition for TcpIp_EnabledOfSocketTcpNagleDyn */
+typedef boolean TcpIp_EnabledOfSocketTcpNagleDynType;
+
+/**   \brief  value based type definition for TcpIp_TimeoutOfSocketTcpNagleDyn */
+typedef uint8 TcpIp_TimeoutOfSocketTcpNagleDynType;
+
+/**   \brief  value based type definition for TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDyn */
+typedef uint8 TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType;
+
+/**   \brief  value based type definition for TcpIp_TcpOooQFillNumOfSocketTcpOooDyn */
+typedef uint8 TcpIp_TcpOooQFillNumOfSocketTcpOooDynType;
+
 /**   \brief  value based type definition for TcpIp_TxReqElemListIdxOfSocketUdpDyn */
 typedef uint8 TcpIp_TxReqElemListIdxOfSocketUdpDynType;
 
@@ -2121,6 +2741,93 @@ typedef uint8 TcpIp_StaticArpEntryEndIdxOfStaticArpTableType;
 
 /**   \brief  value based type definition for TcpIp_StaticArpEntryStartIdxOfStaticArpTable */
 typedef uint8 TcpIp_StaticArpEntryStartIdxOfStaticArpTableType;
+
+/**   \brief  value based type definition for TcpIp_FinWait2TimeoutOfTcpConfig */
+typedef uint16 TcpIp_FinWait2TimeoutOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_KeepAliveIntervalOfTcpConfig */
+typedef uint8 TcpIp_KeepAliveIntervalOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_KeepAliveProbesMaxOfTcpConfig */
+typedef uint8 TcpIp_KeepAliveProbesMaxOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_KeepAliveTimeOfTcpConfig */
+typedef uint32 TcpIp_KeepAliveTimeOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_MslOfTcpConfig */
+typedef uint16 TcpIp_MslOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_NagleTimeoutOfTcpConfig */
+typedef uint8 TcpIp_NagleTimeoutOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RetransTimeoutMaxOfTcpConfig */
+typedef uint16 TcpIp_RetransTimeoutMaxOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RetransTimeoutOfTcpConfig */
+typedef uint8 TcpIp_RetransTimeoutOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_RxMssOfTcpConfig */
+typedef uint16 TcpIp_RxMssOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_TcpOooQSizePerSocketAvgOfTcpConfig */
+typedef uint8 TcpIp_TcpOooQSizePerSocketAvgOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_TcpOooQSizePerSocketMaxOfTcpConfig */
+typedef uint8 TcpIp_TcpOooQSizePerSocketMaxOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_TcpRetryQSizeOfTcpConfig */
+typedef uint8 TcpIp_TcpRetryQSizeOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_TimeToLiveDefaultOfTcpConfig */
+typedef uint8 TcpIp_TimeToLiveDefaultOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_TxMssOfTcpConfig */
+typedef uint16 TcpIp_TxMssOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_UserTimeoutDefCyclesOfTcpConfig */
+typedef uint16 TcpIp_UserTimeoutDefCyclesOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_UserTimeoutMaxCyclesOfTcpConfig */
+typedef uint8 TcpIp_UserTimeoutMaxCyclesOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_UserTimeoutMinCyclesOfTcpConfig */
+typedef uint8 TcpIp_UserTimeoutMinCyclesOfTcpConfigType;
+
+/**   \brief  value based type definition for TcpIp_TcpRxBuffer */
+typedef uint8 TcpIp_TcpRxBufferType;
+
+/**   \brief  value based type definition for TcpIp_TcpRxBufferEndIdxOfTcpRxBufferDesc */
+typedef uint16 TcpIp_TcpRxBufferEndIdxOfTcpRxBufferDescType;
+
+/**   \brief  value based type definition for TcpIp_TcpRxBufferLengthOfTcpRxBufferDesc */
+typedef uint16 TcpIp_TcpRxBufferLengthOfTcpRxBufferDescType;
+
+/**   \brief  value based type definition for TcpIp_TcpRxBufferStartIdxOfTcpRxBufferDesc */
+typedef uint16 TcpIp_TcpRxBufferStartIdxOfTcpRxBufferDescType;
+
+/**   \brief  value based type definition for TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDyn */
+typedef uint8 TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType;
+
+/**   \brief  value based type definition for TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDyn */
+typedef uint16 TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType;
+
+/**   \brief  value based type definition for TcpIp_TcpTxBuffer */
+typedef uint8 TcpIp_TcpTxBufferType;
+
+/**   \brief  value based type definition for TcpIp_TcpTxBufferEndIdxOfTcpTxBufferDesc */
+typedef uint16 TcpIp_TcpTxBufferEndIdxOfTcpTxBufferDescType;
+
+/**   \brief  value based type definition for TcpIp_TcpTxBufferLengthOfTcpTxBufferDesc */
+typedef uint16 TcpIp_TcpTxBufferLengthOfTcpTxBufferDescType;
+
+/**   \brief  value based type definition for TcpIp_TcpTxBufferStartIdxOfTcpTxBufferDesc */
+typedef uint16 TcpIp_TcpTxBufferStartIdxOfTcpTxBufferDescType;
+
+/**   \brief  value based type definition for TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDyn */
+typedef uint8 TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType;
+
+/**   \brief  value based type definition for TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDyn */
+typedef uint16 TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType;
 
 /**   \brief  value based type definition for TcpIp_TxReqElemDataLenByteOfTxReqElem */
 typedef uint16 TcpIp_TxReqElemDataLenByteOfTxReqElemType;
@@ -2251,6 +2958,56 @@ typedef struct
 
 typedef struct
 {
+  boolean SynAvailable;
+  uint32  RxSeqNo;
+  uint16  RemPort;
+  uint16  MaxTxSegSize;
+  uint16  Window;
+} TcpIp_Tcp_BackLogEleType;
+
+typedef struct
+{
+  uint32 SeqNo;
+  uint32 AckNo;
+  uint8                  IpAddrIdx;
+  TcpIp_SockAddrBaseType LocSock;
+  TcpIp_SockAddrBaseType RemSock;
+  uint8 Flags;
+} TcpIp_Tcp_RstTxQueueType;
+
+typedef struct
+{
+  /* TxRetrQueue element points to the start of the data inside the TxBuffer (circular buffer!). If the segments is
+  splitted in two parts (wraparound), the second part will start at byte 0 of the TxBuffer. */
+  TcpIp_SizeOfTcpTxBufferType        SizeTotByte;       /* size of the whole data block in byte */
+  TcpIp_SizeOfTcpTxBufferType        DataBufStartIdx;   /* index of start of the first data block for this queue element (wraparound -> two blocks) */
+  uint32                             SeqNo;             /* start sequence number for this message */
+  uint32                             TimeStamp;         /* ECU TCP timestamp at queueing time */
+  uint32                             UserTimeoutTs;     /* total timeout timestamp for acknowlaging this segment */
+  TcpIp_SizeOfTcpRetryQElementType   EleNext;           /* index of next element */
+  TcpIp_SizeOfTcpRetryQElementType   ElePrev;           /* index of previous element */
+  TcpIp_SizeOfSocketTcpDynType       SocketTcpIdx;      /* index of related TCP connection */
+  uint8                              TransmitCounter;   /* count the (re-)transmissions of this segment */
+  uint8                              Flags;             /* TCP flags */
+  uint8                              OneTimeOptions;    /* options that shall be sent once */ /* currently only used by UserTimeoutOption */
+  uint8                              OneTimeOptionsLen; /* options len that shall be sent once */
+  uint8                              SackFlag;          /* TCP SACK dirty flag */
+} TcpIp_Tcp_TxRetrQueueType;  /* RetransmitQueueType */
+
+typedef struct
+{
+  uint32                         SeqNo;              /* (TCP) sequence number */
+  uint16                         LenByte;            /* length of received data */
+  TcpIp_SizeOfTcpOooQElementType NextEleIdx;         /* index of the next element (ordered by sequence number) */
+#if (TCPIP_SUPPORT_TCP_SELECTIVE_ACK == STD_ON)      /* ESCAN00107146: Extended struct for SACK processing. */
+  TcpIp_SizeOfTcpOooQElementType OlderEleIdx;        /* index of the next older element (ordered by change counter value) */
+  uint32                         ChangeCounterValue; /* counter that indicates the change order of ooo elements. The higher the value the newer is the change. */
+#endif
+} TcpIp_Tcp_RxPreBufEleType;  /* 'out of order' rx elements */
+
+
+typedef struct
+{
   uint32 Xid;                     /* Transaction ID */
   uint16 Secs;
   uint16 Flags;
@@ -2341,6 +3098,41 @@ typedef struct sTcpIp_DefaultUnicastAddrV4Type
   IpBase_AddrInType NetMaskOfDefaultUnicastAddrV4;  /**< - */
 } TcpIp_DefaultUnicastAddrV4Type;
 
+/**   \brief  type used in TcpIp_DhcpConfig */
+typedef struct sTcpIp_DhcpConfigType
+{
+  TcpIp_InitWaitMaxOfDhcpConfigType InitWaitMaxOfDhcpConfig;  /**< Init Wait Max - Value of configuration parameter TcpIpDhcpV4InitWaitMax [MILLISECONDS] */
+  TcpIp_RestartOnFailOfDhcpConfigType RestartOnFailOfDhcpConfig;  /**< Restart On Failure - Value of configuration parameter TcpIpDhcpV4RestartOnFail [BOOLEAN] */
+  TcpIp_DiscoverIntervalMaxOfDhcpConfigType DiscoverIntervalMaxOfDhcpConfig;  /**< Discover Interval Max - Value of configuration parameter TcpIpDhcpV4DiscoverIntervalMax [SECONDS] */
+  TcpIp_DiscoverIntervalMinOfDhcpConfigType DiscoverIntervalMinOfDhcpConfig;  /**< Discover Interval Min - Value of configuration parameter TcpIpDhcpV4DiscoverIntervalMin [SECONDS] */
+  TcpIp_DiscoverMaxNumOfDhcpConfigType DiscoverMaxNumOfDhcpConfig;  /**< Discover Max Num - Value of configuration parameter TcpIpDhcpV4DiscoverMaxNum */
+  TcpIp_HostNameLenMaxOfDhcpConfigType HostNameLenMaxOfDhcpConfig;  /**< Host Name Length Max - Value of configuration parameter TcpIpDhcpV4HostNameLenMax */
+  TcpIp_InitWaitMinOfDhcpConfigType InitWaitMinOfDhcpConfig;  /**< Init Wait Min - Value of configuration parameter TcpIpDhcpV4InitWaitMin [MILLISECONDS] */
+  TcpIp_RebindIntervalMinOfDhcpConfigType RebindIntervalMinOfDhcpConfig;  /**< Rebind Interval Min - Value of configuration parameter TcpIpDhcpV4RebindIntervalMin [SECONDS] */
+  TcpIp_RenewIntervalMinOfDhcpConfigType RenewIntervalMinOfDhcpConfig;  /**< Renew Interval Min - Value of configuration parameter TcpIpDhcpV4RenewIntervalMin [SECONDS] */
+  TcpIp_RequestIntervalOfDhcpConfigType RequestIntervalOfDhcpConfig;  /**< Request Interval - Value of configuration parameter TcpIpDhcpV4RequestInterval [SECONDS] */
+  TcpIp_RequestMaxNumOfDhcpConfigType RequestMaxNumOfDhcpConfig;  /**< Request Max Num - Value of configuration parameter TcpIpDhcpV4RequestMaxNum */
+  TcpIp_RxReqOptionCntOfDhcpConfigType RxReqOptionCntOfDhcpConfig;  /**< Amount of configured DHCP user options of type TCPIP_DHCP_USER_OPTION_RX_REQUESTED. */
+  IpV4_DhcpV4RequestedAddrCalloutFuncType ReqAddrCalloutFuncOfDhcpConfig;  /**< Callout for IP address that shall be requested in DHCPDISCOVER */
+} TcpIp_DhcpConfigType;
+
+/**   \brief  type used in TcpIp_DhcpStatus */
+typedef struct sTcpIp_DhcpStatusType
+{
+  TcpIp_SecNextEventOfDhcpStatusType SecNextEventOfDhcpStatus;  /**< - */
+  TcpIp_SecNextIntervalOfDhcpStatusType SecNextIntervalOfDhcpStatus;  /**< - */
+  TcpIp_SecTimerOfDhcpStatusType SecTimerOfDhcpStatus;  /**< - */
+  TcpIp_LastDiscoverSecsOfDhcpStatusType LastDiscoverSecsOfDhcpStatus;  /**< SECS-field used in last DISCOVER message. */
+  TcpIp_MsTimerOfDhcpStatusType MsTimerOfDhcpStatus;  /**< - */
+  TcpIp_SecElapsedOfDhcpStatusType SecElapsedOfDhcpStatus;  /**< - */
+  TcpIp_CtrlStateOfDhcpStatusType CtrlStateOfDhcpStatus;  /**< - */
+  TcpIp_HostNameLenOfDhcpStatusType HostNameLenOfDhcpStatus;  /**< - */
+  TcpIp_RetryCounterOfDhcpStatusType RetryCounterOfDhcpStatus;  /**< - */
+  TcpIp_TimeoutOccurredOfDhcpStatusType TimeoutOccurredOfDhcpStatus;  /**< - */
+  TcpIp_DhcpV4_DataStructType DataStructOfDhcpStatus;  /**< - */
+  IpBase_AddrInType ReqIpAddrOfDhcpStatus;  /**< IP address that shall be requested in DHCPDISCOVER */
+} TcpIp_DhcpStatusType;
+
 /**   \brief  type used in TcpIp_DhcpUserOption */
 /*! \spec weak type invariant () { 
  * (self.DhcpUserOptionBufferStartIdxOfDhcpUserOption < TcpIp_GetSizeOfDhcpUserOptionBuffer()) &&
@@ -2412,6 +3204,11 @@ typedef struct sTcpIp_IcmpConfigType
  * (!((!(self.AutoIpConfigUsedOfIpV4Ctrl))) || (self.ArpTableEntryEndIdxOfIpV4Ctrl < TcpIp_GetSizeOfArpTableEntry())) &&
  * (!(self.AutoIpConfigUsedOfIpV4Ctrl) || (self.AutoIpConfigIdxOfIpV4Ctrl < TcpIp_GetSizeOfAutoIpConfig())) &&
  * (!((self.GratuitousArpIdxOfIpV4Ctrl != TCPIP_NO_GRATUITOUSARPIDXOFIPV4CTRL)) || (self.GratuitousArpIdxOfIpV4Ctrl < TcpIp_GetSizeOfGratuitousArp())) &&
+ * (!((self.DhcpConfigIdxOfIpV4Ctrl != TCPIP_NO_DHCPCONFIGIDXOFIPV4CTRL)) || (self.DhcpConfigIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpConfig())) &&
+ * (!((self.DhcpHostnameStartIdxOfIpV4Ctrl != TCPIP_NO_DHCPHOSTNAMESTARTIDXOFIPV4CTRL)) || (self.DhcpHostnameStartIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpHostname())) &&
+ * (!((self.DhcpHostnameStartIdxOfIpV4Ctrl != TCPIP_NO_DHCPHOSTNAMESTARTIDXOFIPV4CTRL)) || (self.DhcpHostnameEndIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpHostname())) &&
+ * (!((self.DhcpStatusIdxOfIpV4Ctrl != TCPIP_NO_DHCPSTATUSIDXOFIPV4CTRL)) || (self.DhcpStatusIdxOfIpV4Ctrl < TcpIp_GetSizeOfDhcpStatus())) &&
+ * (!((self.LocalAddrV4DhcpIdxOfIpV4Ctrl != TCPIP_NO_LOCALADDRV4DHCPIDXOFIPV4CTRL)) || (self.LocalAddrV4DhcpIdxOfIpV4Ctrl < TcpIp_GetSizeOfLocalAddrV4())) &&
  * (!((self.FragmentationConfigIdxOfIpV4Ctrl != TCPIP_NO_FRAGMENTATIONCONFIGIDXOFIPV4CTRL)) || (self.FragmentationConfigIdxOfIpV4Ctrl < TcpIp_GetSizeOfFragmentationConfig())) &&
  * (!((self.StaticArpTableIdxOfIpV4Ctrl != TCPIP_NO_STATICARPTABLEIDXOFIPV4CTRL)) || (self.StaticArpTableIdxOfIpV4Ctrl < TcpIp_GetSizeOfStaticArpTable())) &&
  * (!((self.MulticastAddrV4StartIdxOfIpV4Ctrl != TCPIP_NO_MULTICASTADDRV4STARTIDXOFIPV4CTRL)) || (self.MulticastAddrV4StartIdxOfIpV4Ctrl < TcpIp_GetSizeOfMulticastAddrV4())) &&
@@ -2441,6 +3238,8 @@ typedef struct sTcpIp_IpV4CtrlType
   TcpIp_Buf2TxReqMapStartIdxOfIpV4CtrlType Buf2TxReqMapStartIdxOfIpV4Ctrl;  /**< the start index of the 1:n relation pointing to TcpIp_Buf2TxReqMap */
   TcpIp_DefaultTtlOfIpV4CtrlType DefaultTtlOfIpV4Ctrl;  /**< Default Time To Live - Value of configuration parameter TcpIpIpDefaultTtl */
   TcpIp_DhcpConfigIdxOfIpV4CtrlType DhcpConfigIdxOfIpV4Ctrl;  /**< the index of the 0:1 relation pointing to TcpIp_DhcpConfig */
+  TcpIp_DhcpHostnameEndIdxOfIpV4CtrlType DhcpHostnameEndIdxOfIpV4Ctrl;  /**< the end index of the 0:n relation pointing to TcpIp_DhcpHostname */
+  TcpIp_DhcpHostnameStartIdxOfIpV4CtrlType DhcpHostnameStartIdxOfIpV4Ctrl;  /**< the start index of the 0:n relation pointing to TcpIp_DhcpHostname */
   TcpIp_DhcpStatusIdxOfIpV4CtrlType DhcpStatusIdxOfIpV4Ctrl;  /**< the index of the 0:1 relation pointing to TcpIp_DhcpStatus */
   TcpIp_DhcpUserOptionEndIdxOfIpV4CtrlType DhcpUserOptionEndIdxOfIpV4Ctrl;  /**< the end index of the 0:n relation pointing to TcpIp_DhcpUserOption */
   TcpIp_DhcpUserOptionStartIdxOfIpV4CtrlType DhcpUserOptionStartIdxOfIpV4Ctrl;  /**< the start index of the 0:n relation pointing to TcpIp_DhcpUserOption */
@@ -2450,6 +3249,7 @@ typedef struct sTcpIp_IpV4CtrlType
   TcpIp_GratuitousArpIdxOfIpV4CtrlType GratuitousArpIdxOfIpV4Ctrl;  /**< the index of the 0:1 relation pointing to TcpIp_GratuitousArp */
   TcpIp_LlAddrStateIdxOfIpV4CtrlType LlAddrStateIdxOfIpV4Ctrl;  /**< the index of the 0:1 relation pointing to TcpIp_LlAddrState */
   TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType LocalAddrV4BroadcastIdxOfIpV4Ctrl;  /**< the index of the 1:1 relation pointing to TcpIp_LocalAddrV4 */
+  TcpIp_LocalAddrV4DhcpIdxOfIpV4CtrlType LocalAddrV4DhcpIdxOfIpV4Ctrl;  /**< the index of the 0:1 relation pointing to TcpIp_LocalAddrV4 */
   TcpIp_LocalAddrV4UnicastIdxOfIpV4CtrlType LocalAddrV4UnicastIdxOfIpV4Ctrl;  /**< the index of the 1:1 relation pointing to TcpIp_LocalAddrV4 */
   TcpIp_MulticastAddrV4EndIdxOfIpV4CtrlType MulticastAddrV4EndIdxOfIpV4Ctrl;  /**< the end index of the 0:n relation pointing to TcpIp_MulticastAddrV4 */
   TcpIp_MulticastAddrV4StartIdxOfIpV4CtrlType MulticastAddrV4StartIdxOfIpV4Ctrl;  /**< the start index of the 0:n relation pointing to TcpIp_MulticastAddrV4 */
@@ -2474,14 +3274,14 @@ typedef struct sTcpIp_IpV4CtrlDynType
 
 /**   \brief  type used in TcpIp_IpV4General */
 /*! \spec weak type invariant () { 
- * (!((!(self.IpV4SocketDynIcmpUsedOfIpV4General))) || (self.IpV4CtrlDefaultIdxOfIpV4General < TcpIp_GetSizeOfIpV4Ctrl())) &&
- * (!((!(self.IpV4SocketDynIcmpUsedOfIpV4General))) || (self.IpV4SocketDynTcpRstIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
- * (!(self.IpV4SocketDynIcmpUsedOfIpV4General) || (self.IpV4SocketDynIcmpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
- * (!((!(self.IpV4SocketDynIcmpUsedOfIpV4General))) || (self.IpV4SocketDynDhcpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn()))
+ * (!((!(self.IpV4SocketDynDhcpUsedOfIpV4General))) || (self.IpV4CtrlDefaultIdxOfIpV4General < TcpIp_GetSizeOfIpV4Ctrl())) &&
+ * (!((self.IpV4SocketDynTcpRstIdxOfIpV4General != TCPIP_NO_IPV4SOCKETDYNTCPRSTIDXOFIPV4GENERAL)) || (self.IpV4SocketDynTcpRstIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
+ * (!((self.IpV4SocketDynIcmpIdxOfIpV4General != TCPIP_NO_IPV4SOCKETDYNICMPIDXOFIPV4GENERAL)) || (self.IpV4SocketDynIcmpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn())) &&
+ * (!(self.IpV4SocketDynDhcpUsedOfIpV4General) || (self.IpV4SocketDynDhcpIdxOfIpV4General < TcpIp_GetSizeOfIpV4SocketDyn()))
  * } */
 typedef struct sTcpIp_IpV4GeneralType
 {
-  TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType IpV4SocketDynIcmpUsedOfIpV4General;  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_IpV4SocketDyn */
+  TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType IpV4SocketDynDhcpUsedOfIpV4General;  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_IpV4SocketDyn */
   TcpIp_IpV4CtrlDefaultIdxOfIpV4GeneralType IpV4CtrlDefaultIdxOfIpV4General;  /**< the index of the 0:1 relation pointing to TcpIp_IpV4Ctrl */
   TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType IpV4SocketDynDhcpIdxOfIpV4General;  /**< the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn */
   TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType IpV4SocketDynIcmpIdxOfIpV4General;  /**< the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn */
@@ -2603,6 +3403,72 @@ typedef struct sTcpIp_SocketOwnerConfigType
   TcpIp_SocketOwnerTxConfirmationType TxConfirmationFuncPtrOfSocketOwnerConfig;  /**< [User]_TxConfirmation Callback Function. (optional for every socket owner) */
 } TcpIp_SocketOwnerConfigType;
 
+/**   \brief  type used in TcpIp_SocketTcpDyn */
+typedef struct sTcpIp_SocketTcpDynType
+{
+  TcpIp_FinWait2TimeoutOfSocketTcpDynType FinWait2TimeoutOfSocketTcpDyn;  /**< - */
+  TcpIp_IdleTimeoutShortOfSocketTcpDynType IdleTimeoutShortOfSocketTcpDyn;  /**< - */
+  TcpIp_IssOfSocketTcpDynType IssOfSocketTcpDyn;  /**< - */
+  TcpIp_MslTimeoutOfSocketTcpDynType MslTimeoutOfSocketTcpDyn;  /**< - */
+  TcpIp_RcvNxtOfSocketTcpDynType RcvNxtOfSocketTcpDyn;  /**< - */
+  TcpIp_RetransmitTimeoutOfSocketTcpDynType RetransmitTimeoutOfSocketTcpDyn;  /**< - */
+  TcpIp_RtoReloadValueOfSocketTcpDynType RtoReloadValueOfSocketTcpDyn;  /**< - */
+  TcpIp_SndNxtOfSocketTcpDynType SndNxtOfSocketTcpDyn;  /**< - */
+  TcpIp_SndUnaOfSocketTcpDynType SndUnaOfSocketTcpDyn;  /**< - */
+  TcpIp_SndWl1OfSocketTcpDynType SndWl1OfSocketTcpDyn;  /**< - */
+  TcpIp_SndWl2OfSocketTcpDynType SndWl2OfSocketTcpDyn;  /**< - */
+  TcpIp_TxNextSendSeqNoOfSocketTcpDynType TxNextSendSeqNoOfSocketTcpDyn;  /**< - */
+  TcpIp_TxReqSeqNoOfSocketTcpDynType TxReqSeqNoOfSocketTcpDyn;  /**< Sequence number of first pending TX request. */
+  TcpIp_MaxNumListenSocketsOfSocketTcpDynType MaxNumListenSocketsOfSocketTcpDyn;  /**< - */
+  TcpIp_PathMtuNewSizeOfSocketTcpDynType PathMtuNewSizeOfSocketTcpDyn;  /**< - */
+  TcpIp_RcvWndOfSocketTcpDynType RcvWndOfSocketTcpDyn;  /**< - */
+  TcpIp_SndWndOfSocketTcpDynType SndWndOfSocketTcpDyn;  /**< - */
+  TcpIp_TxMaxSegLenByteOfSocketTcpDynType TxMaxSegLenByteOfSocketTcpDyn;  /**< - */
+  TcpIp_TxMssAgreedOfSocketTcpDynType TxMssAgreedOfSocketTcpDyn;  /**< Maximum segment size agreed during connection setup */
+  TcpIp_EventIndicationPendingOfSocketTcpDynType EventIndicationPendingOfSocketTcpDyn;  /**< Varibale contains the pending events that have to be forwarded to the socket user */
+  TcpIp_PathMtuChangedOfSocketTcpDynType PathMtuChangedOfSocketTcpDyn;  /**< - */
+  TcpIp_RetryQFillNumOfSocketTcpDynType RetryQFillNumOfSocketTcpDyn;  /**< - */
+  TcpIp_RstReceivedOfSocketTcpDynType RstReceivedOfSocketTcpDyn;  /**< - */
+  TcpIp_SendLastHsAckOfSocketTcpDynType SendLastHsAckOfSocketTcpDyn;  /**< Flag to indicate if the next ACK is the last of the handshake */
+  TcpIp_SockIsServerOfSocketTcpDynType SockIsServerOfSocketTcpDyn;  /**< - */
+  TcpIp_SockStateOfSocketTcpDynType SockStateOfSocketTcpDyn;  /**< - */
+  TcpIp_SockStateNextOfSocketTcpDynType SockStateNextOfSocketTcpDyn;  /**< - */
+  TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType SocketTcpDynMasterListenSocketIdxOfSocketTcpDyn;  /**< the index of the 0:1 relation pointing to TcpIp_SocketTcpDyn */
+  TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType TcpRetryQElementFirstIdxOfSocketTcpDyn;  /**< the index of the 0:1 relation pointing to TcpIp_TcpRetryQElement */
+  TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType TcpRetryQElementLastIdxOfSocketTcpDyn;  /**< the index of the 0:1 relation pointing to TcpIp_TcpRetryQElement */
+  TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType TcpRxBufferDescIdxOfSocketTcpDyn;  /**< the index of the 0:1 relation pointing to TcpIp_TcpRxBufferDesc */
+  TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType TcpTxBufferDescIdxOfSocketTcpDyn;  /**< the index of the 0:1 relation pointing to TcpIp_TcpTxBufferDesc */
+  TcpIp_TxFlagsOfSocketTcpDynType TxFlagsOfSocketTcpDyn;  /**< - */
+  TcpIp_TxOneTimeOptsOfSocketTcpDynType TxOneTimeOptsOfSocketTcpDyn;  /**< - */
+  TcpIp_TxOneTimeOptsLenOfSocketTcpDynType TxOneTimeOptsLenOfSocketTcpDyn;  /**< - */
+  TcpIp_TxOptLenOfSocketTcpDynType TxOptLenOfSocketTcpDyn;  /**< - */
+  TcpIp_TxReqFullyQueuedOfSocketTcpDynType TxReqFullyQueuedOfSocketTcpDyn;  /**< all unqueued data from this request is used within the next segment */
+  TcpIp_Tcp_BackLogEleType BackLogArrayOfSocketTcpDyn;  /**< - */
+  TcpIp_SizeOfTcpRxBufferType RequestedRxBufferSizeOfSocketTcpDyn;  /**< - */
+  TcpIp_SizeOfTcpTxBufferType RequestedTxBufferSizeOfSocketTcpDyn;  /**< - */
+  TcpIp_SizeOfTcpRxBufferType RxBufferIndPosOfSocketTcpDyn;  /**< - */
+  TcpIp_SizeOfTcpRxBufferType RxBufferRemIndLenOfSocketTcpDyn;  /**< - */
+  TcpIp_SizeOfTcpTxBufferType TxLenByteTxOfSocketTcpDyn;  /**< - */
+  TcpIp_SizeOfTcpTxBufferType TxReqDataBufStartIdxOfSocketTcpDyn;  /**< byte position inside the TxBuffer */
+  TcpIp_SizeOfTcpTxBufferType TxReqDataLenByteOfSocketTcpDyn;  /**< length of data to be transmitted */
+  TcpIp_SizeOfTcpTxBufferType TxReqQueuedLenOfSocketTcpDyn;  /**< length of data that could already be queued for transmission */
+  TcpIp_SizeOfTcpTxBufferType TxTotNotQueuedLenOfSocketTcpDyn;  /**< - */
+} TcpIp_SocketTcpDynType;
+
+/**   \brief  type used in TcpIp_SocketTcpNagleDyn */
+typedef struct sTcpIp_SocketTcpNagleDynType
+{
+  TcpIp_EnabledOfSocketTcpNagleDynType EnabledOfSocketTcpNagleDyn;  /**< - */
+  TcpIp_TimeoutOfSocketTcpNagleDynType TimeoutOfSocketTcpNagleDyn;  /**< - */
+} TcpIp_SocketTcpNagleDynType;
+
+/**   \brief  type used in TcpIp_SocketTcpOooDyn */
+typedef struct sTcpIp_SocketTcpOooDynType
+{
+  TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType TcpOooQElementFirstIdxOfSocketTcpOooDyn;  /**< the index of the 0:1 relation pointing to TcpIp_TcpOooQElement */
+  TcpIp_TcpOooQFillNumOfSocketTcpOooDynType TcpOooQFillNumOfSocketTcpOooDyn;  /**< - */
+} TcpIp_SocketTcpOooDynType;
+
 /**   \brief  type used in TcpIp_SocketUdpDyn */
 typedef struct sTcpIp_SocketUdpDynType
 {
@@ -2638,6 +3504,66 @@ typedef struct sTcpIp_StaticUnicastAddrV4RequestedType
   IpBase_AddrInType NetAddrOfStaticUnicastAddrV4Requested;  /**< - */
   IpBase_AddrInType NetMaskOfStaticUnicastAddrV4Requested;  /**< - */
 } TcpIp_StaticUnicastAddrV4RequestedType;
+
+/**   \brief  type used in TcpIp_TcpConfig */
+typedef struct sTcpIp_TcpConfigType
+{
+  TcpIp_KeepAliveTimeOfTcpConfigType KeepAliveTimeOfTcpConfig;  /**< Keep Alive Time - Value of configuration parameter TcpIpTcpKeepAliveTime [MAIN_FUNCTION_CYCLES] */
+  TcpIp_FinWait2TimeoutOfTcpConfigType FinWait2TimeoutOfTcpConfig;  /**< FIN Wait 2 Timeout - Value of configuration parameter TcpIpTcpFinWait2Timeout [MAIN_FUNCTION_CYCLES] */
+  TcpIp_MslOfTcpConfigType MslOfTcpConfig;  /**< Maximum Segment Lifetime (MSL) - Value of configuration parameter TcpIpTcpMsl [MAIN_FUNCTION_CYCLES] */
+  TcpIp_RetransTimeoutMaxOfTcpConfigType RetransTimeoutMaxOfTcpConfig;  /**< Retransmission Timeout Max - Value of configuration parameter TcpIpTcpRetransmissionTimeoutMax [MAIN_FUNCTION_CYCLES] */
+  TcpIp_RxMssOfTcpConfigType RxMssOfTcpConfig;  /**< maximum payload size of received TCP segments. */
+  TcpIp_TxMssOfTcpConfigType TxMssOfTcpConfig;  /**< maximum payload size of transmitted TCP segments. */
+  TcpIp_UserTimeoutDefCyclesOfTcpConfigType UserTimeoutDefCyclesOfTcpConfig;  /**< User Timeout Def - Value of configuration parameter TcpIpTcpUserTimeoutDef [MAIN_FUNCTION_CYCLES] */
+  TcpIp_KeepAliveIntervalOfTcpConfigType KeepAliveIntervalOfTcpConfig;  /**< Keep Alive Interval - Value of configuration parameter TcpIpTcpKeepAliveInterval [MAIN_FUNCTION_CYCLES] */
+  TcpIp_KeepAliveProbesMaxOfTcpConfigType KeepAliveProbesMaxOfTcpConfig;  /**< Keep Alive Probes Max - Value of configuration parameter TcpIpTcpKeepAliveProbesMax */
+  TcpIp_NagleTimeoutOfTcpConfigType NagleTimeoutOfTcpConfig;  /**< Nagle Timeout - Value of configuration parameter TcpIpTcpNagleTimeout [MAIN_FUNCTION_CYCLES] */
+  TcpIp_RetransTimeoutOfTcpConfigType RetransTimeoutOfTcpConfig;  /**< Retransmission Timeout - Value of configuration parameter TcpIpTcpRetransmissionTimeout [MAIN_FUNCTION_CYCLES] */
+  TcpIp_TcpOooQSizePerSocketAvgOfTcpConfigType TcpOooQSizePerSocketAvgOfTcpConfig;  /**< Avg Num Out Of Order Segments per Socket - Value of configuration parameter TcpIpTcpAvgNumOooSegsPerSocket */
+  TcpIp_TcpOooQSizePerSocketMaxOfTcpConfigType TcpOooQSizePerSocketMaxOfTcpConfig;  /**< Max Num Out Of Order Segments per Socket - Value of configuration parameter TcpIpTcpMaxNumOooSegsPerSocket */
+  TcpIp_TcpRetryQSizeOfTcpConfigType TcpRetryQSizeOfTcpConfig;  /**< Average Tx Retry Queue Size - Value of configuration parameter TcpIpTcpTxRetryQueueSize */
+  TcpIp_TimeToLiveDefaultOfTcpConfigType TimeToLiveDefaultOfTcpConfig;  /**< Time-To-Live (TTL) - Value of configuration parameter TcpIpTcpTtl */
+  TcpIp_UserTimeoutMaxCyclesOfTcpConfigType UserTimeoutMaxCyclesOfTcpConfig;  /**< User Timeout Max - Value of configuration parameter TcpIpTcpUserTimeoutMax [MAIN_FUNCTION_CYCLES] */
+  TcpIp_UserTimeoutMinCyclesOfTcpConfigType UserTimeoutMinCyclesOfTcpConfig;  /**< User Timeout Min - Value of configuration parameter TcpIpTcpUserTimeoutMin [MAIN_FUNCTION_CYCLES] */
+} TcpIp_TcpConfigType;
+
+/**   \brief  type used in TcpIp_TcpRxBufferDesc */
+/*! \spec weak type invariant () { 
+ * (self.TcpRxBufferStartIdxOfTcpRxBufferDesc < TcpIp_GetSizeOfTcpRxBuffer()) &&
+ * (self.TcpRxBufferEndIdxOfTcpRxBufferDesc < TcpIp_GetSizeOfTcpRxBuffer())
+ * } */
+typedef struct sTcpIp_TcpRxBufferDescType
+{
+  TcpIp_TcpRxBufferEndIdxOfTcpRxBufferDescType TcpRxBufferEndIdxOfTcpRxBufferDesc;  /**< the end index of the 1:n relation pointing to TcpIp_TcpRxBuffer */
+  TcpIp_TcpRxBufferStartIdxOfTcpRxBufferDescType TcpRxBufferStartIdxOfTcpRxBufferDesc;  /**< the start index of the 1:n relation pointing to TcpIp_TcpRxBuffer */
+} TcpIp_TcpRxBufferDescType;
+
+/**   \brief  type used in TcpIp_TcpRxBufferDescDyn */
+typedef struct sTcpIp_TcpRxBufferDescDynType
+{
+  TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType TcpRxBufferWriteIdxOfTcpRxBufferDescDyn;  /**< the index of the 1:1 relation pointing to TcpIp_TcpRxBuffer */
+  TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType SocketTcpDynIdxOfTcpRxBufferDescDyn;  /**< the index of the 0:1 relation pointing to TcpIp_SocketTcpDyn */
+  TcpIp_SizeOfTcpRxBufferType FillLevelOfTcpRxBufferDescDyn;
+} TcpIp_TcpRxBufferDescDynType;
+
+/**   \brief  type used in TcpIp_TcpTxBufferDesc */
+/*! \spec weak type invariant () { 
+ * (self.TcpTxBufferStartIdxOfTcpTxBufferDesc < TcpIp_GetSizeOfTcpTxBuffer()) &&
+ * (self.TcpTxBufferEndIdxOfTcpTxBufferDesc < TcpIp_GetSizeOfTcpTxBuffer())
+ * } */
+typedef struct sTcpIp_TcpTxBufferDescType
+{
+  TcpIp_TcpTxBufferEndIdxOfTcpTxBufferDescType TcpTxBufferEndIdxOfTcpTxBufferDesc;  /**< the end index of the 1:n relation pointing to TcpIp_TcpTxBuffer */
+  TcpIp_TcpTxBufferStartIdxOfTcpTxBufferDescType TcpTxBufferStartIdxOfTcpTxBufferDesc;  /**< the start index of the 1:n relation pointing to TcpIp_TcpTxBuffer */
+} TcpIp_TcpTxBufferDescType;
+
+/**   \brief  type used in TcpIp_TcpTxBufferDescDyn */
+typedef struct sTcpIp_TcpTxBufferDescDynType
+{
+  TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType TcpTxBufferWriteIdxOfTcpTxBufferDescDyn;  /**< the index of the 1:1 relation pointing to TcpIp_TcpTxBuffer */
+  TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType SocketTcpDynIdxOfTcpTxBufferDescDyn;  /**< the index of the 0:1 relation pointing to TcpIp_SocketTcpDyn */
+  TcpIp_SizeOfTcpTxBufferType FillLevelOfTcpTxBufferDescDyn;
+} TcpIp_TcpTxBufferDescDynType;
 
 /**   \brief  type used in TcpIp_TxReqElem */
 typedef struct sTcpIp_TxReqElemType
@@ -2691,6 +3617,7 @@ typedef struct sTcpIp_UnicastAddrV4Type
 typedef struct TcpIp_ArpTableEntryStructSTag
 {
   TcpIp_ArpTableEntryType TcpIpCtrl_untagged[10];
+  TcpIp_ArpTableEntryType TcpIpCtrl_Vlan1[10];
 } TcpIp_ArpTableEntryStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_Buf2TxReqMap */
@@ -2699,37 +3626,61 @@ typedef struct TcpIp_Buf2TxReqMapStructSTag
   TcpIp_Buf2TxReqMapType EthCtrlConfig_MAIN[8];
 } TcpIp_Buf2TxReqMapStructSType;
 
+/**   \brief  type to be used as symbolic data element access to TcpIp_DhcpHostname */
+typedef struct TcpIp_DhcpHostnameStructSTag
+{
+  TcpIp_DhcpHostnameType TcpIpCtrl_Vlan1[30];
+} TcpIp_DhcpHostnameStructSType;
+
+/**   \brief  type to be used as symbolic data element access to TcpIp_DhcpStatus */
+typedef struct TcpIp_DhcpStatusStructSTag
+{
+  TcpIp_DhcpStatusType TcpIpCtrl_Vlan1;
+} TcpIp_DhcpStatusStructSType;
+
 /**   \brief  type to be used as symbolic data element access to TcpIp_IpV4CtrlDyn */
 typedef struct TcpIp_IpV4CtrlDynStructSTag
 {
   TcpIp_IpV4CtrlDynType TcpIpCtrl_untagged;
+  TcpIp_IpV4CtrlDynType TcpIpCtrl_Vlan1;
 } TcpIp_IpV4CtrlDynStructSType;
-
-/**   \brief  type to be used as symbolic data element access to TcpIp_IpV4SocketDyn */
-typedef struct TcpIp_IpV4SocketDynStructSTag
-{
-  TcpIp_IpV4SocketDynType UDP;
-  TcpIp_IpV4SocketDynType ICMPv4;
-} TcpIp_IpV4SocketDynStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_LocalAddr */
 typedef struct TcpIp_LocalAddrStructSTag
 {
   TcpIp_LocalAddrType TcpIpLocalAddr_NE_Fixed_192_168_1_123;
   TcpIp_LocalAddrType TcpIpV4LocalAddr_TcpIpCtrl_untagged_Broadcast;
+  TcpIp_LocalAddrType TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33;
+  TcpIp_LocalAddrType TcpIpV4LocalAddr_TcpIpCtrl_Vlan1_Broadcast;
 } TcpIp_LocalAddrStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_SocketDyn */
 typedef struct TcpIp_SocketDynStructSTag
 {
-  TcpIp_SocketDynType UDP;
+  TcpIp_SocketDynType UDP[2];
+  TcpIp_SocketDynType TCP[3];
 } TcpIp_SocketDynStructSType;
 
 /**   \brief  type to be used as symbolic data element access to TcpIp_StaticUnicastAddrV4Requested */
 typedef struct TcpIp_StaticUnicastAddrV4RequestedStructSTag
 {
   TcpIp_StaticUnicastAddrV4RequestedType TcpIpLocalAddr_NE_Fixed_192_168_1_123;
+  TcpIp_StaticUnicastAddrV4RequestedType TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33;
 } TcpIp_StaticUnicastAddrV4RequestedStructSType;
+
+/**   \brief  type to be used as symbolic data element access to TcpIp_TcpRxBuffer */
+typedef struct TcpIp_TcpRxBufferStructSTag
+{
+  TcpIp_TcpRxBufferType TcpIpTcpSocketBuffer_001[1024];
+  TcpIp_TcpRxBufferType TcpIpTcpSocketBuffer_002[1024];
+} TcpIp_TcpRxBufferStructSType;
+
+/**   \brief  type to be used as symbolic data element access to TcpIp_TcpTxBuffer */
+typedef struct TcpIp_TcpTxBufferStructSTag
+{
+  TcpIp_TcpTxBufferType TcpIpTcpSocketBuffer_001[1024];
+  TcpIp_TcpTxBufferType TcpIpTcpSocketBuffer_002[1024];
+} TcpIp_TcpTxBufferStructSType;
 
 /** 
   \}
@@ -2743,7 +3694,7 @@ typedef struct TcpIp_StaticUnicastAddrV4RequestedStructSTag
 /**   \brief  type to access TcpIp_ArpTableEntry in an index and symbol based style. */
 typedef union TcpIp_ArpTableEntryUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_ArpTableEntryType raw[10];
+  TcpIp_ArpTableEntryType raw[20];
   TcpIp_ArpTableEntryStructSType str;
 } TcpIp_ArpTableEntryUType;
 
@@ -2754,40 +3705,61 @@ typedef union TcpIp_Buf2TxReqMapUTag
   TcpIp_Buf2TxReqMapStructSType str;
 } TcpIp_Buf2TxReqMapUType;
 
+/**   \brief  type to access TcpIp_DhcpHostname in an index and symbol based style. */
+typedef union TcpIp_DhcpHostnameUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  TcpIp_DhcpHostnameType raw[30];
+  TcpIp_DhcpHostnameStructSType str;
+} TcpIp_DhcpHostnameUType;
+
+/**   \brief  type to access TcpIp_DhcpStatus in an index and symbol based style. */
+typedef union TcpIp_DhcpStatusUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  TcpIp_DhcpStatusType raw[1];
+  TcpIp_DhcpStatusStructSType str;
+} TcpIp_DhcpStatusUType;
+
 /**   \brief  type to access TcpIp_IpV4CtrlDyn in an index and symbol based style. */
 typedef union TcpIp_IpV4CtrlDynUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_IpV4CtrlDynType raw[1];
+  TcpIp_IpV4CtrlDynType raw[2];
   TcpIp_IpV4CtrlDynStructSType str;
 } TcpIp_IpV4CtrlDynUType;
-
-/**   \brief  type to access TcpIp_IpV4SocketDyn in an index and symbol based style. */
-typedef union TcpIp_IpV4SocketDynUTag
-{  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_IpV4SocketDynType raw[2];
-  TcpIp_IpV4SocketDynStructSType str;
-} TcpIp_IpV4SocketDynUType;
 
 /**   \brief  type to access TcpIp_LocalAddr in an index and symbol based style. */
 typedef union TcpIp_LocalAddrUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_LocalAddrType raw[2];
+  TcpIp_LocalAddrType raw[4];
   TcpIp_LocalAddrStructSType str;
 } TcpIp_LocalAddrUType;
 
 /**   \brief  type to access TcpIp_SocketDyn in an index and symbol based style. */
 typedef union TcpIp_SocketDynUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_SocketDynType raw[1];
+  TcpIp_SocketDynType raw[5];
   TcpIp_SocketDynStructSType str;
 } TcpIp_SocketDynUType;
 
 /**   \brief  type to access TcpIp_StaticUnicastAddrV4Requested in an index and symbol based style. */
 typedef union TcpIp_StaticUnicastAddrV4RequestedUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  TcpIp_StaticUnicastAddrV4RequestedType raw[1];
+  TcpIp_StaticUnicastAddrV4RequestedType raw[2];
   TcpIp_StaticUnicastAddrV4RequestedStructSType str;
 } TcpIp_StaticUnicastAddrV4RequestedUType;
+
+/**   \brief  type to access TcpIp_TcpRxBuffer in an index and symbol based style. */
+typedef union TcpIp_TcpRxBufferUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  TcpIp_TcpRxBufferType raw[2048];
+  TcpIp_TcpRxBufferStructSType str;
+} TcpIp_TcpRxBufferUType;
+
+/**   \brief  type to access TcpIp_TcpTxBuffer in an index and symbol based style. */
+typedef union TcpIp_TcpTxBufferUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  TcpIp_TcpTxBufferType raw[2048];
+  TcpIp_TcpTxBufferStructSType str;
+} TcpIp_TcpTxBufferUType;
 
 /** 
   \}
@@ -2821,6 +3793,18 @@ typedef P2CONST(TcpIp_DefaultMulticastAddrV4Type, TYPEDEF, TCPIP_CONST) TcpIp_De
 
 /**   \brief  type used to point to TcpIp_DefaultUnicastAddrV4 */
 typedef P2CONST(TcpIp_DefaultUnicastAddrV4Type, TYPEDEF, TCPIP_CONST) TcpIp_DefaultUnicastAddrV4PtrType;
+
+/**   \brief  type used to point to TcpIp_DhcpConfig */
+typedef P2CONST(TcpIp_DhcpConfigType, TYPEDEF, TCPIP_CONST) TcpIp_DhcpConfigPtrType;
+
+/**   \brief  type used to point to TcpIp_DhcpHostname */
+typedef P2VAR(TcpIp_DhcpHostnameType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_DhcpHostnamePtrType;
+
+/**   \brief  type used to point to TcpIp_DhcpStatus */
+typedef P2VAR(TcpIp_DhcpStatusType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_DhcpStatusPtrType;
+
+/**   \brief  type used to point to TcpIp_DataStructOfDhcpStatus */
+typedef P2VAR(TcpIp_DhcpV4_DataStructType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_DataStructOfDhcpStatusPtrType;
 
 /**   \brief  type used to point to TcpIp_DhcpUserOption */
 typedef P2CONST(TcpIp_DhcpUserOptionType, TYPEDEF, TCPIP_CONST) TcpIp_DhcpUserOptionPtrType;
@@ -2912,6 +3896,15 @@ typedef P2VAR(TcpIp_SockAddrBaseType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_RemSockOf
 /**   \brief  type used to point to TcpIp_SocketOwnerConfig */
 typedef P2CONST(TcpIp_SocketOwnerConfigType, TYPEDEF, TCPIP_CONST) TcpIp_SocketOwnerConfigPtrType;
 
+/**   \brief  type used to point to TcpIp_SocketTcpDyn */
+typedef P2VAR(volatile TcpIp_SocketTcpDynType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_SocketTcpDynPtrType;
+
+/**   \brief  type used to point to TcpIp_SocketTcpNagleDyn */
+typedef P2VAR(TcpIp_SocketTcpNagleDynType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_SocketTcpNagleDynPtrType;
+
+/**   \brief  type used to point to TcpIp_SocketTcpOooDyn */
+typedef P2VAR(TcpIp_SocketTcpOooDynType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_SocketTcpOooDynPtrType;
+
 /**   \brief  type used to point to TcpIp_SocketUdpDyn */
 typedef P2VAR(TcpIp_SocketUdpDynType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_SocketUdpDynPtrType;
 
@@ -2932,6 +3925,36 @@ typedef P2CONST(TcpIp_StaticArpTableType, TYPEDEF, TCPIP_CONST) TcpIp_StaticArpT
 
 /**   \brief  type used to point to TcpIp_StaticUnicastAddrV4Requested */
 typedef P2VAR(TcpIp_StaticUnicastAddrV4RequestedType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_StaticUnicastAddrV4RequestedPtrType;
+
+/**   \brief  type used to point to TcpIp_TcpConfig */
+typedef P2CONST(TcpIp_TcpConfigType, TYPEDEF, TCPIP_CONST) TcpIp_TcpConfigPtrType;
+
+/**   \brief  type used to point to TcpIp_TcpOooQElement */
+typedef P2VAR(TcpIp_Tcp_RxPreBufEleType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_TcpOooQElementPtrType;
+
+/**   \brief  type used to point to TcpIp_TcpResetQElement */
+typedef P2VAR(TcpIp_Tcp_RstTxQueueType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_TcpResetQElementPtrType;
+
+/**   \brief  type used to point to TcpIp_TcpRetryQElement */
+typedef P2VAR(TcpIp_Tcp_TxRetrQueueType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_TcpRetryQElementPtrType;
+
+/**   \brief  type used to point to TcpIp_TcpRxBuffer */
+typedef P2VAR(TcpIp_TcpRxBufferType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_TcpRxBufferPtrType;
+
+/**   \brief  type used to point to TcpIp_TcpRxBufferDesc */
+typedef P2CONST(TcpIp_TcpRxBufferDescType, TYPEDEF, TCPIP_CONST) TcpIp_TcpRxBufferDescPtrType;
+
+/**   \brief  type used to point to TcpIp_TcpRxBufferDescDyn */
+typedef P2VAR(TcpIp_TcpRxBufferDescDynType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_TcpRxBufferDescDynPtrType;
+
+/**   \brief  type used to point to TcpIp_TcpTxBuffer */
+typedef P2VAR(TcpIp_TcpTxBufferType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_TcpTxBufferPtrType;
+
+/**   \brief  type used to point to TcpIp_TcpTxBufferDesc */
+typedef P2CONST(TcpIp_TcpTxBufferDescType, TYPEDEF, TCPIP_CONST) TcpIp_TcpTxBufferDescPtrType;
+
+/**   \brief  type used to point to TcpIp_TcpTxBufferDescDyn */
+typedef P2VAR(TcpIp_TcpTxBufferDescDynType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_TcpTxBufferDescDynPtrType;
 
 /**   \brief  type used to point to TcpIp_TxReqElem */
 typedef P2VAR(TcpIp_TxReqElemType, TYPEDEF, TCPIP_VAR_NOINIT) TcpIp_TxReqElemPtrType;
@@ -2986,6 +4009,7 @@ typedef struct sTcpIp_PCConfigType
   TcpIp_StaticArpEntryPtrType StaticArpEntryOfPCConfig;  /**< the pointer to TcpIp_StaticArpEntry */
   TcpIp_StaticArpTablePtrType StaticArpTableOfPCConfig;  /**< the pointer to TcpIp_StaticArpTable */
   TcpIp_StaticUnicastAddrV4RequestedPtrType StaticUnicastAddrV4RequestedOfPCConfig;  /**< the pointer to TcpIp_StaticUnicastAddrV4Requested */
+  TcpIp_TcpOooQElementPtrType TcpOooQElementOfPCConfig;  /**< the pointer to TcpIp_TcpOooQElement */
   TcpIp_TxReqElemPtrType TxReqElemOfPCConfig;  /**< the pointer to TcpIp_TxReqElem */
   TcpIp_TxReqElemListPtrType TxReqElemListOfPCConfig;  /**< the pointer to TcpIp_TxReqElemList */
   TcpIp_TxReqElemListDynPtrType TxReqElemListDynOfPCConfig;  /**< the pointer to TcpIp_TxReqElemListDyn */
@@ -3010,6 +4034,7 @@ typedef struct sTcpIp_PCConfigType
   TcpIp_SizeOfStaticArpEntryType SizeOfStaticArpEntryOfPCConfig;  /**< the number of accomplishable value elements in TcpIp_StaticArpEntry */
   TcpIp_SizeOfStaticArpTableType SizeOfStaticArpTableOfPCConfig;  /**< the number of accomplishable value elements in TcpIp_StaticArpTable */
   TcpIp_SizeOfStaticUnicastAddrV4RequestedType SizeOfStaticUnicastAddrV4RequestedOfPCConfig;  /**< the number of accomplishable value elements in TcpIp_StaticUnicastAddrV4Requested */
+  TcpIp_SizeOfTcpOooQElementType SizeOfTcpOooQElementOfPCConfig;  /**< the number of accomplishable value elements in TcpIp_TcpOooQElement */
   TcpIp_SizeOfTxReqElemType SizeOfTxReqElemOfPCConfig;  /**< the number of accomplishable value elements in TcpIp_TxReqElem */
   TcpIp_SizeOfTxReqElemListType SizeOfTxReqElemListOfPCConfig;  /**< the number of accomplishable value elements in TcpIp_TxReqElemList */
   TcpIp_SizeOfUdpTxRetryQueueElementChainType SizeOfUdpTxRetryQueueElementChainOfPCConfig;  /**< the number of accomplishable value elements in TcpIp_UdpTxRetryQueueElementChain */
@@ -3058,7 +4083,7 @@ extern TCPIP_P2C(TcpIp_ConfigType) TcpIp_ConfigDataPtr;
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_AddrAssignmentCfgByPrioType, TCPIP_CONST) TcpIp_AddrAssignmentCfgByPrio[1];
+extern CONST(TcpIp_AddrAssignmentCfgByPrioType, TCPIP_CONST) TcpIp_AddrAssignmentCfgByPrio[3];
 #define TCPIP_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3105,7 +4130,38 @@ extern CONST(TcpIp_ArpConfigType, TCPIP_CONST) TcpIp_ArpConfig[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_DefaultUnicastAddrV4Type, TCPIP_CONST) TcpIp_DefaultUnicastAddrV4[1];
+extern CONST(TcpIp_DefaultUnicastAddrV4Type, TCPIP_CONST) TcpIp_DefaultUnicastAddrV4[2];
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_DhcpConfig
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_DhcpConfig
+  \details
+  Element                Description
+  InitWaitMax            Init Wait Max - Value of configuration parameter TcpIpDhcpV4InitWaitMax [MILLISECONDS]
+  RestartOnFail          Restart On Failure - Value of configuration parameter TcpIpDhcpV4RestartOnFail [BOOLEAN]
+  DiscoverIntervalMax    Discover Interval Max - Value of configuration parameter TcpIpDhcpV4DiscoverIntervalMax [SECONDS]
+  DiscoverIntervalMin    Discover Interval Min - Value of configuration parameter TcpIpDhcpV4DiscoverIntervalMin [SECONDS]
+  DiscoverMaxNum         Discover Max Num - Value of configuration parameter TcpIpDhcpV4DiscoverMaxNum
+  HostNameLenMax         Host Name Length Max - Value of configuration parameter TcpIpDhcpV4HostNameLenMax
+  InitWaitMin            Init Wait Min - Value of configuration parameter TcpIpDhcpV4InitWaitMin [MILLISECONDS]
+  RebindIntervalMin      Rebind Interval Min - Value of configuration parameter TcpIpDhcpV4RebindIntervalMin [SECONDS]
+  RenewIntervalMin       Renew Interval Min - Value of configuration parameter TcpIpDhcpV4RenewIntervalMin [SECONDS]
+  RequestInterval        Request Interval - Value of configuration parameter TcpIpDhcpV4RequestInterval [SECONDS]
+  RequestMaxNum          Request Max Num - Value of configuration parameter TcpIpDhcpV4RequestMaxNum
+  RxReqOptionCnt         Amount of configured DHCP user options of type TCPIP_DHCP_USER_OPTION_RX_REQUESTED.
+  ReqAddrCalloutFunc     Callout for IP address that shall be requested in DHCPDISCOVER
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(TcpIp_DhcpConfigType, TCPIP_CONST) TcpIp_DhcpConfig[1];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3138,7 +4194,7 @@ extern CONST(TcpIp_DuplicateAddrDetectionCbkType, TCPIP_CONST) TcpIp_DuplicateAd
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_EthIfCtrlType, TCPIP_CONST) TcpIp_EthIfCtrl[3];
+extern CONST(TcpIp_EthIfCtrlType, TCPIP_CONST) TcpIp_EthIfCtrl[2];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3202,6 +4258,8 @@ extern CONST(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFc
   Buf2TxReqMapStartIdx               the start index of the 1:n relation pointing to TcpIp_Buf2TxReqMap
   DefaultTtl                         Default Time To Live - Value of configuration parameter TcpIpIpDefaultTtl
   DhcpConfigIdx                      the index of the 0:1 relation pointing to TcpIp_DhcpConfig
+  DhcpHostnameEndIdx                 the end index of the 0:n relation pointing to TcpIp_DhcpHostname
+  DhcpHostnameStartIdx               the start index of the 0:n relation pointing to TcpIp_DhcpHostname
   DhcpStatusIdx                      the index of the 0:1 relation pointing to TcpIp_DhcpStatus
   DhcpUserOptionEndIdx               the end index of the 0:n relation pointing to TcpIp_DhcpUserOption
   DhcpUserOptionStartIdx             the start index of the 0:n relation pointing to TcpIp_DhcpUserOption
@@ -3211,6 +4269,7 @@ extern CONST(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFc
   GratuitousArpIdx                   the index of the 0:1 relation pointing to TcpIp_GratuitousArp
   LlAddrStateIdx                     the index of the 0:1 relation pointing to TcpIp_LlAddrState
   LocalAddrV4BroadcastIdx            the index of the 1:1 relation pointing to TcpIp_LocalAddrV4
+  LocalAddrV4DhcpIdx                 the index of the 0:1 relation pointing to TcpIp_LocalAddrV4
   LocalAddrV4UnicastIdx              the index of the 1:1 relation pointing to TcpIp_LocalAddrV4
   MulticastAddrV4EndIdx              the end index of the 0:n relation pointing to TcpIp_MulticastAddrV4
   MulticastAddrV4StartIdx            the start index of the 0:n relation pointing to TcpIp_MulticastAddrV4
@@ -3222,7 +4281,7 @@ extern CONST(TcpIp_IcmpMsgHandlerCbkType, TCPIP_CONST) TcpIp_IcmpMsgHandlerCbkFc
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_IpV4CtrlType, TCPIP_CONST) TcpIp_IpV4Ctrl[1];
+extern CONST(TcpIp_IpV4CtrlType, TCPIP_CONST) TcpIp_IpV4Ctrl[2];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3235,7 +4294,7 @@ extern CONST(TcpIp_IpV4CtrlType, TCPIP_CONST) TcpIp_IpV4Ctrl[1];
   \var    TcpIp_IpV4General
   \details
   Element                   Description
-  IpV4SocketDynIcmpUsed     TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_IpV4SocketDyn
+  IpV4SocketDynDhcpUsed     TRUE, if the 0:1 relation has minimum 1 relation pointing to TcpIp_IpV4SocketDyn
   IpV4CtrlDefaultIdx        the index of the 0:1 relation pointing to TcpIp_IpV4Ctrl
   IpV4SocketDynDhcpIdx      the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn
   IpV4SocketDynIcmpIdx      the index of the 0:1 relation pointing to TcpIp_IpV4SocketDyn
@@ -3267,7 +4326,7 @@ extern CONST(TcpIp_IpV4GeneralType, TCPIP_CONST) TcpIp_IpV4General[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_LocalAddrV4Type, TCPIP_CONST) TcpIp_LocalAddrV4[2];
+extern CONST(TcpIp_LocalAddrV4Type, TCPIP_CONST) TcpIp_LocalAddrV4[4];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3316,6 +4375,83 @@ extern CONST(TcpIp_SocketOwnerConfigType, TCPIP_CONST) TcpIp_SocketOwnerConfig[1
 /*lint -restore */
 
 /**********************************************************************************************************************
+  TcpIp_TcpConfig
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_TcpConfig
+  \details
+  Element                    Description
+  KeepAliveTime              Keep Alive Time - Value of configuration parameter TcpIpTcpKeepAliveTime [MAIN_FUNCTION_CYCLES]
+  FinWait2Timeout            FIN Wait 2 Timeout - Value of configuration parameter TcpIpTcpFinWait2Timeout [MAIN_FUNCTION_CYCLES]
+  Msl                        Maximum Segment Lifetime (MSL) - Value of configuration parameter TcpIpTcpMsl [MAIN_FUNCTION_CYCLES]
+  RetransTimeoutMax          Retransmission Timeout Max - Value of configuration parameter TcpIpTcpRetransmissionTimeoutMax [MAIN_FUNCTION_CYCLES]
+  RxMss                      maximum payload size of received TCP segments.
+  TxMss                      maximum payload size of transmitted TCP segments.
+  UserTimeoutDefCycles       User Timeout Def - Value of configuration parameter TcpIpTcpUserTimeoutDef [MAIN_FUNCTION_CYCLES]
+  KeepAliveInterval          Keep Alive Interval - Value of configuration parameter TcpIpTcpKeepAliveInterval [MAIN_FUNCTION_CYCLES]
+  KeepAliveProbesMax         Keep Alive Probes Max - Value of configuration parameter TcpIpTcpKeepAliveProbesMax
+  NagleTimeout               Nagle Timeout - Value of configuration parameter TcpIpTcpNagleTimeout [MAIN_FUNCTION_CYCLES]
+  RetransTimeout             Retransmission Timeout - Value of configuration parameter TcpIpTcpRetransmissionTimeout [MAIN_FUNCTION_CYCLES]
+  TcpOooQSizePerSocketAvg    Avg Num Out Of Order Segments per Socket - Value of configuration parameter TcpIpTcpAvgNumOooSegsPerSocket
+  TcpOooQSizePerSocketMax    Max Num Out Of Order Segments per Socket - Value of configuration parameter TcpIpTcpMaxNumOooSegsPerSocket
+  TcpRetryQSize              Average Tx Retry Queue Size - Value of configuration parameter TcpIpTcpTxRetryQueueSize
+  TimeToLiveDefault          Time-To-Live (TTL) - Value of configuration parameter TcpIpTcpTtl
+  UserTimeoutMaxCycles       User Timeout Max - Value of configuration parameter TcpIpTcpUserTimeoutMax [MAIN_FUNCTION_CYCLES]
+  UserTimeoutMinCycles       User Timeout Min - Value of configuration parameter TcpIpTcpUserTimeoutMin [MAIN_FUNCTION_CYCLES]
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(TcpIp_TcpConfigType, TCPIP_CONST) TcpIp_TcpConfig[1];
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TcpRxBufferDesc
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_TcpRxBufferDesc
+  \brief  TCP RX buffer descriptors
+  \details
+  Element                Description
+  TcpRxBufferEndIdx      the end index of the 1:n relation pointing to TcpIp_TcpRxBuffer
+  TcpRxBufferStartIdx    the start index of the 1:n relation pointing to TcpIp_TcpRxBuffer
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(TcpIp_TcpRxBufferDescType, TCPIP_CONST) TcpIp_TcpRxBufferDesc[2];
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TcpTxBufferDesc
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_TcpTxBufferDesc
+  \brief  TCP TX buffer descriptors
+  \details
+  Element                Description
+  TcpTxBufferEndIdx      the end index of the 1:n relation pointing to TcpIp_TcpTxBuffer
+  TcpTxBufferStartIdx    the start index of the 1:n relation pointing to TcpIp_TcpTxBuffer
+*/ 
+#define TCPIP_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(TcpIp_TcpTxBufferDescType, TCPIP_CONST) TcpIp_TcpTxBufferDesc[2];
+#define TCPIP_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   TcpIp_UnicastAddrV4
 **********************************************************************************************************************/
 /** 
@@ -3330,7 +4466,7 @@ extern CONST(TcpIp_SocketOwnerConfigType, TCPIP_CONST) TcpIp_SocketOwnerConfig[1
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(TcpIp_UnicastAddrV4Type, TCPIP_CONST) TcpIp_UnicastAddrV4[1];
+extern CONST(TcpIp_UnicastAddrV4Type, TCPIP_CONST) TcpIp_UnicastAddrV4[2];
 #define TCPIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3379,6 +4515,54 @@ extern VAR(TcpIp_ArpTableEntryUType, TCPIP_VAR_NOINIT) TcpIp_ArpTableEntry;  /* 
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(TcpIp_Buf2TxReqMapUType, TCPIP_VAR_NOINIT) TcpIp_Buf2TxReqMap;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_DhcpHostname
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_DhcpHostname
+  \brief  -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_DhcpHostnameUType, TCPIP_VAR_NOINIT) TcpIp_DhcpHostname;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define TCPIP_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_DhcpStatus
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_DhcpStatus
+  \brief  -
+  \details
+  Element             Description
+  SecNextEvent        -
+  SecNextInterval     -
+  SecTimer            -
+  LastDiscoverSecs    SECS-field used in last DISCOVER message.
+  MsTimer             -
+  SecElapsed          -
+  CtrlState           -
+  HostNameLen         -
+  RetryCounter        -
+  TimeoutOccurred     -
+  DataStruct          -
+  ReqIpAddr           IP address that shall be requested in DHCPDISCOVER
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_DhcpStatusUType, TCPIP_VAR_NOINIT) TcpIp_DhcpStatus;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3453,7 +4637,7 @@ extern VAR(TcpIp_IpV4CtrlDynUType, TCPIP_VAR_NOINIT) TcpIp_IpV4CtrlDyn;  /* PRQA
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_IpV4SocketDynUType, TCPIP_VAR_NOINIT) TcpIp_IpV4SocketDyn;  /* PRQA S 0759 */  /* MD_CSL_Union */
+extern VAR(TcpIp_IpV4SocketDynType, TCPIP_VAR_NOINIT) TcpIp_IpV4SocketDyn[8];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3505,6 +4689,114 @@ extern VAR(TcpIp_SocketDynUType, TCPIP_VAR_NOINIT) TcpIp_SocketDyn;  /* PRQA S 0
 /*lint -restore */
 
 /**********************************************************************************************************************
+  TcpIp_SocketTcpDyn
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_SocketTcpDyn
+  \brief  TCP socket specific variables
+  \details
+  Element                              Description
+  FinWait2Timeout                      -
+  IdleTimeoutShort                     -
+  Iss                                  -
+  MslTimeout                           -
+  RcvNxt                               -
+  RetransmitTimeout                    -
+  RtoReloadValue                       -
+  SndNxt                               -
+  SndUna                               -
+  SndWl1                               -
+  SndWl2                               -
+  TxNextSendSeqNo                      -
+  TxReqSeqNo                           Sequence number of first pending TX request.
+  MaxNumListenSockets                  -
+  PathMtuNewSize                       -
+  RcvWnd                               -
+  SndWnd                               -
+  TxMaxSegLenByte                      -
+  TxMssAgreed                          Maximum segment size agreed during connection setup
+  EventIndicationPending               Varibale contains the pending events that have to be forwarded to the socket user
+  PathMtuChanged                       -
+  RetryQFillNum                        -
+  RstReceived                          -
+  SendLastHsAck                        Flag to indicate if the next ACK is the last of the handshake
+  SockIsServer                         -
+  SockState                            -
+  SockStateNext                        -
+  SocketTcpDynMasterListenSocketIdx    the index of the 0:1 relation pointing to TcpIp_SocketTcpDyn
+  TcpRetryQElementFirstIdx             the index of the 0:1 relation pointing to TcpIp_TcpRetryQElement
+  TcpRetryQElementLastIdx              the index of the 0:1 relation pointing to TcpIp_TcpRetryQElement
+  TcpRxBufferDescIdx                   the index of the 0:1 relation pointing to TcpIp_TcpRxBufferDesc
+  TcpTxBufferDescIdx                   the index of the 0:1 relation pointing to TcpIp_TcpTxBufferDesc
+  TxFlags                              -
+  TxOneTimeOpts                        -
+  TxOneTimeOptsLen                     -
+  TxOptLen                             -
+  TxReqFullyQueued                     all unqueued data from this request is used within the next segment
+  BackLogArray                         -
+  RequestedRxBufferSize                -
+  RequestedTxBufferSize                -
+  RxBufferIndPos                       -
+  RxBufferRemIndLen                    -
+  TxLenByteTx                          -
+  TxReqDataBufStartIdx                 byte position inside the TxBuffer
+  TxReqDataLenByte                     length of data to be transmitted
+  TxReqQueuedLen                       length of data that could already be queued for transmission
+  TxTotNotQueuedLen                    -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern volatile VAR(TcpIp_SocketTcpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpDyn[3];
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_SocketTcpNagleDyn
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_SocketTcpNagleDyn
+  \brief  Manages the state of nagle's algorithm
+  \details
+  Element    Description
+  Enabled    -
+  Timeout    -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_SocketTcpNagleDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpNagleDyn[3];
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_SocketTcpOooDyn
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_SocketTcpOooDyn
+  \brief  Manages the state of TCP segments that arrive out of order
+  \details
+  Element                   Description
+  TcpOooQElementFirstIdx    the index of the 0:1 relation pointing to TcpIp_TcpOooQElement
+  TcpOooQFillNum            -
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_SocketTcpOooDynType, TCPIP_VAR_NOINIT) TcpIp_SocketTcpOooDyn[3];
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   TcpIp_SocketUdpDyn
 **********************************************************************************************************************/
 /** 
@@ -3522,7 +4814,7 @@ extern VAR(TcpIp_SocketDynUType, TCPIP_VAR_NOINIT) TcpIp_SocketDyn;  /* PRQA S 0
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(TcpIp_SocketUdpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketUdpDyn[1];
+extern VAR(TcpIp_SocketUdpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketUdpDyn[2];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3545,6 +4837,121 @@ extern VAR(TcpIp_SocketUdpDynType, TCPIP_VAR_NOINIT) TcpIp_SocketUdpDyn[1];
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(TcpIp_StaticUnicastAddrV4RequestedUType, TCPIP_VAR_NOINIT) TcpIp_StaticUnicastAddrV4Requested;  /* PRQA S 0777, 0759 */  /* MD_MSR_Rule5.1, MD_CSL_Union */
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TcpOooQElement
+**********************************************************************************************************************/
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_Tcp_RxPreBufEleType, TCPIP_VAR_NOINIT) TcpIp_TcpOooQElement[15];
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TcpResetQElement
+**********************************************************************************************************************/
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_Tcp_RstTxQueueType, TCPIP_VAR_NOINIT) TcpIp_TcpResetQElement[8];
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TcpRetryQElement
+**********************************************************************************************************************/
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_Tcp_TxRetrQueueType, TCPIP_VAR_NOINIT) TcpIp_TcpRetryQElement[30];
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TcpRxBuffer
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_TcpRxBuffer
+  \brief  TCP TX buffers
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_TcpRxBufferUType, TCPIP_VAR_NOINIT) TcpIp_TcpRxBuffer;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define TCPIP_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TcpRxBufferDescDyn
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_TcpRxBufferDescDyn
+  \details
+  Element                Description
+  TcpRxBufferWriteIdx    the index of the 1:1 relation pointing to TcpIp_TcpRxBuffer
+  SocketTcpDynIdx        the index of the 0:1 relation pointing to TcpIp_SocketTcpDyn
+  FillLevel          
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_TcpRxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpRxBufferDescDyn[2];
+#define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TcpTxBuffer
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_TcpTxBuffer
+  \brief  TCP TX buffers
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_TcpTxBufferUType, TCPIP_VAR_NOINIT) TcpIp_TcpTxBuffer;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define TCPIP_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  TcpIp_TcpTxBufferDescDyn
+**********************************************************************************************************************/
+/** 
+  \var    TcpIp_TcpTxBufferDescDyn
+  \details
+  Element                Description
+  TcpTxBufferWriteIdx    the index of the 1:1 relation pointing to TcpIp_TcpTxBuffer
+  SocketTcpDynIdx        the index of the 0:1 relation pointing to TcpIp_SocketTcpDyn
+  FillLevel          
+*/ 
+#define TCPIP_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(TcpIp_TcpTxBufferDescDynType, TCPIP_VAR_NOINIT) TcpIp_TcpTxBufferDescDyn[2];
 #define TCPIP_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3628,6 +5035,7 @@ extern VAR(TcpIp_DListDescType, TCPIP_VAR_NOINIT) TcpIp_UdpTxRetryQueuePoolDesc[
   StaticArpEntry                        the pointer to TcpIp_StaticArpEntry
   StaticArpTable                        the pointer to TcpIp_StaticArpTable
   StaticUnicastAddrV4Requested          the pointer to TcpIp_StaticUnicastAddrV4Requested
+  TcpOooQElement                        the pointer to TcpIp_TcpOooQElement
   TxReqElem                             the pointer to TcpIp_TxReqElem
   TxReqElemList                         the pointer to TcpIp_TxReqElemList
   TxReqElemListDyn                      the pointer to TcpIp_TxReqElemListDyn
@@ -3652,6 +5060,7 @@ extern VAR(TcpIp_DListDescType, TCPIP_VAR_NOINIT) TcpIp_UdpTxRetryQueuePoolDesc[
   SizeOfStaticArpEntry                  the number of accomplishable value elements in TcpIp_StaticArpEntry
   SizeOfStaticArpTable                  the number of accomplishable value elements in TcpIp_StaticArpTable
   SizeOfStaticUnicastAddrV4Requested    the number of accomplishable value elements in TcpIp_StaticUnicastAddrV4Requested
+  SizeOfTcpOooQElement                  the number of accomplishable value elements in TcpIp_TcpOooQElement
   SizeOfTxReqElem                       the number of accomplishable value elements in TcpIp_TxReqElem
   SizeOfTxReqElemList                   the number of accomplishable value elements in TcpIp_TxReqElemList
   SizeOfUdpTxRetryQueueElementChain     the number of accomplishable value elements in TcpIp_UdpTxRetryQueueElementChain
@@ -3728,6 +5137,32 @@ TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetAddrOfDefault
 TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetDefGwAddrOfDefaultUnicastAddrV4(TcpIp_DefaultUnicastAddrV4IterType Index);
 TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetAddrOfDefaultUnicastAddrV4(TcpIp_DefaultUnicastAddrV4IterType Index);
 TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetMaskOfDefaultUnicastAddrV4(TcpIp_DefaultUnicastAddrV4IterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverIntervalMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverIntervalMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverMaxNumOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverMaxNumOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HostNameLenMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetHostNameLenMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_InitWaitMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetInitWaitMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_InitWaitMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetInitWaitMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RebindIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRebindIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RenewIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRenewIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(IpV4_DhcpV4RequestedAddrCalloutFuncType, TCPIP_CODE) TcpIp_GetReqAddrCalloutFuncOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RequestIntervalOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRequestIntervalOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RequestMaxNumOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRequestMaxNumOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RestartOnFailOfDhcpConfigType, TCPIP_CODE) TcpIp_IsRestartOnFailOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RxReqOptionCntOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRxReqOptionCntOfDhcpConfig(TcpIp_DhcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameType, TCPIP_CODE) TcpIp_GetDhcpHostname(TcpIp_DhcpHostnameIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_CtrlStateOfDhcpStatusType, TCPIP_CODE) TcpIp_GetCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpV4_DataStructType, TCPIP_CODE) TcpIp_GetDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HostNameLenOfDhcpStatusType, TCPIP_CODE) TcpIp_GetHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LastDiscoverSecsOfDhcpStatusType, TCPIP_CODE) TcpIp_GetLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MsTimerOfDhcpStatusType, TCPIP_CODE) TcpIp_GetMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetReqIpAddrOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetryCounterOfDhcpStatusType, TCPIP_CODE) TcpIp_GetRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecElapsedOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecNextEventOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecNextIntervalOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecTimerOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TimeoutOccurredOfDhcpStatusType, TCPIP_CODE) TcpIp_IsTimeoutOccurredOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_CodeOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetCodeOfDhcpUserOption(TcpIp_DhcpUserOptionIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionBufferEndIdxOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetDhcpUserOptionBufferEndIdxOfDhcpUserOption(TcpIp_DhcpUserOptionIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionBufferLengthOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetDhcpUserOptionBufferLengthOfDhcpUserOption(TcpIp_DhcpUserOptionIterType Index);
@@ -3760,6 +5195,8 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_Buf2TxReqMapEndIdxOfIpV4CtrlType, TCPIP_CODE) TcpI
 TCPIP_LOCAL_INLINE FUNC(TcpIp_Buf2TxReqMapStartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetBuf2TxReqMapStartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DefaultTtlOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDefaultTtlOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpConfigIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpConfigIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameEndIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpHostnameEndIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameStartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpHostnameStartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpStatusIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpStatusIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionEndIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpUserOptionEndIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionStartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpUserOptionStartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
@@ -3773,6 +5210,7 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumTcpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsH
 TCPIP_LOCAL_INLINE FUNC(TcpIp_HwChecksumUdpOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsHwChecksumUdpOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLlAddrStateIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4BroadcastIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4DhcpIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4DhcpIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4UnicastIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4UnicastIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MaxTxMsgSizeOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetMaxTxMsgSizeOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MtuTxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetMtuTxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
@@ -3793,8 +5231,8 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_PhysLinkActiveOfIpV4CtrlDynType, TCPIP_CODE) TcpIp
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StateOfIpV4CtrlDynType, TCPIP_CODE) TcpIp_GetStateOfIpV4CtrlDyn(TcpIp_IpV4CtrlDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4CtrlDefaultIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4CtrlDefaultIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynDhcpIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynIcmpIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynTcpRstIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ArpTableEntryIdxOfIpV4SocketDynType, TCPIP_CODE) TcpIp_GetArpTableEntryIdxOfIpV4SocketDyn(TcpIp_IpV4SocketDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_EthIfFramePrioOfIpV4SocketDynType, TCPIP_CODE) TcpIp_GetEthIfFramePrioOfIpV4SocketDyn(TcpIp_IpV4SocketDynIterType Index);
@@ -3851,6 +5289,57 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketOwnerTcpConnectedType, TCPIP_CODE) TcpIp_Get
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketOwnerTcpIpEventType, TCPIP_CODE) TcpIp_GetTcpIpEventFuncPtrOfSocketOwnerConfig(TcpIp_SocketOwnerConfigIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketOwnerTlsValidationResultType, TCPIP_CODE) TcpIp_GetTlsValidationResultFuncPtrOfSocketOwnerConfig(TcpIp_SocketOwnerConfigIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketOwnerTxConfirmationType, TCPIP_CODE) TcpIp_GetTxConfirmationFuncPtrOfSocketOwnerConfig(TcpIp_SocketOwnerConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_Tcp_BackLogEleType, TCPIP_CODE) TcpIp_GetBackLogArrayOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_EventIndicationPendingOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_FinWait2TimeoutOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IdleTimeoutShortOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IssOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MaxNumListenSocketsOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MslTimeoutOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_PathMtuChangedOfSocketTcpDynType, TCPIP_CODE) TcpIp_IsPathMtuChangedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_PathMtuNewSizeOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RcvNxtOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RcvWndOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferType, TCPIP_CODE) TcpIp_GetRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetransmitTimeoutOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetryQFillNumOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RstReceivedOfSocketTcpDynType, TCPIP_CODE) TcpIp_IsRstReceivedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RtoReloadValueOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferType, TCPIP_CODE) TcpIp_GetRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferType, TCPIP_CODE) TcpIp_GetRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SendLastHsAckOfSocketTcpDynType, TCPIP_CODE) TcpIp_IsSendLastHsAckOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SndNxtOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SndUnaOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SndWl1OfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SndWl2OfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SndWndOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SockIsServerOfSocketTcpDynType, TCPIP_CODE) TcpIp_IsSockIsServerOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SockStateNextOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SockStateOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxFlagsOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxMaxSegLenByteOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxMssAgreedOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxNextSendSeqNoOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxOneTimeOptsLenOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxOneTimeOptsOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxOptLenOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxReqFullyQueuedOfSocketTcpDynType, TCPIP_CODE) TcpIp_IsTxReqFullyQueuedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxReqSeqNoOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_EnabledOfSocketTcpNagleDynType, TCPIP_CODE) TcpIp_IsEnabledOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TimeoutOfSocketTcpNagleDynType, TCPIP_CODE) TcpIp_GetTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType, TCPIP_CODE) TcpIp_GetTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpOooQFillNumOfSocketTcpOooDynType, TCPIP_CODE) TcpIp_GetTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpTxRequestDescriptorType, TCPIP_CODE) TcpIp_GetIpTxRequestDescriptorOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_TxReqElemListIdxOfSocketUdpDynType, TCPIP_CODE) TcpIp_GetTxReqElemListIdxOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(P2VAR(uint8, AUTOMATIC, IPV4_APPL_VAR), TCPIP_CODE) TcpIp_GetTxReqIpBufPtrOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index);
@@ -3863,6 +5352,38 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpEntryStartIdxOfStaticArpTableType, TCPIP_
 TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetDefGwAddrOfStaticUnicastAddrV4Requested(TcpIp_StaticUnicastAddrV4RequestedIterType Index);
 TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetAddrOfStaticUnicastAddrV4Requested(TcpIp_StaticUnicastAddrV4RequestedIterType Index);
 TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetMaskOfStaticUnicastAddrV4Requested(TcpIp_StaticUnicastAddrV4RequestedIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_FinWait2TimeoutOfTcpConfigType, TCPIP_CODE) TcpIp_GetFinWait2TimeoutOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_KeepAliveIntervalOfTcpConfigType, TCPIP_CODE) TcpIp_GetKeepAliveIntervalOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_KeepAliveProbesMaxOfTcpConfigType, TCPIP_CODE) TcpIp_GetKeepAliveProbesMaxOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_KeepAliveTimeOfTcpConfigType, TCPIP_CODE) TcpIp_GetKeepAliveTimeOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MslOfTcpConfigType, TCPIP_CODE) TcpIp_GetMslOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_NagleTimeoutOfTcpConfigType, TCPIP_CODE) TcpIp_GetNagleTimeoutOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetransTimeoutMaxOfTcpConfigType, TCPIP_CODE) TcpIp_GetRetransTimeoutMaxOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetransTimeoutOfTcpConfigType, TCPIP_CODE) TcpIp_GetRetransTimeoutOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RxMssOfTcpConfigType, TCPIP_CODE) TcpIp_GetRxMssOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpOooQSizePerSocketAvgOfTcpConfigType, TCPIP_CODE) TcpIp_GetTcpOooQSizePerSocketAvgOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpOooQSizePerSocketMaxOfTcpConfigType, TCPIP_CODE) TcpIp_GetTcpOooQSizePerSocketMaxOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRetryQSizeOfTcpConfigType, TCPIP_CODE) TcpIp_GetTcpRetryQSizeOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TimeToLiveDefaultOfTcpConfigType, TCPIP_CODE) TcpIp_GetTimeToLiveDefaultOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxMssOfTcpConfigType, TCPIP_CODE) TcpIp_GetTxMssOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_UserTimeoutDefCyclesOfTcpConfigType, TCPIP_CODE) TcpIp_GetUserTimeoutDefCyclesOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_UserTimeoutMaxCyclesOfTcpConfigType, TCPIP_CODE) TcpIp_GetUserTimeoutMaxCyclesOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_UserTimeoutMinCyclesOfTcpConfigType, TCPIP_CODE) TcpIp_GetUserTimeoutMinCyclesOfTcpConfig(TcpIp_TcpConfigIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_Tcp_RxPreBufEleType, TCPIP_CODE) TcpIp_GetTcpOooQElement(TcpIp_TcpOooQElementIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_Tcp_RstTxQueueType, TCPIP_CODE) TcpIp_GetTcpResetQElement(TcpIp_TcpResetQElementIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_Tcp_TxRetrQueueType, TCPIP_CODE) TcpIp_GetTcpRetryQElement(TcpIp_TcpRetryQElementIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferType, TCPIP_CODE) TcpIp_GetTcpRxBuffer(TcpIp_TcpRxBufferIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferEndIdxOfTcpRxBufferDescType, TCPIP_CODE) TcpIp_GetTcpRxBufferEndIdxOfTcpRxBufferDesc(TcpIp_TcpRxBufferDescIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferStartIdxOfTcpRxBufferDescType, TCPIP_CODE) TcpIp_GetTcpRxBufferStartIdxOfTcpRxBufferDesc(TcpIp_TcpRxBufferDescIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferType, TCPIP_CODE) TcpIp_GetFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType, TCPIP_CODE) TcpIp_GetSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType, TCPIP_CODE) TcpIp_GetTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferType, TCPIP_CODE) TcpIp_GetTcpTxBuffer(TcpIp_TcpTxBufferIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferEndIdxOfTcpTxBufferDescType, TCPIP_CODE) TcpIp_GetTcpTxBufferEndIdxOfTcpTxBufferDesc(TcpIp_TcpTxBufferDescIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferStartIdxOfTcpTxBufferDescType, TCPIP_CODE) TcpIp_GetTcpTxBufferStartIdxOfTcpTxBufferDesc(TcpIp_TcpTxBufferDescIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType, TCPIP_CODE) TcpIp_GetSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType, TCPIP_CODE) TcpIp_GetTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_TxReqElemDataLenByteOfTxReqElemType, TCPIP_CODE) TcpIp_GetTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_TxReqElemTransmittedOfTxReqElemType, TCPIP_CODE) TcpIp_IsTxReqElemTransmittedOfTxReqElem(TcpIp_TxReqElemIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_TxReqElemEndIdxOfTxReqElemListType, TCPIP_CODE) TcpIp_GetTxReqElemEndIdxOfTxReqElemList(TcpIp_TxReqElemListIterType Index);
@@ -3901,15 +5422,17 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_InOrderReassemblyOfFragmentationConfigType, TCPIP_
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ArpConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsArpConfigUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_ArpTableEntryUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsArpTableEntryUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpConfigUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpHostnameUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpStatusUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpStatusUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpUserOptionUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_FragmentationConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsFragmentationConfigUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_GratuitousArpUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsGratuitousArpUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsLlAddrStateUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4DhcpUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsLocalAddrV4DhcpUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpTableUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsStaticArpTableUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4CtrlDefaultUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
-TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynTcpRstUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfLocalAddrV4Type, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfLocalAddrV4(TcpIp_LocalAddrV4IterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_UnicastAddrV4UsedOfLocalAddrV4Type, TCPIP_CODE) TcpIp_IsUnicastAddrV4UsedOfLocalAddrV4(TcpIp_LocalAddrV4IterType Index);
@@ -3920,6 +5443,9 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfAutoIpConfigType, TCPIP_CODE) TcpIp_GetSizeO
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfBuf2TxReqMapType, TCPIP_CODE) TcpIp_GetSizeOfBuf2TxReqMap(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDefaultMulticastAddrV4Type, TCPIP_CODE) TcpIp_GetSizeOfDefaultMulticastAddrV4(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDefaultUnicastAddrV4Type, TCPIP_CODE) TcpIp_GetSizeOfDefaultUnicastAddrV4(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpConfigType, TCPIP_CODE) TcpIp_GetSizeOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpHostnameType, TCPIP_CODE) TcpIp_GetSizeOfDhcpHostname(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSizeOfDhcpStatus(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetSizeOfDhcpUserOption(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpUserOptionBufferType, TCPIP_CODE) TcpIp_GetSizeOfDhcpUserOptionBuffer(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpUserOptionDynType, TCPIP_CODE) TcpIp_GetSizeOfDhcpUserOptionDyn(void);
@@ -3943,10 +5469,23 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfReassemblyBufferDescType, TCPIP_CODE) TcpIp_
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfReassemblyBufferDescDynType, TCPIP_CODE) TcpIp_GetSizeOfReassemblyBufferDescDyn(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketDynType, TCPIP_CODE) TcpIp_GetSizeOfSocketDyn(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketOwnerConfigType, TCPIP_CODE) TcpIp_GetSizeOfSocketOwnerConfig(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSizeOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketTcpNagleDynType, TCPIP_CODE) TcpIp_GetSizeOfSocketTcpNagleDyn(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketTcpOooDynType, TCPIP_CODE) TcpIp_GetSizeOfSocketTcpOooDyn(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketUdpDynType, TCPIP_CODE) TcpIp_GetSizeOfSocketUdpDyn(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfStaticArpEntryType, TCPIP_CODE) TcpIp_GetSizeOfStaticArpEntry(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfStaticArpTableType, TCPIP_CODE) TcpIp_GetSizeOfStaticArpTable(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfStaticUnicastAddrV4RequestedType, TCPIP_CODE) TcpIp_GetSizeOfStaticUnicastAddrV4Requested(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpConfigType, TCPIP_CODE) TcpIp_GetSizeOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpOooQElementType, TCPIP_CODE) TcpIp_GetSizeOfTcpOooQElement(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpResetQElementType, TCPIP_CODE) TcpIp_GetSizeOfTcpResetQElement(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRetryQElementType, TCPIP_CODE) TcpIp_GetSizeOfTcpRetryQElement(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferType, TCPIP_CODE) TcpIp_GetSizeOfTcpRxBuffer(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferDescType, TCPIP_CODE) TcpIp_GetSizeOfTcpRxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferDescDynType, TCPIP_CODE) TcpIp_GetSizeOfTcpRxBufferDescDyn(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetSizeOfTcpTxBuffer(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferDescType, TCPIP_CODE) TcpIp_GetSizeOfTcpTxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferDescDynType, TCPIP_CODE) TcpIp_GetSizeOfTcpTxBufferDescDyn(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTxReqElemType, TCPIP_CODE) TcpIp_GetSizeOfTxReqElem(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTxReqElemListType, TCPIP_CODE) TcpIp_GetSizeOfTxReqElemList(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTxReqElemListDynType, TCPIP_CODE) TcpIp_GetSizeOfTxReqElemListDyn(void);
@@ -3954,6 +5493,8 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfUdpTxRetryQueueElementChainType, TCPIP_CODE)
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfUdpTxRetryQueueElementsType, TCPIP_CODE) TcpIp_GetSizeOfUdpTxRetryQueueElements(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfUdpTxRetryQueuePoolDescType, TCPIP_CODE) TcpIp_GetSizeOfUdpTxRetryQueuePoolDesc(void);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfUnicastAddrV4Type, TCPIP_CODE) TcpIp_GetSizeOfUnicastAddrV4(void);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferLengthOfTcpRxBufferDescType, TCPIP_CODE) TcpIp_GetTcpRxBufferLengthOfTcpRxBufferDesc(TcpIp_TcpRxBufferDescIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferLengthOfTcpTxBufferDescType, TCPIP_CODE) TcpIp_GetTcpTxBufferLengthOfTcpTxBufferDesc(TcpIp_TcpTxBufferDescIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DefaultUnicastAddrV4UsedOfUnicastAddrV4Type, TCPIP_CODE) TcpIp_IsDefaultUnicastAddrV4UsedOfUnicastAddrV4(TcpIp_UnicastAddrV4IterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticUnicastAddrV4RequestedUsedOfUnicastAddrV4Type, TCPIP_CODE) TcpIp_IsStaticUnicastAddrV4RequestedUsedOfUnicastAddrV4(TcpIp_UnicastAddrV4IterType Index);
 /** 
@@ -3985,6 +5526,19 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetEthBufLenOfBuf2TxReqMap(TcpIp
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetEthBufPtrOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, P2VAR(uint8, AUTOMATIC, IPV4_APPL_VAR) Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketDynIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_SocketDynIdxOfBuf2TxReqMapType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_DhcpV4_DataStructType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetReqIpAddrOfDhcpStatus(TcpIp_DhcpStatusIterType Index, IpBase_AddrInType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTimeoutOccurredOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_TimeoutOccurredOfDhcpStatusType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index, TcpIp_LengthOfDhcpUserOptionDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_NextTransmissionMsOfGratuitousArpType Value);
@@ -4034,6 +5588,57 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRemSockOfSocketDyn(TcpIp_Sock
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketOwnerConfigIdxOfSocketDyn(TcpIp_SocketDynIterType Index, TcpIp_SocketOwnerConfigIdxOfSocketDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxBufRequestedOfSocketDyn(TcpIp_SocketDynIterType Index, TcpIp_TxBufRequestedOfSocketDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxIpAddrIdxOfSocketDyn(TcpIp_SocketDynIterType Index, TcpIp_TxIpAddrIdxOfSocketDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetBackLogArrayOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_Tcp_BackLogEleType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_EventIndicationPendingOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_FinWait2TimeoutOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IdleTimeoutShortOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IssOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MaxNumListenSocketsOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MslTimeoutOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetPathMtuChangedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_PathMtuChangedOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_PathMtuNewSizeOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvNxtOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvWndOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetransmitTimeoutOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetryQFillNumOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRstReceivedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RstReceivedOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RtoReloadValueOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSendLastHsAckOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SendLastHsAckOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndNxtOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndUnaOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl1OfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl2OfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWndOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSockIsServerOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockIsServerOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateNextOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxFlagsOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMaxSegLenByteOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMssAgreedOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxNextSendSeqNoOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsLenOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOptLenOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqFullyQueuedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxReqFullyQueuedOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxReqSeqNoOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetEnabledOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index, TcpIp_EnabledOfSocketTcpNagleDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index, TcpIp_TimeoutOfSocketTcpNagleDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQFillNumOfSocketTcpOooDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetIpTxRequestDescriptorOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_IpTxRequestDescriptorType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqElemListIdxOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_TxReqElemListIdxOfSocketUdpDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqIpBufPtrOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, P2VAR(uint8, AUTOMATIC, IPV4_APPL_VAR) Value);
@@ -4042,6 +5647,17 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxRetrQueueOfSocketUdpDyn(Tcp
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDefGwAddrOfStaticUnicastAddrV4Requested(TcpIp_StaticUnicastAddrV4RequestedIterType Index, IpBase_AddrInType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetNetAddrOfStaticUnicastAddrV4Requested(TcpIp_StaticUnicastAddrV4RequestedIterType Index, IpBase_AddrInType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetNetMaskOfStaticUnicastAddrV4Requested(TcpIp_StaticUnicastAddrV4RequestedIterType Index, IpBase_AddrInType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpOooQElement(TcpIp_TcpOooQElementIterType Index, TcpIp_Tcp_RxPreBufEleType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpResetQElement(TcpIp_TcpResetQElementIterType Index, TcpIp_Tcp_RstTxQueueType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRetryQElement(TcpIp_TcpRetryQElementIterType Index, TcpIp_Tcp_TxRetrQueueType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRxBuffer(TcpIp_TcpRxBufferIterType Index, TcpIp_TcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpTxBuffer(TcpIp_TcpTxBufferIterType Index, TcpIp_TcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index, TcpIp_TxReqElemDataLenByteOfTxReqElemType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqElemTransmittedOfTxReqElem(TcpIp_TxReqElemIterType Index, TcpIp_TxReqElemTransmittedOfTxReqElemType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetFillNumOfTxReqElemListDyn(TcpIp_TxReqElemListDynIterType Index, TcpIp_FillNumOfTxReqElemListDynType Value);
@@ -4071,6 +5687,8 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetUdpTxRetryQueuePoolDesc(TcpIp
   \{
 */ 
 TCPIP_LOCAL_INLINE FUNC(TcpIp_PhysAddrOfArpTableEntryPtrType, TCPIP_CODE) TcpIp_GetAddrPhysAddrOfArpTableEntry(TcpIp_ArpTableEntryIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnamePtrType, TCPIP_CODE) TcpIp_GetAddrDhcpHostname(TcpIp_DhcpHostnameIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DataStructOfDhcpStatusPtrType, TCPIP_CODE) TcpIp_GetAddrDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionBufferPtrType, TCPIP_CODE) TcpIp_GetAddrDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IcmpEchoReplyDataPtrType, TCPIP_CODE) TcpIp_GetAddrIcmpEchoReplyData(TcpIp_IcmpEchoReplyDataIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocSockOfIpV4SocketDynPtrType, TCPIP_CODE) TcpIp_GetAddrLocSockOfIpV4SocketDyn(TcpIp_IpV4SocketDynIterType Index);
@@ -4082,6 +5700,11 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_RemSockOfSocketDynPtrType, TCPIP_CODE) TcpIp_GetAd
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpTxRequestDescriptorOfSocketUdpDynPtrType, TCPIP_CODE) TcpIp_GetAddrIpTxRequestDescriptorOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_TxRetrQueueOfSocketUdpDynPtrType, TCPIP_CODE) TcpIp_GetAddrTxRetrQueueOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_PhysAddrOfStaticArpEntryPtrType, TCPIP_CODE) TcpIp_GetAddrPhysAddrOfStaticArpEntry(TcpIp_StaticArpEntryIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpOooQElementPtrType, TCPIP_CODE) TcpIp_GetAddrTcpOooQElement(TcpIp_TcpOooQElementIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpResetQElementPtrType, TCPIP_CODE) TcpIp_GetAddrTcpResetQElement(TcpIp_TcpResetQElementIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRetryQElementPtrType, TCPIP_CODE) TcpIp_GetAddrTcpRetryQElement(TcpIp_TcpRetryQElementIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferPtrType, TCPIP_CODE) TcpIp_GetAddrTcpRxBuffer(TcpIp_TcpRxBufferIterType Index);
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferPtrType, TCPIP_CODE) TcpIp_GetAddrTcpTxBuffer(TcpIp_TcpTxBufferIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_UdpTxRetryQueueElementChainPtrType, TCPIP_CODE) TcpIp_GetAddrUdpTxRetryQueueElementChain(TcpIp_UdpTxRetryQueueElementChainIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_UdpTxRetryQueueElementsPtrType, TCPIP_CODE) TcpIp_GetAddrUdpTxRetryQueueElements(TcpIp_UdpTxRetryQueueElementsIterType Index);
 TCPIP_LOCAL_INLINE FUNC(TcpIp_UdpTxRetryQueuePoolDescPtrType, TCPIP_CODE) TcpIp_GetAddrUdpTxRetryQueuePoolDesc(TcpIp_UdpTxRetryQueuePoolDescIterType Index);
@@ -4144,6 +5767,34 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultUnicastAddrV4(void)
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefGwAddrOfDefaultUnicastAddrV4(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNetAddrOfDefaultUnicastAddrV4(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNetMaskOfDefaultUnicastAddrV4(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverIntervalMaxOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverIntervalMinOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverMaxNumOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasHostNameLenMaxOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasInitWaitMaxOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasInitWaitMinOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRebindIntervalMinOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRenewIntervalMinOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasReqAddrCalloutFuncOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestIntervalOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestMaxNumOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRestartOnFailOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRxReqOptionCntOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostname(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasCtrlStateOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDataStructOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasHostNameLenOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLastDiscoverSecsOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMsTimerOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasReqIpAddrOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetryCounterOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecElapsedOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecNextEventOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecNextIntervalOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecTimerOfDhcpStatus(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTimeoutOccurredOfDhcpStatus(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOption(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasCodeOfDhcpUserOption(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionBufferEndIdxOfDhcpUserOption(void);
@@ -4188,6 +5839,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasBuf2TxReqMapStartIdxOfIpV4
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultTtlOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfigIdxOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfigUsedOfIpV4Ctrl(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameEndIdxOfIpV4Ctrl(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameStartIdxOfIpV4Ctrl(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameUsedOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatusIdxOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatusUsedOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionEndIdxOfIpV4Ctrl(void);
@@ -4206,6 +5860,8 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasHwChecksumUdpOfIpV4Ctrl(vo
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLlAddrStateIdxOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLlAddrStateUsedOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4BroadcastIdxOfIpV4Ctrl(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4DhcpIdxOfIpV4Ctrl(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4DhcpUsedOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4UnicastIdxOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMaxTxMsgSizeOfIpV4Ctrl(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMtuTxOfIpV4Ctrl(void);
@@ -4291,6 +5947,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfAutoIpConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfBuf2TxReqMap(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultMulticastAddrV4(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultUnicastAddrV4(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpHostname(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpStatus(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOption(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionBuffer(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionDyn(void);
@@ -4314,10 +5973,23 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfReassemblyBufferDesc
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfReassemblyBufferDescDyn(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketDyn(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketOwnerConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpNagleDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpOooDyn(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketUdpDyn(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfStaticArpEntry(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfStaticArpTable(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfStaticUnicastAddrV4Requested(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpOooQElement(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpResetQElement(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRetryQElement(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBuffer(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBufferDescDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBuffer(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBufferDescDyn(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTxReqElem(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTxReqElemList(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTxReqElemListDyn(void);
@@ -4344,6 +6016,60 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpConnectedFuncPtrOfSocke
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpIpEventFuncPtrOfSocketOwnerConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTlsValidationResultFuncPtrOfSocketOwnerConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxConfirmationFuncPtrOfSocketOwnerConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasBackLogArrayOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasEventIndicationPendingOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasFinWait2TimeoutOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIdleTimeoutShortOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIssOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMaxNumListenSocketsOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMslTimeoutOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasPathMtuChangedOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasPathMtuNewSizeOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRcvNxtOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRcvWndOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestedRxBufferSizeOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestedTxBufferSizeOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetransmitTimeoutOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetryQFillNumOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRstReceivedOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRtoReloadValueOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRxBufferIndPosOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRxBufferRemIndLenOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSendLastHsAckOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSndNxtOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSndUnaOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSndWl1OfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSndWl2OfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSndWndOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSockIsServerOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSockStateNextOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSockStateOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRetryQElementFirstIdxOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRetryQElementLastIdxOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferDescIdxOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferDescIdxOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxFlagsOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxLenByteTxOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxMaxSegLenByteOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxMssAgreedOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxNextSendSeqNoOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxOneTimeOptsLenOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxOneTimeOptsOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxOptLenOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqDataBufStartIdxOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqDataLenByteOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqFullyQueuedOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqQueuedLenOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqSeqNoOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxTotNotQueuedLenOfSocketTcpDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpNagleDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasEnabledOfSocketTcpNagleDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTimeoutOfSocketTcpNagleDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpOooDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQElementFirstIdxOfSocketTcpOooDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQFillNumOfSocketTcpOooDyn(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketUdpDyn(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIpTxRequestDescriptorOfSocketUdpDyn(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqElemListIdxOfSocketUdpDyn(void);
@@ -4360,6 +6086,45 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasStaticUnicastAddrV4Request
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefGwAddrOfStaticUnicastAddrV4Requested(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNetAddrOfStaticUnicastAddrV4Requested(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNetMaskOfStaticUnicastAddrV4Requested(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasFinWait2TimeoutOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasKeepAliveIntervalOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasKeepAliveProbesMaxOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasKeepAliveTimeOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMslOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNagleTimeoutOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetransTimeoutMaxOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetransTimeoutOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRxMssOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQSizePerSocketAvgOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQSizePerSocketMaxOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRetryQSizeOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTimeToLiveDefaultOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxMssOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasUserTimeoutDefCyclesOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasUserTimeoutMaxCyclesOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasUserTimeoutMinCyclesOfTcpConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQElement(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpResetQElement(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRetryQElement(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBuffer(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferEndIdxOfTcpRxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferLengthOfTcpRxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferStartIdxOfTcpRxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferDescDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasFillLevelOfTcpRxBufferDescDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpDynIdxOfTcpRxBufferDescDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBuffer(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferEndIdxOfTcpTxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferLengthOfTcpTxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferStartIdxOfTcpTxBufferDesc(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferDescDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasFillLevelOfTcpTxBufferDescDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpDynIdxOfTcpTxBufferDescDyn(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqElem(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqElemDataLenByteOfTxReqElem(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqElemTransmittedOfTxReqElem(void);
@@ -4388,6 +6153,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasAutoIpConfigOfPCConfig(voi
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasBuf2TxReqMapOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultMulticastAddrV4OfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultUnicastAddrV4OfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfigOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatusOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionBufferOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOptionOfPCConfig(void);
@@ -4419,6 +6187,9 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfAutoIpConfigOfPCConf
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfBuf2TxReqMapOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultMulticastAddrV4OfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultUnicastAddrV4OfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpConfigOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpHostnameOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpStatusOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionBufferOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionOfPCConfig(void);
@@ -4442,10 +6213,23 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfReassemblyBufferDesc
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfReassemblyBufferOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketOwnerConfigOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpDynOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpNagleDynOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpOooDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketUdpDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfStaticArpEntryOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfStaticArpTableOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfStaticUnicastAddrV4RequestedOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpConfigOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpOooQElementOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpResetQElementOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRetryQElementOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBufferDescDynOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBufferDescOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBufferOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBufferDescDynOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBufferDescOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBufferOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTxReqElemListDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTxReqElemListOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTxReqElemOfPCConfig(void);
@@ -4455,10 +6239,23 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfUdpTxRetryQueuePoolD
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfUnicastAddrV4OfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketOwnerConfigOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpDynOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpNagleDynOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpOooDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketUdpDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasStaticArpEntryOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasStaticArpTableOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasStaticUnicastAddrV4RequestedOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpConfigOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQElementOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpResetQElementOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRetryQElementOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferDescDynOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferDescOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferDescDynOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferDescOfPCConfig(void);
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqElemListDynOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqElemListOfPCConfig(void);
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqElemOfPCConfig(void);
@@ -4492,6 +6289,16 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncEthBufIdxNextOfBuf2TxReqMap(T
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncEthBufLenOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketDynIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncDhcpHostname(TcpIp_DhcpHostnameIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index);
@@ -4524,8 +6331,60 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncListenActiveConnStatOfSocketD
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncLocalAddrBindIdxOfSocketDyn(TcpIp_SocketDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketOwnerConfigIdxOfSocketDyn(TcpIp_SocketDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxIpAddrIdxOfSocketDyn(TcpIp_SocketDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqElemListIdxOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxRetrQueueMaxNumOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpRxBuffer(TcpIp_TcpRxBufferIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpTxBuffer(TcpIp_TcpTxBufferIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncFillNumOfTxReqElemListDyn(TcpIp_TxReqElemListDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncReadPosOfTxReqElemListDyn(TcpIp_TxReqElemListDynIterType Index);
@@ -4557,6 +6416,16 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecEthBufIdxNextOfBuf2TxReqMap(T
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecEthBufLenOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSocketDynIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecDhcpHostname(TcpIp_DhcpHostnameIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index);
@@ -4589,8 +6458,60 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecListenActiveConnStatOfSocketD
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecLocalAddrBindIdxOfSocketDyn(TcpIp_SocketDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSocketOwnerConfigIdxOfSocketDyn(TcpIp_SocketDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxIpAddrIdxOfSocketDyn(TcpIp_SocketDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqElemListIdxOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxRetrQueueMaxNumOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpRxBuffer(TcpIp_TcpRxBufferIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpTxBuffer(TcpIp_TcpTxBufferIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecFillNumOfTxReqElemListDyn(TcpIp_TxReqElemListDynIterType Index);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecReadPosOfTxReqElemListDyn(TcpIp_TxReqElemListDynIterType Index);
@@ -4622,6 +6543,16 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddEthBufIdxNextOfBuf2TxReqMap(T
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddEthBufLenOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_EthBufLenOfBuf2TxReqMapType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSocketDynIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_SocketDynIdxOfBuf2TxReqMapType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index, TcpIp_LengthOfDhcpUserOptionDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_NextTransmissionMsOfGratuitousArpType Value);
@@ -4654,8 +6585,60 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddListenActiveConnStatOfSocketD
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddLocalAddrBindIdxOfSocketDyn(TcpIp_SocketDynIterType Index, TcpIp_LocalAddrBindIdxOfSocketDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSocketOwnerConfigIdxOfSocketDyn(TcpIp_SocketDynIterType Index, TcpIp_SocketOwnerConfigIdxOfSocketDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxIpAddrIdxOfSocketDyn(TcpIp_SocketDynIterType Index, TcpIp_TxIpAddrIdxOfSocketDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_EventIndicationPendingOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_FinWait2TimeoutOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IdleTimeoutShortOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IssOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MaxNumListenSocketsOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MslTimeoutOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_PathMtuNewSizeOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvNxtOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvWndOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetransmitTimeoutOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetryQFillNumOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RtoReloadValueOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndNxtOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndUnaOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl1OfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl2OfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWndOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateNextOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxFlagsOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMaxSegLenByteOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMssAgreedOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxNextSendSeqNoOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsLenOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOptLenOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxReqSeqNoOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index, TcpIp_TimeoutOfSocketTcpNagleDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQFillNumOfSocketTcpOooDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqElemListIdxOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_TxReqElemListIdxOfSocketUdpDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxRetrQueueMaxNumOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_TxRetrQueueMaxNumOfSocketUdpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpRxBuffer(TcpIp_TcpRxBufferIterType Index, TcpIp_TcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpTxBuffer(TcpIp_TcpTxBufferIterType Index, TcpIp_TcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index, TcpIp_TxReqElemDataLenByteOfTxReqElemType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddFillNumOfTxReqElemListDyn(TcpIp_TxReqElemListDynIterType Index, TcpIp_FillNumOfTxReqElemListDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddReadPosOfTxReqElemListDyn(TcpIp_TxReqElemListDynIterType Index, TcpIp_ReadPosOfTxReqElemListDynType Value);
@@ -4687,6 +6670,16 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubEthBufIdxNextOfBuf2TxReqMap(T
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubEthBufLenOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_EthBufLenOfBuf2TxReqMapType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketDynIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_SocketDynIdxOfBuf2TxReqMapType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubLengthOfDhcpUserOptionDyn(TcpIp_DhcpUserOptionDynIterType Index, TcpIp_LengthOfDhcpUserOptionDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubNextTransmissionMsOfGratuitousArp(TcpIp_GratuitousArpIterType Index, TcpIp_NextTransmissionMsOfGratuitousArpType Value);
@@ -4719,8 +6712,60 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubListenActiveConnStatOfSocketD
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubLocalAddrBindIdxOfSocketDyn(TcpIp_SocketDynIterType Index, TcpIp_LocalAddrBindIdxOfSocketDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketOwnerConfigIdxOfSocketDyn(TcpIp_SocketDynIterType Index, TcpIp_SocketOwnerConfigIdxOfSocketDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxIpAddrIdxOfSocketDyn(TcpIp_SocketDynIterType Index, TcpIp_TxIpAddrIdxOfSocketDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_EventIndicationPendingOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_FinWait2TimeoutOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IdleTimeoutShortOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IssOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MaxNumListenSocketsOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MslTimeoutOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_PathMtuNewSizeOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvNxtOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvWndOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetransmitTimeoutOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetryQFillNumOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RtoReloadValueOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndNxtOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndUnaOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl1OfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl2OfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWndOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateNextOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxFlagsOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMaxSegLenByteOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMssAgreedOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxNextSendSeqNoOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsLenOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOptLenOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxReqSeqNoOfSocketTcpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index, TcpIp_TimeoutOfSocketTcpNagleDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQFillNumOfSocketTcpOooDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqElemListIdxOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_TxReqElemListIdxOfSocketUdpDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxRetrQueueMaxNumOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_TxRetrQueueMaxNumOfSocketUdpDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpRxBuffer(TcpIp_TcpRxBufferIterType Index, TcpIp_TcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpTxBuffer(TcpIp_TcpTxBufferIterType Index, TcpIp_TcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType Value);
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index, TcpIp_TxReqElemDataLenByteOfTxReqElemType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubFillNumOfTxReqElemListDyn(TcpIp_TxReqElemListDynIterType Index, TcpIp_FillNumOfTxReqElemListDynType Value);
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubReadPosOfTxReqElemListDyn(TcpIp_TxReqElemListDynIterType Index, TcpIp_ReadPosOfTxReqElemListDynType Value);
@@ -4888,6 +6933,110 @@ TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetMaskOfDefault
 {
   return (TcpIp_GetDefaultUnicastAddrV4OfPCConfig()[(Index)].NetMaskOfDefaultUnicastAddrV4);
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverIntervalMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverIntervalMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DiscoverIntervalMaxOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].DiscoverIntervalMaxOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DiscoverIntervalMinOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].DiscoverIntervalMinOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DiscoverMaxNumOfDhcpConfigType, TCPIP_CODE) TcpIp_GetDiscoverMaxNumOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DiscoverMaxNumOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].DiscoverMaxNumOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HostNameLenMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetHostNameLenMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_HostNameLenMaxOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].HostNameLenMaxOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_InitWaitMaxOfDhcpConfigType, TCPIP_CODE) TcpIp_GetInitWaitMaxOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_InitWaitMaxOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].InitWaitMaxOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_InitWaitMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetInitWaitMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_InitWaitMinOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].InitWaitMinOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RebindIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRebindIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RebindIntervalMinOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RebindIntervalMinOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RenewIntervalMinOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRenewIntervalMinOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RenewIntervalMinOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RenewIntervalMinOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(IpV4_DhcpV4RequestedAddrCalloutFuncType, TCPIP_CODE) TcpIp_GetReqAddrCalloutFuncOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (IpV4_DhcpV4RequestedAddrCalloutFuncType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].ReqAddrCalloutFuncOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RequestIntervalOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRequestIntervalOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RequestIntervalOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RequestIntervalOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RequestMaxNumOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRequestMaxNumOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RequestMaxNumOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RequestMaxNumOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RestartOnFailOfDhcpConfigType, TCPIP_CODE) TcpIp_IsRestartOnFailOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RestartOnFailOfDhcpConfigType) ((TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RestartOnFailOfDhcpConfig) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RxReqOptionCntOfDhcpConfigType, TCPIP_CODE) TcpIp_GetRxReqOptionCntOfDhcpConfig(TcpIp_DhcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RxReqOptionCntOfDhcpConfigType) (TcpIp_GetDhcpConfigOfPCConfig()[(Index)].RxReqOptionCntOfDhcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameType, TCPIP_CODE) TcpIp_GetDhcpHostname(TcpIp_DhcpHostnameIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DhcpHostnameType) (TcpIp_GetDhcpHostnameOfPCConfig()[(Index)]);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_CtrlStateOfDhcpStatusType, TCPIP_CODE) TcpIp_GetCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_CtrlStateOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpV4_DataStructType, TCPIP_CODE) TcpIp_GetDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].DataStructOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_HostNameLenOfDhcpStatusType, TCPIP_CODE) TcpIp_GetHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_HostNameLenOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LastDiscoverSecsOfDhcpStatusType, TCPIP_CODE) TcpIp_GetLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_LastDiscoverSecsOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MsTimerOfDhcpStatusType, TCPIP_CODE) TcpIp_GetMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_MsTimerOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetReqIpAddrOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].ReqIpAddrOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetryCounterOfDhcpStatusType, TCPIP_CODE) TcpIp_GetRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RetryCounterOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecElapsedOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SecElapsedOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecNextEventOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SecNextEventOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecNextIntervalOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SecNextIntervalOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SecTimerOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SecTimerOfDhcpStatusType) (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TimeoutOccurredOfDhcpStatusType, TCPIP_CODE) TcpIp_IsTimeoutOccurredOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TimeoutOccurredOfDhcpStatusType) ((TcpIp_GetDhcpStatusOfPCConfig()[(Index)].TimeoutOccurredOfDhcpStatus) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_CodeOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetCodeOfDhcpUserOption(TcpIp_DhcpUserOptionIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_CodeOfDhcpUserOptionType) (TcpIp_GetDhcpUserOptionOfPCConfig()[(Index)].CodeOfDhcpUserOption);
@@ -5016,6 +7165,14 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpConfigIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_Get
 {
   return (TcpIp_DhcpConfigIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].DhcpConfigIdxOfIpV4Ctrl);
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameEndIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpHostnameEndIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DhcpHostnameEndIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].DhcpHostnameEndIdxOfIpV4Ctrl);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameStartIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpHostnameStartIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DhcpHostnameStartIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].DhcpHostnameStartIdxOfIpV4Ctrl);
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpStatusIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetDhcpStatusIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_DhcpStatusIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].DhcpStatusIdxOfIpV4Ctrl);
@@ -5067,6 +7224,10 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_Ge
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4BroadcastIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_LocalAddrV4BroadcastIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].LocalAddrV4BroadcastIdxOfIpV4Ctrl);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4DhcpIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4DhcpIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_LocalAddrV4DhcpIdxOfIpV4CtrlType) (TcpIp_GetIpV4CtrlOfPCConfig()[(Index)].LocalAddrV4DhcpIdxOfIpV4Ctrl);
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4UnicastIdxOfIpV4CtrlType, TCPIP_CODE) TcpIp_GetLocalAddrV4UnicastIdxOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5148,13 +7309,13 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType, TCPIP_CODE)
 {
   return (TcpIp_IpV4SocketDynDhcpIdxOfIpV4GeneralType) (TcpIp_GetIpV4GeneralOfPCConfig()[(Index)].IpV4SocketDynDhcpIdxOfIpV4General);
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType) ((TcpIp_GetIpV4GeneralOfPCConfig()[(Index)].IpV4SocketDynDhcpUsedOfIpV4General) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynIcmpIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_IpV4SocketDynIcmpIdxOfIpV4GeneralType) (TcpIp_GetIpV4GeneralOfPCConfig()[(Index)].IpV4SocketDynIcmpIdxOfIpV4General);
-}
-TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
-{
-  return (TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType) ((TcpIp_GetIpV4GeneralOfPCConfig()[(Index)].IpV4SocketDynIcmpUsedOfIpV4General) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstIdxOfIpV4GeneralType, TCPIP_CODE) TcpIp_GetIpV4SocketDynTcpRstIdxOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5380,6 +7541,210 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketOwnerTxConfirmationType, TCPIP_CODE) TcpIp_G
 {
   return (TcpIp_SocketOwnerTxConfirmationType) (TcpIp_GetSocketOwnerConfigOfPCConfig()[(Index)].TxConfirmationFuncPtrOfSocketOwnerConfig);
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_Tcp_BackLogEleType, TCPIP_CODE) TcpIp_GetBackLogArrayOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].BackLogArrayOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_EventIndicationPendingOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_EventIndicationPendingOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].EventIndicationPendingOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_FinWait2TimeoutOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_FinWait2TimeoutOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].FinWait2TimeoutOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IdleTimeoutShortOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_IdleTimeoutShortOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IdleTimeoutShortOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IssOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_IssOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IssOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MaxNumListenSocketsOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_MaxNumListenSocketsOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MaxNumListenSocketsOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MslTimeoutOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_MslTimeoutOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MslTimeoutOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_PathMtuChangedOfSocketTcpDynType, TCPIP_CODE) TcpIp_IsPathMtuChangedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_PathMtuChangedOfSocketTcpDynType) ((TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].PathMtuChangedOfSocketTcpDyn) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_PathMtuNewSizeOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_PathMtuNewSizeOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].PathMtuNewSizeOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RcvNxtOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RcvNxtOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvNxtOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RcvWndOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RcvWndOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvWndOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferType, TCPIP_CODE) TcpIp_GetRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpRxBufferType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedRxBufferSizeOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpTxBufferType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedTxBufferSizeOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetransmitTimeoutOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RetransmitTimeoutOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetransmitTimeoutOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetryQFillNumOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RetryQFillNumOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetryQFillNumOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RstReceivedOfSocketTcpDynType, TCPIP_CODE) TcpIp_IsRstReceivedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RstReceivedOfSocketTcpDynType) ((TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RstReceivedOfSocketTcpDyn) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RtoReloadValueOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RtoReloadValueOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RtoReloadValueOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferType, TCPIP_CODE) TcpIp_GetRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpRxBufferType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferIndPosOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferType, TCPIP_CODE) TcpIp_GetRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpRxBufferType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferRemIndLenOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SendLastHsAckOfSocketTcpDynType, TCPIP_CODE) TcpIp_IsSendLastHsAckOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SendLastHsAckOfSocketTcpDynType) ((TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SendLastHsAckOfSocketTcpDyn) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SndNxtOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SndNxtOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndNxtOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SndUnaOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SndUnaOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndUnaOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SndWl1OfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SndWl1OfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl1OfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SndWl2OfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SndWl2OfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl2OfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SndWndOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SndWndOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWndOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SockIsServerOfSocketTcpDynType, TCPIP_CODE) TcpIp_IsSockIsServerOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SockIsServerOfSocketTcpDynType) ((TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockIsServerOfSocketTcpDyn) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SockStateNextOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SockStateNextOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateNextOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SockStateOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SockStateOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SocketTcpDynMasterListenSocketIdxOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementFirstIdxOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementLastIdxOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRxBufferDescIdxOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpTxBufferDescIdxOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxFlagsOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TxFlagsOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxFlagsOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpTxBufferType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxLenByteTxOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxMaxSegLenByteOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TxMaxSegLenByteOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMaxSegLenByteOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxMssAgreedOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TxMssAgreedOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMssAgreedOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxNextSendSeqNoOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TxNextSendSeqNoOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxNextSendSeqNoOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxOneTimeOptsLenOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TxOneTimeOptsLenOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsLenOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxOneTimeOptsOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TxOneTimeOptsOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxOptLenOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TxOptLenOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOptLenOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpTxBufferType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataBufStartIdxOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpTxBufferType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataLenByteOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxReqFullyQueuedOfSocketTcpDynType, TCPIP_CODE) TcpIp_IsTxReqFullyQueuedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TxReqFullyQueuedOfSocketTcpDynType) ((TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqFullyQueuedOfSocketTcpDyn) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpTxBufferType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqQueuedLenOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxReqSeqNoOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TxReqSeqNoOfSocketTcpDynType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqSeqNoOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpTxBufferType) (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxTotNotQueuedLenOfSocketTcpDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_EnabledOfSocketTcpNagleDynType, TCPIP_CODE) TcpIp_IsEnabledOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_EnabledOfSocketTcpNagleDynType) ((TcpIp_GetSocketTcpNagleDynOfPCConfig()[(Index)].EnabledOfSocketTcpNagleDyn) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TimeoutOfSocketTcpNagleDynType, TCPIP_CODE) TcpIp_GetTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TimeoutOfSocketTcpNagleDynType) (TcpIp_GetSocketTcpNagleDynOfPCConfig()[(Index)].TimeoutOfSocketTcpNagleDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType, TCPIP_CODE) TcpIp_GetTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType) (TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQElementFirstIdxOfSocketTcpOooDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpOooQFillNumOfSocketTcpOooDynType, TCPIP_CODE) TcpIp_GetTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpOooQFillNumOfSocketTcpOooDynType) (TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQFillNumOfSocketTcpOooDyn);
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpTxRequestDescriptorType, TCPIP_CODE) TcpIp_GetIpTxRequestDescriptorOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_GetSocketUdpDynOfPCConfig()[(Index)].IpTxRequestDescriptorOfSocketUdpDyn);
@@ -5427,6 +7792,134 @@ TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetAddrOfStaticU
 TCPIP_LOCAL_INLINE FUNC(IpBase_AddrInType, TCPIP_CODE) TcpIp_GetNetMaskOfStaticUnicastAddrV4Requested(TcpIp_StaticUnicastAddrV4RequestedIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_GetStaticUnicastAddrV4RequestedOfPCConfig()[(Index)].NetMaskOfStaticUnicastAddrV4Requested);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_FinWait2TimeoutOfTcpConfigType, TCPIP_CODE) TcpIp_GetFinWait2TimeoutOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_FinWait2TimeoutOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].FinWait2TimeoutOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_KeepAliveIntervalOfTcpConfigType, TCPIP_CODE) TcpIp_GetKeepAliveIntervalOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_KeepAliveIntervalOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].KeepAliveIntervalOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_KeepAliveProbesMaxOfTcpConfigType, TCPIP_CODE) TcpIp_GetKeepAliveProbesMaxOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_KeepAliveProbesMaxOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].KeepAliveProbesMaxOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_KeepAliveTimeOfTcpConfigType, TCPIP_CODE) TcpIp_GetKeepAliveTimeOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_KeepAliveTimeOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].KeepAliveTimeOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_MslOfTcpConfigType, TCPIP_CODE) TcpIp_GetMslOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_MslOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].MslOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_NagleTimeoutOfTcpConfigType, TCPIP_CODE) TcpIp_GetNagleTimeoutOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_NagleTimeoutOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].NagleTimeoutOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetransTimeoutMaxOfTcpConfigType, TCPIP_CODE) TcpIp_GetRetransTimeoutMaxOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RetransTimeoutMaxOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].RetransTimeoutMaxOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RetransTimeoutOfTcpConfigType, TCPIP_CODE) TcpIp_GetRetransTimeoutOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RetransTimeoutOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].RetransTimeoutOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_RxMssOfTcpConfigType, TCPIP_CODE) TcpIp_GetRxMssOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_RxMssOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].RxMssOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpOooQSizePerSocketAvgOfTcpConfigType, TCPIP_CODE) TcpIp_GetTcpOooQSizePerSocketAvgOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpOooQSizePerSocketAvgOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].TcpOooQSizePerSocketAvgOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpOooQSizePerSocketMaxOfTcpConfigType, TCPIP_CODE) TcpIp_GetTcpOooQSizePerSocketMaxOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpOooQSizePerSocketMaxOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].TcpOooQSizePerSocketMaxOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRetryQSizeOfTcpConfigType, TCPIP_CODE) TcpIp_GetTcpRetryQSizeOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpRetryQSizeOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].TcpRetryQSizeOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TimeToLiveDefaultOfTcpConfigType, TCPIP_CODE) TcpIp_GetTimeToLiveDefaultOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TimeToLiveDefaultOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].TimeToLiveDefaultOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TxMssOfTcpConfigType, TCPIP_CODE) TcpIp_GetTxMssOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TxMssOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].TxMssOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_UserTimeoutDefCyclesOfTcpConfigType, TCPIP_CODE) TcpIp_GetUserTimeoutDefCyclesOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_UserTimeoutDefCyclesOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].UserTimeoutDefCyclesOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_UserTimeoutMaxCyclesOfTcpConfigType, TCPIP_CODE) TcpIp_GetUserTimeoutMaxCyclesOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_UserTimeoutMaxCyclesOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].UserTimeoutMaxCyclesOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_UserTimeoutMinCyclesOfTcpConfigType, TCPIP_CODE) TcpIp_GetUserTimeoutMinCyclesOfTcpConfig(TcpIp_TcpConfigIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_UserTimeoutMinCyclesOfTcpConfigType) (TcpIp_GetTcpConfigOfPCConfig()[(Index)].UserTimeoutMinCyclesOfTcpConfig);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_Tcp_RxPreBufEleType, TCPIP_CODE) TcpIp_GetTcpOooQElement(TcpIp_TcpOooQElementIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_GetTcpOooQElementOfPCConfig()[(Index)]);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_Tcp_RstTxQueueType, TCPIP_CODE) TcpIp_GetTcpResetQElement(TcpIp_TcpResetQElementIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_GetTcpResetQElementOfPCConfig()[(Index)]);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_Tcp_TxRetrQueueType, TCPIP_CODE) TcpIp_GetTcpRetryQElement(TcpIp_TcpRetryQElementIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_GetTcpRetryQElementOfPCConfig()[(Index)]);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferType, TCPIP_CODE) TcpIp_GetTcpRxBuffer(TcpIp_TcpRxBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpRxBufferType) (TcpIp_GetTcpRxBufferOfPCConfig()[(Index)]);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferEndIdxOfTcpRxBufferDescType, TCPIP_CODE) TcpIp_GetTcpRxBufferEndIdxOfTcpRxBufferDesc(TcpIp_TcpRxBufferDescIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpRxBufferEndIdxOfTcpRxBufferDescType) (TcpIp_GetTcpRxBufferDescOfPCConfig()[(Index)].TcpRxBufferEndIdxOfTcpRxBufferDesc);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferStartIdxOfTcpRxBufferDescType, TCPIP_CODE) TcpIp_GetTcpRxBufferStartIdxOfTcpRxBufferDesc(TcpIp_TcpRxBufferDescIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpRxBufferStartIdxOfTcpRxBufferDescType) (TcpIp_GetTcpRxBufferDescOfPCConfig()[(Index)].TcpRxBufferStartIdxOfTcpRxBufferDesc);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferType, TCPIP_CODE) TcpIp_GetFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpRxBufferType) (TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpRxBufferDescDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType, TCPIP_CODE) TcpIp_GetSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType) (TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpRxBufferDescDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType, TCPIP_CODE) TcpIp_GetTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType) (TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].TcpRxBufferWriteIdxOfTcpRxBufferDescDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferType, TCPIP_CODE) TcpIp_GetTcpTxBuffer(TcpIp_TcpTxBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpTxBufferType) (TcpIp_GetTcpTxBufferOfPCConfig()[(Index)]);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferEndIdxOfTcpTxBufferDescType, TCPIP_CODE) TcpIp_GetTcpTxBufferEndIdxOfTcpTxBufferDesc(TcpIp_TcpTxBufferDescIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpTxBufferEndIdxOfTcpTxBufferDescType) (TcpIp_GetTcpTxBufferDescOfPCConfig()[(Index)].TcpTxBufferEndIdxOfTcpTxBufferDesc);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferStartIdxOfTcpTxBufferDescType, TCPIP_CODE) TcpIp_GetTcpTxBufferStartIdxOfTcpTxBufferDesc(TcpIp_TcpTxBufferDescIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpTxBufferStartIdxOfTcpTxBufferDescType) (TcpIp_GetTcpTxBufferDescOfPCConfig()[(Index)].TcpTxBufferStartIdxOfTcpTxBufferDesc);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpTxBufferType) (TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpTxBufferDescDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType, TCPIP_CODE) TcpIp_GetSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType) (TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpTxBufferDescDyn);
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType, TCPIP_CODE) TcpIp_GetTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType) (TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].TcpTxBufferWriteIdxOfTcpTxBufferDescDyn);
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_TxReqElemDataLenByteOfTxReqElemType, TCPIP_CODE) TcpIp_GetTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5523,6 +8016,10 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpConfigUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_Is
 {
   return (TcpIp_DhcpConfigUsedOfIpV4CtrlType) (((boolean)(TcpIp_GetDhcpConfigIdxOfIpV4Ctrl(Index) != TCPIP_NO_DHCPCONFIGIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnameUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpHostnameUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DhcpHostnameUsedOfIpV4CtrlType) (((boolean)(TcpIp_GetDhcpHostnameStartIdxOfIpV4Ctrl(Index) != TCPIP_NO_DHCPHOSTNAMESTARTIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpStatusUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsDhcpStatusUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_DhcpStatusUsedOfIpV4CtrlType) (((boolean)(TcpIp_GetDhcpStatusIdxOfIpV4Ctrl(Index) != TCPIP_NO_DHCPSTATUSIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
@@ -5543,6 +8040,10 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_LlAddrStateUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_I
 {
   return (TcpIp_LlAddrStateUsedOfIpV4CtrlType) (((boolean)(TcpIp_GetLlAddrStateIdxOfIpV4Ctrl(Index) != TCPIP_NO_LLADDRSTATEIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_LocalAddrV4DhcpUsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsLocalAddrV4DhcpUsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_LocalAddrV4DhcpUsedOfIpV4CtrlType) (((boolean)(TcpIp_GetLocalAddrV4DhcpIdxOfIpV4Ctrl(Index) != TCPIP_NO_LOCALADDRV4DHCPIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfIpV4CtrlType, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfIpV4Ctrl(TcpIp_IpV4CtrlIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_MulticastAddrV4UsedOfIpV4CtrlType) (((boolean)(TcpIp_GetMulticastAddrV4StartIdxOfIpV4Ctrl(Index) != TCPIP_NO_MULTICASTADDRV4STARTIDXOFIPV4CTRL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
@@ -5553,15 +8054,15 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_StaticArpTableUsedOfIpV4CtrlType, TCPIP_CODE) TcpI
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4CtrlDefaultUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType) (((!(TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_IpV4CtrlDefaultUsedOfIpV4GeneralType) (((!(TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
-TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynDhcpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_IpV4SocketDynDhcpUsedOfIpV4GeneralType) (((!(TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_IpV4SocketDynIcmpUsedOfIpV4GeneralType) (((boolean)(TcpIp_GetIpV4SocketDynIcmpIdxOfIpV4General(Index) != TCPIP_NO_IPV4SOCKETDYNICMPIDXOFIPV4GENERAL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_IpV4SocketDynTcpRstUsedOfIpV4GeneralType, TCPIP_CODE) TcpIp_IsIpV4SocketDynTcpRstUsedOfIpV4General(TcpIp_IpV4GeneralIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
-  return (TcpIp_IpV4SocketDynTcpRstUsedOfIpV4GeneralType) (((!(TcpIp_IsIpV4SocketDynIcmpUsedOfIpV4General(Index)))) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
+  return (TcpIp_IpV4SocketDynTcpRstUsedOfIpV4GeneralType) (((boolean)(TcpIp_GetIpV4SocketDynTcpRstIdxOfIpV4General(Index) != TCPIP_NO_IPV4SOCKETDYNTCPRSTIDXOFIPV4GENERAL)) != FALSE);   /* PRQA S 4304 */  /* MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_MulticastAddrV4UsedOfLocalAddrV4Type, TCPIP_CODE) TcpIp_IsMulticastAddrV4UsedOfLocalAddrV4(TcpIp_LocalAddrV4IterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5598,6 +8099,18 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDefaultMulticastAddrV4Type, TCPIP_CODE) TcpI
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDefaultUnicastAddrV4Type, TCPIP_CODE) TcpIp_GetSizeOfDefaultUnicastAddrV4(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_SizeOfDefaultUnicastAddrV4Type) TcpIp_GetSizeOfDefaultUnicastAddrV4OfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpConfigType, TCPIP_CODE) TcpIp_GetSizeOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfDhcpConfigType) TcpIp_GetSizeOfDhcpConfigOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpHostnameType, TCPIP_CODE) TcpIp_GetSizeOfDhcpHostname(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfDhcpHostnameType) TcpIp_GetSizeOfDhcpHostnameOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpStatusType, TCPIP_CODE) TcpIp_GetSizeOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfDhcpStatusType) TcpIp_GetSizeOfDhcpStatusOfPCConfig();
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfDhcpUserOptionType, TCPIP_CODE) TcpIp_GetSizeOfDhcpUserOption(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5691,6 +8204,18 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketOwnerConfigType, TCPIP_CODE) TcpIp_Get
 {
   return (TcpIp_SizeOfSocketOwnerConfigType) TcpIp_GetSizeOfSocketOwnerConfigOfPCConfig();
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketTcpDynType, TCPIP_CODE) TcpIp_GetSizeOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfSocketTcpDynType) TcpIp_GetSizeOfSocketTcpDynOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketTcpNagleDynType, TCPIP_CODE) TcpIp_GetSizeOfSocketTcpNagleDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfSocketTcpNagleDynType) TcpIp_GetSizeOfSocketTcpNagleDynOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketTcpOooDynType, TCPIP_CODE) TcpIp_GetSizeOfSocketTcpOooDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfSocketTcpOooDynType) TcpIp_GetSizeOfSocketTcpOooDynOfPCConfig();
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfSocketUdpDynType, TCPIP_CODE) TcpIp_GetSizeOfSocketUdpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_SizeOfSocketUdpDynType) TcpIp_GetSizeOfSocketUdpDynOfPCConfig();
@@ -5706,6 +8231,46 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfStaticArpTableType, TCPIP_CODE) TcpIp_GetSiz
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfStaticUnicastAddrV4RequestedType, TCPIP_CODE) TcpIp_GetSizeOfStaticUnicastAddrV4Requested(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_SizeOfStaticUnicastAddrV4RequestedType) TcpIp_GetSizeOfStaticUnicastAddrV4RequestedOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpConfigType, TCPIP_CODE) TcpIp_GetSizeOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpConfigType) TcpIp_GetSizeOfTcpConfigOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpOooQElementType, TCPIP_CODE) TcpIp_GetSizeOfTcpOooQElement(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpOooQElementType) TcpIp_GetSizeOfTcpOooQElementOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpResetQElementType, TCPIP_CODE) TcpIp_GetSizeOfTcpResetQElement(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpResetQElementType) TcpIp_GetSizeOfTcpResetQElementOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRetryQElementType, TCPIP_CODE) TcpIp_GetSizeOfTcpRetryQElement(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpRetryQElementType) TcpIp_GetSizeOfTcpRetryQElementOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferType, TCPIP_CODE) TcpIp_GetSizeOfTcpRxBuffer(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpRxBufferType) TcpIp_GetSizeOfTcpRxBufferOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferDescType, TCPIP_CODE) TcpIp_GetSizeOfTcpRxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpRxBufferDescType) TcpIp_GetSizeOfTcpRxBufferDescOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpRxBufferDescDynType, TCPIP_CODE) TcpIp_GetSizeOfTcpRxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpRxBufferDescDynType) TcpIp_GetSizeOfTcpRxBufferDescDynOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferType, TCPIP_CODE) TcpIp_GetSizeOfTcpTxBuffer(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpTxBufferType) TcpIp_GetSizeOfTcpTxBufferOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferDescType, TCPIP_CODE) TcpIp_GetSizeOfTcpTxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpTxBufferDescType) TcpIp_GetSizeOfTcpTxBufferDescOfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTcpTxBufferDescDynType, TCPIP_CODE) TcpIp_GetSizeOfTcpTxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_SizeOfTcpTxBufferDescDynType) TcpIp_GetSizeOfTcpTxBufferDescDynOfPCConfig();
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfTxReqElemType, TCPIP_CODE) TcpIp_GetSizeOfTxReqElem(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5734,6 +8299,14 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfUdpTxRetryQueuePoolDescType, TCPIP_CODE) Tcp
 TCPIP_LOCAL_INLINE FUNC(TcpIp_SizeOfUnicastAddrV4Type, TCPIP_CODE) TcpIp_GetSizeOfUnicastAddrV4(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_SizeOfUnicastAddrV4Type) TcpIp_GetSizeOfUnicastAddrV4OfPCConfig();
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferLengthOfTcpRxBufferDescType, TCPIP_CODE) TcpIp_GetTcpRxBufferLengthOfTcpRxBufferDesc(TcpIp_TcpRxBufferDescIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpRxBufferLengthOfTcpRxBufferDescType) ((TcpIp_TcpRxBufferLengthOfTcpRxBufferDescType)((TcpIp_GetTcpRxBufferEndIdxOfTcpRxBufferDesc(Index) - TcpIp_GetTcpRxBufferStartIdxOfTcpRxBufferDesc(Index))));
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferLengthOfTcpTxBufferDescType, TCPIP_CODE) TcpIp_GetTcpTxBufferLengthOfTcpTxBufferDesc(TcpIp_TcpTxBufferDescIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpTxBufferLengthOfTcpTxBufferDescType) ((TcpIp_TcpTxBufferLengthOfTcpTxBufferDescType)((TcpIp_GetTcpTxBufferEndIdxOfTcpTxBufferDesc(Index) - TcpIp_GetTcpTxBufferStartIdxOfTcpTxBufferDesc(Index))));
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DefaultUnicastAddrV4UsedOfUnicastAddrV4Type, TCPIP_CODE) TcpIp_IsDefaultUnicastAddrV4UsedOfUnicastAddrV4(TcpIp_UnicastAddrV4IterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5801,6 +8374,58 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketDynIdxOfBuf2TxReqMap(Tc
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetBuf2TxReqMapOfPCConfig()[(Index)].UlTxReqIdxOfBuf2TxReqMap = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpHostnameOfPCConfig()[(Index)] = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_DhcpV4_DataStructType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].DataStructOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetReqIpAddrOfDhcpStatus(TcpIp_DhcpStatusIterType Index, IpBase_AddrInType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].ReqIpAddrOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTimeoutOccurredOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_TimeoutOccurredOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].TimeoutOccurredOfDhcpStatus = (Value);
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -5998,6 +8623,210 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxIpAddrIdxOfSocketDyn(TcpIp_
 {
   TcpIp_GetSocketDynOfPCConfig()[(Index)].TxIpAddrIdxOfSocketDyn = (Value);
 }
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetBackLogArrayOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_Tcp_BackLogEleType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].BackLogArrayOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_EventIndicationPendingOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].EventIndicationPendingOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_FinWait2TimeoutOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].FinWait2TimeoutOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IdleTimeoutShortOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IdleTimeoutShortOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IssOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IssOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MaxNumListenSocketsOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MaxNumListenSocketsOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MslTimeoutOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MslTimeoutOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetPathMtuChangedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_PathMtuChangedOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].PathMtuChangedOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_PathMtuNewSizeOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].PathMtuNewSizeOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvNxtOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvNxtOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvWndOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvWndOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedRxBufferSizeOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedTxBufferSizeOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetransmitTimeoutOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetransmitTimeoutOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetryQFillNumOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetryQFillNumOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRstReceivedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RstReceivedOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RstReceivedOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RtoReloadValueOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RtoReloadValueOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferIndPosOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferRemIndLenOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSendLastHsAckOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SendLastHsAckOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SendLastHsAckOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndNxtOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndNxtOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndUnaOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndUnaOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl1OfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl1OfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl2OfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl2OfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWndOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWndOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSockIsServerOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockIsServerOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockIsServerOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateNextOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateNextOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SocketTcpDynMasterListenSocketIdxOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementFirstIdxOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementLastIdxOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRxBufferDescIdxOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpTxBufferDescIdxOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxFlagsOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxFlagsOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxLenByteTxOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMaxSegLenByteOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMaxSegLenByteOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMssAgreedOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMssAgreedOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxNextSendSeqNoOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxNextSendSeqNoOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsLenOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsLenOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOptLenOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOptLenOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataBufStartIdxOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataLenByteOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqFullyQueuedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxReqFullyQueuedOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqFullyQueuedOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqQueuedLenOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxReqSeqNoOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqSeqNoOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxTotNotQueuedLenOfSocketTcpDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetEnabledOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index, TcpIp_EnabledOfSocketTcpNagleDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpNagleDynOfPCConfig()[(Index)].EnabledOfSocketTcpNagleDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index, TcpIp_TimeoutOfSocketTcpNagleDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpNagleDynOfPCConfig()[(Index)].TimeoutOfSocketTcpNagleDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQElementFirstIdxOfSocketTcpOooDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQFillNumOfSocketTcpOooDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQFillNumOfSocketTcpOooDyn = (Value);
+}
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetIpTxRequestDescriptorOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_IpTxRequestDescriptorType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetSocketUdpDynOfPCConfig()[(Index)].IpTxRequestDescriptorOfSocketUdpDyn = (Value);
@@ -6029,6 +8858,50 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetNetAddrOfStaticUnicastAddrV4R
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetNetMaskOfStaticUnicastAddrV4Requested(TcpIp_StaticUnicastAddrV4RequestedIterType Index, IpBase_AddrInType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetStaticUnicastAddrV4RequestedOfPCConfig()[(Index)].NetMaskOfStaticUnicastAddrV4Requested = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpOooQElement(TcpIp_TcpOooQElementIterType Index, TcpIp_Tcp_RxPreBufEleType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpOooQElementOfPCConfig()[(Index)] = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpResetQElement(TcpIp_TcpResetQElementIterType Index, TcpIp_Tcp_RstTxQueueType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpResetQElementOfPCConfig()[(Index)] = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRetryQElement(TcpIp_TcpRetryQElementIterType Index, TcpIp_Tcp_TxRetrQueueType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRetryQElementOfPCConfig()[(Index)] = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRxBuffer(TcpIp_TcpRxBufferIterType Index, TcpIp_TcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferOfPCConfig()[(Index)] = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpRxBufferDescDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpRxBufferDescDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].TcpRxBufferWriteIdxOfTcpRxBufferDescDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpTxBuffer(TcpIp_TcpTxBufferIterType Index, TcpIp_TcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferOfPCConfig()[(Index)] = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpTxBufferDescDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpTxBufferDescDyn = (Value);
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].TcpTxBufferWriteIdxOfTcpTxBufferDescDyn = (Value);
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SetTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index, TcpIp_TxReqElemDataLenByteOfTxReqElemType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -6089,6 +8962,14 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_PhysAddrOfArpTableEntryPtrType, TCPIP_CODE) TcpIp_
 {
   return (&(TcpIp_GetArpTableEntryOfPCConfig()[(Index)].PhysAddrOfArpTableEntry));
 }
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpHostnamePtrType, TCPIP_CODE) TcpIp_GetAddrDhcpHostname(TcpIp_DhcpHostnameIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_DhcpHostnamePtrType) (&(TcpIp_GetDhcpHostnameOfPCConfig()[(Index)]));
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_DataStructOfDhcpStatusPtrType, TCPIP_CODE) TcpIp_GetAddrDataStructOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (&(TcpIp_GetDhcpStatusOfPCConfig()[(Index)].DataStructOfDhcpStatus));
+}
 TCPIP_LOCAL_INLINE FUNC(TcpIp_DhcpUserOptionBufferPtrType, TCPIP_CODE) TcpIp_GetAddrDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (TcpIp_DhcpUserOptionBufferPtrType) (&(TcpIp_GetDhcpUserOptionBufferOfPCConfig()[(Index)]));
@@ -6132,6 +9013,26 @@ TCPIP_LOCAL_INLINE FUNC(TcpIp_TxRetrQueueOfSocketUdpDynPtrType, TCPIP_CODE) TcpI
 TCPIP_LOCAL_INLINE FUNC(TcpIp_PhysAddrOfStaticArpEntryPtrType, TCPIP_CODE) TcpIp_GetAddrPhysAddrOfStaticArpEntry(TcpIp_StaticArpEntryIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (&(TcpIp_GetStaticArpEntryOfPCConfig()[(Index)].PhysAddrOfStaticArpEntry));
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpOooQElementPtrType, TCPIP_CODE) TcpIp_GetAddrTcpOooQElement(TcpIp_TcpOooQElementIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (&(TcpIp_GetTcpOooQElementOfPCConfig()[(Index)]));
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpResetQElementPtrType, TCPIP_CODE) TcpIp_GetAddrTcpResetQElement(TcpIp_TcpResetQElementIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (&(TcpIp_GetTcpResetQElementOfPCConfig()[(Index)]));
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRetryQElementPtrType, TCPIP_CODE) TcpIp_GetAddrTcpRetryQElement(TcpIp_TcpRetryQElementIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (&(TcpIp_GetTcpRetryQElementOfPCConfig()[(Index)]));
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpRxBufferPtrType, TCPIP_CODE) TcpIp_GetAddrTcpRxBuffer(TcpIp_TcpRxBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpRxBufferPtrType) (&(TcpIp_GetTcpRxBufferOfPCConfig()[(Index)]));
+}
+TCPIP_LOCAL_INLINE FUNC(TcpIp_TcpTxBufferPtrType, TCPIP_CODE) TcpIp_GetAddrTcpTxBuffer(TcpIp_TcpTxBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (TcpIp_TcpTxBufferPtrType) (&(TcpIp_GetTcpTxBufferOfPCConfig()[(Index)]));
 }
 TCPIP_LOCAL_INLINE FUNC(TcpIp_UdpTxRetryQueueElementChainPtrType, TCPIP_CODE) TcpIp_GetAddrUdpTxRetryQueueElementChain(TcpIp_UdpTxRetryQueueElementChainIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -6324,6 +9225,118 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNetMaskOfDefaultUnicastAdd
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverIntervalMaxOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverIntervalMinOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDiscoverMaxNumOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasHostNameLenMaxOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasInitWaitMaxOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasInitWaitMinOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRebindIntervalMinOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRenewIntervalMinOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasReqAddrCalloutFuncOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestIntervalOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestMaxNumOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRestartOnFailOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRxReqOptionCntOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostname(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasCtrlStateOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDataStructOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasHostNameLenOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLastDiscoverSecsOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMsTimerOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasReqIpAddrOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetryCounterOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecElapsedOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecNextEventOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecNextIntervalOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSecTimerOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTimeoutOccurredOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpUserOption(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TcpIp_GetDhcpUserOptionOfPCConfig() != NULL_PTR);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -6500,6 +9513,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfigUsedOfIpV4Ctrl(v
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameEndIdxOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameStartIdxOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameUsedOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatusIdxOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -6569,6 +9594,14 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLlAddrStateUsedOfIpV4Ctrl(
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4BroadcastIdxOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4DhcpIdxOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasLocalAddrV4DhcpUsedOfIpV4Ctrl(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -6912,6 +9945,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultUnicastAddrV4
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpHostname(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpStatus(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOption(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -7004,6 +10049,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketOwnerConfig(vo
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpNagleDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpOooDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketUdpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -7017,6 +10074,46 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfStaticArpTable(void)
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfStaticUnicastAddrV4Requested(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpOooQElement(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpResetQElement(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRetryQElement(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBuffer(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBuffer(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -7124,6 +10221,222 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxConfirmationFuncPtrOfSoc
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasBackLogArrayOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasEventIndicationPendingOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasFinWait2TimeoutOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIdleTimeoutShortOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasIssOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMaxNumListenSocketsOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMslTimeoutOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasPathMtuChangedOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasPathMtuNewSizeOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRcvNxtOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRcvWndOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestedRxBufferSizeOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRequestedTxBufferSizeOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetransmitTimeoutOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetryQFillNumOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRstReceivedOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRtoReloadValueOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRxBufferIndPosOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRxBufferRemIndLenOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSendLastHsAckOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSndNxtOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSndUnaOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSndWl1OfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSndWl2OfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSndWndOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSockIsServerOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSockStateNextOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSockStateOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRetryQElementFirstIdxOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRetryQElementLastIdxOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferDescIdxOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferDescIdxOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxFlagsOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxLenByteTxOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxMaxSegLenByteOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxMssAgreedOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxNextSendSeqNoOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxOneTimeOptsLenOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxOneTimeOptsOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxOptLenOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqDataBufStartIdxOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqDataLenByteOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqFullyQueuedOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqQueuedLenOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxReqSeqNoOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxTotNotQueuedLenOfSocketTcpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpNagleDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasEnabledOfSocketTcpNagleDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTimeoutOfSocketTcpNagleDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpOooDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQElementFirstIdxOfSocketTcpOooDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQFillNumOfSocketTcpOooDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketUdpDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -7185,6 +10498,162 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNetAddrOfStaticUnicastAddr
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNetMaskOfStaticUnicastAddrV4Requested(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasFinWait2TimeoutOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasKeepAliveIntervalOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasKeepAliveProbesMaxOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasKeepAliveTimeOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasMslOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasNagleTimeoutOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetransTimeoutMaxOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRetransTimeoutOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasRxMssOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQSizePerSocketAvgOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQSizePerSocketMaxOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRetryQSizeOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTimeToLiveDefaultOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTxMssOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasUserTimeoutDefCyclesOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasUserTimeoutMaxCyclesOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasUserTimeoutMinCyclesOfTcpConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQElement(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TcpIp_GetTcpOooQElementOfPCConfig() != NULL_PTR);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpResetQElement(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRetryQElement(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBuffer(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferEndIdxOfTcpRxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferLengthOfTcpRxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferStartIdxOfTcpRxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasFillLevelOfTcpRxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpDynIdxOfTcpRxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBuffer(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferEndIdxOfTcpTxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferLengthOfTcpTxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferStartIdxOfTcpTxBufferDesc(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasFillLevelOfTcpTxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpDynIdxOfTcpTxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -7297,6 +10766,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultMulticastAddrV4OfPC
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDefaultUnicastAddrV4OfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpConfigOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpHostnameOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasDhcpStatusOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -7424,6 +10905,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDefaultUnicastAddrV4
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpConfigOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpHostnameOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpStatusOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfDhcpUserOptionBufferOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -7516,6 +11009,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketOwnerConfigOfP
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpNagleDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketTcpOooDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfSocketUdpDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -7529,6 +11034,46 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfStaticArpTableOfPCCo
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfStaticUnicastAddrV4RequestedOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpConfigOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpOooQElementOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpResetQElementOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRetryQElementOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBufferDescDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBufferDescOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpRxBufferOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBufferDescDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBufferDescOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSizeOfTcpTxBufferOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -7568,6 +11113,18 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketOwnerConfigOfPCConfi
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpNagleDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketTcpOooDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasSocketUdpDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
@@ -7581,6 +11138,46 @@ TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasStaticArpTableOfPCConfig(v
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
 TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasStaticUnicastAddrV4RequestedOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpConfigOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpOooQElementOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpResetQElementOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRetryQElementOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferDescDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferDescOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpRxBufferOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferDescDynOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferDescOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
+}
+TCPIP_LOCAL_INLINE FUNC(boolean, TCPIP_CODE) TcpIp_HasTcpTxBufferOfPCConfig(void)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   return (boolean) (TRUE != FALSE);   /* PRQA S 2995, 4304 */  /* MD_MSR_ConstantCondition, MD_MSR_AutosarBoolean */
 }
@@ -7658,6 +11255,46 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketDynIdxOfBuf2TxReqMap(Tc
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetBuf2TxReqMapOfPCConfig()[(Index)].UlTxReqIdxOfBuf2TxReqMap++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncDhcpHostname(TcpIp_DhcpHostnameIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpHostnameOfPCConfig()[(Index)]++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -7787,6 +11424,182 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxIpAddrIdxOfSocketDyn(TcpIp_
 {
   TcpIp_GetSocketDynOfPCConfig()[(Index)].TxIpAddrIdxOfSocketDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
 }
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].EventIndicationPendingOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].FinWait2TimeoutOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IdleTimeoutShortOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IssOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MaxNumListenSocketsOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MslTimeoutOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].PathMtuNewSizeOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvNxtOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvWndOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedRxBufferSizeOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedTxBufferSizeOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetransmitTimeoutOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetryQFillNumOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RtoReloadValueOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferIndPosOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferRemIndLenOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndNxtOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndUnaOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl1OfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl2OfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWndOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateNextOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SocketTcpDynMasterListenSocketIdxOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementFirstIdxOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementLastIdxOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRxBufferDescIdxOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpTxBufferDescIdxOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxFlagsOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxLenByteTxOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMaxSegLenByteOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMssAgreedOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxNextSendSeqNoOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsLenOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOptLenOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataBufStartIdxOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataLenByteOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqQueuedLenOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqSeqNoOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxTotNotQueuedLenOfSocketTcpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpNagleDynOfPCConfig()[(Index)].TimeoutOfSocketTcpNagleDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQElementFirstIdxOfSocketTcpOooDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQFillNumOfSocketTcpOooDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqElemListIdxOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetSocketUdpDynOfPCConfig()[(Index)].TxReqElemListIdxOfSocketUdpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
@@ -7794,6 +11607,38 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqElemListIdxOfSocketUdpDy
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxRetrQueueMaxNumOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetSocketUdpDynOfPCConfig()[(Index)].TxRetrQueueMaxNumOfSocketUdpDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpRxBuffer(TcpIp_TcpRxBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferOfPCConfig()[(Index)]++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpRxBufferDescDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpRxBufferDescDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].TcpRxBufferWriteIdxOfTcpRxBufferDescDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpTxBuffer(TcpIp_TcpTxBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferOfPCConfig()[(Index)]++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpTxBufferDescDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpTxBufferDescDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].TcpTxBufferWriteIdxOfTcpTxBufferDescDyn++;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_IncTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -7861,6 +11706,46 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSocketDynIdxOfBuf2TxReqMap(Tc
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetBuf2TxReqMapOfPCConfig()[(Index)].UlTxReqIdxOfBuf2TxReqMap--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecDhcpHostname(TcpIp_DhcpHostnameIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpHostnameOfPCConfig()[(Index)]--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -7990,6 +11875,182 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxIpAddrIdxOfSocketDyn(TcpIp_
 {
   TcpIp_GetSocketDynOfPCConfig()[(Index)].TxIpAddrIdxOfSocketDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
 }
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].EventIndicationPendingOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].FinWait2TimeoutOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IdleTimeoutShortOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IssOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MaxNumListenSocketsOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MslTimeoutOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].PathMtuNewSizeOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvNxtOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvWndOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedRxBufferSizeOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedTxBufferSizeOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetransmitTimeoutOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetryQFillNumOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RtoReloadValueOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferIndPosOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferRemIndLenOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndNxtOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndUnaOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl1OfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl2OfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWndOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateNextOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SocketTcpDynMasterListenSocketIdxOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementFirstIdxOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementLastIdxOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRxBufferDescIdxOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpTxBufferDescIdxOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxFlagsOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxLenByteTxOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMaxSegLenByteOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMssAgreedOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxNextSendSeqNoOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsLenOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOptLenOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataBufStartIdxOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataLenByteOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqQueuedLenOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqSeqNoOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxTotNotQueuedLenOfSocketTcpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpNagleDynOfPCConfig()[(Index)].TimeoutOfSocketTcpNagleDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQElementFirstIdxOfSocketTcpOooDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQFillNumOfSocketTcpOooDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqElemListIdxOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetSocketUdpDynOfPCConfig()[(Index)].TxReqElemListIdxOfSocketUdpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
@@ -7997,6 +12058,38 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqElemListIdxOfSocketUdpDy
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxRetrQueueMaxNumOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_GetSocketUdpDynOfPCConfig()[(Index)].TxRetrQueueMaxNumOfSocketUdpDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpRxBuffer(TcpIp_TcpRxBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferOfPCConfig()[(Index)]--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpRxBufferDescDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpRxBufferDescDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].TcpRxBufferWriteIdxOfTcpRxBufferDescDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpTxBuffer(TcpIp_TcpTxBufferIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferOfPCConfig()[(Index)]--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpTxBufferDescDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpTxBufferDescDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].TcpTxBufferWriteIdxOfTcpTxBufferDescDyn--;  /* PRQA S 3387 */  /* MD_CSL_InlineFunction_IncrementDecrement */
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_DecTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -8064,6 +12157,46 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSocketDynIdxOfBuf2TxReqMap(Tc
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_SetUlTxReqIdxOfBuf2TxReqMap(Index, (TcpIp_GetBuf2TxReqMapOfPCConfig()[(Index)].UlTxReqIdxOfBuf2TxReqMap + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetDhcpHostname(Index, (TcpIp_GetDhcpHostnameOfPCConfig()[(Index)] + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetCtrlStateOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetHostNameLenOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetLastDiscoverSecsOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetMsTimerOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRetryCounterOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecElapsedOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecNextEventOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecNextIntervalOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecTimerOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus + Value));
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -8193,6 +12326,182 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxIpAddrIdxOfSocketDyn(TcpIp_
 {
   TcpIp_SetTxIpAddrIdxOfSocketDyn(Index, (TcpIp_GetSocketDynOfPCConfig()[(Index)].TxIpAddrIdxOfSocketDyn + Value));
 }
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_EventIndicationPendingOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetEventIndicationPendingOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].EventIndicationPendingOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_FinWait2TimeoutOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetFinWait2TimeoutOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].FinWait2TimeoutOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IdleTimeoutShortOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetIdleTimeoutShortOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IdleTimeoutShortOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IssOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetIssOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IssOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MaxNumListenSocketsOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetMaxNumListenSocketsOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MaxNumListenSocketsOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MslTimeoutOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetMslTimeoutOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MslTimeoutOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_PathMtuNewSizeOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetPathMtuNewSizeOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].PathMtuNewSizeOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvNxtOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRcvNxtOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvNxtOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvWndOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRcvWndOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvWndOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRequestedRxBufferSizeOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedRxBufferSizeOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRequestedTxBufferSizeOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedTxBufferSizeOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetransmitTimeoutOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRetransmitTimeoutOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetransmitTimeoutOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetryQFillNumOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRetryQFillNumOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetryQFillNumOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RtoReloadValueOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRtoReloadValueOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RtoReloadValueOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRxBufferIndPosOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferIndPosOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRxBufferRemIndLenOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferRemIndLenOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndNxtOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSndNxtOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndNxtOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndUnaOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSndUnaOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndUnaOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl1OfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSndWl1OfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl1OfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl2OfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSndWl2OfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl2OfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWndOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSndWndOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWndOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateNextOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSockStateNextOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateNextOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSockStateOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SocketTcpDynMasterListenSocketIdxOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpRetryQElementFirstIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementFirstIdxOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpRetryQElementLastIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementLastIdxOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpRxBufferDescIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRxBufferDescIdxOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpTxBufferDescIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpTxBufferDescIdxOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxFlagsOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxFlagsOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxFlagsOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxLenByteTxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxLenByteTxOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMaxSegLenByteOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxMaxSegLenByteOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMaxSegLenByteOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMssAgreedOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxMssAgreedOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMssAgreedOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxNextSendSeqNoOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxNextSendSeqNoOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxNextSendSeqNoOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsLenOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxOneTimeOptsLenOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsLenOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxOneTimeOptsOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOptLenOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxOptLenOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOptLenOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxReqDataBufStartIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataBufStartIdxOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxReqDataLenByteOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataLenByteOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxReqQueuedLenOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqQueuedLenOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxReqSeqNoOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxReqSeqNoOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqSeqNoOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxTotNotQueuedLenOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxTotNotQueuedLenOfSocketTcpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index, TcpIp_TimeoutOfSocketTcpNagleDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTimeoutOfSocketTcpNagleDyn(Index, (TcpIp_GetSocketTcpNagleDynOfPCConfig()[(Index)].TimeoutOfSocketTcpNagleDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpOooQElementFirstIdxOfSocketTcpOooDyn(Index, (TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQElementFirstIdxOfSocketTcpOooDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQFillNumOfSocketTcpOooDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpOooQFillNumOfSocketTcpOooDyn(Index, (TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQFillNumOfSocketTcpOooDyn + Value));
+}
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqElemListIdxOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_TxReqElemListIdxOfSocketUdpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_SetTxReqElemListIdxOfSocketUdpDyn(Index, (TcpIp_GetSocketUdpDynOfPCConfig()[(Index)].TxReqElemListIdxOfSocketUdpDyn + Value));
@@ -8200,6 +12509,38 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqElemListIdxOfSocketUdpDy
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxRetrQueueMaxNumOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_TxRetrQueueMaxNumOfSocketUdpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_SetTxRetrQueueMaxNumOfSocketUdpDyn(Index, (TcpIp_GetSocketUdpDynOfPCConfig()[(Index)].TxRetrQueueMaxNumOfSocketUdpDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpRxBuffer(TcpIp_TcpRxBufferIterType Index, TcpIp_TcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpRxBuffer(Index, (TcpIp_GetTcpRxBufferOfPCConfig()[(Index)] + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetFillLevelOfTcpRxBufferDescDyn(Index, (TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpRxBufferDescDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSocketTcpDynIdxOfTcpRxBufferDescDyn(Index, (TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpRxBufferDescDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(Index, (TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].TcpRxBufferWriteIdxOfTcpRxBufferDescDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpTxBuffer(TcpIp_TcpTxBufferIterType Index, TcpIp_TcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpTxBuffer(Index, (TcpIp_GetTcpTxBufferOfPCConfig()[(Index)] + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetFillLevelOfTcpTxBufferDescDyn(Index, (TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpTxBufferDescDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSocketTcpDynIdxOfTcpTxBufferDescDyn(Index, (TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpTxBufferDescDyn + Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(Index, (TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].TcpTxBufferWriteIdxOfTcpTxBufferDescDyn + Value));
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_AddTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index, TcpIp_TxReqElemDataLenByteOfTxReqElemType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -8267,6 +12608,46 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketDynIdxOfBuf2TxReqMap(Tc
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubUlTxReqIdxOfBuf2TxReqMap(TcpIp_Buf2TxReqMapIterType Index, TcpIp_UlTxReqIdxOfBuf2TxReqMapType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_SetUlTxReqIdxOfBuf2TxReqMap(Index, (TcpIp_GetBuf2TxReqMapOfPCConfig()[(Index)].UlTxReqIdxOfBuf2TxReqMap - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubDhcpHostname(TcpIp_DhcpHostnameIterType Index, TcpIp_DhcpHostnameType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetDhcpHostname(Index, (TcpIp_GetDhcpHostnameOfPCConfig()[(Index)] - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubCtrlStateOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_CtrlStateOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetCtrlStateOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].CtrlStateOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubHostNameLenOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_HostNameLenOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetHostNameLenOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].HostNameLenOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubLastDiscoverSecsOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_LastDiscoverSecsOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetLastDiscoverSecsOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].LastDiscoverSecsOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubMsTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_MsTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetMsTimerOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].MsTimerOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRetryCounterOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_RetryCounterOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRetryCounterOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].RetryCounterOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecElapsedOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecElapsedOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecElapsedOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecElapsedOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecNextEventOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextEventOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecNextEventOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextEventOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecNextIntervalOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecNextIntervalOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecNextIntervalOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecNextIntervalOfDhcpStatus - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSecTimerOfDhcpStatus(TcpIp_DhcpStatusIterType Index, TcpIp_SecTimerOfDhcpStatusType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSecTimerOfDhcpStatus(Index, (TcpIp_GetDhcpStatusOfPCConfig()[(Index)].SecTimerOfDhcpStatus - Value));
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubDhcpUserOptionBuffer(TcpIp_DhcpUserOptionBufferIterType Index, TcpIp_DhcpUserOptionBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
@@ -8396,6 +12777,182 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxIpAddrIdxOfSocketDyn(TcpIp_
 {
   TcpIp_SetTxIpAddrIdxOfSocketDyn(Index, (TcpIp_GetSocketDynOfPCConfig()[(Index)].TxIpAddrIdxOfSocketDyn - Value));
 }
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubEventIndicationPendingOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_EventIndicationPendingOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetEventIndicationPendingOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].EventIndicationPendingOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubFinWait2TimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_FinWait2TimeoutOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetFinWait2TimeoutOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].FinWait2TimeoutOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubIdleTimeoutShortOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IdleTimeoutShortOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetIdleTimeoutShortOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IdleTimeoutShortOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubIssOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_IssOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetIssOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].IssOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubMaxNumListenSocketsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MaxNumListenSocketsOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetMaxNumListenSocketsOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MaxNumListenSocketsOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubMslTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_MslTimeoutOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetMslTimeoutOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].MslTimeoutOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubPathMtuNewSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_PathMtuNewSizeOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetPathMtuNewSizeOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].PathMtuNewSizeOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRcvNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvNxtOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRcvNxtOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvNxtOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRcvWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RcvWndOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRcvWndOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RcvWndOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRequestedRxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRequestedRxBufferSizeOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedRxBufferSizeOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRequestedTxBufferSizeOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRequestedTxBufferSizeOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RequestedTxBufferSizeOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRetransmitTimeoutOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetransmitTimeoutOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRetransmitTimeoutOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetransmitTimeoutOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRetryQFillNumOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RetryQFillNumOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRetryQFillNumOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RetryQFillNumOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRtoReloadValueOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_RtoReloadValueOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRtoReloadValueOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RtoReloadValueOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRxBufferIndPosOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRxBufferIndPosOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferIndPosOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubRxBufferRemIndLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetRxBufferRemIndLenOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].RxBufferRemIndLenOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSndNxtOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndNxtOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSndNxtOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndNxtOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSndUnaOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndUnaOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSndUnaOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndUnaOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSndWl1OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl1OfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSndWl1OfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl1OfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSndWl2OfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWl2OfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSndWl2OfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWl2OfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSndWndOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SndWndOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSndWndOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SndWndOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSockStateNextOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateNextOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSockStateNextOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateNextOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSockStateOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SockStateOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSockStateOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SockStateOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SocketTcpDynMasterListenSocketIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSocketTcpDynMasterListenSocketIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].SocketTcpDynMasterListenSocketIdxOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpRetryQElementFirstIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementFirstIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpRetryQElementFirstIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementFirstIdxOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpRetryQElementLastIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRetryQElementLastIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpRetryQElementLastIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRetryQElementLastIdxOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpRxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpRxBufferDescIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpRxBufferDescIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpRxBufferDescIdxOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpTxBufferDescIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TcpTxBufferDescIdxOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpTxBufferDescIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TcpTxBufferDescIdxOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxFlagsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxFlagsOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxFlagsOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxFlagsOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxLenByteTxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxLenByteTxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxLenByteTxOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxMaxSegLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMaxSegLenByteOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxMaxSegLenByteOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMaxSegLenByteOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxMssAgreedOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxMssAgreedOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxMssAgreedOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxMssAgreedOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxNextSendSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxNextSendSeqNoOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxNextSendSeqNoOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxNextSendSeqNoOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxOneTimeOptsLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsLenOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxOneTimeOptsLenOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsLenOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxOneTimeOptsOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOneTimeOptsOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxOneTimeOptsOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOneTimeOptsOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxOptLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxOptLenOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxOptLenOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxOptLenOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqDataBufStartIdxOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxReqDataBufStartIdxOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataBufStartIdxOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqDataLenByteOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxReqDataLenByteOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqDataLenByteOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxReqQueuedLenOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqQueuedLenOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqSeqNoOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_TxReqSeqNoOfSocketTcpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxReqSeqNoOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxReqSeqNoOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxTotNotQueuedLenOfSocketTcpDyn(TcpIp_SocketTcpDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTxTotNotQueuedLenOfSocketTcpDyn(Index, (TcpIp_GetSocketTcpDynOfPCConfig()[(Index)].TxTotNotQueuedLenOfSocketTcpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTimeoutOfSocketTcpNagleDyn(TcpIp_SocketTcpNagleDynIterType Index, TcpIp_TimeoutOfSocketTcpNagleDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTimeoutOfSocketTcpNagleDyn(Index, (TcpIp_GetSocketTcpNagleDynOfPCConfig()[(Index)].TimeoutOfSocketTcpNagleDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpOooQElementFirstIdxOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQElementFirstIdxOfSocketTcpOooDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpOooQElementFirstIdxOfSocketTcpOooDyn(Index, (TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQElementFirstIdxOfSocketTcpOooDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpOooQFillNumOfSocketTcpOooDyn(TcpIp_SocketTcpOooDynIterType Index, TcpIp_TcpOooQFillNumOfSocketTcpOooDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpOooQFillNumOfSocketTcpOooDyn(Index, (TcpIp_GetSocketTcpOooDynOfPCConfig()[(Index)].TcpOooQFillNumOfSocketTcpOooDyn - Value));
+}
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqElemListIdxOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_TxReqElemListIdxOfSocketUdpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_SetTxReqElemListIdxOfSocketUdpDyn(Index, (TcpIp_GetSocketUdpDynOfPCConfig()[(Index)].TxReqElemListIdxOfSocketUdpDyn - Value));
@@ -8403,6 +12960,38 @@ TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqElemListIdxOfSocketUdpDy
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxRetrQueueMaxNumOfSocketUdpDyn(TcpIp_SocketUdpDynIterType Index, TcpIp_TxRetrQueueMaxNumOfSocketUdpDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {
   TcpIp_SetTxRetrQueueMaxNumOfSocketUdpDyn(Index, (TcpIp_GetSocketUdpDynOfPCConfig()[(Index)].TxRetrQueueMaxNumOfSocketUdpDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpRxBuffer(TcpIp_TcpRxBufferIterType Index, TcpIp_TcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpRxBuffer(Index, (TcpIp_GetTcpRxBufferOfPCConfig()[(Index)] - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubFillLevelOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SizeOfTcpRxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetFillLevelOfTcpRxBufferDescDyn(Index, (TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpRxBufferDescDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketTcpDynIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpRxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSocketTcpDynIdxOfTcpRxBufferDescDyn(Index, (TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpRxBufferDescDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(TcpIp_TcpRxBufferDescDynIterType Index, TcpIp_TcpRxBufferWriteIdxOfTcpRxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpRxBufferWriteIdxOfTcpRxBufferDescDyn(Index, (TcpIp_GetTcpRxBufferDescDynOfPCConfig()[(Index)].TcpRxBufferWriteIdxOfTcpRxBufferDescDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpTxBuffer(TcpIp_TcpTxBufferIterType Index, TcpIp_TcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpTxBuffer(Index, (TcpIp_GetTcpTxBufferOfPCConfig()[(Index)] - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubFillLevelOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SizeOfTcpTxBufferType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetFillLevelOfTcpTxBufferDescDyn(Index, (TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].FillLevelOfTcpTxBufferDescDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubSocketTcpDynIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_SocketTcpDynIdxOfTcpTxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetSocketTcpDynIdxOfTcpTxBufferDescDyn(Index, (TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].SocketTcpDynIdxOfTcpTxBufferDescDyn - Value));
+}
+TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(TcpIp_TcpTxBufferDescDynIterType Index, TcpIp_TcpTxBufferWriteIdxOfTcpTxBufferDescDynType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
+{
+  TcpIp_SetTcpTxBufferWriteIdxOfTcpTxBufferDescDyn(Index, (TcpIp_GetTcpTxBufferDescDynOfPCConfig()[(Index)].TcpTxBufferWriteIdxOfTcpTxBufferDescDyn - Value));
 }
 TCPIP_LOCAL_INLINE FUNC(void, TCPIP_CODE) TcpIp_SubTxReqElemDataLenByteOfTxReqElem(TcpIp_TxReqElemIterType Index, TcpIp_TxReqElemDataLenByteOfTxReqElemType Value)  /* PRQA S 3219 */  /* MD_MSR_Unreachable */
 {

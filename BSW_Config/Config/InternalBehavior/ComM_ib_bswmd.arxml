@@ -30,6 +30,9 @@
                     <BSW-MODULE-ENTRY-REF-CONDITIONAL>
                       <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM_MainFunction_0</BSW-MODULE-ENTRY-REF>
                     </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM_MainFunction_1</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
                   </PROVIDED-ENTRYS>
                   <INTERNAL-BEHAVIORS>
                     <BSW-INTERNAL-BEHAVIOR UUID="9625f9cb-b400-42ac-a178-7c2a16ab8970">
@@ -47,11 +50,20 @@
                           <SHORT-NAME>ComM_MainFunction_0</SHORT-NAME>
                           <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM_MainFunction_0</IMPLEMENTED-ENTRY-REF>
                         </BSW-SCHEDULABLE-ENTITY>
+                        <BSW-SCHEDULABLE-ENTITY UUID="d98c3d51-a2ff-499b-be6f-964e11134863">
+                          <SHORT-NAME>ComM_MainFunction_1</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM_MainFunction_1</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
                       </ENTITYS>
                       <EVENTS>
                         <BSW-TIMING-EVENT UUID="6ffbb248-16bc-4cf3-94cb-90f5881e283e">
                           <SHORT-NAME>ComM_MainFunction_0TimingEvent0</SHORT-NAME>
                           <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM/ComMBehavior/ComM_MainFunction_0</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.02</PERIOD>
+                        </BSW-TIMING-EVENT>
+                        <BSW-TIMING-EVENT UUID="6596aadb-be34-42cc-98d6-3a88b979e45a">
+                          <SHORT-NAME>ComM_MainFunction_1TimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/ComM_ib_bswmd/BswModuleDescriptions/ComM/ComMBehavior/ComM_MainFunction_1</STARTS-ON-EVENT-REF>
                           <PERIOD>0.02</PERIOD>
                         </BSW-TIMING-EVENT>
                       </EVENTS>
@@ -60,6 +72,11 @@
                 </BSW-MODULE-DESCRIPTION>
                 <BSW-MODULE-ENTRY UUID="a42bd39a-21fd-49f0-8001-1c1654c5a1f5">
                   <SHORT-NAME>ComM_MainFunction_0</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+                <BSW-MODULE-ENTRY UUID="b1023d7d-f958-42c6-926d-500a5eec8676">
+                  <SHORT-NAME>ComM_MainFunction_1</SHORT-NAME>
                   <CALL-TYPE>SCHEDULED</CALL-TYPE>
                   <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
                 </BSW-MODULE-ENTRY>

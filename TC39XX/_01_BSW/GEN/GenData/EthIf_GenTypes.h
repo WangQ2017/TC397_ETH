@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthIf_GenTypes.h
- *   Generation Time: 2026-05-31 10:45:35
+ *   Generation Time: 2026-06-18 21:53:25
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -2718,7 +2718,7 @@ extern CONST(EthIf_EthDrvApiType, ETHIF_CONST) EthIf_EthDrvApi[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(EthIf_EthIfCtrlType, ETHIF_CONST) EthIf_EthIfCtrl[3];
+extern CONST(EthIf_EthIfCtrlType, ETHIF_CONST) EthIf_EthIfCtrl[2];
 #define ETHIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2735,7 +2735,7 @@ extern CONST(EthIf_EthIfCtrlType, ETHIF_CONST) EthIf_EthIfCtrl[3];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(EthIf_EthIfCtrlOfEthTrcvIndType, ETHIF_CONST) EthIf_EthIfCtrlOfEthTrcvInd[3];
+extern CONST(EthIf_EthIfCtrlOfEthTrcvIndType, ETHIF_CONST) EthIf_EthIfCtrlOfEthTrcvInd[2];
 #define ETHIF_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2830,7 +2830,7 @@ extern CONST(EthIf_LinkStateChgIndFctPtrType, ETHIF_CONST) EthIf_LinkStateChgInd
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(EthIf_PhysLayerInitElemsType, ETHIF_CONST) EthIf_PhysLayerInitElems[3];
+extern CONST(EthIf_PhysLayerInitElemsType, ETHIF_CONST) EthIf_PhysLayerInitElems[2];
 #define ETHIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -2851,7 +2851,7 @@ extern CONST(EthIf_PhysLayerInitElemsType, ETHIF_CONST) EthIf_PhysLayerInitElems
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(EthIf_PhysLayerModeElemsType, ETHIF_CONST) EthIf_PhysLayerModeElems[3];
+extern CONST(EthIf_PhysLayerModeElemsType, ETHIF_CONST) EthIf_PhysLayerModeElems[2];
 #define ETHIF_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3011,7 +3011,7 @@ extern VAR(EthIf_EthCtrlRxFrameCntType, ETHIF_VAR_NOINIT) EthIf_EthCtrlRxFrameCn
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(EthIf_EthIfCtrlInitStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlInitState[3];
+extern VAR(EthIf_EthIfCtrlInitStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlInitState[2];
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3028,7 +3028,7 @@ extern VAR(EthIf_EthIfCtrlInitStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlInitSt
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(EthIf_EthIfCtrlLinkCountType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkCount[3];
+extern VAR(EthIf_EthIfCtrlLinkCountType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkCount[2];
 #define ETHIF_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3045,7 +3045,7 @@ extern VAR(EthIf_EthIfCtrlLinkCountType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkCo
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(EthIf_EthIfCtrlLinkStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkState[3];
+extern VAR(EthIf_EthIfCtrlLinkStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkState[2];
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3062,7 +3062,7 @@ extern VAR(EthIf_EthIfCtrlLinkStateType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlLinkSt
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(Eth_ModeType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlMode[3];
+extern VAR(Eth_ModeType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlMode[2];
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3083,7 +3083,7 @@ extern VAR(Eth_ModeType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlMode[3];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(EthIf_EthIfCtrlRxStatsType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlRxStats[3];
+extern VAR(EthIf_EthIfCtrlRxStatsType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlRxStats[2];
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -3104,7 +3104,7 @@ extern VAR(EthIf_EthIfCtrlRxStatsType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlRxStats[
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(EthIf_EthIfCtrlTxStatsType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlTxStats[3];
+extern VAR(EthIf_EthIfCtrlTxStatsType, ETHIF_VAR_NOINIT) EthIf_EthIfCtrlTxStats[2];
 #define ETHIF_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -273,7 +273,7 @@ ISR(OsIsr_PPS)
       if (GETH_MAC_TIMESTAMP_STATUS.B.TSTARGT0 != 0)
       {
         g_ppsEvent = TRUE;
-        CDD_LOG_DEBUG("pps interrupt!");
+        // CDD_LOG_DEBUG("pps interrupt!");
       }
       else
       {

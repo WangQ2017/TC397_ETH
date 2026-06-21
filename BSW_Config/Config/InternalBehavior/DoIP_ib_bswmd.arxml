@@ -21,6 +21,47 @@
             <AR-PACKAGE UUID="e730e5d2-8ee3-4d80-b72f-ad801d14b062">
               <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
+            <AR-PACKAGE UUID="bfb726b6-0a3c-4eeb-af63-a9296de974a9">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="345e7f2a-d33f-4202-a4c3-0f2ca56c2683">
+                  <SHORT-NAME>DoIP</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/DoIP_ib_bswmd/BswModuleDescriptions/DoIP_MainFunction</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="84692c12-590c-4355-82f2-494c0130eb8b">
+                      <SHORT-NAME>DoIPBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="8fd7f478-3f44-42f2-9b5d-c781aba4c39b">
+                          <SHORT-NAME>DOIP_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="065ad034-e854-4053-91d7-90259921d853">
+                          <SHORT-NAME>DoIP_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/DoIP_ib_bswmd/BswModuleDescriptions/DoIP_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="cfe0b7f7-338d-4567-8ee2-8425f679d223">
+                          <SHORT-NAME>DoIP_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/DoIP_ib_bswmd/BswModuleDescriptions/DoIP/DoIPBehavior/DoIP_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.005</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="84f4a59c-786b-493b-825f-36371ad4f70f">
+                  <SHORT-NAME>DoIP_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
           </AR-PACKAGES>
         </AR-PACKAGE>
       </AR-PACKAGES>

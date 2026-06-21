@@ -3619,7 +3619,7 @@ section_layout mpe:vtc:linear
         select "[.]text.OS_Default_Init_Task_Trusted_CODE";
         select "[.]text.OS_ERRORHOOK_CODE";
         select "[.]text.OS_EthIsr_EthCtrlConfig_MAIN_EthInterruptServiceRoutine_Q0Tx_CODE";
-        select "[.]text.OS_EthIsr_PPS_CODE";
+        select "[.]text.OS_OsIsr_PPS_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore0_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore1_CODE";
         select "[.]text.OS_OsTask_Asw_OsCore2_CODE";

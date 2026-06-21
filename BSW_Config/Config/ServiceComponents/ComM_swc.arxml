@@ -491,6 +491,18 @@
                       <SHORT-NAME>UR_ComMUser_untagged</SHORT-NAME>
                       <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</PROVIDED-INTERFACE-TREF>
                     </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="9c798e4f-39cd-4960-9a0c-52215fe58907">
+                      <SHORT-NAME>CL_ComMChannel_Vlan1</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelLimitation</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="16df94c2-8539-4196-ad0a-40e9aadce1b4">
+                      <SHORT-NAME>CW_ComMChannel_Vlan1</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelWakeUp</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
+                    <P-PORT-PROTOTYPE UUID="ea2bd89f-f968-444f-96a9-99df7933599e">
+                      <SHORT-NAME>UR_ComMUser_Vlan1</SHORT-NAME>
+                      <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest</PROVIDED-INTERFACE-TREF>
+                    </P-PORT-PROTOTYPE>
                   </PORTS>
                   <INTERNAL-BEHAVIORS>
                     <SWC-INTERNAL-BEHAVIOR UUID="9cafa2fc-b4b4-489e-80b3-570950fd8aba">
@@ -600,6 +612,75 @@
                             <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetRequestedComMode</TARGET-PROVIDED-OPERATION-REF>
                           </OPERATION-IREF>
                         </OPERATION-INVOKED-EVENT>
+                        <TIMING-EVENT UUID="800507bb-0f46-467a-a0cd-b0d4a189adf6">
+                          <SHORT-NAME>Timer_ComM_MainFunction_1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/ComM_MainFunction_1</START-ON-EVENT-REF>
+                          <PERIOD>0.02</PERIOD>
+                        </TIMING-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="9638c32d-cad3-40f1-aa59-14faa05010fd">
+                          <SHORT-NAME>OpEventGetInhibitionStatus_GetInhibitionStatus_CL_ComMChannel_Vlan1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetInhibitionStatus</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CL_ComMChannel_Vlan1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelLimitation/GetInhibitionStatus</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="6e7ce1bd-caf5-4ba3-84a0-b684064a5fe8">
+                          <SHORT-NAME>OpEventGetInhibitionStatus_GetInhibitionStatus_CW_ComMChannel_Vlan1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetInhibitionStatus</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CW_ComMChannel_Vlan1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelWakeUp/GetInhibitionStatus</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="ff88bf52-0c8b-48bd-95b9-70996a26c921">
+                          <SHORT-NAME>OpEventLimitChannelToNoComMode_LimitChannelToNoComMode_CL_ComMChannel_Vlan1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/LimitChannelToNoComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CL_ComMChannel_Vlan1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelLimitation/LimitChannelToNoComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="b9f2ef83-c779-4f66-9029-dfe03fbd3e64">
+                          <SHORT-NAME>OpEventPreventWakeUp_PreventWakeUp_CW_ComMChannel_Vlan1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/PreventWakeUp</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CW_ComMChannel_Vlan1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_ChannelWakeUp/PreventWakeUp</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="06840c9f-0b20-4053-9fa0-f89e565f02e8">
+                          <SHORT-NAME>OpEventRequestComMode_RequestComMode_UR_ComMUser_Vlan1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/RequestComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_ComMUser_Vlan1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/RequestComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="07cdc68b-930e-418e-a831-f9def283e7e7">
+                          <SHORT-NAME>OpEventGetCurrentComMode_GetCurrentComMode_UR_ComMUser_Vlan1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetCurrentComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_ComMUser_Vlan1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetCurrentComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="906d30b7-f4ec-49d9-876e-c43364f8a8b9">
+                          <SHORT-NAME>OpEventGetMaxComMode_GetMaxComMode_UR_ComMUser_Vlan1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetMaxComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_ComMUser_Vlan1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetMaxComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
+                        <OPERATION-INVOKED-EVENT UUID="c4a843d0-9660-451e-b2f4-3f26f3a03a47">
+                          <SHORT-NAME>OpEventGetRequestedComMode_GetRequestedComMode_UR_ComMUser_Vlan1</SHORT-NAME>
+                          <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/MICROSAR/ComM_swc/ComponentTypes/ComM/ComMInternalBehavior/GetRequestedComMode</START-ON-EVENT-REF>
+                          <OPERATION-IREF>
+                            <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_ComMUser_Vlan1</CONTEXT-P-PORT-REF>
+                            <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/ComM_swc/Interfaces/ComM_UserRequest/GetRequestedComMode</TARGET-PROVIDED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </OPERATION-INVOKED-EVENT>
                       </EVENTS>
                       <HANDLE-TERMINATION-AND-RESTART>NO-SUPPORT</HANDLE-TERMINATION-AND-RESTART>
                       <INCLUDED-DATA-TYPE-SETS>
@@ -662,6 +743,51 @@
                             </PORT-DEFINED-ARGUMENT-VALUE>
                           </PORT-ARG-VALUES>
                           <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_ComMUser_untagged</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>1</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/NetworkHandleType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CL_ComMChannel_Vlan1</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>1</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/NetworkHandleType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/CW_ComMChannel_Vlan1</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-ARG-VALUES>
+                            <PORT-DEFINED-ARGUMENT-VALUE>
+                              <VALUE>
+                                <NUMERICAL-VALUE-SPECIFICATION>
+                                  <VALUE>1</VALUE>
+                                </NUMERICAL-VALUE-SPECIFICATION>
+                              </VALUE>
+                              <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/ComM_swc/DataTypes/ComM_UserHandleType</VALUE-TYPE-TREF>
+                            </PORT-DEFINED-ARGUMENT-VALUE>
+                          </PORT-ARG-VALUES>
+                          <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/ComM_swc/ComponentTypes/ComM/UR_ComMUser_Vlan1</PORT-REF>
                         </PORT-API-OPTION>
                       </PORT-API-OPTIONS>
                       <RUNNABLES>
@@ -736,6 +862,12 @@
                           <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
                           <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
                           <SYMBOL>ComM_GetRequestedComMode</SYMBOL>
+                        </RUNNABLE-ENTITY>
+                        <RUNNABLE-ENTITY UUID="48036459-2277-4ea8-a739-89d18da261a2">
+                          <SHORT-NAME>ComM_MainFunction_1</SHORT-NAME>
+                          <MINIMUM-START-INTERVAL>0</MINIMUM-START-INTERVAL>
+                          <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                          <SYMBOL>ComM_MainFunction_1</SYMBOL>
                         </RUNNABLE-ENTITY>
                       </RUNNABLES>
                       <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>

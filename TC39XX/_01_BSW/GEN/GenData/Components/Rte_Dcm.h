@@ -54,7 +54,7 @@ extern "C"
  *********************************************************************************************************************/
 FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl(Dcm_DiagnosticSessionControlType nextMode);
 
-# define RTE_STOP_SEC_CODE
+# define RTE_STOP_SEC_CODE 
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 
@@ -64,6 +64,54 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmDiagnosticSessionControl_DcmDia
  * Rte_Switch_<p>_<m>
  *********************************************************************************************************************/
 #  define Rte_Switch_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl Rte_Switch_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl
+
+
+/**********************************************************************************************************************
+ * Rte_Call_<p>_<o> (unmapped) for synchronous C/S communication
+ *********************************************************************************************************************/
+#  define RTE_START_SEC_CDD_UDS_APPL_CODE
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+FUNC(Std_ReturnType, RTE_CDD_UDS_APPL_CODE) DID_0x16F_DataServices_DcmDspData_NetPara_ConditionCheckRead(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_CDD_UDS_APPL_VAR) ErrorCode); /* PRQA S 3451, 0786, 3449, 0624 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+#  define RTE_STOP_SEC_CDD_UDS_APPL_CODE
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  define Rte_Call_DataServices_DcmDspData_NetPara_ConditionCheckRead DID_0x16F_DataServices_DcmDspData_NetPara_ConditionCheckRead
+#  define RTE_START_SEC_CDD_UDS_APPL_CODE
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#  ifdef RTE_PTR2ARRAYBASETYPE_PASSING
+FUNC(Std_ReturnType, RTE_CDD_UDS_APPL_CODE) DID_0x16F_DataServices_DcmDspData_NetPara_ReadData(Dcm_OpStatusType OpStatus, P2VAR(uint8, AUTOMATIC, RTE_CDD_UDS_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+#  else
+FUNC(Std_ReturnType, RTE_CDD_UDS_APPL_CODE) DID_0x16F_DataServices_DcmDspData_NetPara_ReadData(Dcm_OpStatusType OpStatus, P2VAR(Dcm_Data8ByteType, AUTOMATIC, RTE_CDD_UDS_APPL_VAR) Data); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+#  endif
+#  define RTE_STOP_SEC_CDD_UDS_APPL_CODE
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  define Rte_Call_DataServices_DcmDspData_NetPara_ReadData DID_0x16F_DataServices_DcmDspData_NetPara_ReadData
+#  define RTE_START_SEC_CDD_UDS_APPL_CODE
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#  ifdef RTE_PTR2ARRAYBASETYPE_PASSING
+FUNC(Std_ReturnType, RTE_CDD_UDS_APPL_CODE) DID_0x16F_DataServices_DcmDspData_NetPara_WriteData(P2CONST(uint8, AUTOMATIC, RTE_CDD_UDS_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_CDD_UDS_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+#  else
+FUNC(Std_ReturnType, RTE_CDD_UDS_APPL_CODE) DID_0x16F_DataServices_DcmDspData_NetPara_WriteData(P2CONST(Dcm_Data8ByteType, AUTOMATIC, RTE_CDD_UDS_APPL_DATA) Data, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_CDD_UDS_APPL_VAR) ErrorCode); /* PRQA S 1330, 3451, 0786, 3449, 0624 */ /* MD_Rte_1330, MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+#  endif
+#  define RTE_STOP_SEC_CDD_UDS_APPL_CODE
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  define Rte_Call_DataServices_DcmDspData_NetPara_WriteData DID_0x16F_DataServices_DcmDspData_NetPara_WriteData
+#  define RTE_START_SEC_CDD_UDS_APPL_CODE
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+FUNC(Std_ReturnType, RTE_CDD_UDS_APPL_CODE) RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_RequestResults(Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_CDD_UDS_APPL_VAR) ErrorCode); /* PRQA S 3451, 0786, 3449, 0624 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+#  define RTE_STOP_SEC_CDD_UDS_APPL_CODE
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  define Rte_Call_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_RequestResults RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_RequestResults
+#  define RTE_START_SEC_CDD_UDS_APPL_CODE
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+FUNC(Std_ReturnType, RTE_CDD_UDS_APPL_CODE) RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_Start(uint8 TxMode, Dcm_OpStatusType OpStatus, P2VAR(Dcm_NegativeResponseCodeType, AUTOMATIC, RTE_CDD_UDS_APPL_VAR) ErrorCode); /* PRQA S 3451, 0786, 3449, 0624 */ /* MD_Rte_3451, MD_Rte_0786, MD_Rte_3449, MD_Rte_0624 */
+#  define RTE_STOP_SEC_CDD_UDS_APPL_CODE
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+#  define Rte_Call_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_Start RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_Start
 
 
 # endif /* !defined(RTE_CORE) */
@@ -104,6 +152,16 @@ FUNC(Std_ReturnType, Dcm_CODE) Dcm_SetActiveDiagnostic(boolean active); /* PRQA 
 #  define RTE_E_DCMServices_E_NOT_OK (1U)
 
 #  define RTE_E_DCMServices_E_OK (0U)
+
+#  define RTE_E_DataServices_DcmDspData_NetPara_DCM_E_PENDING (10U)
+
+#  define RTE_E_DataServices_DcmDspData_NetPara_E_NOT_OK (1U)
+
+#  define RTE_E_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_DCM_E_FORCE_RCRRP (12U)
+
+#  define RTE_E_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_DCM_E_PENDING (10U)
+
+#  define RTE_E_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_E_NOT_OK (1U)
 # endif /* !defined(RTE_CORE) */
 
 # ifdef __cplusplus
@@ -125,6 +183,12 @@ FUNC(Std_ReturnType, Dcm_CODE) Dcm_SetActiveDiagnostic(boolean active); /* PRQA 
 
    MD_Rte_0786:  MISRA rule: Rule5.5
      Reason:     Same macro and idintifier names in first 63 characters are required to meet AUTOSAR spec.
+     Risk:       No functional risk.
+     Prevention: Not required.
+
+   MD_Rte_1330:  MISRA rule: Rule8.3
+     Reason:     The RTE Generator uses default names for parameter identifiers of port defined arguments of service modules.
+                 Therefore the parameter identifiers in the function declaration differs from those of the implementation of the BSW module.
      Risk:       No functional risk.
      Prevention: Not required.
 

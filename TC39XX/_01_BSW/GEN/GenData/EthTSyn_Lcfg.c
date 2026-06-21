@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTSyn_Lcfg.c
- *   Generation Time: 2026-05-31 10:45:38
+ *   Generation Time: 2026-06-19 21:41:31
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -246,7 +246,7 @@ CONST(EthTSyn_PdelayResponderType, ETHTSYN_CONST) EthTSyn_PdelayResponder[1] = {
 /*lint -restore */
 CONST(EthTSyn_PhysPortCfgType, ETHTSYN_CONST) EthTSyn_PhysPortCfg[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    DebounceTime                                        Referable Keys */
-  { /*     0 */           2u  /* 0.01s in MF-Cycles (5ms) */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0/EthTSynPortConfig, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN6/EthTSynPortConfig] */
+  { /*     0 */           2u  /* 0.01s in MF-Cycles (5ms) */ }   /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN6/EthTSynPortConfig, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0/EthTSynPortConfig] */
 };
 #define ETHTSYN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -471,7 +471,7 @@ VAR(EthTSyn_PdelayRespSmType, ETHTSYN_VAR_NOINIT) EthTSyn_PdelayRespSm[1];  /* P
 /*lint -restore */
 VAR(EthTSyn_PhysPortType, ETHTSYN_VAR_NOINIT) EthTSyn_PhysPort[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0/EthTSynPortConfig, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN6/EthTSynPortConfig] */
+  /*     0 */  /* [/ActiveEcuC/Eth/EthConfigSet/EthCtrlConfig_MAIN, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN6/EthTSynPortConfig, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0/EthTSynPortConfig] */
 
 #define ETHTSYN_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

@@ -86,7 +86,7 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rt
 //   EthTrcv_30_Tja1100_TransceiverInit(0, 0);
 //   EthTrcv_30_Tja1100_SetTransceiverMode(0, ETHTRCV_MODE_ACTIVE);
     ComM_RequestComMode(ComMConf_ComMUser_ComMUser_untagged, COMM_FULL_COMMUNICATION);
-
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Vlan1, COMM_FULL_COMMUNICATION);
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/
@@ -208,16 +208,16 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Runnable10ms(void) /* PRQA S 0624, 3206 */ 
 
     if ((Cdd_Core0_Task_10ms_Cnt % 100) == 0)
     {
-        uint8 SignalQuality;
-        Std_ReturnType ret = EthTrcv_30_Tja1100_GetPhySignalQuality(0, &SignalQuality);
-        if (ret == E_OK)
-        {
-            CDD_LOG_DEBUG("Post:SignalQuality=%d", SignalQuality);
-        }
-        else
-        {
-            CDD_LOG_ERROR("Post:get Signal Quality failed");
-        }
+        // uint8 SignalQuality;
+        // Std_ReturnType ret = EthTrcv_30_Tja1100_GetPhySignalQuality(0, &SignalQuality);
+        // if (ret == E_OK)
+        // {
+        //     CDD_LOG_DEBUG("Post:SignalQuality=%d", SignalQuality);
+        // }
+        // else
+        // {
+        //     CDD_LOG_ERROR("Post:get Signal Quality failed");
+        // }
 
         // EthTrcv_BaudRateType BaudRate;
         // ret = EthTrcv_30_Tja1100_GetBaudRate(0, &BaudRate);

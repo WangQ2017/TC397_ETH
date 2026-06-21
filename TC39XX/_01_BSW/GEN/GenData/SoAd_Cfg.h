@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: SoAd_Cfg.h
- *   Generation Time: 2026-05-30 23:08:13
+ *   Generation Time: 2026-06-18 21:32:22
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -51,7 +51,11 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection            0u
+#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection            4u
+#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_DOIP_UDP_ANY_remote 2u
+#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_DOIP_UDP_Broad__255_255_255_255_13400_remote 3u
+#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_0 0u
+#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_1 1u
 /**\} */
 
 /**********************************************************************************************************************
@@ -67,8 +71,12 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_TimeSyncStatus_Tx          0u
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_udplog_Tx                  1u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TCP_DATA0_TX          1u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TCP_DATA1_TX          2u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TEST_EQUIPMENT_REQUEST_Tx 0u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_UDP_DISCOVERY_Tx      3u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_TimeSyncStatus_Tx          4u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_udplog_Tx                  5u
 /**\} */
 
 /**********************************************************************************************************************
@@ -76,6 +84,18 @@
  *********************************************************************************************************************/
 
 
+
+/**
+ * \defgroup SoAdHandleIds Handle IDs.
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest              0u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_1            2u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_001          1u
+/**\} */
 
 /**********************************************************************************************************************
  *  SYMBOLIC NAME DEFINES (EXTERNAL USE): ROUTING GROUP
@@ -157,8 +177,8 @@
 #define SOAD_SINGLE_MAIN_FUNCTION               STD_ON
 #define SOAD_TX_DYN_LEN                         STD_OFF
 #define SOAD_IPV6                               STD_OFF
-#define SOAD_TCP                                STD_OFF
-#define SOAD_DHCPV4_CLIENT_ENABLED              STD_OFF
+#define SOAD_TCP                                STD_ON
+#define SOAD_DHCPV4_CLIENT_ENABLED              STD_ON
 #define SOAD_DHCPV6_CLIENT_ENABLED              STD_OFF
 #define SOAD_SOCKET_REPORT_ERROR_ENABLED        STD_OFF
 

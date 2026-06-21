@@ -147,6 +147,12 @@
         <Splitter File=".\Config\ECUC\TC397_BSW_Com_Com_ecuc.arxml">
             <Module Name="Com"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_DoIP_DoIP_ecuc.arxml">
+            <Module Name="DoIP"/>
+        </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Dcm_Dcm_ecuc.arxml">
+            <Module Name="Dcm"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
@@ -424,7 +430,7 @@
                 </Settings>
             </Settings>
             <Settings Name="com.vector.cfg.gen.core.gencore.internal.aov.AutomaticOnDemandValidationConfigurationService">
-                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAKc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQABUUyRVBXdAAJL01JQ1JPU0FSc3EAfgAI&#xA;dAADQ3NtcQB+AAxzcQB+AAh0AARVYXJ0dAARL0FVUklYMkcvRWN1Y0RlZnNzcQB+AAh0AANGbHNx&#xA;AH4AEXNxAH4ACHQAB01jYWxMaWJxAH4AEXNxAH4ACHQAA0Rpb3EAfgARc3EAfgAIdAAFQ3J5SWZx&#xA;AH4ADHNxAH4ACHQAA01jdXEAfgARc3EAfgAIdAAGQ3J5cHRvdAAZL01JQ1JPU0FSL0NyeXB0b18z&#xA;MF9MaWJDdnNxAH4ACHQAA0lycXEAfgAR" Name="Data"/>
+                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAKc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQABkNyeXB0b3QAGS9NSUNST1NBUi9Dcnlw&#xA;dG9fMzBfTGliQ3ZzcQB+AAh0AANNY3V0ABEvQVVSSVgyRy9FY3VjRGVmc3NxAH4ACHQAA0NzbXQA&#xA;CS9NSUNST1NBUnNxAH4ACHQABFVhcnRxAH4AD3NxAH4ACHQAA0lycXEAfgAPc3EAfgAIdAAHTWNh&#xA;bExpYnEAfgAPc3EAfgAIdAAFRTJFUFdxAH4AEnNxAH4ACHQAA0Rpb3EAfgAPc3EAfgAIdAAFQ3J5&#xA;SWZxAH4AEnNxAH4ACHQAA0Zsc3EAfgAP" Name="Data"/>
             </Settings>
             <Settings Name="com.vector.cfg.gui.pse.pages.generators">
                 <Settings Name="BuildVipProject"/>
@@ -446,7 +452,7 @@
     </Miscellaneous>
     <SwctGeneration>
         <Component Name="Cdd_Nm" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
-        <Component Name="Cdd_Core0" GenerationEnabled="true" TargetFolder="..\TC39XX\_02_CDD"/>
+        <Component Name="Cdd_Core0" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
         <Component Name="Cdd_Core1" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
         <Component Name="Cdd_Core2" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
         <Component Name="Cdd_Core3" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
@@ -457,7 +463,8 @@
         <Component Name="window_core1" GenerationEnabled="true"/>
         <Component Name="Cdd_log" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD"/>
         <Component Name="Cdd_Log" GenerationEnabled="false"/>
-        <Component Name="Cdd_StbM" GenerationEnabled="true" TargetFolder="..\TC39XX\_02_CDD\cdd_stbm"/>
+        <Component Name="Cdd_StbM" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD\cdd_stbm"/>
         <Component Name="Cdd_PPS" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD\cdd_pps"/>
+        <Component Name="Cdd_UDS" GenerationEnabled="true" TargetFolder="..\TC39XX\_02_CDD\cdd_uds"/>
     </SwctGeneration>
 </ProjectAssistant>

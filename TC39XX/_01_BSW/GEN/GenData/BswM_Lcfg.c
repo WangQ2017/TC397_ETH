@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Lcfg.c
- *   Generation Time: 2026-05-31 09:02:44
+ *   Generation Time: 2026-06-18 21:32:24
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -193,6 +193,7 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ESH_PostRunToP
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ExitPostRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_PrepShutdownToWaitForNvM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_INIT_AL_Initialize(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ExitRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 /*! \} */ /* End of sharing description for BswMActionListFunctions */
 #define BswM_ActionList_ESH_AL_PostRunToPrepShutdown BswM_ActionList_ESH_AL_WakeupToPrep
 #define BswM_ActionList_ESH_AL_InitToWakeup BswM_ActionList_ESH_AL_WaitForNvMWakeup
@@ -227,6 +228,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PostRunToPrepNested(Bs
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PostRunNested(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PostRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PrepToWait(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_RunToPostRunNested(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx);
 /*! \} */ /* End of sharing description for BswMRuleFunctions */
 /*! \} */ /* End of group BswMRuleFunctions */
 /* PRQA L:FUNCTIONDECLARATIONS */
@@ -297,7 +299,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PrepToWait(BswM_PCPart
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[12] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[13] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    FctPtr                                                 Comment                   Referable Keys */
   { /*     0 */ BswM_ActionList_ESH_AL_RunToPostRun             },  /* [Priority: 0] */  /* [AL_ESH_AL_RunToPostRun] */
   { /*     1 */ BswM_ActionList_ESH_AL_WaitForNvMToShutdown     },  /* [Priority: 0] */  /* [AL_ESH_AL_WaitForNvMToShutdown] */
@@ -310,7 +312,32 @@ CONST(BswM_ActionListsType, BSWM_CONST) BswM_ActionLists[12] = {  /* PRQA S 1514
   { /*     8 */ BswM_ActionList_ESH_AL_PostRunToRun             },  /* [Priority: 0] */  /* [AL_ESH_AL_PostRunToRun] */
   { /*     9 */ BswM_ActionList_ESH_AL_ExitPostRun              },  /* [Priority: 0] */  /* [AL_ESH_AL_ExitPostRun] */
   { /*    10 */ BswM_ActionList_ESH_AL_PrepShutdownToWaitForNvM },  /* [Priority: 0] */  /* [AL_ESH_AL_PrepShutdownToWaitForNvM] */
-  { /*    11 */ BswM_ActionList_INIT_AL_Initialize              }   /* [Priority: 0] */  /* [AL_INIT_AL_Initialize] */
+  { /*    11 */ BswM_ActionList_INIT_AL_Initialize              },  /* [Priority: 0] */  /* [AL_INIT_AL_Initialize] */
+  { /*    12 */ BswM_ActionList_ESH_AL_ExitRun                  }   /* [Priority: 0] */  /* [AL_ESH_AL_ExitRun] */
+};
+#define BSWM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  BswM_ComMChannelMapping
+**********************************************************************************************************************/
+/** 
+  \var    BswM_ComMChannelMapping
+  \brief  Maps the external id of BswMComMIndication to an internal id and references immediate request ports.
+  \details
+  Element       Description
+  ExternalId    External id of BswMComMIndication.
+*/ 
+#define BSWM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(BswM_ComMChannelMappingType, BSWM_CONST) BswM_ComMChannelMapping[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    ExternalId                                       Referable Keys */
+  { /*     0 */ ComMConf_ComMChannel_ComMChannel_Vlan1    },  /* [COMM_CHANNEL_0, MRP_ESH_ComMIndication_ComMChannel_Vlan1] */
+  { /*     1 */ ComMConf_ComMChannel_ComMChannel_untagged }   /* [COMM_CHANNEL_1, MRP_ESH_ComMIndication_ComMChannel_untagged] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -339,6 +366,33 @@ CONST(BswM_DeferredRulesType, BSWM_CONST) BswM_DeferredRules[7] = {  /* PRQA S 1
   { /*     4 */       4u },  /* [R_ESH_WakeupToRun] */
   { /*     5 */       8u },  /* [R_ESH_PostRun] */
   { /*     6 */       9u }   /* [R_ESH_PrepToWait] */
+};
+#define BSWM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  BswM_GenericMapping
+**********************************************************************************************************************/
+/** 
+  \var    BswM_GenericMapping
+  \brief  Maps the external id of BswMGenericRequest to an internal id and references immediate request ports.
+  \details
+  Element                  Description
+  ExternalId               External id of BswMGenericRequest.
+  ImmediateUserEndIdx      the end index of the 0:n relation pointing to BswM_ImmediateUser
+  ImmediateUserStartIdx    the start index of the 0:n relation pointing to BswM_ImmediateUser
+  InitValue                Initialization value of port.
+*/ 
+#define BSWM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(BswM_GenericMappingType, BSWM_CONST) BswM_GenericMapping[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    ExternalId                            ImmediateUserEndIdx                          ImmediateUserStartIdx                          InitValue                                                            Referable Keys */
+  { /*     0 */ BSWM_GENERIC_ESH_ComMPendingRequests, BSWM_NO_IMMEDIATEUSERENDIDXOFGENERICMAPPING, BSWM_NO_IMMEDIATEUSERSTARTIDXOFGENERICMAPPING, BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST },  /* [GENERIC_0, MRP_ESH_ComMPendingRequests] */
+  { /*     1 */ BSWM_GENERIC_ESH_State              ,                                          1u,                                            0u, BSWM_GENERICVALUE_ESH_State_ESH_INIT                          }   /* [GENERIC_1, MRP_ESH_State] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -416,18 +470,19 @@ CONST(BswM_PartitionIdentifiersType, BSWM_CONST) BswM_PartitionIdentifiers[1] = 
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[10] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    Id  RuleStatesIdx  FctPtr                                   Referable Keys */
-  { /*     0 */ 5u,            0u, BswM_Rule_ESH_RunToPostRun        },  /* [R_ESH_RunToPostRun, MRP_ESH_State, MRP_ESH_ModeNotification, MRP_ESH_RunRequest_0, MRP_ESH_RunRequest_1, MRP_ESH_SelfRunRequestTimer] */
-  { /*     1 */ 6u,            1u, BswM_Rule_ESH_WaitToShutdown      },  /* [R_ESH_WaitToShutdown, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents] */
-  { /*     2 */ 8u,            2u, BswM_Rule_ESH_WakeupToPrep        },  /* [R_ESH_WakeupToPrep, MRP_ESH_State, MRP_ESH_EcuM_GetPendingWakeupEvents, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ModeNotification] */
-  { /*     3 */ 7u,            3u, BswM_Rule_ESH_WaitToWakeup        },  /* [R_ESH_WaitToWakeup, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents] */
-  { /*     4 */ 9u,            4u, BswM_Rule_ESH_WakeupToRun         },  /* [R_ESH_WakeupToRun, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ModeNotification] */
-  { /*     5 */ 0u,            5u, BswM_Rule_ESH_InitToWakeup        },  /* [R_ESH_InitToWakeup, MRP_ESH_State] */
-  { /*     6 */ 3u,            6u, BswM_Rule_ESH_PostRunToPrepNested },  /* [R_ESH_PostRunToPrepNested] */
-  { /*     7 */ 2u,            7u, BswM_Rule_ESH_PostRunNested       },  /* [R_ESH_PostRunNested] */
-  { /*     8 */ 1u,            8u, BswM_Rule_ESH_PostRun             },  /* [R_ESH_PostRun, MRP_ESH_State, MRP_ESH_ModeNotification] */
-  { /*     9 */ 4u,            9u, BswM_Rule_ESH_PrepToWait          }   /* [R_ESH_PrepToWait, MRP_ESH_State, MRP_ESH_ModeNotification] */
+CONST(BswM_RulesType, BSWM_CONST) BswM_Rules[11] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    Id   RuleStatesIdx  FctPtr                                   Referable Keys */
+  { /*     0 */  5u,            0u, BswM_Rule_ESH_RunToPostRun        },  /* [R_ESH_RunToPostRun, MRP_ESH_State, MRP_ESH_ModeNotification, MRP_ESH_ComMIndication_ComMChannel_untagged, MRP_ESH_ComMIndication_ComMChannel_Vlan1, MRP_ESH_RunRequest_0, MRP_ESH_RunRequest_1, MRP_ESH_SelfRunRequestTimer] */
+  { /*     1 */  7u,            1u, BswM_Rule_ESH_WaitToShutdown      },  /* [R_ESH_WaitToShutdown, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests] */
+  { /*     2 */  9u,            2u, BswM_Rule_ESH_WakeupToPrep        },  /* [R_ESH_WakeupToPrep, MRP_ESH_State, MRP_ESH_EcuM_GetPendingWakeupEvents, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests, MRP_ESH_ModeNotification] */
+  { /*     3 */  8u,            3u, BswM_Rule_ESH_WaitToWakeup        },  /* [R_ESH_WaitToWakeup, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests] */
+  { /*     4 */ 10u,            4u, BswM_Rule_ESH_WakeupToRun         },  /* [R_ESH_WakeupToRun, MRP_ESH_State, MRP_ESH_EcuM_GetValidatedWakeupEvents, MRP_ESH_ComMPendingRequests, MRP_ESH_ModeNotification] */
+  { /*     5 */  0u,            5u, BswM_Rule_ESH_InitToWakeup        },  /* [R_ESH_InitToWakeup, MRP_ESH_State] */
+  { /*     6 */  3u,            6u, BswM_Rule_ESH_PostRunToPrepNested },  /* [R_ESH_PostRunToPrepNested] */
+  { /*     7 */  2u,            7u, BswM_Rule_ESH_PostRunNested       },  /* [R_ESH_PostRunNested] */
+  { /*     8 */  1u,            8u, BswM_Rule_ESH_PostRun             },  /* [R_ESH_PostRun, MRP_ESH_State, MRP_ESH_ModeNotification] */
+  { /*     9 */  4u,            9u, BswM_Rule_ESH_PrepToWait          },  /* [R_ESH_PrepToWait, MRP_ESH_State, MRP_ESH_ModeNotification] */
+  { /*    10 */  6u,           10u, BswM_Rule_ESH_RunToPostRunNested  }   /* [R_ESH_RunToPostRunNested] */
 };
 #define BSWM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -502,8 +557,30 @@ VAR(BswM_ActionListQueueUType, BSWM_VAR_NOINIT) BswM_ActionListQueue;  /* PRQA S
   /*     9 */  /* [AL_ESH_AL_ExitPostRun] */
   /*    10 */  /* [AL_ESH_AL_PrepShutdownToWaitForNvM] */
   /*    11 */  /* [AL_INIT_AL_Initialize] */
+  /*    12 */  /* [AL_ESH_AL_ExitRun] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  BswM_ComMChannelState
+**********************************************************************************************************************/
+/** 
+  \var    BswM_ComMChannelState
+  \brief  Variable to store current mode of BswMComMIndication mode request ports.
+*/ 
+#define BSWM_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(ComM_ModeType, BSWM_VAR_NOINIT) BswM_ComMChannelState[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [COMM_CHANNEL_0, MRP_ESH_ComMIndication_ComMChannel_Vlan1] */
+  /*     1 */  /* [COMM_CHANNEL_1, MRP_ESH_ComMIndication_ComMChannel_untagged] */
+
+#define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -532,9 +609,10 @@ VAR(BswM_ForcedActionListPriorityType, BSWM_VAR_NOINIT) BswM_ForcedActionListPri
 /*lint -save -esym(961, 19.1) */
 #include "BswM_vMemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(BswM_ModeType, BSWM_VAR_NOINIT) BswM_GenericState[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(BswM_ModeType, BSWM_VAR_NOINIT) BswM_GenericState[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [GENERIC_0, MRP_ESH_State] */
+  /*     0 */  /* [GENERIC_0, MRP_ESH_ComMPendingRequests] */
+  /*     1 */  /* [GENERIC_1, MRP_ESH_State] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -567,7 +645,7 @@ VAR(BswM_InitializedType, BSWM_VAR_NOINIT) BswM_Initialized;  /* PRQA S 1514, 15
 /*lint -restore */
 VAR(BswM_ModeRequestQueueType, BSWM_VAR_NOINIT) BswM_ModeRequestQueue[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [MRP_ESH_State, GENERIC_0] */
+  /*     0 */  /* [MRP_ESH_State, GENERIC_1] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -623,6 +701,7 @@ VAR(BswM_RuleStatesUType, BSWM_VAR_NOINIT) BswM_RuleStates;  /* PRQA S 0759, 151
   /*     7 */  /* [R_ESH_PostRunNested] */
   /*     8 */  /* [R_ESH_PostRun] */
   /*     9 */  /* [R_ESH_PrepToWait] */
+  /*    10 */  /* [R_ESH_RunToPostRunNested] */
 
 #define BSWM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -803,10 +882,11 @@ BSWM_LOCAL FUNC(void, BSWM_CODE) BswM_SwcModeRequestUpdateFct_BSWM_SINGLEPARTITI
  *********************************************************************************************************************/
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_RunToPostRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
+  ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_untagged, FALSE);
+  ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan1, FALSE);
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   EcuM_ClearValidatedWakeupEvent(ECUM_WKSOURCE_ALL_SOURCES);
   /*lint -restore */
-  ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_untagged, FALSE);
   BswM_ESH_OnEnterPostRun();
   BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_POSTRUN;
   BswM_RequestMode(BSWM_GENERIC_ESH_State, BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN);
@@ -856,8 +936,9 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_WaitForNvMWake
  *********************************************************************************************************************/
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_WakeupToRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
-  BswM_UpdateTimer(partitionIdx, BSWM_TMR_ESH_SelfRunRequestTimer, 10uL);
   ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_untagged, TRUE);
+  ComM_CommunicationAllowed(ComMConf_ComMChannel_ComMChannel_Vlan1, TRUE);
+  BswM_UpdateTimer(partitionIdx, BSWM_TMR_ESH_SelfRunRequestTimer, 10uL);
   BswM_ESH_OnEnterRun();
   BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_ESH_Mode_RUN;
   BswM_RequestMode(BSWM_GENERIC_ESH_State, BSWM_GENERICVALUE_ESH_State_ESH_RUN);
@@ -880,7 +961,14 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ESH_PostRunToP
  *********************************************************************************************************************/
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ExitPostRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  SchM_Enter_BswM_BSWM_EXCLUSIVE_AREA_0();
+  /*lint -restore */
+  ESH_ComM_CheckPendingRequests();
   (void)BswM_Action_RuleHandler(BSWM_ID_RULE_ESH_PostRunNested, partitionIdx);
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  SchM_Exit_BswM_BSWM_EXCLUSIVE_AREA_0();
+  /*lint -restore */
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
   return E_OK;
 }/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -890,6 +978,7 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ExitPostRun(Bs
  *********************************************************************************************************************/
 BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_PrepShutdownToWaitForNvM(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
 {
+  ESH_ComM_CheckPendingRequests();
   BswM_ESH_OnEnterWaitForNvm();
   BswM_RequestMode(BSWM_GENERIC_ESH_State, BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM);
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
@@ -929,6 +1018,9 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_INIT_AL_Initialize(Bs
   EthSM_Init(EthSM_Config_Ptr);
   /*lint -restore */
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  DoIP_Init(DoIP_Config_Ptr);
+  /*lint -restore */
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   TcpIp_Init(TcpIp_Config_Ptr);
   /*lint -restore */
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
@@ -944,7 +1036,27 @@ BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_INIT_AL_Initialize(Bs
   /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
   ComM_Init();
   /*lint -restore */
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  Dcm_Init(NULL_PTR);
+  /*lint -restore */
   BswM_Action_EthTrcvDebug();
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return E_OK;
+}/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
+
+/**********************************************************************************************************************
+ *  BswM_ActionList_ESH_AL_ExitRun
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(Std_ReturnType, BSWM_CODE) BswM_ActionList_ESH_AL_ExitRun(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  SchM_Enter_BswM_BSWM_EXCLUSIVE_AREA_0();
+  /*lint -restore */
+  ESH_ComM_CheckPendingRequests();
+  (void)BswM_Action_RuleHandler(BSWM_ID_RULE_ESH_RunToPostRunNested, partitionIdx);
+  /*lint -save -e534 *//* PRQA S 3109, 3200 1 */ /* MD_MSR_14.3, MD_BSWM_3200 */
+  SchM_Exit_BswM_BSWM_EXCLUSIVE_AREA_0();
+  /*lint -restore */
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
   return E_OK;
 }/* PRQA S 6010, 6030, 6050 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL */
@@ -960,10 +1072,10 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_RunToPostRun(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_RunToPostRunTransition. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if(((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_RUN)) && (((Request_ESH_RunRequest_0_requestedMode == RELEASED) && (Request_ESH_RunRequest_1_requestedMode == RELEASED)) && (BswM_GetTimerState(0, 0u) == BSWM_TIMER_EXPIRED)))
+  if(((BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_RUN)) && (((BswM_GetComMChannelState(1, 0u) == COMM_NO_COMMUNICATION) && (BswM_GetComMChannelState(0, 0u) == COMM_NO_COMMUNICATION)) && ((Request_ESH_RunRequest_0_requestedMode == RELEASED) && (Request_ESH_RunRequest_1_requestedMode == RELEASED)) && (BswM_GetTimerState(0, 0u) == BSWM_TIMER_EXPIRED)))
   {
-    /* Return conditional action list BswM_ActionList_ESH_AL_RunToPostRun. */
-    retVal = BSWM_ID_AL_ESH_AL_RunToPostRun;
+    /* Return conditional action list BswM_ActionList_ESH_AL_ExitRun. */
+    retVal = BSWM_ID_AL_ESH_AL_ExitRun;
   }
   /* No false action list configured. */
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
@@ -977,7 +1089,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WaitToShutdown(BswM_PC
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WaitForNvMToShutdown. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && (EcuM_GetValidatedWakeupEvents() == 0u))
+  if((BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && ((EcuM_GetValidatedWakeupEvents() == 0u) && (BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST)))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WaitForNvMToShutdown. */
     retVal = BSWM_ID_AL_ESH_AL_WaitForNvMToShutdown;
@@ -994,7 +1106,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WakeupToPrep(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WakeupToPrepShutdown. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && (EcuM_GetPendingWakeupEvents() == 0u) && (EcuM_GetValidatedWakeupEvents() == 0u) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
+  if((BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && (EcuM_GetPendingWakeupEvents() == 0u) && ((EcuM_GetValidatedWakeupEvents() == 0u) && (BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST)) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WakeupToPrep. */
     retVal = BSWM_ID_AL_ESH_AL_WakeupToPrep;
@@ -1011,7 +1123,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WaitToWakeup(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WaitForNvMToWakeup. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && (EcuM_GetValidatedWakeupEvents() != 0u))
+  if((BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAIT_FOR_NVM) && ((EcuM_GetValidatedWakeupEvents() != 0u) || (BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST)))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WaitForNvMWakeup. */
     retVal = BSWM_ID_AL_ESH_AL_WaitForNvMWakeup;
@@ -1028,7 +1140,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_WakeupToRun(BswM_PCPar
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_WakeupToRun. */ /* PRQA S 3415 1 */ /* MD_BSWM_3415 */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && (EcuM_GetValidatedWakeupEvents() != 0u) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
+  if((BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_WAKEUP) && ((EcuM_GetValidatedWakeupEvents() != 0u) || (BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST)) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_WAKEUP))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_WakeupToRun. */
     retVal = BSWM_ID_AL_ESH_AL_WakeupToRun;
@@ -1045,7 +1157,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_InitToWakeup(BswM_PCPa
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_InitToWakeup. */
-  if(BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_INIT)
+  if(BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_INIT)
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_InitToWakeup. */
     retVal = BSWM_ID_AL_ESH_AL_InitToWakeup;
@@ -1079,7 +1191,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PostRunNested(BswM_PCP
 {
   BswM_HandleType retVal;
   /* Evaluate logical expression ESH_LE_PostRunToRun. */
-  if(((Request_ESH_RunRequest_0_requestedMode == REQUESTED) || (Request_ESH_RunRequest_1_requestedMode == REQUESTED)) || (EcuM_GetValidatedWakeupEvents() != 0u))
+  if(((Request_ESH_RunRequest_0_requestedMode == REQUESTED) || (Request_ESH_RunRequest_1_requestedMode == REQUESTED)) || ((EcuM_GetValidatedWakeupEvents() != 0u) || (BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST)))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_PostRunToRun. */
     retVal = BSWM_ID_AL_ESH_AL_PostRunToRun;
@@ -1100,7 +1212,7 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PostRun(BswM_PCPartiti
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_PostRun. */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_POSTRUN))
+  if((BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_POST_RUN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_POSTRUN))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_ExitPostRun. */
     retVal = BSWM_ID_AL_ESH_AL_ExitPostRun;
@@ -1117,10 +1229,27 @@ BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_PrepToWait(BswM_PCPart
 {
   BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
   /* Evaluate logical expression ESH_LE_PrepShutdownToWaitForNvM. */
-  if((BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_PREP_SHUTDOWN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_SHUTDOWN))
+  if((BswM_GetGenericState(1, 0u) == BSWM_GENERICVALUE_ESH_State_ESH_PREP_SHUTDOWN) && (BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode == RTE_MODE_ESH_Mode_SHUTDOWN))
   {
     /* Return conditional action list BswM_ActionList_ESH_AL_PrepShutdownToWaitForNvM. */
     retVal = BSWM_ID_AL_ESH_AL_PrepShutdownToWaitForNvM;
+  }
+  /* No false action list configured. */
+  BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */
+  return retVal;
+}
+
+/**********************************************************************************************************************
+ *  BswM_Rule_ESH_RunToPostRunNested
+ *********************************************************************************************************************/
+BSWM_LOCAL FUNC(BswM_HandleType, BSWM_CODE) BswM_Rule_ESH_RunToPostRunNested(BswM_PCPartitionConfigIdxOfPartitionIdentifiersType partitionIdx)
+{
+  BswM_HandleType retVal = BSWM_NO_ACTIONLIST(partitionIdx);
+  /* Evaluate logical expression ESH_LE_ComMNoPendingRequests. */
+  if(BswM_GetGenericState(0, 0u) == BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST)
+  {
+    /* Return conditional action list BswM_ActionList_ESH_AL_RunToPostRun. */
+    retVal = BSWM_ID_AL_ESH_AL_RunToPostRun;
   }
   /* No false action list configured. */
   BSWM_DUMMY_STATEMENT(partitionIdx); /* PRQA S 1338, 2983, 3112 */ /* MD_MSR_DummyStmt */

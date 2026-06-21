@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2026-06-07 20:59:04
+ *   Generation Time: 2026-06-18 21:32:21
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -121,14 +121,14 @@
 #define COMM_EXISTS_ONLY_NONE_NMTYPEOFCHANNEL           STD_ON
 
 #define COMM_FULL_COMM_REQUEST_NOTIF                    STD_OFF
-#define COMM_MAX_NUMBER_OF_USERS                        1u
-#define COMM_DCM_INDICATION                             STD_OFF
+#define COMM_MAX_NUMBER_OF_USERS                        2u
+#define COMM_DCM_INDICATION                             STD_ON
 #define COMM_USERMODENOTIFUNC_PNC_USER_ONLY             STD_ON
 
 #define COMM_SYNCHRONOUS_WAKE_UP                        STD_ON
 #define COMM_EXTENDED_RAM_CHECK                         STD_OFF
 
-#define COMM_ACTIVE_CHANNEL                             1u
+#define COMM_ACTIVE_CHANNEL                             2u
 #define COMM_NVM_SUPPORT                                STD_OFF
 
 
@@ -137,6 +137,7 @@
     &&&~ USER HANDLES
  ----------------------------------------------------------------------------- */
 
+#define ComMConf_ComMUser_ComMUser_Vlan1    1u 
 #define ComMConf_ComMUser_ComMUser_untagged 0u 
 
 
@@ -145,6 +146,7 @@
  ----------------------------------------------------------------------------- */
  
 #define ComMConf_ComMChannel_ComMChannel_untagged 0u 
+#define ComMConf_ComMChannel_ComMChannel_Vlan1    1u 
 
 
 /* -----------------------------------------------------------------------------
@@ -191,7 +193,7 @@
 #define COMM_USERREQFULLCOMENDIDXOFCHANNELPB                          STD_ON
 #define COMM_USERREQFULLCOMSTARTIDXOFCHANNELPB                        STD_ON
 #define COMM_USERREQFULLCOMUSEDOFCHANNELPB                            STD_ON
-#define COMM_DCMREQUESTACTIVE                                         STD_OFF  /**< Deactivateable: 'ComM_DcmRequestActive' Reason: 'Keep Awake Channel support or Dcm support is disabled' */
+#define COMM_DCMREQUESTACTIVE                                         STD_ON
 #define COMM_FINALMAGICNUMBER                                         STD_OFF  /**< Deactivateable: 'ComM_FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define COMM_FULLCOMREQUESTERS                                        STD_OFF  /**< Deactivateable: 'ComM_FullComRequesters' Reason: 'Deactivated because no channel had ComMFullCommRequestNoficiation enabled' */
 #define COMM_INITDATAHASHCODE                                         STD_OFF  /**< Deactivateable: 'ComM_InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
@@ -230,6 +232,7 @@
 #define COMM_PNCSIGNALVALUES                                          STD_OFF  /**< Deactivateable: 'ComM_PncSignalValues' Reason: 'the array is deactivated because the size is 0 in all variants and the piece of data is in the configuration class: PRE_COMPILE' */
 #define COMM_SIZEOFCHANNEL                                            STD_ON
 #define COMM_SIZEOFCHANNELPB                                          STD_ON
+#define COMM_SIZEOFDCMREQUESTACTIVE                                   STD_ON
 #define COMM_SIZEOFUSER                                               STD_ON
 #define COMM_SIZEOFUSERBYTEMASK                                       STD_ON
 #define COMM_SIZEOFUSERREQFULLCOM                                     STD_ON
@@ -257,10 +260,12 @@
 #define COMM_PCCONFIG                                                 STD_ON
 #define COMM_CHANNELOFPCCONFIG                                        STD_ON
 #define COMM_CHANNELPBOFPCCONFIG                                      STD_ON
+#define COMM_DCMREQUESTACTIVEOFPCCONFIG                               STD_ON
 #define COMM_FINALMAGICNUMBEROFPCCONFIG                               STD_OFF  /**< Deactivateable: 'ComM_PCConfig.FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
 #define COMM_INITDATAHASHCODEOFPCCONFIG                               STD_OFF  /**< Deactivateable: 'ComM_PCConfig.InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
 #define COMM_SIZEOFCHANNELOFPCCONFIG                                  STD_ON
 #define COMM_SIZEOFCHANNELPBOFPCCONFIG                                STD_ON
+#define COMM_SIZEOFDCMREQUESTACTIVEOFPCCONFIG                         STD_ON
 #define COMM_SIZEOFUSERBYTEMASKOFPCCONFIG                             STD_ON
 #define COMM_SIZEOFUSEROFPCCONFIG                                     STD_ON
 #define COMM_SIZEOFUSERREQFULLCOMOFPCCONFIG                           STD_ON
@@ -343,19 +348,20 @@
 #define COMM_ISDEF_INHIBITIONINITVALUEOFCHANNEL                       STD_ON
 #define COMM_ISDEF_NMTYPEOFCHANNEL                                    STD_ON
 #define COMM_ISDEF_WAKEUPSTATEOFCHANNEL                               STD_ON
-#define COMM_ISDEF_USERREQFULLCOMENDIDXOFCHANNELPB                    STD_ON
-#define COMM_ISDEF_USERREQFULLCOMSTARTIDXOFCHANNELPB                  STD_ON
+#define COMM_ISDEF_USERREQFULLCOMENDIDXOFCHANNELPB                    STD_OFF
+#define COMM_ISDEF_USERREQFULLCOMSTARTIDXOFCHANNELPB                  STD_OFF
 #define COMM_ISDEF_USERREQFULLCOMUSEDOFCHANNELPB                      STD_ON
 #define COMM_ISDEF_PNCUSEROFUSER                                      STD_OFF
-#define COMM_ISDEF_USERBYTEMASKENDIDXOFUSER                           STD_ON
-#define COMM_ISDEF_USERBYTEMASKSTARTIDXOFUSER                         STD_ON
+#define COMM_ISDEF_USERBYTEMASKENDIDXOFUSER                           STD_OFF
+#define COMM_ISDEF_USERBYTEMASKSTARTIDXOFUSER                         STD_OFF
 #define COMM_ISDEF_USERBYTEMASKUSEDOFUSER                             STD_ON
-#define COMM_ISDEF_CHANNELOFUSERBYTEMASK                              STD_ON
+#define COMM_ISDEF_CHANNELOFUSERBYTEMASK                              STD_OFF
 #define COMM_ISDEF_CLEARMASKOFUSERBYTEMASK                            STD_ON
 #define COMM_ISDEF_SETMASKOFUSERBYTEMASK                              STD_ON
-#define COMM_ISDEF_USERREQFULLCOMIDXOFUSERBYTEMASK                    STD_ON
+#define COMM_ISDEF_USERREQFULLCOMIDXOFUSERBYTEMASK                    STD_OFF
 #define COMM_ISDEF_CHANNELOFPCCONFIG                                  STD_ON
 #define COMM_ISDEF_CHANNELPBOFPCCONFIG                                STD_ON
+#define COMM_ISDEF_DCMREQUESTACTIVEOFPCCONFIG                         STD_ON
 #define COMM_ISDEF_USERBYTEMASKOFPCCONFIG                             STD_ON
 #define COMM_ISDEF_USEROFPCCONFIG                                     STD_ON
 #define COMM_ISDEF_USERREQFULLCOMOFPCCONFIG                           STD_ON
@@ -373,19 +379,20 @@
 #define COMM_EQ2_INHIBITIONINITVALUEOFCHANNEL                         0x00u
 #define COMM_EQ2_NMTYPEOFCHANNEL                                      COMM_NONE_NMTYPEOFCHANNEL
 #define COMM_EQ2_WAKEUPSTATEOFCHANNEL                                 COMM_FULL_COM_NETWORK_REQUESTED
-#define COMM_EQ2_USERREQFULLCOMENDIDXOFCHANNELPB                      1u
-#define COMM_EQ2_USERREQFULLCOMSTARTIDXOFCHANNELPB                    0u
+#define COMM_EQ2_USERREQFULLCOMENDIDXOFCHANNELPB                      
+#define COMM_EQ2_USERREQFULLCOMSTARTIDXOFCHANNELPB                    
 #define COMM_EQ2_USERREQFULLCOMUSEDOFCHANNELPB                        TRUE
 #define COMM_EQ2_PNCUSEROFUSER                                        
-#define COMM_EQ2_USERBYTEMASKENDIDXOFUSER                             1u
-#define COMM_EQ2_USERBYTEMASKSTARTIDXOFUSER                           0u
+#define COMM_EQ2_USERBYTEMASKENDIDXOFUSER                             
+#define COMM_EQ2_USERBYTEMASKSTARTIDXOFUSER                           
 #define COMM_EQ2_USERBYTEMASKUSEDOFUSER                               TRUE
-#define COMM_EQ2_CHANNELOFUSERBYTEMASK                                0u
+#define COMM_EQ2_CHANNELOFUSERBYTEMASK                                
 #define COMM_EQ2_CLEARMASKOFUSERBYTEMASK                              0xFEu
 #define COMM_EQ2_SETMASKOFUSERBYTEMASK                                0x01u
-#define COMM_EQ2_USERREQFULLCOMIDXOFUSERBYTEMASK                      0u
+#define COMM_EQ2_USERREQFULLCOMIDXOFUSERBYTEMASK                      
 #define COMM_EQ2_CHANNELOFPCCONFIG                                    ComM_Channel
 #define COMM_EQ2_CHANNELPBOFPCCONFIG                                  ComM_ChannelPb
+#define COMM_EQ2_DCMREQUESTACTIVEOFPCCONFIG                           ComM_DcmRequestActive.raw
 #define COMM_EQ2_USERBYTEMASKOFPCCONFIG                               ComM_UserByteMask
 #define COMM_EQ2_USEROFPCCONFIG                                       ComM_User
 #define COMM_EQ2_USERREQFULLCOMOFPCCONFIG                             ComM_UserReqFullCom
@@ -464,6 +471,18 @@ typedef uint8_least ComM_UserReqFullComIterType;
 */ 
 
 /** 
+  \defgroup  ComMPCIterableTypesWithSizeRelations  ComM Iterable Types With Size Relations (PRE_COMPILE)
+  \brief  These type definitions are used to iterate over a VAR based array with the same iterator as the related CONST array.
+  \{
+*/ 
+/**   \brief  type used to iterate ComM_DcmRequestActive */
+typedef ComM_ChannelIterType ComM_DcmRequestActiveIterType;
+
+/** 
+  \}
+*/ 
+
+/** 
   \defgroup  ComMPCValueTypes  ComM Value Types (PRE_COMPILE)
   \brief  These type definitions are used for value based data representations.
   \{
@@ -489,11 +508,17 @@ typedef uint8 ComM_UserReqFullComStartIdxOfChannelPbType;
 /**   \brief  value based type definition for ComM_UserReqFullComUsedOfChannelPb */
 typedef boolean ComM_UserReqFullComUsedOfChannelPbType;
 
+/**   \brief  value based type definition for ComM_DcmRequestActive */
+typedef boolean ComM_DcmRequestActiveType;
+
 /**   \brief  value based type definition for ComM_SizeOfChannel */
 typedef uint8 ComM_SizeOfChannelType;
 
 /**   \brief  value based type definition for ComM_SizeOfChannelPb */
 typedef uint8 ComM_SizeOfChannelPbType;
+
+/**   \brief  value based type definition for ComM_SizeOfDcmRequestActive */
+typedef uint8 ComM_SizeOfDcmRequestActiveType;
 
 /**   \brief  value based type definition for ComM_SizeOfUser */
 typedef uint8 ComM_SizeOfUserType;
@@ -553,20 +578,56 @@ typedef struct sComM_ChannelType
 /**   \brief  type used in ComM_ChannelPb */
 typedef struct sComM_ChannelPbType
 {
-  uint8 ComM_ChannelPbNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  ComM_UserReqFullComEndIdxOfChannelPbType UserReqFullComEndIdxOfChannelPb;  /**< the end index of the 0:n relation pointing to ComM_UserReqFullCom */
+  ComM_UserReqFullComStartIdxOfChannelPbType UserReqFullComStartIdxOfChannelPb;  /**< the start index of the 0:n relation pointing to ComM_UserReqFullCom */
 } ComM_ChannelPbType;
 
 /**   \brief  type used in ComM_User */
 typedef struct sComM_UserType
 {
   ComM_PncUserOfUserType PncUserOfUser;  /**< decides if a user is a partial network user or a direct channel user */
+  ComM_UserByteMaskEndIdxOfUserType UserByteMaskEndIdxOfUser;  /**< the end index of the 0:n relation pointing to ComM_UserByteMask */
+  ComM_UserByteMaskStartIdxOfUserType UserByteMaskStartIdxOfUser;  /**< the start index of the 0:n relation pointing to ComM_UserByteMask */
 } ComM_UserType;
 
 /**   \brief  type used in ComM_UserByteMask */
 typedef struct sComM_UserByteMaskType
 {
-  uint8 ComM_UserByteMaskNeverUsed;  /**< dummy entry for the structure in the configuration variant precompile which is not used by the code. */
+  ComM_ChannelOfUserByteMaskType ChannelOfUserByteMask;  /**< ID of the channel which is requested by this entry. */
+  ComM_UserReqFullComIdxOfUserByteMaskType UserReqFullComIdxOfUserByteMask;  /**< the index of the 1:1 relation pointing to ComM_UserReqFullCom */
 } ComM_UserByteMaskType;
+
+/** 
+  \}
+*/ 
+
+/** 
+  \defgroup  ComMPCSymbolicStructTypes  ComM Symbolic Struct Types (PRE_COMPILE)
+  \brief  These structs are used in unions to have a symbol based data representation style.
+  \{
+*/ 
+/**   \brief  type to be used as symbolic data element access to ComM_DcmRequestActive */
+typedef struct ComM_DcmRequestActiveStructSTag
+{
+  ComM_DcmRequestActiveType ComMChannel_0;
+  ComM_DcmRequestActiveType ComMChannel_1;
+} ComM_DcmRequestActiveStructSType;
+
+/** 
+  \}
+*/ 
+
+/** 
+  \defgroup  ComMPCUnionIndexAndSymbolTypes  ComM Union Index And Symbol Types (PRE_COMPILE)
+  \brief  These unions are used to access arrays in an index and symbol based style.
+  \{
+*/ 
+/**   \brief  type to access ComM_DcmRequestActive in an index and symbol based style. */
+typedef union ComM_DcmRequestActiveUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  ComM_DcmRequestActiveType raw[2];
+  ComM_DcmRequestActiveStructSType str;
+} ComM_DcmRequestActiveUType;
 
 /** 
   \}
@@ -582,6 +643,9 @@ typedef P2CONST(ComM_ChannelType, TYPEDEF, COMM_CONST) ComM_ChannelPtrType;
 
 /**   \brief  type used to point to ComM_ChannelPb */
 typedef P2CONST(ComM_ChannelPbType, TYPEDEF, COMM_CONST) ComM_ChannelPbPtrType;
+
+/**   \brief  type used to point to ComM_DcmRequestActive */
+typedef P2VAR(ComM_DcmRequestActiveType, TYPEDEF, COMM_VAR_NOINIT) ComM_DcmRequestActivePtrType;
 
 /**   \brief  type used to point to ComM_User */
 typedef P2CONST(ComM_UserType, TYPEDEF, COMM_CONST) ComM_UserPtrType;

@@ -148,6 +148,32 @@
                     </SW-DATA-DEF-PROPS-VARIANTS>
                   </SW-DATA-DEF-PROPS>
                 </IMPLEMENTATION-DATA-TYPE>
+                <IMPLEMENTATION-DATA-TYPE UUID="8e639e0e-9cd9-4186-8fda-d32edf05cacb">
+                  <SHORT-NAME>Dcm_Data8ByteType</SHORT-NAME>
+                  <CATEGORY>ARRAY</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-CALIBRATION-ACCESS>READ-ONLY</SW-CALIBRATION-ACCESS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <SUB-ELEMENTS>
+                    <IMPLEMENTATION-DATA-TYPE-ELEMENT UUID="fc5d763f-50df-4e78-b6bc-b85d7b93ea26">
+                      <SHORT-NAME>Dcm_Data8ByteTypeElement</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <ARRAY-SIZE>8</ARRAY-SIZE>
+                      <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE>
               </ELEMENTS>
               <AR-PACKAGES>
                 <AR-PACKAGE UUID="5d810fe6-a788-46b9-8cce-a43386e9ad41">
@@ -1388,6 +1414,213 @@
                     </APPLICATION-ERROR>
                   </POSSIBLE-ERRORS>
                 </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="0844f424-1039-465a-a353-711045286f3d">
+                  <SHORT-NAME>RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="DV:DerivedFromReferrables">
+                        <SDG GID="DV:DerivedFromReferrablesVariant">
+                          <SD GID="DV:InvariantValuesView"/>
+                          <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Dcm/DcmConfigSet/DcmDsp/DcmDspRoutine_0x250_SetPhyTxMode</SDX-REF>
+                          <SD GID="DV:DerivedFromReferrablesUUID">091e08ea-cf8d-4088-ac78-03dcd9b08a39</SD>
+                        </SDG>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="e1c157e4-5e4e-4d6f-ad38-88389390faa3">
+                      <SHORT-NAME>Start</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="2ebd9abb-56af-4a71-b2b9-fd5ce787e5f7">
+                          <SHORT-NAME>TxMode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="d5ba3572-202b-42bf-9727-eaecd2c4869a">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="f402d0d2-12a3-4e8a-aa27-43d8baa129af">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/DCM_E_FORCE_RCRRP</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="1bda15fd-8efb-4a32-9e06-9308ea678e1d">
+                      <SHORT-NAME>RequestResults</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="e926593d-8bb1-4bcd-b5ed-ec5f9cd23209">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="dc7e559a-abfb-4178-89b3-843169c004d5">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/DCM_E_FORCE_RCRRP</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="a1aae70e-ba2c-40cb-a4c2-315ae9038455">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="d3fc9af3-8744-41a2-8816-b1aafae3ae65">
+                      <SHORT-NAME>DCM_E_PENDING</SHORT-NAME>
+                      <ERROR-CODE>10</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="8b7c8e3b-537f-436a-8626-a9fba0602fc1">
+                      <SHORT-NAME>DCM_E_FORCE_RCRRP</SHORT-NAME>
+                      <ERROR-CODE>12</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
+                <CLIENT-SERVER-INTERFACE UUID="13015dea-0220-4dee-892e-856ad791fbf1">
+                  <SHORT-NAME>DataServices_DcmDspData_NetPara</SHORT-NAME>
+                  <IS-SERVICE>true</IS-SERVICE>
+                  <SERVICE-KIND>DIAGNOSTIC-COMMUNICATION-MANAGER</SERVICE-KIND>
+                  <OPERATIONS>
+                    <CLIENT-SERVER-OPERATION UUID="f80544fe-011a-4f6c-8087-1078e9cdd0d8">
+                      <SHORT-NAME>ReadData</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="a2c2cc0e-ba69-48ae-a615-35b4cbb07e15">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="84fbb1c4-d9f0-476b-9f5e-2a82ce105be0">
+                          <SHORT-NAME>Data</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_Data8ByteType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="f58ca3c7-4ad2-4c7d-9e58-2beb972945b0">
+                      <SHORT-NAME>ConditionCheckRead</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="ad74257d-f7d7-4339-8b2e-594905667811">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="30c8a34b-71d8-493e-8310-48c5829e5e05">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                    <CLIENT-SERVER-OPERATION UUID="dd37b78f-17a3-4076-a550-82b3f98f4fd3">
+                      <SHORT-NAME>WriteData</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="FOR-ALL"/>
+                      </DESC>
+                      <ARGUMENTS>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="b48efe09-fb63-4bbf-a43c-abf0932a83c6">
+                          <SHORT-NAME>Data</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_Data8ByteType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="b3415bbd-368d-4ebd-9f5d-d344c9956839">
+                          <SHORT-NAME>OpStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_OpStatusType</TYPE-TREF>
+                          <DIRECTION>IN</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                        <ARGUMENT-DATA-PROTOTYPE UUID="1550da2b-612c-4b37-9ff5-e210601e8aea">
+                          <SHORT-NAME>ErrorCode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="FOR-ALL"/>
+                          </DESC>
+                          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/MICROSAR/Dcm_swc/DataTypes/Dcm_NegativeResponseCodeType</TYPE-TREF>
+                          <DIRECTION>OUT</DIRECTION>
+                        </ARGUMENT-DATA-PROTOTYPE>
+                      </ARGUMENTS>
+                      <POSSIBLE-ERROR-REFS>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/E_NOT_OK</POSSIBLE-ERROR-REF>
+                        <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/DCM_E_PENDING</POSSIBLE-ERROR-REF>
+                      </POSSIBLE-ERROR-REFS>
+                    </CLIENT-SERVER-OPERATION>
+                  </OPERATIONS>
+                  <POSSIBLE-ERRORS>
+                    <APPLICATION-ERROR UUID="db5c4467-0486-4f84-bb0f-c42004b120cf">
+                      <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                      <ERROR-CODE>1</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                    <APPLICATION-ERROR UUID="1eba2a18-2e1e-482e-b975-37985ad4ba8b">
+                      <SHORT-NAME>DCM_E_PENDING</SHORT-NAME>
+                      <ERROR-CODE>10</ERROR-CODE>
+                    </APPLICATION-ERROR>
+                  </POSSIBLE-ERRORS>
+                </CLIENT-SERVER-INTERFACE>
               </ELEMENTS>
             </AR-PACKAGE>
             <AR-PACKAGE UUID="af5b81a1-94e0-4f05-9d16-bdc0f32c3910">
@@ -1405,6 +1638,25 @@
                       <SHORT-NAME>DCMServices</SHORT-NAME>
                       <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DCMServices</PROVIDED-INTERFACE-TREF>
                     </P-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="7ba933b6-6a31-4385-9467-57a3b9562699">
+                      <SHORT-NAME>RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</SHORT-NAME>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
+                    <R-PORT-PROTOTYPE UUID="a2d8a59b-e39d-46e0-9f6c-6691d303f839">
+                      <SHORT-NAME>DataServices_DcmDspData_NetPara</SHORT-NAME>
+                      <ADMIN-DATA>
+                        <SDGS>
+                          <SDG GID="DV:DerivedFromReferrables">
+                            <SDG GID="DV:DerivedFromReferrablesVariant">
+                              <SD GID="DV:InvariantValuesView"/>
+                              <SDX-REF DEST="ECUC-CONTAINER-VALUE">/ActiveEcuC/Dcm/DcmConfigSet/DcmDsp/DcmDspData_NetPara</SDX-REF>
+                              <SD GID="DV:DerivedFromReferrablesUUID">43229469-5efb-4cd2-8032-91acf658c400</SD>
+                            </SDG>
+                          </SDG>
+                        </SDGS>
+                      </ADMIN-DATA>
+                      <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara</REQUIRED-INTERFACE-TREF>
+                    </R-PORT-PROTOTYPE>
                   </PORTS>
                   <INTERNAL-BEHAVIORS>
                     <SWC-INTERNAL-BEHAVIOR UUID="c1e6682a-dbcf-4924-88aa-baa31c5dd901">
@@ -1485,6 +1737,16 @@
                           <INDIRECT-API>false</INDIRECT-API>
                           <PORT-REF DEST="P-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DCMServices</PORT-REF>
                         </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</PORT-REF>
+                        </PORT-API-OPTION>
+                        <PORT-API-OPTION>
+                          <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                          <INDIRECT-API>false</INDIRECT-API>
+                          <PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_DcmDspData_NetPara</PORT-REF>
+                        </PORT-API-OPTION>
                       </PORT-API-OPTIONS>
                       <RUNNABLES>
                         <RUNNABLE-ENTITY UUID="2b4f1d99-044a-4107-86b7-e2075c326d16">
@@ -1500,6 +1762,48 @@
                               </MODE-GROUP-IREF>
                             </MODE-SWITCH-POINT>
                           </MODE-SWITCH-POINTS>
+                          <SERVER-CALL-POINTS>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="d103e9ff-da8c-4943-9c8c-f7fcc7d8749d">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_Start_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/Start</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="7608e240-891e-4e8e-99fa-412c41458166">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_RequestResults_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/RequestResults</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="ddd5bc47-b9f0-45b4-af57-e43f428e6d55">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_ReadData_DataServices_DcmDspData_NetPara</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_DcmDspData_NetPara</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/ReadData</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="d7c04b96-0169-4197-9d71-0c4b3ea825ba">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_ConditionCheckRead_DataServices_DcmDspData_NetPara</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_DcmDspData_NetPara</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/ConditionCheckRead</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                            <SYNCHRONOUS-SERVER-CALL-POINT UUID="393b91b3-2927-4fea-8bee-820bf1a23ca2">
+                              <SHORT-NAME>OpServerCallDcm_MainFunction_WriteData_DataServices_DcmDspData_NetPara</SHORT-NAME>
+                              <OPERATION-IREF>
+                                <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/MICROSAR/Dcm_swc/ComponentTypes/Dcm/DataServices_DcmDspData_NetPara</CONTEXT-R-PORT-REF>
+                                <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/WriteData</TARGET-REQUIRED-OPERATION-REF>
+                              </OPERATION-IREF>
+                              <TIMEOUT>0</TIMEOUT>
+                            </SYNCHRONOUS-SERVER-CALL-POINT>
+                          </SERVER-CALL-POINTS>
                           <SYMBOL>Dcm_MainFunction</SYMBOL>
                         </RUNNABLE-ENTITY>
                         <RUNNABLE-ENTITY UUID="4e8c974d-124d-461e-9275-562c384d54c0">

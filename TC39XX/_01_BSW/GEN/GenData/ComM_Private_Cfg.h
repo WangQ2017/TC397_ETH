@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Private_Cfg.h
- *   Generation Time: 2026-05-30 10:22:03
+ *   Generation Time: 2026-06-18 21:32:22
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -57,14 +57,25 @@
 */ 
 #define ComM_GetChannelOfPCConfig()                                   ComM_Channel  /**< the pointer to ComM_Channel */
 #define ComM_GetChannelPbOfPCConfig()                                 ComM_ChannelPb  /**< the pointer to ComM_ChannelPb */
-#define ComM_GetSizeOfChannelOfPCConfig()                             1u  /**< the number of accomplishable value elements in ComM_Channel */
-#define ComM_GetSizeOfChannelPbOfPCConfig()                           1u  /**< the number of accomplishable value elements in ComM_ChannelPb */
-#define ComM_GetSizeOfUserByteMaskOfPCConfig()                        1u  /**< the number of accomplishable value elements in ComM_UserByteMask */
-#define ComM_GetSizeOfUserOfPCConfig()                                1u  /**< the number of accomplishable value elements in ComM_User */
-#define ComM_GetSizeOfUserReqFullComOfPCConfig()                      1u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
+#define ComM_GetDcmRequestActiveOfPCConfig()                          ComM_DcmRequestActive.raw  /**< the pointer to ComM_DcmRequestActive */
+#define ComM_GetSizeOfChannelOfPCConfig()                             2u  /**< the number of accomplishable value elements in ComM_Channel */
+#define ComM_GetSizeOfChannelPbOfPCConfig()                           2u  /**< the number of accomplishable value elements in ComM_ChannelPb */
+#define ComM_GetSizeOfUserByteMaskOfPCConfig()                        2u  /**< the number of accomplishable value elements in ComM_UserByteMask */
+#define ComM_GetSizeOfUserOfPCConfig()                                2u  /**< the number of accomplishable value elements in ComM_User */
+#define ComM_GetSizeOfUserReqFullComOfPCConfig()                      2u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
 #define ComM_GetUserByteMaskOfPCConfig()                              ComM_UserByteMask  /**< the pointer to ComM_UserByteMask */
 #define ComM_GetUserOfPCConfig()                                      ComM_User  /**< the pointer to ComM_User */
 #define ComM_GetUserReqFullComOfPCConfig()                            ComM_UserReqFullCom  /**< the pointer to ComM_UserReqFullCom */
+/** 
+  \}
+*/ 
+
+/** 
+  \defgroup  ComMPCGetDuplicatedRootDataMacros  ComM Get Duplicated Root Data Macros (PRE_COMPILE)
+  \brief  These macros can be used to read deduplicated root data elements.
+  \{
+*/ 
+#define ComM_GetSizeOfDcmRequestActiveOfPCConfig()                    ComM_GetSizeOfChannelOfPCConfig()  /**< the number of accomplishable value elements in ComM_DcmRequestActive */
 /** 
   \}
 */ 
@@ -74,7 +85,14 @@
   \brief  These macros can be used to read CONST and VAR data.
   \{
 */ 
+#define ComM_GetUserReqFullComEndIdxOfChannelPb(Index)                (ComM_GetChannelPbOfPCConfig()[(Index)].UserReqFullComEndIdxOfChannelPb)
+#define ComM_GetUserReqFullComStartIdxOfChannelPb(Index)              (ComM_GetChannelPbOfPCConfig()[(Index)].UserReqFullComStartIdxOfChannelPb)
+#define ComM_IsDcmRequestActive(Index)                                ((ComM_GetDcmRequestActiveOfPCConfig()[(Index)]) != FALSE)
 #define ComM_IsPncUserOfUser(Index)                                   ((ComM_GetUserOfPCConfig()[(Index)].PncUserOfUser) != FALSE)
+#define ComM_GetUserByteMaskEndIdxOfUser(Index)                       (ComM_GetUserOfPCConfig()[(Index)].UserByteMaskEndIdxOfUser)
+#define ComM_GetUserByteMaskStartIdxOfUser(Index)                     (ComM_GetUserOfPCConfig()[(Index)].UserByteMaskStartIdxOfUser)
+#define ComM_GetChannelOfUserByteMask(Index)                          ((NetworkHandleType)ComM_GetUserByteMaskOfPCConfig()[(Index)].ChannelOfUserByteMask)
+#define ComM_GetUserReqFullComIdxOfUserByteMask(Index)                (ComM_GetUserByteMaskOfPCConfig()[(Index)].UserReqFullComIdxOfUserByteMask)
 #define ComM_GetUserReqFullCom(Index)                                 (ComM_GetUserReqFullComOfPCConfig()[(Index)])
 /** 
   \}
@@ -90,21 +108,16 @@
 #define ComM_GetInhibitionInitValueOfChannel(Index)                   0x00u  /**< Initial value of the inhibition status of the channel */
 #define ComM_GetNmTypeOfChannel(Index)                                COMM_NONE_NMTYPEOFCHANNEL  /**< The Network Management type of the channel */
 #define ComM_GetWakeupStateOfChannel(Index)                           COMM_FULL_COM_NETWORK_REQUESTED  /**< Target channel state after a Passive Wake-up */
-#define ComM_GetUserReqFullComEndIdxOfChannelPb(Index)                1u  /**< the end index of the 0:n relation pointing to ComM_UserReqFullCom */
-#define ComM_GetUserReqFullComStartIdxOfChannelPb(Index)              0u  /**< the start index of the 0:n relation pointing to ComM_UserReqFullCom */
 #define ComM_IsUserReqFullComUsedOfChannelPb(Index)                   (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_UserReqFullCom */
 #define ComM_GetSizeOfChannel()                                       ComM_GetSizeOfChannelOfPCConfig()
 #define ComM_GetSizeOfChannelPb()                                     ComM_GetSizeOfChannelPbOfPCConfig()
+#define ComM_GetSizeOfDcmRequestActive()                              ComM_GetSizeOfDcmRequestActiveOfPCConfig()
 #define ComM_GetSizeOfUser()                                          ComM_GetSizeOfUserOfPCConfig()
 #define ComM_GetSizeOfUserByteMask()                                  ComM_GetSizeOfUserByteMaskOfPCConfig()
 #define ComM_GetSizeOfUserReqFullCom()                                ComM_GetSizeOfUserReqFullComOfPCConfig()
-#define ComM_GetUserByteMaskEndIdxOfUser(Index)                       1u  /**< the end index of the 0:n relation pointing to ComM_UserByteMask */
-#define ComM_GetUserByteMaskStartIdxOfUser(Index)                     0u  /**< the start index of the 0:n relation pointing to ComM_UserByteMask */
 #define ComM_IsUserByteMaskUsedOfUser(Index)                          (((TRUE)) != FALSE)  /**< TRUE, if the 0:n relation has 1 relation pointing to ComM_UserByteMask */
-#define ComM_GetChannelOfUserByteMask(Index)                          0u  /**< ID of the channel which is requested by this entry. */
 #define ComM_GetClearMaskOfUserByteMask(Index)                        0xFEu  /**< Clear-mask for clearing the bit which corresponds to this user */
 #define ComM_GetSetMaskOfUserByteMask(Index)                          0x01u  /**< Set-mask for setting the bit which corresponds to this user */
-#define ComM_GetUserReqFullComIdxOfUserByteMask(Index)                0u  /**< the index of the 1:1 relation pointing to ComM_UserReqFullCom */
 /** 
   \}
 */ 
@@ -114,6 +127,7 @@
   \brief  These macros can be used to write data.
   \{
 */ 
+#define ComM_SetDcmRequestActive(Index, Value)                        ComM_GetDcmRequestActiveOfPCConfig()[(Index)] = (Value)
 #define ComM_SetUserReqFullCom(Index, Value)                          ComM_GetUserReqFullComOfPCConfig()[(Index)] = (Value)
 /** 
   \}
@@ -134,8 +148,10 @@
 #define ComM_HasUserReqFullComEndIdxOfChannelPb()                     (TRUE != FALSE)
 #define ComM_HasUserReqFullComStartIdxOfChannelPb()                   (TRUE != FALSE)
 #define ComM_HasUserReqFullComUsedOfChannelPb()                       (TRUE != FALSE)
+#define ComM_HasDcmRequestActive()                                    (TRUE != FALSE)
 #define ComM_HasSizeOfChannel()                                       (TRUE != FALSE)
 #define ComM_HasSizeOfChannelPb()                                     (TRUE != FALSE)
+#define ComM_HasSizeOfDcmRequestActive()                              (TRUE != FALSE)
 #define ComM_HasSizeOfUser()                                          (TRUE != FALSE)
 #define ComM_HasSizeOfUserByteMask()                                  (TRUE != FALSE)
 #define ComM_HasSizeOfUserReqFullCom()                                (TRUE != FALSE)
@@ -153,8 +169,10 @@
 #define ComM_HasPCConfig()                                            (TRUE != FALSE)
 #define ComM_HasChannelOfPCConfig()                                   (TRUE != FALSE)
 #define ComM_HasChannelPbOfPCConfig()                                 (TRUE != FALSE)
+#define ComM_HasDcmRequestActiveOfPCConfig()                          (TRUE != FALSE)
 #define ComM_HasSizeOfChannelOfPCConfig()                             (TRUE != FALSE)
 #define ComM_HasSizeOfChannelPbOfPCConfig()                           (TRUE != FALSE)
+#define ComM_HasSizeOfDcmRequestActiveOfPCConfig()                    (TRUE != FALSE)
 #define ComM_HasSizeOfUserByteMaskOfPCConfig()                        (TRUE != FALSE)
 #define ComM_HasSizeOfUserOfPCConfig()                                (TRUE != FALSE)
 #define ComM_HasSizeOfUserReqFullComOfPCConfig()                      (TRUE != FALSE)
@@ -234,21 +252,82 @@
   SECTION: GLOBAL DATA PROTOTYPES
 **********************************************************************************************************************/
 /**********************************************************************************************************************
+  ComM_ChannelPb
+**********************************************************************************************************************/
+/** 
+  \var    ComM_ChannelPb
+  \brief  Contains PostBuild configuration parameters of channels
+  \details
+  Element                   Description
+  UserReqFullComEndIdx      the end index of the 0:n relation pointing to ComM_UserReqFullCom
+  UserReqFullComStartIdx    the start index of the 0:n relation pointing to ComM_UserReqFullCom
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   ComM_User
 **********************************************************************************************************************/
 /** 
   \var    ComM_User
   \brief  Information about ComM users
   \details
-  Element    Description
-  PncUser    decides if a user is a partial network user or a direct channel user
+  Element                 Description
+  PncUser                 decides if a user is a partial network user or a direct channel user
+  UserByteMaskEndIdx      the end index of the 0:n relation pointing to ComM_UserByteMask
+  UserByteMaskStartIdx    the start index of the 0:n relation pointing to ComM_UserByteMask
 */ 
 #define COMM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[1];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[2];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_UserByteMask
+**********************************************************************************************************************/
+/** 
+  \var    ComM_UserByteMask
+  \brief  Each user has N entries in this array (N = # channels attached to this user, directly or through PNC). Each entry describes a Byte Position and a Mask for storing/clearing the user request in UserReqFullCom
+  \details
+  Element              Description
+  Channel              ID of the channel which is requested by this entry.
+  UserReqFullComIdx    the index of the 1:1 relation pointing to ComM_UserReqFullCom
+*/ 
+#define COMM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[2];
+#define COMM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  ComM_DcmRequestActive
+**********************************************************************************************************************/
+/** 
+  \var    ComM_DcmRequestActive
+  \brief  Status of Dcm active diagnostic request, TRUE if requested, FALSE otherwise
+*/ 
+#define COMM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(ComM_DcmRequestActiveUType, COMM_VAR_NOINIT) ComM_DcmRequestActive;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -264,7 +343,7 @@ extern CONST(ComM_UserType, COMM_CONST) ComM_User[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[1];
+extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[2];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

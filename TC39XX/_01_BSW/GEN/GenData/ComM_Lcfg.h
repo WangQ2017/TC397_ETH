@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.h
- *   Generation Time: 2026-05-30 10:22:03
+ *   Generation Time: 2026-06-18 21:32:22
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -77,6 +77,20 @@ FUNCTION: ComM_MainFunction_0
  *  \synchronous TRUE
 *********************************************************************************************************************/
 extern FUNC(void, COMM_CODE) ComM_MainFunction_0(void);
+/* PRQA L:EXTERNDECLARATIONS */
+
+ /* PRQA S 3451, 3449 EXTERNDECLARATIONS */ /* MD_ComM_3451_3449 */ 
+/*********************************************************************************************************************
+FUNCTION: ComM_MainFunction_1
+*********************************************************************************************************************/
+/*! \brief       Calls ComM_MainFunction() for the corresponding channel. This function is called by RTE with the 
+ *               configured channel-specific Main Function Period
+ *  \pre         ComM must be initialized
+ *  \context     TASK
+ *  \reentrant   FALSE
+ *  \synchronous TRUE
+*********************************************************************************************************************/
+extern FUNC(void, COMM_CODE) ComM_MainFunction_1(void);
 /* PRQA L:EXTERNDECLARATIONS */
 
 /* -----------------------------------------------------------------------------

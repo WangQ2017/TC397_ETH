@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Callout_Stubs.c
- *   Generation Time: 2026-01-18 21:32:33
+ *   Generation Time: 2026-06-18 21:32:23
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -187,6 +187,34 @@ FUNC(void, BSWM_CODE) BswM_ESH_OnEnterWakeup(void)
  *********************************************************************************************************************/
 
 } /* End of BswM_ESH_OnEnterWakeup */
+
+
+FUNC(void, BSWM_CODE) ESH_ComM_CheckPendingRequests(void)
+{
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           <USERBLOCK ESH_ComM_CheckPendingRequests>          DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+
+
+/**********************************************************************************************************************
+ * DO NOT CHANGE THIS COMMENT!           </USERBLOCK>                                       DO NOT CHANGE THIS COMMENT!
+ *********************************************************************************************************************/
+  ComM_StateType ComMChannel_untagged = COMM_NO_COM_NO_PENDING_REQUEST;
+  ComM_StateType ComMChannel_Vlan1 = COMM_NO_COM_NO_PENDING_REQUEST;
+  
+  (void)ComM_GetState(ComMConf_ComMChannel_ComMChannel_untagged, &ComMChannel_untagged); /* SBSW_BSWM_FCTCALL_LOCALVAR */
+  (void)ComM_GetState(ComMConf_ComMChannel_ComMChannel_Vlan1, &ComMChannel_Vlan1); /* SBSW_BSWM_FCTCALL_LOCALVAR */
+  
+  if((ComMChannel_untagged != COMM_NO_COM_NO_PENDING_REQUEST) || (ComMChannel_Vlan1 != COMM_NO_COM_NO_PENDING_REQUEST))
+  {
+    BswM_RequestMode(BSWM_GENERIC_ESH_ComMPendingRequests, BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_PENDING_REQUEST);
+  }
+  else
+  {
+    BswM_RequestMode(BSWM_GENERIC_ESH_ComMPendingRequests, BSWM_GENERICVALUE_ESH_ComMPendingRequests_ESH_COMM_NO_REQUEST);
+  }
+  
+} /* End of ESH_ComM_CheckPendingRequests */
 
 
 

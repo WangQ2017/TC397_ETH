@@ -28,6 +28,16 @@
  *
  * Not configured:
  *
+ *  Rte_CallHook_Dcm_DataServices_DcmDspData_NetPara_ConditionCheckRead_Return
+ *  Rte_CallHook_Dcm_DataServices_DcmDspData_NetPara_ConditionCheckRead_Start
+ *  Rte_CallHook_Dcm_DataServices_DcmDspData_NetPara_ReadData_Return
+ *  Rte_CallHook_Dcm_DataServices_DcmDspData_NetPara_ReadData_Start
+ *  Rte_CallHook_Dcm_DataServices_DcmDspData_NetPara_WriteData_Return
+ *  Rte_CallHook_Dcm_DataServices_DcmDspData_NetPara_WriteData_Start
+ *  Rte_CallHook_Dcm_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_RequestResults_Return
+ *  Rte_CallHook_Dcm_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_RequestResults_Start
+ *  Rte_CallHook_Dcm_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_Start_Return
+ *  Rte_CallHook_Dcm_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_Start_Start
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Return
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_0_requestedMode_Start
  *  Rte_ReadHook_BswM_Request_ESH_PostRunRequest_1_requestedMode_Return
@@ -86,8 +96,24 @@
  *  Rte_Runnable_Cdd_StbM_Cdd_StbM_Runnable100ms_Start
  *  Rte_Runnable_Cdd_StbM_Cdd_StbM_Runnable5ms_Return
  *  Rte_Runnable_Cdd_StbM_Cdd_StbM_Runnable5ms_Start
+ *  Rte_Runnable_Cdd_UDS_Cdd_UDS_Init_Return
+ *  Rte_Runnable_Cdd_UDS_Cdd_UDS_Init_Start
+ *  Rte_Runnable_Cdd_UDS_Cdd_Uds_Runnable10ms_Return
+ *  Rte_Runnable_Cdd_UDS_Cdd_Uds_Runnable10ms_Start
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_DcmDspData_NetPara_ConditionCheckRead_Return
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_DcmDspData_NetPara_ConditionCheckRead_Start
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_DcmDspData_NetPara_ReadData_Return
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_DcmDspData_NetPara_ReadData_Start
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_DcmDspData_NetPara_WriteData_Return
+ *  Rte_Runnable_Cdd_UDS_DID_0x16F_DataServices_DcmDspData_NetPara_WriteData_Start
+ *  Rte_Runnable_Cdd_UDS_RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_RequestResults_Return
+ *  Rte_Runnable_Cdd_UDS_RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_RequestResults_Start
+ *  Rte_Runnable_Cdd_UDS_RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_Start_Return
+ *  Rte_Runnable_Cdd_UDS_RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_Start_Start
  *  Rte_Runnable_ComM_ComM_MainFunction_0_Return
  *  Rte_Runnable_ComM_ComM_MainFunction_0_Start
+ *  Rte_Runnable_ComM_ComM_MainFunction_1_Return
+ *  Rte_Runnable_ComM_ComM_MainFunction_1_Start
  *  Rte_Runnable_ComM_GetCurrentComMode_Return
  *  Rte_Runnable_ComM_GetCurrentComMode_Start
  *  Rte_Runnable_ComM_GetInhibitionStatus_Return
@@ -110,6 +136,18 @@
  *  Rte_Runnable_ComM_ResetInhibitCounter_Start
  *  Rte_Runnable_ComM_SetECUGroupClassification_Return
  *  Rte_Runnable_ComM_SetECUGroupClassification_Start
+ *  Rte_Runnable_Dcm_Dcm_MainFunction_Return
+ *  Rte_Runnable_Dcm_Dcm_MainFunction_Start
+ *  Rte_Runnable_Dcm_GetActiveProtocol_Return
+ *  Rte_Runnable_Dcm_GetActiveProtocol_Start
+ *  Rte_Runnable_Dcm_GetRequestKind_Return
+ *  Rte_Runnable_Dcm_GetRequestKind_Start
+ *  Rte_Runnable_Dcm_GetSesCtrlType_Return
+ *  Rte_Runnable_Dcm_GetSesCtrlType_Start
+ *  Rte_Runnable_Dcm_ResetToDefaultSession_Return
+ *  Rte_Runnable_Dcm_ResetToDefaultSession_Start
+ *  Rte_Runnable_Dcm_SetActiveDiagnostic_Return
+ *  Rte_Runnable_Dcm_SetActiveDiagnostic_Start
  *  Rte_Runnable_EcuM_EcuM_MainFunction_Return
  *  Rte_Runnable_EcuM_EcuM_MainFunction_Start
  *  Rte_Runnable_EcuM_GetBootTarget_Return
@@ -172,6 +210,8 @@
  *  Rte_Runnable_StbM_UpdateGlobalTime_Start
  *  Rte_SwitchHook_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode_Return
  *  Rte_SwitchHook_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode_Start
+ *  Rte_SwitchHook_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl_Return
+ *  Rte_SwitchHook_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl_Start
  *  Rte_Task_Activate
  *  Rte_Task_Dispatch
  *  Rte_Task_Terminate
@@ -195,8 +235,12 @@
  *  SchM_EnterHook_Com_COM_EXCLUSIVE_AREA_TX_Start
  *  SchM_EnterHook_Crc_CriticalSection_Return
  *  SchM_EnterHook_Crc_CriticalSection_Start
+ *  SchM_EnterHook_Dcm_DCM_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_Dcm_DCM_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_Det_DET_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_Det_DET_EXCLUSIVE_AREA_0_Start
+ *  SchM_EnterHook_DoIP_DOIP_EXCLUSIVE_AREA_0_Return
+ *  SchM_EnterHook_DoIP_DOIP_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_0_Return
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_0_Start
  *  SchM_EnterHook_EcuM_ECUM_EXCLUSIVE_AREA_1_Return
@@ -265,8 +309,12 @@
  *  SchM_ExitHook_Com_COM_EXCLUSIVE_AREA_TX_Start
  *  SchM_ExitHook_Crc_CriticalSection_Return
  *  SchM_ExitHook_Crc_CriticalSection_Start
+ *  SchM_ExitHook_Dcm_DCM_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_Dcm_DCM_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_Det_DET_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_Det_DET_EXCLUSIVE_AREA_0_Start
+ *  SchM_ExitHook_DoIP_DOIP_EXCLUSIVE_AREA_0_Return
+ *  SchM_ExitHook_DoIP_DOIP_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_0_Return
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_0_Start
  *  SchM_ExitHook_EcuM_ECUM_EXCLUSIVE_AREA_1_Return
@@ -325,10 +373,16 @@
  *  SchM_Schedulable_BswM_BswM_MainFunction_Start
  *  SchM_Schedulable_ComM_ComM_MainFunction_0_Return
  *  SchM_Schedulable_ComM_ComM_MainFunction_0_Start
+ *  SchM_Schedulable_ComM_ComM_MainFunction_1_Return
+ *  SchM_Schedulable_ComM_ComM_MainFunction_1_Start
  *  SchM_Schedulable_Com_Com_MainFunctionRx_Return
  *  SchM_Schedulable_Com_Com_MainFunctionRx_Start
  *  SchM_Schedulable_Com_Com_MainFunctionTx_Return
  *  SchM_Schedulable_Com_Com_MainFunctionTx_Start
+ *  SchM_Schedulable_Dcm_Dcm_MainFunction_Return
+ *  SchM_Schedulable_Dcm_Dcm_MainFunction_Start
+ *  SchM_Schedulable_DoIP_DoIP_MainFunction_Return
+ *  SchM_Schedulable_DoIP_DoIP_MainFunction_Start
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Return
  *  SchM_Schedulable_EcuM_EcuM_MainFunction_Start
  *  SchM_Schedulable_EthIf_EthIf_MainFunctionRx_Return

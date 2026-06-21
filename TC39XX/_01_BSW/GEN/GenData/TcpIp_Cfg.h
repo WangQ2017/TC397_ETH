@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Cfg.h
- *   Generation Time: 2026-05-31 10:24:09
+ *   Generation Time: 2026-06-18 22:46:18
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -47,12 +47,12 @@
 #define TCPIP_DEV_ERROR_DETECT                     STD_ON
 #define TCPIP_DEV_ERROR_REPORT                     STD_ON
 
-#define TCPIP_SUPPORT_DHCPV4                       STD_OFF
+#define TCPIP_SUPPORT_DHCPV4                       STD_ON
 
 #define TCPIP_SUPPORT_DHCPV6                       STD_OFF
 #define TCPIP_SUPPORT_DHCPV6_OPTIONS               STD_OFF
 
-#define TCPIP_SUPPORT_TCP                          STD_OFF
+#define TCPIP_SUPPORT_TCP                          STD_ON
 #define TCPIP_SUPPORT_DNS                          STD_OFF
 #define TCPIP_SUPPORT_DEM                          STD_OFF
 #define TCPIP_SUPPORT_IPV4                         STD_ON
@@ -76,6 +76,13 @@
 #define TCPIP_SUPPORT_ARP_DISCARDED_ENTRY_HANDLING STD_OFF
 
 
+#define TCPIP_SUPPORT_TCP_USER_TIMEOUT_OPTION      STD_OFF
+#define TCPIP_SUPPORT_TCP_CONGESTION_CONTROL       STD_OFF
+#define TCPIP_SUPPORT_TCP_TIMESTAMP_OPTION         STD_OFF
+#define TCPIP_SUPPORT_TCP_SELECTIVE_ACK            STD_OFF
+#define TCPIP_SUPPORT_TCP_KEEP_ALIVE               STD_OFF
+#define TCPIP_SUPPORT_TCP_RX_OOO                   STD_ON
+#define TCPIP_SUPPORT_TCP_NAGLE_TIMEOUT            STD_ON
 
 #define TCPIP_TCP_DIAG_READ_ACK_SEQ_NUM_ENABLED    STD_OFF
 
@@ -89,6 +96,8 @@
  *********************************************************************************************************************/
 #define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Fixed_192_168_1_123 (0uL)
 #define TcpIpConf_TcpIpLocalAddr_TcpIpV4LocalAddr_TcpIpCtrl_untagged_Broadcast (1uL)
+#define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33 (2uL)
+#define TcpIpConf_TcpIpLocalAddr_TcpIpV4LocalAddr_TcpIpCtrl_Vlan1_Broadcast (3uL)
 
 /**********************************************************************************************************************
  *  SYMBOLIC NAME DEFINES: SOCKET USERS

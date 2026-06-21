@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This file was saved with a tool from Vector Informatik GmbH-->
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00048.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="F079C6CB-4661-40D9-899F-DD405F22B640">
+      <SHORT-NAME>ComponentTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE UUID="D15C6841-AE75-458F-ABCA-0B269EFC7ED8">
+          <SHORT-NAME>Cdd_UDS</SHORT-NAME>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="0AE68A15-4C2C-48DB-97FB-18FEAFD68C80">
+              <SHORT-NAME>DID_0x16F_DataServices_DcmDspData_NetPara</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/WriteData</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/ConditionCheckRead</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/ReadData</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="554CE7E1-1A66-4D1F-B818-FE7DCA89DD35">
+              <SHORT-NAME>RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</SHORT-NAME>
+              <ADMIN-DATA>
+                <SDGS>
+                  <SDG GID="DV:DEV">
+                    <SD GID="DV:ImportModePreset">Keep</SD>
+                  </SDG>
+                </SDGS>
+              </ADMIN-DATA>
+              <PROVIDED-COM-SPECS>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/RequestResults</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+                <SERVER-COM-SPEC>
+                  <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/Start</OPERATION-REF>
+                  <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                </SERVER-COM-SPEC>
+              </PROVIDED-COM-SPECS>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="FC88CE08-CDCF-4BC8-8838-1046CEF4195F">
+              <SHORT-NAME>Cdd_UDS_InternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <INIT-EVENT UUID="0BF53A17-13FA-4A39-B42F-D5CCBDFF6AD3">
+                  <SHORT-NAME>Cdd_UDS_InitEvent</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/Cdd_UDS_Init</START-ON-EVENT-REF>
+                </INIT-EVENT>
+                <TIMING-EVENT UUID="D534E893-12A2-4875-9A0A-6CF265EE1733">
+                  <SHORT-NAME>TMT_Cdd_Uds_Runnable10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/Cdd_Uds_Runnable10ms</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="9699D705-2CBF-414B-8F3B-FF486E414691">
+                  <SHORT-NAME>OIT_Runnable_DID_0x16F_DataServices_DcmDspData_NetPara_ConditionCheckRead</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/DID_0x16F_DataServices_DcmDspData_NetPara_ConditionCheckRead</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/DID_0x16F_DataServices_DcmDspData_NetPara</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/ConditionCheckRead</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="DF35888E-7E37-411B-A323-7FDA7382EFF2">
+                  <SHORT-NAME>OIT_Runnable_DID_0x16F_DataServices_DcmDspData_NetPara_ReadData</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/DID_0x16F_DataServices_DcmDspData_NetPara_ReadData</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/DID_0x16F_DataServices_DcmDspData_NetPara</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/ReadData</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="4A5EE3EA-E3B7-4196-8F9B-C174228C3745">
+                  <SHORT-NAME>OIT_Runnable_DID_0x16F_DataServices_DcmDspData_NetPara_WriteData</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/DID_0x16F_DataServices_DcmDspData_NetPara_WriteData</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/DID_0x16F_DataServices_DcmDspData_NetPara</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/DataServices_DcmDspData_NetPara/WriteData</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="F931C4CF-8889-46AB-8BE0-27FE88C267B1">
+                  <SHORT-NAME>OIT_Runnable_RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_RequestResults</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_RequestResults</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/RequestResults</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="998A83BC-3A66-4EE3-9C87-787530F42305">
+                  <SHORT-NAME>OIT_Runnable_RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_Start</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior/RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_Start</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/ComponentTypes/Cdd_UDS/RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/MICROSAR/Dcm_swc/Interfaces/RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode/Start</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="866CF460-1D7B-4CED-A4D6-30B9A6B5EFE3">
+                  <SHORT-NAME>Cdd_UDS_Init</SHORT-NAME>
+                  <ADMIN-DATA>
+                    <SDGS>
+                      <SDG GID="edve:RunnableKind">
+                        <SD>InitRunnable</SD>
+                      </SDG>
+                    </SDGS>
+                  </ADMIN-DATA>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="3617AC06-62C7-43D7-A337-CE6DC7820C56">
+                  <SHORT-NAME>Cdd_Uds_Runnable10ms</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="AFAF2F7D-7090-4D73-B686-5273A9F8B6CA">
+                  <SHORT-NAME>DID_0x16F_DataServices_DcmDspData_NetPara_ConditionCheckRead</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="647C0568-0CC9-43DB-93AF-00B1AAAB792C">
+                  <SHORT-NAME>DID_0x16F_DataServices_DcmDspData_NetPara_ReadData</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="BE4B9666-249F-4A60-AD58-81BD0375548C">
+                  <SHORT-NAME>DID_0x16F_DataServices_DcmDspData_NetPara_WriteData</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="5554F6B8-D427-4D03-9A4B-E605F5AF9A04">
+                  <SHORT-NAME>RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_RequestResults</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="9FD49C95-09D3-4869-959D-3E62DCEEE620">
+                  <SHORT-NAME>RID_0x250_RoutineServices_DcmDspRoutine_0x250_SetPhyTxMode_Start</SHORT-NAME>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+        <SWC-IMPLEMENTATION UUID="F4582FD9-7334-4949-82F6-9BAAD11D68F8">
+          <SHORT-NAME>Cdd_UDS_Implementation</SHORT-NAME>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/ComponentTypes/Cdd_UDS/Cdd_UDS_InternalBehavior</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
