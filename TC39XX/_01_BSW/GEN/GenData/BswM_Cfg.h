@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: BswM_Cfg.h
- *   Generation Time: 2026-06-18 21:32:23
+ *   Generation Time: 2026-07-05 11:14:43
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -43,6 +43,7 @@
 #include "BswM_EthSM.h"
 #include "BswM_Dcm.h"
 #include "BswM_EcuM.h"
+#include "BswM_Sd.h"
 #include "Rte_BswM_Type.h"
 #include "EthTrcv_30_Tja1100_Hw_Int.h" 
 
@@ -128,7 +129,7 @@
 #define BSWM_ENABLE_COMM                     STD_ON
 #define BSWM_ENABLE_J1939DCM                 STD_OFF
 #define BSWM_ENABLE_J1939NM                  STD_OFF
-#define BSWM_ENABLE_SD                       STD_OFF
+#define BSWM_ENABLE_SD                       STD_ON
 #define BSWM_ENABLE_NM                       STD_OFF
 #define BSWM_ENABLE_PDUR                     STD_OFF
 #define BSWM_ENABLE_WDGM                     STD_OFF
@@ -136,7 +137,7 @@
 #define BSWM_VERSION_INFO_API                STD_OFF
 #define BSWM_COMM_PNC_SUPPORT                STD_OFF
 #define BSWM_COMM_INITIATE_RESET             STD_OFF
-#define BSWM_CHANNEL_COUNT                   2u
+#define BSWM_CHANNEL_COUNT                   3u
 #define BSWM_WAKEUP_SOURCE_COUNT             5u
 #define BSWM_IPDU_GROUP_CONTROL              STD_OFF
 #define BSWM_ECUM_MODE_HANDLING              STD_OFF
@@ -162,6 +163,24 @@
 #define BswMConf_BswMRule_ESH_WaitToWakeup (8) 
 #define BswMConf_BswMRule_ESH_WakeupToPrep (9) 
 #define BswMConf_BswMRule_ESH_WakeupToRun (10) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdClientService_0xC3CB_VechicleSpeed (11) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed (12) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus (13) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus (14) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdClientService_0xC3CD_VechicleInfo (15) 
+#define BswMConf_BswMRule_SDC_ApplRequest_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo (16) 
+#define BswMConf_BswMRule_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo (17) 
+#define BswMConf_BswMRule_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState (18) 
+#define BswMConf_BswMRule_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState (19) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CB_VechicleSpeed (20) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed (21) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus (22) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus (23) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CD_VechicleInfo (24) 
+#define BswMConf_BswMRule_SDC_SdStateChange_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo (25) 
+#define BswMConf_BswMRule_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo (26) 
+#define BswMConf_BswMRule_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState (27) 
+#define BswMConf_BswMRule_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState (28) 
 
 
 /* -----------------------------------------------------------------------------
@@ -447,27 +466,27 @@
 #define BSWM_INITOFRULES                                                                            STD_ON
 #define BSWM_RULESTATESIDXOFRULES                                                                   STD_ON
 #define BSWM_RULESIND                                                                               STD_ON
-#define BSWM_SDCLIENTSERVICEMAPPING                                                                 STD_OFF  /**< Deactivateable: 'BswM_SdClientServiceMapping' Reason: 'No Mode Request for BswMSdClientServiceCurrentState configured.' */
-#define BSWM_EXTERNALIDOFSDCLIENTSERVICEMAPPING                                                     STD_OFF  /**< Deactivateable: 'BswM_SdClientServiceMapping.ExternalId' Reason: 'No Mode Request for BswMSdClientServiceCurrentState configured.' */
-#define BSWM_IMMEDIATEUSERENDIDXOFSDCLIENTSERVICEMAPPING                                            STD_OFF  /**< Deactivateable: 'BswM_SdClientServiceMapping.ImmediateUserEndIdx' Reason: 'No Mode Request for BswMSdClientServiceCurrentState configured.' */
-#define BSWM_IMMEDIATEUSERSTARTIDXOFSDCLIENTSERVICEMAPPING                                          STD_OFF  /**< Deactivateable: 'BswM_SdClientServiceMapping.ImmediateUserStartIdx' Reason: 'No Mode Request for BswMSdClientServiceCurrentState configured.' */
-#define BSWM_IMMEDIATEUSERUSEDOFSDCLIENTSERVICEMAPPING                                              STD_OFF  /**< Deactivateable: 'BswM_SdClientServiceMapping.ImmediateUserUsed' Reason: 'No Mode Request for BswMSdClientServiceCurrentState configured.' */
-#define BSWM_INITVALUEOFSDCLIENTSERVICEMAPPING                                                      STD_OFF  /**< Deactivateable: 'BswM_SdClientServiceMapping.InitValue' Reason: 'No Mode Request for BswMSdClientServiceCurrentState configured.' */
-#define BSWM_SDCLIENTSERVICESTATE                                                                   STD_OFF  /**< Deactivateable: 'BswM_SdClientServiceState' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define BSWM_SDCONSUMEDEVENTMAPPING                                                                 STD_OFF  /**< Deactivateable: 'BswM_SdConsumedEventMapping' Reason: 'No Mode Request for BswMSdConsumedEventGroupCurrentState configured.' */
-#define BSWM_EXTERNALIDOFSDCONSUMEDEVENTMAPPING                                                     STD_OFF  /**< Deactivateable: 'BswM_SdConsumedEventMapping.ExternalId' Reason: 'No Mode Request for BswMSdConsumedEventGroupCurrentState configured.' */
-#define BSWM_IMMEDIATEUSERENDIDXOFSDCONSUMEDEVENTMAPPING                                            STD_OFF  /**< Deactivateable: 'BswM_SdConsumedEventMapping.ImmediateUserEndIdx' Reason: 'No Mode Request for BswMSdConsumedEventGroupCurrentState configured.' */
-#define BSWM_IMMEDIATEUSERSTARTIDXOFSDCONSUMEDEVENTMAPPING                                          STD_OFF  /**< Deactivateable: 'BswM_SdConsumedEventMapping.ImmediateUserStartIdx' Reason: 'No Mode Request for BswMSdConsumedEventGroupCurrentState configured.' */
-#define BSWM_IMMEDIATEUSERUSEDOFSDCONSUMEDEVENTMAPPING                                              STD_OFF  /**< Deactivateable: 'BswM_SdConsumedEventMapping.ImmediateUserUsed' Reason: 'No Mode Request for BswMSdConsumedEventGroupCurrentState configured.' */
-#define BSWM_INITVALUEOFSDCONSUMEDEVENTMAPPING                                                      STD_OFF  /**< Deactivateable: 'BswM_SdConsumedEventMapping.InitValue' Reason: 'No Mode Request for BswMSdConsumedEventGroupCurrentState configured.' */
-#define BSWM_SDCONSUMEDEVENTSTATE                                                                   STD_OFF  /**< Deactivateable: 'BswM_SdConsumedEventState' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define BSWM_SDEVENTHANDLERMAPPING                                                                  STD_OFF  /**< Deactivateable: 'BswM_SdEventHandlerMapping' Reason: 'No Mode Request for BswMSdEventHandlerCurrentState configured.' */
-#define BSWM_EXTERNALIDOFSDEVENTHANDLERMAPPING                                                      STD_OFF  /**< Deactivateable: 'BswM_SdEventHandlerMapping.ExternalId' Reason: 'No Mode Request for BswMSdEventHandlerCurrentState configured.' */
-#define BSWM_IMMEDIATEUSERENDIDXOFSDEVENTHANDLERMAPPING                                             STD_OFF  /**< Deactivateable: 'BswM_SdEventHandlerMapping.ImmediateUserEndIdx' Reason: 'No Mode Request for BswMSdEventHandlerCurrentState configured.' */
-#define BSWM_IMMEDIATEUSERSTARTIDXOFSDEVENTHANDLERMAPPING                                           STD_OFF  /**< Deactivateable: 'BswM_SdEventHandlerMapping.ImmediateUserStartIdx' Reason: 'No Mode Request for BswMSdEventHandlerCurrentState configured.' */
-#define BSWM_IMMEDIATEUSERUSEDOFSDEVENTHANDLERMAPPING                                               STD_OFF  /**< Deactivateable: 'BswM_SdEventHandlerMapping.ImmediateUserUsed' Reason: 'No Mode Request for BswMSdEventHandlerCurrentState configured.' */
-#define BSWM_INITVALUEOFSDEVENTHANDLERMAPPING                                                       STD_OFF  /**< Deactivateable: 'BswM_SdEventHandlerMapping.InitValue' Reason: 'No Mode Request for BswMSdEventHandlerCurrentState configured.' */
-#define BSWM_SDEVENTHANDLERSTATE                                                                    STD_OFF  /**< Deactivateable: 'BswM_SdEventHandlerState' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
+#define BSWM_SDCLIENTSERVICEMAPPING                                                                 STD_ON
+#define BSWM_EXTERNALIDOFSDCLIENTSERVICEMAPPING                                                     STD_ON
+#define BSWM_IMMEDIATEUSERENDIDXOFSDCLIENTSERVICEMAPPING                                            STD_OFF  /**< Deactivateable: 'BswM_SdClientServiceMapping.ImmediateUserEndIdx' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfSdClientServiceMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_IMMEDIATEUSERSTARTIDXOFSDCLIENTSERVICEMAPPING                                          STD_OFF  /**< Deactivateable: 'BswM_SdClientServiceMapping.ImmediateUserStartIdx' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfSdClientServiceMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_IMMEDIATEUSERUSEDOFSDCLIENTSERVICEMAPPING                                              STD_OFF  /**< Deactivateable: 'BswM_SdClientServiceMapping.ImmediateUserUsed' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfSdClientServiceMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_INITVALUEOFSDCLIENTSERVICEMAPPING                                                      STD_ON
+#define BSWM_SDCLIENTSERVICESTATE                                                                   STD_ON
+#define BSWM_SDCONSUMEDEVENTMAPPING                                                                 STD_ON
+#define BSWM_EXTERNALIDOFSDCONSUMEDEVENTMAPPING                                                     STD_ON
+#define BSWM_IMMEDIATEUSERENDIDXOFSDCONSUMEDEVENTMAPPING                                            STD_OFF  /**< Deactivateable: 'BswM_SdConsumedEventMapping.ImmediateUserEndIdx' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfSdConsumedEventMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_IMMEDIATEUSERSTARTIDXOFSDCONSUMEDEVENTMAPPING                                          STD_OFF  /**< Deactivateable: 'BswM_SdConsumedEventMapping.ImmediateUserStartIdx' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfSdConsumedEventMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_IMMEDIATEUSERUSEDOFSDCONSUMEDEVENTMAPPING                                              STD_OFF  /**< Deactivateable: 'BswM_SdConsumedEventMapping.ImmediateUserUsed' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfSdConsumedEventMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_INITVALUEOFSDCONSUMEDEVENTMAPPING                                                      STD_ON
+#define BSWM_SDCONSUMEDEVENTSTATE                                                                   STD_ON
+#define BSWM_SDEVENTHANDLERMAPPING                                                                  STD_ON
+#define BSWM_EXTERNALIDOFSDEVENTHANDLERMAPPING                                                      STD_ON
+#define BSWM_IMMEDIATEUSERENDIDXOFSDEVENTHANDLERMAPPING                                             STD_OFF  /**< Deactivateable: 'BswM_SdEventHandlerMapping.ImmediateUserEndIdx' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfSdEventHandlerMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_IMMEDIATEUSERSTARTIDXOFSDEVENTHANDLERMAPPING                                           STD_OFF  /**< Deactivateable: 'BswM_SdEventHandlerMapping.ImmediateUserStartIdx' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfSdEventHandlerMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_IMMEDIATEUSERUSEDOFSDEVENTHANDLERMAPPING                                               STD_OFF  /**< Deactivateable: 'BswM_SdEventHandlerMapping.ImmediateUserUsed' Reason: 'the optional indirection is deactivated because ImmediateUserUsedOfSdEventHandlerMapping is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define BSWM_INITVALUEOFSDEVENTHANDLERMAPPING                                                       STD_ON
+#define BSWM_SDEVENTHANDLERSTATE                                                                    STD_ON
 #define BSWM_SIZEOFACTIONLISTQUEUE                                                                  STD_ON
 #define BSWM_SIZEOFACTIONLISTS                                                                      STD_ON
 #define BSWM_SIZEOFCOMMCHANNELMAPPING                                                               STD_ON
@@ -483,6 +502,12 @@
 #define BSWM_SIZEOFRULESTATES                                                                       STD_ON
 #define BSWM_SIZEOFRULES                                                                            STD_ON
 #define BSWM_SIZEOFRULESIND                                                                         STD_ON
+#define BSWM_SIZEOFSDCLIENTSERVICEMAPPING                                                           STD_ON
+#define BSWM_SIZEOFSDCLIENTSERVICESTATE                                                             STD_ON
+#define BSWM_SIZEOFSDCONSUMEDEVENTMAPPING                                                           STD_ON
+#define BSWM_SIZEOFSDCONSUMEDEVENTSTATE                                                             STD_ON
+#define BSWM_SIZEOFSDEVENTHANDLERMAPPING                                                            STD_ON
+#define BSWM_SIZEOFSDEVENTHANDLERSTATE                                                              STD_ON
 #define BSWM_SIZEOFSWCMODEREQUESTUPDATEFCT                                                          STD_ON
 #define BSWM_SIZEOFTIMERSTATE                                                                       STD_ON
 #define BSWM_SIZEOFTIMERVALUE                                                                       STD_ON
@@ -521,6 +546,12 @@
 #define BSWM_RULESTATESOFPCPARTITIONCONFIG                                                          STD_ON
 #define BSWM_RULESINDOFPCPARTITIONCONFIG                                                            STD_ON
 #define BSWM_RULESOFPCPARTITIONCONFIG                                                               STD_ON
+#define BSWM_SDCLIENTSERVICEMAPPINGOFPCPARTITIONCONFIG                                              STD_ON
+#define BSWM_SDCLIENTSERVICESTATEOFPCPARTITIONCONFIG                                                STD_ON
+#define BSWM_SDCONSUMEDEVENTMAPPINGOFPCPARTITIONCONFIG                                              STD_ON
+#define BSWM_SDCONSUMEDEVENTSTATEOFPCPARTITIONCONFIG                                                STD_ON
+#define BSWM_SDEVENTHANDLERMAPPINGOFPCPARTITIONCONFIG                                               STD_ON
+#define BSWM_SDEVENTHANDLERSTATEOFPCPARTITIONCONFIG                                                 STD_ON
 #define BSWM_SIZEOFACTIONLISTQUEUEOFPCPARTITIONCONFIG                                               STD_ON
 #define BSWM_SIZEOFACTIONLISTSOFPCPARTITIONCONFIG                                                   STD_ON
 #define BSWM_SIZEOFCOMMCHANNELMAPPINGOFPCPARTITIONCONFIG                                            STD_ON
@@ -535,6 +566,12 @@
 #define BSWM_SIZEOFRULESTATESOFPCPARTITIONCONFIG                                                    STD_ON
 #define BSWM_SIZEOFRULESINDOFPCPARTITIONCONFIG                                                      STD_ON
 #define BSWM_SIZEOFRULESOFPCPARTITIONCONFIG                                                         STD_ON
+#define BSWM_SIZEOFSDCLIENTSERVICEMAPPINGOFPCPARTITIONCONFIG                                        STD_ON
+#define BSWM_SIZEOFSDCLIENTSERVICESTATEOFPCPARTITIONCONFIG                                          STD_ON
+#define BSWM_SIZEOFSDCONSUMEDEVENTMAPPINGOFPCPARTITIONCONFIG                                        STD_ON
+#define BSWM_SIZEOFSDCONSUMEDEVENTSTATEOFPCPARTITIONCONFIG                                          STD_ON
+#define BSWM_SIZEOFSDEVENTHANDLERMAPPINGOFPCPARTITIONCONFIG                                         STD_ON
+#define BSWM_SIZEOFSDEVENTHANDLERSTATEOFPCPARTITIONCONFIG                                           STD_ON
 #define BSWM_SIZEOFSWCMODEREQUESTUPDATEFCTOFPCPARTITIONCONFIG                                       STD_ON
 #define BSWM_SIZEOFTIMERSTATEOFPCPARTITIONCONFIG                                                    STD_ON
 #define BSWM_SIZEOFTIMERVALUEOFPCPARTITIONCONFIG                                                    STD_ON
@@ -627,9 +664,15 @@
 #define BSWM_ISDEF_PARTITIONSNVOFPARTITIONIDENTIFIERS                                               STD_OFF
 #define BSWM_ISDEF_FCTPTROFRULES                                                                    STD_OFF
 #define BSWM_ISDEF_IDOFRULES                                                                        STD_OFF
-#define BSWM_ISDEF_INITOFRULES                                                                      STD_ON
+#define BSWM_ISDEF_INITOFRULES                                                                      STD_OFF
 #define BSWM_ISDEF_RULESTATESIDXOFRULES                                                             STD_OFF
 #define BSWM_ISDEF_RULESIND                                                                         STD_OFF
+#define BSWM_ISDEF_EXTERNALIDOFSDCLIENTSERVICEMAPPING                                               STD_OFF
+#define BSWM_ISDEF_INITVALUEOFSDCLIENTSERVICEMAPPING                                                STD_ON
+#define BSWM_ISDEF_EXTERNALIDOFSDCONSUMEDEVENTMAPPING                                               STD_OFF
+#define BSWM_ISDEF_INITVALUEOFSDCONSUMEDEVENTMAPPING                                                STD_ON
+#define BSWM_ISDEF_EXTERNALIDOFSDEVENTHANDLERMAPPING                                                STD_OFF
+#define BSWM_ISDEF_INITVALUEOFSDEVENTHANDLERMAPPING                                                 STD_ON
 #define BSWM_ISDEF_SWCMODEREQUESTUPDATEFCT                                                          STD_OFF
 #define BSWM_ISDEF_PCPARTITIONCONFIGOFPCCONFIG                                                      STD_ON
 #define BSWM_ISDEF_PARTITIONIDENTIFIERSOFPCCONFIG                                                   STD_ON
@@ -651,6 +694,12 @@
 #define BSWM_ISDEF_RULESTATESOFPCPARTITIONCONFIG                                                    STD_ON
 #define BSWM_ISDEF_RULESINDOFPCPARTITIONCONFIG                                                      STD_ON
 #define BSWM_ISDEF_RULESOFPCPARTITIONCONFIG                                                         STD_ON
+#define BSWM_ISDEF_SDCLIENTSERVICEMAPPINGOFPCPARTITIONCONFIG                                        STD_ON
+#define BSWM_ISDEF_SDCLIENTSERVICESTATEOFPCPARTITIONCONFIG                                          STD_ON
+#define BSWM_ISDEF_SDCONSUMEDEVENTMAPPINGOFPCPARTITIONCONFIG                                        STD_ON
+#define BSWM_ISDEF_SDCONSUMEDEVENTSTATEOFPCPARTITIONCONFIG                                          STD_ON
+#define BSWM_ISDEF_SDEVENTHANDLERMAPPINGOFPCPARTITIONCONFIG                                         STD_ON
+#define BSWM_ISDEF_SDEVENTHANDLERSTATEOFPCPARTITIONCONFIG                                           STD_ON
 #define BSWM_ISDEF_SWCMODEREQUESTUPDATEFCTOFPCPARTITIONCONFIG                                       STD_ON
 #define BSWM_ISDEF_TIMERSTATEOFPCPARTITIONCONFIG                                                    STD_ON
 #define BSWM_ISDEF_TIMERVALUEOFPCPARTITIONCONFIG                                                    STD_ON
@@ -683,9 +732,15 @@
 #define BSWM_EQ2_PARTITIONSNVOFPARTITIONIDENTIFIERS                                                 
 #define BSWM_EQ2_FCTPTROFRULES                                                                      
 #define BSWM_EQ2_IDOFRULES                                                                          
-#define BSWM_EQ2_INITOFRULES                                                                        BSWM_FALSE
+#define BSWM_EQ2_INITOFRULES                                                                        
 #define BSWM_EQ2_RULESTATESIDXOFRULES                                                               
 #define BSWM_EQ2_RULESIND                                                                           
+#define BSWM_EQ2_EXTERNALIDOFSDCLIENTSERVICEMAPPING                                                 
+#define BSWM_EQ2_INITVALUEOFSDCLIENTSERVICEMAPPING                                                  SD_CLIENT_SERVICE_DOWN
+#define BSWM_EQ2_EXTERNALIDOFSDCONSUMEDEVENTMAPPING                                                 
+#define BSWM_EQ2_INITVALUEOFSDCONSUMEDEVENTMAPPING                                                  SD_CONSUMED_EVENTGROUP_DOWN
+#define BSWM_EQ2_EXTERNALIDOFSDEVENTHANDLERMAPPING                                                  
+#define BSWM_EQ2_INITVALUEOFSDEVENTHANDLERMAPPING                                                   SD_EVENT_HANDLER_RELEASED
 #define BSWM_EQ2_SWCMODEREQUESTUPDATEFCT                                                            
 #define BSWM_EQ2_PCPARTITIONCONFIGOFPCCONFIG                                                        BswM_PCPartitionConfig
 #define BSWM_EQ2_PARTITIONIDENTIFIERSOFPCCONFIG                                                     BswM_PartitionIdentifiers
@@ -707,6 +762,12 @@
 #define BSWM_EQ2_RULESTATESOFPCPARTITIONCONFIG                                                      BswM_RuleStates.raw
 #define BSWM_EQ2_RULESINDOFPCPARTITIONCONFIG                                                        BswM_RulesInd
 #define BSWM_EQ2_RULESOFPCPARTITIONCONFIG                                                           BswM_Rules
+#define BSWM_EQ2_SDCLIENTSERVICEMAPPINGOFPCPARTITIONCONFIG                                          BswM_SdClientServiceMapping
+#define BSWM_EQ2_SDCLIENTSERVICESTATEOFPCPARTITIONCONFIG                                            BswM_SdClientServiceState
+#define BSWM_EQ2_SDCONSUMEDEVENTMAPPINGOFPCPARTITIONCONFIG                                          BswM_SdConsumedEventMapping
+#define BSWM_EQ2_SDCONSUMEDEVENTSTATEOFPCPARTITIONCONFIG                                            BswM_SdConsumedEventState
+#define BSWM_EQ2_SDEVENTHANDLERMAPPINGOFPCPARTITIONCONFIG                                           BswM_SdEventHandlerMapping
+#define BSWM_EQ2_SDEVENTHANDLERSTATEOFPCPARTITIONCONFIG                                             BswM_SdEventHandlerState
 #define BSWM_EQ2_SWCMODEREQUESTUPDATEFCTOFPCPARTITIONCONFIG                                         BswM_SwcModeRequestUpdateFct
 #define BSWM_EQ2_TIMERSTATEOFPCPARTITIONCONFIG                                                      BswM_TimerState.raw
 #define BSWM_EQ2_TIMERVALUEOFPCPARTITIONCONFIG                                                      BswM_TimerValue.raw
@@ -823,6 +884,24 @@ typedef uint8_least BswM_RulesIterType;
 /**   \brief  type used to iterate BswM_RulesInd */
 typedef uint8_least BswM_RulesIndIterType;
 
+/**   \brief  type used to iterate BswM_SdClientServiceMapping */
+typedef uint8_least BswM_SdClientServiceMappingIterType;
+
+/**   \brief  type used to iterate BswM_SdClientServiceState */
+typedef uint8_least BswM_SdClientServiceStateIterType;
+
+/**   \brief  type used to iterate BswM_SdConsumedEventMapping */
+typedef uint8_least BswM_SdConsumedEventMappingIterType;
+
+/**   \brief  type used to iterate BswM_SdConsumedEventState */
+typedef uint8_least BswM_SdConsumedEventStateIterType;
+
+/**   \brief  type used to iterate BswM_SdEventHandlerMapping */
+typedef uint8_least BswM_SdEventHandlerMappingIterType;
+
+/**   \brief  type used to iterate BswM_SdEventHandlerState */
+typedef uint8_least BswM_SdEventHandlerStateIterType;
+
 /**   \brief  type used to iterate BswM_SwcModeRequestUpdateFct */
 typedef uint8_least BswM_SwcModeRequestUpdateFctIterType;
 
@@ -931,6 +1010,15 @@ typedef uint8 BswM_RuleStatesIdxOfRulesType;
 /**   \brief  value based type definition for BswM_RulesInd */
 typedef uint8 BswM_RulesIndType;
 
+/**   \brief  value based type definition for BswM_ExternalIdOfSdClientServiceMapping */
+typedef uint32 BswM_ExternalIdOfSdClientServiceMappingType;
+
+/**   \brief  value based type definition for BswM_ExternalIdOfSdConsumedEventMapping */
+typedef uint32 BswM_ExternalIdOfSdConsumedEventMappingType;
+
+/**   \brief  value based type definition for BswM_ExternalIdOfSdEventHandlerMapping */
+typedef uint32 BswM_ExternalIdOfSdEventHandlerMappingType;
+
 /**   \brief  value based type definition for BswM_SizeOfActionListQueue */
 typedef uint8 BswM_SizeOfActionListQueueType;
 
@@ -975,6 +1063,24 @@ typedef uint8 BswM_SizeOfRulesType;
 
 /**   \brief  value based type definition for BswM_SizeOfRulesInd */
 typedef uint8 BswM_SizeOfRulesIndType;
+
+/**   \brief  value based type definition for BswM_SizeOfSdClientServiceMapping */
+typedef uint8 BswM_SizeOfSdClientServiceMappingType;
+
+/**   \brief  value based type definition for BswM_SizeOfSdClientServiceState */
+typedef uint8 BswM_SizeOfSdClientServiceStateType;
+
+/**   \brief  value based type definition for BswM_SizeOfSdConsumedEventMapping */
+typedef uint8 BswM_SizeOfSdConsumedEventMappingType;
+
+/**   \brief  value based type definition for BswM_SizeOfSdConsumedEventState */
+typedef uint8 BswM_SizeOfSdConsumedEventStateType;
+
+/**   \brief  value based type definition for BswM_SizeOfSdEventHandlerMapping */
+typedef uint8 BswM_SizeOfSdEventHandlerMappingType;
+
+/**   \brief  value based type definition for BswM_SizeOfSdEventHandlerState */
+typedef uint8 BswM_SizeOfSdEventHandlerStateType;
 
 /**   \brief  value based type definition for BswM_SizeOfSwcModeRequestUpdateFct */
 typedef uint8 BswM_SizeOfSwcModeRequestUpdateFctType;
@@ -1064,9 +1170,28 @@ typedef struct sBswM_PartitionIdentifiersType
 typedef struct sBswM_RulesType
 {
   BswM_IdOfRulesType IdOfRules;  /**< External id of rule. */
+  BswM_InitOfRulesType InitOfRules;  /**< Initialization value of rule state (TRUE, FALSE, UNDEFINED or DEACTIVATED). */
   BswM_RuleStatesIdxOfRulesType RuleStatesIdxOfRules;  /**< the index of the 1:1 relation pointing to BswM_RuleStates */
   BswM_RuleTableFctPtrType FctPtrOfRules;  /**< Pointer to the rule function which does the arbitration. */
 } BswM_RulesType;
+
+/**   \brief  type used in BswM_SdClientServiceMapping */
+typedef struct sBswM_SdClientServiceMappingType
+{
+  BswM_ExternalIdOfSdClientServiceMappingType ExternalIdOfSdClientServiceMapping;  /**< External id of BswMSdClientServiceCurrentState. */
+} BswM_SdClientServiceMappingType;
+
+/**   \brief  type used in BswM_SdConsumedEventMapping */
+typedef struct sBswM_SdConsumedEventMappingType
+{
+  BswM_ExternalIdOfSdConsumedEventMappingType ExternalIdOfSdConsumedEventMapping;  /**< External id of BswMSdConsumedEventGroupCurrentState. */
+} BswM_SdConsumedEventMappingType;
+
+/**   \brief  type used in BswM_SdEventHandlerMapping */
+typedef struct sBswM_SdEventHandlerMappingType
+{
+  BswM_ExternalIdOfSdEventHandlerMappingType ExternalIdOfSdEventHandlerMapping;  /**< External id of BswMSdEventHandlerCurrentState. */
+} BswM_SdEventHandlerMappingType;
 
 /** 
   \}
@@ -1093,6 +1218,42 @@ typedef struct BswM_ActionListQueueStructSTag
   BswM_ActionListQueueType AL_ESH_AL_PrepShutdownToWaitForNvM;
   BswM_ActionListQueueType AL_INIT_AL_Initialize;
   BswM_ActionListQueueType AL_ESH_AL_ExitRun;
+  BswM_ActionListQueueType AL_SDC_AL_SdRelease_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState;
+  BswM_ActionListQueueType AL_SDC_AL_SdRequest_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CB_VechicleSpeed;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CB_VechicleSpeed;
+  BswM_ActionListQueueType AL_SDC_AL_SdDown_C_SdClientService_0xC3CD_VechicleInfo_DOWN;
+  BswM_ActionListQueueType AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CD_VechicleInfo_AVAILABLE;
+  BswM_ActionListQueueType AL_SDC_AL_SdDown_C_SdClientService_0xC3CB_VechicleSpeed_DOWN;
+  BswM_ActionListQueueType AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CB_VechicleSpeed_AVAILABLE;
+  BswM_ActionListQueueType AL_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_DOWN;
+  BswM_ActionListQueueType AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_AVAILABLE;
+  BswM_ActionListQueueType AL_SDC_AL_SdDown_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_DOWN;
+  BswM_ActionListQueueType AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_AVAILABLE;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed;
+  BswM_ActionListQueueType AL_SDC_AL_SdRelease_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo;
+  BswM_ActionListQueueType AL_SDC_AL_SdRequest_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C0_FaultInfo;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C0_FaultInfo;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C1_SenState;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C1_SenState;
+  BswM_ActionListQueueType AL_SDC_AL_SdDown_C_SdClientService_0xC3CC_VechicleStatus_DOWN;
+  BswM_ActionListQueueType AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CC_VechicleStatus_AVAILABLE;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CD_VechicleInfo;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CD_VechicleInfo;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus;
+  BswM_ActionListQueueType AL_SDC_AL_SdDown_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_DOWN;
+  BswM_ActionListQueueType AL_SDC_AL_SdAvailable_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_AVAILABLE;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRelease_S_SdServerService_0xC3C2_EcuState;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRequest_S_SdServerService_0xC3C2_EcuState;
+  BswM_ActionListQueueType AL_SDC_AL_SdRelease_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState;
+  BswM_ActionListQueueType AL_SDC_AL_SdRequest_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRelease_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo;
+  BswM_ActionListQueueType AL_SDC_AL_ApplRequest_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo;
 } BswM_ActionListQueueStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_RuleStates in the partition context  */
@@ -1109,6 +1270,24 @@ typedef struct BswM_RuleStatesStructSTag
   BswM_RuleStatesType R_ESH_PostRun;
   BswM_RuleStatesType R_ESH_PrepToWait;
   BswM_RuleStatesType R_ESH_RunToPostRunNested;
+  BswM_RuleStatesType R_SDC_SdStateChange_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState;
+  BswM_RuleStatesType R_SDC_ApplRequest_C_SdClientService_0xC3CB_VechicleSpeed;
+  BswM_RuleStatesType R_SDC_SdStateChange_C_SdClientService_0xC3CD_VechicleInfo;
+  BswM_RuleStatesType R_SDC_SdStateChange_C_SdClientService_0xC3CB_VechicleSpeed;
+  BswM_RuleStatesType R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus;
+  BswM_RuleStatesType R_SDC_SdStateChange_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed;
+  BswM_RuleStatesType R_SDC_ApplRequest_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed;
+  BswM_RuleStatesType R_SDC_SdStateChange_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo;
+  BswM_RuleStatesType R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus;
+  BswM_RuleStatesType R_SDC_ApplRequest_S_SdServerService_0xC3C0_FaultInfo;
+  BswM_RuleStatesType R_SDC_ApplRequest_S_SdServerService_0xC3C1_SenState;
+  BswM_RuleStatesType R_SDC_SdStateChange_C_SdClientService_0xC3CC_VechicleStatus;
+  BswM_RuleStatesType R_SDC_ApplRequest_C_SdClientService_0xC3CD_VechicleInfo;
+  BswM_RuleStatesType R_SDC_ApplRequest_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus;
+  BswM_RuleStatesType R_SDC_SdStateChange_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo;
+  BswM_RuleStatesType R_SDC_ApplRequest_S_SdServerService_0xC3C2_EcuState;
+  BswM_RuleStatesType R_SDC_SdStateChange_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState;
+  BswM_RuleStatesType R_SDC_ApplRequest_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo;
 } BswM_RuleStatesStructSType;
 
 /**   \brief  type to be used as symbolic data element access to BswM_TimerState in the partition context  */
@@ -1135,14 +1314,14 @@ typedef struct BswM_TimerValueStructSTag
 /**   \brief  type to access BswM_ActionListQueue in an index and symbol based style. */
 typedef union BswM_ActionListQueueUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_ActionListQueueType raw[13];
+  BswM_ActionListQueueType raw[49];
   BswM_ActionListQueueStructSType str;
 } BswM_ActionListQueueUType;
 
 /**   \brief  type to access BswM_RuleStates in an index and symbol based style. */
 typedef union BswM_RuleStatesUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  BswM_RuleStatesType raw[11];
+  BswM_RuleStatesType raw[29];
   BswM_RuleStatesStructSType str;
 } BswM_RuleStatesUType;
 
@@ -1225,6 +1404,24 @@ typedef P2CONST(BswM_RulesType, TYPEDEF, BSWM_CONST) BswM_RulesPtrType;
 
 /**   \brief  type used to point to BswM_RulesInd */
 typedef P2CONST(BswM_RulesIndType, TYPEDEF, BSWM_CONST) BswM_RulesIndPtrType;
+
+/**   \brief  type used to point to BswM_SdClientServiceMapping */
+typedef P2CONST(BswM_SdClientServiceMappingType, TYPEDEF, BSWM_CONST) BswM_SdClientServiceMappingPtrType;
+
+/**   \brief  type used to point to BswM_SdClientServiceState */
+typedef P2VAR(Sd_ClientServiceCurrentStateType, TYPEDEF, BSWM_VAR_NOINIT) BswM_SdClientServiceStatePtrType;
+
+/**   \brief  type used to point to BswM_SdConsumedEventMapping */
+typedef P2CONST(BswM_SdConsumedEventMappingType, TYPEDEF, BSWM_CONST) BswM_SdConsumedEventMappingPtrType;
+
+/**   \brief  type used to point to BswM_SdConsumedEventState */
+typedef P2VAR(Sd_ConsumedEventGroupCurrentStateType, TYPEDEF, BSWM_VAR_NOINIT) BswM_SdConsumedEventStatePtrType;
+
+/**   \brief  type used to point to BswM_SdEventHandlerMapping */
+typedef P2CONST(BswM_SdEventHandlerMappingType, TYPEDEF, BSWM_CONST) BswM_SdEventHandlerMappingPtrType;
+
+/**   \brief  type used to point to BswM_SdEventHandlerState */
+typedef P2VAR(Sd_EventHandlerCurrentStateType, TYPEDEF, BSWM_VAR_NOINIT) BswM_SdEventHandlerStatePtrType;
 
 /**   \brief  type used to point to BswM_SwcModeRequestUpdateFct */
 typedef P2CONST(BswM_PartitionFunctionType, TYPEDEF, BSWM_CONST) BswM_SwcModeRequestUpdateFctPtrType;
@@ -1315,10 +1512,28 @@ typedef BswM_PCConfigType BswM_ConfigType;  /**< A structure type is present for
 #include "BswM_vMemMap.h"
 
 extern VAR(Rte_ModeType_ESH_Mode, BSWM_VAR_NOINIT) BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode;
+extern VAR(Rte_ModeType_SDC_SdEventHandlerState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState;
+extern VAR(Rte_ModeType_SDC_SdClientServiceState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState;
+extern VAR(Rte_ModeType_SDC_SdClientServiceState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdClientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState;
+extern VAR(Rte_ModeType_SDC_SdConsumedEventGroupState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState;
+extern VAR(Rte_ModeType_SDC_SdConsumedEventGroupState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdConsumedEventGroupState;
+extern VAR(Rte_ModeType_SDC_SdEventHandlerState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState;
+extern VAR(Rte_ModeType_SDC_SdClientServiceState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState;
+extern VAR(Rte_ModeType_SDC_SdConsumedEventGroupState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState;
+extern VAR(Rte_ModeType_SDC_SdEventHandlerState, BSWM_VAR_NOINIT) BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState_BswM_MDGP_SDC_SdEventHandlerState;
 extern VAR(BswM_ESH_RunRequest, BSWM_VAR_NOINIT) Request_ESH_RunRequest_0_requestedMode;
 extern VAR(BswM_ESH_RunRequest, BSWM_VAR_NOINIT) Request_ESH_RunRequest_1_requestedMode;
 extern VAR(BswM_ESH_RunRequest, BSWM_VAR_NOINIT) Request_ESH_PostRunRequest_0_requestedMode;
 extern VAR(BswM_ESH_RunRequest, BSWM_VAR_NOINIT) Request_ESH_PostRunRequest_1_requestedMode;
+extern VAR(BswM_SDC_SdClientServiceRequest, BSWM_VAR_NOINIT) Request_SDC_C_SdClientService_0xC3CB_VechicleSpeed_requestedMode;
+extern VAR(BswM_SDC_SdConsumedEventGroupRequest, BSWM_VAR_NOINIT) Request_SDC_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_requestedMode;
+extern VAR(BswM_SDC_SdClientServiceRequest, BSWM_VAR_NOINIT) Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_requestedMode;
+extern VAR(BswM_SDC_SdServerServiceRequest, BSWM_VAR_NOINIT) Request_SDC_S_SdServerService_0xC3C0_FaultInfo_requestedMode;
+extern VAR(BswM_SDC_SdServerServiceRequest, BSWM_VAR_NOINIT) Request_SDC_S_SdServerService_0xC3C1_SenState_requestedMode;
+extern VAR(BswM_SDC_SdClientServiceRequest, BSWM_VAR_NOINIT) Request_SDC_C_SdClientService_0xC3CD_VechicleInfo_requestedMode;
+extern VAR(BswM_SDC_SdConsumedEventGroupRequest, BSWM_VAR_NOINIT) Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_requestedMode;
+extern VAR(BswM_SDC_SdServerServiceRequest, BSWM_VAR_NOINIT) Request_SDC_S_SdServerService_0xC3C2_EcuState_requestedMode;
+extern VAR(BswM_SDC_SdConsumedEventGroupRequest, BSWM_VAR_NOINIT) Request_SDC_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_requestedMode;
 extern VAR(Rte_ModeType_ESH_Mode, BSWM_VAR_NOINIT) BswM_Mode_Notification_ESH_ModeNotification_BswM_MDGP_ESH_Mode;
 
 

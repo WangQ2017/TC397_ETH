@@ -355,6 +355,18 @@
 },
 {
   "directory": "G:/TC397_ETH/TOOLS/CMake/build/tc397_eth",
+  "command": "\"C:\\PROGRA~1\\TASKING\\TriCore v6.3r1\\ctc\\bin\\cctc.exe\" -DBUILD_BIP -DHT_CUSTOMER_PLATFORM -IG:\\TC397_ETH\\TOOLS\\CMake\\build\\tc397_eth\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Sd_Lcfg.c.obj -c G:\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Sd_Lcfg.c",
+  "file": "G:\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Sd_Lcfg.c",
+  "output": "CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Sd_Lcfg.c.obj"
+},
+{
+  "directory": "G:/TC397_ETH/TOOLS/CMake/build/tc397_eth",
+  "command": "\"C:\\PROGRA~1\\TASKING\\TriCore v6.3r1\\ctc\\bin\\cctc.exe\" -DBUILD_BIP -DHT_CUSTOMER_PLATFORM -IG:\\TC397_ETH\\TOOLS\\CMake\\build\\tc397_eth\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Sd_PBcfg.c.obj -c G:\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Sd_PBcfg.c",
+  "file": "G:\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Sd_PBcfg.c",
+  "output": "CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\Sd_PBcfg.c.obj"
+},
+{
+  "directory": "G:/TC397_ETH/TOOLS/CMake/build/tc397_eth",
   "command": "\"C:\\PROGRA~1\\TASKING\\TriCore v6.3r1\\ctc\\bin\\cctc.exe\" -DBUILD_BIP -DHT_CUSTOMER_PLATFORM -IG:\\TC397_ETH\\TOOLS\\CMake\\build\\tc397_eth\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\SoAd_Lcfg.c.obj -c G:\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\SoAd_Lcfg.c",
   "file": "G:\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\SoAd_Lcfg.c",
   "output": "CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_01_BSW\\GEN\\GenData\\SoAd_Lcfg.c.obj"
@@ -1177,6 +1189,12 @@
 },
 {
   "directory": "G:/TC397_ETH/TOOLS/CMake/build/tc397_eth",
+  "command": "\"C:\\PROGRA~1\\TASKING\\TriCore v6.3r1\\ctc\\bin\\cctc.exe\" -DBUILD_BIP -DHT_CUSTOMER_PLATFORM -IG:\\TC397_ETH\\TOOLS\\CMake\\build\\tc397_eth\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Sd\\Implementation\\Sd.c.obj -c G:\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Sd\\Implementation\\Sd.c",
+  "file": "G:\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Sd\\Implementation\\Sd.c",
+  "output": "CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\Sd\\Implementation\\Sd.c.obj"
+},
+{
+  "directory": "G:/TC397_ETH/TOOLS/CMake/build/tc397_eth",
   "command": "\"C:\\PROGRA~1\\TASKING\\TriCore v6.3r1\\ctc\\bin\\cctc.exe\" -DBUILD_BIP -DHT_CUSTOMER_PLATFORM -IG:\\TC397_ETH\\TOOLS\\CMake\\build\\tc397_eth\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd.c.obj -c G:\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd.c",
   "file": "G:\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd.c",
   "output": "CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_01_BSW\\Src\\SoAd\\Implementation\\SoAd.c.obj"
@@ -1402,6 +1420,12 @@
   "command": "\"C:\\PROGRA~1\\TASKING\\TriCore v6.3r1\\ctc\\bin\\cctc.exe\" -DBUILD_BIP -DHT_CUSTOMER_PLATFORM -IG:\\TC397_ETH\\TOOLS\\CMake\\build\\tc397_eth\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_pps\\Cdd_PPS.c.obj -c G:\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_pps\\Cdd_PPS.c",
   "file": "G:\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_pps\\Cdd_PPS.c",
   "output": "CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_pps\\Cdd_PPS.c.obj"
+},
+{
+  "directory": "G:/TC397_ETH/TOOLS/CMake/build/tc397_eth",
+  "command": "\"C:\\PROGRA~1\\TASKING\\TriCore v6.3r1\\ctc\\bin\\cctc.exe\" -DBUILD_BIP -DHT_CUSTOMER_PLATFORM -IG:\\TC397_ETH\\TOOLS\\CMake\\build\\tc397_eth\\IncludeFiles -Ctc39xb --lsl-core=vtc -t -Wa-Hsfr/regtc39xb.def -Wa-gAHLs --emit-locals=-equs,-symbols -Wa-Ogs -Wa--error-limit=42 -DBRS_COMP_TASKING --iso=11 --language=-gcc,-volatile,+strings,-kanji --fp-model=clfznrST --switch=auto --align=0 --default-near-size=0 --default-a0-size=0 --default-a1-size=0 -O0 --tradeoff=4 -g --error-limit=42 --source -o CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_someip\\Cdd_SomeIP.c.obj -c G:\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_someip\\Cdd_SomeIP.c",
+  "file": "G:\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_someip\\Cdd_SomeIP.c",
+  "output": "CMakeFiles\\tc39x.dir\\G_\\TC397_ETH\\TC39XX\\_02_CDD\\cdd_someip\\Cdd_SomeIP.c.obj"
 },
 {
   "directory": "G:/TC397_ETH/TOOLS/CMake/build/tc397_eth",

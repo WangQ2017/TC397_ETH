@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Cfg.h
- *   Generation Time: 2026-06-18 21:32:21
+ *   Generation Time: 2026-07-05 10:57:16
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -121,14 +121,14 @@
 #define COMM_EXISTS_ONLY_NONE_NMTYPEOFCHANNEL           STD_ON
 
 #define COMM_FULL_COMM_REQUEST_NOTIF                    STD_OFF
-#define COMM_MAX_NUMBER_OF_USERS                        2u
+#define COMM_MAX_NUMBER_OF_USERS                        3u
 #define COMM_DCM_INDICATION                             STD_ON
 #define COMM_USERMODENOTIFUNC_PNC_USER_ONLY             STD_ON
 
 #define COMM_SYNCHRONOUS_WAKE_UP                        STD_ON
 #define COMM_EXTENDED_RAM_CHECK                         STD_OFF
 
-#define COMM_ACTIVE_CHANNEL                             2u
+#define COMM_ACTIVE_CHANNEL                             3u
 #define COMM_NVM_SUPPORT                                STD_OFF
 
 
@@ -138,6 +138,7 @@
  ----------------------------------------------------------------------------- */
 
 #define ComMConf_ComMUser_ComMUser_Vlan1    1u 
+#define ComMConf_ComMUser_ComMUser_Vlan23   2u 
 #define ComMConf_ComMUser_ComMUser_untagged 0u 
 
 
@@ -147,6 +148,7 @@
  
 #define ComMConf_ComMChannel_ComMChannel_untagged 0u 
 #define ComMConf_ComMChannel_ComMChannel_Vlan1    1u 
+#define ComMConf_ComMChannel_ComMChannel_Vlan23   2u 
 
 
 /* -----------------------------------------------------------------------------
@@ -611,6 +613,7 @@ typedef struct ComM_DcmRequestActiveStructSTag
 {
   ComM_DcmRequestActiveType ComMChannel_0;
   ComM_DcmRequestActiveType ComMChannel_1;
+  ComM_DcmRequestActiveType ComMChannel_2;
 } ComM_DcmRequestActiveStructSType;
 
 /** 
@@ -625,7 +628,7 @@ typedef struct ComM_DcmRequestActiveStructSTag
 /**   \brief  type to access ComM_DcmRequestActive in an index and symbol based style. */
 typedef union ComM_DcmRequestActiveUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  ComM_DcmRequestActiveType raw[2];
+  ComM_DcmRequestActiveType raw[3];
   ComM_DcmRequestActiveStructSType str;
 } ComM_DcmRequestActiveUType;
 

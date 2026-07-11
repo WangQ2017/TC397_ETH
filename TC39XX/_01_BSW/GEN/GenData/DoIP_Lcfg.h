@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: DoIP_Lcfg.h
- *   Generation Time: 2026-06-18 21:32:23
+ *   Generation Time: 2026-07-05 10:57:30
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -826,7 +826,6 @@
 #define DoIP_GetTxMsgLenOfChannelDyn(Index)                                                         (DoIP_GetChannelDynOfPCConfig()[(Index)].TxMsgLenOfChannelDyn)
 #define DoIP_GetLocalAddrIdxOfConnection(Index)                                                     (DoIP_GetConnectionOfPCConfig()[(Index)].LocalAddrIdxOfConnection)
 #define DoIP_GetRxCancelPduIdOfConnection(Index)                                                    (DoIP_GetConnectionOfPCConfig()[(Index)].RxCancelPduIdOfConnection)
-#define DoIP_GetSoAdTxPduIdOfConnection(Index)                                                      (DoIP_GetConnectionOfPCConfig()[(Index)].SoAdTxPduIdOfConnection)
 #define DoIP_GetIpAddrStateOfConnectionDyn(Index)                                                   (DoIP_GetConnectionDynOfPCConfig()[(Index)].IpAddrStateOfConnectionDyn)
 #define DoIP_IsSoConClosingOfConnectionDyn(Index)                                                   ((DoIP_GetConnectionDynOfPCConfig()[(Index)].SoConClosingOfConnectionDyn) != FALSE)
 #define DoIP_GetSoConIdOfConnectionDyn(Index)                                                       (DoIP_GetConnectionDynOfPCConfig()[(Index)].SoConIdOfConnectionDyn)
@@ -917,6 +916,7 @@
 #define DoIP_GetBitMaskOfChannel(Index)                                                             ((DoIP_BitMaskOfChannelType)((DoIP_GetTpMaxLenOfChannel(Index) + 61440u)))  /**< bit mask for logical address masking */
 #define DoIP_GetTesterIdxOfChannel(Index)                                                           ((DoIP_TesterIdxOfChannelType)((DoIP_GetTpMaxLenOfChannel(Index) - 4095u)))  /**< the index of the 1:1 relation pointing to DoIP_Tester */
 #define DoIP_GetChannelInd(Index)                                                                   ((DoIP_ChannelIndType)((Index)))  /**< the indexes of the 1:1 sorted relation pointing to DoIP_Channel */
+#define DoIP_GetSoAdTxPduIdOfConnection(Index)                                                      ((DoIP_SoAdTxPduIdOfConnectionType)((((DoIP_SoAdTxPduIdOfConnectionType)(Index)) + 1u)))  /**< PduId used for transmission */
 #define DoIP_GetConnectionTcpIndEndIdxOfConnectionGroup(Index)                                      ((DoIP_ConnectionTcpIndEndIdxOfConnectionGroupType)((((DoIP_ConnectionTcpIndEndIdxOfConnectionGroupType)(Index)) + 2u)))  /**< the end index of the 1:n relation pointing to DoIP_ConnectionTcpInd */
 #define DoIP_GetConnectionTcpIndStartIdxOfConnectionGroup(Index)                                    ((DoIP_ConnectionTcpIndStartIdxOfConnectionGroupType)((Index)))  /**< the start index of the 1:n relation pointing to DoIP_ConnectionTcpInd */
 #define DoIP_GetConnectionInd(Index)                                                                ((DoIP_ConnectionIndType)((Index)))  /**< the indexes of the 1:1 sorted relation pointing to DoIP_Connection */
@@ -2067,7 +2067,6 @@ typedef struct sDoIP_ConnectionType
 {
   DoIP_LocalAddrIdxOfConnectionType LocalAddrIdxOfConnection;  /**< the index of the 1:1 relation pointing to DoIP_LocalAddr */
   DoIP_RxCancelPduIdOfConnectionType RxCancelPduIdOfConnection;  /**< PduId used for reception cancelation */
-  DoIP_SoAdTxPduIdOfConnectionType SoAdTxPduIdOfConnection;  /**< PduId used for transmission */
 } DoIP_ConnectionType;
 
 /**   \brief  type used in DoIP_ConnectionDyn */
@@ -2551,7 +2550,6 @@ extern CONST(DoIP_ChannelType, DOIP_CONST) DoIP_Channel[2];
   Element          Description
   LocalAddrIdx     the index of the 1:1 relation pointing to DoIP_LocalAddr
   RxCancelPduId    PduId used for reception cancelation
-  SoAdTxPduId      PduId used for transmission
 */ 
 #define DOIP_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

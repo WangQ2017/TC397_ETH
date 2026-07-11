@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthTSyn_Lcfg.c
- *   Generation Time: 2026-06-19 21:41:31
+ *   Generation Time: 2026-07-05 10:57:22
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -200,7 +200,7 @@ CONST(EthTSyn_PdelayConfigType, ETHTSYN_CONST) EthTSyn_PdelayConfig[1] = {  /* P
 /*lint -restore */
 CONST(EthTSyn_PdelayInitiatorType, ETHTSYN_CONST) EthTSyn_PdelayInitiator[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PdelayThreshold  LogMessageInterval  AllowedLostResponses  AverageWeight  PdelayReqSmIdx                                                                                                 RespRespFollowUpTimeout                                 TxIntervalMf                                       Referable Keys */
-  { /*     0 */        1000000u,                  0,                   1u,            1u,             0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0/EthTSynPortConfig/EthTSynPdelayConfig */,                     20u  /* 0.1s in MF-Cycles (5ms) */,         200u  /* 1.0s in MF-Cycles (5ms) */ }   /* [/ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0/EthTSynPortConfig/EthTSynPdelayConfig, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0/EthTSynPortConfig] */
+  { /*     0 */        1000000u,                  0,                   0u,            1u,             0u  /* /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0/EthTSynPortConfig/EthTSynPdelayConfig */,                     20u  /* 0.1s in MF-Cycles (5ms) */,         200u  /* 1.0s in MF-Cycles (5ms) */ }   /* [/ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0/EthTSynPortConfig/EthTSynPdelayConfig, /ActiveEcuC/EthTSyn/EthTSynGlobalTimeDomain_MAIN0/EthTSynPortConfig] */
 };
 #define ETHTSYN_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

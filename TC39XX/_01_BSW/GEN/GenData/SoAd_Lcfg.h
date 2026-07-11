@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: SoAd_Lcfg.h
- *   Generation Time: 2026-06-18 21:32:24
+ *   Generation Time: 2026-07-11 17:41:56
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -916,7 +916,7 @@
 #define SOAD_NO_PDUROUTEDESTIDXOFNPDUUDPTXQUEUE                       255u
 #define SOAD_NO_ROUTEGRPSOCONBYPDUROUTEDESTINDENDIDXOFPDUROUTEDEST    255u
 #define SOAD_NO_ROUTEGRPSOCONBYPDUROUTEDESTINDSTARTIDXOFPDUROUTEDEST  255u
-#define SOAD_NO_TXPDUHDRIDOFPDUROUTEDEST                              255u
+#define SOAD_NO_TXPDUHDRIDOFPDUROUTEDEST                              4294967295u
 #define SOAD_NO_PDUROUTEDESTINDENDIDXOFROUTEGRP                       255u
 #define SOAD_NO_PDUROUTEDESTINDSTARTIDXOFROUTEGRP                     255u
 #define SOAD_NO_ROUTEGRPSOCONENDIDXOFROUTEGRP                         255u
@@ -957,7 +957,7 @@
 #define SOAD_NO_SOCKETTCPIDXOFSOCONGRP                                255u
 #define SOAD_NO_SOCKETUDPIDXOFSOCONGRP                                255u
 #define SOAD_NO_SOCONTXACTIVEIDXOFSOCKETDYN                           255u
-#define SOAD_NO_RXPDUHDRIDOFSOCKETROUTE                               255u
+#define SOAD_NO_RXPDUHDRIDOFSOCKETROUTE                               4294967295u
 #define SOAD_NO_ROUTEGRPSOCONBYSOCKETROUTEDESTINDENDIDXOFSOCKETROUTEDEST 255u
 #define SOAD_NO_ROUTEGRPSOCONBYSOCKETROUTEDESTINDSTARTIDXOFSOCKETROUTEDEST 255u
 #define SOAD_NO_TCPKEEPALIVEINTERVALOFSOCKETTCP                       255u
@@ -3832,7 +3832,7 @@ typedef boolean SoAd_RouteGrpSoConByPduRouteDestIndUsedOfPduRouteDestType;
 typedef uint8 SoAd_SoConIdxOfPduRouteDestType;
 
 /**   \brief  value based type definition for SoAd_TxPduHdrIdOfPduRouteDest */
-typedef uint8 SoAd_TxPduHdrIdOfPduRouteDestType;
+typedef uint32 SoAd_TxPduHdrIdOfPduRouteDestType;
 
 /**   \brief  value based type definition for SoAd_UdpTriggerTimeoutOfPduRouteDest */
 typedef uint8 SoAd_UdpTriggerTimeoutOfPduRouteDestType;
@@ -4429,7 +4429,7 @@ typedef uint8 SoAd_SoConTxActiveIdxOfSocketDynType;
 typedef boolean SoAd_MetaDataRxEnabledOfSocketRouteType;
 
 /**   \brief  value based type definition for SoAd_RxPduHdrIdOfSocketRoute */
-typedef uint8 SoAd_RxPduHdrIdOfSocketRouteType;
+typedef uint32 SoAd_RxPduHdrIdOfSocketRouteType;
 
 /**   \brief  value based type definition for SoAd_SoConIdxOfSocketRoute */
 typedef uint8 SoAd_SoConIdxOfSocketRouteType;
@@ -4828,11 +4828,11 @@ typedef struct sSoAd_PduRouteType
 /**   \brief  type used in SoAd_PduRouteDest */
 typedef struct sSoAd_PduRouteDestType
 {
+  SoAd_TxPduHdrIdOfPduRouteDestType TxPduHdrIdOfPduRouteDest;  /**< the PDU header ID */
   SoAd_PduRouteIdxOfPduRouteDestType PduRouteIdxOfPduRouteDest;  /**< the index of the 1:1 relation pointing to SoAd_PduRoute */
   SoAd_RouteGrpSoConByPduRouteDestIndEndIdxOfPduRouteDestType RouteGrpSoConByPduRouteDestIndEndIdxOfPduRouteDest;  /**< the end index of the 0:n relation pointing to SoAd_RouteGrpSoConByPduRouteDestInd */
   SoAd_RouteGrpSoConByPduRouteDestIndStartIdxOfPduRouteDestType RouteGrpSoConByPduRouteDestIndStartIdxOfPduRouteDest;  /**< the start index of the 0:n relation pointing to SoAd_RouteGrpSoConByPduRouteDestInd */
   SoAd_SoConIdxOfPduRouteDestType SoConIdxOfPduRouteDest;  /**< the index of the 1:1 relation pointing to SoAd_SoCon */
-  SoAd_TxPduHdrIdOfPduRouteDestType TxPduHdrIdOfPduRouteDest;  /**< the PDU header ID */
   SoAd_UdpTriggerTimeoutOfPduRouteDestType UdpTriggerTimeoutOfPduRouteDest;  /**< the PduRouteDest specific timeout to send a nPdu */
   SoAd_TxUdpTriggerModeType TxUdpTriggerModeOfPduRouteDest;  /**< indicates if nPdu shall be sent on transmission request always or never */
 } SoAd_PduRouteDestType;
@@ -5027,8 +5027,8 @@ typedef struct sSoAd_SocketDynType
 /**   \brief  type used in SoAd_SocketRoute */
 typedef struct sSoAd_SocketRouteType
 {
-  SoAd_MetaDataRxEnabledOfSocketRouteType MetaDataRxEnabledOfSocketRoute;  /**< indicates if SoConId is forwarded as meta data on reception */
   SoAd_RxPduHdrIdOfSocketRouteType RxPduHdrIdOfSocketRoute;  /**< the PDU header ID */
+  SoAd_MetaDataRxEnabledOfSocketRouteType MetaDataRxEnabledOfSocketRoute;  /**< indicates if SoConId is forwarded as meta data on reception */
   SoAd_SoConIdxOfSocketRouteType SoConIdxOfSocketRoute;  /**< the index of the 1:1 relation pointing to SoAd_SoCon */
   SoAd_SocketRouteDestEndIdxOfSocketRouteType SocketRouteDestEndIdxOfSocketRoute;  /**< the end index of the 1:n relation pointing to SoAd_SocketRouteDest */
   SoAd_SocketRouteDestStartIdxOfSocketRouteType SocketRouteDestStartIdxOfSocketRoute;  /**< the start index of the 1:n relation pointing to SoAd_SocketRouteDest */
@@ -5231,13 +5231,13 @@ typedef struct SoAd_EventQueueDynStructSTag
 /**   \brief  type to be used as symbolic data element access to SoAd_EventQueueIfUdpPduRoute */
 typedef struct SoAd_EventQueueIfUdpPduRouteStructSTag
 {
-  SoAd_EventQueueIfUdpPduRouteType SoAd[4];
+  SoAd_EventQueueIfUdpPduRouteType SoAd[7];
 } SoAd_EventQueueIfUdpPduRouteStructSType;
 
 /**   \brief  type to be used as symbolic data element access to SoAd_EventQueueStateSoCon */
 typedef struct SoAd_EventQueueStateSoConStructSTag
 {
-  SoAd_EventQueueStateSoConType SoAd[5];
+  SoAd_EventQueueStateSoConType SoAd[13];
 } SoAd_EventQueueStateSoConStructSType;
 
 /**   \brief  type to be used as symbolic data element access to SoAd_EventQueueTpRxSoCon */
@@ -5252,22 +5252,40 @@ typedef struct SoAd_EventQueueTpTxSoConStructSTag
   SoAd_EventQueueTpTxSoConType SoAd[2];
 } SoAd_EventQueueTpTxSoConStructSType;
 
+/**   \brief  type to be used as symbolic data element access to SoAd_IfRxBuffer */
+typedef struct SoAd_IfRxBufferStructSTag
+{
+  SoAd_IfRxBufferType SC_TCP_TX_Any_IP_DynamincPort_001[12];
+} SoAd_IfRxBufferStructSType;
+
 /**   \brief  type to be used as symbolic data element access to SoAd_PduRouteDyn */
 typedef struct SoAd_PduRouteDynStructSTag
 {
-  SoAd_PduRouteDynType SoAdPduRoute_DOIP_TEST_EQUIPMENT_REQUEST_Tx;
+  SoAd_PduRouteDynType SoAdPduRoute_SD_UDP_SenStateTx;
   SoAd_PduRouteDynType SoAdPduRoute_DOIP_TCP_DATA0_TX;
   SoAd_PduRouteDynType SoAdPduRoute_DOIP_TCP_DATA1_TX;
+  SoAd_PduRouteDynType SoAdPduRoute_DOIP_TEST_EQUIPMENT_REQUEST_Tx;
   SoAd_PduRouteDynType SoAdPduRoute_DOIP_UDP_DISCOVERY_Tx;
+  SoAd_PduRouteDynType SoAdPduRoute_Sd_Ctrl_Tx;
+  SoAd_PduRouteDynType SoAdPduRoute_Sd_TCP_EcuStateTx;
+  SoAd_PduRouteDynType SoAdPduRoute_Sd_UDP_FaultInfoTx;
   SoAd_PduRouteDynType SoAdPduRoute_TimeSyncStatus_Tx;
   SoAd_PduRouteDynType SoAdPduRoute_udplog_Tx;
 } SoAd_PduRouteDynStructSType;
+
+/**   \brief  type to be used as symbolic data element access to SoAd_RcvRemAddr */
+typedef struct SoAd_RcvRemAddrStructSTag
+{
+  SoAd_SockAddrInetXType SC_SD_Ctrl_UDP_Any_DynamicPort_Remote;
+  SoAd_SockAddrInetXType SC_SD_Ctrl_UDP_Any_DynamicPort_Remote1;
+} SoAd_RcvRemAddrStructSType;
 
 /**   \brief  type to be used as symbolic data element access to SoAd_RxBufStructMgt */
 typedef struct SoAd_RxBufStructMgtStructSTag
 {
   SoAd_RxBufStructMgtType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_0;
   SoAd_RxBufStructMgtType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_1;
+  SoAd_RxBufStructMgtType SC_TCP_TX_Any_IP_DynamincPort_001;
 } SoAd_RxBufStructMgtStructSType;
 
 /**   \brief  type to be used as symbolic data element access to SoAd_RxBufStructSeg */
@@ -5275,7 +5293,14 @@ typedef struct SoAd_RxBufStructSegStructSTag
 {
   SoAd_RxBufStructSegType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_0[2];
   SoAd_RxBufStructSegType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_1[2];
+  SoAd_RxBufStructSegType SC_TCP_TX_Any_IP_DynamincPort_001[2];
 } SoAd_RxBufStructSegStructSType;
+
+/**   \brief  type to be used as symbolic data element access to SoAd_RxBufferConfigDyn */
+typedef struct SoAd_RxBufferConfigDynStructSTag
+{
+  SoAd_RxBufferConfigDynType SC_TCP_TX_Any_IP_DynamincPort_001;
+} SoAd_RxBufferConfigDynStructSType;
 
 /**   \brief  type to be used as symbolic data element access to SoAd_RxMgt */
 typedef struct SoAd_RxMgtStructSTag
@@ -5283,6 +5308,13 @@ typedef struct SoAd_RxMgtStructSTag
   SoAd_RxMgtType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_0;
   SoAd_RxMgtType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_1;
   SoAd_RxMgtType SoAdSocketConnection_DOIP_UDP_ANY_remote;
+  SoAd_RxMgtType SC_SD_Ctrl_UDP_Any_DynamicPort_Remote;
+  SoAd_RxMgtType SC_SD_Ctrl_UDP_Any_DynamicPort_Remote1;
+  SoAd_RxMgtType SC_TCP_TX_Any_IP_DynamincPort_001;
+  SoAd_RxMgtType SC_UDP_IP_Any_DynamicPort_0;
+  SoAd_RxMgtType SC_UDP_IP_Any_DynamicPort_1;
+  SoAd_RxMgtType SC_UDP_Multicast_Fixed_239_23_0_1_40000_remote;
+  SoAd_RxMgtType SC_UDP_Multicast_Rx_Any;
 } SoAd_RxMgtStructSType;
 
 /**   \brief  type to be used as symbolic data element access to SoAd_TcpTxQueueData */
@@ -5290,6 +5322,8 @@ typedef struct SoAd_TcpTxQueueDataStructSTag
 {
   SoAd_TcpTxQueueDataType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_0[2];
   SoAd_TcpTxQueueDataType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_1[2];
+  SoAd_TcpTxQueueDataType SC_TCP_TX_Any_IP_DynamincPort;
+  SoAd_TcpTxQueueDataType SC_TCP_TX_Any_IP_DynamincPort_001;
 } SoAd_TcpTxQueueDataStructSType;
 
 /**   \brief  type to be used as symbolic data element access to SoAd_TcpTxQueueMgt */
@@ -5297,7 +5331,33 @@ typedef struct SoAd_TcpTxQueueMgtStructSTag
 {
   SoAd_TcpTxQueueMgtType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_0;
   SoAd_TcpTxQueueMgtType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_1;
+  SoAd_TcpTxQueueMgtType SC_TCP_TX_Any_IP_DynamincPort;
+  SoAd_TcpTxQueueMgtType SC_TCP_TX_Any_IP_DynamincPort_001;
 } SoAd_TcpTxQueueMgtStructSType;
+
+/**   \brief  type to be used as symbolic data element access to SoAd_TimeoutListDyn */
+typedef struct SoAd_TimeoutListDynStructSTag
+{
+  SoAd_TimeoutListDynType SoAdTimeoutListUdpAlive;
+} SoAd_TimeoutListDynStructSType;
+
+/**   \brief  type to be used as symbolic data element access to SoAd_TimeoutListUdpAlive */
+typedef struct SoAd_TimeoutListUdpAliveStructSTag
+{
+  SoAd_TimeoutListUdpAliveType SoAd[4];
+} SoAd_TimeoutListUdpAliveStructSType;
+
+/**   \brief  type to be used as symbolic data element access to SoAd_TimeoutListUdpAliveMap */
+typedef struct SoAd_TimeoutListUdpAliveMapStructSTag
+{
+  SoAd_TimeoutListUdpAliveMapType SoAd[13];
+} SoAd_TimeoutListUdpAliveMapStructSType;
+
+/**   \brief  type to be used as symbolic data element access to SoAd_TpRxBuffer */
+typedef struct SoAd_TpRxBufferStructSTag
+{
+  SoAd_TpRxBufferType SC_TCP_TX_Any_IP_DynamincPort_001[8];
+} SoAd_TpRxBufferStructSType;
 
 /**   \brief  type to be used as symbolic data element access to SoAd_TxMgt */
 typedef struct SoAd_TxMgtStructSTag
@@ -5307,6 +5367,11 @@ typedef struct SoAd_TxMgtStructSTag
   SoAd_TxMgtType SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_1;
   SoAd_TxMgtType SoAdSocketConnection_DOIP_UDP_Broad__255_255_255_255_13400_remote;
   SoAd_TxMgtType SoAdSocketConnection_DOIP_UDP_ANY_remote;
+  SoAd_TxMgtType SC_SD_Ctrl_UDP_Any_DynamicPort_Remote;
+  SoAd_TxMgtType SC_TCP_TX_Any_IP_DynamincPort;
+  SoAd_TxMgtType SC_UDP_IP_Any_DynamicPort_0;
+  SoAd_TxMgtType SC_UDP_IP_Any_DynamicPort_1;
+  SoAd_TxMgtType SC_UDP_Multicast_Fixed_239_23_0_1_40000_remote;
 } SoAd_TxMgtStructSType;
 
 /** 
@@ -5328,14 +5393,14 @@ typedef union SoAd_EventQueueDynUTag
 /**   \brief  type to access SoAd_EventQueueIfUdpPduRoute in an index and symbol based style. */
 typedef union SoAd_EventQueueIfUdpPduRouteUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  SoAd_EventQueueIfUdpPduRouteType raw[4];
+  SoAd_EventQueueIfUdpPduRouteType raw[7];
   SoAd_EventQueueIfUdpPduRouteStructSType str;
 } SoAd_EventQueueIfUdpPduRouteUType;
 
 /**   \brief  type to access SoAd_EventQueueStateSoCon in an index and symbol based style. */
 typedef union SoAd_EventQueueStateSoConUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  SoAd_EventQueueStateSoConType raw[5];
+  SoAd_EventQueueStateSoConType raw[13];
   SoAd_EventQueueStateSoConStructSType str;
 } SoAd_EventQueueStateSoConUType;
 
@@ -5353,52 +5418,101 @@ typedef union SoAd_EventQueueTpTxSoConUTag
   SoAd_EventQueueTpTxSoConStructSType str;
 } SoAd_EventQueueTpTxSoConUType;
 
+/**   \brief  type to access SoAd_IfRxBuffer in an index and symbol based style. */
+typedef union SoAd_IfRxBufferUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  SoAd_IfRxBufferType raw[12];
+  SoAd_IfRxBufferStructSType str;
+} SoAd_IfRxBufferUType;
+
 /**   \brief  type to access SoAd_PduRouteDyn in an index and symbol based style. */
 typedef union SoAd_PduRouteDynUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  SoAd_PduRouteDynType raw[6];
+  SoAd_PduRouteDynType raw[10];
   SoAd_PduRouteDynStructSType str;
 } SoAd_PduRouteDynUType;
+
+/**   \brief  type to access SoAd_RcvRemAddr in an index and symbol based style. */
+typedef union SoAd_RcvRemAddrUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  SoAd_SockAddrInetXType raw[2];
+  SoAd_RcvRemAddrStructSType str;
+} SoAd_RcvRemAddrUType;
 
 /**   \brief  type to access SoAd_RxBufStructMgt in an index and symbol based style. */
 typedef union SoAd_RxBufStructMgtUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  SoAd_RxBufStructMgtType raw[2];
+  SoAd_RxBufStructMgtType raw[3];
   SoAd_RxBufStructMgtStructSType str;
 } SoAd_RxBufStructMgtUType;
 
 /**   \brief  type to access SoAd_RxBufStructSeg in an index and symbol based style. */
 typedef union SoAd_RxBufStructSegUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  SoAd_RxBufStructSegType raw[4];
+  SoAd_RxBufStructSegType raw[6];
   SoAd_RxBufStructSegStructSType str;
 } SoAd_RxBufStructSegUType;
+
+/**   \brief  type to access SoAd_RxBufferConfigDyn in an index and symbol based style. */
+typedef union SoAd_RxBufferConfigDynUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  SoAd_RxBufferConfigDynType raw[1];
+  SoAd_RxBufferConfigDynStructSType str;
+} SoAd_RxBufferConfigDynUType;
 
 /**   \brief  type to access SoAd_RxMgt in an index and symbol based style. */
 typedef union SoAd_RxMgtUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  SoAd_RxMgtType raw[3];
+  SoAd_RxMgtType raw[10];
   SoAd_RxMgtStructSType str;
 } SoAd_RxMgtUType;
 
 /**   \brief  type to access SoAd_TcpTxQueueData in an index and symbol based style. */
 typedef union SoAd_TcpTxQueueDataUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  SoAd_TcpTxQueueDataType raw[4];
+  SoAd_TcpTxQueueDataType raw[6];
   SoAd_TcpTxQueueDataStructSType str;
 } SoAd_TcpTxQueueDataUType;
 
 /**   \brief  type to access SoAd_TcpTxQueueMgt in an index and symbol based style. */
 typedef union SoAd_TcpTxQueueMgtUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  SoAd_TcpTxQueueMgtType raw[2];
+  SoAd_TcpTxQueueMgtType raw[4];
   SoAd_TcpTxQueueMgtStructSType str;
 } SoAd_TcpTxQueueMgtUType;
+
+/**   \brief  type to access SoAd_TimeoutListDyn in an index and symbol based style. */
+typedef union SoAd_TimeoutListDynUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  SoAd_TimeoutListDynType raw[1];
+  SoAd_TimeoutListDynStructSType str;
+} SoAd_TimeoutListDynUType;
+
+/**   \brief  type to access SoAd_TimeoutListUdpAlive in an index and symbol based style. */
+typedef union SoAd_TimeoutListUdpAliveUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  SoAd_TimeoutListUdpAliveType raw[4];
+  SoAd_TimeoutListUdpAliveStructSType str;
+} SoAd_TimeoutListUdpAliveUType;
+
+/**   \brief  type to access SoAd_TimeoutListUdpAliveMap in an index and symbol based style. */
+typedef union SoAd_TimeoutListUdpAliveMapUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  SoAd_TimeoutListUdpAliveMapType raw[13];
+  SoAd_TimeoutListUdpAliveMapStructSType str;
+} SoAd_TimeoutListUdpAliveMapUType;
+
+/**   \brief  type to access SoAd_TpRxBuffer in an index and symbol based style. */
+typedef union SoAd_TpRxBufferUTag
+{  /* PRQA S 0750 */  /* MD_CSL_Union */
+  SoAd_TpRxBufferType raw[8];
+  SoAd_TpRxBufferStructSType str;
+} SoAd_TpRxBufferUType;
 
 /**   \brief  type to access SoAd_TxMgt in an index and symbol based style. */
 typedef union SoAd_TxMgtUTag
 {  /* PRQA S 0750 */  /* MD_CSL_Union */
-  SoAd_TxMgtType raw[5];
+  SoAd_TxMgtType raw[10];
   SoAd_TxMgtStructSType str;
 } SoAd_TxMgtUType;
 
@@ -5951,7 +6065,7 @@ extern CONST(SoAd_EventQueueIdentType, SOAD_CONST) SoAd_EventQueueIdent[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_LocalAddrType, SOAD_CONST) SoAd_LocalAddr[4];
+extern CONST(SoAd_LocalAddrType, SOAD_CONST) SoAd_LocalAddr[8];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5968,7 +6082,7 @@ extern CONST(SoAd_LocalAddrType, SOAD_CONST) SoAd_LocalAddr[4];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_LocalAddrByTcpIpCtrlIndType, SOAD_CONST) SoAd_LocalAddrByTcpIpCtrlInd[2];
+extern CONST(SoAd_LocalAddrByTcpIpCtrlIndType, SOAD_CONST) SoAd_LocalAddrByTcpIpCtrlInd[3];
 #define SOAD_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -5989,7 +6103,7 @@ extern CONST(SoAd_LocalAddrByTcpIpCtrlIndType, SOAD_CONST) SoAd_LocalAddrByTcpIp
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_LocalAddrIdMapType, SOAD_CONST) SoAd_LocalAddrIdMap[4];
+extern CONST(SoAd_LocalAddrIdMapType, SOAD_CONST) SoAd_LocalAddrIdMap[8];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6006,7 +6120,7 @@ extern CONST(SoAd_LocalAddrIdMapType, SOAD_CONST) SoAd_LocalAddrIdMap[4];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_LocalIpAddrAssignmentChgCbkType, SOAD_CONST) SoAd_LocalIpAddrAssignmentChgCbk[1];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+extern CONST(SoAd_LocalIpAddrAssignmentChgCbkType, SOAD_CONST) SoAd_LocalIpAddrAssignmentChgCbk[2];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6023,7 +6137,7 @@ extern CONST(SoAd_LocalIpAddrAssignmentChgCbkType, SOAD_CONST) SoAd_LocalIpAddrA
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_LocalIpAddrAssignmentChgCbkIndType, SOAD_CONST) SoAd_LocalIpAddrAssignmentChgCbkInd[4];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+extern CONST(SoAd_LocalIpAddrAssignmentChgCbkIndType, SOAD_CONST) SoAd_LocalIpAddrAssignmentChgCbkInd[12];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
 #define SOAD_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6052,7 +6166,7 @@ extern CONST(SoAd_LocalIpAddrAssignmentChgCbkIndType, SOAD_CONST) SoAd_LocalIpAd
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_PduRouteType, SOAD_CONST) SoAd_PduRoute[6];
+extern CONST(SoAd_PduRouteType, SOAD_CONST) SoAd_PduRoute[10];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6066,11 +6180,11 @@ extern CONST(SoAd_PduRouteType, SOAD_CONST) SoAd_PduRoute[6];
   \brief  the PduRouteDests configuraion
   \details
   Element                                   Description
+  TxPduHdrId                                the PDU header ID
   PduRouteIdx                               the index of the 1:1 relation pointing to SoAd_PduRoute
   RouteGrpSoConByPduRouteDestIndEndIdx      the end index of the 0:n relation pointing to SoAd_RouteGrpSoConByPduRouteDestInd
   RouteGrpSoConByPduRouteDestIndStartIdx    the start index of the 0:n relation pointing to SoAd_RouteGrpSoConByPduRouteDestInd
   SoConIdx                                  the index of the 1:1 relation pointing to SoAd_SoCon
-  TxPduHdrId                                the PDU header ID
   UdpTriggerTimeout                         the PduRouteDest specific timeout to send a nPdu
   TxUdpTriggerMode                          indicates if nPdu shall be sent on transmission request always or never
 */ 
@@ -6078,7 +6192,7 @@ extern CONST(SoAd_PduRouteType, SOAD_CONST) SoAd_PduRoute[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_PduRouteDestType, SOAD_CONST) SoAd_PduRouteDest[6];
+extern CONST(SoAd_PduRouteDestType, SOAD_CONST) SoAd_PduRouteDest[14];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6095,7 +6209,24 @@ extern CONST(SoAd_PduRouteDestType, SOAD_CONST) SoAd_PduRouteDest[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_PduRouteDestBySoConIndType, SOAD_CONST) SoAd_PduRouteDestBySoConInd[6];
+extern CONST(SoAd_PduRouteDestBySoConIndType, SOAD_CONST) SoAd_PduRouteDestBySoConInd[14];
+#define SOAD_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_PduRouteDestInd
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_PduRouteDestInd
+  \brief  the indexes of the 1:1 sorted relation pointing to SoAd_PduRouteDest
+*/ 
+#define SOAD_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(SoAd_PduRouteDestIndType, SOAD_CONST) SoAd_PduRouteDestInd[13];
 #define SOAD_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6116,7 +6247,134 @@ extern CONST(SoAd_PduRouteDestBySoConIndType, SOAD_CONST) SoAd_PduRouteDestBySoC
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_RemAddrIpV4Type, SOAD_CONST) SoAd_RemAddrIpV4[5];
+extern CONST(SoAd_RemAddrIpV4Type, SOAD_CONST) SoAd_RemAddrIpV4[13];
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrp
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrp
+  \brief  the routing group configuration
+  \details
+  Element                    Description
+  EnabledAtInit              indicates if RoutingGroup is initially enabled
+  MultiInstanceOnGrp         indicates if RoutingGroup is used for the multi service instance use case on socket connection groups
+  TxTriggerable              indicates if RoutingGroup can be sent
+  PduRouteDestIndEndIdx      the end index of the 0:n relation pointing to SoAd_PduRouteDestInd
+  PduRouteDestIndStartIdx    the start index of the 0:n relation pointing to SoAd_PduRouteDestInd
+  RouteGrpSoConEndIdx        the end index of the 0:n relation pointing to SoAd_RouteGrpSoCon
+  RouteGrpSoConStartIdx      the start index of the 0:n relation pointing to SoAd_RouteGrpSoCon
+  SocketRouteIndEndIdx       the end index of the 0:n relation pointing to SoAd_SocketRouteInd
+  SocketRouteIndStartIdx     the start index of the 0:n relation pointing to SoAd_SocketRouteInd
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(SoAd_RouteGrpType, SOAD_CONST) SoAd_RouteGrp[10];
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrpIdMap
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrpIdMap
+  \brief  the handle ID map for SoAdRoutingGroupId
+  \details
+  Element        Description
+  InvalidHnd     FALSE, if the handle of SoAd_RouteGrpIdMap is valid and can be used in the embedded code for further processing in the embedded code.
+  RouteGrpIdx    the index of the 1:1 relation pointing to SoAd_RouteGrp
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(SoAd_RouteGrpIdMapType, SOAD_CONST) SoAd_RouteGrpIdMap[10];
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrpSoCon
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrpSoCon
+  \brief  the routing groups on the socket connections
+  \details
+  Element        Description
+  RouteGrpIdx    the index of the 1:1 relation pointing to SoAd_RouteGrp
+  SoConIdx       the index of the 1:1 relation pointing to SoAd_SoCon
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(SoAd_RouteGrpSoConType, SOAD_CONST) SoAd_RouteGrpSoCon[28];
+#define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrpSoConByPduRouteDestInd
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrpSoConByPduRouteDestInd
+  \brief  the indexes of the 1:1 sorted relation pointing to SoAd_RouteGrpSoCon
+*/ 
+#define SOAD_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(SoAd_RouteGrpSoConByPduRouteDestIndType, SOAD_CONST) SoAd_RouteGrpSoConByPduRouteDestInd[13];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+#define SOAD_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrpSoConBySocketRouteDestInd
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrpSoConBySocketRouteDestInd
+  \brief  the indexes of the 1:1 sorted relation pointing to SoAd_RouteGrpSoCon
+*/ 
+#define SOAD_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(SoAd_RouteGrpSoConBySocketRouteDestIndType, SOAD_CONST) SoAd_RouteGrpSoConBySocketRouteDestInd[15];  /* PRQA S 0777 */  /* MD_MSR_Rule5.1 */
+#define SOAD_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RxBufferConfig
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RxBufferConfig
+  \brief  the reception buffer configurations
+  \details
+  Element               Description
+  IfRxBufferEndIdx      the end index of the 0:n relation pointing to SoAd_IfRxBuffer
+  IfRxBufferStartIdx    the start index of the 0:n relation pointing to SoAd_IfRxBuffer
+  TpRxBufferEndIdx      the end index of the 0:n relation pointing to SoAd_TpRxBuffer
+  TpRxBufferStartIdx    the start index of the 0:n relation pointing to SoAd_TpRxBuffer
+*/ 
+#define SOAD_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(SoAd_RxBufferConfigType, SOAD_CONST) SoAd_RxBufferConfig[1];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6137,7 +6395,7 @@ extern CONST(SoAd_RemAddrIpV4Type, SOAD_CONST) SoAd_RemAddrIpV4[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_RxPduIdIdMapType, SOAD_CONST) SoAd_RxPduIdIdMap[3];
+extern CONST(SoAd_RxPduIdIdMapType, SOAD_CONST) SoAd_RxPduIdIdMap[10];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6182,7 +6440,7 @@ extern CONST(SoAd_RxPduIdIdMapType, SOAD_CONST) SoAd_RxPduIdIdMap[3];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_SoConType, SOAD_CONST) SoAd_SoCon[5];
+extern CONST(SoAd_SoConType, SOAD_CONST) SoAd_SoCon[13];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6215,7 +6473,7 @@ extern CONST(SoAd_SoConType, SOAD_CONST) SoAd_SoCon[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_SoConGrpType, SOAD_CONST) SoAd_SoConGrp[3];
+extern CONST(SoAd_SoConGrpType, SOAD_CONST) SoAd_SoConGrp[9];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6236,7 +6494,7 @@ extern CONST(SoAd_SoConGrpType, SOAD_CONST) SoAd_SoConGrp[3];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_SoConMapType, SOAD_CONST) SoAd_SoConMap[5];
+extern CONST(SoAd_SoConMapType, SOAD_CONST) SoAd_SoConMap[13];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6253,7 +6511,7 @@ extern CONST(SoAd_SoConMapType, SOAD_CONST) SoAd_SoConMap[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_SoConModeChgCbkType, SOAD_CONST) SoAd_SoConModeChgCbk[1];
+extern CONST(SoAd_SoConModeChgCbkType, SOAD_CONST) SoAd_SoConModeChgCbk[2];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6270,7 +6528,7 @@ extern CONST(SoAd_SoConModeChgCbkType, SOAD_CONST) SoAd_SoConModeChgCbk[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_SoConModeChgCbkIndType, SOAD_CONST) SoAd_SoConModeChgCbkInd[4];
+extern CONST(SoAd_SoConModeChgCbkIndType, SOAD_CONST) SoAd_SoConModeChgCbkInd[12];
 #define SOAD_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6291,7 +6549,7 @@ extern CONST(SoAd_SoConModeChgCbkIndType, SOAD_CONST) SoAd_SoConModeChgCbkInd[4]
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_SocketType, SOAD_CONST) SoAd_Socket[5];
+extern CONST(SoAd_SocketType, SOAD_CONST) SoAd_Socket[12];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6305,8 +6563,8 @@ extern CONST(SoAd_SocketType, SOAD_CONST) SoAd_Socket[5];
   \brief  the socket route configuration
   \details
   Element                    Description
-  MetaDataRxEnabled          indicates if SoConId is forwarded as meta data on reception
   RxPduHdrId                 the PDU header ID
+  MetaDataRxEnabled          indicates if SoConId is forwarded as meta data on reception
   SoConIdx                   the index of the 1:1 relation pointing to SoAd_SoCon
   SocketRouteDestEndIdx      the end index of the 1:n relation pointing to SoAd_SocketRouteDest
   SocketRouteDestStartIdx    the start index of the 1:n relation pointing to SoAd_SocketRouteDest
@@ -6316,7 +6574,7 @@ extern CONST(SoAd_SocketType, SOAD_CONST) SoAd_Socket[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_SocketRouteType, SOAD_CONST) SoAd_SocketRoute[3];
+extern CONST(SoAd_SocketRouteType, SOAD_CONST) SoAd_SocketRoute[14];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6340,8 +6598,25 @@ extern CONST(SoAd_SocketRouteType, SOAD_CONST) SoAd_SocketRoute[3];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_SocketRouteDestType, SOAD_CONST) SoAd_SocketRouteDest[3];
+extern CONST(SoAd_SocketRouteDestType, SOAD_CONST) SoAd_SocketRouteDest[14];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_SocketRouteInd
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_SocketRouteInd
+  \brief  the indexes of the 1:1 sorted relation pointing to SoAd_SocketRoute
+*/ 
+#define SOAD_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(SoAd_SocketRouteIndType, SOAD_CONST) SoAd_SocketRouteInd[15];
+#define SOAD_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
@@ -6368,7 +6643,7 @@ extern CONST(SoAd_SocketRouteDestType, SOAD_CONST) SoAd_SocketRouteDest[3];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_SocketTcpType, SOAD_CONST) SoAd_SocketTcp[1];
+extern CONST(SoAd_SocketTcpType, SOAD_CONST) SoAd_SocketTcp[3];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6396,7 +6671,7 @@ extern CONST(SoAd_SocketTcpType, SOAD_CONST) SoAd_SocketTcp[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_SocketUdpType, SOAD_CONST) SoAd_SocketUdp[2];
+extern CONST(SoAd_SocketUdpType, SOAD_CONST) SoAd_SocketUdp[6];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6418,7 +6693,7 @@ extern CONST(SoAd_SocketUdpType, SOAD_CONST) SoAd_SocketUdp[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_TcpIpCtrlType, SOAD_CONST) SoAd_TcpIpCtrl[2];
+extern CONST(SoAd_TcpIpCtrlType, SOAD_CONST) SoAd_TcpIpCtrl[3];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6456,7 +6731,7 @@ extern CONST(SoAd_TcpKeepAliveGloballyEnabledType, SOAD_CONST) SoAd_TcpKeepAlive
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_TcpTxQueueType, SOAD_CONST) SoAd_TcpTxQueue[2];
+extern CONST(SoAd_TcpTxQueueType, SOAD_CONST) SoAd_TcpTxQueue[4];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6498,7 +6773,7 @@ extern CONST(SoAd_TimeoutListIdentType, SOAD_CONST) SoAd_TimeoutListIdent[1];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_TxPduIdMapType, SOAD_CONST) SoAd_TxPduIdMap[6];
+extern CONST(SoAd_TxPduIdMapType, SOAD_CONST) SoAd_TxPduIdMap[10];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6528,7 +6803,7 @@ extern CONST(SoAd_TxPduIdMapType, SOAD_CONST) SoAd_TxPduIdMap[6];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(SoAd_UpperLayerType, SOAD_CONST) SoAd_UpperLayer[2];
+extern CONST(SoAd_UpperLayerType, SOAD_CONST) SoAd_UpperLayer[3];
 #define SOAD_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6548,7 +6823,7 @@ extern CONST(SoAd_UpperLayerType, SOAD_CONST) SoAd_UpperLayer[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(SoAd_BestMatchSoConIdxListType, SOAD_VAR_NOINIT) SoAd_BestMatchSoConIdxList[2];
+extern VAR(SoAd_BestMatchSoConIdxListType, SOAD_VAR_NOINIT) SoAd_BestMatchSoConIdxList[3];
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6586,7 +6861,7 @@ extern VAR(SoAd_EventQueueDynUType, SOAD_VAR_NOINIT) SoAd_EventQueueDyn;  /* PRQ
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(SoAd_EventQueueFlagType, SOAD_VAR_NOINIT) SoAd_EventQueueFlag[6];
+extern VAR(SoAd_EventQueueFlagType, SOAD_VAR_NOINIT) SoAd_EventQueueFlag[13];
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6673,6 +6948,23 @@ extern VAR(SoAd_EventQueueTpTxSoConUType, SOAD_VAR_NOINIT) SoAd_EventQueueTpTxSo
 /*lint -restore */
 
 /**********************************************************************************************************************
+  SoAd_IfRxBuffer
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_IfRxBuffer
+  \brief  the reception buffer for IF-API
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(SoAd_IfRxBufferUType, SOAD_VAR_NOINIT) SoAd_IfRxBuffer;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define SOAD_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   SoAd_LocalAddrDyn
 **********************************************************************************************************************/
 /** 
@@ -6685,7 +6977,7 @@ extern VAR(SoAd_EventQueueTpTxSoConUType, SOAD_VAR_NOINIT) SoAd_EventQueueTpTxSo
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(SoAd_LocalAddrDynType, SOAD_VAR_NOINIT) SoAd_LocalAddrDyn[4];
+extern VAR(SoAd_LocalAddrDynType, SOAD_VAR_NOINIT) SoAd_LocalAddrDyn[8];
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6707,6 +6999,45 @@ extern VAR(SoAd_LocalAddrDynType, SOAD_VAR_NOINIT) SoAd_LocalAddrDyn[4];
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 extern VAR(SoAd_PduRouteDynUType, SOAD_VAR_NOINIT) SoAd_PduRouteDyn;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RcvRemAddr
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RcvRemAddr
+  \brief  stores remote address on reception
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(SoAd_RcvRemAddrUType, SOAD_VAR_NOINIT) SoAd_RcvRemAddr;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_RouteGrpSoConDyn
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RouteGrpSoConDyn
+  \brief  the routing groups on the socket connections management struct
+  \details
+  Element    Description
+  Enabled    the routing group state on the socket connection
+  Sent       the state which indicates if a routing group transmission is done for the socket connection
+  Trigger    the state which indicates if a routing group transmission is triggered for the socket connection
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(SoAd_RouteGrpSoConDynType, SOAD_VAR_NOINIT) SoAd_RouteGrpSoConDyn[28];
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6755,6 +7086,27 @@ extern VAR(SoAd_RxBufStructSegUType, SOAD_VAR_NOINIT) SoAd_RxBufStructSeg;  /* P
 /*lint -restore */
 
 /**********************************************************************************************************************
+  SoAd_RxBufferConfigDyn
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_RxBufferConfigDyn
+  \brief  the management structs to handle reception buffer
+  \details
+  Element          Description
+  IfRxBufferIdx    the index of the 0:1 relation pointing to SoAd_IfRxBuffer
+  TpRxBufferIdx    the index of the 0:1 relation pointing to SoAd_TpRxBuffer
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(SoAd_RxBufferConfigDynUType, SOAD_VAR_NOINIT) SoAd_RxBufferConfigDyn;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   SoAd_RxMgt
 **********************************************************************************************************************/
 /** 
@@ -6795,7 +7147,7 @@ extern VAR(SoAd_RxMgtUType, SOAD_VAR_NOINIT) SoAd_RxMgt;  /* PRQA S 0759 */  /* 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(SoAd_SoConDynType, SOAD_VAR_NOINIT) SoAd_SoConDyn[5];
+extern VAR(SoAd_SoConDynType, SOAD_VAR_NOINIT) SoAd_SoConDyn[13];
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6819,7 +7171,7 @@ extern VAR(SoAd_SoConDynType, SOAD_VAR_NOINIT) SoAd_SoConDyn[5];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(SoAd_SocketDynType, SOAD_VAR_NOINIT) SoAd_SocketDyn[5];
+extern VAR(SoAd_SocketDynType, SOAD_VAR_NOINIT) SoAd_SocketDyn[12];
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -6864,6 +7216,84 @@ extern VAR(SoAd_TcpTxQueueDataUType, SOAD_VAR_NOINIT) SoAd_TcpTxQueueData;  /* P
 /*lint -restore */
 extern VAR(SoAd_TcpTxQueueMgtUType, SOAD_VAR_NOINIT) SoAd_TcpTxQueueMgt;  /* PRQA S 0759 */  /* MD_CSL_Union */
 #define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TimeoutListDyn
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TimeoutListDyn
+  \brief  the management struct of all timeout lists
+  \details
+  Element    Description
+  Lvl        the level of pending timeouts
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(SoAd_TimeoutListDynUType, SOAD_VAR_NOINIT) SoAd_TimeoutListDyn;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TimeoutListUdpAlive
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TimeoutListUdpAlive
+  \brief  the timeout list for UDP Alive supervision timeout
+  \details
+  Element     Description
+  Timeout     the timeout value
+  SoConIdx    the index of the 0:1 relation pointing to SoAd_SoCon
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(SoAd_TimeoutListUdpAliveUType, SOAD_VAR_NOINIT) SoAd_TimeoutListUdpAlive;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TimeoutListUdpAliveMap
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TimeoutListUdpAliveMap
+  \brief  maps all socket connections to the timeout list index for UDP Alive supervision timeout if timeout is running
+  \details
+  Element                   Description
+  TimeoutListUdpAliveIdx    the index of the 0:1 relation pointing to SoAd_TimeoutListUdpAlive
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(SoAd_TimeoutListUdpAliveMapUType, SOAD_VAR_NOINIT) SoAd_TimeoutListUdpAliveMap;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define SOAD_STOP_SEC_VAR_NOINIT_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  SoAd_TpRxBuffer
+**********************************************************************************************************************/
+/** 
+  \var    SoAd_TpRxBuffer
+  \brief  the reception buffer for TP-API
+*/ 
+#define SOAD_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern VAR(SoAd_TpRxBufferUType, SOAD_VAR_NOINIT) SoAd_TpRxBuffer;  /* PRQA S 0759 */  /* MD_CSL_Union */
+#define SOAD_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */

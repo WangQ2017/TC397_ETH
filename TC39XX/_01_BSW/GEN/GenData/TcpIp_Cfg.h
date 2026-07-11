@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: TcpIp_Cfg.h
- *   Generation Time: 2026-06-18 22:46:18
+ *   Generation Time: 2026-07-05 10:57:30
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -98,6 +98,10 @@
 #define TcpIpConf_TcpIpLocalAddr_TcpIpV4LocalAddr_TcpIpCtrl_untagged_Broadcast (1uL)
 #define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33 (2uL)
 #define TcpIpConf_TcpIpLocalAddr_TcpIpV4LocalAddr_TcpIpCtrl_Vlan1_Broadcast (3uL)
+#define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Fixed_10_23_0_23 (4uL)
+#define TcpIpConf_TcpIpLocalAddr_TcpIpV4LocalAddr_TcpIpCtrl_Vlan23_Broadcast (7uL)
+#define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_NE_Multicast_Rx_Fixed_239_23_0_2 (5uL)
+#define TcpIpConf_TcpIpLocalAddr_TcpIpLocalAddr_Multicast_Any_Vlan23 (6uL)
 
 /**********************************************************************************************************************
  *  SYMBOLIC NAME DEFINES: SOCKET USERS

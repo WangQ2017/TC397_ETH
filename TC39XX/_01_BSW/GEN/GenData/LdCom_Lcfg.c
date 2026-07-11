@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LdCom_Lcfg.c
- *   Generation Time: 2026-05-30 23:48:29
+ *   Generation Time: 2026-07-05 10:57:22
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -33,6 +33,26 @@
  * WARNING: This code has been generated with reduced-severity errors. 
  * The created output files contain errors that have been ignored. Usage of the created files can lead to unpredictable behavior of the embedded code.
  * Usage of the created files happens at own risk!
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_EcuStateTx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_SenStateTx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleSpeedRx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleStatusRx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
  * 
  * [Warning] Cfg00022 - Missing parameter value 
  * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
@@ -101,22 +121,71 @@
   SECTION: GLOBAL DATA
 **********************************************************************************************************************/
 /**********************************************************************************************************************
+  LdCom_IfRxIndicationFctPtr
+**********************************************************************************************************************/
+/** 
+  \var    LdCom_IfRxIndicationFctPtr
+  \brief  Upper layer communication interface Rx indication function pointer according DefinitionRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComRxIndication
+*/ 
+#define LDCOM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(LdCom_IfRxIndicationFctPtrType, LDCOM_CONST) LdCom_IfRxIndicationFctPtr[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     IfRxIndicationFctPtr               Referable Keys */
+  /*     0 */ Rte_LdComCbk_VechicleSpeedRx  ,  /* [/ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleSpeedRx[0:LdComRxIndication]] */
+  /*     1 */ Rte_LdComCbk_VechicleStatusRx    /* [/ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleStatusRx[0:LdComRxIndication]] */
+};
+#define LDCOM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LdCom_IfTxConfirmationFctPtr
+**********************************************************************************************************************/
+/** 
+  \var    LdCom_IfTxConfirmationFctPtr
+  \brief  Upper layer communication interface TxConfirmation function pointer according DefinitionRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComTxConfirmation
+*/ 
+#define LDCOM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(LdCom_IfTxConfirmationFctPtrType, LDCOM_CONST) LdCom_IfTxConfirmationFctPtr[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     IfTxConfirmationFctPtr        Referable Keys */
+  /*     0 */ Rte_LdComCbk__EcuStateTx ,  /* [/ActiveEcuC/LdCom/LdComConfig/LdComIPdu_EcuStateTx[0:LdComTxConfirmation]] */
+  /*     1 */ Rte_LdComCbk_SenStateTx     /* [/ActiveEcuC/LdCom/LdComConfig/LdComIPdu_SenStateTx[0:LdComTxConfirmation]] */
+};
+#define LDCOM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   LdCom_RxTxPduInfo
 **********************************************************************************************************************/
 /** 
   \var    LdCom_RxTxPduInfo
   \brief  Table containing mapping data from Input handles to PduR Tx handles/RTE callbacks.
   \details
-  Element    Description
-  TxPdu  
+  Element                      Description
+  IfPdu                    
+  IfRxIndicationFctPtrIdx      the index of the 0:1 relation pointing to LdCom_IfRxIndicationFctPtr
+  IfTxConfirmationFctPtrIdx    the index of the 0:1 relation pointing to LdCom_IfTxConfirmationFctPtr
+  PduRTxHandleId               Handle ID used to call PduR_LdComTransmit()
 */ 
 #define LDCOM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(LdCom_RxTxPduInfoType, LDCOM_CONST) LdCom_RxTxPduInfo[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    TxPdu        Referable Keys */
-  { /*     0 */  TRUE }   /* [/ActiveEcuC/LdCom/LdComConfig/LdComIPdu_udplog_Tx] */
+CONST(LdCom_RxTxPduInfoType, LDCOM_CONST) LdCom_RxTxPduInfo[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    IfPdu  IfRxIndicationFctPtrIdx                        IfTxConfirmationFctPtrIdx                        PduRTxHandleId                                        Referable Keys */
+  { /*     0 */  TRUE, LDCOM_NO_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO,                                              0u,               PduRConf_PduRSrcPdu_PduRSrcPdu_6 },  /* [/ActiveEcuC/LdCom/LdComConfig/LdComIPdu_EcuStateTx] */
+  { /*     1 */  TRUE, LDCOM_NO_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO,                                              1u,               PduRConf_PduRSrcPdu_PduRSrcPdu_5 },  /* [/ActiveEcuC/LdCom/LdComConfig/LdComIPdu_SenStateTx] */
+  { /*     2 */  TRUE,                                            0u, LDCOM_NO_IFTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO,                                             0u },  /* [/ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleSpeedRx] */
+  { /*     3 */  TRUE,                                            1u, LDCOM_NO_IFTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO,                                             0u },  /* [/ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleStatusRx] */
+  { /*     4 */  TRUE, LDCOM_NO_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO, LDCOM_NO_IFTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO, PduRConf_PduRSrcPdu_PduRSrcPdu_udplog_Tx_LdCom }   /* [/ActiveEcuC/LdCom/LdComConfig/LdComIPdu_udplog_Tx] */
 };
 #define LDCOM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

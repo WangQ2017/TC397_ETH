@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LdCom_Lcfg.h
- *   Generation Time: 2026-06-19 21:41:27
+ *   Generation Time: 2026-07-05 10:57:27
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -33,6 +33,26 @@
  * WARNING: This code has been generated with reduced-severity errors. 
  * The created output files contain errors that have been ignored. Usage of the created files can lead to unpredictable behavior of the embedded code.
  * Usage of the created files happens at own risk!
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_EcuStateTx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_SenStateTx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleSpeedRx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleStatusRx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
  * 
  * [Warning] Cfg00022 - Missing parameter value 
  * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
@@ -64,17 +84,17 @@
   \{
 */ 
 #define LDCOM_FINALMAGICNUMBER                                                                      STD_OFF  /**< Deactivateable: 'LdCom_FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
-#define LDCOM_IFRXINDICATIONFCTPTR                                                                  STD_OFF  /**< Deactivateable: 'LdCom_IfRxIndicationFctPtr' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
-#define LDCOM_IFTXCONFIRMATIONFCTPTR                                                                STD_OFF  /**< Deactivateable: 'LdCom_IfTxConfirmationFctPtr' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
+#define LDCOM_IFRXINDICATIONFCTPTR                                                                  STD_ON
+#define LDCOM_IFTXCONFIRMATIONFCTPTR                                                                STD_ON
 #define LDCOM_IFTXTRIGGERTRANSMITFCTPTR                                                             STD_OFF  /**< Deactivateable: 'LdCom_IfTxTriggerTransmitFctPtr' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define LDCOM_INITDATAHASHCODE                                                                      STD_OFF  /**< Deactivateable: 'LdCom_InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
 #define LDCOM_INITIALIZED                                                                           STD_ON
 #define LDCOM_RXTXPDUINFO                                                                           STD_ON
 #define LDCOM_IFPDUOFRXTXPDUINFO                                                                    STD_ON
-#define LDCOM_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO                                                  STD_OFF  /**< Deactivateable: 'LdCom_RxTxPduInfo.IfRxIndicationFctPtrIdx' Reason: 'the optional indirection is deactivated because IfRxIndicationFctPtrUsedOfRxTxPduInfo is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define LDCOM_IFRXINDICATIONFCTPTRUSEDOFRXTXPDUINFO                                                 STD_OFF  /**< Deactivateable: 'LdCom_RxTxPduInfo.IfRxIndicationFctPtrUsed' Reason: 'the optional indirection is deactivated because IfRxIndicationFctPtrUsedOfRxTxPduInfo is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define LDCOM_IFTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO                                                STD_OFF  /**< Deactivateable: 'LdCom_RxTxPduInfo.IfTxConfirmationFctPtrIdx' Reason: 'the optional indirection is deactivated because IfTxConfirmationFctPtrUsedOfRxTxPduInfo is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
-#define LDCOM_IFTXCONFIRMATIONFCTPTRUSEDOFRXTXPDUINFO                                               STD_OFF  /**< Deactivateable: 'LdCom_RxTxPduInfo.IfTxConfirmationFctPtrUsed' Reason: 'the optional indirection is deactivated because IfTxConfirmationFctPtrUsedOfRxTxPduInfo is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
+#define LDCOM_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO                                                  STD_ON
+#define LDCOM_IFRXINDICATIONFCTPTRUSEDOFRXTXPDUINFO                                                 STD_ON
+#define LDCOM_IFTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO                                                STD_ON
+#define LDCOM_IFTXCONFIRMATIONFCTPTRUSEDOFRXTXPDUINFO                                               STD_ON
 #define LDCOM_IFTXTRIGGERTRANSMITFCTPTRIDXOFRXTXPDUINFO                                             STD_OFF  /**< Deactivateable: 'LdCom_RxTxPduInfo.IfTxTriggerTransmitFctPtrIdx' Reason: 'the optional indirection is deactivated because IfTxTriggerTransmitFctPtrUsedOfRxTxPduInfo is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
 #define LDCOM_IFTXTRIGGERTRANSMITFCTPTRUSEDOFRXTXPDUINFO                                            STD_OFF  /**< Deactivateable: 'LdCom_RxTxPduInfo.IfTxTriggerTransmitFctPtrUsed' Reason: 'the optional indirection is deactivated because IfTxTriggerTransmitFctPtrUsedOfRxTxPduInfo is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
 #define LDCOM_INVALIDHNDOFRXTXPDUINFO                                                               STD_OFF  /**< Deactivateable: 'LdCom_RxTxPduInfo.InvalidHnd' Reason: 'the value of LdCom_InvalidHndOfRxTxPduInfo is always 'false' due to this, the array is deactivated.' */
@@ -90,6 +110,8 @@
 #define LDCOM_TPTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO                                                STD_OFF  /**< Deactivateable: 'LdCom_RxTxPduInfo.TpTxConfirmationFctPtrIdx' Reason: 'the optional indirection is deactivated because TpTxConfirmationFctPtrUsedOfRxTxPduInfo is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
 #define LDCOM_TPTXCONFIRMATIONFCTPTRUSEDOFRXTXPDUINFO                                               STD_OFF  /**< Deactivateable: 'LdCom_RxTxPduInfo.TpTxConfirmationFctPtrUsed' Reason: 'the optional indirection is deactivated because TpTxConfirmationFctPtrUsedOfRxTxPduInfo is always 'FALSE' and the target of the indirection is of the Configuration Class 'PRE_COMPILE'.' */
 #define LDCOM_TXPDUOFRXTXPDUINFO                                                                    STD_ON
+#define LDCOM_SIZEOFIFRXINDICATIONFCTPTR                                                            STD_ON
+#define LDCOM_SIZEOFIFTXCONFIRMATIONFCTPTR                                                          STD_ON
 #define LDCOM_SIZEOFRXTXPDUINFO                                                                     STD_ON
 #define LDCOM_TPCOPYRXDATAFCTPTR                                                                    STD_OFF  /**< Deactivateable: 'LdCom_TpCopyRxDataFctPtr' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define LDCOM_TPCOPYTXDATAFCTPTR                                                                    STD_OFF  /**< Deactivateable: 'LdCom_TpCopyTxDataFctPtr' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
@@ -98,10 +120,25 @@
 #define LDCOM_TPTXCONFIRMATIONFCTPTR                                                                STD_OFF  /**< Deactivateable: 'LdCom_TpTxConfirmationFctPtr' Reason: 'the array is deactivated because the size is 0 and the piece of data is in the configuration class: PRE_COMPILE' */
 #define LDCOM_PCCONFIG                                                                              STD_ON
 #define LDCOM_FINALMAGICNUMBEROFPCCONFIG                                                            STD_OFF  /**< Deactivateable: 'LdCom_PCConfig.FinalMagicNumber' Reason: 'the module configuration does not support flashing of data.' */
+#define LDCOM_IFRXINDICATIONFCTPTROFPCCONFIG                                                        STD_ON
+#define LDCOM_IFTXCONFIRMATIONFCTPTROFPCCONFIG                                                      STD_ON
 #define LDCOM_INITDATAHASHCODEOFPCCONFIG                                                            STD_OFF  /**< Deactivateable: 'LdCom_PCConfig.InitDataHashCode' Reason: 'the module configuration does not support flashing of data.' */
 #define LDCOM_INITIALIZEDOFPCCONFIG                                                                 STD_ON
 #define LDCOM_RXTXPDUINFOOFPCCONFIG                                                                 STD_ON
+#define LDCOM_SIZEOFIFRXINDICATIONFCTPTROFPCCONFIG                                                  STD_ON
+#define LDCOM_SIZEOFIFTXCONFIRMATIONFCTPTROFPCCONFIG                                                STD_ON
 #define LDCOM_SIZEOFRXTXPDUINFOOFPCCONFIG                                                           STD_ON
+/** 
+  \}
+*/ 
+
+/** 
+  \defgroup  LdComPCNoReferenceDefines  LdCom No Reference Defines (PRE_COMPILE)
+  \brief  These defines are used to indicate unused indexes in data relations.
+  \{
+*/ 
+#define LDCOM_NO_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO                                               255u
+#define LDCOM_NO_IFTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO                                             255u
 /** 
   \}
 */ 
@@ -111,9 +148,17 @@
   \brief  If all values in a CONST array or an element in a CONST array of structs are equal, the define is STD_ON else STD_OFF.
   \{
 */ 
+#define LDCOM_ISDEF_IFRXINDICATIONFCTPTR                                                            STD_OFF
+#define LDCOM_ISDEF_IFTXCONFIRMATIONFCTPTR                                                          STD_OFF
 #define LDCOM_ISDEF_IFPDUOFRXTXPDUINFO                                                              STD_OFF
+#define LDCOM_ISDEF_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO                                            STD_OFF
+#define LDCOM_ISDEF_IFRXINDICATIONFCTPTRUSEDOFRXTXPDUINFO                                           STD_OFF
+#define LDCOM_ISDEF_IFTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO                                          STD_OFF
+#define LDCOM_ISDEF_IFTXCONFIRMATIONFCTPTRUSEDOFRXTXPDUINFO                                         STD_OFF
 #define LDCOM_ISDEF_PDURTXHANDLEIDOFRXTXPDUINFO                                                     STD_OFF
 #define LDCOM_ISDEF_TXPDUOFRXTXPDUINFO                                                              STD_OFF
+#define LDCOM_ISDEF_IFRXINDICATIONFCTPTROFPCCONFIG                                                  STD_ON
+#define LDCOM_ISDEF_IFTXCONFIRMATIONFCTPTROFPCCONFIG                                                STD_ON
 #define LDCOM_ISDEF_INITIALIZEDOFPCCONFIG                                                           STD_ON
 #define LDCOM_ISDEF_RXTXPDUINFOOFPCCONFIG                                                           STD_ON
 /** 
@@ -125,9 +170,17 @@
   \brief  If all values in a CONST array or an element in a CONST array of structs are equal, the define contains the always equals value.
   \{
 */ 
+#define LDCOM_EQ2_IFRXINDICATIONFCTPTR                                                              
+#define LDCOM_EQ2_IFTXCONFIRMATIONFCTPTR                                                            
 #define LDCOM_EQ2_IFPDUOFRXTXPDUINFO                                                                
+#define LDCOM_EQ2_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO                                              
+#define LDCOM_EQ2_IFRXINDICATIONFCTPTRUSEDOFRXTXPDUINFO                                             
+#define LDCOM_EQ2_IFTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO                                            
+#define LDCOM_EQ2_IFTXCONFIRMATIONFCTPTRUSEDOFRXTXPDUINFO                                           
 #define LDCOM_EQ2_PDURTXHANDLEIDOFRXTXPDUINFO                                                       
 #define LDCOM_EQ2_TXPDUOFRXTXPDUINFO                                                                
+#define LDCOM_EQ2_IFRXINDICATIONFCTPTROFPCCONFIG                                                    LdCom_IfRxIndicationFctPtr
+#define LDCOM_EQ2_IFTXCONFIRMATIONFCTPTROFPCCONFIG                                                  LdCom_IfTxConfirmationFctPtr
 #define LDCOM_EQ2_INITIALIZEDOFPCCONFIG                                                             (&(LdCom_Initialized))
 #define LDCOM_EQ2_RXTXPDUINFOOFPCCONFIG                                                             LdCom_RxTxPduInfo
 /** 
@@ -205,9 +258,13 @@
   \brief  These macros can be used to read deduplicated by constance root data elements.
   \{
 */ 
+#define LdCom_GetIfRxIndicationFctPtrOfPCConfig()                                                   LdCom_IfRxIndicationFctPtr  /**< the pointer to LdCom_IfRxIndicationFctPtr */
+#define LdCom_GetIfTxConfirmationFctPtrOfPCConfig()                                                 LdCom_IfTxConfirmationFctPtr  /**< the pointer to LdCom_IfTxConfirmationFctPtr */
 #define LdCom_GetInitializedOfPCConfig()                                                            (&(LdCom_Initialized))  /**< the pointer to LdCom_Initialized */
 #define LdCom_GetRxTxPduInfoOfPCConfig()                                                            LdCom_RxTxPduInfo  /**< the pointer to LdCom_RxTxPduInfo */
-#define LdCom_GetSizeOfRxTxPduInfoOfPCConfig()                                                      1u  /**< the number of accomplishable value elements in LdCom_RxTxPduInfo */
+#define LdCom_GetSizeOfIfRxIndicationFctPtrOfPCConfig()                                             2u  /**< the number of accomplishable value elements in LdCom_IfRxIndicationFctPtr */
+#define LdCom_GetSizeOfIfTxConfirmationFctPtrOfPCConfig()                                           2u  /**< the number of accomplishable value elements in LdCom_IfTxConfirmationFctPtr */
+#define LdCom_GetSizeOfRxTxPduInfoOfPCConfig()                                                      5u  /**< the number of accomplishable value elements in LdCom_RxTxPduInfo */
 /** 
   \}
 */ 
@@ -217,8 +274,13 @@
   \brief  These macros can be used to read CONST and VAR data.
   \{
 */ 
+#define LdCom_GetIfRxIndicationFctPtr(Index)                                                        (LdCom_GetIfRxIndicationFctPtrOfPCConfig()[(Index)])
+#define LdCom_GetIfTxConfirmationFctPtr(Index)                                                      (LdCom_GetIfTxConfirmationFctPtrOfPCConfig()[(Index)])
 #define LdCom_IsInitialized()                                                                       (((*(LdCom_GetInitializedOfPCConfig()))) != FALSE)
-#define LdCom_IsTxPduOfRxTxPduInfo(Index)                                                           ((LdCom_GetRxTxPduInfoOfPCConfig()[(Index)].TxPduOfRxTxPduInfo) != FALSE)
+#define LdCom_IsIfPduOfRxTxPduInfo(Index)                                                           ((LdCom_GetRxTxPduInfoOfPCConfig()[(Index)].IfPduOfRxTxPduInfo) != FALSE)
+#define LdCom_GetIfRxIndicationFctPtrIdxOfRxTxPduInfo(Index)                                        (LdCom_GetRxTxPduInfoOfPCConfig()[(Index)].IfRxIndicationFctPtrIdxOfRxTxPduInfo)
+#define LdCom_GetIfTxConfirmationFctPtrIdxOfRxTxPduInfo(Index)                                      (LdCom_GetRxTxPduInfoOfPCConfig()[(Index)].IfTxConfirmationFctPtrIdxOfRxTxPduInfo)
+#define LdCom_GetPduRTxHandleIdOfRxTxPduInfo(Index)                                                 (LdCom_GetRxTxPduInfoOfPCConfig()[(Index)].PduRTxHandleIdOfRxTxPduInfo)
 /** 
   \}
 */ 
@@ -228,8 +290,11 @@
   \brief  These macros can be used to read deduplicated data elements.
   \{
 */ 
-#define LdCom_IsIfPduOfRxTxPduInfo(Index)                                                           LdCom_IsTxPduOfRxTxPduInfo(Index)
-#define LdCom_GetPduRTxHandleIdOfRxTxPduInfo(Index)                                                 ((LdCom_PduRTxHandleIdOfRxTxPduInfoType)((((LdCom_PduRTxHandleIdOfRxTxPduInfoType)(Index)) + 2u)))  /**< Handle ID used to call PduR_LdComTransmit() */
+#define LdCom_IsIfRxIndicationFctPtrUsedOfRxTxPduInfo(Index)                                        (((boolean)(LdCom_GetIfRxIndicationFctPtrIdxOfRxTxPduInfo(Index) != LDCOM_NO_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to LdCom_IfRxIndicationFctPtr */
+#define LdCom_IsIfTxConfirmationFctPtrUsedOfRxTxPduInfo(Index)                                      (((boolean)(LdCom_GetIfTxConfirmationFctPtrIdxOfRxTxPduInfo(Index) != LDCOM_NO_IFTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO)) != FALSE)  /**< TRUE, if the 0:1 relation has minimum 1 relation pointing to LdCom_IfTxConfirmationFctPtr */
+#define LdCom_IsTxPduOfRxTxPduInfo(Index)                                                           (((boolean)(LdCom_GetPduRTxHandleIdOfRxTxPduInfo(Index) != 0u)) != FALSE)
+#define LdCom_GetSizeOfIfRxIndicationFctPtr()                                                       LdCom_GetSizeOfIfRxIndicationFctPtrOfPCConfig()
+#define LdCom_GetSizeOfIfTxConfirmationFctPtr()                                                     LdCom_GetSizeOfIfTxConfirmationFctPtrOfPCConfig()
 #define LdCom_GetSizeOfRxTxPduInfo()                                                                LdCom_GetSizeOfRxTxPduInfoOfPCConfig()
 /** 
   \}
@@ -250,15 +315,27 @@
   \brief  These macros can be used to detect at runtime a deactivated piece of information. TRUE in the CONFIGURATION_VARIANT PRE-COMPILE, TRUE or FALSE in the CONFIGURATION_VARIANT POST-BUILD.
   \{
 */ 
+#define LdCom_HasIfRxIndicationFctPtr()                                                             (TRUE != FALSE)
+#define LdCom_HasIfTxConfirmationFctPtr()                                                           (TRUE != FALSE)
 #define LdCom_HasInitialized()                                                                      (TRUE != FALSE)
 #define LdCom_HasRxTxPduInfo()                                                                      (TRUE != FALSE)
 #define LdCom_HasIfPduOfRxTxPduInfo()                                                               (TRUE != FALSE)
+#define LdCom_HasIfRxIndicationFctPtrIdxOfRxTxPduInfo()                                             (TRUE != FALSE)
+#define LdCom_HasIfRxIndicationFctPtrUsedOfRxTxPduInfo()                                            (TRUE != FALSE)
+#define LdCom_HasIfTxConfirmationFctPtrIdxOfRxTxPduInfo()                                           (TRUE != FALSE)
+#define LdCom_HasIfTxConfirmationFctPtrUsedOfRxTxPduInfo()                                          (TRUE != FALSE)
 #define LdCom_HasPduRTxHandleIdOfRxTxPduInfo()                                                      (TRUE != FALSE)
 #define LdCom_HasTxPduOfRxTxPduInfo()                                                               (TRUE != FALSE)
+#define LdCom_HasSizeOfIfRxIndicationFctPtr()                                                       (TRUE != FALSE)
+#define LdCom_HasSizeOfIfTxConfirmationFctPtr()                                                     (TRUE != FALSE)
 #define LdCom_HasSizeOfRxTxPduInfo()                                                                (TRUE != FALSE)
 #define LdCom_HasPCConfig()                                                                         (TRUE != FALSE)
+#define LdCom_HasIfRxIndicationFctPtrOfPCConfig()                                                   (TRUE != FALSE)
+#define LdCom_HasIfTxConfirmationFctPtrOfPCConfig()                                                 (TRUE != FALSE)
 #define LdCom_HasInitializedOfPCConfig()                                                            (TRUE != FALSE)
 #define LdCom_HasRxTxPduInfoOfPCConfig()                                                            (TRUE != FALSE)
+#define LdCom_HasSizeOfIfRxIndicationFctPtrOfPCConfig()                                             (TRUE != FALSE)
+#define LdCom_HasSizeOfIfTxConfirmationFctPtrOfPCConfig()                                           (TRUE != FALSE)
 #define LdCom_HasSizeOfRxTxPduInfoOfPCConfig()                                                      (TRUE != FALSE)
 /** 
   \}
@@ -298,6 +375,9 @@
 /**********************************************************************************************************************
  *  GLOBAL DATA TYPES AND STRUCTURES
  *********************************************************************************************************************/
+typedef P2FUNC(void, LDCOM_APPL_CODE, LdCom_IfRxIndicationFctPtrType) (
+                                                                     P2CONST(PduInfoType, AUTOMATIC, LDCOM_APPL_DATA));		/* PRQA S 1336 */ /* MD_LdCom_1336 */
+typedef P2FUNC(void, LDCOM_APPL_CODE, LdCom_IfTxConfirmationFctPtrType) (void);
 
 
 /**********************************************************************************************************************
@@ -309,6 +389,12 @@
   \brief  These type definitions are used to iterate over an array with least processor cycles for variable access as possible.
   \{
 */ 
+/**   \brief  type used to iterate LdCom_IfRxIndicationFctPtr */
+typedef uint8_least LdCom_IfRxIndicationFctPtrIterType;
+
+/**   \brief  type used to iterate LdCom_IfTxConfirmationFctPtr */
+typedef uint8_least LdCom_IfTxConfirmationFctPtrIterType;
+
 /**   \brief  type used to iterate LdCom_RxTxPduInfo */
 typedef uint8_least LdCom_RxTxPduInfoIterType;
 
@@ -327,11 +413,29 @@ typedef boolean LdCom_InitializedType;
 /**   \brief  value based type definition for LdCom_IfPduOfRxTxPduInfo */
 typedef boolean LdCom_IfPduOfRxTxPduInfoType;
 
+/**   \brief  value based type definition for LdCom_IfRxIndicationFctPtrIdxOfRxTxPduInfo */
+typedef uint8 LdCom_IfRxIndicationFctPtrIdxOfRxTxPduInfoType;
+
+/**   \brief  value based type definition for LdCom_IfRxIndicationFctPtrUsedOfRxTxPduInfo */
+typedef boolean LdCom_IfRxIndicationFctPtrUsedOfRxTxPduInfoType;
+
+/**   \brief  value based type definition for LdCom_IfTxConfirmationFctPtrIdxOfRxTxPduInfo */
+typedef uint8 LdCom_IfTxConfirmationFctPtrIdxOfRxTxPduInfoType;
+
+/**   \brief  value based type definition for LdCom_IfTxConfirmationFctPtrUsedOfRxTxPduInfo */
+typedef boolean LdCom_IfTxConfirmationFctPtrUsedOfRxTxPduInfoType;
+
 /**   \brief  value based type definition for LdCom_PduRTxHandleIdOfRxTxPduInfo */
 typedef uint8 LdCom_PduRTxHandleIdOfRxTxPduInfoType;
 
 /**   \brief  value based type definition for LdCom_TxPduOfRxTxPduInfo */
 typedef boolean LdCom_TxPduOfRxTxPduInfoType;
+
+/**   \brief  value based type definition for LdCom_SizeOfIfRxIndicationFctPtr */
+typedef uint8 LdCom_SizeOfIfRxIndicationFctPtrType;
+
+/**   \brief  value based type definition for LdCom_SizeOfIfTxConfirmationFctPtr */
+typedef uint8 LdCom_SizeOfIfTxConfirmationFctPtrType;
 
 /**   \brief  value based type definition for LdCom_SizeOfRxTxPduInfo */
 typedef uint8 LdCom_SizeOfRxTxPduInfoType;
@@ -350,9 +454,16 @@ typedef uint8 LdCom_SizeOfRxTxPduInfoType;
   \{
 */ 
 /**   \brief  type used in LdCom_RxTxPduInfo */
+/*! \spec weak type invariant () { 
+ * (!((self.IfRxIndicationFctPtrIdxOfRxTxPduInfo != LDCOM_NO_IFRXINDICATIONFCTPTRIDXOFRXTXPDUINFO)) || (self.IfRxIndicationFctPtrIdxOfRxTxPduInfo < LdCom_GetSizeOfIfRxIndicationFctPtr())) &&
+ * (!((self.IfTxConfirmationFctPtrIdxOfRxTxPduInfo != LDCOM_NO_IFTXCONFIRMATIONFCTPTRIDXOFRXTXPDUINFO)) || (self.IfTxConfirmationFctPtrIdxOfRxTxPduInfo < LdCom_GetSizeOfIfTxConfirmationFctPtr()))
+ * } */
 typedef struct sLdCom_RxTxPduInfoType
 {
-  LdCom_TxPduOfRxTxPduInfoType TxPduOfRxTxPduInfo;
+  LdCom_IfPduOfRxTxPduInfoType IfPduOfRxTxPduInfo;
+  LdCom_IfRxIndicationFctPtrIdxOfRxTxPduInfoType IfRxIndicationFctPtrIdxOfRxTxPduInfo;  /**< the index of the 0:1 relation pointing to LdCom_IfRxIndicationFctPtr */
+  LdCom_IfTxConfirmationFctPtrIdxOfRxTxPduInfoType IfTxConfirmationFctPtrIdxOfRxTxPduInfo;  /**< the index of the 0:1 relation pointing to LdCom_IfTxConfirmationFctPtr */
+  LdCom_PduRTxHandleIdOfRxTxPduInfoType PduRTxHandleIdOfRxTxPduInfo;  /**< Handle ID used to call PduR_LdComTransmit() */
 } LdCom_RxTxPduInfoType;
 
 /** 
@@ -364,6 +475,12 @@ typedef struct sLdCom_RxTxPduInfoType
   \brief  These type definitions are used to point from the config root to symbol instances.
   \{
 */ 
+/**   \brief  type used to point to LdCom_IfRxIndicationFctPtr */
+typedef P2CONST(LdCom_IfRxIndicationFctPtrType, TYPEDEF, LDCOM_CONST) LdCom_IfRxIndicationFctPtrPtrType;
+
+/**   \brief  type used to point to LdCom_IfTxConfirmationFctPtr */
+typedef P2CONST(LdCom_IfTxConfirmationFctPtrType, TYPEDEF, LDCOM_CONST) LdCom_IfTxConfirmationFctPtrPtrType;
+
 /**   \brief  type used to point to LdCom_Initialized */
 typedef P2VAR(LdCom_InitializedType, TYPEDEF, LDCOM_VAR_ZERO_INIT) LdCom_InitializedPtrType;
 
@@ -410,20 +527,57 @@ typedef LdCom_PCConfigType LdCom_ConfigType;  /**< A structure type is present f
   SECTION: GLOBAL DATA PROTOTYPES
 **********************************************************************************************************************/
 /**********************************************************************************************************************
+  LdCom_IfRxIndicationFctPtr
+**********************************************************************************************************************/
+/** 
+  \var    LdCom_IfRxIndicationFctPtr
+  \brief  Upper layer communication interface Rx indication function pointer according DefinitionRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComRxIndication
+*/ 
+#define LDCOM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(LdCom_IfRxIndicationFctPtrType, LDCOM_CONST) LdCom_IfRxIndicationFctPtr[2];
+#define LDCOM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  LdCom_IfTxConfirmationFctPtr
+**********************************************************************************************************************/
+/** 
+  \var    LdCom_IfTxConfirmationFctPtr
+  \brief  Upper layer communication interface TxConfirmation function pointer according DefinitionRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComTxConfirmation
+*/ 
+#define LDCOM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+extern CONST(LdCom_IfTxConfirmationFctPtrType, LDCOM_CONST) LdCom_IfTxConfirmationFctPtr[2];
+#define LDCOM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   LdCom_RxTxPduInfo
 **********************************************************************************************************************/
 /** 
   \var    LdCom_RxTxPduInfo
   \brief  Table containing mapping data from Input handles to PduR Tx handles/RTE callbacks.
   \details
-  Element    Description
-  TxPdu  
+  Element                      Description
+  IfPdu                    
+  IfRxIndicationFctPtrIdx      the index of the 0:1 relation pointing to LdCom_IfRxIndicationFctPtr
+  IfTxConfirmationFctPtrIdx    the index of the 0:1 relation pointing to LdCom_IfTxConfirmationFctPtr
+  PduRTxHandleId               Handle ID used to call PduR_LdComTransmit()
 */ 
 #define LDCOM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(LdCom_RxTxPduInfoType, LDCOM_CONST) LdCom_RxTxPduInfo[1];
+extern CONST(LdCom_RxTxPduInfoType, LDCOM_CONST) LdCom_RxTxPduInfo[5];
 #define LDCOM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

@@ -36,6 +36,7 @@ extern "C" {
 
 FUNC(void, COMM_CODE) ComM_MainFunction_0(void); /* PRQA S 3451, 3449 */ /* MD_Rte_3451, MD_Rte_3449 */
 FUNC(void, COMM_CODE) ComM_MainFunction_1(void); /* PRQA S 3451, 3449 */ /* MD_Rte_3451, MD_Rte_3449 */
+FUNC(void, COMM_CODE) ComM_MainFunction_2(void); /* PRQA S 3451, 3449 */ /* MD_Rte_3451, MD_Rte_3449 */
 
 # define COMM_STOP_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

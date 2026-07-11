@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Alarm_Lcfg.h
- *   Generation Time: 2026-05-31 00:25:22
+ *   Generation Time: 2026-07-11 19:56:11
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -95,14 +95,14 @@ extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_Cor
 /*! Alarm configuration data: Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms;
 
-/*! Alarm configuration data: Rte_Al_TE_Cdd_StbM_Cdd_StbM_Runnable100ms */
-extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_Cdd_StbM_Cdd_StbM_Runnable100ms;
-
 /*! Alarm configuration data: Rte_Al_TE_EthIf_EthIf_MainFunctionState */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_EthIf_EthIf_MainFunctionState;
 
 /*! Alarm configuration data: Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction */
 extern CONST(Os_AlarmActivateTaskConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction;
+
+/*! Alarm configuration data: Rte_Al_TE_OsTask_Asw_OsCore0_0_100ms */
+extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_OsTask_Asw_OsCore0_0_100ms;
 
 /*! Alarm configuration data: Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms */
 extern CONST(Os_AlarmSetEventConfigType, OS_CONST) OsCfg_Alarm_Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms;

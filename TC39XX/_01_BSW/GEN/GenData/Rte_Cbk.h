@@ -25,4 +25,23 @@
 #ifndef RTE_CBK_H
 # define RTE_CBK_H
 
+# include "Rte.h"
+#include "LdCom.h"
+
+# define RTE_START_SEC_CODE
+# include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+/**********************************************************************************************************************
+ * RTE Schedulable entity for COM-Access from different partitions
+ *********************************************************************************************************************/
+
+FUNC(void, RTE_CODE) Rte_LdComCbk_VechicleSpeedRx(P2CONST(PduInfoType, AUTOMATIC, COM_APPL_DATA) PduInfoPtr);
+FUNC(void, RTE_CODE) Rte_LdComCbk_VechicleStatusRx(P2CONST(PduInfoType, AUTOMATIC, COM_APPL_DATA) PduInfoPtr);
+FUNC(void, RTE_CODE) Rte_LdComCbk__EcuStateTx(void);
+FUNC(void, RTE_CODE) Rte_LdComCbk_SenStateTx(void);
+
+# define RTE_STOP_SEC_CODE
+# include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
 #endif /* RTE_CBK_H */

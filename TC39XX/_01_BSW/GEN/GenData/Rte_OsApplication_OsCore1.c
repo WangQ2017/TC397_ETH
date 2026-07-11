@@ -42,6 +42,7 @@
 #include "Rte_Cdd_Log.h"
 #include "Rte_Cdd_Nm.h"
 #include "Rte_Cdd_PPS.h"
+#include "Rte_Cdd_SomeIP.h"
 #include "Rte_Cdd_StbM.h"
 #include "Rte_Cdd_UDS.h"
 #include "Rte_ComM.h"
@@ -75,6 +76,7 @@
 #include "SchM_Mcu.h"
 #include "SchM_PduR.h"
 #include "SchM_Port.h"
+#include "SchM_Sd.h"
 #include "SchM_SoAd.h"
 #include "SchM_StbM.h"
 #include "SchM_TcpIp.h"
@@ -135,6 +137,9 @@
  * Helper functions for mode management
  *********************************************************************************************************************/
 FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_SDC_SdClientServiceState(BswM_SDC_SdClientServiceState mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_SDC_SdConsumedEventGroupState(BswM_SDC_SdConsumedEventGroupState mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_SDC_SdEventHandlerState(BswM_SDC_SdEventHandlerState mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
 
 #define RTE_STOP_SEC_CODE
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

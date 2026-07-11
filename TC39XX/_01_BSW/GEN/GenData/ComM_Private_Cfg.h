@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Private_Cfg.h
- *   Generation Time: 2026-06-18 21:32:22
+ *   Generation Time: 2026-07-05 10:57:17
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -58,11 +58,11 @@
 #define ComM_GetChannelOfPCConfig()                                   ComM_Channel  /**< the pointer to ComM_Channel */
 #define ComM_GetChannelPbOfPCConfig()                                 ComM_ChannelPb  /**< the pointer to ComM_ChannelPb */
 #define ComM_GetDcmRequestActiveOfPCConfig()                          ComM_DcmRequestActive.raw  /**< the pointer to ComM_DcmRequestActive */
-#define ComM_GetSizeOfChannelOfPCConfig()                             2u  /**< the number of accomplishable value elements in ComM_Channel */
-#define ComM_GetSizeOfChannelPbOfPCConfig()                           2u  /**< the number of accomplishable value elements in ComM_ChannelPb */
-#define ComM_GetSizeOfUserByteMaskOfPCConfig()                        2u  /**< the number of accomplishable value elements in ComM_UserByteMask */
-#define ComM_GetSizeOfUserOfPCConfig()                                2u  /**< the number of accomplishable value elements in ComM_User */
-#define ComM_GetSizeOfUserReqFullComOfPCConfig()                      2u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
+#define ComM_GetSizeOfChannelOfPCConfig()                             3u  /**< the number of accomplishable value elements in ComM_Channel */
+#define ComM_GetSizeOfChannelPbOfPCConfig()                           3u  /**< the number of accomplishable value elements in ComM_ChannelPb */
+#define ComM_GetSizeOfUserByteMaskOfPCConfig()                        3u  /**< the number of accomplishable value elements in ComM_UserByteMask */
+#define ComM_GetSizeOfUserOfPCConfig()                                3u  /**< the number of accomplishable value elements in ComM_User */
+#define ComM_GetSizeOfUserReqFullComOfPCConfig()                      3u  /**< the number of accomplishable value elements in ComM_UserReqFullCom */
 #define ComM_GetUserByteMaskOfPCConfig()                              ComM_UserByteMask  /**< the pointer to ComM_UserByteMask */
 #define ComM_GetUserOfPCConfig()                                      ComM_User  /**< the pointer to ComM_User */
 #define ComM_GetUserReqFullComOfPCConfig()                            ComM_UserReqFullCom  /**< the pointer to ComM_UserReqFullCom */
@@ -266,7 +266,7 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2];
+extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -288,7 +288,7 @@ extern CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserType, COMM_CONST) ComM_User[2];
+extern CONST(ComM_UserType, COMM_CONST) ComM_User[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -309,7 +309,7 @@ extern CONST(ComM_UserType, COMM_CONST) ComM_User[2];
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[2];
+extern CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[3];
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
@@ -343,7 +343,7 @@ extern VAR(ComM_DcmRequestActiveUType, COMM_VAR_NOINIT) ComM_DcmRequestActive;  
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[2];
+extern VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[3];
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */

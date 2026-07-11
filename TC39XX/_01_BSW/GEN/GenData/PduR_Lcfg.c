@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Lcfg.c
- *   Generation Time: 2026-06-18 21:32:21
+ *   Generation Time: 2026-07-05 10:57:16
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -171,12 +171,12 @@ CONST(PduR_GeneralPropertiesRomType, PDUR_CONST) PduR_GeneralPropertiesRom[1] = 
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(PduR_MmRomType, PDUR_CONST) PduR_MmRom[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    DestApplicationManagerRomIdx  MaskedBits  RmGDestRomEndIdx                 RmGDestRomStartIdx                 UpTpCopyRxDataFctPtr  UpTpCopyTxDataFctPtr  UpIfRxIndicationFctPtr  UpIfTxConfirmationFctPtr  UpTpStartOfReceptionFctPtr  UpTpTpRxIndicationFctPtr  UpTpTpTxConfirmationFctPtr  LoIfTransmitFctPtr  LoTpTransmitFctPtr        Comment                        Referable Keys */
-  { /*     0 */                           0u,      0x02u, PDUR_NO_RMGDESTROMENDIDXOFMMROM, PDUR_NO_RMGDESTROMSTARTIDXOFMMROM, NULL_PTR            , NULL_PTR            , Com_RxIndication      , NULL_PTR                , NULL_PTR                  , NULL_PTR                , NULL_PTR                  , NULL_PTR          , NULL_PTR           },  /* [BswModule: Com]   */  /* [/ActiveEcuC/PduR/Com, /ActiveEcuC/PduR] */
-  { /*     1 */                           0u,      0x05u,                              2u,                                0u, Dcm_CopyRxData      , Dcm_CopyTxData      , NULL_PTR              , NULL_PTR                , Dcm_StartOfReception      , Dcm_TpRxIndication      , Dcm_TpTxConfirmation      , NULL_PTR          , NULL_PTR           },  /* [BswModule: Dcm]   */  /* [/ActiveEcuC/PduR/Dcm, /ActiveEcuC/PduR] */
-  { /*     2 */                           0u,      0x0Cu,                              3u,                                2u, NULL_PTR            , NULL_PTR            , NULL_PTR              , NULL_PTR                , NULL_PTR                  , NULL_PTR                , NULL_PTR                  , NULL_PTR          , DoIP_TpTransmit    },  /* [BswModule: DoIP]  */  /* [/ActiveEcuC/PduR/DoIP, /ActiveEcuC/PduR] */
-  { /*     3 */                           0u,      0x02u, PDUR_NO_RMGDESTROMENDIDXOFMMROM, PDUR_NO_RMGDESTROMSTARTIDXOFMMROM, NULL_PTR            , NULL_PTR            , LdCom_RxIndication    , LdCom_TxConfirmation    , NULL_PTR                  , NULL_PTR                , NULL_PTR                  , NULL_PTR          , NULL_PTR           },  /* [BswModule: LdCom] */  /* [/ActiveEcuC/PduR/LdCom, /ActiveEcuC/PduR] */
-  { /*     4 */                           0u,      0x14u,                              5u,                                3u, NULL_PTR            , NULL_PTR            , NULL_PTR              , NULL_PTR                , NULL_PTR                  , NULL_PTR                , NULL_PTR                  , SoAd_IfTransmit   , NULL_PTR           }   /* [BswModule: SoAd]  */  /* [/ActiveEcuC/PduR/SoAd, /ActiveEcuC/PduR] */
+    /* Index    DestApplicationManagerRomIdx  MaskedBits  RmGDestRomEndIdx  RmGDestRomStartIdx  UpTpCopyRxDataFctPtr  UpTpCopyTxDataFctPtr  UpIfRxIndicationFctPtr  UpIfTxConfirmationFctPtr  UpTpStartOfReceptionFctPtr  UpTpTpRxIndicationFctPtr  UpTpTpTxConfirmationFctPtr  LoIfTransmitFctPtr  LoTpTransmitFctPtr        Comment                        Referable Keys */
+  { /*     0 */                           0u,      0x06u,               1u,                 0u, NULL_PTR            , NULL_PTR            , Com_RxIndication      , Com_TxConfirmation      , NULL_PTR                  , NULL_PTR                , NULL_PTR                  , NULL_PTR          , NULL_PTR           },  /* [BswModule: Com]   */  /* [/ActiveEcuC/PduR/Com, /ActiveEcuC/PduR] */
+  { /*     1 */                           0u,      0x05u,               3u,                 1u, Dcm_CopyRxData      , Dcm_CopyTxData      , NULL_PTR              , NULL_PTR                , Dcm_StartOfReception      , Dcm_TpRxIndication      , Dcm_TpTxConfirmation      , NULL_PTR          , NULL_PTR           },  /* [BswModule: Dcm]   */  /* [/ActiveEcuC/PduR/Dcm, /ActiveEcuC/PduR] */
+  { /*     2 */                           0u,      0x0Cu,               4u,                 3u, NULL_PTR            , NULL_PTR            , NULL_PTR              , NULL_PTR                , NULL_PTR                  , NULL_PTR                , NULL_PTR                  , NULL_PTR          , DoIP_TpTransmit    },  /* [BswModule: DoIP]  */  /* [/ActiveEcuC/PduR/DoIP, /ActiveEcuC/PduR] */
+  { /*     3 */                           0u,      0x06u,               6u,                 4u, NULL_PTR            , NULL_PTR            , LdCom_RxIndication    , LdCom_TxConfirmation    , NULL_PTR                  , NULL_PTR                , NULL_PTR                  , NULL_PTR          , NULL_PTR           },  /* [BswModule: LdCom] */  /* [/ActiveEcuC/PduR/LdCom, /ActiveEcuC/PduR] */
+  { /*     4 */                           0u,      0x14u,              11u,                 6u, NULL_PTR            , NULL_PTR            , NULL_PTR              , NULL_PTR                , NULL_PTR                  , NULL_PTR                , NULL_PTR                  , SoAd_IfTransmit   , NULL_PTR           }   /* [BswModule: SoAd]  */  /* [/ActiveEcuC/PduR/SoAd, /ActiveEcuC/PduR] */
 };
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -216,6 +216,7 @@ CONST(PduR_PartitionIdentifiersType, PDUR_CONST) PduR_PartitionIdentifiers[1] = 
   Element                      Description
   PartitionIndexOfCsl      
   PduLengthHandlingStrategy    The strategy how larger than configured If Pdus are handled.
+  RmGDestRomIdx                the index of the 1:1 relation pointing to PduR_RmGDestRom
   RmSrcRomIdx                  the index of the 1:1 relation pointing to PduR_RmSrcRom
   RoutingType                  Type of the Routing (API Forwarding, Gateway).
 */ 
@@ -223,13 +224,19 @@ CONST(PduR_PartitionIdentifiersType, PDUR_CONST) PduR_PartitionIdentifiers[1] = 
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    PartitionIndexOfCsl                            PduLengthHandlingStrategy                         RmSrcRomIdx  RoutingType                                                 Comment                                               Referable Keys */
-  { /*     0 */                  0u  /* CommonSharedMemory */, PDUR_IGNORE_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,          3u, PDUR_IF_UNBUFFERED_TX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_TxPdu_SoAd]     */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_TimeSyncStatus_Tx/PduRSrcPdu, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_TimeSyncStatus_Tx/PduRDestPdu_TxPdu_SoAd] */
-  { /*     1 */                  0u  /* CommonSharedMemory */, PDUR_UNUSED_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,          0u, PDUR_TP_UNBUFFERED_RX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_DOIPFuncReqRx]  */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPFuncReqRx/PduRSrcPdu_DOIPFuncReqRx, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPFuncReqRx/PduRDestPdu_DOIPFuncReqRx] */
-  { /*     2 */                  0u  /* CommonSharedMemory */, PDUR_UNUSED_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,          2u, PDUR_TP_UNBUFFERED_TX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_DOIPPhyResTx]   */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyResTx/PduRSrcPdu_DOIPPhyResTx, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyResTx/PduRDestPdu_DOIPPhyResTx] */
-  { /*     3 */                  0u  /* CommonSharedMemory */, PDUR_UNUSED_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,          1u, PDUR_TP_UNBUFFERED_RX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_DOIPPhyReqRx]   */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyReqRx/PduRSrcPdu__DOIPPhyReqRx, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyReqRx/PduRDestPdu_DOIPPhyReqRx] */
-  { /*     4 */                  0u  /* CommonSharedMemory */, PDUR_IGNORE_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,          4u, PDUR_IF_UNBUFFERED_TX_API_FWD_ROUTINGTYPEOFRMDESTROM }   /* [PduRDestPdu: PduRDestPdu_udplog_Tx_SoAd] */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_udplog_Tx/PduRSrcPdu_udplog_Tx_LdCom, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_udplog_Tx/PduRDestPdu_udplog_Tx_SoAd] */
+CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[11] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    PartitionIndexOfCsl                            PduLengthHandlingStrategy                         RmGDestRomIdx  RmSrcRomIdx  RoutingType                                                 Comment                                               Referable Keys */
+  { /*     0 */                  0u  /* CommonSharedMemory */, PDUR_IGNORE_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,            9u,          7u, PDUR_IF_UNBUFFERED_TX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_TxPdu_SoAd]     */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_TimeSyncStatus_Tx/PduRSrcPdu, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_TimeSyncStatus_Tx/PduRDestPdu_TxPdu_SoAd] */
+  { /*     1 */                  0u  /* CommonSharedMemory */, PDUR_IGNORE_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,            4u,          1u, PDUR_IF_UNBUFFERED_RX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu]                */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleSpeedRx/PduRSrcPdu_1, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleSpeedRx/PduRDestPdu] */
+  { /*     2 */                  0u  /* CommonSharedMemory */, PDUR_IGNORE_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,            5u,          2u, PDUR_IF_UNBUFFERED_RX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_1]              */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleStatusRx/PduRSrcPdu_2, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleStatusRx/PduRDestPdu_1] */
+  { /*     3 */                  0u  /* CommonSharedMemory */, PDUR_IGNORE_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,            0u,          0u, PDUR_IF_UNBUFFERED_RX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_2]              */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleInfoRx/PduRSrcPdu_3, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleInfoRx/PduRDestPdu_2] */
+  { /*     4 */                  0u  /* CommonSharedMemory */, PDUR_IGNORE_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,            7u,          6u, PDUR_IF_UNBUFFERED_TX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_3]              */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_FaultInfoTx/PduRSrcPdu_4, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_FaultInfoTx/PduRDestPdu_3] */
+  { /*     5 */                  0u  /* CommonSharedMemory */, PDUR_IGNORE_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,            8u,          8u, PDUR_IF_UNBUFFERED_TX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_4]              */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_senStateTx/PduRSrcPdu_5, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_senStateTx/PduRDestPdu_4] */
+  { /*     6 */                  0u  /* CommonSharedMemory */, PDUR_IGNORE_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,            6u,          9u, PDUR_IF_UNBUFFERED_TX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_5]              */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_EcuStateTx/PduRSrcPdu_6, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_EcuStateTx/PduRDestPdu_5] */
+  { /*     7 */                  0u  /* CommonSharedMemory */, PDUR_UNUSED_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,            1u,          3u, PDUR_TP_UNBUFFERED_RX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_DOIPFuncReqRx]  */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPFuncReqRx/PduRSrcPdu_DOIPFuncReqRx, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPFuncReqRx/PduRDestPdu_DOIPFuncReqRx] */
+  { /*     8 */                  0u  /* CommonSharedMemory */, PDUR_UNUSED_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,            3u,          5u, PDUR_TP_UNBUFFERED_TX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_DOIPPhyResTx]   */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyResTx/PduRSrcPdu_DOIPPhyResTx, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyResTx/PduRDestPdu_DOIPPhyResTx] */
+  { /*     9 */                  0u  /* CommonSharedMemory */, PDUR_UNUSED_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,            2u,          4u, PDUR_TP_UNBUFFERED_RX_API_FWD_ROUTINGTYPEOFRMDESTROM },  /* [PduRDestPdu: PduRDestPdu_DOIPPhyReqRx]   */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyReqRx/PduRSrcPdu__DOIPPhyReqRx, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyReqRx/PduRDestPdu_DOIPPhyReqRx] */
+  { /*    10 */                  0u  /* CommonSharedMemory */, PDUR_IGNORE_PDULENGTHHANDLINGSTRATEGYOFRMDESTROM,           10u,         10u, PDUR_IF_UNBUFFERED_TX_API_FWD_ROUTINGTYPEOFRMDESTROM }   /* [PduRDestPdu: PduRDestPdu_udplog_Tx_SoAd] */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_udplog_Tx/PduRSrcPdu_udplog_Tx_LdCom, /ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_udplog_Tx/PduRDestPdu_udplog_Tx_SoAd] */
 };
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -255,13 +262,19 @@ CONST(PduR_RmDestRomType, PDUR_CONST) PduR_RmDestRom[5] = {  /* PRQA S 1514, 153
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    MaxPduLength  DestHnd                                                  Direction                      MmRomIdx  PartitionIndexOfCsl                            RmDestRomIdx        Comment                                                     Referable Keys */
-  { /*     0 */        4095u, DcmConf_DcmDslProtocolRx_DcmDslProtocolRx_DOIP_FUNC_REQ, PDUR_RX_DIRECTIONOFRMGDESTROM,       1u,                  0u  /* CommonSharedMemory */,           1u },  /* [Global PduRDestPdu: DoIPFuncReqRxPdu_PduR2Dcm] */  /* [/ActiveEcuC/EcuC/EcucPduCollection/DoIPFuncReqRxPdu_PduR2Dcm, /ActiveEcuC/PduR/Dcm] */
-  { /*     1 */        4095u,  DcmConf_DcmDslProtocolRx_DcmDslProtocolRx_DOIP_PHY_REQ, PDUR_RX_DIRECTIONOFRMGDESTROM,       1u,                  0u  /* CommonSharedMemory */,           3u },  /* [Global PduRDestPdu: DoIPPhyReqRxPdu_PduR2Dcm]  */  /* [/ActiveEcuC/EcuC/EcucPduCollection/DoIPPhyReqRxPdu_PduR2Dcm, /ActiveEcuC/PduR/Dcm] */
-  { /*     2 */        4095u,                    DoIPConf_DoIPPduRTxPdu_DoIPPduRTxPdu, PDUR_TX_DIRECTIONOFRMGDESTROM,       2u,                  0u  /* CommonSharedMemory */,           2u },  /* [Global PduRDestPdu: DoIPPhyResTxPdu_PduR2DoIP] */  /* [/ActiveEcuC/EcuC/EcucPduCollection/DoIPPhyResTxPdu_PduR2DoIP, /ActiveEcuC/PduR/DoIP] */
-  { /*     3 */           1u,    SoAdConf_SoAdPduRoute_SoAdPduRoute_TimeSyncStatus_Tx, PDUR_TX_DIRECTIONOFRMGDESTROM,       4u,                  0u  /* CommonSharedMemory */,           0u },  /* [Global PduRDestPdu: TimeSyncStatus_TxPdu_SoAd] */  /* [/ActiveEcuC/EcuC/EcucPduCollection/TimeSyncStatus_TxPdu_SoAd, /ActiveEcuC/PduR/SoAd] */
-  { /*     4 */        1500u,            SoAdConf_SoAdPduRoute_SoAdPduRoute_udplog_Tx, PDUR_TX_DIRECTIONOFRMGDESTROM,       4u,                  0u  /* CommonSharedMemory */,           4u }   /* [Global PduRDestPdu: udplog_TxPdu_SoAd]         */  /* [/ActiveEcuC/EcuC/EcucPduCollection/udplog_TxPdu_SoAd, /ActiveEcuC/PduR/SoAd] */
+CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[11] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    MaxPduLength  DestHnd                                                  Direction                      MmRomIdx  PartitionIndexOfCsl                            RmDestRomIdx        Comment                                                           Referable Keys */
+  { /*     0 */           4u,                  ComConf_ComIPdu_ComIPdu_VechicleInfoRx, PDUR_RX_DIRECTIONOFRMGDESTROM,       0u,                  0u  /* CommonSharedMemory */,           3u },  /* [Global PduRDestPdu: SomeIpVechicleInfoRxPdu_Com]     */  /* [/ActiveEcuC/EcuC/EcucPduCollection/SomeIpVechicleInfoRxPdu_Com, /ActiveEcuC/PduR/Com] */
+  { /*     1 */        4095u, DcmConf_DcmDslProtocolRx_DcmDslProtocolRx_DOIP_FUNC_REQ, PDUR_RX_DIRECTIONOFRMGDESTROM,       1u,                  0u  /* CommonSharedMemory */,           7u },  /* [Global PduRDestPdu: DoIPFuncReqRxPdu_PduR2Dcm]       */  /* [/ActiveEcuC/EcuC/EcucPduCollection/DoIPFuncReqRxPdu_PduR2Dcm, /ActiveEcuC/PduR/Dcm] */
+  { /*     2 */        4095u,  DcmConf_DcmDslProtocolRx_DcmDslProtocolRx_DOIP_PHY_REQ, PDUR_RX_DIRECTIONOFRMGDESTROM,       1u,                  0u  /* CommonSharedMemory */,           9u },  /* [Global PduRDestPdu: DoIPPhyReqRxPdu_PduR2Dcm]        */  /* [/ActiveEcuC/EcuC/EcucPduCollection/DoIPPhyReqRxPdu_PduR2Dcm, /ActiveEcuC/PduR/Dcm] */
+  { /*     3 */        4095u,                    DoIPConf_DoIPPduRTxPdu_DoIPPduRTxPdu, PDUR_TX_DIRECTIONOFRMGDESTROM,       2u,                  0u  /* CommonSharedMemory */,           8u },  /* [Global PduRDestPdu: DoIPPhyResTxPdu_PduR2DoIP]       */  /* [/ActiveEcuC/EcuC/EcucPduCollection/DoIPPhyResTxPdu_PduR2DoIP, /ActiveEcuC/PduR/DoIP] */
+  { /*     4 */          16u,           LdComConf_LdComIPdu_LdComIPdu_VechicleSpeedRx, PDUR_RX_DIRECTIONOFRMGDESTROM,       3u,                  0u  /* CommonSharedMemory */,           1u },  /* [Global PduRDestPdu: SomeIpVechicleSpeedRxPdu_Ldcom]  */  /* [/ActiveEcuC/EcuC/EcucPduCollection/SomeIpVechicleSpeedRxPdu_Ldcom, /ActiveEcuC/PduR/LdCom] */
+  { /*     5 */          16u,          LdComConf_LdComIPdu_LdComIPdu_VechicleStatusRx, PDUR_RX_DIRECTIONOFRMGDESTROM,       3u,                  0u  /* CommonSharedMemory */,           2u },  /* [Global PduRDestPdu: SomeIpVechicleStatusRxPdu_Ldcom] */  /* [/ActiveEcuC/EcuC/EcucPduCollection/SomeIpVechicleStatusRxPdu_Ldcom, /ActiveEcuC/PduR/LdCom] */
+  { /*     6 */          16u,    SoAdConf_SoAdPduRoute_SoAdPduRoute_Sd_TCP_EcuStateTx, PDUR_TX_DIRECTIONOFRMGDESTROM,       4u,                  0u  /* CommonSharedMemory */,           6u },  /* [Global PduRDestPdu: SomeIpEcuStateTxPdu_SoAd]        */  /* [/ActiveEcuC/EcuC/EcucPduCollection/SomeIpEcuStateTxPdu_SoAd, /ActiveEcuC/PduR/SoAd] */
+  { /*     7 */           4u,   SoAdConf_SoAdPduRoute_SoAdPduRoute_Sd_UDP_FaultInfoTx, PDUR_TX_DIRECTIONOFRMGDESTROM,       4u,                  0u  /* CommonSharedMemory */,           4u },  /* [Global PduRDestPdu: SomeIpFalutInfoTxPdu_SoAd]       */  /* [/ActiveEcuC/EcuC/EcucPduCollection/SomeIpFalutInfoTxPdu_SoAd, /ActiveEcuC/PduR/SoAd] */
+  { /*     8 */          16u,    SoAdConf_SoAdPduRoute_SoAdPduRoute_SD_UDP_SenStateTx, PDUR_TX_DIRECTIONOFRMGDESTROM,       4u,                  0u  /* CommonSharedMemory */,           5u },  /* [Global PduRDestPdu: SomeIpSenStateTxPdu_SoAd]        */  /* [/ActiveEcuC/EcuC/EcucPduCollection/SomeIpSenStateTxPdu_SoAd, /ActiveEcuC/PduR/SoAd] */
+  { /*     9 */           1u,    SoAdConf_SoAdPduRoute_SoAdPduRoute_TimeSyncStatus_Tx, PDUR_TX_DIRECTIONOFRMGDESTROM,       4u,                  0u  /* CommonSharedMemory */,           0u },  /* [Global PduRDestPdu: TimeSyncStatus_TxPdu_SoAd]       */  /* [/ActiveEcuC/EcuC/EcucPduCollection/TimeSyncStatus_TxPdu_SoAd, /ActiveEcuC/PduR/SoAd] */
+  { /*    10 */        1500u,            SoAdConf_SoAdPduRoute_SoAdPduRoute_udplog_Tx, PDUR_TX_DIRECTIONOFRMGDESTROM,       4u,                  0u  /* CommonSharedMemory */,          10u }   /* [Global PduRDestPdu: udplog_TxPdu_SoAd]               */  /* [/ActiveEcuC/EcuC/EcucPduCollection/udplog_TxPdu_SoAd, /ActiveEcuC/PduR/SoAd] */
 };
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -275,23 +288,30 @@ CONST(PduR_RmGDestRomType, PDUR_CONST) PduR_RmGDestRom[5] = {  /* PRQA S 1514, 1
   \var    PduR_RmSrcRom
   \brief  PduR RoutiongManager SrcPdu Table
   \details
-  Element                Description
-  MmRomIdx               the index of the 1:1 relation pointing to PduR_MmRom
-  PartitionIndexOfCsl
-  RmDestRomStartIdx      the start index of the 1:n relation pointing to PduR_RmDestRom
-  SrcHnd                 handle to be used as parameter for the TxConfirmation or TriggerTransmit function call.
+  Element                    Description
+  TxConfirmationSupported
+  MmRomIdx                   the index of the 1:1 relation pointing to PduR_MmRom
+  PartitionIndexOfCsl    
+  RmDestRomStartIdx          the start index of the 1:n relation pointing to PduR_RmDestRom
+  SrcHnd                     handle to be used as parameter for the TxConfirmation or TriggerTransmit function call.
 */ 
 #define PDUR_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(PduR_RmSrcRomType, PDUR_CONST) PduR_RmSrcRom[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    MmRomIdx  PartitionIndexOfCsl                            RmDestRomStartIdx  SrcHnd                                           Comment                                              Referable Keys */
-  { /*     0 */       2u,                  0u  /* CommonSharedMemory */,                1u,                  PDUR_NO_SRCHNDOFRMSRCROM },  /* [PduRSrcPdu: PduRSrcPdu_DOIPFuncReqRx]   */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPFuncReqRx/PduRSrcPdu_DOIPFuncReqRx] */
-  { /*     1 */       2u,                  0u  /* CommonSharedMemory */,                3u,                  PDUR_NO_SRCHNDOFRMSRCROM },  /* [PduRSrcPdu: PduRSrcPdu__DOIPPhyReqRx]   */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyReqRx/PduRSrcPdu__DOIPPhyReqRx] */
-  { /*     2 */       1u,                  0u  /* CommonSharedMemory */,                2u, DcmConf_DcmDslProtocolTx_DcmDslProtocolTx },  /* [PduRSrcPdu: PduRSrcPdu_DOIPPhyResTx]    */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyResTx/PduRSrcPdu_DOIPPhyResTx] */
-  { /*     3 */       0u,                  0u  /* CommonSharedMemory */,                0u,                  PDUR_NO_SRCHNDOFRMSRCROM },  /* [PduRSrcPdu: PduRSrcPdu]                 */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_TimeSyncStatus_Tx/PduRSrcPdu] */
-  { /*     4 */       3u,                  0u  /* CommonSharedMemory */,                4u,   LdComConf_LdComIPdu_LdComIPdu_udplog_Tx }   /* [PduRSrcPdu: PduRSrcPdu_udplog_Tx_LdCom] */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_udplog_Tx/PduRSrcPdu_udplog_Tx_LdCom] */
+CONST(PduR_RmSrcRomType, PDUR_CONST) PduR_RmSrcRom[11] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TxConfirmationSupported  MmRomIdx  PartitionIndexOfCsl                            RmDestRomStartIdx  SrcHnd                                           Comment                                              Referable Keys */
+  { /*     0 */                   FALSE,       4u,                  0u  /* CommonSharedMemory */,                3u,                  PDUR_NO_SRCHNDOFRMSRCROM },  /* [PduRSrcPdu: PduRSrcPdu_3]               */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleInfoRx/PduRSrcPdu_3] */
+  { /*     1 */                   FALSE,       4u,                  0u  /* CommonSharedMemory */,                1u,                  PDUR_NO_SRCHNDOFRMSRCROM },  /* [PduRSrcPdu: PduRSrcPdu_1]               */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleSpeedRx/PduRSrcPdu_1] */
+  { /*     2 */                   FALSE,       4u,                  0u  /* CommonSharedMemory */,                2u,                  PDUR_NO_SRCHNDOFRMSRCROM },  /* [PduRSrcPdu: PduRSrcPdu_2]               */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleStatusRx/PduRSrcPdu_2] */
+  { /*     3 */                   FALSE,       2u,                  0u  /* CommonSharedMemory */,                7u,                  PDUR_NO_SRCHNDOFRMSRCROM },  /* [PduRSrcPdu: PduRSrcPdu_DOIPFuncReqRx]   */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPFuncReqRx/PduRSrcPdu_DOIPFuncReqRx] */
+  { /*     4 */                   FALSE,       2u,                  0u  /* CommonSharedMemory */,                9u,                  PDUR_NO_SRCHNDOFRMSRCROM },  /* [PduRSrcPdu: PduRSrcPdu__DOIPPhyReqRx]   */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyReqRx/PduRSrcPdu__DOIPPhyReqRx] */
+  { /*     5 */                   FALSE,       1u,                  0u  /* CommonSharedMemory */,                8u, DcmConf_DcmDslProtocolTx_DcmDslProtocolTx },  /* [PduRSrcPdu: PduRSrcPdu_DOIPPhyResTx]    */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyResTx/PduRSrcPdu_DOIPPhyResTx] */
+  { /*     6 */                    TRUE,       0u,                  0u  /* CommonSharedMemory */,                4u,       ComConf_ComIPdu_ComIPdu_FaultInfoTx },  /* [PduRSrcPdu: PduRSrcPdu_4]               */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_FaultInfoTx/PduRSrcPdu_4] */
+  { /*     7 */                   FALSE,       0u,                  0u  /* CommonSharedMemory */,                0u,                  PDUR_NO_SRCHNDOFRMSRCROM },  /* [PduRSrcPdu: PduRSrcPdu]                 */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_TimeSyncStatus_Tx/PduRSrcPdu] */
+  { /*     8 */                    TRUE,       3u,                  0u  /* CommonSharedMemory */,                5u,  LdComConf_LdComIPdu_LdComIPdu_SenStateTx },  /* [PduRSrcPdu: PduRSrcPdu_5]               */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_senStateTx/PduRSrcPdu_5] */
+  { /*     9 */                    TRUE,       3u,                  0u  /* CommonSharedMemory */,                6u,  LdComConf_LdComIPdu_LdComIPdu_EcuStateTx },  /* [PduRSrcPdu: PduRSrcPdu_6]               */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_EcuStateTx/PduRSrcPdu_6] */
+  { /*    10 */                    TRUE,       3u,                  0u  /* CommonSharedMemory */,               10u,   LdComConf_LdComIPdu_LdComIPdu_udplog_Tx }   /* [PduRSrcPdu: PduRSrcPdu_udplog_Tx_LdCom] */  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_udplog_Tx/PduRSrcPdu_udplog_Tx_LdCom] */
 };
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -313,6 +333,31 @@ CONST(PduR_RmTransmitFctPtrType, PDUR_CONST) PduR_RmTransmitFctPtr[2] = {  /* PR
   /* Index     RmTransmitFctPtr                  Referable Keys */
   /*     0 */ PduR_RmIf_RoutePdu           ,  /* [PduR_RmIf_RoutePdu] */
   /*     1 */ PduR_RmTp_Transmit_MultiDest    /* [PduR_RmTp_Transmit_MultiDest] */
+};
+#define PDUR_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  PduR_RxIf2Dest
+**********************************************************************************************************************/
+/** 
+  \var    PduR_RxIf2Dest
+  \brief  This table contains all routing information to perform the Rx handling of an interface routing. Used in the &lt;LLIf&gt;_RxIndication
+  \details
+  Element                Description
+  PartitionIndexOfCsl
+*/ 
+#define PDUR_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(PduR_RxIf2DestType, PDUR_CONST) PduR_RxIf2Dest[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    PartitionIndexOfCsl                                  Referable Keys */
+  { /*     0 */                  0u  /* CommonSharedMemory */ },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleInfoRx/PduRSrcPdu_3] */
+  { /*     1 */                  0u  /* CommonSharedMemory */ },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleSpeedRx/PduRSrcPdu_1] */
+  { /*     2 */                  0u  /* CommonSharedMemory */ }   /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_VechicleStatusRx/PduRSrcPdu_2] */
 };
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -358,11 +403,14 @@ CONST(PduR_RxTp2DestType, PDUR_CONST) PduR_RxTp2Dest[2] = {  /* PRQA S 1514, 153
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(PduR_Tx2LoType, PDUR_CONST) PduR_Tx2Lo[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(PduR_Tx2LoType, PDUR_CONST) PduR_Tx2Lo[6] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PartitionIndexOfCsl                            RmTransmitFctPtrIdx        Referable Keys */
   { /*     0 */                  0u  /* CommonSharedMemory */,                  1u },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_DOIPPhyResTx/PduRSrcPdu_DOIPPhyResTx] */
-  { /*     1 */                  0u  /* CommonSharedMemory */,                  0u },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_TimeSyncStatus_Tx/PduRSrcPdu] */
-  { /*     2 */                  0u  /* CommonSharedMemory */,                  0u }   /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_udplog_Tx/PduRSrcPdu_udplog_Tx_LdCom] */
+  { /*     1 */                  0u  /* CommonSharedMemory */,                  0u },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_FaultInfoTx/PduRSrcPdu_4] */
+  { /*     2 */                  0u  /* CommonSharedMemory */,                  0u },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_TimeSyncStatus_Tx/PduRSrcPdu] */
+  { /*     3 */                  0u  /* CommonSharedMemory */,                  0u },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_senStateTx/PduRSrcPdu_5] */
+  { /*     4 */                  0u  /* CommonSharedMemory */,                  0u },  /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_EcuStateTx/PduRSrcPdu_6] */
+  { /*     5 */                  0u  /* CommonSharedMemory */,                  0u }   /* [/ActiveEcuC/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath_udplog_Tx/PduRSrcPdu_udplog_Tx_LdCom] */
 };
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -384,10 +432,13 @@ CONST(PduR_Tx2LoType, PDUR_CONST) PduR_Tx2Lo[3] = {  /* PRQA S 1514, 1533 */  /*
 /*lint -save -esym(961, 19.1) */
 #include "PduR_MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(PduR_TxIf2UpType, PDUR_CONST) PduR_TxIf2Up[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(PduR_TxIf2UpType, PDUR_CONST) PduR_TxIf2Up[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    TxConfirmationUsed  PartitionIndexOfCsl                                  Referable Keys */
-  { /*     0 */              FALSE,                  0u  /* CommonSharedMemory */ },  /* [/ActiveEcuC/EcuC/EcucPduCollection/TimeSyncStatus_TxPdu_SoAd] */
-  { /*     1 */               TRUE,                  0u  /* CommonSharedMemory */ }   /* [/ActiveEcuC/EcuC/EcucPduCollection/udplog_TxPdu_SoAd] */
+  { /*     0 */               TRUE,                  0u  /* CommonSharedMemory */ },  /* [/ActiveEcuC/EcuC/EcucPduCollection/SomeIpEcuStateTxPdu_SoAd] */
+  { /*     1 */               TRUE,                  0u  /* CommonSharedMemory */ },  /* [/ActiveEcuC/EcuC/EcucPduCollection/SomeIpFalutInfoTxPdu_SoAd] */
+  { /*     2 */               TRUE,                  0u  /* CommonSharedMemory */ },  /* [/ActiveEcuC/EcuC/EcucPduCollection/SomeIpSenStateTxPdu_SoAd] */
+  { /*     3 */              FALSE,                  0u  /* CommonSharedMemory */ },  /* [/ActiveEcuC/EcuC/EcucPduCollection/TimeSyncStatus_TxPdu_SoAd] */
+  { /*     4 */               TRUE,                  0u  /* CommonSharedMemory */ }   /* [/ActiveEcuC/EcuC/EcucPduCollection/udplog_TxPdu_SoAd] */
 };
 #define PDUR_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

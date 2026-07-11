@@ -87,6 +87,7 @@ FUNC(void, Cdd_Core0_CODE) Cdd_Core0_Init(void) /* PRQA S 0624, 3206 */ /* MD_Rt
 //   EthTrcv_30_Tja1100_SetTransceiverMode(0, ETHTRCV_MODE_ACTIVE);
     ComM_RequestComMode(ComMConf_ComMUser_ComMUser_untagged, COMM_FULL_COMMUNICATION);
     ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Vlan1, COMM_FULL_COMMUNICATION);
+    ComM_RequestComMode(ComMConf_ComMUser_ComMUser_Vlan23, COMM_FULL_COMMUNICATION); 
 /**********************************************************************************************************************
  * DO NOT CHANGE THIS COMMENT!           << End of runnable implementation >>               DO NOT CHANGE THIS COMMENT!
  *********************************************************************************************************************/

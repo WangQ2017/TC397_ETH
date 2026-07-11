@@ -153,6 +153,9 @@
         <Splitter File=".\Config\ECUC\TC397_BSW_Dcm_Dcm_ecuc.arxml">
             <Module Name="Dcm"/>
         </Splitter>
+        <Splitter File=".\Config\ECUC\TC397_BSW_Sd_Sd_ecuc.arxml">
+            <Module Name="Sd"/>
+        </Splitter>
         <OwnFolderForEachSplitter>false</OwnFolderForEachSplitter>
         <OwnFileForEachInstance>true</OwnFileForEachInstance>
     </EcucSplitter>
@@ -430,7 +433,7 @@
                 </Settings>
             </Settings>
             <Settings Name="com.vector.cfg.gen.core.gencore.internal.aov.AutomaticOnDemandValidationConfigurationService">
-                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAKc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQABkNyeXB0b3QAGS9NSUNST1NBUi9Dcnlw&#xA;dG9fMzBfTGliQ3ZzcQB+AAh0AANNY3V0ABEvQVVSSVgyRy9FY3VjRGVmc3NxAH4ACHQAA0NzbXQA&#xA;CS9NSUNST1NBUnNxAH4ACHQABFVhcnRxAH4AD3NxAH4ACHQAA0lycXEAfgAPc3EAfgAIdAAHTWNh&#xA;bExpYnEAfgAPc3EAfgAIdAAFRTJFUFdxAH4AEnNxAH4ACHQAA0Rpb3EAfgAPc3EAfgAIdAAFQ3J5&#xA;SWZxAH4AEnNxAH4ACHQAA0Zsc3EAfgAP" Name="Data"/>
+                <Setting Value="rO0ABXNyAGpjb20udmVjdG9yLmNmZy5nZW4uY29yZS5nZW5jb3JlLmludGVybmFsLmFvdi5BdXRv&#xA;bWF0aWNPbkRlbWFuZFZhbGlkYXRpb25Db25maWd1cmF0aW9uU2VydmljZSRQZXJzaXN0ZWREYXRh&#xA;pcjrmQ6cuakCAAJaAAlhY3RpdmF0ZWRMABJkZWFjdGl2YXRlZE1vZHVsZXN0ABZMamF2YS91dGls&#xA;L0NvbGxlY3Rpb247eHABc3IANmNvbS5nb29nbGUuY29tbW9uLmNvbGxlY3QuSW1tdXRhYmxlTGlz&#xA;dCRTZXJpYWxpemVkRm9ybQAAAAAAAAAAAgABWwAIZWxlbWVudHN0ABNbTGphdmEvbGFuZy9PYmpl&#xA;Y3Q7eHB1cgATW0xqYXZhLmxhbmcuT2JqZWN0O5DOWJ8QcylsAgAAeHAAAAAKc3IANWNvbS52ZWN0&#xA;b3IuY2ZnLm1vZGVsLmFjY2Vzcy5EZWZSZWYkU2VyaWFsaXphdGlvblByb3h5NnUB4bS2W7ACAAJM&#xA;AB5kZWZSZWZTdHJpbmdXaXRob3V0UGFja2FnZVBhcnR0ABJMamF2YS9sYW5nL1N0cmluZztMABlw&#xA;YWNrYWdlUGFydE9mRGVmUmVmU3RyaW5ncQB+AAl4cHQABUNyeUlmdAAJL01JQ1JPU0FSc3EAfgAI&#xA;dAADTWN1dAARL0FVUklYMkcvRWN1Y0RlZnNzcQB+AAh0AANEaW9xAH4AD3NxAH4ACHQAA0Zsc3EA&#xA;fgAPc3EAfgAIdAADQ3NtcQB+AAxzcQB+AAh0AANJcnFxAH4AD3NxAH4ACHQABkNyeXB0b3QAGS9N&#xA;SUNST1NBUi9DcnlwdG9fMzBfTGliQ3ZzcQB+AAh0AAdNY2FsTGlicQB+AA9zcQB+AAh0AARVYXJ0&#xA;cQB+AA9zcQB+AAh0AAVFMkVQV3EAfgAM" Name="Data"/>
             </Settings>
             <Settings Name="com.vector.cfg.gui.pse.pages.generators">
                 <Settings Name="BuildVipProject"/>
@@ -465,6 +468,7 @@
         <Component Name="Cdd_Log" GenerationEnabled="false"/>
         <Component Name="Cdd_StbM" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD\cdd_stbm"/>
         <Component Name="Cdd_PPS" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD\cdd_pps"/>
-        <Component Name="Cdd_UDS" GenerationEnabled="true" TargetFolder="..\TC39XX\_02_CDD\cdd_uds"/>
+        <Component Name="Cdd_UDS" GenerationEnabled="false" TargetFolder="..\TC39XX\_02_CDD\cdd_uds"/>
+        <Component Name="Cdd_SomeIP" GenerationEnabled="true" TargetFolder="..\TC39XX\_02_CDD\cdd_someip"/>
     </SwctGeneration>
 </ProjectAssistant>

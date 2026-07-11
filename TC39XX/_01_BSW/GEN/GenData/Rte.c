@@ -42,6 +42,7 @@
 #include "Rte_Cdd_Log.h"
 #include "Rte_Cdd_Nm.h"
 #include "Rte_Cdd_PPS.h"
+#include "Rte_Cdd_SomeIP.h"
 #include "Rte_Cdd_StbM.h"
 #include "Rte_Cdd_UDS.h"
 #include "Rte_ComM.h"
@@ -75,6 +76,7 @@
 #include "SchM_Mcu.h"
 #include "SchM_PduR.h"
 #include "SchM_Port.h"
+#include "SchM_Sd.h"
 #include "SchM_SoAd.h"
 #include "SchM_StbM.h"
 #include "SchM_TcpIp.h"
@@ -220,6 +222,66 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 
   return ret;
 } /* PRQA S 6080 */ /* MD_MSR_STMIF */
+
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_SDC_SdClientServiceState(BswM_SDC_SdClientServiceState mode) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 ret;
+
+  if (mode == 0U)
+  {
+    ret = 1U;
+  }
+  else if (mode == 1U)
+  {
+    ret = 0U;
+  }
+  else
+  {
+    ret = 2U;
+  }
+
+  return ret;
+}
+
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_SDC_SdConsumedEventGroupState(BswM_SDC_SdConsumedEventGroupState mode) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 ret;
+
+  if (mode == 0U)
+  {
+    ret = 1U;
+  }
+  else if (mode == 1U)
+  {
+    ret = 0U;
+  }
+  else
+  {
+    ret = 2U;
+  }
+
+  return ret;
+}
+
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_SDC_SdEventHandlerState(BswM_SDC_SdEventHandlerState mode) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 ret;
+
+  if (mode == 0U)
+  {
+    ret = 0U;
+  }
+  else if (mode == 1U)
+  {
+    ret = 1U;
+  }
+  else
+  {
+    ret = 2U;
+  }
+
+  return ret;
+}
 
 #define RTE_STOP_SEC_CODE
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -438,7 +500,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Start(void)
     /* activate the alarms used for TimingEvents */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(1)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(20)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
-    (void)SetRelAlarm(Rte_Al_TE_Cdd_StbM_Cdd_StbM_Runnable100ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(100)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
+    (void)SetRelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_100ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(100)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms, RTE_MSEC_SystemTimer_OsCore0(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore0(5)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
     (void)SetRelAlarm(Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms, RTE_MSEC_SystemTimer_OsCore1(0) + (TickType)1, RTE_MSEC_SystemTimer_OsCore1(10)); /* PRQA S 3417, 1840 */ /* MD_Rte_Os, MD_Rte_Os */
@@ -503,7 +565,7 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Stop(void)
     /* deactivate alarms */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable1ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core0_Cdd_Core0_Runnable20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)CancelAlarm(Rte_Al_TE_Cdd_StbM_Cdd_StbM_Runnable100ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)CancelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_100ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)CancelAlarm(Rte_Al_TE_Cdd_Core1_Cdd_Core1_Runnable10ms); /* PRQA S 3417 */ /* MD_Rte_Os */

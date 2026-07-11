@@ -42,6 +42,7 @@
 #include "Rte_Cdd_Log.h"
 #include "Rte_Cdd_Nm.h"
 #include "Rte_Cdd_PPS.h"
+#include "Rte_Cdd_SomeIP.h"
 #include "Rte_Cdd_StbM.h"
 #include "Rte_Cdd_UDS.h"
 #include "Rte_ComM.h"
@@ -75,6 +76,7 @@
 #include "SchM_Mcu.h"
 #include "SchM_PduR.h"
 #include "SchM_Port.h"
+#include "SchM_Sd.h"
 #include "SchM_SoAd.h"
 #include "SchM_StbM.h"
 #include "SchM_TcpIp.h"
@@ -152,6 +154,9 @@ VAR(BswM_ESH_RunRequest, RTE_VAR_INIT) Rte_Cdd_nm_BswM_SRI_BswM_MSI_ESH_RunReque
  * Helper functions for mode management
  *********************************************************************************************************************/
 FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_SDC_SdClientServiceState(BswM_SDC_SdClientServiceState mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_SDC_SdConsumedEventGroupState(BswM_SDC_SdConsumedEventGroupState mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
+FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_SDC_SdEventHandlerState(BswM_SDC_SdEventHandlerState mode); /* PRQA S 3408 */ /* MD_Rte_3408 */
 
 #define RTE_STOP_SEC_CODE
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
@@ -164,6 +169,46 @@ FUNC(uint8, RTE_CODE) Rte_GetInternalModeIndex_BswM_ESH_Mode(BswM_ESH_Mode mode)
 #define RTE_START_SEC_VAR_INIT_UNSPECIFIED
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_BswM_ESH_Mode_STARTUP; /* PRQA S 3408 */ /* MD_Rte_3408 */
+#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+VAR(BswM_SDC_SdClientServiceState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState = RTE_MODE_BswM_SDC_SdClientServiceState_SDC_CLIENT_DOWN; /* PRQA S 3408 */ /* MD_Rte_3408 */
+#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+VAR(BswM_SDC_SdClientServiceState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState = RTE_MODE_BswM_SDC_SdClientServiceState_SDC_CLIENT_DOWN; /* PRQA S 3408 */ /* MD_Rte_3408 */
+#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+VAR(BswM_SDC_SdConsumedEventGroupState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState = RTE_MODE_BswM_SDC_SdConsumedEventGroupState_SDC_CEG_DOWN; /* PRQA S 3408 */ /* MD_Rte_3408 */
+#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+VAR(BswM_SDC_SdClientServiceState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState = RTE_MODE_BswM_SDC_SdClientServiceState_SDC_CLIENT_DOWN; /* PRQA S 3408 */ /* MD_Rte_3408 */
+#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+VAR(BswM_SDC_SdConsumedEventGroupState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState = RTE_MODE_BswM_SDC_SdConsumedEventGroupState_SDC_CEG_DOWN; /* PRQA S 3408 */ /* MD_Rte_3408 */
+#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+VAR(BswM_SDC_SdEventHandlerState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState = RTE_MODE_BswM_SDC_SdEventHandlerState_SDC_EH_RELEASED; /* PRQA S 3408 */ /* MD_Rte_3408 */
+#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+VAR(BswM_SDC_SdEventHandlerState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState = RTE_MODE_BswM_SDC_SdEventHandlerState_SDC_EH_RELEASED; /* PRQA S 3408 */ /* MD_Rte_3408 */
+#define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+#define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+VAR(BswM_SDC_SdEventHandlerState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState_BswM_MDGP_SDC_SdEventHandlerState = RTE_MODE_BswM_SDC_SdEventHandlerState_SDC_EH_RELEASED; /* PRQA S 3408 */ /* MD_Rte_3408 */
 #define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
 #include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
@@ -324,6 +369,22 @@ FUNC(void, RTE_CODE) Rte_InitMemory_OsApplication_OsCore0(void)
 
   Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode = RTE_MODE_BswM_ESH_Mode_STARTUP;
 
+  Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState = RTE_MODE_BswM_SDC_SdClientServiceState_SDC_CLIENT_DOWN;
+
+  Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState = RTE_MODE_BswM_SDC_SdClientServiceState_SDC_CLIENT_DOWN;
+
+  Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState = RTE_MODE_BswM_SDC_SdConsumedEventGroupState_SDC_CEG_DOWN;
+
+  Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState = RTE_MODE_BswM_SDC_SdClientServiceState_SDC_CLIENT_DOWN;
+
+  Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState = RTE_MODE_BswM_SDC_SdConsumedEventGroupState_SDC_CEG_DOWN;
+
+  Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState = RTE_MODE_BswM_SDC_SdEventHandlerState_SDC_EH_RELEASED;
+
+  Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState = RTE_MODE_BswM_SDC_SdEventHandlerState_SDC_EH_RELEASED;
+
+  Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState_BswM_MDGP_SDC_SdEventHandlerState = RTE_MODE_BswM_SDC_SdEventHandlerState_SDC_EH_RELEASED;
+
 }
 
 
@@ -357,6 +418,69 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_RunRequest_0_requestedM
 FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_ESH_RunRequest_1_requestedMode(P2VAR(BswM_ESH_RunRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
 {
   *data = 0U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdClientService_0xC3CB_VechicleSpeed_requestedMode(P2VAR(BswM_SDC_SdClientServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 1U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_requestedMode(P2VAR(BswM_SDC_SdConsumedEventGroupRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 1U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_requestedMode(P2VAR(BswM_SDC_SdClientServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 1U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_requestedMode(P2VAR(BswM_SDC_SdConsumedEventGroupRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 1U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdClientService_0xC3CD_VechicleInfo_requestedMode(P2VAR(BswM_SDC_SdClientServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 0U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_requestedMode(P2VAR(BswM_SDC_SdConsumedEventGroupRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 1U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_S_SdServerService_0xC3C0_FaultInfo_requestedMode(P2VAR(BswM_SDC_SdServerServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 1U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_S_SdServerService_0xC3C1_SenState_requestedMode(P2VAR(BswM_SDC_SdServerServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 1U;
+
+  return RTE_E_UNCONNECTED;
+} /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Read_BswM_Request_SDC_S_SdServerService_0xC3C2_EcuState_requestedMode(P2VAR(BswM_SDC_SdServerServiceRequest, AUTOMATIC, RTE_BSWM_APPL_VAR) data) /* PRQA S 3673, 1505, 3206 */ /* MD_Rte_Qac, MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  *data = 1U;
 
   return RTE_E_UNCONNECTED;
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -395,6 +519,247 @@ FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_E
   return ret;
 } /* PRQA S 6050 */ /* MD_MSR_STCAL */
 
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState(BswM_SDC_SdClientServiceState nextMode) /* PRQA S 1505 */ /* MD_MSR_Rule8.7 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  uint8 internalIndexNextMode = Rte_GetInternalModeIndex_BswM_SDC_SdClientServiceState(nextMode);
+  uint8 internalIndexCurrentMode;
+  BswM_SDC_SdClientServiceState currentMode;
+  SuspendOSInterrupts();
+  currentMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState;
+  internalIndexCurrentMode = Rte_GetInternalModeIndex_BswM_SDC_SdClientServiceState(currentMode);
+  if (internalIndexNextMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else if (internalIndexCurrentMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState = nextMode;
+    ResumeOSInterrupts();
+  }
+
+  return ret;
+} /* PRQA S 6050 */ /* MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CB_VechicleSpeed_CEG_SdConsumedEventGroup_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdConsumedEventGroupState(BswM_SDC_SdConsumedEventGroupState nextMode) /* PRQA S 1505, 3206 */ /* MD_MSR_Rule8.7, MD_Rte_3206 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  nextMode = nextMode;
+
+  return ret;
+}
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState(BswM_SDC_SdClientServiceState nextMode) /* PRQA S 1505 */ /* MD_MSR_Rule8.7 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  uint8 internalIndexNextMode = Rte_GetInternalModeIndex_BswM_SDC_SdClientServiceState(nextMode);
+  uint8 internalIndexCurrentMode;
+  BswM_SDC_SdClientServiceState currentMode;
+  SuspendOSInterrupts();
+  currentMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState;
+  internalIndexCurrentMode = Rte_GetInternalModeIndex_BswM_SDC_SdClientServiceState(currentMode);
+  if (internalIndexNextMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else if (internalIndexCurrentMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState = nextMode;
+    ResumeOSInterrupts();
+  }
+
+  return ret;
+} /* PRQA S 6050 */ /* MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState(BswM_SDC_SdConsumedEventGroupState nextMode) /* PRQA S 1505 */ /* MD_MSR_Rule8.7 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  uint8 internalIndexNextMode = Rte_GetInternalModeIndex_BswM_SDC_SdConsumedEventGroupState(nextMode);
+  uint8 internalIndexCurrentMode;
+  BswM_SDC_SdConsumedEventGroupState currentMode;
+  SuspendOSInterrupts();
+  currentMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState;
+  internalIndexCurrentMode = Rte_GetInternalModeIndex_BswM_SDC_SdConsumedEventGroupState(currentMode);
+  if (internalIndexNextMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else if (internalIndexCurrentMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState = nextMode;
+    ResumeOSInterrupts();
+  }
+
+  return ret;
+} /* PRQA S 6050 */ /* MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState(BswM_SDC_SdClientServiceState nextMode) /* PRQA S 1505 */ /* MD_MSR_Rule8.7 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  uint8 internalIndexNextMode = Rte_GetInternalModeIndex_BswM_SDC_SdClientServiceState(nextMode);
+  uint8 internalIndexCurrentMode;
+  BswM_SDC_SdClientServiceState currentMode;
+  SuspendOSInterrupts();
+  currentMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState;
+  internalIndexCurrentMode = Rte_GetInternalModeIndex_BswM_SDC_SdClientServiceState(currentMode);
+  if (internalIndexNextMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else if (internalIndexCurrentMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState = nextMode;
+    ResumeOSInterrupts();
+  }
+
+  return ret;
+} /* PRQA S 6050 */ /* MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState(BswM_SDC_SdConsumedEventGroupState nextMode) /* PRQA S 1505 */ /* MD_MSR_Rule8.7 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  uint8 internalIndexNextMode = Rte_GetInternalModeIndex_BswM_SDC_SdConsumedEventGroupState(nextMode);
+  uint8 internalIndexCurrentMode;
+  BswM_SDC_SdConsumedEventGroupState currentMode;
+  SuspendOSInterrupts();
+  currentMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState;
+  internalIndexCurrentMode = Rte_GetInternalModeIndex_BswM_SDC_SdConsumedEventGroupState(currentMode);
+  if (internalIndexNextMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else if (internalIndexCurrentMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState = nextMode;
+    ResumeOSInterrupts();
+  }
+
+  return ret;
+} /* PRQA S 6050 */ /* MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState(BswM_SDC_SdEventHandlerState nextMode) /* PRQA S 1505 */ /* MD_MSR_Rule8.7 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  uint8 internalIndexNextMode = Rte_GetInternalModeIndex_BswM_SDC_SdEventHandlerState(nextMode);
+  uint8 internalIndexCurrentMode;
+  BswM_SDC_SdEventHandlerState currentMode;
+  SuspendOSInterrupts();
+  currentMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState;
+  internalIndexCurrentMode = Rte_GetInternalModeIndex_BswM_SDC_SdEventHandlerState(currentMode);
+  if (internalIndexNextMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else if (internalIndexCurrentMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState = nextMode;
+    ResumeOSInterrupts();
+  }
+
+  return ret;
+} /* PRQA S 6050 */ /* MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState(BswM_SDC_SdEventHandlerState nextMode) /* PRQA S 1505 */ /* MD_MSR_Rule8.7 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  uint8 internalIndexNextMode = Rte_GetInternalModeIndex_BswM_SDC_SdEventHandlerState(nextMode);
+  uint8 internalIndexCurrentMode;
+  BswM_SDC_SdEventHandlerState currentMode;
+  SuspendOSInterrupts();
+  currentMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState;
+  internalIndexCurrentMode = Rte_GetInternalModeIndex_BswM_SDC_SdEventHandlerState(currentMode);
+  if (internalIndexNextMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else if (internalIndexCurrentMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState = nextMode;
+    ResumeOSInterrupts();
+  }
+
+  return ret;
+} /* PRQA S 6050 */ /* MD_MSR_STCAL */
+
+FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState_BswM_MDGP_SDC_SdEventHandlerState(BswM_SDC_SdEventHandlerState nextMode) /* PRQA S 1505 */ /* MD_MSR_Rule8.7 */
+{
+  Std_ReturnType ret = RTE_E_OK; /* PRQA S 2981 */ /* MD_MSR_RetVal */
+
+  uint8 internalIndexNextMode = Rte_GetInternalModeIndex_BswM_SDC_SdEventHandlerState(nextMode);
+  uint8 internalIndexCurrentMode;
+  BswM_SDC_SdEventHandlerState currentMode;
+  SuspendOSInterrupts();
+  currentMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState_BswM_MDGP_SDC_SdEventHandlerState;
+  internalIndexCurrentMode = Rte_GetInternalModeIndex_BswM_SDC_SdEventHandlerState(currentMode);
+  if (internalIndexNextMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else if (internalIndexCurrentMode >= 2U)
+  {
+    ResumeOSInterrupts();
+    ret = RTE_E_LIMIT;
+  }
+  else
+  {
+    Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState_BswM_MDGP_SDC_SdEventHandlerState = nextMode;
+    ResumeOSInterrupts();
+  }
+
+  return ret;
+} /* PRQA S 6050 */ /* MD_MSR_STCAL */
+
 
 /**********************************************************************************************************************
  * Mode reading API (Rte_Mode)
@@ -404,6 +769,74 @@ FUNC(BswM_ESH_Mode, RTE_CODE) Rte_Mode_BswM_Notification_ESH_ModeNotification_Bs
 {
   BswM_ESH_Mode curMode;
   curMode = Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode;
+  return curMode;
+}
+
+
+/**********************************************************************************************************************
+ * Mode reading API (Rte_Mode)
+ *********************************************************************************************************************/
+
+FUNC(uint8, RTE_CODE) Rte_Mode_Cdd_SomeIP_BswM_MSI_SDC_SdClientServiceState_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 curMode;
+  curMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState;
+  return curMode;
+}
+
+FUNC(uint8, RTE_CODE) Rte_Mode_Cdd_SomeIP_BswM_MSI_SDC_SdClientServiceState_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 curMode;
+  curMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState;
+  return curMode;
+}
+
+FUNC(uint8, RTE_CODE) Rte_Mode_Cdd_SomeIP_BswM_MSI_SDC_SdClientServiceState_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 curMode;
+  curMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState;
+  return curMode;
+}
+
+FUNC(uint8, RTE_CODE) Rte_Mode_Cdd_SomeIP_BswM_MSI_SDC_SdConsumedEventGroupState_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdConsumedEventGroupState(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 curMode;
+  curMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState;
+  return curMode;
+}
+
+FUNC(uint8, RTE_CODE) Rte_Mode_Cdd_SomeIP_BswM_MSI_SDC_SdConsumedEventGroupState_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 curMode;
+  curMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState;
+  return curMode;
+}
+
+FUNC(uint8, RTE_CODE) Rte_Mode_Cdd_SomeIP_BswM_MSI_SDC_SdConsumedEventGroupState_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 curMode;
+  curMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState;
+  return curMode;
+}
+
+FUNC(uint8, RTE_CODE) Rte_Mode_Cdd_SomeIP_BswM_MSI_SDC_SdEventHandlerState_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 curMode;
+  curMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState;
+  return curMode;
+}
+
+FUNC(uint8, RTE_CODE) Rte_Mode_Cdd_SomeIP_BswM_MSI_SDC_SdEventHandlerState_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 curMode;
+  curMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState;
+  return curMode;
+}
+
+FUNC(uint8, RTE_CODE) Rte_Mode_Cdd_SomeIP_BswM_MSI_SDC_SdEventHandlerState_0xC3C2_EcuState_BswM_MDGP_SDC_SdEventHandlerState(void) /* PRQA S 3408 */ /* MD_Rte_3408 */
+{
+  uint8 curMode;
+  curMode = Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState_BswM_MDGP_SDC_SdEventHandlerState;
   return curMode;
 }
 
@@ -437,9 +870,9 @@ TASK(OsTask_Asw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreacha
 
   for(;;)
   {
-    (void)WaitEvent(Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms | Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable1ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms | Rte_Ev_Run_Cdd_StbM_Cdd_StbM_Runnable100ms); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)WaitEvent(Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_100ms | Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms | Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable1ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms); /* PRQA S 3417 */ /* MD_Rte_Os */
     (void)GetEvent(OsTask_Asw_OsCore0, &ev); /* PRQA S 3417 */ /* MD_Rte_Os */
-    (void)ClearEvent(ev & (Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms | Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable1ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms | Rte_Ev_Run_Cdd_StbM_Cdd_StbM_Runnable100ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
+    (void)ClearEvent(ev & (Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_100ms | Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_10ms | Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_5ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable1ms | Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable20ms)); /* PRQA S 3417 */ /* MD_Rte_Os */
 
     if ((ev & Rte_Ev_Run_Cdd_Core0_Cdd_Core0_Runnable1ms) != (EventMaskType)0)
     {
@@ -483,7 +916,7 @@ TASK(OsTask_Asw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreacha
       Cdd_StbM_Runnable5ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
-    if ((ev & Rte_Ev_Run_Cdd_StbM_Cdd_StbM_Runnable100ms) != (EventMaskType)0)
+    if ((ev & Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_100ms) != (EventMaskType)0)
     {
       /* call runnable */
       Cdd_StbM_Runnable100ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
@@ -493,6 +926,12 @@ TASK(OsTask_Asw_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreacha
     {
       /* call runnable */
       Cdd_Uds_Runnable10ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+    }
+
+    if ((ev & Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_100ms) != (EventMaskType)0)
+    {
+      /* call runnable */
+      Cdd_SomeIP_Runnable_100ms(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
   }
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */
@@ -585,6 +1024,9 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
 
       /* call runnable */
       ComM_MainFunction_0(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+      /* call runnable */
+      ComM_MainFunction_2(); /* PRQA S 2987 */ /* MD_Rte_2987 */
     }
 
     if ((ev & Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms) != (EventMaskType)0)
@@ -603,6 +1045,9 @@ TASK(OsTask_Bsw_5ms_Core0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreac
     {
       /* call schedulable entity */
       EthIf_MainFunctionTx();
+
+      /* call schedulable entity */
+      Sd_MainFunction();
 
       /* call schedulable entity */
       SoAd_MainFunction();
@@ -653,6 +1098,9 @@ TASK(OsTask_Init_OsCore0) /* PRQA S 3408, 1503 */ /* MD_Rte_3408, MD_MSR_Unreach
 
   /* call runnable */
   Cdd_UDS_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
+
+  /* call runnable */
+  Cdd_SomeIP_Init(); /* PRQA S 2987 */ /* MD_Rte_2987 */
 
   (void)TerminateTask(); /* PRQA S 3417 */ /* MD_Rte_Os */
 } /* PRQA S 6010, 6030, 6050, 6080 */ /* MD_MSR_STPTH, MD_MSR_STCYC, MD_MSR_STCAL, MD_MSR_STMIF */

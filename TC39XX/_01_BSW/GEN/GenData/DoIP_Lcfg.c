@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: DoIP_Lcfg.c
- *   Generation Time: 2026-06-18 21:50:56
+ *   Generation Time: 2026-07-05 10:57:29
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -107,18 +107,17 @@ CONST(DoIP_ChannelType, DOIP_CONST) DoIP_Channel[2] = {  /* PRQA S 1514, 1533 */
   Element          Description
   LocalAddrIdx     the index of the 1:1 relation pointing to DoIP_LocalAddr
   RxCancelPduId    PduId used for reception cancelation
-  SoAdTxPduId      PduId used for transmission
 */ 
 #define DOIP_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
 CONST(DoIP_ConnectionType, DOIP_CONST) DoIP_Connection[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    LocalAddrIdx  RxCancelPduId                                         SoAdTxPduId                                                              Referable Keys */
-  { /*     0 */           0u,     SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest,              SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TCP_DATA0_TX },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33] */
-  { /*     1 */           0u, SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_001,              SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TCP_DATA1_TX },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33] */
-  { /*     2 */           0u,   SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_1, SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TEST_EQUIPMENT_REQUEST_Tx },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33] */
-  { /*     3 */           0u,                    DOIP_NO_RXCANCELPDUIDOFCONNECTION,          SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_UDP_DISCOVERY_Tx }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33] */
+    /* Index    LocalAddrIdx  RxCancelPduId                                               Referable Keys */
+  { /*     0 */           0u,     SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33] */
+  { /*     1 */           0u, SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_001 },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33] */
+  { /*     2 */           0u,   SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_1 },  /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33] */
+  { /*     3 */           0u,                    DOIP_NO_RXCANCELPDUIDOFCONNECTION }   /* [/ActiveEcuC/TcpIp/TcpIpConfig/TcpIpLocalAddr_NE_DhcpV4_Fixed_169_254_1_33] */
 };
 #define DOIP_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */

@@ -21,6 +21,47 @@
             <AR-PACKAGE UUID="c1ebf2e7-4800-4c71-9b89-b09cf3bf1a0f">
               <SHORT-NAME>XcpEvents</SHORT-NAME>
             </AR-PACKAGE>
+            <AR-PACKAGE UUID="dd0535f5-603d-4b07-bf22-a69303795101">
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION UUID="9363d0ed-ace1-4605-bcad-e99190589ba9">
+                  <SHORT-NAME>Sd</SHORT-NAME>
+                  <PROVIDED-ENTRYS>
+                    <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                      <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Sd_ib_bswmd/BswModuleDescriptions/Sd_MainFunction</BSW-MODULE-ENTRY-REF>
+                    </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  </PROVIDED-ENTRYS>
+                  <INTERNAL-BEHAVIORS>
+                    <BSW-INTERNAL-BEHAVIOR UUID="a09afe02-1d82-4ec4-bba1-a9dcc0c88ba6">
+                      <SHORT-NAME>SdBehavior</SHORT-NAME>
+                      <EXCLUSIVE-AREAS>
+                        <EXCLUSIVE-AREA UUID="64d625d9-ca19-4878-b7cc-e71a1db3aa75">
+                          <SHORT-NAME>SD_EXCLUSIVE_AREA_0</SHORT-NAME>
+                        </EXCLUSIVE-AREA>
+                      </EXCLUSIVE-AREAS>
+                      <ENTITYS>
+                        <BSW-SCHEDULABLE-ENTITY UUID="2a0232e8-327f-46e2-9328-a8894f656b1b">
+                          <SHORT-NAME>Sd_MainFunction</SHORT-NAME>
+                          <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/MICROSAR/Sd_ib_bswmd/BswModuleDescriptions/Sd_MainFunction</IMPLEMENTED-ENTRY-REF>
+                        </BSW-SCHEDULABLE-ENTITY>
+                      </ENTITYS>
+                      <EVENTS>
+                        <BSW-TIMING-EVENT UUID="d3430b93-5ebf-41ef-8a0b-4ac90c9c9066">
+                          <SHORT-NAME>Sd_MainFunctionTimingEvent0</SHORT-NAME>
+                          <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/MICROSAR/Sd_ib_bswmd/BswModuleDescriptions/Sd/SdBehavior/Sd_MainFunction</STARTS-ON-EVENT-REF>
+                          <PERIOD>0.005</PERIOD>
+                        </BSW-TIMING-EVENT>
+                      </EVENTS>
+                    </BSW-INTERNAL-BEHAVIOR>
+                  </INTERNAL-BEHAVIORS>
+                </BSW-MODULE-DESCRIPTION>
+                <BSW-MODULE-ENTRY UUID="353a982e-5538-4f80-b34a-ec46f4d40e8a">
+                  <SHORT-NAME>Sd_MainFunction</SHORT-NAME>
+                  <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                  <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                </BSW-MODULE-ENTRY>
+              </ELEMENTS>
+            </AR-PACKAGE>
           </AR-PACKAGES>
         </AR-PACKAGE>
       </AR-PACKAGES>

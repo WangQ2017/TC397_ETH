@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: PduR_Cfg.h
- *   Generation Time: 2026-06-18 21:32:21
+ *   Generation Time: 2026-07-05 10:57:16
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -124,6 +124,32 @@
 
 
 /**
+ * \defgroup PduRHandleIdsIfRxDest Handle IDs of handle space IfRxDest.
+ * \brief Communication interface Rx destination PDUs
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define PduRConf_PduRDestPdu_PduRDestPdu                              1u
+#define PduRConf_PduRDestPdu_PduRDestPdu_1                            2u
+#define PduRConf_PduRDestPdu_PduRDestPdu_2                            0u
+/**\} */
+
+/**
+ * \defgroup PduRHandleIdsIfRxSrc Handle IDs of handle space IfRxSrc.
+ * \brief Communication interface Rx source PDUs
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_1                              1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_2                              2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_3                              0u
+/**\} */
+
+/**
  * \defgroup PduRHandleIdsIfTpTxSrc Handle IDs of handle space IfTpTxSrc.
  * \brief Communication interface and transport protocol Tx PDUs
  * \{
@@ -131,9 +157,12 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRSrcPdu_PduRSrcPdu                                1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu                                2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_4                              1u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_5                              3u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_6                              4u
 #define PduRConf_PduRSrcPdu_PduRSrcPdu_DOIPPhyResTx                   0u
-#define PduRConf_PduRSrcPdu_PduRSrcPdu_udplog_Tx_LdCom                2u
+#define PduRConf_PduRSrcPdu_PduRSrcPdu_udplog_Tx_LdCom                5u
 /**\} */
 
 /**
@@ -144,8 +173,11 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define PduRConf_PduRDestPdu_PduRDestPdu_TxPdu_SoAd                   0u
-#define PduRConf_PduRDestPdu_PduRDestPdu_udplog_Tx_SoAd               1u
+#define PduRConf_PduRDestPdu_PduRDestPdu_3                            1u
+#define PduRConf_PduRDestPdu_PduRDestPdu_4                            2u
+#define PduRConf_PduRDestPdu_PduRDestPdu_5                            0u
+#define PduRConf_PduRDestPdu_PduRDestPdu_TxPdu_SoAd                   3u
+#define PduRConf_PduRDestPdu_PduRDestPdu_udplog_Tx_SoAd               4u
 /**\} */
 
 /**

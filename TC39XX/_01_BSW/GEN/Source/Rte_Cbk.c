@@ -43,3 +43,43 @@
  *********************************************************************************************************************/
 
 #include "Rte_Cbk.h"
+
+#include "Appl_Cbk.h"
+#include "Cdd_SomeIP.h"
+#include "Cdd_Log.h"
+volatile uint32  g_rxCntCbk[3] = {0};
+volatile uint32  g_txCntCbk[3] = {0};
+/* ldcom cbk */
+FUNC(void, RTE_CODE) Rte_LdComCbk_VechicleSpeedRx(P2CONST(PduInfoType, AUTOMATIC, COM_APPL_DATA) PduInfoPtr)
+{
+    g_rxCntCbk[0]++;
+    Cdd_SomeIP_LdComRx_VechicleSpeed( PduInfoPtr);
+}
+
+FUNC(void, RTE_CODE) Rte_LdComCbk_VechicleStatusRx(P2CONST(PduInfoType, AUTOMATIC, COM_APPL_DATA) PduInfoPtr)
+{
+    g_rxCntCbk[1]++;
+    Cdd_SomeIP_LdComRx_VechicleStatus( PduInfoPtr);
+}
+
+FUNC(void, RTE_CODE) Rte_LdComCbk__EcuStateTx(void)
+{
+    g_txCntCbk[0]++;
+}
+
+FUNC(void, RTE_CODE) Rte_LdComCbk_SenStateTx(void)
+{
+    g_txCntCbk[1]++;
+}
+
+/* com cbk */
+FUNC(void, COM_APPL_CODE) Com_Cbk_FaultInfoTx(void)
+{
+    g_txCntCbk[2]++;
+}
+
+FUNC(void, COM_APPL_CODE) Com_Cbk_VechicleInfoRx(void)
+{
+    g_rxCntCbk[2]++;
+    Cdd_SomeIP_ComNotify_VechicleInfoRx();
+}

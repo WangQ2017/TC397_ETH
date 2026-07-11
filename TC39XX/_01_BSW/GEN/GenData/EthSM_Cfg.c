@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: EthSM_Cfg.c
- *   Generation Time: 2026-06-18 21:32:22
+ *   Generation Time: 2026-07-05 10:57:19
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -67,6 +67,48 @@
   SECTION: GLOBAL DATA
 **********************************************************************************************************************/
 /**********************************************************************************************************************
+  EthSM_ChannelConfig
+**********************************************************************************************************************/
+/** 
+  \var    EthSM_ChannelConfig
+  \details
+  Element            Description
+  EthIfController
+*/ 
+#define ETHSM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(EthSM_ChannelConfigType, ETHSM_CONST) EthSM_ChannelConfig[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    EthIfController                                                                                       Referable Keys */
+  { /*     0 */ ((EthSM_EthIfControllerOfChannelConfigType)EthIfConf_EthIfController_EthIfController_untagged) },  /* [/ActiveEcuC/EthSM/EthSMNetwork_untagged] */
+  { /*     1 */    ((EthSM_EthIfControllerOfChannelConfigType)EthIfConf_EthIfController_EthIfController_Vlan1) },  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
+  { /*     2 */   ((EthSM_EthIfControllerOfChannelConfigType)EthIfConf_EthIfController_EthIfController_Valn23) }   /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
+};
+#define ETHSM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  EthSM_NetIdxByEthIfCtrlIdx
+**********************************************************************************************************************/
+#define ETHSM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(EthSM_NetIdxByEthIfCtrlIdxType, ETHSM_CONST) EthSM_NetIdxByEthIfCtrlIdx[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     NetIdxByEthIfCtrlIdx      Referable Keys */
+  /*     0 */                    0u,  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_untagged] */
+  /*     1 */                    2u,  /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Valn23] */
+  /*     2 */                    1u   /* [/ActiveEcuC/EthIf/EthIfConfigSet/EthIfController_Vlan1] */
+};
+#define ETHSM_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   EthSM_ActiveIpVxCnt
 **********************************************************************************************************************/
 #define ETHSM_START_SEC_VAR_NOINIT_8BIT
@@ -77,6 +119,7 @@ VAR(EthSM_ActiveIpVxCntUType, ETHSM_VAR_NOINIT) EthSM_ActiveIpVxCnt;  /* PRQA S 
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_untagged] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -107,6 +150,7 @@ VAR(EthSM_LastReportedStateUType, ETHSM_VAR_NOINIT) EthSM_LastReportedState;  /*
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_untagged] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -124,6 +168,7 @@ VAR(EthSM_ModeUType, ETHSM_VAR_NOINIT) EthSM_Mode;  /* PRQA S 0759, 1514, 1533 *
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_untagged] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -141,6 +186,7 @@ VAR(EthSM_RequestedModeUType, ETHSM_VAR_NOINIT) EthSM_RequestedMode;  /* PRQA S 
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_untagged] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -158,6 +204,7 @@ VAR(EthSM_StateUType, ETHSM_VAR_NOINIT) EthSM_State;  /* PRQA S 0759, 1514, 1533
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_untagged] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -175,6 +222,7 @@ VAR(EthSM_TcpIpStateUType, ETHSM_VAR_NOINIT) EthSM_TcpIpState;  /* PRQA S 0759, 
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_untagged] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -192,6 +240,7 @@ VAR(EthSM_TrcvLinkStateUType, ETHSM_VAR_NOINIT) EthSM_TrcvLinkState;  /* PRQA S 
   /* Index        Referable Keys */
   /*     0 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_untagged] */
   /*     1 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan1] */
+  /*     2 */  /* [/ActiveEcuC/EthSM/EthSMNetwork_Vlan23] */
 
 #define ETHSM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */

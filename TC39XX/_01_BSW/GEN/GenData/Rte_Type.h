@@ -113,6 +113,24 @@ typedef uint8 BswM_ESH_Mode;
 # define Rte_TypeDef_BswM_ESH_RunRequest
 typedef uint8 BswM_ESH_RunRequest;
 
+# define Rte_TypeDef_BswM_SDC_SdClientServiceRequest
+typedef uint8 BswM_SDC_SdClientServiceRequest;
+
+# define Rte_TypeDef_BswM_SDC_SdClientServiceState
+typedef uint8 BswM_SDC_SdClientServiceState;
+
+# define Rte_TypeDef_BswM_SDC_SdConsumedEventGroupRequest
+typedef uint8 BswM_SDC_SdConsumedEventGroupRequest;
+
+# define Rte_TypeDef_BswM_SDC_SdConsumedEventGroupState
+typedef uint8 BswM_SDC_SdConsumedEventGroupState;
+
+# define Rte_TypeDef_BswM_SDC_SdEventHandlerState
+typedef uint8 BswM_SDC_SdEventHandlerState;
+
+# define Rte_TypeDef_BswM_SDC_SdServerServiceRequest
+typedef uint8 BswM_SDC_SdServerServiceRequest;
+
 # define Rte_TypeDef_ComM_ModeType
 typedef uint8 ComM_ModeType;
 
@@ -355,6 +373,78 @@ extern VAR(BswM_ESH_RunRequest, RTE_VAR_INIT) Rte_Cdd_nm_BswM_SRI_BswM_MSI_ESH_R
 #  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 extern VAR(BswM_ESH_Mode, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_ESH_ModeSwitch_BswM_MDGP_ESH_Mode;
+
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(BswM_SDC_SdClientServiceState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CB_VechicleSpeed_BswM_MDGP_SDC_SdClientServiceState;
+
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(BswM_SDC_SdClientServiceState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdClientServiceState;
+
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(BswM_SDC_SdConsumedEventGroupState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CC_VechicleStatus_CEG_SdConsumedEventGroup_0xC3CC_VechicleStatus_BswM_MDGP_SDC_SdConsumedEventGroupState;
+
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(BswM_SDC_SdClientServiceState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdClientServiceState;
+
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(BswM_SDC_SdConsumedEventGroupState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_C_SdClientService_0xC3CD_VechicleInfo_CEG_SdConsumedEventGroup_0xC3CD_VechicleInfo_BswM_MDGP_SDC_SdConsumedEventGroupState;
+
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(BswM_SDC_SdEventHandlerState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C0_FaultInfo_EH_SdEventHandler_0xC3C0_FaultInfo_BswM_MDGP_SDC_SdEventHandlerState;
+
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(BswM_SDC_SdEventHandlerState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C1_SenState_EH_SdEventHandler_0xC3C1_SenState_BswM_MDGP_SDC_SdEventHandlerState;
+
+#  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+
+#  define RTE_START_SEC_VAR_INIT_UNSPECIFIED
+#  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
+
+extern VAR(BswM_SDC_SdEventHandlerState, RTE_VAR_INIT) Rte_ModeMachine_BswM_Switch_SDC_Mode_S_SdServerService_0xC3C2_EcuState_EH_SdEventHandler_0xC3C2_EcuState_BswM_MDGP_SDC_SdEventHandlerState;
 
 #  define RTE_STOP_SEC_VAR_INIT_UNSPECIFIED
 #  include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */

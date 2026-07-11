@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: SoAd_Cfg.h
- *   Generation Time: 2026-06-18 21:32:22
+ *   Generation Time: 2026-07-05 10:57:20
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -51,7 +51,15 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection            4u
+#define SoAdConf_SoAdSocketConnection_SC_SD_Ctrl_UDP_Any_DynamicPort_Remote 5u
+#define SoAdConf_SoAdSocketConnection_SC_SD_Ctrl_UDP_Any_DynamicPort_Remote1 4u
+#define SoAdConf_SoAdSocketConnection_SC_TCP_TX_Any_IP_DynamincPort   7u
+#define SoAdConf_SoAdSocketConnection_SC_TCP_TX_Any_IP_DynamincPort_001 6u
+#define SoAdConf_SoAdSocketConnection_SC_UDP_IP_Any_DynamicPort_0     8u
+#define SoAdConf_SoAdSocketConnection_SC_UDP_IP_Any_DynamicPort_1     9u
+#define SoAdConf_SoAdSocketConnection_SC_UDP_Multicast_Fixed_239_23_0_1_40000_remote 10u
+#define SoAdConf_SoAdSocketConnection_SC_UDP_Multicast_Rx_Any         12u
+#define SoAdConf_SoAdSocketConnection_SoAdSocketConnection            11u
 #define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_DOIP_UDP_ANY_remote 2u
 #define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_DOIP_UDP_Broad__255_255_255_255_13400_remote 3u
 #define SoAdConf_SoAdSocketConnection_SoAdSocketConnection_TCP_DhcpV4_Fixed_169_254_1_33_13400_Remote_Any_0 0u
@@ -73,10 +81,14 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TCP_DATA0_TX          1u
 #define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TCP_DATA1_TX          2u
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TEST_EQUIPMENT_REQUEST_Tx 0u
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_UDP_DISCOVERY_Tx      3u
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_TimeSyncStatus_Tx          4u
-#define SoAdConf_SoAdPduRoute_SoAdPduRoute_udplog_Tx                  5u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_TEST_EQUIPMENT_REQUEST_Tx 3u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_DOIP_UDP_DISCOVERY_Tx      4u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_SD_UDP_SenStateTx          0u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_Sd_Ctrl_Tx                 5u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_Sd_TCP_EcuStateTx          6u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_Sd_UDP_FaultInfoTx         7u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_TimeSyncStatus_Tx          8u
+#define SoAdConf_SoAdPduRoute_SoAdPduRoute_udplog_Tx                  9u
 /**\} */
 
 /**********************************************************************************************************************
@@ -94,7 +106,14 @@
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
 #define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest              0u
 #define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_1            2u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_2            3u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_3            4u
 #define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_001          1u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleInfo_001 5u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleSpeed 6u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleSpeed_multi 8u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleStatus 7u
+#define SoAdConf_SoAdSocketRouteDest_SoAdSocketRouteDest_VechicleStatus_multi 9u
 /**\} */
 
 /**********************************************************************************************************************
@@ -102,6 +121,25 @@
  *********************************************************************************************************************/
 
 
+
+/**
+ * \defgroup SoAdHandleIds Handle IDs.
+ * \{
+ */
+
+/* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
+/*      Symbolic Name                                                 Value   Active in predefined variant(s) */
+#define SoAdConf_SoAdRoutingGroup_SoAdRoutingGroup_EcuState_AC        0u
+#define SoAdConf_SoAdRoutingGroup_SoAdRoutingGroup_FaultInfo_AC       1u
+#define SoAdConf_SoAdRoutingGroup_SoAdRoutingGroup_FaultInfo_AM       2u
+#define SoAdConf_SoAdRoutingGroup_SoAdRoutingGroup_SenState_AC        3u
+#define SoAdConf_SoAdRoutingGroup_SoAdRoutingGroup_SenState_AM        4u
+#define SoAdConf_SoAdRoutingGroup_SoAdRoutingGroup_VechicleInfo_AC    5u
+#define SoAdConf_SoAdRoutingGroup_SoAdRoutingGroup_VechicleSpeed_AC   6u
+#define SoAdConf_SoAdRoutingGroup_SoAdRoutingGroup_VechicleSpeed_AM   7u
+#define SoAdConf_SoAdRoutingGroup_SoAdRoutingGroup_VechicleStatus_AC  8u
+#define SoAdConf_SoAdRoutingGroup_SoAdRoutingGroup_VechicleStatus_AM  9u
+/**\} */
 
 /**********************************************************************************************************************
  *  SYMBOLIC NAME DEFINES (INTERNAL USE): ADDRESS IDS

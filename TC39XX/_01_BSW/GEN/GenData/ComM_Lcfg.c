@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: ComM_Lcfg.c
- *   Generation Time: 2026-06-18 21:32:22
+ *   Generation Time: 2026-07-05 10:57:17
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -95,10 +95,11 @@
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    UserReqFullComEndIdx  UserReqFullComStartIdx */
   { /*     0 */                   1u,                     0u },
-  { /*     1 */                   2u,                     1u }
+  { /*     1 */                   2u,                     1u },
+  { /*     2 */                   3u,                     2u }
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -121,10 +122,11 @@ CONST(ComM_ChannelPbType, COMM_CONST) ComM_ChannelPb[2] = {  /* PRQA S 1514, 153
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_UserType, COMM_CONST) ComM_User[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_UserType, COMM_CONST) ComM_User[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    PncUser  UserByteMaskEndIdx  UserByteMaskStartIdx        Comment */
   { /*     0 */   FALSE,                 1u,                   0u },  /* [ComMUser_untagged] */
-  { /*     1 */   FALSE,                 2u,                   1u }   /* [ComMUser_Vlan1] */
+  { /*     1 */   FALSE,                 2u,                   1u },  /* [ComMUser_Vlan1] */
+  { /*     2 */   FALSE,                 3u,                   2u }   /* [ComMUser_Vlan23] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -146,10 +148,11 @@ CONST(ComM_UserType, COMM_CONST) ComM_User[2] = {  /* PRQA S 1514, 1533 */  /* M
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(ComM_UserByteMaskType, COMM_CONST) ComM_UserByteMask[3] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Channel  UserReqFullComIdx        Referable Keys */
   { /*     0 */      0u,                0u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_untagged] */
-  { /*     1 */      1u,                1u }   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_Vlan1] */
+  { /*     1 */      1u,                1u },  /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_Vlan1] */
+  { /*     2 */      2u,                2u }   /* [/ActiveEcuC/ComM/ComMConfigSet/ComMUser_Vlan23] */
 };
 #define COMM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -171,6 +174,7 @@ VAR(ComM_DcmRequestActiveUType, COMM_VAR_NOINIT) ComM_DcmRequestActive;  /* PRQA
   /* Index        Referable Keys */
   /*     0 */  /* [ComMChannel_0] */
   /*     1 */  /* [ComMChannel_1] */
+  /*     2 */  /* [ComMChannel_2] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -188,10 +192,11 @@ VAR(ComM_DcmRequestActiveUType, COMM_VAR_NOINIT) ComM_DcmRequestActive;  /* PRQA
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(ComM_UserReqFullComType, COMM_VAR_NOINIT) ComM_UserReqFullCom[3];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
   /*     0 */  /* [ComMChannel_0, Channel0_To_User0] */
   /*     1 */  /* [ComMChannel_1, Channel1_To_User1] */
+  /*     2 */  /* [ComMChannel_2, Channel2_To_User2] */
 
 #define COMM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -268,6 +273,24 @@ FUNC(void, COMM_CODE) ComM_MainFunction_1(void)
   ComM_MainFunction((NetworkHandleType)1 );
 }
 
+/*********************************************************************************************************************
+FUNCTION: ComM_MainFunction_2
+*********************************************************************************************************************/
+/*!
+ * \internal
+ * - #10 Call the ComM_MainFunction() for the corresponding channel.
+ * \endinternal
+ */
+FUNC(void, COMM_CODE) ComM_MainFunction_2(void)
+{
+  /* ----- Development Error Checks ------------------------------------- */
+  /* Not needed, ComM_MainFunction() performs an initialization check. */
+
+  /* ----- Implementation ----------------------------------------------- */
+  /* #10 Call the ComM_MainFunction() for the corresponding channel. */
+  ComM_MainFunction((NetworkHandleType)2 );
+}
+
 
 
 /*********************************************************************************************************************
@@ -291,6 +314,9 @@ FUNC(void, COMM_CODE) ComM_RequestBusSMMode(NetworkHandleType Channel, ComM_Mode
       retVal = EthSM_RequestComMode(Channel, ComMode);
       break;
     case 1:
+      retVal = EthSM_RequestComMode(Channel, ComMode);
+      break;
+    case 2:
       retVal = EthSM_RequestComMode(Channel, ComMode);
       break;
     default: /* PRQA S 2016 */ /* MD_MSR_EmptyClause */
@@ -327,6 +353,9 @@ FUNC(void, COMM_CODE) ComM_GetCurrentBusSMMode(NetworkHandleType Channel, P2VAR(
       retVal = EthSM_GetCurrentComMode(Channel, ComMode); /* SBSW_COMM_CALL_BUSSM_GET_CURRENT_COMMODE */
       break;
     case 1:
+      retVal = EthSM_GetCurrentComMode(Channel, ComMode); /* SBSW_COMM_CALL_BUSSM_GET_CURRENT_COMMODE */
+      break;
+    case 2:
       retVal = EthSM_GetCurrentComMode(Channel, ComMode); /* SBSW_COMM_CALL_BUSSM_GET_CURRENT_COMMODE */
       break;
     default: /* PRQA S 2016 */ /* MD_MSR_EmptyClause */

@@ -124,6 +124,7 @@ Rte_Cdd_Core3.h<br>
 Rte_Cdd_Core4.h<br>
 Rte_Cdd_Core5.h<br>
 Rte_Cdd_PPS.h<br>
+Rte_Cdd_SomeIP.h<br>
 Rte_Cdd_StbM.h<br>
 Rte_Cdd_UDS.h<br>
 Rte_Cdd_Log.h<br>
@@ -147,6 +148,7 @@ Rte_Cdd_Core3_Type.h<br>
 Rte_Cdd_Core4_Type.h<br>
 Rte_Cdd_Core5_Type.h<br>
 Rte_Cdd_PPS_Type.h<br>
+Rte_Cdd_SomeIP_Type.h<br>
 Rte_Cdd_StbM_Type.h<br>
 Rte_Cdd_UDS_Type.h<br>
 Rte_Cdd_Log_Type.h<br>
@@ -181,6 +183,7 @@ Cdd_Core5_MemMap.h<br>
 Cdd_Log_MemMap.h<br>
 Cdd_Nm_MemMap.h<br>
 Cdd_PPS_MemMap.h<br>
+Cdd_SomeIP_MemMap.h<br>
 Cdd_StbM_MemMap.h<br>
 Cdd_UDS_MemMap.h<br>
 ComM_MemMap.h<br>
@@ -227,6 +230,7 @@ SchM_McalLib.h<br>
 SchM_Mcu.h<br>
 SchM_PduR.h<br>
 SchM_Port.h<br>
+SchM_Sd.h<br>
 SchM_SoAd.h<br>
 SchM_StbM.h<br>
 SchM_TcpIp.h<br>
@@ -251,6 +255,7 @@ SchM_McalLib_Type.h<br>
 SchM_Mcu_Type.h<br>
 SchM_PduR_Type.h<br>
 SchM_Port_Type.h<br>
+SchM_Sd_Type.h<br>
 SchM_SoAd_Type.h<br>
 SchM_StbM_Type.h<br>
 SchM_TcpIp_Type.h<br>
@@ -264,7 +269,7 @@ Rte_Needs.ecuc.arxml<br>
 Note: This resource usage calculation assumes that the "Boolean" data type is based on uint8 base type.<br>
       Further on padding bytes for structs are not considered, which depends on the compiler settings.<br>
 <br>
-RAM   Size: 8 Bytes<br>
+RAM   Size: 16 Bytes<br>
 CONST Size: 0 Bytes<br>
 <br>
 <P ALIGN=LEFT>
@@ -544,6 +549,20 @@ CONST Size: 0 Bytes<br>
 </TR>
 <TR>
 <TD><B>InitEvent</B></TD>
+<TD>Cdd_SomeIP_Init</TD>
+<TD>OsTask_Init_OsCore0</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 100ms</TD>
+<TD>Cdd_SomeIP_Runnable_100ms</TD>
+<TD>OsTask_Asw_OsCore0</TD>
+<TD>Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_100ms</TD>
+<TD>Rte_Al_TE_OsTask_Asw_OsCore0_0_100ms</TD>
+</TR>
+<TR>
+<TD><B>InitEvent</B></TD>
 <TD>Cdd_StbM_Init</TD>
 <TD>OsTask_Init_OsCore0</TD>
 <TD>n/a</TD>
@@ -553,8 +572,8 @@ CONST Size: 0 Bytes<br>
 <TD><B>TimingEvent</B> Cyclic 100ms</TD>
 <TD>Cdd_StbM_Runnable100ms</TD>
 <TD>OsTask_Asw_OsCore0</TD>
-<TD>Rte_Ev_Run_Cdd_StbM_Cdd_StbM_Runnable100ms</TD>
-<TD>Rte_Al_TE_Cdd_StbM_Cdd_StbM_Runnable100ms</TD>
+<TD>Rte_Ev_Cyclic_OsTask_Asw_OsCore0_0_100ms</TD>
+<TD>Rte_Al_TE_OsTask_Asw_OsCore0_0_100ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
@@ -655,7 +674,21 @@ CONST Size: 0 Bytes<br>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_20ms</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>ComM_MainFunction_2</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_20ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_20ms</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Vlan1::GetCurrentComMode</TD>
+<TD>GetCurrentComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Vlan23::GetCurrentComMode</TD>
 <TD>GetCurrentComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -676,6 +709,13 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_Vlan23::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_untagged::GetInhibitionStatus</TD>
 <TD>GetInhibitionStatus</TD>
 <TD>n/a</TD>
@@ -684,6 +724,13 @@ CONST Size: 0 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_Vlan1::GetInhibitionStatus</TD>
+<TD>GetInhibitionStatus</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_Vlan23::GetInhibitionStatus</TD>
 <TD>GetInhibitionStatus</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -704,6 +751,13 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Vlan23::GetMaxComMode</TD>
+<TD>GetMaxComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_untagged::GetMaxComMode</TD>
 <TD>GetMaxComMode</TD>
 <TD>n/a</TD>
@@ -718,6 +772,13 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Vlan23::GetRequestedComMode</TD>
+<TD>GetRequestedComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_untagged::GetRequestedComMode</TD>
 <TD>GetRequestedComMode</TD>
 <TD>n/a</TD>
@@ -726,6 +787,13 @@ CONST Size: 0 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_Vlan1::LimitChannelToNoComMode</TD>
+<TD>LimitChannelToNoComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::CL_ComMChannel_Vlan23::LimitChannelToNoComMode</TD>
 <TD>LimitChannelToNoComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -753,6 +821,13 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 </TR>
 <TR>
+<TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_Vlan23::PreventWakeUp</TD>
+<TD>PreventWakeUp</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
 <TD><B>OperationInvokedEvent</B> ComM::CW_ComMChannel_untagged::PreventWakeUp</TD>
 <TD>PreventWakeUp</TD>
 <TD>n/a</TD>
@@ -768,6 +843,13 @@ CONST Size: 0 Bytes<br>
 </TR>
 <TR>
 <TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Vlan1::RequestComMode</TD>
+<TD>RequestComMode</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+<TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>OperationInvokedEvent</B> ComM::UR_ComMUser_Vlan23::RequestComMode</TD>
 <TD>RequestComMode</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
@@ -1120,6 +1202,13 @@ CONST Size: 0 Bytes<br>
 <TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_20ms</TD>
 </TR>
 <TR>
+<TD><B>TimingEvent</B> Cyclic 20ms</TD>
+<TD>ComM_MainFunction_2</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_20ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_20ms</TD>
+</TR>
+<TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>
 <TD>Dcm_MainFunction</TD>
 <TD>OsTask_Bsw_5ms_Core0</TD>
@@ -1237,6 +1326,13 @@ CONST Size: 0 Bytes<br>
 <TD>n/a</TD>
 <TD>n/a</TD>
 <TD>n/a</TD>
+</TR>
+<TR>
+<TD><B>TimingEvent</B> Cyclic 5ms</TD>
+<TD>Sd_MainFunction</TD>
+<TD>OsTask_Bsw_5ms_Core0</TD>
+<TD>Rte_Ev_Cyclic2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
+<TD>Rte_Al_TE2_OsTask_Bsw_5ms_Core0_0_5ms</TD>
 </TR>
 <TR>
 <TD><B>TimingEvent</B> Cyclic 5ms</TD>

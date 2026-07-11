@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Os_Types_Lcfg.h
- *   Generation Time: 2026-06-07 20:45:48
+ *   Generation Time: 2026-07-11 19:56:12
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -146,9 +146,9 @@
 #define Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms
 #define Rte_Al_TE_Cdd_Core4_Cdd_Core4_Runnable10ms Rte_Al_TE_Cdd_Core4_Cdd_Core4_Runnable10ms
 #define Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms
-#define Rte_Al_TE_Cdd_StbM_Cdd_StbM_Runnable100ms Rte_Al_TE_Cdd_StbM_Cdd_StbM_Runnable100ms
 #define Rte_Al_TE_EthIf_EthIf_MainFunctionState Rte_Al_TE_EthIf_EthIf_MainFunctionState
 #define Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction
+#define Rte_Al_TE_OsTask_Asw_OsCore0_0_100ms Rte_Al_TE_OsTask_Asw_OsCore0_0_100ms
 #define Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms
 #define Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms
 
@@ -310,9 +310,9 @@ typedef enum
   Rte_Al_TE_Cdd_Core3_Cdd_Core3_Runnable10ms = 14,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_Cdd_Core4_Cdd_Core4_Runnable10ms = 15,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_Cdd_Core5_Cdd_Core5_Runnable10ms = 16,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_Cdd_StbM_Cdd_StbM_Runnable100ms = 17,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_EthIf_EthIf_MainFunctionState = 18,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
-  Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction = 19,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_EthIf_EthIf_MainFunctionState = 17,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_EthTrcv_30_Tja1100_EthTrcv_30_Tja1100_MainFunction = 18,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
+  Rte_Al_TE_OsTask_Asw_OsCore0_0_100ms = 19,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_OsTask_Asw_OsCore0_0_10ms = 20,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   Rte_Al_TE_OsTask_Asw_OsCore0_0_5ms = 21,  /* PRQA S 0784 */ /* MD_Os_Rule5.5_0784 */
   OS_ALARMID_COUNT = 22

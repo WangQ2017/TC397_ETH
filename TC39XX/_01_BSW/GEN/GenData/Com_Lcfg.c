@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Com_Lcfg.c
- *   Generation Time: 2026-06-07 11:45:10
+ *   Generation Time: 2026-07-05 10:57:18
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -43,6 +43,7 @@
 
 #include "Com_Lcfg.h"
 
+#include "Appl_Cbk.h"
 
 #include "SchM_Com.h"
 
@@ -94,6 +95,46 @@
   SECTION: GLOBAL DATA
 **********************************************************************************************************************/
 /**********************************************************************************************************************
+  Com_CbkTxAckDefFuncPtr
+**********************************************************************************************************************/
+/** 
+  \var    Com_CbkTxAckDefFuncPtr
+  \brief  Function pointer table for deferred Tx confirmation notification functions.
+*/ 
+#define COM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(ComCbkTxAckDefType, COM_CONST) Com_CbkTxAckDefFuncPtr[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     CbkTxAckDefFuncPtr       Referable Keys */
+  /*     0 */ Com_Cbk_FaultInfoTx    /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+};
+#define COM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_ConstValueUInt8
+**********************************************************************************************************************/
+/** 
+  \var    Com_ConstValueUInt8
+  \brief  Optimized array of commonly used values like initial or invalid values. (BOOLEAN, UINT8)
+*/ 
+#define COM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Com_ConstValueUInt8Type, COM_CONST) Com_ConstValueUInt8[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     ConstValueUInt8      Referable Keys */
+  /*     0 */            0x00u   /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte0InitValue, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte1InitValue, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte2InitValue, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte3InitValue] */
+};
+#define COM_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   Com_IPduGroupInfo
 **********************************************************************************************************************/
 /** 
@@ -117,6 +158,102 @@ CONST(Com_IPduGroupInfoType, COM_CONST) Com_IPduGroupInfo[1] = {  /* PRQA S 1514
 /*lint -restore */
 
 /**********************************************************************************************************************
+  Com_RxAccessInfo
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxAccessInfo
+  \brief  Contains all signal layout information necessary for signal access within an I-PDU.
+  \details
+  Element          Description
+  InitValueUsed    TRUE, if the 0:1 relation has minimum 1 relation pointing to Com_ConstValueUInt8,Com_ConstValueUInt16,Com_ConstValueUInt32,Com_ConstValueUInt64,Com_ConstValueSInt8,Com_ConstValueSInt16,Com_ConstValueSInt32,Com_ConstValueSInt64,Com_ConstValueFloat32,Com_ConstValueFloat64
+  BitPosition      Little endian bit position of the signal or group signal within the I-PDU.
+  ByteLength       Byte length of the signal or group signal.
+  InitValueIdx     the index of the 0:1 relation pointing to Com_ConstValueUInt8,Com_ConstValueUInt16,Com_ConstValueUInt32,Com_ConstValueUInt64,Com_ConstValueSInt8,Com_ConstValueSInt16,Com_ConstValueSInt32,Com_ConstValueSInt64,Com_ConstValueFloat32,Com_ConstValueFloat64
+  ShdBufferIdx     the index of the 0:1 relation pointing to Com_RxSigBufferUInt8,Com_RxSigBufferUInt16,Com_RxSigBufferUInt32,Com_RxSigBufferUInt64,Com_RxSigBufferZeroBit,Com_RxSigBufferSInt8,Com_RxSigBufferSInt16,Com_RxSigBufferSInt32,Com_RxSigBufferSInt64,Com_RxSigBufferFloat32,Com_RxSigBufferFloat64
+*/ 
+#define COM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Com_RxAccessInfoType, COM_CONST) Com_RxAccessInfo[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    InitValueUsed  BitPosition  ByteLength  InitValueIdx  ShdBufferIdx        Referable Keys */
+  { /*     0 */          TRUE,          0u,         1u,           0u,           1u },  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte0, /ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx] */
+  { /*     1 */          TRUE,          8u,         1u,           0u,           3u },  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte1, /ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx] */
+  { /*     2 */          TRUE,         16u,         1u,           0u,           5u },  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte2, /ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx] */
+  { /*     3 */          TRUE,         24u,         1u,           0u,           7u }   /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte3, /ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx] */
+};
+#define COM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_RxCbkFuncPtr
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxCbkFuncPtr
+  \brief  Function pointer table containing configured notification and invalid notifications function pointer for signals and signal groups.
+*/ 
+#define COM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(ComRxCbkType, COM_CONST) Com_RxCbkFuncPtr[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     RxCbkFuncPtr                Referable Keys */
+  /*     0 */ Com_Cbk_VechicleInfoRx    /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRxAck] */
+};
+#define COM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_RxPduInfo
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxPduInfo
+  \brief  Contains all relevant common information for Rx I-PDUs.
+  \details
+  Element                Description
+  RxAccessInfoIndUsed    TRUE, if the 0:n relation has 1 relation pointing to Com_RxAccessInfoInd
+*/ 
+#define COM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Com_RxPduInfoType, COM_CONST) Com_RxPduInfo[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    RxAccessInfoIndUsed        Referable Keys */
+  { /*     0 */                TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx] */
+};
+#define COM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_RxSigGrpInfo
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxSigGrpInfo
+  \brief  Contains all relevant information for Rx signal groups.
+  \details
+  Element                Description
+  RxCbkFuncPtrAckUsed    TRUE, if the 0:1 relation has minimum 1 relation pointing to Com_RxCbkFuncPtr
+*/ 
+#define COM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Com_RxSigGrpInfoType, COM_CONST) Com_RxSigGrpInfo[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    RxCbkFuncPtrAckUsed        Referable Keys */
+  { /*     0 */                TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx] */
+};
+#define COM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   Com_TxModeFalse
 **********************************************************************************************************************/
 /** 
@@ -130,9 +267,10 @@ CONST(Com_IPduGroupInfoType, COM_CONST) Com_IPduGroupInfo[1] = {  /* PRQA S 1514
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Direct        Referable Keys */
-  { /*     0 */   TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx] */
+  { /*     0 */  FALSE },  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  { /*     1 */   TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -153,9 +291,10 @@ CONST(Com_TxModeFalseType, COM_CONST) Com_TxModeFalse[1] = {  /* PRQA S 1514, 15
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    InitMode        Referable Keys */
-  { /*     0 */     TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx] */
+  { /*     0 */     TRUE },  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  { /*     1 */     TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -176,9 +315,10 @@ CONST(Com_TxModeInfoType, COM_CONST) Com_TxModeInfo[1] = {  /* PRQA S 1514, 1533
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
     /* Index    Direct        Referable Keys */
-  { /*     0 */   TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx] */
+  { /*     0 */  FALSE },  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  { /*     1 */   TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -192,16 +332,25 @@ CONST(Com_TxModeTrueType, COM_CONST) Com_TxModeTrue[1] = {  /* PRQA S 1514, 1533
   \var    Com_TxPduInfo
   \brief  Contains all relevant information for Tx I-PDUs.
   \details
-  Element         Description
-  TxBufferUsed    TRUE, if the 0:n relation has 1 relation pointing to Com_TxBuffer
+  Element                                Description
+  TxPduInitValueUsed                     TRUE, if the 0:n relation has 1 relation pointing to Com_TxPduInitValue
+  TxSigGrpInfoIndUsed                    TRUE, if the 0:n relation has 1 relation pointing to Com_TxSigGrpInfoInd
+  IPduGroupInfoOfTxPduInfoIndEndIdx      the end index of the 0:n relation pointing to Com_IPduGroupInfoOfTxPduInfoInd
+  IPduGroupInfoOfTxPduInfoIndStartIdx    the start index of the 0:n relation pointing to Com_IPduGroupInfoOfTxPduInfoInd
+  MetaDataLength                         Length of MetaData.
+  TxBufferLength                         the number of relations pointing to Com_TxBuffer
+  TxPduInitValueStartIdx                 the start index of the 0:n relation pointing to Com_TxPduInitValue
+  TxSigGrpInfoIndEndIdx                  the end index of the 0:n relation pointing to Com_TxSigGrpInfoInd
+  TxSigGrpInfoIndStartIdx                the start index of the 0:n relation pointing to Com_TxSigGrpInfoInd
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    TxBufferUsed        Referable Keys */
-  { /*     0 */         TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
+CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[2] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TxPduInitValueUsed  TxSigGrpInfoIndUsed  IPduGroupInfoOfTxPduInfoIndEndIdx                    IPduGroupInfoOfTxPduInfoIndStartIdx                    MetaDataLength  TxBufferLength  TxPduInitValueStartIdx  TxSigGrpInfoIndEndIdx                    TxSigGrpInfoIndStartIdx                          Referable Keys */
+  { /*     0 */               TRUE,                TRUE, COM_NO_IPDUGROUPINFOOFTXPDUINFOINDENDIDXOFTXPDUINFO, COM_NO_IPDUGROUPINFOOFTXPDUINFOINDSTARTIDXOFTXPDUINFO,             0u,             4u,                     0u,                                      1u,                                        0u },  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  { /*     1 */               TRUE,               FALSE,                                                  1u,                                                    0u,             0u,             1u,                     4u, COM_NO_TXSIGGRPINFOINDENDIDXOFTXPDUINFO, COM_NO_TXSIGGRPINFOINDSTARTIDXOFTXPDUINFO }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -219,9 +368,59 @@ CONST(Com_TxPduInfoType, COM_CONST) Com_TxPduInfo[1] = {  /* PRQA S 1514, 1533 *
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index     TxPduInitValue      Referable Keys */
-  /*     0 */           0x00u   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx] */
+  /*     0 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  /*     1 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  /*     2 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  /*     3 */           0x00u,  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  /*     4 */           0x00u   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx] */
+};
+#define COM_STOP_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_TxSigGrpInfo
+**********************************************************************************************************************/
+/** 
+  \var    Com_TxSigGrpInfo
+  \brief  Contains all relevant information for Tx Signal Groups.
+  \details
+  Element             Description
+  TxSigGrpMaskUsed    TRUE, if the 0:n relation has 1 relation pointing to Com_TxSigGrpMask
+*/ 
+#define COM_START_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Com_TxSigGrpInfoType, COM_CONST) Com_TxSigGrpInfo[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TxSigGrpMaskUsed        Referable Keys */
+  { /*     0 */             TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte0, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte1, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte2, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte3] */
+};
+#define COM_STOP_SEC_CONST_UNSPECIFIED
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_TxSigGrpMask
+**********************************************************************************************************************/
+/** 
+  \var    Com_TxSigGrpMask
+  \brief  Signal group mask needed to copy interlaced signal groups to the Tx PDU buffer.
+*/ 
+#define COM_START_SEC_CONST_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+CONST(Com_TxSigGrpMaskType, COM_CONST) Com_TxSigGrpMask[4] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index     TxSigGrpMask      Referable Keys */
+  /*     0 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx] */
+  /*     1 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx] */
+  /*     2 */         0xFFu,  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx] */
+  /*     3 */         0xFFu   /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx] */
 };
 #define COM_STOP_SEC_CONST_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -235,16 +434,27 @@ CONST(Com_TxPduInitValueType, COM_CONST) Com_TxPduInitValue[1] = {  /* PRQA S 15
   \var    Com_TxSigInfo
   \brief  Contains all relevant information for Tx signals and group signals.
   \details
-  Element         Description
-  TxBufferUsed    TRUE, if the 0:n relation has 1 relation pointing to Com_TxBuffer
+  Element                   Description
+  TxSigGrpInfoUsed          TRUE, if the 0:1 relation has minimum 1 relation pointing to Com_TxSigGrpInfo
+  BitLength                 Bit length of the signal or group signal.
+  BitPosition               Little endian bit position of the signal or group signal within the I-PDU.
+  ByteLength                Byte length of the signal or group signal.
+  StartByteInPduPosition    Start Byte position of the signal or group signal within the I-PDU.
+  TxBufferStartIdx          the start index of the 0:n relation pointing to Com_TxBuffer
+  TxPduInfoIdx              the index of the 1:1 relation pointing to Com_TxPduInfo
+  TxSigGrpInfoIdx           the index of the 0:1 relation pointing to Com_TxSigGrpInfo
 */ 
 #define COM_START_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[1] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
-    /* Index    TxBufferUsed        Referable Keys */
-  { /*     0 */         TRUE }   /* [/ActiveEcuC/Com/ComConfig/ComSignal_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx] */
+CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[5] = {  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+    /* Index    TxSigGrpInfoUsed  BitLength  BitPosition  ByteLength  StartByteInPduPosition  TxBufferStartIdx  TxPduInfoIdx  TxSigGrpInfoIdx                          Referable Keys */
+  { /*     0 */             TRUE,        8u,          0u,         1u,                     0u,               5u,           0u,                                0u },  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte0, /ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  { /*     1 */             TRUE,        8u,          8u,         1u,                     1u,               6u,           0u,                                0u },  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte1, /ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  { /*     2 */             TRUE,        8u,         16u,         1u,                     2u,               7u,           0u,                                0u },  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte2, /ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  { /*     3 */             TRUE,        8u,         24u,         1u,                     3u,               8u,           0u,                                0u },  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte3, /ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  { /*     4 */            FALSE,        8u,          0u,         1u,                     0u,               4u,           1u, COM_NO_TXSIGGRPINFOIDXOFTXSIGINFO }   /* [/ActiveEcuC/Com/ComConfig/ComSignal_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx] */
 };
 #define COM_STOP_SEC_CONST_UNSPECIFIED
 /*lint -save -esym(961, 19.1) */
@@ -262,9 +472,51 @@ CONST(Com_TxSigInfoType, COM_CONST) Com_TxSigInfo[1] = {  /* PRQA S 1514, 1533 *
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_CurrentTxModeType, COM_VAR_NOINIT) Com_CurrentTxMode[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_CurrentTxModeType, COM_VAR_NOINIT) Com_CurrentTxMode[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  /*     1 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
+
+#define COM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_HandleRxPduDeferred
+**********************************************************************************************************************/
+/** 
+  \var    Com_HandleRxPduDeferred
+  \brief  Array indicating received Rx I-PDUs to be processed deferred within the next call of Com_MainfunctionRx().
+*/ 
+#define COM_START_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_HandleRxPduDeferredUType, COM_VAR_NOINIT) Com_HandleRxPduDeferred;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx] */
+
+#define COM_STOP_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_HandleTxPduDeferred
+**********************************************************************************************************************/
+/** 
+  \var    Com_HandleTxPduDeferred
+  \brief  Flag array used for deferred Tx confirmation handling.
+*/ 
+#define COM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_HandleTxPduDeferredType, COM_VAR_NOINIT) Com_HandleTxPduDeferred[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  /*     1 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -305,6 +557,158 @@ VAR(Com_InitializedType, COM_VAR_ZERO_INIT) Com_Initialized = FALSE;  /* PRQA S 
 /*lint -restore */
 
 /**********************************************************************************************************************
+  Com_RxDefPduBuffer
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxDefPduBuffer
+  \brief  Rx I-PDU buffer for deferred signal processing.
+*/ 
+#define COM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_RxDefPduBufferUType, COM_VAR_NOINIT) Com_RxDefPduBuffer;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx] */
+  /*   ... */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx] */
+  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx] */
+
+#define COM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_RxDeferredFctPtrCache
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxDeferredFctPtrCache
+  \brief  Cache for deferred Rx (invalid) notification.
+*/ 
+#define COM_START_SEC_VAR_NOINIT_32BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_RxDeferredFctPtrCacheType, COM_VAR_NOINIT) Com_RxDeferredFctPtrCache[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+#define COM_STOP_SEC_VAR_NOINIT_32BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_RxDeferredProcessingISRLockCounter
+**********************************************************************************************************************/
+#define COM_START_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_RxDeferredProcessingISRLockCounterType, COM_VAR_NOINIT) Com_RxDeferredProcessingISRLockCounter;  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+#define COM_STOP_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_RxIPduGroupISRLockCounter
+**********************************************************************************************************************/
+#define COM_START_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_RxIPduGroupISRLockCounterType, COM_VAR_NOINIT) Com_RxIPduGroupISRLockCounter;  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+#define COM_STOP_SEC_VAR_NOINIT_16BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_RxPduGrpActive
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxPduGrpActive
+  \brief  Rx I-PDU based state (started/stopped) of the corresponding I-PDU-Group.
+*/ 
+#define COM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_RxPduGrpActiveUType, COM_VAR_NOINIT) Com_RxPduGrpActive;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_VechicleInfoRx] */
+
+#define COM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_RxSigBufferUInt8
+**********************************************************************************************************************/
+/** 
+  \var    Com_RxSigBufferUInt8
+  \brief  Rx Signal and Group Signal Buffer. (BOOLEAN, UINT8)
+*/ 
+#define COM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_RxSigBufferUInt8Type, COM_VAR_NOINIT) Com_RxSigBufferUInt8[8];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte0] */
+  /*     1 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte0_RxGroupSignalShadowBuffer, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte0_RxSignalBufferRouting] */
+  /*     2 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte1] */
+  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte1_RxGroupSignalShadowBuffer, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte1_RxSignalBufferRouting] */
+  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte2] */
+  /*     5 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte2_RxGroupSignalShadowBuffer, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte2_RxSignalBufferRouting] */
+  /*     6 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte3] */
+  /*     7 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte3_RxGroupSignalShadowBuffer, /ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte3_RxSignalBufferRouting] */
+
+#define COM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_SigGrpEventFlag
+**********************************************************************************************************************/
+/** 
+  \var    Com_SigGrpEventFlag
+  \brief  Flag is set if a group signal write access caused a triggered event.
+*/ 
+#define COM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_SigGrpEventFlagType, COM_VAR_NOINIT) Com_SigGrpEventFlag[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+#define COM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
+  Com_TmpRxShdBufferUInt8
+**********************************************************************************************************************/
+/** 
+  \var    Com_TmpRxShdBufferUInt8
+  \brief  Temporary Rx Group Signal Shadow Buffer. (BOOLEAN, UINT8)
+*/ 
+#define COM_START_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+VAR(Com_TmpRxShdBufferUInt8UType, COM_VAR_NOINIT) Com_TmpRxShdBufferUInt8;  /* PRQA S 0759, 1514, 1533 */  /* MD_CSL_Union, MD_CSL_ObjectOnlyAccessedOnce, MD_CSL_ObjectOnlyAccessedOnce */
+  /* Index        Referable Keys */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte0] */
+  /*     1 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte1] */
+  /*     2 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte2] */
+  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_VechicleInfoRx/ComGroupSignal_VechicleInfoRx_byte3] */
+
+#define COM_STOP_SEC_VAR_NOINIT_8BIT
+/*lint -save -esym(961, 19.1) */
+#include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
+/*lint -restore */
+
+/**********************************************************************************************************************
   Com_TransmitRequest
 **********************************************************************************************************************/
 /** 
@@ -315,9 +719,10 @@ VAR(Com_InitializedType, COM_VAR_ZERO_INIT) Com_Initialized = FALSE;  /* PRQA S 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TransmitRequestType, COM_VAR_NOINIT) Com_TransmitRequest[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TransmitRequestType, COM_VAR_NOINIT) Com_TransmitRequest[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  /*     1 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -335,9 +740,16 @@ VAR(Com_TransmitRequestType, COM_VAR_NOINIT) Com_TransmitRequest[1];  /* PRQA S 
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TxBufferType, COM_VAR_NOINIT) Com_TxBuffer[9];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComSignal_TimeSyncStatus_Tx] */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTxSigGrpInTxIPDU] */
+  /*   ... */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTxSigGrpInTxIPDU] */
+  /*     3 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTxSigGrpInTxIPDU] */
+  /*     4 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComSignal_TimeSyncStatus_Tx] */
+  /*     5 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte0] */
+  /*     6 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte1] */
+  /*     7 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte2] */
+  /*     8 */  /* [/ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx, /ActiveEcuC/Com/ComConfig/ComSignalGroup_FaultInfoTx/ComGroupSignal_FaultInfoTx_Byte3] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -368,9 +780,10 @@ VAR(Com_TxIPduGroupISRLockCounterType, COM_VAR_NOINIT) Com_TxIPduGroupISRLockCou
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TxPduGrpActiveType, COM_VAR_NOINIT) Com_TxPduGrpActive[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TxPduGrpActiveType, COM_VAR_NOINIT) Com_TxPduGrpActive[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  /*     1 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
 
 #define COM_STOP_SEC_VAR_NOINIT_8BIT
 /*lint -save -esym(961, 19.1) */
@@ -401,9 +814,10 @@ VAR(Com_TxProcessingISRLockCounterType, COM_VAR_NOINIT) Com_TxProcessingISRLockC
 /*lint -save -esym(961, 19.1) */
 #include "MemMap.h"  /* PRQA S 5087 */  /* MD_MSR_MemMap */
 /*lint -restore */
-VAR(Com_TxSduLengthType, COM_VAR_NOINIT) Com_TxSduLength[1];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
+VAR(Com_TxSduLengthType, COM_VAR_NOINIT) Com_TxSduLength[2];  /* PRQA S 1514, 1533 */  /* MD_CSL_ObjectOnlyAccessedOnce */
   /* Index        Referable Keys */
-  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
+  /*     0 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_FaultInfoTx] */
+  /*     1 */  /* [/ActiveEcuC/Com/ComConfig/ComIPdu_TimeSyncStatus_Tx, /ActiveEcuC/Com/ComConfig/ComIPduGroup_Tx_All] */
 
 #define COM_STOP_SEC_VAR_NOINIT_16BIT
 /*lint -save -esym(961, 19.1) */

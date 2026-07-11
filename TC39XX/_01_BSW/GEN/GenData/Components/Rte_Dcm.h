@@ -54,7 +54,7 @@ extern "C"
  *********************************************************************************************************************/
 FUNC(Std_ReturnType, RTE_CODE) Rte_Switch_Dcm_DcmDiagnosticSessionControl_DcmDiagnosticSessionControl(Dcm_DiagnosticSessionControlType nextMode);
 
-# define RTE_STOP_SEC_CODE 
+# define RTE_STOP_SEC_CODE
 # include "MemMap.h" /* PRQA S 5087 */ /* MD_MSR_MemMap */
 
 

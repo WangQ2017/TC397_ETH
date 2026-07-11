@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: Appl_Cbk.h
- *   Generation Time: 2026-05-30 23:08:11
+ *   Generation Time: 2026-07-05 10:57:16
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -66,6 +66,8 @@
 #include "MemMap.h"
 
 /* Configurable notification interface prototypes */
+FUNC(void, COM_APPL_CODE) Com_Cbk_FaultInfoTx(void);
+FUNC(void, COM_APPL_CODE) Com_Cbk_VechicleInfoRx(void);
 
 
 #define COM_STOP_SEC_APPL_CODE

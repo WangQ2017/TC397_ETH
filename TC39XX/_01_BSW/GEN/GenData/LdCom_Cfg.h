@@ -21,7 +21,7 @@
  *  FILE DESCRIPTION
  *  -------------------------------------------------------------------------------------------------------------------
  *              File: LdCom_Cfg.h
- *   Generation Time: 2026-05-30 23:48:29
+ *   Generation Time: 2026-07-05 10:57:21
  *           Project: TC397_BSW - Version 1.0
  *          Delivery: CBD2000642_D01
  *      Tool Version: DaVinci Configurator  5.22.45 SP3
@@ -33,6 +33,26 @@
  * WARNING: This code has been generated with reduced-severity errors. 
  * The created output files contain errors that have been ignored. Usage of the created files can lead to unpredictable behavior of the embedded code.
  * Usage of the created files happens at own risk!
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_EcuStateTx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_SenStateTx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleSpeedRx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
+ * 
+ * [Warning] Cfg00022 - Missing parameter value 
+ * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
+ * Erroneous configuration elements:
+ * /ActiveEcuC/LdCom/LdComConfig/LdComIPdu_VechicleStatusRx[0:LdComSystemTemplateSignalRef](value=) (DefRef: /MICROSAR/LdCom/LdComConfig/LdComIPdu/LdComSystemTemplateSignalRef)
  * 
  * [Warning] Cfg00022 - Missing parameter value 
  * - [Reduced Severity due to User-Defined Parameter] The value of reference LdComSystemTemplateSignalRef is missing or empty.
@@ -117,7 +137,11 @@
 
 /* Handle IDs active in all predefined variants (the application has not to take the active variant into account) */
 /*      Symbolic Name                                                 Value   Active in predefined variant(s) */
-#define LdComConf_LdComIPdu_LdComIPdu_udplog_Tx                       0u
+#define LdComConf_LdComIPdu_LdComIPdu_EcuStateTx                      0u
+#define LdComConf_LdComIPdu_LdComIPdu_SenStateTx                      1u
+#define LdComConf_LdComIPdu_LdComIPdu_VechicleSpeedRx                 2u
+#define LdComConf_LdComIPdu_LdComIPdu_VechicleStatusRx                3u
+#define LdComConf_LdComIPdu_LdComIPdu_udplog_Tx                       4u
 /**\} */
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION MACROS
